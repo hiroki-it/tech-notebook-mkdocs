@@ -10622,7 +10622,7 @@
 <h2 id="03-config">03. Config<a class="headerlink" href="#03-config" title="Permanent link">&para;</a></h2>
 <h3 id="clusters">clusters<a class="headerlink" href="#clusters" title="Permanent link">&para;</a></h3>
 <h4 id="clusters_1">▼ clustersとは<a class="headerlink" href="#clusters_1" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドの向き先となるClusterを設定する。</p>
+<p><code>kubectl</code>コマンドの向き先となるClusterを設定する。</p>
 <p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_1">▼ name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h4>
 <p>Cluster名を設定する。</p>
@@ -10711,7 +10711,7 @@
 <p><br></p>
 <h3 id="contexts">contexts<a class="headerlink" href="#contexts" title="Permanent link">&para;</a></h3>
 <h4 id="contexts_1">▼ contextsとは<a class="headerlink" href="#contexts_1" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドの向き先の候補を設定する。</p>
+<p><code>kubectl</code>コマンドの向き先の候補を設定する。</p>
 <p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_2">▼ name<a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h4>
 <p>向き先の名前を設定する。</p>
@@ -10802,7 +10802,7 @@
 <p><br></p>
 <h3 id="current-context">current-context<a class="headerlink" href="#current-context" title="Permanent link">&para;</a></h3>
 <h4 id="current-context_1">▼ current-contextとは<a class="headerlink" href="#current-context_1" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドの現在の向き先の名前を設定する。</p>
+<p><code>kubectl</code>コマンドの現在の向き先の名前を設定する。</p>
 <p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -10823,7 +10823,7 @@
 <p><br></p>
 <h3 id="users">users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>
 <h4 id="users_1">▼ usersとは<a class="headerlink" href="#users_1" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドのクライアントの認証情報を設定する。</p>
+<p><code>kubectl</code>コマンドのクライアントの認証情報を設定する。</p>
 <p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_3">▼ name<a class="headerlink" href="#name_3" title="Permanent link">&para;</a></h4>
 <p>ユーザー名を設定する。</p>
@@ -11265,7 +11265,7 @@
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -11609,7 +11609,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="11-node">11. Node<a class="headerlink" href="#11-node" title="Permanent link">&para;</a></h2>
-<p>Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、kubectlコマンドを実行し、その時に<code>--register-node</code>オプションを<code>false</code>とする必要がある。</p>
+<p>Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、<code>kubectl</code>コマンドを実行し、その時に<code>--register-node</code>オプションを<code>false</code>とする必要がある。</p>
 <p><br></p>
 <h2 id="12-persistentvolume">12. PersistentVolume<a class="headerlink" href="#12-persistentvolume" title="Permanent link">&para;</a></h2>
 <h3 id="specaccessmodes">spec.accessModes<a class="headerlink" href="#specaccessmodes" title="Permanent link">&para;</a></h3>
@@ -12050,7 +12050,7 @@
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 <span class="w">  </span><span class="nt">affinity</span><span class="p">:</span><span class="w"></span>
@@ -12089,7 +12089,7 @@
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 <span class="w">  </span><span class="nt">affinity</span><span class="p">:</span><span class="w"></span>
@@ -12125,7 +12125,7 @@
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12172,7 +12172,7 @@
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
@@ -12293,7 +12293,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="c1"># 下限必要サイズ</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
@@ -12331,7 +12331,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 <span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
@@ -12361,7 +12361,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span><span class="w"></span>
 <span class="w">      </span><span class="nt">workingDir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/go/src</span><span class="w"></span>
@@ -12387,7 +12387,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-pod</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -12416,7 +12416,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">imagePullSecrets</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-secret</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12445,7 +12445,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">httpGet</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
@@ -12469,7 +12469,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12491,7 +12491,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12515,7 +12515,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">nodeSelector</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">app.kubernetes.io/nodegroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bar-group</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12544,7 +12544,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">httpGet</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
@@ -12568,7 +12568,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12590,7 +12590,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">livenessProbe</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -12615,7 +12615,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Always</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="never">▼ Never<a class="headerlink" href="#never" title="Permanent link">&para;</a></h4>
@@ -12635,7 +12635,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Never</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="onfailure">▼ OnFailure<a class="headerlink" href="#onfailure" title="Permanent link">&para;</a></h4>
@@ -12655,7 +12655,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OnFailure</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -12678,7 +12678,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin::1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin::&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">serviceAccountName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-service-account</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -12706,7 +12706,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin::1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin::&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">  </span><span class="nt">terminationGracePeriodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -12737,7 +12737,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-fluent-bit</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fluent/fluent-bit:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fluent/fluent-bit:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-fluent-bit-conf-volume</span><span class="w"></span>
 <span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/fluent-bit/etc/</span><span class="w"></span>
@@ -12808,7 +12808,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin-volume</span><span class="w"></span>
 <span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/go/src</span><span class="w"></span>
@@ -12846,7 +12846,7 @@ Allocatable:
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin</span><span class="w"></span>
-<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:1.0.0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-gin-volume</span><span class="w"></span>
 <span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/go/src</span><span class="w"></span>
@@ -13925,7 +13925,7 @@ Allocatable:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

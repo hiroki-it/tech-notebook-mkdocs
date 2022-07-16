@@ -7452,7 +7452,7 @@ $ yum install -y nodejs
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="w">  </span><span class="s">&quot;version&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
+<span class="w">  </span><span class="s">&quot;version&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;&lt;バージョンタグ&gt;&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7547,16 +7547,16 @@ $ yum install -y nodejs
 <h2 id="02-02-yarn">02-02. yarnコマンド<a class="headerlink" href="#02-02-yarn" title="Permanent link">&para;</a></h2>
 <h3 id="add">add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
 <p>指定したパッケージのバージョンを、<code>package.json</code>ファイルを無視してインストールする。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn add &lt;パッケージ名&gt;@&lt;バージョン&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn add &lt;パッケージ名&gt;@&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <p>特定のパッケージのバージョンを検証する場合は、<code>yarn remove</code>コマンドと<code>yarn add</code>コマンドを使用する。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn remove foo <span class="o">&amp;&amp;</span> yarn add foo@1.0.0
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn remove foo <span class="o">&amp;&amp;</span> yarn add foo@&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="install_2">install<a class="headerlink" href="#install_2" title="Permanent link">&para;</a></h3>
 <h4 id="install_3">▼ installとは<a class="headerlink" href="#install_3" title="Permanent link">&para;</a></h4>
 <p>指定したバージョンのパッケージを、<code>package.json</code>ファイルの範囲内でインストールする。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn add &lt;パッケージ名&gt;@&lt;バージョン&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn add &lt;パッケージ名&gt;@&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-check-files">▼ --check-files<a class="headerlink" href="#-check-files" title="Permanent link">&para;</a></h4>
 <p>必要なパッケージが<code>node_modules</code>ディレクトリ内にインストールされているかを確認しつつ、不足があれば<code>install</code>コマンドを実行する。</p>
@@ -7578,7 +7578,7 @@ $ yum install -y nodejs
 <h4 id="upgrade_1">▼ upgradeとは<a class="headerlink" href="#upgrade_1" title="Permanent link">&para;</a></h4>
 <p>指定したパッケージを<code>package.json</code>ファイルの範囲内でアップグレードする。</p>
 <p>参考：<a href="https://qiita.com/teinen_qiita/items/18ca1fb433914e09c9e4">https://qiita.com/teinen_qiita/items/18ca1fb433914e09c9e4</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn upgrade &lt;パッケージ名&gt;@&lt;バージョン&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yarn upgrade &lt;パッケージ名&gt;@&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="latest">▼ latest<a class="headerlink" href="#latest" title="Permanent link">&para;</a></h4>
 <p>全てのパッケージを、<code>package.json</code>ファイルを無視して最新までアップグレードする。</p>
@@ -7644,7 +7644,7 @@ $ yum install -y nodejs
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

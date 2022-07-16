@@ -6706,7 +6706,7 @@
 <h2 id="01-gitlab-ci">01. GitLab CIの仕組み<a class="headerlink" href="#01-gitlab-ci" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="gitlab-ci_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/gitlab-ci_architecture.png" /></p>
-<p>GitLab Runnnerを処理の実行環境として、GitLabリポジトリの<code>gitlab-ci.yml</code>ファイルで定義されたパイプラインを実行する。</p>
+<p>GitLab Runnerを処理の実行環境として、GitLabリポジトリの<code>gitlab-ci.yml</code>ファイルで定義されたパイプラインを実行する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://subscription.packtpub.com/book/cloud-&amp;-networking/9781789531282/19/ch19lvl1sec32/the-runner-client-architecture">https://subscription.packtpub.com/book/cloud-&amp;-networking/9781789531282/19/ch19lvl1sec32/the-runner-client-architecture</a></li>
@@ -6775,7 +6775,7 @@
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">foo_job</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine:1.0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;sh&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -6817,7 +6817,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

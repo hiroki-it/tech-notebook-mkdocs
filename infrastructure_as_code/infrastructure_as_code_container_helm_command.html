@@ -7513,7 +7513,7 @@
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm <span class="nb">history</span> &lt;リリース名&gt;
 
 REVISION    UPDATED                   STATUS     CHART      APP VERSION   DESCRIPTION
-&lt;リリース名&gt;  Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  SUSPENDED  foo-1.0.0  <span class="m">1</span>.0.0         Initial install
+&lt;リリース名&gt;  Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  SUSPENDED  foo-&lt;バージョンタグ&gt;  &lt;バージョンタグ&gt;         Initial install
 &lt;リリース名&gt;  Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  SUSPENDED  foo-1.1.0  <span class="m">1</span>.1.0         Rolled back to <span class="m">1</span>
 &lt;リリース名&gt;  Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  DEPLOYED   foo-1.0.1  <span class="m">1</span>.1.1         Upgraded successfully
 </code></pre></div></td></tr></table></div>
@@ -7555,7 +7555,7 @@ REVISION    UPDATED                   STATUS     CHART      APP VERSION   DESCRI
 </tr>
 <tr>
 <td>チャートアーカイブへのパス</td>
-<td><code>./foo-chart-1.0.0.tgz</code></td>
+<td><code>./foo-chart-&lt;バージョンタグ&gt;.tgz</code></td>
 <td><code>values</code>ファイルを使用する場合、<code>values</code>ファイルはチャートアーカイブの外にある必要がある。<br>参考：<a href="https://helm.sh/docs/helm/helm_install/">https://helm.sh/docs/helm/helm_install/</a></td>
 </tr>
 </tbody>
@@ -7684,7 +7684,7 @@ $ helm install &lt;リリース名&gt; &lt;チャートリポジトリ名&gt; --
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm list
 
 NAME         VERSION   UPDATED                   STATUS    CHART
-&lt;リリース名&gt;   <span class="m">1</span>         Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  DEPLOYED  foo-chart-1.0.0 <span class="c1"># &lt;-- チャートのバージョンがわかる。</span>
+&lt;リリース名&gt;   <span class="m">1</span>         Wed Jan <span class="m">01</span> <span class="m">12</span>:00:00 <span class="m">2020</span>  DEPLOYED  foo-chart-&lt;バージョンタグ&gt; <span class="c1"># &lt;-- チャートのバージョンがわかる。</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="package">package<a class="headerlink" href="#package" title="Permanent link">&para;</a></h3>
@@ -7695,7 +7695,7 @@ NAME         VERSION   UPDATED                   STATUS    CHART
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm package &lt;fooチャートへのパス&gt; &lt;barチャートへのパス&gt; &lt;bazチャートへのパス&gt;
 
-Successfully packaged chart and saved it to: /foo-1.0.0.tgz
+Successfully packaged chart and saved it to: /foo-&lt;バージョンタグ&gt;.tgz
 </code></pre></div></td></tr></table></div>
 <h4 id="-d">▼ -d<a class="headerlink" href="#-d" title="Permanent link">&para;</a></h4>
 <p>チャートアーカイブの作成先のディレクトリを指定しつつ、<code>helm package</code>コマンドを実行する。</p>
@@ -7717,7 +7717,7 @@ $ helm pull oci://&lt;アカウントID&gt;.dkr.ecr.ap-northeast-1.amazonaws.com
 </code></pre></div></td></tr></table></div>
 <h4 id="-version">▼ --version<a class="headerlink" href="#-version" title="Permanent link">&para;</a></h4>
 <p>チャートのバージョンを指定して、<code>helm pull</code>コマンドを実行する。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm pull &lt;チャートリポジトリURL&gt; --version &lt;バージョン&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm pull &lt;チャートリポジトリURL&gt; --version &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="push">push<a class="headerlink" href="#push" title="Permanent link">&para;</a></h3>
@@ -7820,7 +7820,7 @@ Update Complete. ⎈Happy Helming!⎈
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm search hub &lt;キーワード&gt;
 
-URL               CHART VERSION      APP VERSION                       DESCRIPTION                                                   https://artifacthub.io/example.com   <span class="m">1</span>.0.0             <span class="m">1</span>.0.0                            This is foo chart
+URL               CHART VERSION      APP VERSION                       DESCRIPTION                                                   https://artifacthub.io/example.com   &lt;バージョンタグ&gt;             &lt;バージョンタグ&gt;                            This is foo chart
 &lt;OCIリポジトリURL&gt;  &lt;チャートバージョン&gt;  &lt;アプリケーションのリリースバージョン&gt;  &lt;説明文&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7844,12 +7844,12 @@ URL               CHART VERSION      APP VERSION                       DESCRIPTI
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm show chart &lt;チャート名&gt;
 
 apiVersion: v2
-appVersion: <span class="m">1</span>.0.0
+appVersion: &lt;バージョンタグ&gt;
 maintainers:
   - name: hiroki hasegawa
 name: foo-chart
 type: application
-version: <span class="m">1</span>.0.0
+version: &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="values">▼ values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h4>
 <p>チャートに渡せるパラメーターを<code>values</code>ファイルとして取得する。<code>values</code>ファイル本体は、チャートリポジトリで閲覧できる。</p>
@@ -7926,7 +7926,7 @@ TEST SUITE: None
 <h4 id="helm-secrets_1">▼ helm-secretsとは<a class="headerlink" href="#helm-secrets_1" title="Permanent link">&para;</a></h4>
 <p>Sopsを使用して、<code>values</code>ファイルを暗号化/復号化しつつ、helmコマンドを実行する。元々の平文ファイルの名前は、<code>secrets.yaml</code>または<code>secrets.***.yaml</code>とする必要がある。</p>
 <p>参考：<a href="https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm plugin install https://github.com/jkroepke/helm-secrets --version &lt;バージョン&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm plugin install https://github.com/jkroepke/helm-secrets --version &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="dec">▼ dec<a class="headerlink" href="#dec" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイルを復号化し、<code>.yaml.dec</code>ファイルに出力する。</p>
@@ -7988,7 +7988,7 @@ db:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

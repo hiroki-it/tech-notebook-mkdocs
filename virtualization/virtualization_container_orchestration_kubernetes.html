@@ -9106,7 +9106,7 @@
 <p><br></p>
 <h3 id="kube-apiserver">kube-apiserver<a class="headerlink" href="#kube-apiserver" title="Permanent link">&para;</a></h3>
 <h4 id="kube-apiserver_1">▼ kube-apiserverとは<a class="headerlink" href="#kube-apiserver_1" title="Permanent link">&para;</a></h4>
-<p>kubernetesクライアントにkueneretes-APIを公開する。クライアントがkubectlコマンドを実行すると、kube-apiserverがコールされ、コマンドに沿ってKubernetesリソースが操作される。</p>
+<p>kubernetesクライアントにkueneretes-APIを公開する。クライアントが<code>kubectl</code>コマンドを実行すると、kube-apiserverがコールされ、コマンドに沿ってKubernetesリソースが操作される。</p>
 <p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <p><img alt="kubernetes_kube-apiserver" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-apiserver.png" /></p>
 <p><br></p>
@@ -9262,7 +9262,7 @@ coredns-558bd4d5db-ltbxt                 <span class="m">1</span>/1     Running 
 <h2 id="02-kubernetes">02. Kubernetesの操作<a class="headerlink" href="#02-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="kubernetes_1">kubernetesクライアント<a class="headerlink" href="#kubernetes_1" title="Permanent link">&para;</a></h3>
 <h4 id="kubernetes_2">▼ kubernetesクライアントとは<a class="headerlink" href="#kubernetes_2" title="Permanent link">&para;</a></h4>
-<p>kubernetesクライアントは、kubectlコマンドを使用して、kubernetesマスターAPIをコールできる。</p>
+<p>kubernetesクライアントは、<code>kubectl</code>コマンドを使用して、kubernetesマスターAPIをコールできる。</p>
 <p><br></p>
 <h2 id="03-kubernetes">03. Kubernetesリソースとオブジェクト<a class="headerlink" href="#03-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="kubernetes_3">Kubernetesリソース<a class="headerlink" href="#kubernetes_3" title="Permanent link">&para;</a></h3>
@@ -9331,7 +9331,7 @@ coredns-558bd4d5db-ltbxt                 <span class="m">1</span>/1     Running 
 <li><a href="https://qiita.com/superbrothers/items/3ac78daba3560ea406b2">https://qiita.com/superbrothers/items/3ac78daba3560ea406b2</a></li>
 <li><a href="https://speakerdeck.com/masayaaoyama/jkd1812-prd-manifests?slide=16">https://speakerdeck.com/masayaaoyama/jkd1812-prd-manifests?slide=16</a></li>
 </ul>
-<p>（１）Kubernetesクライアントは、kubectlコマンドがを使用して、Podを削除するリクエストをkube-apiserverに送信する。</p>
+<p>（１）Kubernetesクライアントは、<code>kubectl</code>コマンドがを使用して、Podを削除するリクエストをkube-apiserverに送信する。</p>
 <p>（２）Podが、Terminating状態になる。</p>
 <p>（３）Podは、削除プロセスを開始する。<code>spec.preStop</code>キーの設定が実行される。SIGTERMシグナルが送信され、削除プロセスは完了する。この時、<code>spec.terminationGracePeriodSeconds</code>キーの設定値を過ぎても削除プロセスが完了していない場合は、SIGKILLシグナルが送信され、削除プロセスは強制完了する。</p>
 <p>（４）他のKubernetesリソース（Deployment、Service、など）の管理対象から、該当のPodが削除される。</p>
@@ -9468,7 +9468,7 @@ coredns-558bd4d5db-ltbxt                 <span class="m">1</span>/1     Running 
 
 <span class="o">[</span>root@&lt;Pod名&gt;<span class="o">]</span> $ cat /etc/resolv.conf 
 
-nameserver n.n.n.n <span class="c1"># ClusterネットワークのIPアドレス</span>
+nameserver *.*.*.* <span class="c1"># ClusterネットワークのIPアドレス</span>
 search default.svc.cluster.local svc.cluster.local cluster.local 
 options ndots:5
 </code></pre></div></td></tr></table></div>
@@ -9601,7 +9601,7 @@ options ndots:5
 <p><br></p>
 <h3 id="node_1">Node<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
 <h4 id="nodekubernetes">▼ マスターNode（kubernetesマスター）<a class="headerlink" href="#nodekubernetes" title="Permanent link">&para;</a></h4>
-<p>kubernetesマスターともいう。マスターコンポーネントが稼働する。クライアントがkubectlコマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
+<p>kubernetesマスターともいう。マスターコンポーネントが稼働する。クライアントが<code>kubectl</code>コマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC">https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC</a></li>
@@ -9609,7 +9609,7 @@ options ndots:5
 <li><a href="https://qiita.com/baby-degu/items/ce26507bd954621d6dc5">https://qiita.com/baby-degu/items/ce26507bd954621d6dc5</a></li>
 </ul>
 <h4 id="node_2">▼ ワーカーNode<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
-<p>ノードコンポーネントが稼働する。Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、kubectlコマンドで<code>--register-node=false</code>とする必要がある。</p>
+<p>ノードコンポーネントが稼働する。Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、<code>kubectl</code>コマンドで<code>--register-node=false</code>とする必要がある。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/architecture/nodes/">https://kubernetes.io/docs/concepts/architecture/nodes/</a></li>
@@ -10148,7 +10148,7 @@ Address:  <span class="m">10</span>.105.157.184
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

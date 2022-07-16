@@ -6998,12 +6998,12 @@
 <span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.1</span><span class="w"></span>
 
 <span class="nt">orbs</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">aws-foo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">circleci/aws-foo@x.y.z</span><span class="w"></span>
+<span class="w">  </span><span class="nt">aws-foo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">circleci/aws-foo@&lt;バージョンタグ&gt;</span><span class="w"></span>
 
 <span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">foo_bar_baz</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">docker</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">circleci/python:x.y.z</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">circleci/python:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">attach_workspace</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">at</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.</span><span class="w"></span>
@@ -7257,7 +7257,7 @@ aws configure list
 <tr>
 <td><code>verify-revision-is-deployed</code></td>
 <td>ローリングアップデートのECSタスクがECSタスク定義の必要数に合致したかを継続的に監視する。</td>
-<td>例えば、ECSタスクが『Runnning』にならずに『Stopped』になってしまう場合や、既存のECSタスクが『Stopped』にならずに『Running』のままになってしまう場合、この状態はECSタスクの必要数に合致しないので、検知できる。</td>
+<td>例えば、ECSタスクが『Running』にならずに『Stopped』になってしまう場合や、既存のECSタスクが『Stopped』にならずに『Running』のままになってしまう場合、この状態はECSタスクの必要数に合致しないので、検知できる。</td>
 </tr>
 <tr>
 <td><code>max-poll-attempts</code></td>
@@ -7734,7 +7734,7 @@ aws configure list
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

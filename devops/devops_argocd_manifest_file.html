@@ -8029,7 +8029,7 @@
 <h3 id="_10">インストール<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ 共通の手順<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>参考：</p>
-<p>（１）ローカルマシンから本番環境にArgoCDをインストールする場合、kubectlコマンドのコンテキストを間違える可能性がある。そのため、kubectlコマンド専用の踏み台サーバーを用意してもよい。EKSのコンテキストを作成し、kubectlコマンドの宛先を、EKSのkube-apiserverに変更する。</p>
+<p>（１）ローカルマシンから本番環境にArgoCDをインストールする場合、<code>kubectl</code>コマンドのコンテキストを間違える可能性がある。そのため、<code>kubectl</code>コマンド専用の踏み台サーバーを用意してもよい。EKSのコンテキストを作成し、<code>kubectl</code>コマンドの宛先を、EKSのkube-apiserverに変更する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$ aws eks update-kubeconfig --region ap-northeast-1 --name foo-eks-cluster
 $ kubectl config use-context &lt;ClusterのARN&gt;
@@ -8722,7 +8722,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 
 ID  DATE                           REVISION
 <span class="m">0</span>   <span class="m">2020</span>-04-12 <span class="m">10</span>:22:57 +0900 JST  <span class="m">1</span>.0.1
-<span class="m">1</span>   <span class="m">2020</span>-04-12 <span class="m">10</span>:49:14 +0900 JST  <span class="m">1</span>.0.0
+<span class="m">1</span>   <span class="m">2020</span>-04-12 <span class="m">10</span>:49:14 +0900 JST  &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="repourl_1">▼ repoURL<a class="headerlink" href="#repourl_1" title="Permanent link">&para;</a></h4>
 <p>監視対象のチャートレジストリ内のリポジトリのURLを設定する。パブリックリポジトリであれば認証が不要であるが、プライベートリポジトリであればこれが必要になる。</p>
@@ -8764,7 +8764,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-application</span><span class="w"></span>
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">source</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="specsourceoci">spec.source（OCIレジストリ内リポジトリの場合）<a class="headerlink" href="#specsourceoci" title="Permanent link">&para;</a></h3>
@@ -8807,7 +8807,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-application</span><span class="w"></span>
 <span class="nt">spec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">source</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetRevision</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="specdestination">spec.destination<a class="headerlink" href="#specdestination" title="Permanent link">&para;</a></h3>
@@ -9182,7 +9182,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">templates</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-template</span><span class="w"></span>
 <span class="w">      </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:1.0.0</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;sh&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">          </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">            </span><span class="no">echo &quot;Hello World&quot;</span><span class="w"></span>
@@ -9230,7 +9230,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">templates</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-template</span><span class="w"></span>
 <span class="w">      </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:1.0.0</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">          </span><span class="nt">cource</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">            </span><span class="no">echo &quot;Hello World&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -9256,7 +9256,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">templates</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-template</span><span class="w"></span>
 <span class="w">      </span><span class="nt">script</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:1.0.0</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpline:&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;sh&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">          </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">            </span><span class="no">echo &quot;Hello World&quot;</span><span class="w"></span>
@@ -9270,7 +9270,7 @@ ID  DATE                           REVISION
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

@@ -7165,7 +7165,7 @@
 <p><br></p>
 <h3 id="init">init<a class="headerlink" href="#init" title="Permanent link">&para;</a></h3>
 <h4 id="init_1">▼ initとは<a class="headerlink" href="#init_1" title="Permanent link">&para;</a></h4>
-<p>terraformコマンドを実行しているローカルマシンの<code>.terraform</code>ディレクトリを初期化（<code>terraform.lock.hcl</code>ファイルの作成、ネストモジュールやプロバイダーのインストール、バックエンドの切り替えなど）を実行する。<code>.tfstate</code>ファイルを書き換えることはしないため、基本的には安全である。もしプロバイダーをアップグレードした場合は、新しいバージョンのインストールするために、本コマンドを実行する必要がある。</p>
+<p><code>terraform</code>コマンドを実行しているローカルマシンの<code>.terraform</code>ディレクトリを初期化（<code>terraform.lock.hcl</code>ファイルの作成、ネストモジュールやプロバイダーのインストール、バックエンドの切り替えなど）を実行する。<code>.tfstate</code>ファイルを書き換えることはしないため、基本的には安全である。もしプロバイダーをアップグレードした場合は、新しいバージョンのインストールするために、本コマンドを実行する必要がある。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://spacelift.io/blog/terraform-init">https://spacelift.io/blog/terraform-init</a></li>
@@ -7260,6 +7260,7 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
 </code></pre></div></td></tr></table></div>
 <h4 id="-diff">▼ -diff<a class="headerlink" href="#-diff" title="Permanent link">&para;</a></h4>
 <p>インデントを揃えるべき箇所が存在する場合に、これを取得する。</p>
+<p><code>test</code>コマンド</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform fmt -diff
 </code></pre></div></td></tr></table></div>
 <h4 id="-recursive">▼ -recursive<a class="headerlink" href="#-recursive" title="Permanent link">&para;</a></h4>
@@ -7274,7 +7275,7 @@ main.tf
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
-<p>terraformコマンドを実行しているローカルマシンの<code>.terraform</code>ディレクトリに、ネストモジュールをインストールする。ただ、<code>terraform init</code>コマンドに同じ機能が含まれている。</p>
+<p><code>terraform</code>コマンドを実行しているローカルマシンの<code>.terraform</code>ディレクトリに、ネストモジュールをインストールする。ただ、<code>terraform init</code>コマンドに同じ機能が含まれている。</p>
 <p>参考：<a href="https://ozashu.hatenablog.com/entry/2019/05/07/000541">https://ozashu.hatenablog.com/entry/2019/05/07/000541</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform get
 </code></pre></div></td></tr></table></div>
@@ -7611,7 +7612,7 @@ module.vpc_module.aws_vpc.vpc
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

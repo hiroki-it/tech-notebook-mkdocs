@@ -6902,7 +6902,7 @@
 <span class="l l-Scalar l-Scalar-Plain">│   ├── Chart.yaml</span><span class="w"> </span><span class="c1"># チャートの概要を設定する。頭文字は大文字である必要がある。</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   └── values.yaml</span><span class="w"> </span><span class="c1"># テンプレートの変数に出力する値を設定する。</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">├── chart-1.0.0.tgz</span><span class="w"> </span><span class="c1"># チャートアーカイブ。</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">├── chart-&lt;バージョンタグ&gt;.tgz</span><span class="w"> </span><span class="c1"># チャートアーカイブ。</span><span class="w"></span>
 <span class="nn">...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_7">▼ 実行環境別<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
@@ -7023,14 +7023,14 @@
 <p>非カスタムリソースのみからなるリリースのアップグレードは以下の手順で行う。アップグレードが正常に完了したことがわかるように、<code>--wait</code>オプションを有効化すると良い。</p>
 <p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback">https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback</a></p>
 <p>（１）<code>helm upgrade</code>コマンドを実行し、既存のリリースをアップグレードする。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm upgrade -f &lt;valuesファイルへのパス&gt; &lt;リリース名&gt; &lt;チャートへのパス&gt; --version &lt;バージョン&gt; --wait
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm upgrade -f &lt;valuesファイルへのパス&gt; &lt;リリース名&gt; &lt;チャートへのパス&gt; --version &lt;バージョンタグ&gt; --wait
 </code></pre></div></td></tr></table></div>
 <p>（２）リリースのバージョンが新しくなっていることを確認する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm list
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_13">カスタムリソースを含むチャートの場合<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<p>Helmは、カスタムリソースを含むチャートのインストールはサポートしているが、アップグレードとアンインストールをサポートしていない。そのため、アップグレードとアンインストールはkubectlコマンドで実行する必要がある。</p>
+<p>Helmは、カスタムリソースを含むチャートのインストールはサポートしているが、アップグレードとアンインストールをサポートしていない。そのため、アップグレードとアンインストールは<code>kubectl</code>コマンドで実行する必要がある。</p>
 <p>参考：<a href="https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you">https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you</a></p>
 <p>（１）<code>kubectl apply</code>コマンドを実行し、新しいバージョンのカスタムリソースをapplyする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl apply -f &lt;新しいバージョンのカスタムリソースのマニフェストファイルのURL&gt;
@@ -7045,7 +7045,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

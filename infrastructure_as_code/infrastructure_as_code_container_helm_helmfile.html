@@ -7191,7 +7191,7 @@
 <span class="nt">releases</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span><span class="w"></span>
 <span class="w">    </span><span class="nt">chart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-chart</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">values</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{{</span><span class="w"> </span><span class="nv">.Environment.Name</span><span class="w"> </span><span class="p p-Indicator">}}</span><span class="l l-Scalar l-Scalar-Plain">-values.yaml</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -7229,7 +7229,7 @@ $ helmfile -e dev apply
 <p>リリースのバージョンを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">releases</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">n.n.n</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="values">▼ values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h4>
 <p>Helmの実行時に複合化する<code>values</code>ファイルを設定する。</p>
@@ -7383,7 +7383,7 @@ Source: project/manifests/persistent-volume.yaml
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

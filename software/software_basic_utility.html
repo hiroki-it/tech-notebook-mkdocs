@@ -10428,8 +10428,8 @@ setsockopt<span class="o">(</span><span class="m">3</span>, SOL_TCP, TCP_NODELAY
 
 <span class="c1"># 〜 中略 〜</span>
 
-<span class="nv">sin_addr</span><span class="o">=</span>inet_addr<span class="o">(</span><span class="s2">&quot;nnn.nnn.nnn.nn&quot;</span><span class="o">)}</span>, <span class="o">[</span><span class="m">128</span>-&gt;16<span class="o">])</span> <span class="o">=</span> <span class="m">0</span>
-getsockname<span class="o">(</span><span class="m">3</span>, <span class="o">{</span><span class="nv">sa_family</span><span class="o">=</span>AF_INET, <span class="nv">sin_port</span><span class="o">=</span>htons<span class="o">(</span><span class="m">60714</span><span class="o">)</span>, <span class="nv">sin_addr</span><span class="o">=</span>inet_addr<span class="o">(</span><span class="s2">&quot;nnn.nnn.nnn.nn&quot;</span><span class="o">)}</span>, <span class="o">[</span><span class="m">128</span>-&gt;16<span class="o">])</span> <span class="o">=</span> <span class="m">0</span>
+<span class="nv">sin_addr</span><span class="o">=</span>inet_addr<span class="o">(</span><span class="s2">&quot;*.*.*.*&quot;</span><span class="o">)}</span>, <span class="o">[</span><span class="m">128</span>-&gt;16<span class="o">])</span> <span class="o">=</span> <span class="m">0</span>
+getsockname<span class="o">(</span><span class="m">3</span>, <span class="o">{</span><span class="nv">sa_family</span><span class="o">=</span>AF_INET, <span class="nv">sin_port</span><span class="o">=</span>htons<span class="o">(</span><span class="m">60714</span><span class="o">)</span>, <span class="nv">sin_addr</span><span class="o">=</span>inet_addr<span class="o">(</span><span class="s2">&quot;*.*.*.*&quot;</span><span class="o">)}</span>, <span class="o">[</span><span class="m">128</span>-&gt;16<span class="o">])</span> <span class="o">=</span> <span class="m">0</span>
 
 +++ exited with <span class="m">0</span> +++
 </code></pre></div></td></tr></table></div>
@@ -10651,7 +10651,7 @@ traceroute to google.com <span class="o">(</span><span class="m">173</span>.194.
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

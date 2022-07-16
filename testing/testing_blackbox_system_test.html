@@ -7534,7 +7534,7 @@
 <tr>
 <td>Podの停止障害</td>
 <td>GoのPodが停止する。</td>
-<td>kubectlコマンドでPodを強制終了し、その状態でもシステム全体として稼働し続けられるかを確認する。</td>
+<td><code>kubectl</code>コマンドでPodを強制終了し、その状態でもシステム全体として稼働し続けられるかを確認する。</td>
 <td>・<code>kubectl delete pod &lt;Pod名&gt; --grace-period=0 --force</code></td>
 <td>・オートスケーリングによって、停止したPodに代わり新しいPodが起動する。<br>・アプリケーションが正しく動作している。</td>
 </tr>
@@ -7598,7 +7598,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>

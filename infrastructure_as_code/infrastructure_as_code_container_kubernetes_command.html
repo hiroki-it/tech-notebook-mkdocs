@@ -7580,7 +7580,7 @@
 <h2 id="01-kubectl">01. kubectlコマンド<a class="headerlink" href="#01-kubectl" title="Permanent link">&para;</a></h2>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="kubeconfig">▼ <code>~/.kube/config</code>ファイル<a class="headerlink" href="#kubeconfig" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドは、<code>~/.kube</code>以下にある<code>config</code>ファイルに設定された認証情報を基に、kube-apiserverにアクセスする。</p>
+<p><code>kubectl</code>コマンドは、<code>~/.kube</code>以下にある<code>config</code>ファイルに設定された認証情報を基に、kube-apiserverにアクセスする。</p>
 <h4 id="config-kubeconfig">▼ configシンボリックリンク、--kubeconfig<a class="headerlink" href="#config-kubeconfig" title="Permanent link">&para;</a></h4>
 <p>ユーザーが、<code>config</code>ファイルを任意のディレクトリで管理する場合、シンボリックリンクを作成するか、あるいはコマンドの実行時に<code>config</code>ファイルを明示的に指定する必要がある。</p>
 <p>参考：<a href="https://blog.inductor.me/entry/2021/03/13/205452">https://blog.inductor.me/entry/2021/03/13/205452</a></p>
@@ -7629,10 +7629,10 @@ pod/foo-pod configured
 <p><br></p>
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <h4 id="config_1">▼ configとは<a class="headerlink" href="#config_1" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドに関するパラメーターを操作する。</p>
+<p><code>kubectl</code>コマンドに関するパラメーターを操作する。</p>
 <p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config</a></p>
 <h4 id="current-context">▼ current-context<a class="headerlink" href="#current-context" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドの宛先になっているkube-apiserverを取得する。</p>
+<p><code>kubectl</code>コマンドの宛先になっているkube-apiserverを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl config current-context
@@ -7650,7 +7650,7 @@ CURRENT   NAME             CLUSTER          AUTHINFO         NAMESPACE
           docker-desktop   docker-desktop   docker-desktop
 </code></pre></div></td></tr></table></div>
 <h4 id="use-context">▼ use-context<a class="headerlink" href="#use-context" title="Permanent link">&para;</a></h4>
-<p>kubectlコマンドの宛先を、指定したKubernetes環境のkube-apiserverに変更する。</p>
+<p><code>kubectl</code>コマンドの宛先を、指定したKubernetes環境のkube-apiserverに変更する。</p>
 <p><strong>＊例＊</strong></p>
 <p>宛先をMinikubeのkube-apiserverに変更する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl config use-context minikube
@@ -8037,9 +8037,9 @@ data:
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl get pod -o wide
 
-NAME        READY   STATUS        RESTARTS   AGE   IP                NODE       NOMINATED NODE   READINESS GATES
-foo-pod     <span class="m">2</span>/2     Running       <span class="m">0</span>          16d   nnn.nnn.nnn.n     foo-node   &lt;none&gt;           &lt;none&gt;
-bar-pod     <span class="m">2</span>/2     Running       <span class="m">0</span>          16d   nnn.nnn.nnn.n     bar-node   &lt;none&gt;           &lt;none&gt;
+NAME        READY   STATUS        RESTARTS   AGE   IP          NODE       NOMINATED NODE   READINESS GATES
+foo-pod     <span class="m">2</span>/2     Running       <span class="m">0</span>          16d   *.*.*.*     foo-node   &lt;none&gt;           &lt;none&gt;
+bar-pod     <span class="m">2</span>/2     Running       <span class="m">0</span>          16d   *.*.*.*     bar-node   &lt;none&gt;           &lt;none&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-l">▼ -l<a class="headerlink" href="#-l" title="Permanent link">&para;</a></h4>
 <p>特定の<code>metadata.labels</code>キーを持つPodを取得する。Serviceのルーティング先になっているPodを知りたい時に役立つ。</p>
@@ -8261,7 +8261,7 @@ Server Version: version.Info<span class="o">{</span>
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
       
     
   </small>
