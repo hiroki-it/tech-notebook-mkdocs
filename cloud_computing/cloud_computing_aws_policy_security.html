@@ -6,20 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="コスト管理＠AWSの知見を記録しています。">
+        <meta name="description" content="セキュリティ＠AWSの知見を記録しています。">
       
       
         <meta name="author" content="Hiroki Hasegawa">
       
       
-        <link rel="canonical" href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_cost_management.html">
+        <link rel="canonical" href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_policy_security.html">
       
       <link rel="icon" href="../assets/images/logo_v2.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
-        <title>【IT技術の知見】コスト管理＠AWS - 俺の技術ノート</title>
+        <title>【IT技術の知見】セキュリティ＠AWS - 俺の技術ノート</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              【IT技術の知見】コスト管理＠AWS
+              【IT技術の知見】セキュリティ＠AWS
             
           </span>
         </div>
@@ -3869,12 +3869,298 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          セキュリティ
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="cloud_computing_aws_policy_security.html" class="md-nav__link md-nav__link--active">
+        セキュリティ
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    はじめに
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    01. ファイアウォール設計
+  </a>
+  
+    <nav class="md-nav" aria-label="01. ファイアウォール設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    セキュリティグループの設計
+  </a>
+  
+    <nav class="md-nav" aria-label="セキュリティグループの設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec2" class="md-nav__link">
+    ▼ アプリケーションEC2のインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2_1" class="md-nav__link">
+    ▼ 踏み台EC2のインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efs" class="md-nav__link">
+    ▼ EFSのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rds" class="md-nav__link">
+    ▼ RDSのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    ▼ Redisのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb" class="md-nav__link">
+    ▼ ALBのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ▼ アウトバウンドルール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-waf" class="md-nav__link">
+    02. クラウド型WAFの設計
+  </a>
+  
+    <nav class="md-nav" aria-label="02. クラウド型WAFの設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    WAFルールの設計
+  </a>
+  
+    <nav class="md-nav" aria-label="WAFルールの設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ▼ ユーザーエージェント拒否
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    ▼ CI/CDツールのアクセスを許可
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ▼ 特定のパスを社内アクセスに限定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ▼ 社内アクセスに限定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb_1" class="md-nav__link">
+    ▼ ALBを直接的に指定することを防ぐ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waf_1" class="md-nav__link">
+    WAFマネージドルールの設計
+  </a>
+  
+    <nav class="md-nav" aria-label="WAFマネージドルールの設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ▼ マネージドルールの動作確認の必要性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ▼ ブラウザを送信元とした場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ▼ 連携するアプリケーションを送信元とした場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3917,282 +4203,6 @@
       <a href="cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          コスト管理
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="cloud_computing_aws_cost_management.html" class="md-nav__link md-nav__link--active">
-        コスト管理
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    はじめに
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#01" class="md-nav__link">
-    01. コスト管理の観点
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#02-service-quotas" class="md-nav__link">
-    02. Service Quotas
-  </a>
-  
-    <nav class="md-nav" aria-label="02. Service Quotas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#service-quotast" class="md-nav__link">
-    Service Quotastとは
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aws_1" class="md-nav__link">
-    各種AWSリソースの上限値
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    方法
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#03" class="md-nav__link">
-    03. リソース別コスト
-  </a>
-  
-    <nav class="md-nav" aria-label="03. リソース別コスト">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudfront" class="md-nav__link">
-    CloudFront
-  </a>
-  
-    <nav class="md-nav" aria-label="CloudFront">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ▼ 転送
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ebs" class="md-nav__link">
-    EBS
-  </a>
-  
-    <nav class="md-nav" aria-label="EBS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ▼ 料金体系
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ec2" class="md-nav__link">
-    EC2
-  </a>
-  
-    <nav class="md-nav" aria-label="EC2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ▼ 料金体系
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ▼ 実行時間
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecr" class="md-nav__link">
-    ECR
-  </a>
-  
-    <nav class="md-nav" aria-label="ECR">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ▼ 合計サイズ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fargate" class="md-nav__link">
-    Fargate
-  </a>
-  
-    <nav class="md-nav" aria-label="Fargate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ▼ リソースサイズ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    Lambda
-  </a>
-  
-    <nav class="md-nav" aria-label="Lambda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    ▼ 実行時間
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rds" class="md-nav__link">
-    RDS
-  </a>
-  
-    <nav class="md-nav" aria-label="RDS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ▼ 料金体系の種類
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ses" class="md-nav__link">
-    SES
-  </a>
-  
-    <nav class="md-nav" aria-label="SES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    ▼ 送受信数
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6663,37 +6673,71 @@
       
         <li class="md-nav__item">
   <a href="#01" class="md-nav__link">
-    01. コスト管理の観点
+    01. ファイアウォール設計
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#02-service-quotas" class="md-nav__link">
-    02. Service Quotas
-  </a>
-  
-    <nav class="md-nav" aria-label="02. Service Quotas">
+    <nav class="md-nav" aria-label="01. ファイアウォール設計">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#service-quotast" class="md-nav__link">
-    Service Quotastとは
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aws_1" class="md-nav__link">
-    各種AWSリソースの上限値
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    方法
+    セキュリティグループの設計
   </a>
+  
+    <nav class="md-nav" aria-label="セキュリティグループの設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ec2" class="md-nav__link">
+    ▼ アプリケーションEC2のインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2_1" class="md-nav__link">
+    ▼ 踏み台EC2のインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efs" class="md-nav__link">
+    ▼ EFSのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rds" class="md-nav__link">
+    ▼ RDSのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    ▼ Redisのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb" class="md-nav__link">
+    ▼ ALBのインバウンドルール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ▼ アウトバウンドルール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6703,71 +6747,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#03" class="md-nav__link">
-    03. リソース別コスト
+  <a href="#02-waf" class="md-nav__link">
+    02. クラウド型WAFの設計
   </a>
   
-    <nav class="md-nav" aria-label="03. リソース別コスト">
+    <nav class="md-nav" aria-label="02. クラウド型WAFの設計">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloudfront" class="md-nav__link">
-    CloudFront
+  <a href="#waf" class="md-nav__link">
+    WAFルールの設計
   </a>
   
-    <nav class="md-nav" aria-label="CloudFront">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ▼ 転送
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ebs" class="md-nav__link">
-    EBS
-  </a>
-  
-    <nav class="md-nav" aria-label="EBS">
+    <nav class="md-nav" aria-label="WAFルールの設計">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ▼ 料金体系
+    ▼ ユーザーエージェント拒否
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ec2" class="md-nav__link">
-    EC2
+  <a href="#cicd" class="md-nav__link">
+    ▼ CI/CDツールのアクセスを許可
   </a>
   
-    <nav class="md-nav" aria-label="EC2">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    ▼ 料金体系
+    ▼ 特定のパスを社内アクセスに限定
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    ▼ 実行時間
+    ▼ 社内アクセスに限定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alb_1" class="md-nav__link">
+    ▼ ALBを直接的に指定することを防ぐ
   </a>
   
 </li>
@@ -6778,96 +6803,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ecr" class="md-nav__link">
-    ECR
+  <a href="#waf_1" class="md-nav__link">
+    WAFマネージドルールの設計
   </a>
   
-    <nav class="md-nav" aria-label="ECR">
+    <nav class="md-nav" aria-label="WAFマネージドルールの設計">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    ▼ 合計サイズ
+    ▼ マネージドルールの動作確認の必要性
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fargate" class="md-nav__link">
-    Fargate
-  </a>
-  
-    <nav class="md-nav" aria-label="Fargate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ▼ リソースサイズ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lambda" class="md-nav__link">
-    Lambda
+  <a href="#_8" class="md-nav__link">
+    ▼ ブラウザを送信元とした場合
   </a>
-  
-    <nav class="md-nav" aria-label="Lambda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    ▼ 実行時間
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rds" class="md-nav__link">
-    RDS
-  </a>
-  
-    <nav class="md-nav" aria-label="RDS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ▼ 料金体系の種類
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ses" class="md-nav__link">
-    SES
-  </a>
-  
-    <nav class="md-nav" aria-label="SES">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    ▼ 送受信数
+  <a href="#_9" class="md-nav__link">
+    ▼ 連携するアプリケーションを送信元とした場合
   </a>
   
 </li>
@@ -6894,188 +6853,465 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/hiroki-it/edit/master/docs/cloud_computing/cloud_computing_aws_cost_management.md" title="編集" class="md-content__button md-icon">
+  <a href="https://github.com/hiroki-it/edit/master/docs/cloud_computing/cloud_computing_aws_policy_security.md" title="編集" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="aws">コスト管理＠AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h1>
+<h1 id="aws">セキュリティ＠AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
-<h2 id="01">01. コスト管理の観点<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
-<p>スペック、時間単価、数量、月額料金</p>
-<p><br></p>
-<h2 id="02-service-quotas">02. Service Quotas<a class="headerlink" href="#02-service-quotas" title="Permanent link">&para;</a></h2>
-<h3 id="service-quotast">Service Quotastとは<a class="headerlink" href="#service-quotast" title="Permanent link">&para;</a></h3>
-<p>各種AWSリソースの設定の上限値を上げられる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html</a></p>
-<p><br></p>
-<h3 id="aws_1">各種AWSリソースの上限値<a class="headerlink" href="#aws_1" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html</a></p>
-<p><br></p>
-<h3 id="_2">方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html</a></p>
-<p><br></p>
-<h2 id="03">03. リソース別コスト<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
-<h3 id="cloudfront">CloudFront<a class="headerlink" href="#cloudfront" title="Permanent link">&para;</a></h3>
-<h4 id="_3">▼ 転送<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>オリジンに転送する前にキャッシュを使用してレスポンスを返信できるため、オリジンでかかる料金を抑えられる。</p>
-<p><br></p>
-<h3 id="ebs">EBS<a class="headerlink" href="#ebs" title="Permanent link">&para;</a></h3>
-<h4 id="_4">▼ 料金体系<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>EBSボリュームは、ボリュームの使用率に関わらず、最大サイズに基づいて料金が発生する。また、複数のEBSボリュームをEC2に紐づけている場合は、その合計サイズで料金が発生する。そのため、必要最低限のサイズを選択するように、過剰なサイズを選択してはいけない。その他、ボリュームタイプによっては、IOPSやスループットの設定値が課金対象になっている。汎用SSD（gp2タイプ）であれば、EBSボリュームの最大サイズのみを考慮すれば良い。また、注意点として、リージョンごとに料金体系が異なる。</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/ebs-volume-charges/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/ebs-volume-charges/</a></li>
-<li><a href="https://aws.amazon.com/jp/ebs/pricing/">https://aws.amazon.com/jp/ebs/pricing/</a></li>
-</ul>
-<p><br></p>
-<h3 id="ec2">EC2<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h3>
-<h4 id="_5">▼ 料金体系<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>使い方に応じた料金体系を選択できる。レスポンスの返信時に料金が発生する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing</a></p>
+<h2 id="01">01. ファイアウォール設計<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
+<h3 id="_2">セキュリティグループの設計<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="ec2">▼ アプリケーションEC2のインバウンドルール<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h4>
+<p>ALBに割り振られる可能性のあるIPアドレスを許可するために、ALBのセキュリティグループID、またはサブネットのCIDRブロックを設定する。</p>
 <table>
 <thead>
 <tr>
-<th>使い方名</th>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
 <th>説明</th>
-<th>補足</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>オンデマンドインスタンス</td>
-<td></td>
-<td>参考：<a href="https://aws.amazon.com/jp/ec2/pricing/on-demand/">https://aws.amazon.com/jp/ec2/pricing/on-demand/</a></td>
+<td>HTTP</td>
+<td>TCP</td>
+<td><code>80</code></td>
+<td>ALBのセキュリティグループID</td>
+<td>HTTP access from ALB</td>
 </tr>
 <tr>
-<td>Savings Plans</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>リザーブドインスタンス</td>
-<td>EC2インスタンスの一定期間分の使用料金を前払いし、その代わりに安く利用できるようになる。</td>
-<td></td>
-</tr>
-<tr>
-<td>スポットインスタンス</td>
-<td></td>
-<td></td>
+<td>HTTPS</td>
+<td>TCP</td>
+<td><code>443</code></td>
+<td>踏み台EC2のセキュリティグループID</td>
+<td>SSH access from bastion EC2</td>
 </tr>
 </tbody>
 </table>
-<h4 id="_6">▼ 実行時間<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>インスタンスのライフサイクルの状態に応じて、料金が発生する。EC2インスタンスを実行している時間分だけ料金がかかる。インスタンスを使用せずに設置しているだけであれば、料金はかからない。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html</a></p>
+<h4 id="ec2_1">▼ 踏み台EC2のインバウンドルール<a class="headerlink" href="#ec2_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
-<th>インスタンスの状態</th>
-<th>料金発生の有無</th>
-<th>補足</th>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
+<th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>pending</td>
-<td>なし</td>
+<td>SSH</td>
+<td>TCP</td>
+<td><code>22</code></td>
+<td>社内のグローバルIPアドレス</td>
+<td>SSH access from global ip address</td>
+</tr>
+</tbody>
+</table>
+<h4 id="efs">▼ EFSのインバウンドルール<a class="headerlink" href="#efs" title="Permanent link">&para;</a></h4>
+<p>EC2に割り振られる可能性のあるIPアドレスを許可するために、EC2のセキュリティグループID、またはサブネットのCIDRブロックを設定する。</p>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NFS</td>
+<td>TCP</td>
+<td><code>2049</code></td>
+<td>EC2のセキュリティグループID</td>
+<td>NFS access from app EC2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rds">▼ RDSのインバウンドルール<a class="headerlink" href="#rds" title="Permanent link">&para;</a></h4>
+<p>EC2に割り振られる可能性のあるIPアドレスを許可するために、EC2のセキュリティグループID、またはサブネットのCIDRブロックを設定する。</p>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MYSQL/Aurora</td>
+<td>TCP</td>
+<td><code>3306</code></td>
+<td>EC2のセキュリティグループID</td>
+<td>MYSQL access from app EC2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="redis">▼ Redisのインバウンドルール<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h4>
+<p>EC2に割り振られる可能性のあるIPアドレスを許可するために、EC2のセキュリティグループID、またはサブネットのCIDRブロックを設定する。</p>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>カスタムTCP</td>
+<td>TCP</td>
+<td><code>6379</code></td>
+<td>EC2のセキュリティグループID</td>
+<td>TCP access from app EC2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="alb">▼ ALBのインバウンドルール<a class="headerlink" href="#alb" title="Permanent link">&para;</a></h4>
+<p>CloudFrontと連携する場合、CloudFrontに割り振られる可能性のあるIPアドレスを許可するために、全てのIPアドレスを許可する。その代わりに、CloudFrontにWAFを紐付け、ALBの前でIPアドレスを制限する。CloudFrontとは連携しない場合、ALBのセキュリティグループでIPアドレスを制限する。</p>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>ソース</th>
+<th>説明</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>TCP</td>
+<td><code>80</code></td>
+<td><code>0.0.0.0/0</code></td>
+<td>HTTP access from CloudFront</td>
 <td></td>
 </tr>
 <tr>
-<td>running</td>
-<td>あり</td>
-<td></td>
-</tr>
-<tr>
-<td>stopping</td>
-<td>条件付きでなし</td>
-<td>停止準備中の間は料金が発生し、休止準備中の間は発生しない。</td>
-</tr>
-<tr>
-<td>stopped</td>
-<td>なし</td>
-<td></td>
-</tr>
-<tr>
-<td>shutting-down</td>
-<td>なし</td>
-<td></td>
-</tr>
-<tr>
-<td>terminated</td>
-<td>なし</td>
+<td>HTTPS</td>
+<td>TCP</td>
+<td><code>443</code></td>
+<td><code>0.0.0.0/0</code></td>
+<td>HTTPS access from CloudFront</td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<h4 id="_3">▼ アウトバウンドルール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>タイプ</th>
+<th>プロトコル</th>
+<th>ポート</th>
+<th>送信先</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>すべてのトラフィック</td>
+<td>すべて</td>
+<td>すべて</td>
+<td><code>0.0.0.0/0</code></td>
+<td>Full access</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h3 id="ecr">ECR<a class="headerlink" href="#ecr" title="Permanent link">&para;</a></h3>
-<h4 id="_7">▼ 合計サイズ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>ECRに保存されたイメージの合計サイズが<code>500MB</code>を超えると、請求が発生するため、古いイメージを定期的に削除する必要がある。</p>
-<p><br></p>
-<h3 id="fargate">Fargate<a class="headerlink" href="#fargate" title="Permanent link">&para;</a></h3>
-<h4 id="_8">▼ リソースサイズ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>Fargateでは、Fargate Node内でPodが使用したリソースサイズによって、料金が決定する。そのため、冗長化するPod数を減らすことで、料金を抑えられる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/fargate/pricing/">https://aws.amazon.com/jp/fargate/pricing/</a></p>
+<h2 id="02-waf">02. クラウド型WAFの設計<a class="headerlink" href="#02-waf" title="Permanent link">&para;</a></h2>
+<h3 id="waf">WAFルールの設計<a class="headerlink" href="#waf" title="Permanent link">&para;</a></h3>
+<h4 id="_4">▼ ユーザーエージェント拒否<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
-<p>バージニア北部のFargate Node内で、Podが<code>10</code>個を毎日<code>1</code>時間稼働させ、Podが<code>0.25</code>vCPUと<code>1</code>GiBメモリを使用したとする。この場合、１ヶ月の請求額は以下のようになる。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>CPU の月額料金
-合計 vCPU 料金 = (ポッド数) × (vCPU 数) × (CPU 秒あたりの料金) × (秒単位の 1 日あたりの CPU 使用時間) × (日数)
-合計 vCPU 料金 = 10 × 0.25 × 0.000011244 × 3600 × 30 = 3.04 USD
-
-メモリの月額料金
-合計メモリ料金 = (ポッド数) × (メモリ (GB)) × (1 GB あたりの料金) × (秒単位の 1 日あたりのメモリ使用時間) × (日数)
-合計メモリ料金 = 10 × 1 × 0.000001235 × 3600 × 30 = 1.33 USD
-
-Fargate のコンピューティングの月額料金
-Fargate のコンピューティングの月額料金 = (CPU 月額料金) + (メモリの月額料金)
-Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.37 USD
-</code></pre></div></td></tr></table></div>
-<p><br></p>
-<h3 id="lambda">Lambda<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
-<h4 id="_9">▼ 実行時間<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>関数を実行している時間分だけ料金がかかる。関数を使用せずに設置しているだけであれば、料金はかからない。</p>
-<p><br></p>
-<h3 id="rds">RDS<a class="headerlink" href="#rds" title="Permanent link">&para;</a></h3>
-<h4 id="_10">▼ 料金体系の種類<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html</a></p>
+<p>悪意のあるユーザーエージェントを拒否する。</p>
+<p>ルール：<code>block-user-agents</code></p>
 <table>
 <thead>
 <tr>
-<th align="left">使い方名</th>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>Match type</th>
+<th>Regex pattern set</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches</code></td>
+<td><code>URI path</code></td>
+<td><code>Matches pattern from regex pattern set</code></td>
+<td>文字列セット</td>
+<td>Block</td>
+<td>指定した文字列を含むユーザーエージェントの場合、アクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Default Action</th>
 <th>説明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">オンデマンドインスタンス</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html</a></td>
+<td>Allow</td>
+<td>指定したユーザーエージェントでない場合、全てのパスにアクセスすることを許可する。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cicd">▼ CI/CDツールのアクセスを許可<a class="headerlink" href="#cicd" title="Permanent link">&para;</a></h4>
+<p><strong>＊例＊</strong></p>
+<p>社内の送信元IPアドレスのみ許可した状態で、CircleCIなどのサービスが社内サービスにアクセスできるようにする。</p>
+<p>ルール：<code>allow-request-including-access-token</code></p>
+<table>
+<thead>
+<tr>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>Header field name</th>
+<th>Match type</th>
+<th>String to match</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches</code></td>
+<td><code>Header</code></td>
+<td><code>authorization</code></td>
+<td><code>Exactly matched  string</code></td>
+<td>『<code>Bearer &lt;トークン文字列&gt;</code>』で文字列を設定する</td>
+<td>Allow</td>
+<td>authorizationヘッダーに指定した文字列を含むリクエストの場合、アクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Default Action</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block</td>
+<td>正しいトークンを持たないアクセスの場合、全てのパスにアクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_5">▼ 特定のパスを社内アクセスに限定<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p><strong>＊例＊</strong></p>
+<p>アプリケーションでは、特定のURLパスにアクセスできる送信元IPアドレスを社内だけに制限する。<code>2</code>個のルールを作成する必要がある。</p>
+<p>ルール：<code>allow-access--to-url-path</code></p>
+<table>
+<thead>
+<tr>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>IP set</th>
+<th>Match type</th>
+<th>Regex pattern set</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches (AND)</code></td>
+<td><code>Originates from an IP address in</code></td>
+<td>社内IPセット</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>社内の送信元IPアドレスの場合、指定したパスにアクセスすることを許可する。</td>
 </tr>
 <tr>
-<td align="left">リザーブドインスタンス</td>
-<td>RDSインスタンスの一定期間分の使用料金を前払いし、その代わりに安く利用できるようになる。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html</a></td>
+<td><code>1</code></td>
+<td><code>matches</code></td>
+<td><code>URI path</code></td>
+<td>-</td>
+<td><code>Matches pattern from regex pattern set</code></td>
+<td>文字列セット</td>
+<td>Allow</td>
+<td>0番目かつ、指定した文字列を含むURLパスアクセスの場合、アクセスすることを許可する。</td>
+</tr>
+</tbody>
+</table>
+<p>ルール：<code>block-access-to-url-path</code></p>
+<table>
+<thead>
+<tr>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>Match type</th>
+<th>Regex pattern set</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches</code></td>
+<td><code>URI path</code></td>
+<td><code>Matches pattern from regex pattern set</code></td>
+<td>文字列セット</td>
+<td>Block</td>
+<td>指定した文字列を含むURLパスアクセスの場合、アクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Default Action</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allow</td>
+<td>指定したURLパス以外のアクセスの場合、そのパスにアクセスすることを許可する。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_6">▼ 社内アクセスに限定<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p><strong>＊例＊</strong></p>
+<p>アプリケーション全体にアクセスできる送信元IPアドレスを、特定のIPアドレスだけに制限する。</p>
+<p>ルール：<code>allow-global-ip-addresses</code></p>
+<table>
+<thead>
+<tr>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>IP set</th>
+<th>Originating address</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches  (OR)</code></td>
+<td><code>Originates from an IP address in</code></td>
+<td>社内IPセット</td>
+<td>Source IP address</td>
+<td>-</td>
+<td>社内の送信元IPアドレスの場合、全てのパスにアクセスすることを許可する。</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>matches</code></td>
+<td><code>Originates from an IP address in</code></td>
+<td>協力会社IPセット</td>
+<td>Source IP address</td>
+<td>Allow</td>
+<td>0番目あるいは、協力会社の送信元IPアドレスの場合、全てのパスにアクセスすることを許可する。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Default Action</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block</td>
+<td>指定した送信元IPアドレス以外の場合、全てのパスにアクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="alb_1">▼ ALBを直接的に指定することを防ぐ<a class="headerlink" href="#alb_1" title="Permanent link">&para;</a></h4>
+<p><strong>＊例＊</strong></p>
+<p>Route53のドメイン経由ではなく、ALBの直接的に指定して、リクエストとを送信することを防ぐ。ALBのIPアドレスは定期的に変化するため、任意のIPアドレスを指定できる正規表現を定義する必要がある。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$
+</code></pre></div></td></tr></table></div>
+<p>ルール：<code>block-direct-access-to-lb</code></p>
+<table>
+<thead>
+<tr>
+<th>Statementの順番</th>
+<th>If a request</th>
+<th>Inspect</th>
+<th>Match type</th>
+<th>Regex pattern set</th>
+<th>Then</th>
+<th>挙動</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>matches</code></td>
+<td><code>Header</code></td>
+<td><code>Matches pattern from regex pattern set</code></td>
+<td>文字列セット</td>
+<td>Block</td>
+<td>指定した<code>Host</code>ヘッダーに対するアクセスの場合、アクセスすることを拒否する。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Default Action</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allow</td>
+<td>指定した<code>Host</code>ヘッダー以外に対するアクセスの場合、アクセスすることを許可する。</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
-<h3 id="ses">SES<a class="headerlink" href="#ses" title="Permanent link">&para;</a></h3>
-<h4 id="_11">▼ 送受信数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>送受信数分だけ料金がかかる。受信は<code>1000件/月</code>まで、送信は<code>62000/月</code>まで無料である。</p>
+<h3 id="waf_1">WAFマネージドルールの設計<a class="headerlink" href="#waf_1" title="Permanent link">&para;</a></h3>
+<h4 id="_7">▼ マネージドルールの動作確認の必要性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>マネージドルールを導入する時は、事前にルールのカウント機能を使用することが推奨されている。カウントで検知されたリクエストのほとんどが悪意のないものであれば、設定したマネージドルールの使用をやめる必要がある。</p>
+<h4 id="_8">▼ ブラウザを送信元とした場合<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>ブラウザを送信元とした場合、リクエストのヘッダーやボディはブラウザによって生成されるため、これに基づいた判断が必要である。</p>
+<ul>
+<li>ブラウザからのリクエスト自体が悪意判定されているかどうか</li>
+<li>サイトのURLの記法によって、悪意判定されているかどうか</li>
+<li>送信元の国名が『日本』であるのにも関わらず、悪意判定されているかどうか</li>
+<li>サイトに送信された全リクエストのうち、カウントで検知されたリクエスト数が多すぎないかどうか</li>
+</ul>
+<h4 id="_9">▼ 連携するアプリケーションを送信元とした場合<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>アプリケーションを送信元とした場合、リクエストのヘッダーやボディは連携するアプリケーションによって生成されるため、これに基づいた判断が必要である。</p>
 <p><br></p>
 
   <hr>
@@ -7083,7 +7319,7 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>
@@ -7108,7 +7344,7 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="cloud_computing_aws_lambda_function.html" class="md-footer__link md-footer__link--prev" aria-label="前: Lambda関数の実装" rel="prev">
+        <a href="cloud_computing_aws_policy_reliability.html" class="md-footer__link md-footer__link--prev" aria-label="前: 信頼性" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -7117,20 +7353,20 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
               <span class="md-footer__direction">
                 前
               </span>
-              Lambda関数の実装
+              信頼性
             </div>
           </div>
         </a>
       
       
         
-        <a href="cloud_computing_gcp_command.html" class="md-footer__link md-footer__link--next" aria-label="次: コマンド" rel="next">
+        <a href="cloud_computing_aws_policy_cost_optimization.html" class="md-footer__link md-footer__link--next" aria-label="次: コスト最適化" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              コマンド
+              コスト最適化
             </div>
           </div>
           <div class="md-footer__button md-icon">

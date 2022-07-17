@@ -3863,12 +3863,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3910,20 +3985,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -8448,7 +8509,7 @@ The backend configuration argument <span class="s2">&quot;bucket&quot;</span> gi
 <p>バージョンを統一するために、<code>.tool-versions</code>ファイルを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># .tool-versionsファイル</span>
-terraform <span class="m">1</span>.0.0
+terraform &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <p>asdfパッケージを使用して、<code>terraform</code>コマンドをインストールする。<code>.tool-versions</code>ファイルに定義されたバージョンがインストールされる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8513,7 +8574,7 @@ $ asdf install
 <h3 id="3">3. メジャーバージョン単位でアップグレード＆リリース<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <p>Terraformでは、メジャーバージョン単位でアップグレードを行うことが推奨されている。そのため、現在のバージョンと最新バージョンがどんなに離れていても、必ず1つずつメジャーバージョンをアップグレードするように気をつける。この時、次のメジャーバージョンの『最新』までアップグレードしてしまって問題ない（例：現在のバージョンが <code>v0.13.0</code> であれば、<code>0.14</code>系の最新にアップグレード）。また、アップグレードの都度、リリースを行う。</p>
 <p>参考：<a href="https://www.terraform.io/upgrade-guides/1-0.html">https://www.terraform.io/upgrade-guides/1-0.html</a> </p>
-<h3 id="4-terraform-plan">4. <code>terraform plan</code>コマンドの警告/エラーを解決<a class="headerlink" href="#4-terraform-plan" title="Permanent link">&para;</a></h3>
+<h3 id="4-terraform-plan">4. terraform planコマンドの警告/エラーを解決<a class="headerlink" href="#4-terraform-plan" title="Permanent link">&para;</a></h3>
 <p>アップグレードに伴って、非推奨/廃止の機能がリリースされ、警告/エラーが出力される場合がある。警告/エラーを解決できるように、記法やオプション値を修正する。場合によっては<code>.tfstate</code>ファイルの差分として表示されているだけで、実インフラとの差分ではない場合もあるため、<code>terraform plan</code>コマンド時に差分があったとしても、実インフラに影響がなければ問題ない。</p>
 <h3 id="5-terraform">5. プロバイダーをアップグレードしたい場合はTerraformもアップグレード<a class="headerlink" href="#5-terraform" title="Permanent link">&para;</a></h3>
 <p>Terraformとプロバイダーのバージョンは独立して管理されている。プロバイダーはTerraformが土台になって稼働するため、もしプロバイダーをアップグレードしたい場合は、Terraformもアップグレードする。一方で、Terraformをアップグレードしたい場合は、必ずしもプロバイダーをアップグレードする必要はない。アップグレードガイドについては、以下のリンクを参考せよ。</p>
@@ -8558,7 +8619,7 @@ $ asdf install
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

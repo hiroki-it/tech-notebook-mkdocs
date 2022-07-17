@@ -3863,12 +3863,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3910,20 +3985,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -7481,7 +7542,7 @@ prometheus-prometheus-kube-prometheus-prometheus.yaml
 <p><br></p>
 <h3 id="_4">ローカルストレージ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ ローカルストレージ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>Prometheusは、ローカルの時系列データベースに、収集した全てのメトリクスを保管する。また、収集したメトリクスをデフォルトで<code>2</code>時間ごとにブロック化し、<code>data</code>ディレクトリ配下に配置する。現在処理中のブロックはメモリ上に保持されており、同時に<code>/data/wal</code>ディレクトリにもバックアップとして保存される（ちなみにRDBMSでは、これをジャーナルファイルという）。これにより、Prometheusで障害が起こり、メモリ上のブロックが削除されてしまっても、ブロックを復元できる。</p>
+<p>Prometheusは、ローカルの時系列データベースに、収集した全てのメトリクスを保管する。また、収集したメトリクスをデフォルトで<code>2</code>時間ごとにブロック化し、<code>data</code>ディレクトリ配下に配置する。現在処理中のブロックはメモリ上に保持されており、同時にストレージの<code>/data/wal</code>ディレクトリにもバックアップとして保存される（ちなみにRDBMSでは、これをジャーナルファイルという）。これにより、Prometheusで障害が起こり、メモリ上のブロックが削除されてしまっても、ストレージからブロックを復元できる。</p>
 <p>参考：<a href="https://prometheus.io/docs/prometheus/latest/storage/#local-storage">https://prometheus.io/docs/prometheus/latest/storage/#local-storage</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7817,7 +7878,7 @@ rate<span class="o">(</span>prometheus_tsdb_head_samples_appended_total<span cla
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

@@ -4234,12 +4234,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -4281,20 +4356,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -7397,10 +7458,12 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
 <p><br></p>
 <h2 id="04">04. ジョブ管理<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_12">ジョブ管理とは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>あらかじめ設定しておいた処理のまとまりをジョブという。ジョブ管理では、複数のジョブを管理し、決まったタイミングで実行する。カーネルはジョブ（プロセスのセット）を管理する。クライアントは、マスタスケジューラーに対して、ジョブを実行するための命令を与える。Unixでは<code>at</code>や<code>cron</code>、Windowsではタスクスケジューラーとして実装される。</p>
+<p>定期的に実行するように設定されたバッチ処理を、特に『ジョブ』という。ジョブ管理では、複数のジョブを管理でき、各ジョブを独立して実行する。UNIXでは<code>at</code>や<code>cron</code>に、またWindowsではタスクスケジューラーがジョブ管理機能を持つ。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%96%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%83%96%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0</a></li>
+<li><a href="https://strategicppm.wordpress.com/2010/01/20/batch-vs-job-processes-becoming-more-efficient/">https://strategicppm.wordpress.com/2010/01/20/batch-vs-job-processes-becoming-more-efficient/</a></li>
+<li><a href="https://www.quora.com/What-is-the-difference-between-cron-job-and-batch-job">https://www.quora.com/What-is-the-difference-between-cron-job-and-batch-job</a></li>
 <li><a href="https://japan.zdnet.com/glossary/exp/%E3%82%B8%E3%83%A7%E3%83%96%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%A9/?s=4">https://japan.zdnet.com/glossary/exp/%E3%82%B8%E3%83%A7%E3%83%96%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%A9/?s=4</a></li>
 </ul>
 <p><br></p>
@@ -7410,7 +7473,7 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
 <p><br></p>
 <h3 id="_14">マスタースケジューラー<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <h4 id="_15">▼ マスタースケジューラーとは<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>ジョブスケジューラーにジョブの実行を命令する。データをコンピュータに入力し、複数の処理が実行され、結果が出力されるまでの一連の処理のこと。『Task』と『Job』の定義は曖昧なので、『process』と『set of processes』を使用するべきとのこと。複数のジョブ（プログラムやバッチ）の起動と終了を制御したり、ジョブの実行と終了を監視報告するソフトウェア。ややこしいことに、タスクスケジューラーとも呼ぶ。</p>
+<p>ジョブスケジューラーにジョブの実行を命令する。データをコンピュータに入力し、複数の処理が実行され、結果が出力されるまでの一連の処理のこと。『Task』と『Job』の定義は曖昧なので、『process』と『set of processes』を使用するべきとのこと。複数のジョブ（定期的に実行するように設定されたバッチ処理）の起動と終了を制御したり、ジョブの実行と終了を監視報告するソフトウェア。ややこしいことに、タスクスケジューラーとも呼ぶ。</p>
 <p>参考：<a href="https://stackoverflow.com/questions/3073948/job-task-and-process-whats-the-difference/31212568">https://stackoverflow.com/questions/3073948/job-task-and-process-whats-the-difference/31212568</a></p>
 <p><br></p>
 <h3 id="_16">ジョブスケジューラー<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
@@ -7477,7 +7540,7 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

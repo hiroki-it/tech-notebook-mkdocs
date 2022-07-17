@@ -3863,12 +3863,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3910,20 +3985,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -10983,7 +11044,7 @@
 <h2 id="05-cronjob">05. CronJob<a class="headerlink" href="#05-cronjob" title="Permanent link">&para;</a></h2>
 <h3 id="specjobtemplate">spec.jobTemplate<a class="headerlink" href="#specjobtemplate" title="Permanent link">&para;</a></h3>
 <h4 id="jobtemplate">▼ jobTemplateとは<a class="headerlink" href="#jobtemplate" title="Permanent link">&para;</a></h4>
-<p>CronJobで定期実行するJobを設定する。</p>
+<p>CronJobで、定期的に実行するJobを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11015,7 +11076,7 @@
 <span class="w">          </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-alpine</span><span class="w"></span>
 <span class="w">              </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alpine:latest</span><span class="w"></span>
-<span class="w">              </span><span class="c1"># 定期実行するコマンドを設定する。</span><span class="w"></span>
+<span class="w">              </span><span class="c1"># 定期的に実行するコマンドを設定する。</span><span class="w"></span>
 <span class="w">              </span><span class="nt">command</span><span class="p">:</span><span class="w"></span>
 <span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/sh</span><span class="w"></span>
 <span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span><span class="w"></span>
@@ -12192,7 +12253,7 @@
 <tr>
 <td><code>requests</code></td>
 <td>ハードウェアリソースの下限必要サイズを設定する。</td>
-<td>・高くしすぎると、他のPodがスケーリングしにくくなる。<br/>・もし、設定値がNodeのハードウェアリソース以上の場合、コンテナは永遠に起動しない。<br>参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの下限がなくなる。そのため、Kubernetesが重要なPodにリソースを必要最低限しか割かず、パフォーマンスが低くなる可能性がある。</td>
+<td>・高くしすぎると、他のPodがスケーリングしにくくなる。<br>・もし、設定値がNodeのハードウェアリソース以上の場合、コンテナは永遠に起動しない。<br>参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの下限がなくなる。そのため、Kubernetesが重要なPodにリソースを必要最低限しか割かず、パフォーマンスが低くなる可能性がある。</td>
 </tr>
 <tr>
 <td><code>limits</code></td>
@@ -13925,7 +13986,7 @@ Allocatable:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

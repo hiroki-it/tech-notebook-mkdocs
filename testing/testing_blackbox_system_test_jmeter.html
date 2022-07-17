@@ -3502,8 +3502,21 @@
       
         <li class="md-nav__item">
   <a href="#03" class="md-nav__link">
-    03. 手順
+    03. ユースケース
   </a>
+  
+    <nav class="md-nav" aria-label="03. ユースケース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ロードテスト
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3931,12 +3944,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3978,20 +4066,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -6477,8 +6551,21 @@
       
         <li class="md-nav__item">
   <a href="#03" class="md-nav__link">
-    03. 手順
+    03. ユースケース
   </a>
+  
+    <nav class="md-nav" aria-label="03. ユースケース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ロードテスト
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6514,12 +6601,14 @@
 <p>参考：<a href="https://www.guru99.com/jmeter-element-reference.html">https://www.guru99.com/jmeter-element-reference.html</a></p>
 <p><img alt="jmeter_architecuture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/jmeter_architecuture.png" /></p>
 <p><br></p>
-<h2 id="03">03. 手順<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
+<h2 id="03">03. ユースケース<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
+<h3 id="_2">ロードテスト<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>以下の手順で、JMeterを使用したロードテストを実施する。</p>
 <p>（１）URLのアクセスランキングを元に、リクエストを送信するためのURLリストを<code>csv</code>ファイルで作成する。Googleを参考にしたが、ALBアクセスログを参考にした方が、より正確かもしれない。</p>
 <p>（２）JMeterのGUI版にて、シナリオ（<code>jmx</code>ファイル）を作成する。スループットコントローラーでURLリスト（<code>csv</code>ファイル）をJMeterの組み込み関数で読み込むようにする。csvファイルのリストからランダムに読み出したい場合は、Random関数が適している。スレッド数が例えば<code>10000</code>個といった高負荷であると、ローカルマシンがフリーズするため注意すること。</p>
 <p>参考：<a href="https://jmeter.apache.org/usermanual/functions.html#__Random">https://jmeter.apache.org/usermanual/functions.html#__Random</a></p>
 <p>（３）AWSリソースのスペック、VPNなど、再現テストの周辺準備が整っていることを確認する。</p>
-<p>（４）JMeterのCUI版のバイナリファイルに、<code>jmx</code>ファイルをドラッグ＆ドロップし、テストを実行する。または、バイナリファイルへのパスを通した上で、以下のコマンドでも実行できる。</p>
+<p>（４）JMeterのCUI版のバイナリファイルに、<code>jmx</code>ファイルをドラッグ＆ドロップし、テストを実施する。または、バイナリファイルへのパスを通した上で、以下のコマンドでも実行できる。</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6545,7 +6634,7 @@ Don<span class="err">&#39;</span>t use GUI mode <span class="k">for</span> load 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

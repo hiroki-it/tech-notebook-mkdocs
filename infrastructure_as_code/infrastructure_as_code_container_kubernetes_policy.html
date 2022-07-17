@@ -3863,12 +3863,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -3910,20 +3985,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -5093,6 +5154,53 @@
   <a href="#_17" class="md-nav__link">
     サブネットの場合
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    06. 監視の設計
+  </a>
+  
+    <nav class="md-nav" aria-label="06. 監視の設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster_2" class="md-nav__link">
+    Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    Pod
+  </a>
+  
+    <nav class="md-nav" aria-label="Pod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pod_1" class="md-nav__link">
+    ▼ Pod全体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    ▼ コンテナ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -6966,6 +7074,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    06. 監視の設計
+  </a>
+  
+    <nav class="md-nav" aria-label="06. 監視の設計">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cluster_2" class="md-nav__link">
+    Cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    Pod
+  </a>
+  
+    <nav class="md-nav" aria-label="Pod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pod_1" class="md-nav__link">
+    ▼ Pod全体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    ▼ コンテナ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7386,13 +7541,124 @@
 <p><br></p>
 <h3 id="_17">サブネットの場合<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>AWS EKSでの目安であるが、サブネットごとに<code>/19</code>や<code>/20</code>なるように設計するのが、個人的にはおすすめ。</p>
+<p><br></p>
+<h2 id="06">06. 監視の設計<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
+<h3 id="cluster_2">Cluster<a class="headerlink" href="#cluster_2" title="Permanent link">&para;</a></h3>
+<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<table>
+<thead>
+<tr>
+<th>メトリクス</th>
+<th>単位</th>
+<th>説明</th>
+<th>アラート条件例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nodeの必要最低数</td>
+<td>カウント</td>
+<td>同じCluster内のNode数の必要最低数をデータポイントとする。</td>
+<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&lt;= 2</code></td>
+</tr>
+<tr>
+<td>Podの必要最低数</td>
+<td>カウント</td>
+<td>同じCluster内のNodeのPod必要最低数をデータポイントとする。</td>
+<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&lt;= 1</code></td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>%</td>
+<td>同じCluster内のNodeのCPU使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 80</code></td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>%</td>
+<td>同じCluster内のNodeのメモリ使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 80</code></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h3>
+<h4 id="pod_1">▼ Pod全体<a class="headerlink" href="#pod_1" title="Permanent link">&para;</a></h4>
+<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<table>
+<thead>
+<tr>
+<th>メトリクス</th>
+<th>単位</th>
+<th>説明</th>
+<th>アラート条件例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>%</td>
+<td>Pod全体のCPU使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 80</code></td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>%</td>
+<td>Pod全体のメモリ使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 80</code></td>
+</tr>
+<tr>
+<td>Podの最低必要数</td>
+<td>カウント</td>
+<td>同じDeployment内のPodの必要最低数をデータポイントとする。</td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&lt;= 2</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_18">▼ コンテナ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<table>
+<thead>
+<tr>
+<th>メトリクス</th>
+<th>単位</th>
+<th>説明</th>
+<th>アラート条件例</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>%</td>
+<td>コンテナのCPU使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 80</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>%</td>
+<td>コンテナのメモリ使用率をデータポイントとする。</td>
+<td>・統計 : 期間内平均使用率<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 80</code></td>
+<td></td>
+</tr>
+<tr>
+<td>readinessProbe</td>
+<td>カウント</td>
+<td>コンテナのreadinessProbeの失敗数をデータポイントとする。</td>
+<td>・統計 : 期間内合計数<br/>・期間 : <code>1</code>分<br/>・閾値 : <code>&gt;= 2</code></td>
+<td>ネットワーク由来の問題で発生することがあるため、連続的に発生した上でアラートする。</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>

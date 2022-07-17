@@ -955,15 +955,15 @@
         
           <li class="md-nav__item">
   <a href="#cron" class="md-nav__link">
-    cron
+    Cron
   </a>
   
-    <nav class="md-nav" aria-label="cron">
+    <nav class="md-nav" aria-label="Cron">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#cron_1" class="md-nav__link">
-    ▼ cronとは
+    ▼ Cronとは
   </a>
   
 </li>
@@ -5228,12 +5228,87 @@
       
       
         <label class="md-nav__link" for="__nav_10_2_8">
+          ■ 設計ポリシー
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ 設計ポリシー" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          ■ 設計ポリシー
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_reliability.html" class="md-nav__link">
+        信頼性
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_security.html" class="md-nav__link">
+        セキュリティ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_computing/cloud_computing_aws_policy_cost_optimization.html" class="md-nav__link">
+        コスト最適化
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_10_2_9" type="checkbox" id="__nav_10_2_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2_9">
           ■ その他
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="■ その他" data-md-level="3">
-        <label class="md-nav__title" for="__nav_10_2_8">
+        <label class="md-nav__title" for="__nav_10_2_9">
           <span class="md-nav__icon md-icon"></span>
           ■ その他
         </label>
@@ -5275,20 +5350,6 @@
     <li class="md-nav__item">
       <a href="../cloud_computing/cloud_computing_aws_lambda_function.html" class="md-nav__link">
         Lambda関数の実装
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloud_computing/cloud_computing_aws_cost_management.html" class="md-nav__link">
-        コスト管理
       </a>
     </li>
   
@@ -7904,15 +7965,15 @@
         
           <li class="md-nav__item">
   <a href="#cron" class="md-nav__link">
-    cron
+    Cron
   </a>
   
-    <nav class="md-nav" aria-label="cron">
+    <nav class="md-nav" aria-label="Cron">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#cron_1" class="md-nav__link">
-    ▼ cronとは
+    ▼ Cronとは
   </a>
   
 </li>
@@ -9327,15 +9388,15 @@ $ cp -Rp /&lt;ディレクトリ名&gt;/ /&lt;ディレクトリ名&gt;
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ cp -p &lt;ファイルへのパス&gt; &lt;ファイルへのパス&gt;.<span class="sb">`</span>date +<span class="s2">&quot;%Y%m%d&quot;</span><span class="sb">`</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="cron">cron<a class="headerlink" href="#cron" title="Permanent link">&para;</a></h3>
-<h4 id="cron_1">▼ cronとは<a class="headerlink" href="#cron_1" title="Permanent link">&para;</a></h4>
-<p>指定したスケジュールに従って、指定されたプログラムを定期実行するデーモン。</p>
+<h3 id="cron">Cron<a class="headerlink" href="#cron" title="Permanent link">&para;</a></h3>
+<h4 id="cron_1">▼ Cronとは<a class="headerlink" href="#cron_1" title="Permanent link">&para;</a></h4>
+<p>UNIXにて、Linuxの機能の一つであるジョブ管理を実現する。あらかじめ、ジョブ（定期的に実行するように設定されたバッチ処理）を登録しておき、指定したスケジュールに従って、ジョブを実行する。</p>
 <h4 id="cron_2">▼ <code>cron</code>ファイル<a class="headerlink" href="#cron_2" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># /etc/cron.hourly/cron-hourly.txt</span>
-<span class="c1"># 毎時・1分</span>
+<span class="c1"># バッチ処理を、毎時・1分ごとに実行するように設定する。</span>
 <span class="m">1</span> * * * * root run-parts /etc/cron.hourly
 <span class="c1"># &lt;- 最後は改行する。</span>
 </code></pre></div></td></tr></table></div>
@@ -9377,7 +9438,7 @@ $ cp -Rp /&lt;ディレクトリ名&gt;/ /&lt;ディレクトリ名&gt;
 </table>
 <p><strong>＊実装例＊</strong></p>
 <p>（１）あらかじめ、各ディレクトリにcronファイルを配置しておく。</p>
-<p>（２）cronとして登録するファイルを作成する。<code>run-parts</code>コマンドで、指定した時間に、各cronディレクトリ内の<code>cron</code>ファイルを一括で実行するように記述しておく。</p>
+<p>（２）ジョブを登録するファイルを作成する。<code>run-parts</code>コマンドで、指定した時間に、各cronディレクトリ内の<code>cron</code>ファイルを一括で実行するように記述しておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9421,7 +9482,7 @@ $ cp -Rp /&lt;ディレクトリ名&gt;/ /&lt;ディレクトリ名&gt;
 <span class="c1"># |  |  |  |  |</span>
 <span class="c1"># *  *  *  *  * user-name command to be executed</span>
 
-<span class="c1"># run-parts</span>
+<span class="c1"># ジョブ</span>
 <span class="m">1</span> * * * * root run-parts /etc/cron.hourly <span class="c1"># 毎時・1分</span>
 <span class="m">5</span> <span class="m">2</span> * * * root run-parts /etc/cron.daily <span class="c1"># 毎日・2時5分</span>
 <span class="m">20</span> <span class="m">2</span> * * <span class="m">0</span> root run-parts /etc/cron.weekly <span class="c1"># 毎週日曜日・2時20分</span>
@@ -9457,7 +9518,7 @@ $ cp -Rp /&lt;ディレクトリ名&gt;/ /&lt;ディレクトリ名&gt;
 <p><br></p>
 <h3 id="crontab">crontab<a class="headerlink" href="#crontab" title="Permanent link">&para;</a></h3>
 <h4 id="crontab_1">▼ crontabとは<a class="headerlink" href="#crontab_1" title="Permanent link">&para;</a></h4>
-<p>cronデーモンの動作が定義されたcrontabファイルを操作するためのユーティリティ。作成した<code>cron</code>ファイルを登録する。<code>cron.d</code>ファイルは操作できない。</p>
+<p>crontabファイルを操作するためのユーティリティ。作成した<code>cron</code>ファイルを登録できる。<code>cron.d</code>ファイルは操作できない。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ crontab &lt;ファイルへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
@@ -10651,7 +10712,7 @@ traceroute to google.com <span class="o">(</span><span class="m">173</span>.194.
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
       
     
   </small>
