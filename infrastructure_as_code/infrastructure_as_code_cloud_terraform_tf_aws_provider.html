@@ -6651,8 +6651,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -8646,7 +8646,7 @@
 <p><br></p>
 <h2 id="05-ecr">05. ECR<a class="headerlink" href="#05-ecr" title="Permanent link">&para;</a></h2>
 <h3 id="_9">ライフサイクルポリシー<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>ECRにアタッチされる、コンテナイメージの有効期間を定義するポリシー。コンソール画面から入力できるため、基本的にポリシーの実装は不要であるが、TerraformなどのIaCツールでは必要になる。</p>
+<p>ECRに紐付けられる、コンテナイメージの有効期間を定義するポリシー。コンソール画面から入力できるため、基本的にポリシーの実装は不要であるが、TerraformなどのIaCツールでは必要になる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8888,7 +8888,7 @@
 <p><br></p>
 <h2 id="08-iam">08. IAMユーザー<a class="headerlink" href="#08-iam" title="Permanent link">&para;</a></h2>
 <h3 id="_14">カスタマー管理ポリシーを持つロール<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<p>事前に、tpl形式のカスタマー管理ポリシーを定義しておく。作成済みのIAMロールに、<code>aws_iam_policy</code>リソースを使用して、AWS管理ポリシーをIAMユーザーにアタッチする。</p>
+<p>事前に、tpl形式のカスタマー管理ポリシーを定義しておく。作成済みのIAMロールに、<code>aws_iam_policy</code>リソースを使用して、AWS管理ポリシーをIAMユーザーに紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>ローカルマシンからAWS CLIコマンドを実行する必要がある場合、コマンドを特定の送信元IPアドレスを特定のものに限定する。事前に、list型でIPアドレスを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8969,7 +8969,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="aws">AWS管理ポリシー<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h3>
-<p>IAMユーザーにAWS管理ポリシーをアタッチする。</p>
+<p>IAMユーザーにAWS管理ポリシーを紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8988,7 +8988,7 @@
 <p><br></p>
 <h2 id="09-iam">09. IAMロール<a class="headerlink" href="#09-iam" title="Permanent link">&para;</a></h2>
 <h3 id="_15">信頼ポリシーを持つロール<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
-<p>コンソール画面でロールを作成する場合は意識することはないが、特定のリソースにロールをアタッチするためには、ロールに信頼ポリシーを組み込む必要がある。事前に、tpl形式の信頼ポリシーを定義しておく。<code>aws_iam_role</code>リソースを使用して、IAMロールを作成すると同時に、これに信頼ポリシーをアタッチする。</p>
+<p>コンソール画面でロールを作成する場合は意識することはないが、特定のリソースにロールを紐付けるためには、ロールに信頼ポリシーを組み込む必要がある。事前に、tpl形式の信頼ポリシーを定義しておく。<code>aws_iam_role</code>リソースを使用して、IAMロールを作成すると同時に、これに信頼ポリシーを紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>事前に、ECSタスクのための信頼ポリシーを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9015,7 +9015,7 @@
 <span class="w">  </span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>ECSタスクロールとECSタスク実行ロールに信頼ポリシーアタッチする。</p>
+<p>ECSタスクロールとECSタスク実行ロールに信頼ポリシー紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9096,7 +9096,7 @@
 <span class="w">  </span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Lambda実行ロールに信頼ポリシーアタッチする。</p>
+<p>Lambda実行ロールに信頼ポリシー紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9112,7 +9112,7 @@
 <span class="c1"># IAM Role For Lambda@Edge</span>
 <span class="c1">###############################################</span>
 
-<span class="c1"># ロールに信頼ポリシーをアタッチします。</span>
+<span class="c1"># ロールに信頼ポリシーを紐付けします。</span>
 <span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_iam_role&quot;</span><span class="w"> </span><span class="nv">&quot;lambda_execute&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;prd-foo-lambda-execute-role&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="na">assume_role_policy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">templatefile</span><span class="p">(</span><span class="w"></span>
@@ -9123,7 +9123,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_16">インラインポリシーを持つロール<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<p>事前に、tpl形式のインラインポリシーを定義しておく。<code>aws_iam_role_policy</code>リソースを使用して、インラインポリシーを作成すると同時に、これにインラインポリシーをアタッチする。</p>
+<p>事前に、tpl形式のインラインポリシーを定義しておく。<code>aws_iam_role_policy</code>リソースを使用して、インラインポリシーを作成すると同時に、これにインラインポリシーを紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>事前に、ECSタスクに必要最低限の権限を与えるインラインポリシーを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9150,7 +9150,7 @@
 <span class="w">  </span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>ECSタスクロールとECSタスク実行ロールにインラインポリシーアタッチする。</p>
+<p>ECSタスクロールとECSタスク実行ロールにインラインポリシー紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9175,7 +9175,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="aws_1">AWS管理ポリシーを持つロール<a class="headerlink" href="#aws_1" title="Permanent link">&para;</a></h3>
-<p>事前に、tpl形式のAWS管理ポリシーを定義しておく。<code>aws_iam_role_policy_attachment</code>リソースを使用して、実インフラにあるAWS管理ポリシーを作成済みのIAMロールにアタッチする。ポリシーのARNは、AWSのコンソール画面を確認する。</p>
+<p>事前に、tpl形式のAWS管理ポリシーを定義しておく。<code>aws_iam_role_policy_attachment</code>リソースを使用して、実インフラにあるAWS管理ポリシーを作成済みのIAMロールに紐付ける。ポリシーのARNは、AWSのコンソール画面を確認する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9193,7 +9193,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_17">カスタマー管理ポリシーを持つロール<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
-<p>事前に、tpl形式のインラインポリシーを定義しておく。<code>aws_iam_role_policy</code>リソースを使用して、カスタマー管理ポリシーを作成する。<code>aws_iam_role_policy_attachment</code>リソースを使用して、カスタマー管理ポリシーを作成済みのIAMロールにアタッチする。</p>
+<p>事前に、tpl形式のインラインポリシーを定義しておく。<code>aws_iam_role_policy</code>リソースを使用して、カスタマー管理ポリシーを作成する。<code>aws_iam_role_policy_attachment</code>リソースを使用して、カスタマー管理ポリシーを作成済みのIAMロールに紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>事前に、ECSタスクに必要最低限の権限を与えるカスタマー管理ポリシーを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9226,7 +9226,7 @@
 <span class="w">  </span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>ECSタスクロールにカスタマー管理ポリシーアタッチする。</p>
+<p>ECSタスクロールにカスタマー管理ポリシー紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9261,7 +9261,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_18">サービスリンクロール<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
-<p>サービスリンクロールは、AWSリソースの作成時に自動的に作成され、アタッチされる。そのため、Terraformの管理外である。<code>aws_iam_service_linked_role</code>リソースを使用して、手動で作成できるが、数が多く実装の負担にもなるため、あえて管理外としても問題ない。</p>
+<p>サービスリンクロールは、AWSリソースの作成時に自動的に作成され、紐付けられる。そのため、Terraformの管理外である。<code>aws_iam_service_linked_role</code>リソースを使用して、手動で作成できるが、数が多く実装の負担にもなるため、あえて管理外としても問題ない。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>サービス名を指定して、Application Auto Scalingのサービスリンクロールを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9290,7 +9290,7 @@
 <span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_iam_service_linked_role.ecs_service_auto_scaling.arn</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>Application Auto Scalingにサービスリンクロールをアタッチする。手動でも設定できるが、Terraformの管理外で自動的にアタッチされるため、あえて妥協しても良い。</p>
+<p>Application Auto Scalingにサービスリンクロールを紐付ける。手動でも設定できるが、Terraformの管理外で自動的に紐付けられるため、あえて妥協しても良い。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9313,7 +9313,7 @@
 <span class="w">  </span><span class="na">max_capacity</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="w"></span>
 <span class="w">  </span><span class="na">min_capacity</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="c1"></span>
 
-<span class="c1">  # この設定がなくとも、サービスリンクロールが自動的に作成され、AutoScalingにアタッチされる。</span>
+<span class="c1">  # この設定がなくとも、サービスリンクロールが自動的に作成され、AutoScalingに紐付けられる。</span>
 <span class="w">  </span><span class="na">role_arn</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="nv">var.ecs_service_auto_scaling_iam_service_linked_role_arn</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -9700,7 +9700,7 @@ status code: <span class="m">400</span>, request id: *****
 <p><br></p>
 <h2 id="14-s3">14. S3<a class="headerlink" href="#14-s3" title="Permanent link">&para;</a></h2>
 <h3 id="_24">バケットポリシー<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
-<p>S3アタッチされる、自身へのアクセスを制御するためにインラインポリシーのこと。定義したバケットポリシーは、<code>aws_s3_bucket_policy</code>リソースでロールにアタッチできる。</p>
+<p>S3紐付けられる、自身へのアクセスを制御するためにインラインポリシーのこと。定義したバケットポリシーは、<code>aws_s3_bucket_policy</code>リソースでロールに紐付けできる。</p>
 <p><br></p>
 <h3 id="alb">ALBアクセスログ<a class="headerlink" href="#alb" title="Permanent link">&para;</a></h3>
 <p>ALBがバケットにログを書き込めるように、『ELBのサービスアカウントID』を許可する必要がある。</p>
@@ -9720,7 +9720,7 @@ status code: <span class="m">400</span>, request id: *****
 <span class="c1"># S3 bucket policy</span>
 <span class="c1">###############################################</span>
 
-<span class="c1"># S3にバケットポリシーをアタッチします。</span>
+<span class="c1"># S3にバケットポリシーを紐付けします。</span>
 <span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_s3_bucket_policy&quot;</span><span class="w"> </span><span class="nv">&quot;alb&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_s3_bucket.alb_logs.id</span><span class="w"></span>
 <span class="w">  </span><span class="na">policy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">templatefile</span><span class="p">(</span><span class="w"></span>
@@ -9776,7 +9776,7 @@ status code: <span class="m">400</span>, request id: *****
 <span class="c1"># S3 bucket policy</span>
 <span class="c1">###############################################</span>
 
-<span class="c1"># S3にバケットポリシーをアタッチします。</span>
+<span class="c1"># S3にバケットポリシーを紐付けします。</span>
 <span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_s3_bucket_policy&quot;</span><span class="w"> </span><span class="nv">&quot;nlb&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_s3_bucket.nlb_logs.id</span><span class="w"></span>
 <span class="w">  </span><span class="na">policy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">templatefile</span><span class="p">(</span><span class="w"></span>
@@ -10997,7 +10997,7 @@ status code: <span class="m">400</span>, request id: *****
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

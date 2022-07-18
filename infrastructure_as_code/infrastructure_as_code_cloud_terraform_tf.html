@@ -5441,8 +5441,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#terraformlockhcl_1" class="md-nav__link">
-    ▼ .terraform.lock.hclファイルとは
+  <a href="#terraformlock" class="md-nav__link">
+    ▼ .terraform.lock.ファイルとは
   </a>
   
 </li>
@@ -6016,6 +6016,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    ▼ map型の場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    ▼ list型の場合
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6046,6 +6060,26 @@
           <li class="md-nav__item">
   <a href="#ignore_changes" class="md-nav__link">
     ▼ ignore_changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexall" class="md-nav__link">
+    regexall
+  </a>
+  
+    <nav class="md-nav" aria-label="regexall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regexall_1" class="md-nav__link">
+    ▼ regexallとは
   </a>
   
 </li>
@@ -6097,7 +6131,7 @@
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    ポリシーのアタッチ
+    ポリシーの紐付け
   </a>
   
 </li>
@@ -6613,8 +6647,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7286,8 +7320,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#terraformlockhcl_1" class="md-nav__link">
-    ▼ .terraform.lock.hclファイルとは
+  <a href="#terraformlock" class="md-nav__link">
+    ▼ .terraform.lock.ファイルとは
   </a>
   
 </li>
@@ -7861,6 +7895,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    ▼ map型の場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    ▼ list型の場合
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7891,6 +7939,26 @@
           <li class="md-nav__item">
   <a href="#ignore_changes" class="md-nav__link">
     ▼ ignore_changes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regexall" class="md-nav__link">
+    regexall
+  </a>
+  
+    <nav class="md-nav" aria-label="regexall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regexall_1" class="md-nav__link">
+    ▼ regexallとは
   </a>
   
 </li>
@@ -7942,7 +8010,7 @@
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    ポリシーのアタッチ
+    ポリシーの紐付け
   </a>
   
 </li>
@@ -8123,7 +8191,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="terraformlockhcl"><code>.terraform.lock.hcl</code>ファイル<a class="headerlink" href="#terraformlockhcl" title="Permanent link">&para;</a></h3>
-<h4 id="terraformlockhcl_1">▼ <code>.terraform.lock.hcl</code>ファイルとは<a class="headerlink" href="#terraformlockhcl_1" title="Permanent link">&para;</a></h4>
+<h4 id="terraformlock">▼ <code>.terraform.lock</code>.ファイルとは<a class="headerlink" href="#terraformlock" title="Permanent link">&para;</a></h4>
 <p>開発者間で共有するべき情報（バージョン、ハッシュ値、など）が設定される。これにより例えば、他の人がリポジトリを使用する時に、異なるプロバイダーを宣言できないようになる。</p>
 <p>参考：</p>
 <ul>
@@ -8606,7 +8674,7 @@ aws_secret_access_key=*****
 <span class="w">  </span><span class="kr">backend</span><span class="w"> </span><span class="nv">&quot;s3&quot;</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
 <span class="c1">    # バケット名</span>
 <span class="w">    </span><span class="na">bucket</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;prd-foo-tfstate-bucket&quot;</span><span class="c1"></span>
-<span class="c1">    # .tfstateファイル名</span>
+<span class="c1">    # .tfstateファイル名とバケット内ディレクトリ構造</span>
 <span class="w">    </span><span class="na">key</span><span class="w">                     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;terraform.tfstate&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="na">region</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ap-northeast-1&quot;</span><span class="c1"></span>
 <span class="c1">    # credentialsファイルの場所</span>
@@ -8685,7 +8753,7 @@ $ <span class="nb">export</span> <span class="nv">AWS_SESSION_TOKEN</span><span 
 <span class="c1">  # リージョン、アクセスキーID、シークレットアクセスキーは不要</span>
 <span class="w">  </span><span class="kr">backend</span><span class="w"> </span><span class="nv">&quot;s3&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="na">bucket</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;バケット名&gt;&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="na">key</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;バケット内のディレクトリ&gt;&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">key</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;.tfstateファイル名とバケット内ディレクトリ構造&gt;&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="c1"></span>
 
@@ -8810,8 +8878,7 @@ $ terraform plan
 <span class="na">vpc_cidr_block</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*/n&quot;</span><span class="c1"> # CIDRブロック</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_10">▼ 値のデータ型<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>単一値、list型、map型で定義できる。AZ、サブネットのCIDRブロック、RDSのパラメーターグループ値、などはmap型として保持しておくと良い。また、IPアドレスのセット、ユーザーエージェント、などはlist型として保持しておくと良い。なお、RDSのパラメーターグループの適正値については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html</a></p>
+<p>単一値、list型、map型で定義できる。AZ、サブネットのCIDRブロック、RDSのパラメーターグループ値、などはmap型として保持しておくと良い。また、IPアドレスのセット、ユーザーエージェント、などはlist型として保持しておくと良い。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9173,11 +9240,12 @@ $ terraform plan
 <p><br></p>
 <h3 id="output">output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <h4 id="output_1">▼ outputとは<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h4>
-<p>モジュールで作成されたリソースが持つ特定の値を出力する。可読性の観点から、リソース一括ではなく、具体的なattributeを出力するようにした方が良い。</p>
+<p>モジュール内のリソースが持つ値をモジュール外に出力する。または、他の<code>.tfstate</code>ファイルのリソースで使用できるようにする。可読性の観点から、リソース一括ではなく、具体的な<code>attribute</code>を出力するようにした方が良い。</p>
+<p>参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
 <h4 id="_14">▼ 実装方法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、ALBを示す。<code>resource</code>ブロックと<code>data</code>ブロックで<code>output</code>の方法が異なる。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -9195,6 +9263,52 @@ $ terraform plan
 
 <span class="kr">output</span><span class="w"> </span><span class="nv">&quot;elb_service_account_arn&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">data.aws_elb_service_account.this.arn</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+モジュール内のリソースが持つ値をモジュール外に出力する場合、<code>module</code>から出力する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################</span>
+<span class="c1"># ALB</span>
+<span class="c1">###############################</span>
+<span class="kr">module</span><span class="w"> </span><span class="nv">&quot;foo&quot;</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+<span class="c1">  # モジュールのResourceを参照する。</span>
+<span class="w">  </span><span class="na">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;../modules/foo&quot;</span><span class="c1"></span>
+
+<span class="c1">  # モジュールに他のモジュールのoutputを渡す。</span>
+<span class="w">  </span><span class="na">foo_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">module.alb.alb_zone_id</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>一方で、他の<code>.tfstate</code>ファイルのリソースで使用する場合、<code>terraform_remote_state</code>から出力する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># outputのあるtfstateファイルを参照する。</span>
+<span class="kr">data</span><span class="w"> </span><span class="nc">&quot;terraform_remote_state&quot;</span><span class="w"> </span><span class="nv">&quot;alb&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;s3&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nb">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;bucket&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="na">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;alb.tfstate&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;foo&quot;</span><span class="w"> </span><span class="nv">&quot;this&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">foo_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">data.terraform_remote_state.alb.outputs.alb_zone_id</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="countoutput">▼ <code>count</code>関数の<code>output</code><a class="headerlink" href="#countoutput" title="Permanent link">&para;</a></h4>
@@ -9865,8 +9979,10 @@ $ terraform plan
 <h3 id="dynamic">dynamic<a class="headerlink" href="#dynamic" title="Permanent link">&para;</a></h3>
 <h4 id="dynamic_1">▼ dynamicとは<a class="headerlink" href="#dynamic_1" title="Permanent link">&para;</a></h4>
 <p>指定したブロックを繰り返し作成する。</p>
+<p>参考：<a href="https://www.terraform.io/language/expressions/dynamic-blocks">https://www.terraform.io/language/expressions/dynamic-blocks</a></p>
+<h4 id="map">▼ map型の場合<a class="headerlink" href="#map" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
-<p>例として、RDSパラメーターグループの<code>parameter</code>ブロックを、map型変数を使用して繰り返し作成する。</p>
+<p>map型のキー名と値の両方を設定値として使用する。例として、RDSパラメーターグループの<code>parameter</code>ブロックを、map型変数を使用して繰り返し作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9883,25 +9999,7 @@ $ terraform plan
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
 <span class="c1"># Variables</span>
 <span class="c1">###############################################</span>
 <span class="nb">rds_parameter_group_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -9917,28 +10015,8 @@ $ terraform plan
 <span class="w">  </span><span class="na">general_log</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
 <span class="w">  </span><span class="na">slow_query_log</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"></span>
 <span class="w">  </span><span class="na">long_query_time</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="w"></span>
-<span class="p">}</span><span class="c1"></span>
-
-<span class="c1">###############################################</span>
-<span class="c1"># RDS Cluster Parameter Group</span>
-<span class="c1">###############################################</span>
-<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_rds_cluster_parameter_group&quot;</span><span class="w"> </span><span class="nv">&quot;this&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="na">name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;prd-foo-cluster-pg&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;The cluster parameter group for prd-foo-rds&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="na">family</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aurora-mysql5.7&quot;</span><span class="w"></span>
-
-<span class="w">  </span><span class="err">dynamic</span><span class="w"> </span><span class="s2">&quot;parameter&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.rds_parameter_group_values</span><span class="w"></span>
-
-<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">parameter.key</span><span class="w"></span>
-<span class="w">      </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">parameter.value</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p><strong>＊実装例＊</strong></p>
-<p>例として、WAFの正規表現パターンセットの<code>regular_expression</code>ブロックを、list型変数を使用して繰り返し作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9956,23 +10034,111 @@ $ terraform plan
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
+<span class="c1"># RDS Cluster Parameter Group</span>
+<span class="c1">###############################################</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_rds_cluster_parameter_group&quot;</span><span class="w"> </span><span class="nv">&quot;this&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="na">name</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;prd-foo-cluster-pg&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;The cluster parameter group for prd-foo-rds&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="na">family</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aurora-mysql5.7&quot;</span><span class="w"></span>
+
+<span class="w">  </span><span class="err">dynamic</span><span class="w"> </span><span class="s2">&quot;parameter&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.rds_parameter_group_values</span><span class="w"></span>
+
+<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+<span class="c1">      # parameterブロックのnameオプションとvalueオプションに出力する。</span>
+<span class="w">      </span><span class="na">name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">parameter.key</span><span class="w"></span>
+<span class="w">      </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">parameter.value</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><strong>＊実装例＊</strong></p>
+<p>map型の値を設定値として使用する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">security_group_ingress_ec2_ssh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SSH access from foo ip address&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">  </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">  </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;TCP&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_security_group&quot;</span><span class="w"> </span><span class="nv">&quot;ec2&quot;</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+
+<span class="w">  </span><span class="err">dynamic</span><span class="w"> </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.security_group_ingress_ec2_ssh</span><span class="w"></span>
+<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;cidr_blocks&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;from_port&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;to_port&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;protocol&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h4 id="list">▼ list型の場合<a class="headerlink" href="#list" title="Permanent link">&para;</a></h4>
+<p><strong>＊実装例＊</strong></p>
+<p>例として、WAFの正規表現パターンセットの<code>regular_expression</code>ブロックを、list型変数を使用して繰り返し作成する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
 <span class="c1"># Variables</span>
 <span class="c1">###############################################</span>
 <span class="na">waf_blocked_user_agents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;FooCrawler&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;BarSpider&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;BazBot&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="p">]</span><span class="c1"></span>
-
-<span class="c1">###############################################</span>
+<span class="p">]</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">###############################################</span>
 <span class="c1"># WAF Regex Pattern Sets</span>
 <span class="c1">###############################################</span>
 <span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_wafv2_regex_pattern_set&quot;</span><span class="w"> </span><span class="nv">&quot;cloudfront&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -9983,7 +10149,8 @@ $ terraform plan
 <span class="w">  </span><span class="err">dynamic</span><span class="w"> </span><span class="s2">&quot;regular_expression&quot;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">var.waf_blocked_user_agents</span><span class="w"></span>
 
-<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+<span class="c1">      # regex_stringブロックのregex_stringオプションに出力する。</span>
 <span class="w">      </span><span class="na">regex_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">regular_expression.value</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
@@ -10198,6 +10365,80 @@ $ terraform plan
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="regexall">regexall<a class="headerlink" href="#regexall" title="Permanent link">&para;</a></h3>
+<h4 id="regexall_1">▼ regexallとは<a class="headerlink" href="#regexall_1" title="Permanent link">&para;</a></h4>
+<p>正規表現ルールに基づいて、文字列の中から文字を抽出する。これを応用して、特定の文字列を含む場合に条件を分岐させるようにできる。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">security_group_ingress_ec2_ssh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nb">prd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SSH access from foo ip address&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;TCP&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nb">stg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SSH access from foo ip address&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">    </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="m">22</span><span class="w"></span>
+<span class="w">    </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;TCP&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_security_group&quot;</span><span class="w"> </span><span class="nv">&quot;ec2&quot;</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+
+<span class="w">  </span><span class="err">dynamic</span><span class="w"> </span><span class="nb">ingress</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+<span class="c1">    # 環境が複数あるとする。（prd-1、prd-2、stg-1、stg-2）</span>
+<span class="c1">    # 環境名がprdという文字を含むキーがあった場合に、全てprdキーの方を使用する。</span>
+<span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">regexall</span><span class="p">(</span><span class="s2">&quot;prd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">var.env</span><span class="p">))</span><span class="w"> </span><span class="err">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">?</span><span class="w"> </span><span class="nv">var.security_group_ingress_ec2_ssh.prd</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nv">var.security_group_ingress_ec2_ssh.stg</span><span class="w"></span>
+<span class="w">    </span><span class="nb">content</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="na">cidr_blocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;cidr_blocks&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">description</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">from_port</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;from_port&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">to_port</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;to_port&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="na">protocol</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nv">ingress.value</span><span class="p">[</span><span class="s2">&quot;protocol&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h2 id="05-tpl">05. tpl形式の切り出しと読み出し<a class="headerlink" href="#05-tpl" title="Permanent link">&para;</a></h2>
 <h3 id="templatefile"><code>templatefile</code>関数<a class="headerlink" href="#templatefile" title="Permanent link">&para;</a></h3>
 <h4 id="templatefile_1">▼ <code>templatefile</code>関数とは<a class="headerlink" href="#templatefile_1" title="Permanent link">&para;</a></h4>
@@ -10291,7 +10532,7 @@ $ terraform plan
 </tbody>
 </table>
 <p><br></p>
-<h3 id="_16">ポリシーのアタッチ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h3 id="_16">ポリシーの紐付け<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p><br></p>
 <h3 id="containerdefinitions">containerDefinitionsの設定<a class="headerlink" href="#containerdefinitions" title="Permanent link">&para;</a></h3>
 <h4 id="containerdefinitions_1">▼ containerDefinitionsとは<a class="headerlink" href="#containerdefinitions_1" title="Permanent link">&para;</a></h4>
@@ -10448,7 +10689,7 @@ $ terraform plan
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

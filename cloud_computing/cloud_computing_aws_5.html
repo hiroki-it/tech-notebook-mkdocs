@@ -4035,16 +4035,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    インバウンドルール
+  <a href="#ip_1" class="md-nav__link">
+    送信元IPアドレスの指定
   </a>
   
-    <nav class="md-nav" aria-label="インバウンドルール">
+    <nav class="md-nav" aria-label="送信元IPアドレスの指定">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#id" class="md-nav__link">
     ▼ セキュリティグループIDの紐付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ▼ 自己参照
   </a>
   
 </li>
@@ -4374,7 +4381,7 @@
         
           <li class="md-nav__item">
   <a href="#1-iam" class="md-nav__link">
-    1. IAMロールに信頼ポリシーをアタッチ
+    1. IAMロールに信頼ポリシーを紐付け
   </a>
   
 </li>
@@ -6491,8 +6498,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7285,16 +7292,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    インバウンドルール
+  <a href="#ip_1" class="md-nav__link">
+    送信元IPアドレスの指定
   </a>
   
-    <nav class="md-nav" aria-label="インバウンドルール">
+    <nav class="md-nav" aria-label="送信元IPアドレスの指定">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#id" class="md-nav__link">
     ▼ セキュリティグループIDの紐付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ▼ 自己参照
   </a>
   
 </li>
@@ -7624,7 +7638,7 @@
         
           <li class="md-nav__item">
   <a href="#1-iam" class="md-nav__link">
-    1. IAMロールに信頼ポリシーをアタッチ
+    1. IAMロールに信頼ポリシーを紐付け
   </a>
   
 </li>
@@ -7864,7 +7878,7 @@
 <tr>
 <td>バケットポリシー</td>
 <td>IAMユーザー（クロスアカウントも可）またはAWSリソースがS3へにアクセスするためのポリシーで管理する。</td>
-<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースにアタッチすることによりも、アクセスを許可できる。<br>参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーをアタッチできないCloudFrontやALBなどでは、自身へのアクセスログを生成するために必須である。</td>
+<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースに紐付けることによりも、アクセスを許可できる。<br>参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーを紐付けできないCloudFrontやALBなどでは、自身へのアクセスログを生成するために必須である。</td>
 </tr>
 <tr>
 <td>アクセスコントロールリスト</td>
@@ -7997,7 +8011,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>// ポリシーは不要
 </code></pre></div></td></tr></table></div>
 <h4 id="lambda">▼ Lambdaからのアクセスを許可<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h4>
-<p>バケットポリシーは不要である。代わりに、AWS管理ポリシーの『<code>AWSLambdaExecute</code>』がアタッチされたロールをLambdaにアタッチする必要がある。このポリシーには、S3へのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。</p>
+<p>バケットポリシーは不要である。代わりに、AWS管理ポリシーの『<code>AWSLambdaExecute</code>』が紐付けられたロールをLambdaに紐付ける必要がある。このポリシーには、S3へのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8120,10 +8134,13 @@
 <h3 id="_7">セットアップ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>インバウンド通信を許可するルールとアウトバウンドルールを設定できる。特定のセキュリティグループに紐づけられているAWSリソースを見つけたい場合は、ネットワークインターフェースでセキュリティグループのIDを検索し、インスタンスIDや説明文から、いずれのAWSリソースが紐づいているかを確認する。</p>
 <p><br></p>
-<h3 id="_8">インバウンドルール<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="ip_1">送信元IPアドレスの指定<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h3>
 <h4 id="id">▼ セキュリティグループIDの紐付け<a class="headerlink" href="#id" title="Permanent link">&para;</a></h4>
-<p>ソースに対して、セキュリティグループIDを設定した場合、そのセキュリティグループがアタッチされているENIと、このENIに紐付けられたリソースからのトラフィックを許可できる。リソースのIPアドレスが動的に変化する場合、有効な方法である。</p>
+<p>許可する送信元IPアドレスにセキュリティグループIDを設定した場合、そのセキュリティグループが紐付けられているENIと、このENIに紐付けられたリソースからのトラフィックを許可できる。リソースのIPアドレスが動的に変化する場合、有効な方法である。</p>
 <p>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup</a></p>
+<h4 id="_8">▼ 自己参照<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>許可する送信元IPアドレスに、自分自身のセキュリティグループIDを設定した場合、同じセキュリティグループが紐付けられている同士で通信できるようになる。</p>
+<p>参考：<a href="https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups">https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups</a></p>
 <p><br></p>
 <h2 id="03-sessimple-email-service">03. SES：Simple Email Service<a class="headerlink" href="#03-sessimple-email-service" title="Permanent link">&para;</a></h2>
 <h3 id="ses">SESとは<a class="headerlink" href="#ses" title="Permanent link">&para;</a></h3>
@@ -8441,7 +8458,7 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <h3 id="sts">STSとは<a class="headerlink" href="#sts" title="Permanent link">&para;</a></h3>
 <p>IAMユーザーに対して、特定のAWSアカウントのAWSリソースに一時的にアクセスできるクレデンシャル情報（アクセスキーID、シークレットアクセスキー、セッショントークン）を発行する。このクレデンシャル情報は、一時的なクレデンシャル情報として使用できる。</p>
 <p><img alt="STS" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/STS.jpg" /></p>
-<p>STSへのリクエストの結果、新しいIAMユーザーを取得できる。このIAMユーザーには、そのAWSアカウント内でのみ使用できるロールがアタッチされている。この情報には有効秒数が存在し、期限が過ぎると新しいIAMユーザーになる。秒数の最大値は、該当するIAMロールの概要の最大セッション時間から変更できる。</p>
+<p>STSへのリクエストの結果、新しいIAMユーザーを取得できる。このIAMユーザーには、そのAWSアカウント内でのみ使用できるロールが紐付けられている。この情報には有効秒数が存在し、期限が過ぎると新しいIAMユーザーになる。秒数の最大値は、該当するIAMロールの概要の最大セッション時間から変更できる。</p>
 <p>参考：<a href="https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role">https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role</a></p>
 <p><img alt="AssumeRole" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/AssumeRole.png" /></p>
 <p>IAMユーザーを一括で管理しておき、特定のAWSアカウントでは特定の権限を委譲するようにする。</p>
@@ -8449,8 +8466,8 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <p><img alt="sts_multi-account" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/sts_multi-account.png" /></p>
 <p><br></p>
 <h3 id="_20">セットアップ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
-<h4 id="1-iam">1. IAMロールに信頼ポリシーをアタッチ<a class="headerlink" href="#1-iam" title="Permanent link">&para;</a></h4>
-<p>必要なポリシーが設定されたIAMロールを作成する。その時信頼ポリシーでは、ユーザーの<code>ARN</code>を信頼されたエンティティとして設定しておく。これにより、そのユーザーに対して、ロールをアタッチできるようになる。</p>
+<h4 id="1-iam">1. IAMロールに信頼ポリシーを紐付け<a class="headerlink" href="#1-iam" title="Permanent link">&para;</a></h4>
+<p>必要なポリシーが設定されたIAMロールを作成する。その時信頼ポリシーでは、ユーザーの<code>ARN</code>を信頼されたエンティティとして設定しておく。これにより、そのユーザーに対して、ロールを紐付けできるようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8486,7 +8503,7 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="2">2. ロールを引き受けたクレデンシャル情報をリクエスト<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
-<p>信頼されたエンティティ（ユーザー）から、STSのエンドポイント（<code>https://sts.amazonaws.com</code>）に対して、ロールのアタッチをリクエストする。</p>
+<p>信頼されたエンティティ（ユーザー）から、STSのエンドポイント（<code>https://sts.amazonaws.com</code>）に対して、ロールの紐付けをリクエストする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8566,9 +8583,9 @@ aws configure <span class="nb">set</span> aws_access_key_id <span class="s2">&qu
 aws configure <span class="nb">set</span> aws_secret_access_key <span class="s2">&quot;</span><span class="nv">$aws_secret_access_key</span><span class="s2">&quot;</span>
 aws configure <span class="nb">set</span> aws_default_region <span class="s2">&quot;ap-northeast-1&quot;</span>
 
-<span class="c1"># https://sts.amazonaws.com に、ロールのアタッチをリクエストする。</span>
+<span class="c1"># https://sts.amazonaws.com に、ロールの紐付けをリクエストする。</span>
 <span class="nv">aws_sts_credentials</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>aws sts assume-role <span class="se">\</span>
-  --role-arn <span class="s2">&quot;arn:aws:iam::</span><span class="si">${</span><span class="nv">aws_access_key_id</span><span class="si">}</span><span class="s2">:role/</span><span class="si">${</span><span class="nv">ENV</span><span class="si">}</span><span class="s2">-&lt;アタッチしたいIAMロール名&gt;&quot;</span> <span class="se">\</span>
+  --role-arn <span class="s2">&quot;arn:aws:iam::</span><span class="si">${</span><span class="nv">aws_access_key_id</span><span class="si">}</span><span class="s2">:role/</span><span class="si">${</span><span class="nv">ENV</span><span class="si">}</span><span class="s2">-&lt;紐付けしたいIAMロール名&gt;&quot;</span> <span class="se">\</span>
   --role-session-name <span class="s2">&quot;&lt;任意のセッション名&gt;&quot;</span> <span class="se">\</span>
   --external-id <span class="s2">&quot;</span><span class="nv">$aws_iam_role_external_id</span><span class="s2">&quot;</span> <span class="se">\</span>
   --duration-seconds <span class="s2">&quot;&lt;セッションの有効秒数&gt;&quot;</span> <span class="se">\</span>
@@ -8803,7 +8820,7 @@ aws s3 ls --profile &lt;プロファイル名&gt;
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

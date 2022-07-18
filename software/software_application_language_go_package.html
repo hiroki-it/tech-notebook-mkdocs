@@ -6274,8 +6274,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7462,7 +7462,7 @@ go 1.16
 <p><br></p>
 <h3 id="db">DBとの接続<a class="headerlink" href="#db" title="Permanent link">&para;</a></h3>
 <h4 id="mysql">▼ MySQLの場合<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/connecting_to_the_database.html#MySQL">https://gorm.io/ja_JP/docs/connecting_to_the_database.html#MySQL</a></p>
+<p>参考：<a href="https://gorm.io/docs/connecting_to_the_database.html#MySQL">https://gorm.io/docs/connecting_to_the_database.html#MySQL</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7545,7 +7545,7 @@ go 1.16
 <h3 id="gorm_1">Gormモデル<a class="headerlink" href="#gorm_1" title="Permanent link">&para;</a></h3>
 <h4 id="gorm_2">▼ Gormモデル埋め込み<a class="headerlink" href="#gorm_2" title="Permanent link">&para;</a></h4>
 <p>構造体にGormモデルを埋め込むと、IDやタイムスタンプレコードがフィールドとして追加される。構造体をマッピングしたテーブルに、<code>id</code>カラム、<code>created_at</code>カラム、<code>updated_at</code>カラム、<code>deleted_at</code>カラムが追加される。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/models.html#embedded_struct">https://gorm.io/ja_JP/docs/models.html#embedded_struct</a></p>
+<p>参考：<a href="https://gorm.io/docs/models.html#embedded_struct">https://gorm.io/docs/models.html#embedded_struct</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7574,7 +7574,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="_5">▼ プライマリーキー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>『ID』という名前のフィールドを認識して、これをプライマリーキーとしてデータをマッピングする。もし、他の名前のフィールドをIDとして使用したい場合は、<code>gorm:"primaryKey"</code>タグをつける。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/conventions.html#ID-as-Primary-Key">https://gorm.io/ja_JP/docs/conventions.html#ID-as-Primary-Key</a></p>
+<p>参考：<a href="https://gorm.io/docs/conventions.html#ID-as-Primary-Key">https://gorm.io/docs/conventions.html#ID-as-Primary-Key</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7593,7 +7593,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="softdelete">▼ SoftDelete<a class="headerlink" href="#softdelete" title="Permanent link">&para;</a></h4>
 <p>構造体が、<code>gorm.DeleteAt</code>をデータ型とするフィールドを持っていると、その構造体を使用したDELETE処理では論理削除が実行される。Gormモデルを埋め込むことによりこのフィールドを持たせるか、または独自定義することにより、SoftDeleteを有効化できる。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/delete.html#Soft-Delete">https://gorm.io/ja_JP/docs/delete.html#Soft-Delete</a></p>
+<p>参考：<a href="https://gorm.io/docs/delete.html#Soft-Delete">https://gorm.io/docs/delete.html#Soft-Delete</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7628,7 +7628,7 @@ go 1.16
 <h3 id="_6">マイグレーション<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="tablename">▼ <code>TableName</code>メソッド<a class="headerlink" href="#tablename" title="Permanent link">&para;</a></h4>
 <p>デフォルトではGormモデルの名前をスネークケースに変更し、また複数形とした名前のテーブルが生成される。<code>TableName</code>メソッドにより、独自のテーブル名をつけられる。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/conventions.html#TableName">https://gorm.io/ja_JP/docs/conventions.html#TableName</a></p>
+<p>参考：<a href="https://gorm.io/docs/conventions.html#TableName">https://gorm.io/docs/conventions.html#TableName</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7672,7 +7672,7 @@ go 1.16
 <p><br></p>
 <h3 id="read">Read<a class="headerlink" href="#read" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 全カラム取得<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/query.html#Retrieving-all-objects">https://gorm.io/ja_JP/docs/query.html#Retrieving-all-objects</a></p>
+<p>参考：<a href="https://gorm.io/docs/query.html#Retrieving-all-objects">https://gorm.io/docs/query.html#Retrieving-all-objects</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7691,7 +7691,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="_8">▼ 単一/複数カラム取得<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>Gormモデルとプライマリーキーを指定して、プライマリーキーのモデルに紐付けられたカラムを取得する。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/query.html#Retrieving-objects-with-primary-key">https://gorm.io/ja_JP/docs/query.html#Retrieving-objects-with-primary-key</a></p>
+<p>参考：<a href="https://gorm.io/docs/query.html#Retrieving-objects-with-primary-key">https://gorm.io/docs/query.html#Retrieving-objects-with-primary-key</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7716,7 +7716,7 @@ go 1.16
 <h3 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ 単一カラム更新（暗黙的）<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>フィールドとは無関係に、渡された値を元にUPDATE分を実行する。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/update.html#Update-single-column">https://gorm.io/ja_JP/docs/update.html#Update-single-column</a></p>
+<p>参考：<a href="https://gorm.io/docs/update.html#Update-single-column">https://gorm.io/docs/update.html#Update-single-column</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7745,7 +7745,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="_10">▼ 複数カラム更新（暗黙的）<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>Gormモデルのフィールドを暗黙的に指定して、複数のカラム値を更新する。または、フィールドとは無関係に、マップデータを元にUPDATE文を実行する。Gormモデルを使用した場合、フィールド値がゼロ値であると、これに紐付けられたカラム値の更新はスキップされてしまう。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/update.html#Updates-multiple-columns">https://gorm.io/ja_JP/docs/update.html#Updates-multiple-columns</a></p>
+<p>参考：<a href="https://gorm.io/docs/update.html#Updates-multiple-columns">https://gorm.io/docs/update.html#Updates-multiple-columns</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7766,7 +7766,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="_11">▼ 複数カラム更新（明示的）<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>Gormモデルのフィールドを明示的に指定して、複数のカラム値を更新する。フィールド値がゼロ値であっても、スキップされない。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/update.html#Update-Selected-Fields">https://gorm.io/ja_JP/docs/update.html#Update-Selected-Fields</a></p>
+<p>参考：<a href="https://gorm.io/docs/update.html#Update-Selected-Fields">https://gorm.io/docs/update.html#Update-Selected-Fields</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7787,7 +7787,7 @@ go 1.16
 </code></pre></div></td></tr></table></div>
 <h4 id="_12">▼ 全カラム更新<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>Gormモデルのフィールドを暗黙的に全て指定して、全てのカラム値を強制的に更新する。</p>
-<p>参考：<a href="https://gorm.io/ja_JP/docs/update.html#Save-All-Fields">https://gorm.io/ja_JP/docs/update.html#Save-All-Fields</a></p>
+<p>参考：<a href="https://gorm.io/docs/update.html#Save-All-Fields">https://gorm.io/docs/update.html#Save-All-Fields</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8274,7 +8274,7 @@ go 1.16
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

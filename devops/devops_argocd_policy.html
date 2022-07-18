@@ -5709,6 +5709,13 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    リポジトリ分割のメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     モノリポジトリ構成（推奨）
   </a>
   
@@ -5735,7 +5742,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ポリリポジトリ
   </a>
   
@@ -5755,7 +5762,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     実行環境別（必須）
   </a>
   
@@ -5775,14 +5782,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     ダッシュボード
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     機密な環境変数
   </a>
   
@@ -5802,7 +5809,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     既に存在しないリソースを検出し続けてしまう
   </a>
   
@@ -5991,8 +5998,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -6630,6 +6637,13 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    リポジトリ分割のメリット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     モノリポジトリ構成（推奨）
   </a>
   
@@ -6656,7 +6670,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ポリリポジトリ
   </a>
   
@@ -6676,7 +6690,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     実行環境別（必須）
   </a>
   
@@ -6696,14 +6710,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     ダッシュボード
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     機密な環境変数
   </a>
   
@@ -6723,7 +6737,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     既に存在しないリソースを検出し続けてしまう
   </a>
   
@@ -6765,7 +6779,13 @@
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. リポジトリ構成<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
-<h3 id="_2">モノリポジトリ構成（推奨）<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_2">リポジトリ分割のメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>リポジトリを分割することで、以下のメリットがある。</p>
+<ul>
+<li>認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</li>
+</ul>
+<p><br></p>
+<h3 id="_3">モノリポジトリ構成（推奨）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="kubernetes">▼ Kubernetesリソースのマニフェストファイルを監視する場合<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h4>
 <p>監視対象リポジトリごとにApplicationを作成し、これらを同じリポジトリで管理する。この時、監視対象リポジトリにはKubernetesリソースのマニフェストファイルやhelmチャートが管理されている。</p>
 <p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04">https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04</a></p>
@@ -6883,8 +6903,8 @@
 <span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="_3">ポリリポジトリ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>監視対象リポジトリごとにApplicationを作成し、これらを異なるリポジトリで管理する。リポジトリを分割することで、認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</p>
+<h3 id="_4">ポリリポジトリ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>監視対象リポジトリごとにApplicationを作成し、これらを異なるリポジトリで管理する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6923,7 +6943,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="02">02. ディレクトリ構成<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
-<h3 id="_4">実行環境別（必須）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_5">実行環境別（必須）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>必須の構成である。各実行環境にapplyするためのApplicationを別々のディレクトリで管理する。Applicationでは、実行環境に対応するブランチのみを監視する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -6935,11 +6955,11 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="03">03. セキュリティ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
-<h3 id="_5">ダッシュボード<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_6">ダッシュボード<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>ダッシュボード</p>
 <p>のURLはIngressを入り口に作成することで公開する。また、ログイン方法は、デフォルトのBasic認証ではなく、SSOを使用する。</p>
 <p><br></p>
-<h3 id="_6">機密な環境変数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">機密な環境変数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Applicationで使用する機密な環境変数は、Secretで管理する。このSecretをどの場所に保存するかについて議論がなされている。</p>
 <p>参考：</p>
 <ul>
@@ -6948,7 +6968,7 @@
 </ul>
 <p><br></p>
 <h2 id="04">04. エラー解決<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<h3 id="_7">既に存在しないリソースを検出し続けてしまう<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_8">既に存在しないリソースを検出し続けてしまう<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>PruneによるKubernetesリソースの削除を有効化した場合、Prune後に存在しないリソースを監視し続けてしまう現象が起こることがある。また、Applicationの削除時に、削除中ステータスのまま処理が進まないなる場合がある。これらの場合には、<code>spec.syncPolicy.allowEmpty</code>キーを有効化しつつ、Applicationの<code>metadata.finalizers</code>キーの値を<code>kubectl edit</code>コマンドで空配列に変更する。</p>
 <p>参考：<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl edit apps &lt;ArgoCDのアプリケーション名&gt; -n argocd
@@ -6976,7 +6996,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

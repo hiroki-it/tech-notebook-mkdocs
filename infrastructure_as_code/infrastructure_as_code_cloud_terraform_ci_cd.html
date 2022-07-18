@@ -6091,8 +6091,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7539,9 +7539,9 @@ aws configure <span class="nb">set</span> aws_access_key_id <span class="s2">&qu
 aws configure <span class="nb">set</span> aws_secret_access_key <span class="s2">&quot;</span><span class="nv">$aws_secret_access_key</span><span class="s2">&quot;</span>
 aws configure <span class="nb">set</span> aws_default_region <span class="s2">&quot;ap-northeast-1&quot;</span>
 
-<span class="c1"># https://sts.amazonaws.com に、ロールのアタッチをリクエストする。</span>
+<span class="c1"># https://sts.amazonaws.com に、ロールの紐付けをリクエストする。</span>
 <span class="nv">aws_sts_credentials</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>aws sts assume-role <span class="se">\</span>
-  --role-arn <span class="s2">&quot;arn:aws:iam::</span><span class="si">${</span><span class="nv">aws_access_key_id</span><span class="si">}</span><span class="s2">:role/</span><span class="si">${</span><span class="nv">ENV</span><span class="si">}</span><span class="s2">-&lt;アタッチしたいIAMロール名&gt;&quot;</span> <span class="se">\</span>
+  --role-arn <span class="s2">&quot;arn:aws:iam::</span><span class="si">${</span><span class="nv">aws_access_key_id</span><span class="si">}</span><span class="s2">:role/</span><span class="si">${</span><span class="nv">ENV</span><span class="si">}</span><span class="s2">-&lt;紐付けしたいIAMロール名&gt;&quot;</span> <span class="se">\</span>
   --role-session-name <span class="s2">&quot;&lt;任意のセッション名&gt;&quot;</span> <span class="se">\</span>
   --external-id <span class="s2">&quot;</span><span class="nv">$aws_iam_role_external_id</span><span class="s2">&quot;</span> <span class="se">\</span>
   --duration-seconds <span class="s2">&quot;&lt;セッションの有効秒数&gt;&quot;</span> <span class="se">\</span>
@@ -7802,7 +7802,7 @@ terraform -chdir<span class="o">=</span>./<span class="si">${</span><span class=
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

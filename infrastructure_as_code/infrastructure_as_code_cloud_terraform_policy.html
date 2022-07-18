@@ -5351,13 +5351,20 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    モノリポジトリ
+    リポジトリ分割のメリット
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    モノリポジトリ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     ポリリポジトリ（推奨）
   </a>
   
@@ -5365,14 +5372,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ▼ ルートモジュールとネストモジュールを同じリポジトリにする（推奨）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     ▼ ルートモジュールとネストモジュールを異なるリポジトリにする
   </a>
   
@@ -5390,23 +5397,84 @@
       
         <li class="md-nav__item">
   <a href="#01-02-tfstate" class="md-nav__link">
-    01-02 .tfstateファイルの構成
+    01-02 .tfstateファイルの分割
   </a>
   
-    <nav class="md-nav" aria-label="01-02 .tfstateファイルの構成">
+    <nav class="md-nav" aria-label="01-02 .tfstateファイルの分割">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ▼ 実行環境別（必須）
+  <a href="#tfstate" class="md-nav__link">
+    .tfstateファイル分割とは
+  </a>
+  
+    <nav class="md-nav" aria-label=".tfstateファイル分割とは">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ▼ メリット
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ▼ クラウドプロバイダー別
+  <a href="#_8" class="md-nav__link">
+    ▼ 方法
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    実行環境別（必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    クラウドプロバイダー別（必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    任意のコンポーネント別
+  </a>
+  
+    <nav class="md-nav" aria-label="任意のコンポーネント別">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    ▼ コンポーネントの目安
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ▼ クラウドインフラのリソースの変更頻度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    ▼ 運用チームの責務範囲
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5424,7 +5492,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     ルートモジュールとネストモジュールが同じリポジトリの場合
   </a>
   
@@ -5432,7 +5500,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
@@ -5444,7 +5512,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     ルートモジュールとネストモジュールが異なるリポジトリの場合
   </a>
   
@@ -5452,7 +5520,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
@@ -5477,7 +5545,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     ネストモジュールの構成
   </a>
   
@@ -5485,28 +5553,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     ▼ 対象リソース別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     ▼ リージョン別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     ▼ 共通セット別
   </a>
   
@@ -5526,7 +5594,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_24" class="md-nav__link">
     ▼ ファイルの切り分け
   </a>
   
@@ -5579,14 +5647,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_25" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_26" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -5598,7 +5666,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_27" class="md-nav__link">
     変数
   </a>
   
@@ -5606,14 +5674,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_28" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_29" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -5625,7 +5693,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_30" class="md-nav__link">
     環境変数
   </a>
   
@@ -5633,14 +5701,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
+  <a href="#_31" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
+  <a href="#_32" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -5660,28 +5728,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
+  <a href="#_33" class="md-nav__link">
     ▼ リソースに種類がある場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
+  <a href="#_34" class="md-nav__link">
     ▼ リソースに種類が無い場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
+  <a href="#_35" class="md-nav__link">
     ▼ 接頭辞、接尾辞
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
+  <a href="#_36" class="md-nav__link">
     ▼ 設定の並び順、行間
   </a>
   
@@ -5701,21 +5769,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
+  <a href="#_37" class="md-nav__link">
     ▼ リソースに種類がある場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
+  <a href="#_38" class="md-nav__link">
     ▼ リソースに種類が無い場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
+  <a href="#_39" class="md-nav__link">
     ▼ 冗長な場合
   </a>
   
@@ -5747,7 +5815,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_33" class="md-nav__link">
+  <a href="#_40" class="md-nav__link">
     開発方法
   </a>
   
@@ -5794,14 +5862,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_34" class="md-nav__link">
+  <a href="#_41" class="md-nav__link">
     権限の一時的な付与
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_35" class="md-nav__link">
+  <a href="#_42" class="md-nav__link">
     機密情報の管理
   </a>
   
@@ -6447,8 +6515,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7086,13 +7154,20 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    モノリポジトリ
+    リポジトリ分割のメリット
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    モノリポジトリ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     ポリリポジトリ（推奨）
   </a>
   
@@ -7100,14 +7175,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ▼ ルートモジュールとネストモジュールを同じリポジトリにする（推奨）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     ▼ ルートモジュールとネストモジュールを異なるリポジトリにする
   </a>
   
@@ -7125,23 +7200,84 @@
       
         <li class="md-nav__item">
   <a href="#01-02-tfstate" class="md-nav__link">
-    01-02 .tfstateファイルの構成
+    01-02 .tfstateファイルの分割
   </a>
   
-    <nav class="md-nav" aria-label="01-02 .tfstateファイルの構成">
+    <nav class="md-nav" aria-label="01-02 .tfstateファイルの分割">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ▼ 実行環境別（必須）
+  <a href="#tfstate" class="md-nav__link">
+    .tfstateファイル分割とは
+  </a>
+  
+    <nav class="md-nav" aria-label=".tfstateファイル分割とは">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ▼ メリット
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ▼ クラウドプロバイダー別
+  <a href="#_8" class="md-nav__link">
+    ▼ 方法
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    実行環境別（必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    クラウドプロバイダー別（必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    任意のコンポーネント別
+  </a>
+  
+    <nav class="md-nav" aria-label="任意のコンポーネント別">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    ▼ コンポーネントの目安
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ▼ クラウドインフラのリソースの変更頻度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    ▼ 運用チームの責務範囲
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -7159,7 +7295,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     ルートモジュールとネストモジュールが同じリポジトリの場合
   </a>
   
@@ -7167,7 +7303,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
@@ -7179,7 +7315,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     ルートモジュールとネストモジュールが異なるリポジトリの場合
   </a>
   
@@ -7187,7 +7323,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
@@ -7212,7 +7348,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     ネストモジュールの構成
   </a>
   
@@ -7220,28 +7356,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     ▼ 対象リソース別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     ▼ 実行環境別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     ▼ リージョン別
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     ▼ 共通セット別
   </a>
   
@@ -7261,7 +7397,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_24" class="md-nav__link">
     ▼ ファイルの切り分け
   </a>
   
@@ -7314,14 +7450,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_25" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_26" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -7333,7 +7469,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_27" class="md-nav__link">
     変数
   </a>
   
@@ -7341,14 +7477,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_28" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_29" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -7360,7 +7496,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
+  <a href="#_30" class="md-nav__link">
     環境変数
   </a>
   
@@ -7368,14 +7504,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
+  <a href="#_31" class="md-nav__link">
     ▼ 命名規則
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
+  <a href="#_32" class="md-nav__link">
     ▼ 並び順
   </a>
   
@@ -7395,28 +7531,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
+  <a href="#_33" class="md-nav__link">
     ▼ リソースに種類がある場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
+  <a href="#_34" class="md-nav__link">
     ▼ リソースに種類が無い場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
+  <a href="#_35" class="md-nav__link">
     ▼ 接頭辞、接尾辞
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
+  <a href="#_36" class="md-nav__link">
     ▼ 設定の並び順、行間
   </a>
   
@@ -7436,21 +7572,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
+  <a href="#_37" class="md-nav__link">
     ▼ リソースに種類がある場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
+  <a href="#_38" class="md-nav__link">
     ▼ リソースに種類が無い場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
+  <a href="#_39" class="md-nav__link">
     ▼ 冗長な場合
   </a>
   
@@ -7482,7 +7618,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_33" class="md-nav__link">
+  <a href="#_40" class="md-nav__link">
     開発方法
   </a>
   
@@ -7529,14 +7665,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_34" class="md-nav__link">
+  <a href="#_41" class="md-nav__link">
     権限の一時的な付与
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_35" class="md-nav__link">
+  <a href="#_42" class="md-nav__link">
     機密情報の管理
   </a>
   
@@ -7673,8 +7809,14 @@
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. リポジトリ構成<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
-<h3 id="_2">モノリポジトリ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>アプリケーションと同じリポジトリにて、<code>terraform</code>ディレクトリを作成し、ここにtfファイルを配置する。</p>
+<h3 id="_2">リポジトリ分割のメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>リポジトリを分割することで、以下のメリットがある。</p>
+<ul>
+<li>認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</li>
+</ul>
+<p><br></p>
+<h3 id="_3">モノリポジトリ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>アプリケーションと同じリポジトリにて、<code>terraform</code>ディレクトリを作成し、ここに<code>.tf</code>ファイルを配置する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7688,17 +7830,17 @@
 <span class="nn">...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="_3">ポリリポジトリ（推奨）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<h4 id="_4">▼ ルートモジュールとネストモジュールを同じリポジトリにする（推奨）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>アプリケーションとは異なるリポジトリにて、tfファイルを配置しつつ、ルートモジュールとネストモジュールは同じリポジトリ内で管理する。リポジトリを分割することで、認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</p>
+<h3 id="_4">ポリリポジトリ（推奨）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">▼ ルートモジュールとネストモジュールを同じリポジトリにする（推奨）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>アプリケーションとは異なるリポジトリにて、<code>.tf</code>ファイルを配置しつつ、ルートモジュールとネストモジュールは同じリポジトリ内で管理する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">├── modules/</span><span class="w"></span>
 <span class="nn">...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_5">▼ ルートモジュールとネストモジュールを異なるリポジトリにする<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>アプリケーションとは異なるリポジトリにて、tfファイルを配置しつつ、ルートモジュールとネストモジュールは異なるリポジトリ内で管理する。ルートモジュールで、ネストモジュールのリポジトリのURLを指定し、参照する。リポジトリを分割することで、認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</p>
+<h4 id="_6">▼ ルートモジュールとネストモジュールを異なるリポジトリにする<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>アプリケーションとは異なるリポジトリにて、<code>.tf</code>ファイルを配置しつつ、ルートモジュールとネストモジュールは異なるリポジトリ内で管理する。ルートモジュールで、ネストモジュールのリポジトリのURLを指定し、参照する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
@@ -7706,9 +7848,57 @@
 <span class="nn">...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h2 id="01-02-tfstate">01-02 <code>.tfstate</code>ファイルの構成<a class="headerlink" href="#01-02-tfstate" title="Permanent link">&para;</a></h2>
-<h4 id="_6">▼ 実行環境別（必須）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>必須の構成である。実行環境別に<code>providers.tf</code>ファイルを作成する。これにより、実行環境別に<code>.tfstate</code>ファイルが作成される。<code>terraform apply</code>コマンドの影響範囲を実行環境内に閉じられる。</p>
+<h2 id="01-02-tfstate">01-02 <code>.tfstate</code>ファイルの分割<a class="headerlink" href="#01-02-tfstate" title="Permanent link">&para;</a></h2>
+<h3 id="tfstate"><code>.tfstate</code>ファイル分割とは<a class="headerlink" href="#tfstate" title="Permanent link">&para;</a></h3>
+<h4 id="_7">▼ メリット<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p><code>.tfstate</code>ファイルを分割することで、以下のメリットがある。</p>
+<p>参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
+<ul>
+<li><code>terraform apply</code>コマンドの実行途中に問題が起こり、<code>.tfstate</code>ファイルが破損したとしても、影響範囲をクラウドプロバイダーの実行環境内に閉じられる。</li>
+<li><code>terraform plan</code>コマンドや<code>terraform apply</code>コマンドの実行時間を短縮できる。</li>
+<li>リソースタイプが同じであっても、同じ名前を付けられる。</li>
+</ul>
+<h4 id="_8">▼ 方法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p><code>backend</code>ブロックの<code>key</code>オプションで、下層のディレクトリ名に分割名を設定する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">terraform</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+
+<span class="w">  </span><span class="kr">backend</span><span class="w"> </span><span class="nv">&quot;s3&quot;</span><span class="w"> </span><span class="p">{</span><span class="c1"></span>
+
+<span class="c1">    # 〜 中略 〜</span>
+
+<span class="w">    </span><span class="na">bucket</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;prd-foo-tfstate-bucket&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="na">key</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&lt;クラウドプロバイダー名&gt;/&lt;コンポーネント名&gt;/terraform.tfstate&quot;</span><span class="c1"></span>
+
+<span class="c1">    # 〜 中略 〜</span>
+
+<span class="w">  </span><span class="p">}</span><span class="c1"></span>
+
+<span class="c1">  # 〜 中略 〜</span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
+<h3 id="_9">実行環境別（必須）<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>必須の構成である。実行環境別に<code>providers.tf</code>ファイルを作成する。これにより、実行環境別に<code>.tfstate</code>ファイルが作成される。<code>terraform apply</code>コマンドの影響範囲を実行環境内に閉じられる。また、各環境の<code>.tfstate</code>ファイルの管理リソース（AWSならS3バケット）も分割した方がよい。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7723,8 +7913,9 @@
 <span class="l l-Scalar l-Scalar-Plain">├── prd/</span><span class="w"> </span><span class="c1"># 本番環境</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"> </span><span class="c1"># ステージング環境</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_7">▼ クラウドプロバイダー別<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>実行環境別に分けた上で、さらにクラウドプロバイダー別に<code>providers.tf</code>ファイルを作成する。これにより、クラウドプロバイダー別に<code>.tfstate</code>ファイルが作成される。<code>terraform apply</code>コマンドの影響範囲をクラウドプロバイダーの実行環境内に閉じられる。</p>
+<p><br></p>
+<h3 id="_10">クラウドプロバイダー別（必須）<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>実行環境別に分けた上で、さらにクラウドプロバイダー別に<code>providers.tf</code>ファイルを作成する。これにより、クラウドプロバイダー別に<code>.tfstate</code>ファイルが作成される。各環境で独立して作成した<code>.tfstate</code>ファイルの管理リソース（AWSならS3バケット）内でディレクトリを作り、各ディレクトリに<code>.tfstate</code>ファイルを配置する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7747,18 +7938,18 @@
 <span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">├── dev/</span><span class="w"> </span><span class="c1"># 開発環境</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   ├── aws/</span><span class="w"> </span><span class="c1"># AWS</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">│   │    ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │    ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/terraform.tfstate</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │    ...</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   ├── datadog/</span><span class="w"> </span><span class="c1"># Datadog</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">│   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># datadog/terraform.tfstate</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │   ...</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">│   ├── healthchecks/</span><span class="w"> </span><span class="c1"># Healthchecks</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">│   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── healthchecks/</span><span class="w"> </span><span class="c1"># Healthchecks </span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># healthchecks/terraform.tfstate</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │   ...</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"> </span>
-<span class="l l-Scalar l-Scalar-Plain">│   └── pagerduty/</span><span class="w"> </span><span class="c1"># PagerDuty</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   └── pagerduty/</span><span class="w"> </span><span class="c1"># PagerDuty # pagerduty/terraform.tfstate</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│       ├── providers.tf</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│       ...</span><span class="w"></span>
 <span class="l l-Scalar l-Scalar-Plain">│</span><span class="w"></span>
@@ -7766,9 +7957,200 @@
 <span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"> </span><span class="c1"># ステージング環境</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="_11">任意のコンポーネント別<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">▼ コンポーネントの目安<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>CloudFormationでは、クラウドインフラのリソースの変更頻度、運用チームの責務範囲、爆発半径、などを状態管理の単位とすることが推奨されており、Terraformでのコンポーネント分割でもこれを真似すると良い。これらの観点の分割が混在してしまうと混乱するため、いずれかの観点に統一した方が良い。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://zoo200.net/terraform-tutorial-module-and-directory/">https://zoo200.net/terraform-tutorial-module-and-directory/</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks</a></li>
+<li><a href="https://zenn.dev/hajimeni/articles/e17b9808e0e82e">https://zenn.dev/hajimeni/articles/e17b9808e0e82e</a></li>
+</ul>
+<h4 id="_13">▼ クラウドインフラのリソースの変更頻度<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>クラウドインフラのリソースの変更頻度ごとにコンポーネントを分割する。各環境で独立して作成した<code>.tfstate</code>ファイルの管理リソース（AWSならS3バケット）内でディレクトリを作り、各ディレクトリに<code>.tfstate</code>ファイルを配置する。</p>
+<p>参考：<a href="https://towardsdatascience.com/data-quality-dataops-and-the-trust-blast-radius-4b0e9556bbda">https://towardsdatascience.com/data-quality-dataops-and-the-trust-blast-radius-4b0e9556bbda</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">├── dev/</span><span class="w"> </span><span class="c1"># 開発環境</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── aws/</span><span class="w"> </span><span class="c1"># AWS</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── high-freq</span><span class="w"> </span><span class="c1"># 高頻度リソース（サーバー系、コンテナ系、セキュリティ系、監視系など）</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/high-freq/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── low-freq</span><span class="w"> </span><span class="c1"># 低頻度リソース（ネットワーク系、ストレージ系、など）</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/low-freq/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── middle-freq</span><span class="w"> </span><span class="c1"># 中頻度リソース（高頻度とも低頻度とも言えないリソース）</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/middle-freq/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── datadog/</span><span class="w"> </span><span class="c1"># Datadog</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── high-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── low-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── middle-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── healthchecks/</span><span class="w"> </span><span class="c1"># Healthchecks</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── high-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── low-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── middle-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"> </span>
+<span class="l l-Scalar l-Scalar-Plain">│   └── pagerduty/</span><span class="w"> </span><span class="c1"># PagerDuty</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       ├── high-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       ├── low-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │   ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       └── middle-freq</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│           ├── providers.tf</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│           ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">├── prd/</span><span class="w"> </span><span class="c1"># 本番環境</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"> </span><span class="c1"># ステージング環境</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h4 id="_14">▼ 運用チームの責務範囲<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>運用チームの責務範囲ごとにコンポーネントを分割する。ただ、チームの責務範囲や数は、組織の大きさに合わせて流動的に変化するものなので、個人的には保守性が高くない。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">├── dev/</span><span class="w"> </span><span class="c1"># 開発環境</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── aws/</span><span class="w"> </span><span class="c1"># AWS</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── foo-team</span><span class="w"> </span><span class="c1"># fooチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/foo-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   ├── bar-team</span><span class="w"> </span><span class="c1"># barチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/bar-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │   ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── baz-team</span><span class="w"> </span><span class="c1"># bazチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"> </span><span class="c1"># aws/baz-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── datadog/</span><span class="w"> </span><span class="c1"># Datadog</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── foo-team</span><span class="w"> </span><span class="c1"># fooチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"> </span><span class="c1"># datadog/foo-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   ├── healthchecks/</span><span class="w"> </span><span class="c1"># Healthchecks</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │   └── bar-team</span><span class="w"> </span><span class="c1"># barチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ├── providers.tf</span><span class="w"> </span><span class="c1"># healthchecks/bar-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │       ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│   │</span><span class="w"> </span>
+<span class="l l-Scalar l-Scalar-Plain">│   └── pagerduty/</span><span class="w"> </span><span class="c1"># PagerDuty</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│       └── baz-team</span><span class="w"> </span><span class="c1"># bazチーム</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│           ├── providers.tf</span><span class="w"> </span><span class="c1"># pagerduty/baz-team/terraform.tfstate</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│           ...</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">│</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">├── prd/</span><span class="w"> </span><span class="c1"># 本番環境</span><span class="w"></span>
+<span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"> </span><span class="c1"># ステージング環境</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h2 id="02">02. ルートモジュールのディレクトリ構成<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
-<h3 id="_8">ルートモジュールとネストモジュールが同じリポジトリの場合<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<h4 id="_9">▼ 実行環境別<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h3 id="_15">ルートモジュールとネストモジュールが同じリポジトリの場合<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h4 id="_16">▼ 実行環境別<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>実行環境別に、<code>foo.tfvars</code>ファイルで値を定義する。ルートモジュールと一緒に、<code>providers.tf</code>ファイルや<code>tfnotify.yml</code>ファイルも管理してしまうと良い。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7793,8 +8175,8 @@
 <span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"> </span><span class="c1"># ステージング環境ルートモジュール</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="_10">ルートモジュールとネストモジュールが異なるリポジトリの場合<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<h4 id="_11">▼ 実行環境別<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<h3 id="_17">ルートモジュールとネストモジュールが異なるリポジトリの場合<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">▼ 実行環境別<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>実行環境別に、<code>foo.tfvars</code>ファイルで値を定義する。ルートモジュールと一緒に、<code>providers.tf</code>ファイルや<code>tfnotify.yml</code>ファイルも管理してしまうと良い。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7836,8 +8218,8 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="03">03. ネストモジュールのディレクトリ構成<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
-<h3 id="_12">ネストモジュールの構成<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<h4 id="_13">▼ 対象リソース別<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<h3 id="_19">ネストモジュールの構成<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<h4 id="_20">▼ 対象リソース別<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>特定のリソースの設定が対象のリソースごとに異なる場合、冗長性よりも保守性を重視して、リソースに応じたディレクトリに分割する。Lambdaでは、Lambda関数のソースコードをモジュール下で管理する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7871,7 +8253,7 @@
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">├── api_gateway/</span><span class="w"> </span><span class="c1"># API Gateway</span><span class="w"></span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">└── cloudfront/</span><span class="w">  </span><span class="c1"># CloudFront</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_14">▼ 実行環境別<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h4 id="_21">▼ 実行環境別<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>特定のリソースの設定が実行環境ごとに異なる場合、冗長性よりも保守性を重視して、実行環境に応じたディレクトリに分割する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7907,7 +8289,7 @@
 <span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">├── prd/</span><span class="w"></span>
 <span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_15">▼ リージョン別<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<h4 id="_22">▼ リージョン別<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>特定のリソースの設定がリージョンごとに異なる場合、冗長性よりも保守性を重視して、リージョンに応じたディレクトリに分割する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7919,7 +8301,7 @@
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">├── ap-northeast-1/</span><span class="w"> </span><span class="c1"># 東京リージョン</span><span class="w"></span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">└── us-east-1/</span><span class="w">      </span><span class="c1"># バージニアリージョン  </span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_16">▼ 共通セット別<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<h4 id="_23">▼ 共通セット別<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>WAFで使用するIPパターンセットと正規表現パターンセットには、CloudFrontタイプとRegionalタイプがある。Regionalタイプは、同じリージョンの異なるクラウドプロバイダーのリソース間で共通して使用できるため、共通セットとしてディレクトリ分割を行う。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7951,7 +8333,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="policies">policiesディレクトリ<a class="headerlink" href="#policies" title="Permanent link">&para;</a></h3>
-<h4 id="_17">▼ ファイルの切り分け<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h4 id="_24">▼ ファイルの切り分け<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>ポリシーのためにJSONを定義する場合、Terraformのコードにハードコーディングせずに、切り分けるようにする。また、『カスタマー管理ポリシー』『インラインポリシー』『信頼ポリシー』も区別し、ディレクトリを分割している。なお、<code>templatefile</code>メソッドでこれを読みこむ時、<code>bash</code>ファイルではなく、tplファイルとして定義しておく必要あるため、注意する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8022,9 +8404,9 @@
 <p><br></p>
 <h2 id="04">04. 命名規則と並び順<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="module">module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h3>
-<h4 id="_18">▼ 命名規則<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_25">▼ 命名規則<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>ディレクトリ名で命名する。スネークケースによる命名を採用する。</p>
-<h4 id="_19">▼ 並び順<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_26">▼ 並び順<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p>環境変数を並べる<code># Variables</code>コメントと、モジュール間の値を受け渡しを並べる<code># Output values</code>コメントに分ける。<code># Variables</code>コメントの部分では、<code>terraform.tfvars</code>ファイルと同じ並び順になるようにする。また、<code># Output values</code>コメントの部分では、<code>output</code>をモジュールに渡す時にクラウドプロバイダーのリソースのアルファベット順で並べる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8073,8 +8455,8 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="_20">変数<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
-<h4 id="_21">▼ 命名規則<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h3 id="_27">変数<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<h4 id="_28">▼ 命名規則<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
 <p>複数の値を持つlist型やmap型の変数であれば複数形で命名する。一方で、string型など値が1つしかなければ単数形とする。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、VPCを示す。</p>
@@ -8094,11 +8476,11 @@
 <span class="nb">vpc_subnet_private_app_cidrs</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="na">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*/25&quot;, c = &quot;*.*.*.*/25&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 <span class="nb">vpc_subnet_public_cidrs</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="na">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;*.*.*.*/27&quot;, c = &quot;*.*.*.*/27&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_22">▼ 並び順<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<h4 id="_29">▼ 並び順<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>Generalの変数を先頭に配置し、その他のクラウドプロバイダーのリソース別のものはアルファベット順に変数を並べる。</p>
 <p><br></p>
-<h3 id="_23">環境変数<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
-<h4 id="_24">▼ 命名規則<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<h3 id="_30">環境変数<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<h4 id="_31">▼ 命名規則<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
 <p>環境変数は、<code>.tfvars</code>ファイルでは定義できる。複数のリソースで使用する場合（将来的にそうなる可能性も含めて）は、Generalに配置し、グローバルな名前を付ける。クラウドプロバイダーのリソースのアルファベット順に環境変数を並べる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8168,11 +8550,11 @@
 <span class="w">  </span><span class="s2">&quot;AdCrawler&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="p">]</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_25">▼ 並び順<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<h4 id="_32">▼ 並び順<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
 <p>クラウドプロバイダーのリソースのアルファベット順に環境変数を並べる。</p>
 <p><br></p>
 <h3 id="resourcedata">resource、data<a class="headerlink" href="#resourcedata" title="Permanent link">&para;</a></h3>
-<h4 id="_26">▼ リソースに種類がある場合<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<h4 id="_33">▼ リソースに種類がある場合<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
 <p>リソース名で、リソースタイプを繰り返さないようにする。もし種類がある場合、リソース名でその種類を表現する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、VPCを示す。</p>
@@ -8224,7 +8606,7 @@
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_27">▼ リソースに種類が無い場合<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<h4 id="_34">▼ リソースに種類が無い場合<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p>リソースタイプに、1つのリソースしか種類が存在しない場合、<code>this</code>で命名する。<code>this</code>と命名されたresourceで、後から種類が増える場合は、既存の<code>this</code>は後からリファクタリングするとして、新規リソースには種類名を名付ける。ただし、リファクタリングすることが大変なため、非推奨である。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8233,7 +8615,7 @@
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_28">▼ 接頭辞、接尾辞<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<h4 id="_35">▼ 接頭辞、接尾辞<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p>Lambda以外では、作成されるクラウドプロバイダーのリソースの名前は以下の通りとする。</p>
 <ul>
 <li>ケバブケース</li>
@@ -8276,7 +8658,7 @@
 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_29">▼ 設定の並び順、行間<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<h4 id="_36">▼ 設定の並び順、行間<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
 <p>最初に<code>count</code>や<code>for_each</code>を設定し改行する。その後、各リソース別の設定を行間を空けずに記述する（この順番にルールはなし）。最後に共通の設定として、<code>tags</code>、<code>depends_on</code>、<code>lifecycle</code>、の順で配置する。ただし実際、これらの全ての設定が必要なリソースはない。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8323,7 +8705,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="output">output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
-<h4 id="_30">▼ リソースに種類がある場合<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<h4 id="_37">▼ リソースに種類がある場合<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
 <p>『<code>&lt;リソース名&gt;_&lt;リソースタイプ&gt;_&lt;attribute名&gt;</code>』で命名する。可読性の観点から、リソース一括ではなく、具体的なattributeを出力する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、CloudWatchを示す。リソース名は<code>ecs_container_nginx</code>、リソースタイプは<code>aws_cloudwatch_log_group</code>、attributeは<code>name</code>オプションである。</p>
@@ -8363,7 +8745,7 @@
 <span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_iam_role.rds_enhanced_monitoring.arn</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_31">▼ リソースに種類が無い場合<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<h4 id="_38">▼ リソースに種類が無い場合<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
 <p>リソース名が<code>this</code>である場合、<code>output</code>名ではこれを省略しても良い。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、ALBを示す。</p>
@@ -8387,7 +8769,7 @@
 <span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_lb.this.dns_name</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_32">▼ 冗長な場合<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<h4 id="_39">▼ 冗長な場合<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
 <p>ルール通りに命名すると、一部のクラウドプロバイダーのリソースで冗長な名前になってしまうことがある。この場合は、省略を許容する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>ルール通りに名付けると、『<code>laravel_ecr_repository_repository_url</code>』というoutput名になってしまう。repositoryが二回繰り返されることになるため、1つ省略している。</p>
@@ -8416,7 +8798,7 @@
 <p>一部のクラウドプロバイダーのリソースでは、<code>description</code>オプションで説明文を設定できる。基本的には英語で説明する。また、文章ではなく、『関係代名詞/形容詞/副詞/前置詞＋単語』を使用して、『〇〇 な △△』『〇〇 の △△』といった説明になるようにする。</p>
 <p><br></p>
 <h2 id="05">05. 開発環境<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
-<h3 id="_33">開発方法<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<h3 id="_40">開発方法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
 <p>前提として、バックエンドにS3を使用しているものとする。Makefileのコマンドを実行する前に、<code>provider.tf</code>ファイルのbackendオプションを、『s3』から『local』に変更する。</p>
 <p>参考：<a href="https://repl.info/archives/1435/">https://repl.info/archives/1435/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8530,10 +8912,10 @@ $ asdf install
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="06">06. セキュリティ<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
-<h3 id="_34">権限の一時的な付与<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<h3 id="_41">権限の一時的な付与<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
 <p>特に<code>terraform plan</code>コマンドと<code>terraform apply</code>コマンドの実行時に関して、コマンドの実行者には通常にはクラウドプロバイダーへのアクセス権限を与えず、コマンドの実行時にのみ一時的な権限を付与する。これを行わないと、クラウドプロバイダーの認証情報が漏洩した場合に、認証情報の所有者が常時コマンドを実行できるようになってしまう。一時権限の付与方法としては、AWS STSがある。</p>
 <p><br></p>
-<h3 id="_35">機密情報の管理<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<h3 id="_42">機密情報の管理<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
 <p>機密情報を<code>ignore_changes</code>に指定し、<code>tfstate</code>ファイルへの書き込みを防ぐ。その上で、Secrets Managerで値を管理し、これをデータリソースで参照する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8619,7 +9001,7 @@ $ asdf install
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

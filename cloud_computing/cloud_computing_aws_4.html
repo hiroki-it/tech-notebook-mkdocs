@@ -6832,8 +6832,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -8660,7 +8660,7 @@ $ curl <span class="se">\</span>
 <p><br></p>
 <h3 id="vpcvpc">VPC外/VPC内<a class="headerlink" href="#vpcvpc" title="Permanent link">&para;</a></h3>
 <h4 id="vpc">▼ VPC外への配置<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h4>
-<p>LambdaはデフォルトではVPC外に配置される。この場合、LambdaにENIがアタッチされ、ENIに割り当てられたIPアドレスがLambdaに適用される。Lambdaの実行時にENIは再作成されるため、実行ごとにIPアドレスは変化するが、一定時間内の再実行であればENIは再利用されるため、前回の実行時と同じIPアドレスになることもある。</p>
+<p>LambdaはデフォルトではVPC外に配置される。この場合、LambdaにENIが紐付けられ、ENIに割り当てられたIPアドレスがLambdaに適用される。Lambdaの実行時にENIは再作成されるため、実行ごとにIPアドレスは変化するが、一定時間内の再実行であればENIは再利用されるため、前回の実行時と同じIPアドレスになることもある。</p>
 <h4 id="vpc_1">▼ VPC内への配置<a class="headerlink" href="#vpc_1" title="Permanent link">&para;</a></h4>
 <p>LambdaをVPC内に配置するように設定する。VPC内に配置したLambdaにはパブリックIPアドレスが割り当てられないため、アウトバウンド通信を行うためには、NAT Gatewayを設置する必要がある。</p>
 <p><br></p>
@@ -10057,7 +10057,7 @@ NOW()
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

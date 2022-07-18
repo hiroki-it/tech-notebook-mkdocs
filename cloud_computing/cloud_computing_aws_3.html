@@ -4097,29 +4097,29 @@
         
           <li class="md-nav__item">
   <a href="#iam_6" class="md-nav__link">
-    IAMポリシーをアタッチできる対象
+    IAMポリシーを紐付けできる対象
   </a>
   
-    <nav class="md-nav" aria-label="IAMポリシーをアタッチできる対象">
+    <nav class="md-nav" aria-label="IAMポリシーを紐付けできる対象">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#iam_7" class="md-nav__link">
-    ▼ IAMユーザーに対するアタッチ
+    ▼ IAMユーザーに対する紐付け
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#iam_8" class="md-nav__link">
-    ▼ IAMグループに対するアタッチ
+    ▼ IAMグループに対する紐付け
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#iam_9" class="md-nav__link">
-    ▼ IAMロールに対するアタッチ
+    ▼ IAMロールに対する紐付け
   </a>
   
 </li>
@@ -6290,8 +6290,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7174,29 +7174,29 @@
         
           <li class="md-nav__item">
   <a href="#iam_6" class="md-nav__link">
-    IAMポリシーをアタッチできる対象
+    IAMポリシーを紐付けできる対象
   </a>
   
-    <nav class="md-nav" aria-label="IAMポリシーをアタッチできる対象">
+    <nav class="md-nav" aria-label="IAMポリシーを紐付けできる対象">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#iam_7" class="md-nav__link">
-    ▼ IAMユーザーに対するアタッチ
+    ▼ IAMユーザーに対する紐付け
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#iam_8" class="md-nav__link">
-    ▼ IAMグループに対するアタッチ
+    ▼ IAMグループに対する紐付け
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#iam_9" class="md-nav__link">
-    ▼ IAMロールに対するアタッチ
+    ▼ IAMロールに対する紐付け
   </a>
   
 </li>
@@ -7519,7 +7519,7 @@
 <tbody>
 <tr>
 <td>アイデンティティベースのポリシー</td>
-<td>IAMユーザー、IAMグループ、IAMロール、にアタッチするためのポリシーのこと。</td>
+<td>IAMユーザー、IAMグループ、IAMロール、に紐付けるためのポリシーのこと。</td>
 </tr>
 <tr>
 <td>リソースベースのインラインポリシー</td>
@@ -7532,7 +7532,7 @@
 </tbody>
 </table>
 <p><strong>＊例＊</strong></p>
-<p>以下に、EC2インスタンスの読み出しのみ権限（<code>AmazonEC2ReadOnlyAccess</code>）をアタッチできるポリシーを示す。このIAMポリシーには、他のAWSリソースに対する権限も含まれている。</p>
+<p>以下に、EC2インスタンスの読み出しのみ権限（<code>AmazonEC2ReadOnlyAccess</code>）を紐付けできるポリシーを示す。このIAMポリシーには、他のAWSリソースに対する権限も含まれている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7608,7 +7608,7 @@
 </tbody>
 </table>
 <p><strong>＊例＊</strong></p>
-<p>以下のインラインポリシーがアタッチされたロールを持つAWSリソースは、任意のSystems Managerパラメーターストアを取得できるようになる。</p>
+<p>以下のインラインポリシーが紐付けられたロールを持つAWSリソースは、任意のSystems Managerパラメーターストアを取得できるようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7712,22 +7712,22 @@
 <p><br></p>
 <h3 id="iam_5">IAMロール<a class="headerlink" href="#iam_5" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ サービスリンクロール<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>AWSリソースを作成した時に自動的に作成されるロール。他にはアタッチできない専用のポリシーがアタッチされている。『<code>AWSServiceRoleFor*****</code>』という名前で自動的に作成される。特に設定せずとも、自動的にリソースにアタッチされる。関連するリソースを削除するまで、ロール自体できない。サービスリンクロールの一覧については、以下のリンクを参考にせよ。</p>
+<p>AWSリソースを作成した時に自動的に作成されるロール。他には紐付けできない専用のポリシーが紐付けられている。『<code>AWSServiceRoleFor*****</code>』という名前で自動的に作成される。特に設定せずとも、自動的にリソースに紐付けられる。関連するリソースを削除するまで、ロール自体できない。サービスリンクロールの一覧については、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</a></p>
 <h4 id="_10">▼ クロスアカウントのアクセスロール<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <h4 id="_11">▼ プロバイダのアクセスロール<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p><br></p>
 <h3 id="_12">アイデンティティベースのポリシー<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="_13">▼ アイデンティティベースのポリシーとは<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<p>IAMユーザー、IAMグループ、IAMロール、にアタッチするためのポリシーのこと。</p>
+<p>IAMユーザー、IAMグループ、IAMロール、に紐付けるためのポリシーのこと。</p>
 <h4 id="aws">▼ AWS管理ポリシー<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h4>
-<p>AWSが提供しているポリシーのこと。アタッチ式のポリシーのため、すでにアタッチされていても、他のものにもアタッチできる。</p>
+<p>AWSが提供しているポリシーのこと。紐付け式のポリシーのため、すでに紐付けられていても、他のものにも紐付けできる。</p>
 <h4 id="_14">▼ カスタマー管理ポリシー<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>ユーザーが独自に作成したポリシーのこと。すでにアタッチされていても、他のものにもアタッチできる。</p>
+<p>ユーザーが独自に作成したポリシーのこと。すでに紐付けられていても、他のものにも紐付けできる。</p>
 <h4 id="_15">▼ インラインポリシー<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>単一のアイデンティティにアタッチするためのポリシーのこと。組み込み式のポリシーのため、アイデンティティ間で共有してアタッチできない。</p>
+<p>単一のアイデンティティに紐付けるためのポリシーのこと。組み込み式のポリシーのため、アイデンティティ間で共有して紐付けできない。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>IAMロールにインラインポリシーをアタッチする。このロールを持つユーザーは、ユーザーアカウントのすべての ACMのSSL証明書を一覧表示できるようになる。</p>
+<p>IAMロールにインラインポリシーを紐付ける。このロールを持つユーザーは、ユーザーアカウントのすべての ACMのSSL証明書を一覧表示できるようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7749,7 +7749,7 @@
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
-<p>IAMロールにインラインポリシーをアタッチする。このロールを持つユーザーは、全てのAWSリソースに、任意のアクションを実行できる。</p>
+<p>IAMロールにインラインポリシーを紐付ける。このロールを持つユーザーは、全てのAWSリソースに、任意のアクションを実行できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7773,11 +7773,11 @@
 <p><br></p>
 <h3 id="_16">リソースベースのインラインポリシー<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ リソースベースのインラインポリシーとは<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>単一のAWSリソースにインポリシーのこと。すでにアタッチされていると、他のものにはアタッチできない。</p>
+<p>単一のAWSリソースにインポリシーのこと。すでに紐付けられていると、他のものには紐付けできない。</p>
 <h4 id="_18">▼ バケットポリシー<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
-<p>S3にアタッチされる、自身へのアクセスを制御するためのインラインポリシーのこと。</p>
+<p>S3に紐付けられる、自身へのアクセスを制御するためのインラインポリシーのこと。</p>
 <h4 id="_19">▼ ライフサイクルポリシー<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>ECRにアタッチされる、コンテナイメージの有効期間を定義するポリシー。コンソール画面から入力できるため、基本的にポリシーの実装は不要であるが、TerraformなどのIaCツールでは必要になる。</p>
+<p>ECRに紐付けられる、コンテナイメージの有効期間を定義するポリシー。コンソール画面から入力できるため、基本的にポリシーの実装は不要であるが、TerraformなどのIaCツールでは必要になる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7836,9 +7836,9 @@
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_20">▼ 信頼ポリシー<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
-<p>ロールにアタッチされる、Assume Roleを行うためのインラインポリシーのこと。</p>
+<p>ロールに紐付けられる、Assume Roleを行うためのインラインポリシーのこと。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>例えば、以下の信頼ポリシーを任意のロールにアタッチしたとする。その場合、<code>Principal</code>の<code>ecs-tasks</code>が信頼されたエンティティと見なされ、ECSタスクにロールをアタッチできるようになる。</p>
+<p>例えば、以下の信頼ポリシーを任意のロールに紐付けしたとする。その場合、<code>Principal</code>の<code>ecs-tasks</code>が信頼されたエンティティと見なされ、ECSタスクにロールを紐付けできるようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7865,7 +7865,7 @@
 </code></pre></div></td></tr></table></div>
 <p>信頼ポリシーでは、IAMユーザーを信頼されたエンティティとして設定もできる。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>例えば、以下の信頼ポリシーを任意のロールにアタッチしたとする。その場合、<code>Principal</code>のIAMユーザーが信頼されたエンティティと見なされ、ロールをアタッチできるようになる。</p>
+<p>例えば、以下の信頼ポリシーを任意のロールに紐付けしたとする。その場合、<code>Principal</code>のIAMユーザーが信頼されたエンティティと見なされ、ロールを紐付けできるようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7901,12 +7901,12 @@
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="iam_6">IAMポリシーをアタッチできる対象<a class="headerlink" href="#iam_6" title="Permanent link">&para;</a></h3>
-<h4 id="iam_7">▼ IAMユーザーに対するアタッチ<a class="headerlink" href="#iam_7" title="Permanent link">&para;</a></h4>
+<h3 id="iam_6">IAMポリシーを紐付けできる対象<a class="headerlink" href="#iam_6" title="Permanent link">&para;</a></h3>
+<h4 id="iam_7">▼ IAMユーザーに対する紐付け<a class="headerlink" href="#iam_7" title="Permanent link">&para;</a></h4>
 <p><img alt="IAMユーザにポリシーを付与" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/IAMユーザーにポリシーを付与.jpeg" /></p>
-<h4 id="iam_8">▼ IAMグループに対するアタッチ<a class="headerlink" href="#iam_8" title="Permanent link">&para;</a></h4>
+<h4 id="iam_8">▼ IAMグループに対する紐付け<a class="headerlink" href="#iam_8" title="Permanent link">&para;</a></h4>
 <p><img alt="IAMグループにポリシーを付与" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/IAMグループにポリシーを付与.jpeg" /></p>
-<h4 id="iam_9">▼ IAMロールに対するアタッチ<a class="headerlink" href="#iam_9" title="Permanent link">&para;</a></h4>
+<h4 id="iam_9">▼ IAMロールに対する紐付け<a class="headerlink" href="#iam_9" title="Permanent link">&para;</a></h4>
 <p><img alt="IAMロールにポリシーを付与" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/IAMロールにポリシーを付与.jpeg" /></p>
 <p><br></p>
 <h3 id="iam_10">ルートユーザー、IAMユーザー<a class="headerlink" href="#iam_10" title="Permanent link">&para;</a></h3>
@@ -7917,10 +7917,10 @@
 <p><br></p>
 <h3 id="iam_12">IAMグループ<a class="headerlink" href="#iam_12" title="Permanent link">&para;</a></h3>
 <h4 id="iam_13">▼ IAMグループとは<a class="headerlink" href="#iam_13" title="Permanent link">&para;</a></h4>
-<p>IAMユーザーをグループ化したもの。IAMグループごとにIAMロールをアタッチすれば、IAMユーザーのIAMロールを管理しやすくなる。</p>
+<p>IAMユーザーをグループ化したもの。IAMグループごとにIAMロールを紐付けすれば、IAMユーザーのIAMロールを管理しやすくなる。</p>
 <p><img alt="グループ" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/グループ.png" /></p>
 <h4 id="iamiam">▼ IAMグループへのIAMロールの紐付け<a class="headerlink" href="#iamiam" title="Permanent link">&para;</a></h4>
-<p>IAMグループに対して、IAMロールを紐付ける。そのIAMグループに対して、IAMロールをアタッチしたいIAMユーザーを追加していく。</p>
+<p>IAMグループに対して、IAMロールを紐付ける。そのIAMグループに対して、IAMロールを紐付けしたいIAMユーザーを追加していく。</p>
 <p><img alt="グループに所属するユーザにロールを付与" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/グループに所属するユーザーにロールを付与.png" /></p>
 <h4 id="_22">▼ グループ一覧<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <table>
@@ -8029,7 +8029,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

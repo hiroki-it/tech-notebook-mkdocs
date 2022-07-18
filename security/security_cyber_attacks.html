@@ -3766,6 +3766,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#waf_1" class="md-nav__link">
+    ▼ WAFの種類
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6568,8 +6575,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7281,6 +7288,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#waf_1" class="md-nav__link">
+    ▼ WAFの種類
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7923,9 +7937,9 @@
 <h2 id="01">01. サイバー攻撃の防御方法<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">ファイアウォール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ ファイアウォールとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p>データリンク層からトランスポート層までに対するサイバー攻撃（そもそものネットワークへの侵入、ポートスキャン、など）を遮断する。</p>
 <p>参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
-<p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <h4 id="_5">▼ パケットフィルタリング型ファイアウォール<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="パケットフィルタリング" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/パケットフィルタリング.gif" /></p>
 <p>パケットのヘッダ情報の送信元IPアドレスやポート番号などに基づいて、パケットを許可するべきかどうかを決定する。パケットのデータは検査しない。速度を重視する場合はこちら。ファイアウォールとWebサーバーの間には、NATルーターやNAPTルーターが設置されている。</p>
@@ -8022,9 +8036,9 @@ public
 <p><br></p>
 <h3 id="ipsintrusion-prevention-system">IPS：Intrusion Prevention Systemとは<a class="headerlink" href="#ipsintrusion-prevention-system" title="Permanent link">&para;</a></h3>
 <h4 id="ips">▼ IPSとは<a class="headerlink" href="#ips" title="Permanent link">&para;</a></h4>
+<p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p>ネットワーク層からプレゼンテーション層までに対するサイバー攻撃（Dos攻撃、Synフラッド攻撃、パケットフラグメンテーション攻撃、など）を遮断するセキュリティシステムのこと。</p>
 <p>参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
-<p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p><br></p>
 <h3 id="wafweb-application-firewall">WAF：Web Application Firewall<a class="headerlink" href="#wafweb-application-firewall" title="Permanent link">&para;</a></h3>
 <h4 id="waf">▼ WAFとは<a class="headerlink" href="#waf" title="Permanent link">&para;</a></h4>
@@ -8035,6 +8049,34 @@ public
 <li><a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></li>
 <li><a href="https://www.geeksforgeeks.org/difference-between-waf-and-firewall/">https://www.geeksforgeeks.org/difference-between-waf-and-firewall/</a></li>
 </ul>
+<h4 id="waf_1">▼ WAFの種類<a class="headerlink" href="#waf_1" title="Permanent link">&para;</a></h4>
+<p>参考：hhttps://liskul.com/waf-15products-35757</p>
+<table>
+<thead>
+<tr>
+<th>WAFの種類</th>
+<th>説明</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ソフトウェア型</td>
+<td>WAFの機能を持つソフトウェアを自社サーバーにセットアップし、これを設置する。</td>
+<td>SuiteGuard、SmartCloud、など</td>
+</tr>
+<tr>
+<td>アプライアンス型</td>
+<td>WAFのソフトウェアがすでにセットアップされたハードウェアを購入し、これを設置する。</td>
+<td>FortiWeb、Imperva SecureSphere、SiteGuard、など</td>
+</tr>
+<tr>
+<td>クラウド型</td>
+<td>クラウドプロバイダーが提供するWAFを設置する。</td>
+<td>AWS WAF、Google Cloud Armor、Cloudbric、Scutum、など</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h2 id="01-02">01-02. サイバー攻撃の検出<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="detection-system">Detection Systemとは<a class="headerlink" href="#detection-system" title="Permanent link">&para;</a></h3>
@@ -8416,7 +8458,7 @@ $2y$10$1QVmWNzk.TsaZQLQ/zeI9OAZL02AWP.VdFPPyAc9hSc2Cp4yOXKtG
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

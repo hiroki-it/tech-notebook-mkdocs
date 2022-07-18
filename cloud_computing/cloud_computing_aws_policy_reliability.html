@@ -3978,14 +3978,14 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ▼ アクセスタイプ別の分割
+    ▼ アクセスタイプ別の命名
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ▼ コンポーネントタイプ別の分割
+    ▼ コンポーネントタイプ別の命名
   </a>
   
 </li>
@@ -6069,8 +6069,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -6750,14 +6750,14 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ▼ アクセスタイプ別の分割
+    ▼ アクセスタイプ別の命名
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ▼ コンポーネントタイプ別の分割
+    ▼ コンポーネントタイプ別の命名
   </a>
   
 </li>
@@ -6996,7 +6996,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="_3">▼ アクセスタイプ別の分割<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_3">▼ アクセスタイプ別の命名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p><img alt="subnet_accsess-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/subnet_accsess-type.png" /></p>
 <p>パブリックネットワークとの通信の遮断具合から名前をつける。</p>
 <p>参考：<a href="https://mihono-bourbon.com/aws-network-1/">https://mihono-bourbon.com/aws-network-1/</a></p>
@@ -7013,24 +7013,24 @@
 <tr>
 <td>publicサブネット</td>
 <td>パブリック</td>
-<td>インターネットゲートウェイを介して、パブリックネットワークからのインバウンド通信を待ち受ける。</td>
+<td>非武装地帯として機能する。インターネットゲートウェイを介して、パブリックネットワークからのインバウンド通信を待ち受ける。</td>
 <td>ALB、NAT Gateway</td>
 </tr>
 <tr>
 <td>protectedサブネット</td>
 <td>プライベート</td>
-<td>パブリックネットワークからアクセスできず、同じVPC内からのインバウンド通信のみを待ち受ける。また、publicサブネットのNAT Gatewayを介してアウトバウンド通信を送信する。</td>
+<td>内部ネットワークとして機能する。パブリックネットワークからアクセスできず、同じVPC内からのインバウンド通信のみを待ち受ける。また、publicサブネットのNAT Gatewayを介してアウトバウンド通信を送信する。</td>
 <td>アプリケーション、Nginx</td>
 </tr>
 <tr>
 <td>privateサブネット</td>
 <td>プライベート</td>
-<td>パブリックネットワークからアクセスできず、前述のprotectedサブネット内からのインバウンド通信のみを待ち受ける。また、アウトバウンド通信を送信しない。</td>
+<td>内部ネットワークとして機能する。パブリックネットワークからアクセスできず、前述のprotectedサブネット内からのインバウンド通信のみを待ち受ける。また、アウトバウンド通信を送信しない。</td>
 <td>RDS、Redis</td>
 </tr>
 </tbody>
 </table>
-<h4 id="_4">▼ コンポーネントタイプ別の分割<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="_4">▼ コンポーネントタイプ別の命名<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><img alt="subnet_component-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/subnet_component-type.png" /></p>
 <p>参考：<a href="https://dev.classmethod.jp/articles/create_nat_gateway/">https://dev.classmethod.jp/articles/create_nat_gateway/</a></p>
 <p>配置するコンポーネントの種類に関する名前をつける。</p>
@@ -7047,19 +7047,19 @@
 <tr>
 <td>frontendサブネット</td>
 <td>パブリック</td>
-<td>ロードバランサー、ルーター、踏み台サーバー、を配置する。</td>
+<td>非武装地帯として機能する。ロードバランサー、ルーター、踏み台サーバー、を配置する。</td>
 <td>ALB、NAT Gateway</td>
 </tr>
 <tr>
 <td>applicationサブネット</td>
 <td>プライベート</td>
-<td>アプリケーション、リバースプロキシ、を配置する。</td>
+<td>内部ネットワークとして機能する。アプリケーション、リバースプロキシ、を配置する。</td>
 <td>アプリケーション、Nginx</td>
 </tr>
 <tr>
 <td>datastoreサブネット</td>
 <td>プライベート</td>
-<td>データベースを配置する。</td>
+<td>内部ネットワークとして機能する。データベースを配置する。</td>
 <td>RDS、Redis</td>
 </tr>
 </tbody>
@@ -7328,7 +7328,7 @@
 </table>
 <h4 id="elasticache-redis">▼ ElastiCache Redis<a class="headerlink" href="#elasticache-redis" title="Permanent link">&para;</a></h4>
 <p>Redisでアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html">https://docs.aws.amazon.com/ja_jp/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html</a></p>
+<p>参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7364,9 +7364,9 @@
 <tr>
 <td>SwapUsage</td>
 <td>バイト数</td>
-<td>仮想メモリのスワップ領域の使用量をデータポイントとする。</td>
+<td>ストレージ上のスワップ領域の使用量をデータポイントとする。</td>
 <td>・統計 : 期間内最大サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 50</code>GB</td>
-<td>使用可能な最大メモリを超えると、Redisはスワップ領域を使用する。<br>参考：<a href="https://zenn.dev/dehio3/scraps/710a9714ce9496">https://zenn.dev/dehio3/scraps/710a9714ce9496</a></td>
+<td>使用可能な最大メモリを超えると、Redisはストレージ上のスワップ領域を使用する。<br>参考：<a href="https://zenn.dev/dehio3/scraps/710a9714ce9496">https://zenn.dev/dehio3/scraps/710a9714ce9496</a></td>
 </tr>
 </tbody>
 </table>
@@ -7506,7 +7506,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

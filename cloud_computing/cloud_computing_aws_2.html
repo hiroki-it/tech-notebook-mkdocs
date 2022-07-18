@@ -7521,8 +7521,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -10586,7 +10586,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p><br></p>
 <h3 id="_31">ロール<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
 <h4 id="_32">▼ サービスロール<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
-<p>ECSサービスがECSタスクを操作するために必要なロールである。サービスリンクロールに含まれ、ECSの作成時に自動的にアタッチされる。</p>
+<p>ECSサービスがECSタスクを操作するために必要なロールである。サービスリンクロールに含まれ、ECSの作成時に自動的に紐付けられる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
@@ -10602,14 +10602,14 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </ul>
 <h4 id="_34">▼ タスクロール<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-role.png" /></p>
-<p>ECSタスク内のコンテナのアプリケーションが、他のAWSリソースにアクセスするために必要なロールである。アプリケーションにS3やSystems Managerへのアクセス権限を与えたい場合は、タスク実行ロールではなくタスクロールに権限をアタッチする。</p>
+<p>ECSタスク内のコンテナのアプリケーションが、他のAWSリソースにアクセスするために必要なロールである。アプリケーションにS3やSystems Managerへのアクセス権限を与えたい場合は、タスク実行ロールではなくタスクロールに権限を紐付ける。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
 </ul>
 <p><strong>＊実装例＊</strong></p>
-<p>アプリケーションからCloudWatchログにログを送信するために、ECSタスクロールにカスタマー管理ポリシーをアタッチする。</p>
+<p>アプリケーションからCloudWatchログにログを送信するために、ECSタスクロールにカスタマー管理ポリシーを紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10641,7 +10641,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
-<p>Parameter Storeから変数を取得するために、ECSタスクロールにインラインポリシーをアタッチする。</p>
+<p>Parameter Storeから変数を取得するために、ECSタスクロールにインラインポリシーを紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10668,7 +10668,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </code></pre></div></td></tr></table></div>
 <h4 id="_35">▼ タスク実行ロール<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-execution-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-execution-role.png" /></p>
-<p>ECSタスク内のECSコンテナエージェントが、他のAWSリソースにアクセスするために必要なロールのこと。AWS管理ポリシーである『<code>AmazonECSTaskExecutionRolePolicy</code>』がアタッチされたロールを、タスクにアタッチする必要がある。このポリシーには、ECRへのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。ECSタスク内のコンテナがリソースにアクセスするために必要なタスクロールとは区別すること。</p>
+<p>ECSタスク内のECSコンテナエージェントが、他のAWSリソースにアクセスするために必要なロールのこと。AWS管理ポリシーである『<code>AmazonECSTaskExecutionRolePolicy</code>』が紐付けられたロールを、タスクに紐付ける必要がある。このポリシーには、ECRへのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。ECSタスク内のコンテナがリソースにアクセスするために必要なタスクロールとは区別すること。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
@@ -10709,7 +10709,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
-<p>datadogエージェントがECSクラスターやコンテナにアクセスできるように、ECSタスク実行ロールにカスタマー管理ポリシーをアタッチする。</p>
+<p>datadogエージェントがECSクラスターやコンテナにアクセスできるように、ECSタスク実行ロールにカスタマー管理ポリシーを紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11264,7 +11264,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <span class="s2">echo exitStatus </span><span class="si">${</span><span class="nv">EXIT_STATUS</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">exit </span><span class="si">${</span><span class="nv">EXIT_STATUS</span><span class="si">}</span><span class="s2"></span>
 </code></pre></div></td></tr></table></div>
-<p>なお、実行IAMユーザーを作成し、ECSタスクを起動できる最低限の権限をアタッチする。</p>
+<p>なお、実行IAMユーザーを作成し、ECSタスクを起動できる最低限の権限を紐付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12674,7 +12674,7 @@ redis *****:6379&gt; monitor
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>

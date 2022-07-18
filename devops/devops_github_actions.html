@@ -5692,8 +5692,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uses" class="md-nav__link">
-    ▼ uses
+  <a href="#if" class="md-nav__link">
+    ▼ if
   </a>
   
 </li>
@@ -5701,6 +5701,13 @@
           <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     ▼ run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    ▼ uses
   </a>
   
 </li>
@@ -6392,8 +6399,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_incident_management.html" class="md-nav__link">
-        インシデント管理
+      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+        オンコールとインシデント管理
       </a>
     </li>
   
@@ -7159,8 +7166,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#uses" class="md-nav__link">
-    ▼ uses
+  <a href="#if" class="md-nav__link">
+    ▼ if
   </a>
   
 </li>
@@ -7168,6 +7175,13 @@
           <li class="md-nav__item">
   <a href="#run" class="md-nav__link">
     ▼ run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    ▼ uses
   </a>
   
 </li>
@@ -7624,7 +7638,7 @@
 <p><br></p>
 <h3 id="steps">steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
 <h4 id="continue-on-error">▼ continue-on-error<a class="headerlink" href="#continue-on-error" title="Permanent link">&para;</a></h4>
-<p>ステップが失敗しても成功扱いにするかどうかを設定する。</p>
+<p>同じ<code>steps</code>キー内の<code>run</code>キーが失敗しても成功扱いにするかどうかを設定する。</p>
 <p>参考：<a href="https://nju33.com/notes/github-actions/articles/%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%81%AE%E5%88%B6%E5%BE%A1">https://nju33.com/notes/github-actions/articles/%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%81%AB%E3%82%88%E3%82%8B%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%81%AE%E5%88%B6%E5%BE%A1</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7650,20 +7664,32 @@
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">          </span><span class="no">echo success</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="uses">▼ uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h4>
-<p>使用するActionsを設定する。</p>
-<p>参考：<a href="https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=">https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<h4 id="if">▼ if<a class="headerlink" href="#if" title="Permanent link">&para;</a></h4>
+<p>条件を満たした場合に、後続の<code>run</code>キーを実行する。</p>
+<p>参考：<a href="https://docs.github.com/ja/actions/learn-github-actions/expressions#status-check-functions">https://docs.github.com/ja/actions/learn-github-actions/expressions#status-check-functions</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">foo</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout</span><span class="w"></span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no"># 何らかの処理</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">failure()</span><span class="w"> </span><span class="c1"># 失敗した場合、このステップに入る。GitHub Actionsの失敗表記は消えない。</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no">echo failure</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">success()</span><span class="w"> </span><span class="c1"># 成功扱いのため、このステップに入る。</span><span class="w"></span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
+<span class="w">          </span><span class="no">echo success</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="run">▼ run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h4>
 <p>任意のコマンドを実行する。</p>
@@ -7684,6 +7710,21 @@
 <span class="w">          </span><span class="no">git config --local user.email &quot;example@gmail.com&quot;</span><span class="w"></span>
 <span class="w">          </span><span class="no">git config --local user.name &quot;github-actions&quot;</span><span class="w"></span>
 <span class="w">          </span><span class="no">git config pull.rebase false</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h4 id="uses">▼ uses<a class="headerlink" href="#uses" title="Permanent link">&para;</a></h4>
+<p>使用するActionsを設定する。</p>
+<p>参考：<a href="https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=">https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">foo</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span><span class="w"></span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout</span><span class="w"></span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="with">▼ with<a class="headerlink" href="#with" title="Permanent link">&para;</a></h4>
 <p>Actionsに設定できるパラメーターをわたす。</p>
@@ -8414,7 +8455,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
       
     
   </small>
