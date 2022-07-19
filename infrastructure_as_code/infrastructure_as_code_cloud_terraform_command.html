@@ -5474,15 +5474,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-var-file" class="md-nav__link">
-    ▼ -var-file
+  <a href="#import_1" class="md-nav__link">
+    ▼ importの手順
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#import_1" class="md-nav__link">
+  <a href="#importresource" class="md-nav__link">
+    ▼ importできないresourceタイプ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_2" class="md-nav__link">
     ▼ importを行わなかった場合のエラー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-var-file" class="md-nav__link">
+    ▼ -var-file
   </a>
   
 </li>
@@ -5630,6 +5644,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    ▼ rm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#taint" class="md-nav__link">
     taint
   </a>
@@ -5639,7 +5673,7 @@
         
           <li class="md-nav__item">
   <a href="#-var-file_4" class="md-nav__link">
-    ▼ -var-file &lt;リソース&gt;
+    ▼ -var-file 
   </a>
   
 </li>
@@ -6997,15 +7031,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-var-file" class="md-nav__link">
-    ▼ -var-file
+  <a href="#import_1" class="md-nav__link">
+    ▼ importの手順
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#import_1" class="md-nav__link">
+  <a href="#importresource" class="md-nav__link">
+    ▼ importできないresourceタイプ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_2" class="md-nav__link">
     ▼ importを行わなかった場合のエラー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-var-file" class="md-nav__link">
+    ▼ -var-file
   </a>
   
 </li>
@@ -7153,6 +7201,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    state
+  </a>
+  
+    <nav class="md-nav" aria-label="state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    ▼ rm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#taint" class="md-nav__link">
     taint
   </a>
@@ -7162,7 +7230,7 @@
         
           <li class="md-nav__item">
   <a href="#-var-file_4" class="md-nav__link">
-    ▼ -var-file &lt;リソース&gt;
+    ▼ -var-file 
   </a>
   
 </li>
@@ -7341,33 +7409,90 @@ main.tf
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="graph">graph<a class="headerlink" href="#graph" title="Permanent link">&para;</a></h3>
-<p>rosource間の依存関係をグラフ化する。これにより、どのresourceが他のどのresourceを使用しているかがわかる。Graphvizのダウンロードが必要である。</p>
+<p>rosource間の依存関係をグラフ化する。これにより、どの<code>resource</code>ブロックが他のどの<code>resource</code>ブロックを使用しているかがわかる。Graphvizのダウンロードが必要である。</p>
 <p>参考：<a href="https://graphviz.org/download/">https://graphviz.org/download/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform graph <span class="p">|</span> dot -Tsvg &gt; graph.svg
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="import">import<a class="headerlink" href="#import" title="Permanent link">&para;</a></h3>
-<h4 id="-var-file">▼ -var-file<a class="headerlink" href="#-var-file" title="Permanent link">&para;</a></h4>
-<p>Terraformによる作成ではない方法で、すでにクラウド上にリソースが作成されている場合、これをterraformの管理下におく必要がある。リソースタイプとリソース名を指定し、<code>.tfstate</code>ファイルに実インフラの状態を書き込む。現状、全てのリソースを一括して<code>terraform import</code>コマンドする方法は無い。リソースIDは、リソースによって異なるため、リファレンスの『Import』または『Attributes Referenceの<code>id</code>』を確認すること（例：ACMにとってのIDはARNだが、S3バケットにとってのIDはバケット名である）。</p>
+<h4 id="import_1">▼ importの手順<a class="headerlink" href="#import_1" title="Permanent link">&para;</a></h4>
+<p>（１）Terraformによる作成ではない方法ですでにクラウド上にインフラリソースが作成されている場合、これの設定値を<code>resource</code>ブロックの設定値として<code>.tfstate</code>ファイルに書き込み、Terraformの管理下におく必要がある（<code>.tfstate</code>ファイル上では、<code>resource</code>ブロックは<code>managed</code>モードという表記になる）。2022/07/19時点で、複数のインフラリソースを網羅的に確認する方法は公式になく、インフラリソースを一つずつ指定して、<code>.tfstate</code>ファイルに書き込んでいく必要がある。</p>
+<p>参考：<a href="https://dtan4.hatenablog.com/entry/2016/08/18/010652">https://dtan4.hatenablog.com/entry/2016/08/18/010652</a></p>
+<p>（２）<code>resource</code>タイプと<code>resource</code>ブロック名を指定し、<code>.tfstate</code>ファイルに実インフラの状態を書き込む。パラメーターの『<code>&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;</code>』は、<code>terraform plan</code>コマンドの結果が参考になる。また『ARN、ID、名前、など』は、<code>resource</code>タイプによって異なるため、リファレンスの『Import』の項目を確認すること。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://github.com/hashicorp/terraform/issues/18810#issuecomment-422879471">https://github.com/hashicorp/terraform/issues/18810#issuecomment-422879471</a></li>
+<li><a href="https://dev.classmethod.jp/articles/terraform_import_for_each/">https://dev.classmethod.jp/articles/terraform_import_for_each/</a></li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform import <span class="se">\</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 関数を使用せずに定義されている場合</span>
+$ terraform import <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    &lt;リソースタイプ&gt;.&lt;リソース名&gt; &lt;クラウドプロバイダー上リソースID&gt;
+    &lt;resourceタイプ&gt;.&lt;resourceブロック名&gt; &lt;ARN、ID、名前、など&gt;
 </code></pre></div></td></tr></table></div>
-<p>モジュールを使用している場合、指定の方法が異なる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform import <span class="se">\</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># moduleを使用して定義されている場合</span>
+$ terraform import <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    module.&lt;モジュール名&gt;.&lt;リソースタイプ&gt;.&lt;リソース名&gt; &lt;クラウドプロバイダー上リソースID&gt;
+    module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt; &lt;ARN、ID、名前、など&gt;
 </code></pre></div></td></tr></table></div>
-<p>例えば、AWS上にすでにECRが存在しているとして、これをterraformの管理下におく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform import <span class="se">\</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># for_each関数で定義されている場合</span>
+$ terraform import <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    module.ecr.aws_ecr_repository.www *****
+    <span class="s1">&#39;&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[&quot;&lt;キー名1&gt;&quot;]&#39;</span> &lt;ARN、ID、名前、など&gt;
+
+<span class="c1"># その他のキー名もimportが必要になる</span>
+$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    <span class="s1">&#39;&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[&quot;&lt;キー名2&gt;&quot;]&#39;</span> &lt;ARN、ID、名前、など&gt;
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># count関数で定義されている場合</span>
+$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    <span class="s1">&#39;&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[0]&#39;</span> &lt;ARN、ID、名前、など&gt;
+
+<span class="c1"># その他のインデックス番号もimportが必要になる</span>
+$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    <span class="s1">&#39;&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[1]&#39;</span> &lt;ARN、ID、名前、など&gt;
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># moduleを使用し、for_each関数で定義されている場合</span>
+$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    <span class="s1">&#39;module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[&quot;&lt;キー名1&gt;&quot;]&#39;</span> &lt;ARN、ID、名前、など&gt;
+
+<span class="c1"># その他のキー名もimportが必要になる</span>
+$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    <span class="s1">&#39;module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;[&quot;&lt;キー名2&gt;&quot;]&#39;</span> &lt;ARN、ID、名前、など&gt;
 </code></pre></div></td></tr></table></div>
 <p>そして、ローカルマシンの<code>.tfstate</code>ファイルと実インフラの差分が無くなるまで、<code>terraform import</code>コマンドを繰り返す。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7376,18 +7501,42 @@ main.tf
 
 No changes. Infrastructure is up-to-date.
 </code></pre></div></td></tr></table></div>
-<h4 id="import_1">▼ importを行わなかった場合のエラー<a class="headerlink" href="#import_1" title="Permanent link">&para;</a></h4>
-<p>もし<code>terraform import</code>コマンドを行わないと、すでにクラウド上にリソースが存在しているためにリソースを作成できない、というエラーになる。</p>
+<p>何らかの理由で<code>terraform import</code>コマンドを実行し直したい場合は、<code>terraform state rm</code>コマンドで<code>resource</code>ブロックを削除し、改めて書き込む。</p>
+<p>参考：<a href="https://qiita.com/yyoshiki41/items/57ad95846fa36b3fc4a6">https://qiita.com/yyoshiki41/items/57ad95846fa36b3fc4a6</a></p>
+<h4 id="importresource">▼ importできない<code>resource</code>タイプ<a class="headerlink" href="#importresource" title="Permanent link">&para;</a></h4>
+<p><code>resource</code>ブロック間の紐付けに特化したような<code>resource</code>ブロックは、<code>terraform import</code>コマンドに対応していないものが多い（AWSであれば、<code>aws_acm_certificate_validation</code>、<code>aws_lb_target_group_attachment</code>、など）。その場合、<code>.tfstate</code>ファイルと実インフラの差分を解消できない。ただ、こういった非対応の<code>resource</code>ブロックは、クラウドプロバイダーにはインフラリソースが存在しないTerraform特有の<code>resource</code>ブロックであることが多い。そのため、実際に<code>terraform apply</code>コマンドを実行してみても、実インフラに影響が起こらない可能性がある。</p>
+<h4 id="import_2">▼ importを行わなかった場合のエラー<a class="headerlink" href="#import_2" title="Permanent link">&para;</a></h4>
+<p>もし<code>terraform import</code>コマンドを行わないと、すでにクラウド上にインフラリソースが存在しているためにインフラリソースを作成できない、というエラーになる。</p>
 <p>（エラー例1）</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Error: InvalidParameterException: Creation of service was not idempotent.
 </code></pre></div></td></tr></table></div>
 <p>（エラー例2）</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Error: error creating ECR repository: RepositoryAlreadyExistsException: The repository with name <span class="s1">&#39;f&#39;</span> already exists <span class="k">in</span> the registry with id <span class="s1">&#39;*****&#39;</span>
 </code></pre></div></td></tr></table></div>
+<h4 id="-var-file">▼ -var-file<a class="headerlink" href="#-var-file" title="Permanent link">&para;</a></h4>
+<p><code>.tfvars</code>ファイルを指定して、<code>terraform import</code>コマンドを実行する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform import <span class="se">\</span>
+    -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
+    &lt;resourceタイプ&gt;.&lt;resourceブロック名&gt; &lt;ARN、ID、名前、など&gt;
+
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now <span class="k">in</span>
+your Terraform state and will henceforth be managed by Terraform.
+</code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="refresh">refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h3>
 <h4 id="-var-file_1">▼ -var-file<a class="headerlink" href="#-var-file_1" title="Permanent link">&para;</a></h4>
-<p>クラウドに対してリクエストを行い、現在のリソースの状態を<code>.tfstate</code>ファイルに反映する。</p>
+<p>クラウドに対してリクエストを行い、現在のインフラリソースの状態を<code>.tfstate</code>ファイルに反映する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform refresh -var-file<span class="o">=</span>foo.tfvars
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7403,7 +7552,7 @@ No changes. Infrastructure is up-to-date.
 -/+ destroy and then create replacement
 </code></pre></div></td></tr></table></div>
 <h4 id="_3">▼ 出力内容の読み方<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>前半部分と後半部分に区別されている。前半部分は、Terraform管理外の方法（画面上、他ツール）による実インフラの変更について、その変更前後を検出する。また、クラウドプロバイダーの新機能に伴う新しいAPIの追加も検出される。検出のため、applyによって変更される実インフラを表しているわけではない。そして後半部分は、Terraformのコードの変更によって、実インフラがどのように変更されるか、を表している。結果の最後に表示される対象リソースの数を確認しても、前半部分のリソースは含まれていないことがわかる。</p>
+<p>前半部分と後半部分に区別されている。前半部分は、Terraform管理外の方法（画面上、他ツール）による実インフラの変更について、その変更前後を検出する。また、クラウドプロバイダーの新機能に伴う新しいAPIの追加も検出される。検出のため、applyによって変更される実インフラを表しているわけではない。そして後半部分は、Terraformのコードの変更によって、実インフラがどのように変更されるか、を表している。結果の最後に表示される対象の<code>resource</code>ブロックの数を確認しても、前半部分の<code>resource</code>ブロックは含まれていないことがわかる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7458,7 +7607,7 @@ Plan: <span class="m">0</span> to add, <span class="m">1</span> to change, <span
 </thead>
 <tbody>
 <tr>
-<td>リソース名の変更</td>
+<td><code>resource</code>ブロック名の変更</td>
 <td>される</td>
 </tr>
 <tr>
@@ -7470,13 +7619,13 @@ Plan: <span class="m">0</span> to add, <span class="m">1</span> to change, <span
 <td>されない</td>
 </tr>
 <tr>
-<td>リソースにハードコーディングされた値を環境変数に変更（<code>.tfvars</code>ファイルに移行）</td>
+<td><code>resource</code>ブロックにハードコーディングされた値を環境変数に変更（<code>.tfvars</code>ファイルに移行）</td>
 <td>されない</td>
 </tr>
 </tbody>
 </table>
 <h4 id="-var-file_2">▼ -var-file<a class="headerlink" href="#-var-file_2" title="Permanent link">&para;</a></h4>
-<p>クラウドに対してリクエストを行い、現在のリソースの状態を<code>.tfstate</code>ファイルには反映せずに、設定ファイルの記述との差分を検証する。スクリプト実行時に、変数が定義されたファイルを実行すると、<code>variable</code>で宣言した変数に、値が格納される。</p>
+<p>クラウドに対してリクエストを行い、現在のインフラリソースの状態を<code>.tfstate</code>ファイルには反映せずに、設定ファイルの記述との差分を検証する。スクリプト実行時に、変数が定義されたファイルを実行すると、<code>variable</code>で宣言した変数に、値が格納される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform plan -var-file<span class="o">=</span>foo.tfvars
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7499,19 +7648,19 @@ configuration and real physical resources that exist. As a result, no
 actions need to be performed.
 </code></pre></div></td></tr></table></div>
 <h4 id="-target">▼ -target<a class="headerlink" href="#-target" title="Permanent link">&para;</a></h4>
-<p>特定のリソースに対して、<code>terraform plan</code>コマンドを実行する。</p>
+<p>特定の<code>resource</code>ブロックを使用して、<code>terraform plan</code>コマンドを実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform plan <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    -target<span class="o">=</span>&lt;リソースタイプ&gt;.&lt;リソース名&gt;
+    -target<span class="o">=</span>&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;
 </code></pre></div></td></tr></table></div>
 <p>モジュールを使用している場合、指定の方法が異なる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform plan <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    -target<span class="o">=</span>module.&lt;モジュール名&gt;.&lt;リソースタイプ&gt;.&lt;リソース名&gt;
+    -target<span class="o">=</span>module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-refresh">▼ -refresh<a class="headerlink" href="#-refresh" title="Permanent link">&para;</a></h4>
 <p>このオプションをつければ、<code>terraform refresh</code>コマンドを同時に実行してくれる。ただし、デフォルトで<code>true</code>なので、不要である。</p>
@@ -7551,24 +7700,33 @@ actions need to be performed.
     -parallelism<span class="o">=</span><span class="m">30</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="-refresh-only">▼ -refresh-only<a class="headerlink" href="#-refresh-only" title="Permanent link">&para;</a></h4>
-<p>tfstateファイルのみを更新し、実インフラのリソースを更新しない。</p>
-<p>参考：<a href="https://learn.hashicorp.com/tutorials/terraform/refresh">https://learn.hashicorp.com/tutorials/terraform/refresh</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply -refresh-only
+<p>すでに管理対象の<code>resource</code>ブロックにて、実インフラがTerraform外で変更されている場合に、これを<code>.tfstate</code>ファイルに反映する。<code>terraform import</code>とは異なり、create処理が計画されるような管理対象外の<code>resource</code>ブロックの情報は<code>.tfstate</code>ファイルに反映できない。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://learn.hashicorp.com/tutorials/terraform/refresh">https://learn.hashicorp.com/tutorials/terraform/refresh</a></li>
+<li><a href="https://stackoverflow.com/questions/71327232/what-does-terraform-apply-plan-refresh-only-do">https://stackoverflow.com/questions/71327232/what-does-terraform-apply-plan-refresh-only-do</a></li>
+<li><a href="https://rurukblog.com/post/terraform-refresh-onlyt/">https://rurukblog.com/post/terraform-refresh-onlyt/</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply -refresh-only
+
+Apply complete! Resources: <span class="m">0</span> added, <span class="m">0</span> changed, <span class="m">0</span> destroyed. <span class="c1"># 実インフラは変更しない。</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="-target_1">▼ -target<a class="headerlink" href="#-target_1" title="Permanent link">&para;</a></h4>
-<p>特定のリソースに対して、<code>terraform apply</code>コマンドを実行する。</p>
+<p>特定の<code>resource</code>ブロックを使用して、<code>terraform apply</code>コマンドを実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    -target<span class="o">=</span>&lt;リソースタイプ&gt;.&lt;リソース名&gt;
+    -target<span class="o">=</span>&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;
 </code></pre></div></td></tr></table></div>
 <p>モジュールを使用している場合、指定の方法が異なる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    -target<span class="o">=</span>module.&lt;モジュール名&gt;.&lt;リソースタイプ&gt;.&lt;リソース名&gt;
+    -target<span class="o">=</span>module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-var-file_3">▼ -var-file<a class="headerlink" href="#-var-file_3" title="Permanent link">&para;</a></h4>
 <p>クラウドプロバイダー上にクラウドインフラストラクチャを作成する。</p>
@@ -7588,14 +7746,92 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply foo.tfplan
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="state">state<a class="headerlink" href="#state" title="Permanent link">&para;</a></h3>
+<h4 id="rm">▼ rm<a class="headerlink" href="#rm" title="Permanent link">&para;</a></h4>
+<p><code>terraform import</code>コマンドで<code>.tfstate</code>ファイルに反映した設定値を削除する。<code>count</code>関数や<code>for_each</code>関数を使用している場合は、シングルクオーテーションで囲う必要がある。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://qiita.com/yyoshiki41/items/57ad95846fa36b3fc4a6">https://qiita.com/yyoshiki41/items/57ad95846fa36b3fc4a6</a></li>
+<li><a href="https://github.com/hashicorp/terraform/issues/18810#issuecomment-422879471">https://github.com/hashicorp/terraform/issues/18810#issuecomment-422879471</a></li>
+<li><a href="https://dev.classmethod.jp/articles/terraform_import_for_each/">https://dev.classmethod.jp/articles/terraform_import_for_each/</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 関数を使用せずに定義されている場合</span>
+$ terraform state rm aws_instance.bastion
+
+Removed aws_instance.bastion
+Successfully removed <span class="m">1</span> resource instance<span class="o">(</span>s<span class="o">)</span>.
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># moduleを使用して定義されている場合</span>
+$ terraform state rm module.ec2.aws_instance.bastion
+
+Removed module.ec2.aws_instance.bastion
+Successfully removed <span class="m">1</span> resource instance<span class="o">(</span>s<span class="o">)</span>.
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># for_each関数で定義されている場合</span>
+$ terraform state rm <span class="s1">&#39;aws_instance.bastion[&quot;&lt;キー名1&gt;&quot;]&#39;</span>
+
+Removed aws_instance.bastion<span class="o">[</span><span class="s2">&quot;&lt;キー名1&gt;&quot;</span><span class="o">]</span>
+Successfully removed <span class="m">1</span> resource instance<span class="o">(</span>s<span class="o">)</span>.
+
+<span class="c1"># その他のキー名も削除が必要になる。</span>
+$ terraform state rm <span class="s1">&#39;aws_instance.bastion[&quot;&lt;キー名2&gt;&quot;]&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># count関数で定義されている場合</span>
+$ terraform state rm <span class="s1">&#39;aws_instance.bastion[0]&#39;</span>
+
+Removed aws_instance.bastion<span class="o">[</span><span class="m">0</span><span class="o">]</span>
+Successfully removed <span class="m">1</span> resource instance<span class="o">(</span>s<span class="o">)</span>.
+
+<span class="c1"># その他のインデックス番号も削除が必要になる。</span>
+$ terraform state rm <span class="s1">&#39;aws_instance.bastion[1]&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># moduleを使用し、for_each関数で定義されている場合</span>
+$ terraform state rm <span class="s1">&#39;module.ec2.aws_instance.bastion[&quot;&lt;キー名1&gt;&quot;]&#39;</span>
+
+Removed module.ec2.aws_instance.bastion<span class="o">[</span><span class="s2">&quot;&lt;キー名1&gt;&quot;</span><span class="o">]</span>
+Successfully removed <span class="m">1</span> resource instance<span class="o">(</span>s<span class="o">)</span>.
+
+<span class="c1"># その他のキー名も削除が必要になる。</span>
+$ terraform state rm <span class="s1">&#39;module.ec2.aws_instance.bastion[&quot;&lt;キー名2&gt;&quot;]&#39;</span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h3 id="taint">taint<a class="headerlink" href="#taint" title="Permanent link">&para;</a></h3>
-<h4 id="-var-file_4">▼ -var-file &lt;リソース&gt;<a class="headerlink" href="#-var-file_4" title="Permanent link">&para;</a></h4>
-<p>バックエンドにある<code>.tfstate</code>ファイルにて、指定されたリソースの<code>tainted</code>フラグを立てる。例えば、<code>apply</code>したが、途中でエラーが発生してしまい、実インフラに中途半端はリソースが作成されてしまうことがある。ここで、<code>tainted</code>を立てておくと、実インフラのリソースを削除したと想定した<code>plan</code>を実行できる。</p>
+<h4 id="-var-file_4">▼ -var-file <resourceブロック><a class="headerlink" href="#-var-file_4" title="Permanent link">&para;</a></h4>
+<p>バックエンドにある<code>.tfstate</code>ファイルにて、指定された<code>resource</code>ブロックの<code>tainted</code>フラグを立てる。例えば、<code>apply</code>したが、途中でエラーが発生してしまい、実インフラに中途半端に作成されてしまうことがある。ここで、<code>tainted</code>を立てておくと、実インフラの<code>resource</code>ブロックを削除したと想定した<code>plan</code>を実行できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform taint <span class="se">\</span>
     -var-file<span class="o">=</span>foo.tfvars <span class="se">\</span>
-    module.&lt;モジュール名&gt;.&lt;リソースタイプ&gt;.&lt;リソース名&gt;
+    module.&lt;モジュール名&gt;.&lt;resourceタイプ&gt;.&lt;resourceブロック名&gt;
 </code></pre></div></td></tr></table></div>
 <p>この後の<code>terraform plan</code>コマンドのログからも、<code>-/+</code>で削除が行われる想定で、差分を比較していることがわかる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7618,7 +7854,7 @@ Resource actions are indicated with the following symbols:
 
 Terraform will perform the following actions:
 
--/+ &lt;リソースタイプ&gt;.&lt;リソース名&gt; <span class="o">(</span>tainted<span class="o">)</span> <span class="o">(</span>new resource required<span class="o">)</span>
+-/+ &lt;resourceタイプ&gt;.&lt;resourceブロック名&gt; <span class="o">(</span>tainted<span class="o">)</span> <span class="o">(</span>new resource required<span class="o">)</span>
       id: <span class="s1">&#39;1492336661259070634&#39;</span> <span class="o">=</span>&gt; &lt;computed&gt; <span class="o">(</span>forces new resource<span class="o">)</span>
 
 
@@ -7627,10 +7863,10 @@ Plan: <span class="m">1</span> to add, <span class="m">0</span> to change, <span
 <p><br></p>
 <h3 id="state-list">state list<a class="headerlink" href="#state-list" title="Permanent link">&para;</a></h3>
 <h4 id="state-list_1">▼ state listとは<a class="headerlink" href="#state-list_1" title="Permanent link">&para;</a></h4>
-<p>ファイル内で定義しているリソースの一覧を取得する。</p>
+<p>ファイル内で定義しているresourceの一覧を取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform state list
 </code></pre></div></td></tr></table></div>
-<p>以下の通り、モジュールも含めて、リソースが表示される。</p>
+<p>以下の通り、モジュールも含めて、resourceが表示される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7672,7 +7908,7 @@ module.vpc_module.aws_vpc.vpc
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
       
     
   </small>

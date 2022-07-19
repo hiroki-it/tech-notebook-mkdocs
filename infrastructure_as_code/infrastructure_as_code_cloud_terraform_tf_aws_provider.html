@@ -8814,7 +8814,7 @@
 <p>参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition</a></p>
 <p><br></p>
 <h3 id="3albnlb">（３）ALB/NLBリスナーの作成を待機<a class="headerlink" href="#3albnlb" title="Permanent link">&para;</a></h3>
-<p>Terraformは、特に依存関係を実装しない場合、『ターゲットグループ → ALB/NLB → リスナー』の順でリソースを作成する。問題として、ALB/NLBやリスナーの作成が終わる前に、ECSサービスの作成が始まってしまう。ALB/NLBの作成（※リスナーも含む可能性）が完全に完了しない状態では、ターゲットグループはECSサービスに紐付けらず、これが完了する前にECSサービスがターゲットグループを参照しようとするため、エラーになる。リスナーの後にECSサービスを作成するようにし、『ターゲットグループ → ALB/NLB → リスナー → ECSサービス』の順でリソースを作成できるようにする。</p>
+<p>Terraformは、特に依存関係を実装しない場合、『ターゲットグループ → ALB/NLB → リスナー』の順で<code>resource</code>ブロックを作成する。問題として、ALB/NLBやリスナーの作成が終わる前に、ECSサービスの作成が始まってしまう。ALB/NLBの作成（※リスナーも含む可能性）が完全に完了しない状態では、ターゲットグループはECSサービスに紐付けらず、これが完了する前にECSサービスがターゲットグループを参照しようとするため、エラーになる。リスナーの後にECSサービスを作成するようにし、『ターゲットグループ → ALB/NLB → リスナー → ECSサービス』の順で<code>resource</code>ブロックを作成できるようにする。</p>
 <p>参考：<a href="https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022">https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022</a></p>
 <p><br></p>
 <h3 id="4autoscalingecs">（４）AutoScalingによるECSタスク数の増減を無視<a class="headerlink" href="#4autoscalingecs" title="Permanent link">&para;</a></h3>
@@ -8827,7 +8827,7 @@
 <p>ECSサービスの削除には『ドレイニング』の時間が発生する。約2分30秒かかるため、気長に待つこと。</p>
 <p><br></p>
 <h3 id="_12">（＊）ローリングアップデート<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>applyで、新しいリビジョン番号のECSタスク定義を作成すると、これを使用してローリングアップデートが自動で実行されることに注意する。ただし、ローリングアップデートの仕組み上、新しいECSタスクのヘルスチェックが失敗すれば、既存のECSタスクは停止せずにそのまま稼働するため、安心ではあるが。</p>
+<p><code>terraform apply</code>コマンドで、新しいリビジョン番号のECSタスク定義を作成すると、これを使用してローリングアップデートが自動で実行されることに注意する。ただし、ローリングアップデートの仕組み上、新しいECSタスクのヘルスチェックが失敗すれば、既存のECSタスクは停止せずにそのまま稼働するため、安心ではあるが。</p>
 <p><br></p>
 <h3 id="ecs_1">（＊）ECSコンテナ名<a class="headerlink" href="#ecs_1" title="Permanent link">&para;</a></h3>
 <p>コンテナ名は、役割名（app、web、monitoring、など）ではなく、ベンダー名（laravel、nginx、datadog、など）とする。ただし、AWS FireLensコンテナはlog_routerとしなければならない仕様であり、ベンダー名を使用できない場合は役割名になることを許容する。</p>
@@ -8988,7 +8988,7 @@
 <p><br></p>
 <h2 id="09-iam">09. IAMロール<a class="headerlink" href="#09-iam" title="Permanent link">&para;</a></h2>
 <h3 id="_15">信頼ポリシーを持つロール<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
-<p>コンソール画面でロールを作成する場合は意識することはないが、特定のリソースにロールを紐付けるためには、ロールに信頼ポリシーを組み込む必要がある。事前に、tpl形式の信頼ポリシーを定義しておく。<code>aws_iam_role</code>リソースを使用して、IAMロールを作成すると同時に、これに信頼ポリシーを紐付ける。</p>
+<p>コンソール画面でロールを作成する場合は意識することはないが、特定の<code>resource</code>ブロックにロールを紐付けるためには、ロールに信頼ポリシーを組み込む必要がある。事前に、tpl形式の信頼ポリシーを定義しておく。<code>aws_iam_role</code>リソースを使用して、IAMロールを作成すると同時に、これに信頼ポリシーを紐付ける。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>事前に、ECSタスクのための信頼ポリシーを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9395,7 +9395,7 @@
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Error deleting Target Group: ResourceInUse: Target group <span class="s1">&#39;arn:aws:elasticloadbalancing:ap-northeast-1:&lt;アカウントID&gt;:targetgroup/*****-tg/*****&#39;</span> is currently <span class="k">in</span> use by a listener or a rule
 status code: <span class="m">400</span>, request id: *****
 </code></pre></div></td></tr></table></div>
-<p>このエラーが発生した場合、コンソール画面上でリスナーを削除したうえで、もう一度applyする。</p>
+<p>このエラーが発生した場合、コンソール画面上でリスナーを削除したうえで、もう一度<code>terraform apply</code>コマンドを実行する。</p>
 <p>参考：<a href="https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529">https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529</a></p>
 <p><br></p>
 <h2 id="11-rdsaurora-mysql">11. RDS（Aurora MySQLの場合）<a class="headerlink" href="#11-rdsaurora-mysql" title="Permanent link">&para;</a></h2>
@@ -9613,10 +9613,10 @@ status code: <span class="m">400</span>, request id: *****
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="1systems-manager">（１）Systems Managerパラメータストア<a class="headerlink" href="#1systems-manager" title="Permanent link">&para;</a></h3>
-<p>Terraformに値をハードコーディングしたくない場合は、Systems Managerパラメータストアで値を管理し、これをデータリソースで取得する。</p>
+<p>Terraformに値をハードコーディングしたくない場合は、Systems Managerパラメータストアで値を管理し、これを<code>data</code>ブロックで取得する。</p>
 <p><br></p>
 <h3 id="2_2">（２）メンテナンスウインドウ時に変更適用<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
-<p>メンテナンスウインドウ時の変更適用をTerraformで行う場合、一段階目に<code>apply_immediately</code>オプションを<code>false</code>に変更してapplyし、二段階目に修正をapplyする。</p>
+<p>メンテナンスウインドウ時の変更適用をTerraformで行う場合、一段階目に<code>apply_immediately</code>オプションを<code>false</code>に変更してapplyし、二段階目に修正を<code>terraform apply</code>コマンドを実行する。</p>
 <p><br></p>
 <h3 id="3dbaz3">（３）DBクラスターにはAZが3つ必要<a class="headerlink" href="#3dbaz3" title="Permanent link">&para;</a></h3>
 <p>DBクラスターでは、レプリケーションのために、<code>3</code>個のAZが必要である。そのため、指定したAZが2つであっても、コンソール画面上で<code>3</code>個のAZが自動的に設定される。Terraformがこれを認識しないように、<code>ignore_changes</code>オプションでAZを指定しておく必要がある。</p>
@@ -9891,7 +9891,7 @@ status code: <span class="m">400</span>, request id: *****
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="1terraform-plan">（１）<code>terraform plan</code>コマンド時に非表示<a class="headerlink" href="#1terraform-plan" title="Permanent link">&para;</a></h3>
-<p>CIの<code>terraform plan</code>コマンド時に値が公開されないように<code>output</code>で<code>sensitive</code>オプションを有効化する。</p>
+<p>CIの<code>terraform plan</code>コマンド時に値が公開されないように<code>output</code>ブロックで<code>sensitive</code>オプションを有効化する。</p>
 <p><br></p>
 <h2 id="11-vpc">11. VPC<a class="headerlink" href="#11-vpc" title="Permanent link">&para;</a></h2>
 <h3 id="_26">まとめ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
@@ -10829,18 +10829,18 @@ status code: <span class="m">400</span>, request id: *****
 <p><br></p>
 <h2 id="20-terraformaws">20. Terraform管理外のAWSリソース<a class="headerlink" href="#20-terraformaws" title="Permanent link">&para;</a></h2>
 <h3 id="_28">判断基準<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
-<p>以下の理由で、一部のAWSリソースではTerraformを使用しない方が良い。</p>
+<p>以下の理由で、個人的には、一部のAWSリソースではTerraformを使用しない方が良い。</p>
 <ul>
 <li>ビジネスロジックを持つAWSリソースでは、継続的な改善のサイクルが早い（変更の要望頻度が高い）ため、リリースまでに時間がかかるTerraformで管理すると、このサイクルを阻害してしまう：（API Gateway、IAMユーザー/グループ、IAMユーザー/グループに関連するロール/ポリシー、など）</li>
 <li>セキュリティを含むAWSリソースでは、Terraformのリポジトリで機密な値を管理するわけにはいかない：（EC2の秘密鍵、Systems Managerパラメータストア、など）</li>
-<li>Terraformによる初期作成時に必要であり、それがないとそもそもapplyできない：（Terraform用IAMユーザー、tfstateを管理するS3バケット、など）</li>
+<li>Terraformによる初期作成時に必要であり、それがないとそもそも<code>terraform apply</code>コマンドできない：（Terraform用IAMユーザー、tfstateを管理するS3バケット、など）</li>
 <li>Terraformの誤操作で削除してはいけないAWSリソースでは、Terraformで管理しないことで削除を防げる：（tfstateを管理するS3バケットなど）</li>
 <li>Terraformで特定のAWSリソースを作成すると、それに伴って自動で作成されてしまう：（ENIなど）</li>
 <li>そもそもAWSがAPIを公開していないことが理由で、Terraformで実装できない：（Chatbotなど）</li>
 </ul>
 <p><br></p>
 <h3 id="_29">詳細<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
-<p>また、AWSの仕様上の理由で、管理外になってしまうものもある。Terraformの管理外のリソースには、コンソール画面上から、『<code>Not managed by = Terraform</code>』というタグをつけた方が良い。</p>
+<p>また、AWSの仕様上の理由で、管理外になってしまうものもある。Terraformの管理外の<code>resource</code>ブロックには、コンソール画面上から、『<code>Not managed by = Terraform</code>』というタグをつけた方が良い。</p>
 <table>
 <thead>
 <tr>
@@ -10962,7 +10962,7 @@ status code: <span class="m">400</span>, request id: *****
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="aws_2">削除保護機能のあるAWSリソース<a class="headerlink" href="#aws_2" title="Permanent link">&para;</a></h3>
-<p>削除保護設定のあるAWSリソースに癖がある。削除保護の無効化とリソースを削除を同時にデプロイしないようにする。もし同時に行った場合、削除処理を先に実行するが、削除は保護されたままなので、エラーになる。エラーになる。そのため、このAWSリソースを削除する時は、以下の通り<code>2</code>個の段階に分けてデプロイする。</p>
+<p>削除保護設定のあるAWSリソースに癖がある。削除保護の無効化と<code>resource</code>ブロックの削除を同時にデプロイしないようにする。もし同時に行った場合、削除処理を先に実行するが、削除は保護されたままなので、エラーになる。エラーになる。そのため、このAWSリソースを削除する時は、以下の通り<code>2</code>個の段階に分けてデプロイする。</p>
 <ol>
 <li>削除保護を無効化（<code>false</code>）に変更し、デプロイする。</li>
 <li>コードを削除し、デプロイする。</li>
@@ -10997,7 +10997,7 @@ status code: <span class="m">400</span>, request id: *****
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
       
     
   </small>
