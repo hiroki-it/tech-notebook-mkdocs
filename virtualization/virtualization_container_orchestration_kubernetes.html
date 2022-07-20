@@ -4522,6 +4522,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#node_1" class="md-nav__link">
+    Nodeグループ
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodeグループ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node_2" class="md-nav__link">
+    ▼ Nodeグループとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node_3" class="md-nav__link">
+    ▼ Nodeのオートスケーリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5088,7 +5115,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#node_1" class="md-nav__link">
+  <a href="#node_4" class="md-nav__link">
     Node
   </a>
   
@@ -5103,7 +5130,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#node_2" class="md-nav__link">
+  <a href="#node_5" class="md-nav__link">
     ▼ ワーカーNode
   </a>
   
@@ -5371,7 +5398,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node_3" class="md-nav__link">
+  <a href="#node_6" class="md-nav__link">
     Nodeネットワーク
   </a>
   
@@ -5379,7 +5406,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node_4" class="md-nav__link">
+  <a href="#node_7" class="md-nav__link">
     ▼ Nodeネットワークとは
   </a>
   
@@ -8069,6 +8096,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#node_1" class="md-nav__link">
+    Nodeグループ
+  </a>
+  
+    <nav class="md-nav" aria-label="Nodeグループ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node_2" class="md-nav__link">
+    ▼ Nodeグループとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node_3" class="md-nav__link">
+    ▼ Nodeのオートスケーリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8635,7 +8689,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#node_1" class="md-nav__link">
+  <a href="#node_4" class="md-nav__link">
     Node
   </a>
   
@@ -8650,7 +8704,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#node_2" class="md-nav__link">
+  <a href="#node_5" class="md-nav__link">
     ▼ ワーカーNode
   </a>
   
@@ -8918,7 +8972,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node_3" class="md-nav__link">
+  <a href="#node_6" class="md-nav__link">
     Nodeネットワーク
   </a>
   
@@ -8926,7 +8980,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#node_4" class="md-nav__link">
+  <a href="#node_7" class="md-nav__link">
     ▼ Nodeネットワークとは
   </a>
   
@@ -9327,6 +9381,22 @@ healthz check passed
 <p>イメージのプル、コンテナ作成削除、コンテナ起動停止、などを行う。</p>
 <p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <p><br></p>
+<h3 id="node_1">Nodeグループ<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
+<h4 id="node_2">▼ Nodeグループとは<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
+<p>同じ設定値（<code>metadata.labels</code>キー、CPU、メモリ、など）や同じ役割を持ったNodeのグループのこと。KubernetesにはNodeグループというリソースがなく、グループを宣言的に定義することはできないが、クラウドプロバイダーの機能を使用して、Nodeグループを実現できる。基本的には、Nodeグループは冗長化されたNodeで構成されており、IDは違えど、Node名は全て同じである。Nodeグループをターゲットとするロードバランサーでは、Nodeグループ内で冗長化Nodeのいずれかに対してルーティングすることになる。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://qiita.com/mumoshu/items/9ee00307d6bbab43edb6">https://qiita.com/mumoshu/items/9ee00307d6bbab43edb6</a></li>
+<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler">https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler</a></li>
+</ul>
+<h4 id="node_3">▼ Nodeのオートスケーリング<a class="headerlink" href="#node_3" title="Permanent link">&para;</a></h4>
+<p>20220720時点で、KubernetesのAPIにはNodeのオートスケーリング機能はない。ただ、cluster-autoscalerプラグインを使用すると、各クラウドプロバイダーのAPIからNodeのオートスケーリングを実行できるようになる。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#cluster-autoscaler">https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#cluster-autoscaler</a></li>
+<li><a href="https://blog.inductor.me/entry/2021/12/06/165743">https://blog.inductor.me/entry/2021/12/06/165743</a></li>
+</ul>
+<p><br></p>
 <h2 id="01-04">01-04. アドオン<a class="headerlink" href="#01-04" title="Permanent link">&para;</a></h2>
 <h3 id="admission-controllers">admission controllersプラグイン<a class="headerlink" href="#admission-controllers" title="Permanent link">&para;</a></h3>
 <h4 id="admission-controllers_1">▼ admission controllersプラグインとは<a class="headerlink" href="#admission-controllers_1" title="Permanent link">&para;</a></h4>
@@ -9721,7 +9791,7 @@ options ndots:5
 <h4 id="egress">▼ Egress<a class="headerlink" href="#egress" title="Permanent link">&para;</a></h4>
 <p>他のPodに送信するアウトバウンド通信のルールを設定する。</p>
 <p><br></p>
-<h3 id="node_1">Node<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
+<h3 id="node_4">Node<a class="headerlink" href="#node_4" title="Permanent link">&para;</a></h3>
 <h4 id="nodekubernetes">▼ マスターNode（kubernetesマスター）<a class="headerlink" href="#nodekubernetes" title="Permanent link">&para;</a></h4>
 <p>kubernetesマスターともいう。マスターコンポーネントが稼働する。クライアントが<code>kubectl</code>コマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
 <p>参考：</p>
@@ -9730,7 +9800,7 @@ options ndots:5
 <li><a href="https://medium.com/easyread/step-by-step-introduction-to-basic-concept-of-kubernetes-e20383bdd118">https://medium.com/easyread/step-by-step-introduction-to-basic-concept-of-kubernetes-e20383bdd118</a></li>
 <li><a href="https://qiita.com/baby-degu/items/ce26507bd954621d6dc5">https://qiita.com/baby-degu/items/ce26507bd954621d6dc5</a></li>
 </ul>
-<h4 id="node_2">▼ ワーカーNode<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
+<h4 id="node_5">▼ ワーカーNode<a class="headerlink" href="#node_5" title="Permanent link">&para;</a></h4>
 <p>ノードコンポーネントが稼働する。Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、<code>kubectl</code>コマンドで<code>--register-node=false</code>とする必要がある。</p>
 <p>参考：</p>
 <ul>
@@ -9989,8 +10059,8 @@ $ docker inspect &lt;コンテナID&gt;
 <p>参考：<a href="https://thinkit.co.jp/article/17635">https://thinkit.co.jp/article/17635</a></p>
 <p><br></p>
 <h2 id="04-kubernetes">04. Kubernetesネットワーク<a class="headerlink" href="#04-kubernetes" title="Permanent link">&para;</a></h2>
-<h3 id="node_3">Nodeネットワーク<a class="headerlink" href="#node_3" title="Permanent link">&para;</a></h3>
-<h4 id="node_4">▼ Nodeネットワークとは<a class="headerlink" href="#node_4" title="Permanent link">&para;</a></h4>
+<h3 id="node_6">Nodeネットワーク<a class="headerlink" href="#node_6" title="Permanent link">&para;</a></h3>
+<h4 id="node_7">▼ Nodeネットワークとは<a class="headerlink" href="#node_7" title="Permanent link">&para;</a></h4>
 <p>同じサブネットマスク内にあるNodeのNIC間を接続するネットワーク。</p>
 <p>参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10</a></p>
 <p><img alt="kubernetes_node-network" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_node-network.png" /></p>
@@ -10270,7 +10340,7 @@ Address:  <span class="m">10</span>.105.157.184
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-20</span>
       
     
   </small>

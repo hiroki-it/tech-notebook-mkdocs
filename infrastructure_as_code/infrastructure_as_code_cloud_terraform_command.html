@@ -7700,7 +7700,7 @@ actions need to be performed.
     -parallelism<span class="o">=</span><span class="m">30</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="-refresh-only">▼ -refresh-only<a class="headerlink" href="#-refresh-only" title="Permanent link">&para;</a></h4>
-<p>すでに管理対象の<code>resource</code>ブロックにて、実インフラがTerraform外で変更されている場合に、これを<code>.tfstate</code>ファイルに反映する。<code>terraform import</code>とは異なり、create処理が計画されるような管理対象外の<code>resource</code>ブロックの情報は<code>.tfstate</code>ファイルに反映できない。</p>
+<p>すでに管理対象になっている実インフラが、Terraformの管理外から変更された場合、実インフラの状態はそのままに、<code>.tfstate</code>ファイルにその状態を書き込む。具体的は、<code>terraform plan</code>コマンドで出力される<code>Note: Objects have changed outside of Terraform</code>の内容を指す。ただし、そもそもTerraformで管理されていない実インフラ（create処理判定されるもの）を扱うことはできず、代わりに<code>terraform import</code>コマンドの実行が必要になる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://learn.hashicorp.com/tutorials/terraform/refresh">https://learn.hashicorp.com/tutorials/terraform/refresh</a></li>
@@ -7908,7 +7908,7 @@ module.vpc_module.aws_vpc.vpc
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-20</span>
       
     
   </small>
