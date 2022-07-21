@@ -9069,7 +9069,7 @@
 <h2 id="10">10. 運用<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
 <h3 id="_71">障害対策<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h3>
 <h4 id="_72">▼ サーキットブレイカー<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
-<p>マイクロサービス間に設置され、他のマイクロサービスに連鎖する障害を吸収するプログラムのこと。下流マイクロサービスに障害が起こった時に、上流マイクロサービスにエラーを返してしまわないよう、直近の成功時の処理結果を返信する。</p>
+<p>マイクロサービス間に設置され、他のマイクロサービスに連鎖的に起こる障害（カスケード障害）を吸収する仕組みのこと。下流マイクロサービスに障害が起こった時に、上流マイクロサービスにエラーを返してしまわないよう、一旦マイクロサービスへのルーティングを停止し、直近の成功時の処理結果を返信する。</p>
 <p><img alt="circuit-breaker" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/circuit-breaker.png" /></p>
 <p><br></p>
 <h3 id="_73">横断的な監視<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h3>
@@ -9082,7 +9082,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-21</span>
       
     
   </small>

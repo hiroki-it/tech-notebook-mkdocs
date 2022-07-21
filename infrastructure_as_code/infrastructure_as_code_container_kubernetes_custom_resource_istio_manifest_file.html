@@ -5387,6 +5387,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#connectionpool" class="md-nav__link">
+    ▼ connectionPool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loadbalancer" class="md-nav__link">
     ▼ loadBalancer
   </a>
@@ -7573,6 +7580,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#connectionpool" class="md-nav__link">
+    ▼ connectionPool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loadbalancer" class="md-nav__link">
     ▼ loadBalancer
   </a>
@@ -8372,6 +8386,39 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="spectrafficpolicy">spec.trafficPolicy<a class="headerlink" href="#spectrafficpolicy" title="Permanent link">&para;</a></h3>
+<h4 id="connectionpool">▼ connectionPool<a class="headerlink" href="#connectionpool" title="Permanent link">&para;</a></h4>
+<p>Podの同時接続数の制限数を設定する。制限を超過した場合、Podへのルーティングが停止し、直近の成功時の処理結果を返信する（サーキットブレイカー）。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/">https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/</a></li>
+<li><a href="https://istio.io/latest/docs/concepts/traffic-management/#circuit-breakers">https://istio.io/latest/docs/concepts/traffic-management/#circuit-breakers</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1beta1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DestinationRule</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-system</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-destination-rule</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">trafficPolicy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">connectionPool</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">http</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">http1MaxPendingRequests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">        </span><span class="nt">maxRequestsPerConnection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
+<span class="w">      </span><span class="nt">tcp</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">maxConnections</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h4 id="loadbalancer">▼ loadBalancer<a class="headerlink" href="#loadbalancer" title="Permanent link">&para;</a></h4>
 <p>Podへのルーティング時に使用するロードバランシングアルゴリズムを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings">https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings</a></p>
@@ -9149,7 +9196,7 @@ $ helm install istio-ingressgateway istio/gateway
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-21</span>
       
     
   </small>
