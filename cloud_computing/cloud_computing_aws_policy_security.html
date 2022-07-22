@@ -3998,6 +3998,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nlb" class="md-nav__link">
+    ▼ NLBの場合
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6742,6 +6749,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nlb" class="md-nav__link">
+    ▼ NLBの場合
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7040,6 +7054,8 @@
 </tr>
 </tbody>
 </table>
+<h4 id="nlb">▼ NLBの場合<a class="headerlink" href="#nlb" title="Permanent link">&para;</a></h4>
+<p>NLBはセキュリティグループに対応していない。そのため、NLBのルーティング先（EC2、など）でファイアーウォールを設定する必要がある。</p>
 <p><br></p>
 <h3 id="_3">セキュリティグループ（アウトバウンド）の設計<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="alb_1">▼ ALBの場合<a class="headerlink" href="#alb_1" title="Permanent link">&para;</a></h4>
@@ -7287,7 +7303,7 @@
 <h4 id="alb_2">▼ ALBを直接的に指定することを防ぐ<a class="headerlink" href="#alb_2" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>Route53のドメイン経由ではなく、ALBの直接的に指定して、リクエストとを送信することを防ぐ。ALBのIPアドレスは定期的に変化するため、任意のIPアドレスを指定できる正規表現を定義する必要がある。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">^((</span><span class="mi">25</span><span class="p">[</span><span class="mi">0-5</span><span class="p">]</span><span class="err">|</span><span class="mi">2</span><span class="p">[</span><span class="mi">0-4</span><span class="p">][</span><span class="mi">0-9</span><span class="p">]</span><span class="err">|</span><span class="mi">1</span><span class="p">[</span><span class="mi">0-9</span><span class="p">][</span><span class="mi">0-9</span><span class="p">]</span><span class="err">|</span><span class="p">[</span><span class="mi">1-9</span><span class="p">]</span><span class="err">?</span><span class="p">[</span><span class="mi">0-9</span><span class="p">]</span><span class="err">)\.)</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="err">(</span><span class="mi">25</span><span class="p">[</span><span class="mi">0-5</span><span class="p">]</span><span class="err">|</span><span class="mi">2</span><span class="p">[</span><span class="mi">0-4</span><span class="p">][</span><span class="mi">0-9</span><span class="p">]</span><span class="err">|</span><span class="mi">1</span><span class="p">[</span><span class="mi">0-9</span><span class="p">][</span><span class="mi">0-9</span><span class="p">]</span><span class="err">|</span><span class="p">[</span><span class="mi">1-9</span><span class="p">]</span><span class="err">?</span><span class="p">[</span><span class="mi">0-9</span><span class="p">]</span><span class="err">)$</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ルール：<code>block-direct-access-to-lb</code></p>
 <table>
@@ -7349,7 +7365,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-22</span>
       
     
   </small>
