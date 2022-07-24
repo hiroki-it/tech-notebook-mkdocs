@@ -6451,7 +6451,7 @@
         
           <li class="md-nav__item">
   <a href="#sre-sreslo" class="md-nav__link">
-    ▼ 引用：・SREの基本と組織への導入、・これからはじめる 実践 SRE/SLOの監視をやってみよう
+    ▼ 引用：SREの基本と組織への導入、これからはじめる 実践 SRE/SLOの監視をやってみよう
   </a>
   
 </li>
@@ -7066,7 +7066,7 @@
         
           <li class="md-nav__item">
   <a href="#sre-sreslo" class="md-nav__link">
-    ▼ 引用：・SREの基本と組織への導入、・これからはじめる 実践 SRE/SLOの監視をやってみよう
+    ▼ 引用：SREの基本と組織への導入、これからはじめる 実践 SRE/SLOの監視をやってみよう
   </a>
   
 </li>
@@ -7379,7 +7379,7 @@
 <td>今までのシステム運用（例：NOC）をSREingと言い換えるだけの方法のこと。</td>
 <td>・SREerの作業内容には、システム運用だけなく、開発も含まれる。またこの開発では、できるだけ人の手を離れていて、障害の発生頻度が少ないようなシステムを構築する必要がある。<br>・　NOCのような場所は、作業に集中できる環境ではない。</td>
 <td>▼ 作業時間<br>SREerは、勤務時間の半分以上を、システム運用ではなく開発に割り当てる。<br><br>▼ 作業場所<br>NOCのように、24時間365日、システムのすぐそばでオンコール担当者がこれの面倒を見るのではなく、リモートでどこからでもすぐに対応できるようにする。この時、オンコール担当者がメトリクスの時系列データの共有リンクをインシデントに関心がある人に共有すれば、共通の視点でインシデントを見ることができる。</td>
-<td>NTTドコモのNOCの様子。参考：<a href="https://k-tai.watch.impress.co.jp/img/ktw/docs/1077/992/html/02.jpg.html">https://k-tai.watch.impress.co.jp/img/ktw/docs/1077/992/html/02.jpg.html</a><br><img alt="noc_ntt-docomo" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/noc_ntt-docomo.jpeg" /></td>
+<td>NTTドコモのNOCの様子。<br>参考：<a href="https://k-tai.watch.impress.co.jp/img/ktw/docs/1077/992/html/02.jpg.html">https://k-tai.watch.impress.co.jp/img/ktw/docs/1077/992/html/02.jpg.html</a><br><img alt="noc_ntt-docomo" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/noc_ntt-docomo.jpeg" /></td>
 </tr>
 <tr>
 <td>画面を見つめる人間</td>
@@ -7421,7 +7421,7 @@
 <td>あらゆるものをエラーベントと見なし、アラートを通知してしまうこと。</td>
 <td>アラートが通知されるたびに、それ以外の作業が中断されてしまう。</td>
 <td>ユーザーの満足度に影響を与える問題（例：UX、単一障害点の異常、レプリカ数の過剰な減少）が発生した場合は、アラートを通知する。</td>
-<td>ユーザーの満足度に影響を与えるクリティカルジャーニー中のエラーイベントを監視すると良い。<br>参考：<a href="https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19">https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19</a></td>
+<td>ユーザーの満足度に影響を与えるクリティカルユーザージャーニー中のエラーイベントを監視すると良い。<br>参考：<a href="https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19">https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19</a></td>
 </tr>
 <tr>
 <td>ペットを散歩させてくれるドッグウォーカーを雇う</td>
@@ -7484,7 +7484,7 @@
 <td>ビジネスとは無関係にSLOを決めてしまっていること。また、一度決まったSLOが更新されないままになってしまうこと。</td>
 <td>ユーザーニーズに基づいたSLOではないため、いずれシステムの不備（例：スループット不足、過負荷、ハードウェアキャパシティ不足）が浮き彫りになる。また、SLOが最新の状況に則していないと、ユーザーからの評価を下げることになる。</td>
 <td>ビジネス側と話し合い、ユーザーニーズ、ビジネスの収益、に基づいたSLOを設定する。また定期的に更新する。</td>
-<td>クリティカルジャーニーをビジネス側と話し合い、これの満足度に影響を与えるメトリクスをSLIとする。<br>参考：<br>・<a href="https://codezine.jp/article/detail/16020?p=2">https://codezine.jp/article/detail/16020?p=2</a><br>・<a href="https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e">https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e</a></td>
+<td>クリティカルユーザージャーニーをビジネス側と話し合い、これの満足度に影響を与えるメトリクスをSLIとする。<br>参考：<br>・<a href="https://codezine.jp/article/detail/16020?p=2">https://codezine.jp/article/detail/16020?p=2</a><br>・<a href="https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e">https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e</a></td>
 </tr>
 <tr>
 <td>ファイアウォール越しにAPIを投げ渡す</td>
@@ -7512,8 +7512,8 @@
 <p><br></p>
 <h2 id="01-03-slislosla">01-03. SLI/SLO/SLAの決め方<a class="headerlink" href="#01-03-slislosla" title="Permanent link">&para;</a></h2>
 <h3 id="slislo">SLI/SLOの決め方<a class="headerlink" href="#slislo" title="Permanent link">&para;</a></h3>
-<h4 id="sre-sreslo">▼ 引用：・<a href="https://dev.classmethod.jp/articles/202105-report-gcd21-d3-infra-01/">SREの基本と組織への導入</a>、・<a href="https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e">これからはじめる 実践 SRE/SLOの監視をやってみよう</a><a class="headerlink" href="#sre-sreslo" title="Permanent link">&para;</a></h4>
-<p>CUJ（クリティカルジャーニー）の満足度に影響を与えるメトリクス（リクエストとレスポンスの可用性/遅延/品質、データ処理のカバレッジ/正確性/鮮度/スループット、ストレージのスループット/遅延、など）をSLIとし、満足と判断する最低限の閾値をSLOに設定するとよい。</p>
+<h4 id="sre-sreslo">▼ 引用：<a href="https://dev.classmethod.jp/articles/202105-report-gcd21-d3-infra-01/">SREの基本と組織への導入</a>、<a href="https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e">これからはじめる 実践 SRE/SLOの監視をやってみよう</a><a class="headerlink" href="#sre-sreslo" title="Permanent link">&para;</a></h4>
+<p>クリティカルユーザージャーニーの満足度に影響を与えるメトリクス（リクエストとレスポンスの可用性/遅延/品質、データ処理のカバレッジ/正確性/鮮度/スループット、ストレージのスループット/遅延、など）をSLIとし、満足と判断する最低限の閾値をSLOに設定するとよい。</p>
 <p><strong>＊例＊</strong></p>
 <p>ECサイトであれば、以下がCUJとなる。</p>
 <ol>
@@ -7635,7 +7635,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>
