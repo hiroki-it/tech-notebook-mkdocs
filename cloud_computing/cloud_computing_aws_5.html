@@ -7878,7 +7878,7 @@
 <tr>
 <td>バケットポリシー</td>
 <td>IAMユーザー（クロスアカウントも可）またはAWSリソースがS3へにアクセスするためのポリシーで管理する。</td>
-<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースに紐付けることによりも、アクセスを許可できる。<br>参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーを紐付けできないCloudFrontやALBなどでは、自身へのアクセスログを生成するために必須である。</td>
+<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースに紐付けることによりも、アクセスを許可できる。<br>参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーを紐付けできないCloudFrontやALBなどでは、自身へのアクセスログを作成するために必須である。</td>
 </tr>
 <tr>
 <td>アクセスコントロールリスト</td>
@@ -8011,7 +8011,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>// ポリシーは不要
 </code></pre></div></td></tr></table></div>
 <h4 id="lambda">▼ Lambdaからのアクセスを許可<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h4>
-<p>バケットポリシーは不要である。代わりに、AWS管理ポリシーの『<code>AWSLambdaExecute</code>』が紐付けられたロールをLambdaに紐付ける必要がある。このポリシーには、S3へのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。</p>
+<p>バケットポリシーは不要である。代わりに、AWS管理ポリシーの『<code>AWSLambdaExecute</code>』が紐付けられたロールをLambdaに紐付ける必要がある。このポリシーには、S3へのアクセス権限の他、CloudWatchログにログを作成するための権限が設定されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8820,7 +8820,7 @@ aws s3 ls --profile &lt;プロファイル名&gt;
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

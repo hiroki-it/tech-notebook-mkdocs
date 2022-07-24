@@ -7399,7 +7399,7 @@ crw-------  psaux                 <span class="c1"># PS2マウス、キーボー
 crw-rw-rw-  ptmx                  <span class="c1"># 仮想端末</span>
 crw-------  ptp0                  <span class="c1"># 時刻同期</span>
 drwxr-xr-x  pts                   <span class="c1"># 仮想端末</span>
-crw-rw-rw-  random                <span class="c1"># 乱数生成</span>
+crw-rw-rw-  random                <span class="c1"># 乱数作成</span>
 crw-rw-r--+ rfkill                <span class="c1"># ワイヤレスデバイスのON/OFF</span>
 lrwxrwxrwx  rtc -&gt; rtc0           <span class="c1"># リアルタイムクロック</span>
 crw-------  rtc0                  <span class="c1"># リアルタイムクロック</span>
@@ -7425,7 +7425,7 @@ crw-rw----  ttyS31                <span class="c1"># シリアルポート</span
 crw-rw----  udmabuf               <span class="c1"># DMAバッファ</span>
 crw-------  uhid                  <span class="c1"># USB、Bluetooth</span>
 crw-------  uinput                <span class="c1"># 仮想インプットデバイス</span>
-crw-rw-rw-  urandom               <span class="c1"># 乱数生成　ブロックなし</span>
+crw-rw-rw-  urandom               <span class="c1"># 乱数作成　ブロックなし</span>
 drwxr-xr-x  usb                   <span class="c1"># USB</span>
 crw-------  userio                <span class="c1"># User I/O</span>
 crw-rw----  vcs                   <span class="c1"># 仮想コンソールメモリ ttyのバッファ</span>
@@ -7491,8 +7491,8 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
 <p><br></p>
 <h2 id="05">05. タスク管理<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="_22">タスク管理とは<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
-<p><img alt="ジョブステップからタスクの生成" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ジョブステップからタスクの生成.png" /></p>
-<p>タスク管理によって、イニシエーターによるジョブステップからタスクが生成される。タスクが生成されると実行可能状態になる。ディスパッチャによって実行可能状態から実行状態になる。</p>
+<p><img alt="ジョブステップからタスクの作成" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ジョブステップからタスクの作成.png" /></p>
+<p>タスク管理によって、イニシエーターによるジョブステップからタスクが作成される。タスクが作成されると実行可能状態になる。ディスパッチャによって実行可能状態から実行状態になる。</p>
 <p>参考：<a href="https://www.amazon.co.jp/dp/4297124513">https://www.amazon.co.jp/dp/4297124513</a></p>
 <p><br></p>
 <h3 id="_23">タスク管理方式の種類<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
@@ -7508,7 +7508,7 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
 <p>ラウンドロビンは、『総当たり』の意味。一定時間（タイムクウォンタム）ごとに、実行状態にあるタスクが強制的に待ち行列に登録される。交代するように、他のタスクがディスパッチされる。</p>
 <p><img alt="ラウンドロビン方式" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ラウンドロビン方式.png" /></p>
 <p><strong>＊例＊</strong></p>
-<p>生成されたタスクの到着時刻と処理時間は以下のとおりである。強制的なディスパッチは、『20秒』ごとに起こるとする。</p>
+<p>作成されたタスクの到着時刻と処理時間は以下のとおりである。強制的なディスパッチは、『20秒』ごとに起こるとする。</p>
 <p><img alt="優先順方式_1" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/優先順方式_1.png" /></p>
 <ol>
 <li>タスクAが0秒に待ち行列へ登録される。</li>
@@ -7531,7 +7531,7 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
 <p><br></p>
 <h3 id="_31">障害管理<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
 <h4 id="_32">▼ 障害管理とは<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
-<p>ソフトウェアに障害が起こった時の障害修復を管理する。</p>
+<p>ソフトウェアに障害が発生した時の障害修復を管理する。</p>
 <p>参考：<a href="http://kccn.konan-u.ac.jp/information/cs/cyber06/cy6_os.htm">http://kccn.konan-u.ac.jp/information/cs/cyber06/cy6_os.htm</a></p>
 <p><br></p>
 
@@ -7540,7 +7540,7 @@ crw-rw-rw-  zero                  <span class="c1"># ゼロ出力 （読み込�
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

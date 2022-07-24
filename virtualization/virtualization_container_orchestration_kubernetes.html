@@ -4564,22 +4564,22 @@
         
           <li class="md-nav__item">
   <a href="#admission-controllers" class="md-nav__link">
-    admission controllersプラグイン
+    admission-controllers
   </a>
   
-    <nav class="md-nav" aria-label="admission controllersプラグイン">
+    <nav class="md-nav" aria-label="admission-controllers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#admission-controllers_1" class="md-nav__link">
-    ▼ admission controllersプラグインとは
+    ▼ admission-controllersとは
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#admission-controllers_2" class="md-nav__link">
-    ▼ admission controllersプラグインの構成
+    ▼ admission-controllersの構成
   </a>
   
 </li>
@@ -8165,22 +8165,22 @@
         
           <li class="md-nav__item">
   <a href="#admission-controllers" class="md-nav__link">
-    admission controllersプラグイン
+    admission-controllers
   </a>
   
-    <nav class="md-nav" aria-label="admission controllersプラグイン">
+    <nav class="md-nav" aria-label="admission-controllers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#admission-controllers_1" class="md-nav__link">
-    ▼ admission controllersプラグインとは
+    ▼ admission-controllersとは
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#admission-controllers_2" class="md-nav__link">
-    ▼ admission controllersプラグインの構成
+    ▼ admission-controllersの構成
   </a>
   
 </li>
@@ -9458,19 +9458,19 @@ healthz check passed
 </ul>
 <p><br></p>
 <h2 id="01-04">01-04. アドオン<a class="headerlink" href="#01-04" title="Permanent link">&para;</a></h2>
-<h3 id="admission-controllers">admission controllersプラグイン<a class="headerlink" href="#admission-controllers" title="Permanent link">&para;</a></h3>
-<h4 id="admission-controllers_1">▼ admission controllersプラグインとは<a class="headerlink" href="#admission-controllers_1" title="Permanent link">&para;</a></h4>
+<h3 id="admission-controllers">admission-controllers<a class="headerlink" href="#admission-controllers" title="Permanent link">&para;</a></h3>
+<h4 id="admission-controllers_1">▼ admission-controllersとは<a class="headerlink" href="#admission-controllers_1" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_admission-controllers" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers.png" /></p>
-<p>kube-apiserverのリクエストの処理時には認証認可プロセスがある。admission controllersプラグインを導入すると、この後に、作成リクエストや変更リクエストのパラメーターを条件に応じて書き換える処理や、パラメーターのバリデーションを実行する処理を定義できる。</p>
+<p>kube-apiserverのリクエストの処理時には認証認可プロセスがある。admission-controllersを導入すると、この後に、作成リクエストや変更リクエストのパラメーターを条件に応じて書き換える処理や、パラメーターのバリデーションを実行する処理を定義できる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/">https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/</a></li>
 <li><a href="https://knowledge.sakura.ad.jp/21129/">https://knowledge.sakura.ad.jp/21129/</a></li>
 <li><a href="https://blog.mosuke.tech/entry/2022/05/15/admission-webhook-1/">https://blog.mosuke.tech/entry/2022/05/15/admission-webhook-1/</a></li>
 </ul>
-<h4 id="admission-controllers_2">▼ admission controllersプラグインの構成<a class="headerlink" href="#admission-controllers_2" title="Permanent link">&para;</a></h4>
+<h4 id="admission-controllers_2">▼ admission-controllersの構成<a class="headerlink" href="#admission-controllers_2" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_admission-controllers_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers_architecture.png" /></p>
-<p>admission controllersプラグインは、2つのステップから構成されている。各ステップで実行する具体的な処理は、admission controllersの各プラグインで定義する以外に、Webhookプラグインで独自処理をコールするように定義することもできる。</p>
+<p>admission-controllersは、2つのステップから構成されている。各ステップで実行する具体的な処理は、admission controllersの各プラグインで定義する以外に、Webhookプラグインで独自処理をコールするように定義することもできる。Istioの<code>metadata.labels.istio-injection</code>キーの自動挿入は、admission controllersのWebhookを使用した機能である。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/">https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/</a></li>
@@ -10438,7 +10438,7 @@ Address:  <span class="m">10</span>.105.157.184
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

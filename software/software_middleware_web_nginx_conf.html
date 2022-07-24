@@ -8204,7 +8204,7 @@ $ php-fpm -t
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">http</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Nginxのバージョンを表示するかどうか</span>
+<span class="w">    </span><span class="c1"># Nginxのバージョンを表示するか否か</span>
 <span class="w">    </span><span class="kn">server_tokens</span><span class="w">      </span><span class="no">off</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="c1"># MIMEタイプを設定</span>
 <span class="w">    </span><span class="kn">include</span><span class="w">            </span><span class="s">/etc/nginx/mime.types</span><span class="p">;</span><span class="w"></span>
@@ -8214,9 +8214,9 @@ $ php-fpm -t
 <span class="w">                             </span><span class="s">&quot;</span><span class="nv">$status</span><span class="w"> </span><span class="nv">$body_bytes_sent</span><span class="w"> </span><span class="s">&quot;</span><span class="nv">$http_referer&quot;</span><span class="w"> </span><span class="s">&quot;</span><span class="w"></span>
 <span class="w">                             </span><span class="s">&quot;&quot;</span><span class="nv">$http_user_agent&quot;</span><span class="w"> </span><span class="s">&quot;</span><span class="nv">$http_x_forwarded_for&quot;&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kn">access_log</span><span class="w">         </span><span class="s">/var/log/nginx/access.log</span><span class="w">  </span><span class="s">main</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># sendfileシステムコールを使用するかどうか</span>
+<span class="w">    </span><span class="c1"># sendfileシステムコールを使用するか否か</span>
 <span class="w">    </span><span class="kn">sendfile</span><span class="w">           </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># ヘッダーとファイルをまとめてレスポンスするかどうか</span>
+<span class="w">    </span><span class="c1"># ヘッダーとファイルをまとめてレスポンスするか否か</span>
 <span class="w">    </span><span class="kn">tcp_nopush</span><span class="w">         </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="c1"># keepaliveを維持する時間</span>
 <span class="w">    </span><span class="kn">keepalive_timeout</span><span class="w">  </span><span class="mi">65</span><span class="p">;</span><span class="w"></span>
@@ -8390,7 +8390,7 @@ $ php-fpm -t
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sendfile">▼ sendfile<a class="headerlink" href="#sendfile" title="Permanent link">&para;</a></h4>
-<p>クライアントへのレスポンス時に、ファイル送信のためにLinuxのsendfileシステムコールを使用するかどうかを設定する。ファイル返信処理をOS内で行うため、処理が速くなる。使用しない場合、Nginxがレスポンス時に自身でファイル返信処理を行う。</p>
+<p>クライアントへのレスポンス時に、ファイル送信のためにLinuxのsendfileシステムコールを使用するか否かを設定する。ファイル返信処理をOS内で行うため、処理が速くなる。使用しない場合、Nginxがレスポンス時に自身でファイル返信処理を行う。</p>
 <p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile">https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">sendfile</span><span class="w"> </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
@@ -8423,7 +8423,7 @@ $ php-fpm -t
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/nginx/ssl/server.key</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="tcp_nopush">▼ tcp_nopush<a class="headerlink" href="#tcp_nopush" title="Permanent link">&para;</a></h4>
-<p>上述のLinuxの<code>sendfile</code>システムコールを使用する場合に適用できる。クライアントへのレスポンス時、ヘッダーとファイルを1つのパケットにまとめて返信するかどうかを設定する。</p>
+<p>上述のLinuxの<code>sendfile</code>システムコールを使用する場合に適用できる。クライアントへのレスポンス時、ヘッダーとファイルを1つのパケットにまとめて返信するか否かを設定する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">tcp_nopush</span><span class="w"> </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -8591,7 +8591,7 @@ $ php-fpm -t
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

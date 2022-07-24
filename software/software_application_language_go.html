@@ -7333,7 +7333,7 @@ $ yum install -y golang
 <h4 id="bin">▼ <code>bin</code><a class="headerlink" href="#bin" title="Permanent link">&para;</a></h4>
 <p>ビルドされたアーティファクト（バイナリファイル）を配置するディレクトリ。バイナリファイル名を指定すると、処理を実行できる。</p>
 <h4 id="pkg">▼ <code>pkg</code><a class="headerlink" href="#pkg" title="Permanent link">&para;</a></h4>
-<p>アーティファクトとは別に生成されるファイルを配置するディレクトリ</p>
+<p>アーティファクトとは別に作成されるファイルを配置するディレクトリ</p>
 <h4 id="src">▼ <code>src</code><a class="headerlink" href="#src" title="Permanent link">&para;</a></h4>
 <p>コードを配置するディレクトリ</p>
 <p><br></p>
@@ -7346,7 +7346,7 @@ $ yum install -y golang
 <p>ビルトインパッケージ、内部パッケージ、事前にインストールされた外部パッケージを読み込む。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="s">&quot;&lt;パッケージ名&gt;&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>互いにインポートし合うと、循環参照エラー（<code>mport cycle not allowed</code>）になる。インターフェースと構造体の両方を同じパッケージに置いていると、インターフェースが他からインポートされ、構造体が他をインポートするようになり、起こりやすい。</p>
+<p>互いにインポートし合うと、循環参照エラー（<code>mport cycle not allowed</code>）になる。インターフェースと構造体の両方を同じパッケージに置いていると、インターフェースが他からインポートされ、構造体が他をインポートするようになり、発生しやすい。</p>
 <p><img alt="golang_import_cycle" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/golang_import_cycle.png" /></p>
 <h4 id="func">▼ func<a class="headerlink" href="#func" title="Permanent link">&para;</a></h4>
 <p>詳しくは、関数を参考にせよ。</p>
@@ -7448,7 +7448,7 @@ $ yum install -y golang
 <p>Uber社が採用しているお作法。</p>
 <p>参考：<a href="https://github.com/uber-go/guide/blob/master/style.md">https://github.com/uber-go/guide/blob/master/style.md</a></p>
 <h4 id="_18">▼ イミュータブルにできない<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
-<p>Goには、標準でイミュータブルの機能がなく、これを無理に実現しようとすると逆に保守性が低くなることがある。そのため、イミュータブルにするかどうかは慎重に判断する。</p>
+<p>Goには、標準でイミュータブルの機能がなく、これを無理に実現しようとすると逆に保守性が低くなることがある。そのため、イミュータブルにするか否かは慎重に判断する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://zenn.dev/nobonobo/articles/9a9f12b27bfde9#go%E3%81%AF%E3%81%AA%E3%81%9C%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E4%BF%AE%E9%A3%BE%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%EF%BC%9F">https://zenn.dev/nobonobo/articles/9a9f12b27bfde9#go%E3%81%AF%E3%81%AA%E3%81%9C%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E4%BF%AE%E9%A3%BE%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%EF%BC%9F</a></li>
@@ -7460,7 +7460,7 @@ $ yum install -y golang
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

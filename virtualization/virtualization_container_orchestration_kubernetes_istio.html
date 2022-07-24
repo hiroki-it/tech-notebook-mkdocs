@@ -4777,14 +4777,47 @@
       
         <li class="md-nav__item">
   <a href="#06" class="md-nav__link">
-    06. 認証
+    06. 障害対策
+  </a>
+  
+    <nav class="md-nav" aria-label="06. 障害対策">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サーキットブレイカー
+  </a>
+  
+    <nav class="md-nav" aria-label="サーキットブレイカー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ▼ サーキットブレイカーとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    07. 認証
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#06-02" class="md-nav__link">
-    06-02. 認可
+  <a href="#07-02" class="md-nav__link">
+    07-02. 認可
   </a>
   
 </li>
@@ -7509,14 +7542,47 @@
       
         <li class="md-nav__item">
   <a href="#06" class="md-nav__link">
-    06. 認証
+    06. 障害対策
+  </a>
+  
+    <nav class="md-nav" aria-label="06. 障害対策">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    サーキットブレイカー
+  </a>
+  
+    <nav class="md-nav" aria-label="サーキットブレイカー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ▼ サーキットブレイカーとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    07. 認証
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#06-02" class="md-nav__link">
-    06-02. 認可
+  <a href="#07-02" class="md-nav__link">
+    07-02. 認可
   </a>
   
 </li>
@@ -7765,7 +7831,7 @@
 </tr>
 <tr>
 <td>アウトバウンド</td>
-<td>istio-proxyコンテナの送信するアウトバウンド通信をTLSで暗号化するかどうか、を決定する機能を担う。</td>
+<td>istio-proxyコンテナの送信するアウトバウンド通信をTLSで暗号化するか否か、を決定する機能を担う。</td>
 <td>参考：<a href="https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars">https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars</a></td>
 </tr>
 </tbody>
@@ -7842,7 +7908,13 @@
 </tbody>
 </table>
 <p><br></p>
-<h2 id="06">06. 認証<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
+<h2 id="06">06. 障害対策<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
+<h3 id="_8">サーキットブレイカー<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h4 id="_9">▼ サーキットブレイカーとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>マイクロサービス間に設置され、他のマイクロサービスに連鎖的に起こる障害（カスケード障害）を吸収する仕組みのこと。下流マイクロサービスに障害が発生した時に、上流マイクロサービスにエラーを返してしまわないよう、一旦マイクロサービスへのルーティングを停止し、直近の成功時の処理結果を返信する。</p>
+<p><img alt="circuit-breaker" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/circuit-breaker.png" /></p>
+<p><br></p>
+<h2 id="07">07. 認証<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
 <p>マイクロサービスアーキテクチャにおける認証にはいくつか種類がある。そのうち、Istioは『分散型』と『ゲートウェイ分散型』の認証を実現することを助ける。</p>
 <p>参考：</p>
 <ul>
@@ -7850,7 +7922,7 @@
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_microservices.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_microservices.html</a></li>
 </ul>
 <p><br></p>
-<h2 id="06-02">06-02. 認可<a class="headerlink" href="#06-02" title="Permanent link">&para;</a></h2>
+<h2 id="07-02">07-02. 認可<a class="headerlink" href="#07-02" title="Permanent link">&para;</a></h2>
 <p>参考：<a href="https://istio.io/latest/docs/concepts/security/#authorization">https://istio.io/latest/docs/concepts/security/#authorization</a></p>
 
   <hr>
@@ -7858,7 +7930,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

@@ -7873,11 +7873,11 @@
 <h4 id="association_1">▼ Associationとは<a class="headerlink" href="#association_1" title="Permanent link">&para;</a></h4>
 <p>クラスＡがクラスＢをデータとして保持する関係性のこと。引数型/返却値型として使用する『依存』とは区別する。</p>
 <h4 id="association_2">▼ Associationの種類<a class="headerlink" href="#association_2" title="Permanent link">&para;</a></h4>
-<p>保持される側のクラスのインスタンスが、データとして保持する側のクラスによって生成されるか否かによって、『Aggregation』または『Composition』に分類できる。</p>
+<p>保持される側のクラスのインスタンスが、データとして保持する側のクラスによって作成されるか否かによって、『Aggregation』または『Composition』に分類できる。</p>
 <p><br></p>
 <h3 id="aggregation">Aggregation（集約）<a class="headerlink" href="#aggregation" title="Permanent link">&para;</a></h3>
 <h4 id="aggregation_1">▼ Aggregationとは<a class="headerlink" href="#aggregation_1" title="Permanent link">&para;</a></h4>
-<p>保持される側のクラスのインスタンスが、保持する側のクラスのインスタンスによって生成されずに外側から渡される時、クラス間が『Aggregation』の関係にある。</p>
+<p>保持される側のクラスのインスタンスが、保持する側のクラスのインスタンスによって作成されずに外側から渡される時、クラス間が『Aggregation』の関係にある。</p>
 <h4 id="_2">▼ 例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p><img alt="aggregation_example" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/aggregation_example.png" /></p>
 <p>UserはUserNameをデータとして保持する。</p>
@@ -7923,7 +7923,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>また、UserNameクラスのインスタンスは、Userクラスによって生成されずに外側から渡される。そのため、UserクラスとUserNameクラスは『Aggregation』の関係にある。</p>
+<p>また、UserNameクラスのインスタンスは、Userクラスによって作成されずに外側から渡される。そのため、UserクラスとUserNameクラスは『Aggregation』の関係にある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8021,7 +8021,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>また、Tireクラスのインスタンスは、Carクラスによって生成されずに外側から渡される。そのため、CarクラスとTireクラスは『Aggregation』の関係にある。</p>
+<p>また、Tireクラスのインスタンスは、Carクラスによって作成されずに外側から渡される。そのため、CarクラスとTireクラスは『Aggregation』の関係にある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8039,13 +8039,13 @@
 <span class="nv">$tire3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tire3</span><span class="p">();</span>
 <span class="nv">$tire4</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tire4</span><span class="p">();</span>
 
-<span class="c1">// Tireクラスのインスタンスの生成、Carによって制限されない。</span>
+<span class="c1">// Tireクラスのインスタンスの作成、Carによって制限されない。</span>
 <span class="nv">$car</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Car</span><span class="p">(</span><span class="nv">$tire1</span><span class="p">,</span> <span class="nv">$tire2</span><span class="p">,</span> <span class="nv">$tire3</span><span class="p">,</span> <span class="nv">$tire4</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="composition">Composition（合成）<a class="headerlink" href="#composition" title="Permanent link">&para;</a></h3>
 <h4 id="composition_1">▼ Compositionとは<a class="headerlink" href="#composition_1" title="Permanent link">&para;</a></h4>
-<p>保持される側のクラスのインスタンスが、保持する側のクラスのインスタンスによって生成される時、クラス間が『Composition』の関係にある。</p>
+<p>保持される側のクラスのインスタンスが、保持する側のクラスのインスタンスによって作成される時、クラス間が『Composition』の関係にある。</p>
 <h4 id="_3">▼ 例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <p><img alt="composition_example" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/composition_example.png" /></p>
@@ -8096,7 +8096,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>また、UserNameインスタンスは、Userクラスによって生成される。そのため、UserクラスとUserNameクラスは『Composition』の関係にある。</p>
+<p>また、UserNameインスタンスは、Userクラスによって作成される。そのため、UserクラスとUserNameクラスは『Composition』の関係にある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
@@ -8135,7 +8135,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>また、Lockクラスのインスタンスは、Carクラスによって生成される。そのため、CarクラスとLockクラスは『Composition』の関係にある。</p>
+<p>また、Lockクラスのインスタンスは、Carクラスによって作成される。そのため、CarクラスとLockクラスは『Composition』の関係にある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8657,7 +8657,7 @@
 <h3 id="trait">Trait<a class="headerlink" href="#trait" title="Permanent link">&para;</a></h3>
 <h4 id="trait_1">▼ Traitとは<a class="headerlink" href="#trait_1" title="Permanent link">&para;</a></h4>
 <p><img alt="Trait" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/Trait.png" /></p>
-<p>再利用したいメソッドやデータを部品化し、利用したい時にクラスに取り込む。Traitを使用するときは、クラス内でTraitをuse宣言する。Trait自体は不完全なクラスであり、インスタンス化できない。また、親クラスでトレイトを読み込むと、子クラスでもトレイトの機能を使用できる。</p>
+<p>再利用したいメソッドやデータを部品化し、利用したい時にクラスに取り込む。Traitを使用する時は、クラス内でTraitをuse宣言する。Trait自体は不完全なクラスであり、インスタンス化できない。また、親クラスでトレイトを読み込むと、子クラスでもトレイトの機能を使用できる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9237,7 +9237,7 @@
 <li><a href="https://little-hands.hatenablog.com/entry/2018/05/27/dependency-injection">https://little-hands.hatenablog.com/entry/2018/05/27/dependency-injection</a></li>
 </ul>
 <h4 id="_26">▼ コンストラクタインジェクションとは<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
-<p>メソッドの特に、<code>construct</code>メソッド の引数として、サプライヤー側のインスタンスを注入する方法。サプライヤー側をデータとして保持させ、Aggregationの関係性を作られる。コンストラクタインジェクションのみが、<code>construct</code>メソッド によって、インスタンス作成のために依存関係の要件を強制できる。また、セッターを完全になくした場合、インスタンス生成後にオブジェクトの状態を変更できなくなる。そのため、ビジネス上ありえないオブジェクトを生成できなくなり、インジェクションの中で、ソフトウェアの安全性の観点で最も優れている。</p>
+<p>メソッドの特に、<code>construct</code>メソッド の引数として、サプライヤー側のインスタンスを注入する方法。サプライヤー側をデータとして保持させ、Aggregationの関係性を作られる。コンストラクタインジェクションのみが、<code>construct</code>メソッド によって、インスタンス作成のために依存関係の要件を強制できる。また、セッターを完全になくした場合、インスタンス作成後にオブジェクトの状態を変更できなくなる。そのため、ビジネス上ありえないオブジェクトを作成できなくなり、インジェクションの中で、ソフトウェアの安全性の観点で最も優れている。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>依存先のSupplierクラスを、<code>construct</code>メソッドの引数として、Clientクラスに注入する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9429,7 +9429,7 @@
 <p><br></p>
 <h3 id="di-containerservice-container">DI Container（依存オブジェクト注入コンテナ）、Service Container<a class="headerlink" href="#di-containerservice-container" title="Permanent link">&para;</a></h3>
 <h4 id="di-containerservice-container_1">▼ DI Container（依存オブジェクト注入コンテナ）、Service Containerとは<a class="headerlink" href="#di-containerservice-container_1" title="Permanent link">&para;</a></h4>
-<p>依存オブジェクト注入の責務に特化したデザインパターンを『Service Container』という。あらかじめクラスを登録（バインド）しておき、必要な時にインスタンスを生成（リゾルブ）してくれる。なお、</p>
+<p>依存オブジェクト注入の責務に特化したデザインパターンを『Service Container』という。あらかじめクラスを登録（バインド）しておき、必要な時にインスタンスを作成（リゾルブ）してくれる。なお、</p>
 <p><strong>＊実装例＊</strong></p>
 <p>Pimpleパッケージを使用した場合</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9479,7 +9479,7 @@
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
 
-<span class="c1">// autoload.php で、DIコンテナ自体のインスタンスを事前に生成。</span>
+<span class="c1">// autoload.php で、DIコンテナ自体のインスタンスを事前に作成。</span>
 <span class="nv">$container</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Container</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9493,7 +9493,7 @@
 <span class="c1">// DIコンテナの読み出し</span>
 <span class="k">require_once</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s2">&quot;/autoload.php&quot;</span><span class="p">;</span>
 
-<span class="c1">// クラス名を宣言してインスタンスを生成。</span>
+<span class="c1">// クラス名を宣言してインスタンスを作成。</span>
 <span class="nv">$sample</span> <span class="o">=</span> <span class="nv">$container</span><span class="p">[</span><span class="s2">&quot;sample&quot;</span><span class="p">];</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="service-locater-pattern">▼ アンチパターンのService Locater Pattern<a class="headerlink" href="#service-locater-pattern" title="Permanent link">&para;</a></h4>
@@ -9565,7 +9565,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

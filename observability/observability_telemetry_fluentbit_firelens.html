@@ -7235,7 +7235,7 @@
 <span class="w">        </span><span class="s">&quot;config-file-type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;file&quot;</span><span class="p p-Indicator">,</span><span class="w"></span>
 <span class="w">        </span><span class="c1"># 設定上書きのため読み出し</span><span class="w"></span>
 <span class="w">        </span><span class="s">&quot;config-file-value&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;/fluent-bit/etc/fluent-bit_custom.conf&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="c1"># ECSの情報をFireLensコンテナに送信するかどうか</span><span class="w"></span>
+<span class="w">        </span><span class="c1"># ECSの情報をFireLensコンテナに送信するか否か</span><span class="w"></span>
 <span class="w">        </span><span class="s">&quot;enable-ecs-log-metadata&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">}</span><span class="w"></span>
 <span class="w">    </span><span class="p p-Indicator">},</span><span class="w"></span>
@@ -7570,9 +7570,9 @@
     Key_Name        container_name
     <span class="c1"># 使用するパーサールール</span>
     Parser          docker-name-parser
-    <span class="c1"># 解析されたキーの元の値を保持するかどうか</span>
+    <span class="c1"># 解析されたキーの元の値を保持するか否か</span>
     Preserve_Key    <span class="nb">false</span>
-    <span class="c1"># 解析されたキー以外を保持するかどうか</span>
+    <span class="c1"># 解析されたキー以外を保持するか否か</span>
     Reserve_Data    <span class="nb">true</span>
 </code></pre></div></td></tr></table></div>
 <p>PARSERセクションでコンテナ名を抽出したおかげで、STREAM_TASKのログクエリのWHERE句で指定できるようになる。</p>
@@ -7625,7 +7625,7 @@
 <p><br></p>
 <h3 id="fluent-bitetcstream_processorconf"><code>/fluent-bit/etc/stream_processor.conf</code>ファイル<a class="headerlink" href="#fluent-bitetcstream_processorconf" title="Permanent link">&para;</a></h3>
 <h4 id="stream_processorconf">▼ <code>stream_processor.conf</code>ファイルとは<a class="headerlink" href="#stream_processorconf" title="Permanent link">&para;</a></h4>
-<p>ログの生成元のコンテナごとに異なる処理を設定したい場合、<code>stream_processor.conf</code>ファイルでSTREAM_TASKセクションを定義する必要がある。</p>
+<p>ログの作成元のコンテナごとに異なる処理を設定したい場合、<code>stream_processor.conf</code>ファイルでSTREAM_TASKセクションを定義する必要がある。</p>
 <h4 id="stream_task">▼ STREAM_TASKセクション<a class="headerlink" href="#stream_task" title="Permanent link">&para;</a></h4>
 <p>FireLensコンテナで処理中のログのタグ名は『<code>&lt;コンテナ名&gt;-firelens-&lt;ECSタスクID&gt;</code>』になっている。そのため、Stream Processorでログを抽出するためには、クエリで『<code>FROM TAG:'*-firelens-*'</code>』を指定する必要がある。ちなみに、STREAM_TASKでタグ付けされたログは、INPUTから再び処理し直される。</p>
 <p>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></p>
@@ -7670,7 +7670,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

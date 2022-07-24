@@ -6928,7 +6928,7 @@
 </tr>
 </tbody>
 </table>
-<p>1つのWebページの中で、サーバーとデータを非同期通信し、ブラウザ側で部分的に静的ファイルを生成する。クライアント側でレンダリングを行うため、SSRと比較してCSR：Client Server side Renderingともいう。非同期通信は、Ajaxの手法を使用して実現される。また、静的ファイルの部分的な生成は、MVVMアーキテクチャによって実現する。SPAでは、ページ全体の静的ファイルをリクエストするのは最初のみで、それ以降はページ全体をリクエストすることはない。２回目以降は、ページ部分的にリクエストを行い、サーバー側からJSONを受け取っていく。</p>
+<p>1つのWebページの中で、サーバーとデータを非同期通信し、ブラウザ側で部分的に静的ファイルを作成する。クライアント側でレンダリングを行うため、SSRと比較してCSR：Client Server side Renderingともいう。非同期通信は、Ajaxの手法を使用して実現される。また、静的ファイルの部分的な作成は、MVVMアーキテクチャによって実現する。SPAでは、ページ全体の静的ファイルをリクエストするのは最初のみで、それ以降はページ全体をリクエストすることはない。２回目以降は、ページ部分的にリクエストを行い、サーバー側からJSONを受け取っていく。</p>
 <p>参考：<a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications?hl=ja">https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications?hl=ja</a></p>
 <p><img alt="SPアプリにおけるデータ通信の仕組み" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/SPアプリにおけるデータ通信の仕組み.png" /></p>
 <p><br></p>
@@ -6945,7 +6945,7 @@
 <p><br></p>
 <h2 id="02-ssrserver-side-rendering">02. SSR：Server Side Rendering<a class="headerlink" href="#02-ssrserver-side-rendering" title="Permanent link">&para;</a></h2>
 <h3 id="ssr">広義のSSRとは<a class="headerlink" href="#ssr" title="Permanent link">&para;</a></h3>
-<p>ブラウザ側ではなくサーバー側で静的ファイルを生成する。フレームワークのテンプレートエンジンやCGIを使用して、サーバー側で静的ファイルを生成すること、も含まれる。</p>
+<p>ブラウザ側ではなくサーバー側で静的ファイルを作成する。フレームワークのテンプレートエンジンやCGIを使用して、サーバー側で静的ファイルを作成すること、も含まれる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://tadtadya.com/summary-of-the-web-site-display-process-flow/#index-list-8">https://tadtadya.com/summary-of-the-web-site-display-process-flow/#index-list-8</a></li>
@@ -6979,7 +6979,7 @@
 </table>
 <p><br></p>
 <h3 id="ssr_1">狭義のSSRとは<a class="headerlink" href="#ssr_1" title="Permanent link">&para;</a></h3>
-<p>広義のSSRにSPAを取り入れた方法のこと。ブラウザ側ではなくサーバー側で静的ファイルを生成する。広義のSSRと異なる点は、ブラウザ側にレンダリングされた後、アイソモーフィックJavaScriptという仕組みでSPAとして動作する。</p>
+<p>広義のSSRにSPAを取り入れた方法のこと。ブラウザ側ではなくサーバー側で静的ファイルを作成する。広義のSSRと異なる点は、ブラウザ側にレンダリングされた後、アイソモーフィックJavaScriptという仕組みでSPAとして動作する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://qiita.com/rita0222/items/66fec6e7be5987bace3c">https://qiita.com/rita0222/items/66fec6e7be5987bace3c</a></li>
@@ -6988,11 +6988,11 @@
 <p><br></p>
 <h2 id="03-ssgstatic-site-generation">03. SSG：Static Site Generation<a class="headerlink" href="#03-ssgstatic-site-generation" title="Permanent link">&para;</a></h2>
 <h3 id="ssg">SSGとは<a class="headerlink" href="#ssg" title="Permanent link">&para;</a></h3>
-<p>事前にビルドを行って静的ファイルを生成しておく。そして、これをレンダリングし、静的サイトとして稼働させる。動的な要素（例：ランダム表示）を含む静的ファイルについては、該当の部分でAjaxを使用できるようにしておく。</p>
+<p>事前にビルドを行って静的ファイルを作成しておく。そして、これをレンダリングし、静的サイトとして稼働させる。動的な要素（例：ランダム表示）を含む静的ファイルについては、該当の部分でAjaxを使用できるようにしておく。</p>
 <p><br></p>
 <h2 id="04-isrincremental-static-regeneration">04. ISR：Incremental Static Regeneration<a class="headerlink" href="#04-isrincremental-static-regeneration" title="Permanent link">&para;</a></h2>
 <h3 id="isr">ISRとは<a class="headerlink" href="#isr" title="Permanent link">&para;</a></h3>
-<p>SSGの発展型。SSGとは異なり、事前にビルドせず、静的ファイルを生成しない。その代わり、クライアントからリクエストがあって初めて、そのWebページのみビルドが実行され、レンダリングされる。クライアントから一回でもリクエストがあったWebページでは、初回時にビルドされた静的ファイルがその都度レンダリングされる。</p>
+<p>SSGの発展型。SSGとは異なり、事前にビルドせず、静的ファイルを作成しない。その代わり、クライアントからリクエストがあって初めて、そのWebページのみビルドが実行され、レンダリングされる。クライアントから一回でもリクエストがあったWebページでは、初回時にビルドされた静的ファイルがその都度レンダリングされる。</p>
 <p>参考：<a href="https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration">https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration</a></p>
 <p><br></p>
 <h2 id="05-atomic-design">05. Atomic Design<a class="headerlink" href="#05-atomic-design" title="Permanent link">&para;</a></h2>
@@ -7037,7 +7037,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

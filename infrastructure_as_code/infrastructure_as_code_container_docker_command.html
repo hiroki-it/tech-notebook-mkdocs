@@ -7554,7 +7554,7 @@
 <ol>
 <li>Docker Hubから、ベースとなるコンテナイメージをインストールする。</li>
 <li>Dockerfileがイメージレイヤーからなるコンテナイメージをビルド。</li>
-<li>コマンドによって、コンテナイメージ上にコンテナレイヤーを生成し、コンテナを作成。</li>
+<li>コマンドによって、コンテナイメージ上にコンテナレイヤーを作成し、コンテナを作成。</li>
 <li>コマンドによって、停止中コンテナを起動。</li>
 <li>コマンドによって、起動中コンテナに接続。</li>
 </ol>
@@ -7571,7 +7571,7 @@
 <h3 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
 <h4 id="-force-rm-no-cache">▼ -force-rm、--no-cache<a class="headerlink" href="#-force-rm-no-cache" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
-<p>キャッシュ無しで、指定のDockerfileを基に、コンテナイメージをビルドする。失敗した時は削除するように、<code>--force-rm</code>オプションを有効化するかどうかを設定する。</p>
+<p>キャッシュ無しで、指定のDockerfileを基に、コンテナイメージをビルドする。失敗した時は削除するように、<code>--force-rm</code>オプションを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker build --file Dockerfile --tag &lt;コンテナイメージ名&gt;:&lt;バージョンタグ&gt; --force-rm<span class="o">=</span><span class="nb">true</span> --no-cache .
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7627,7 +7627,7 @@ $ docker logs &lt;コンテナ名&gt;
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
 <h4 id="create_1">▼ createとは<a class="headerlink" href="#create_1" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
-<p>コンテナレイヤーを生成し、コンテナを作成。起動はしない。</p>
+<p>コンテナレイヤーを作成し、コンテナを作成。起動はしない。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker create &lt;コンテナ名&gt; &lt;コンテナイメージ名&gt;:&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8009,7 +8009,7 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

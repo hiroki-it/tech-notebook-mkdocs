@@ -8599,7 +8599,7 @@ Upload: <span class="m">182</span>.00 Mbit/s <span class="c1"># アップロー�
 <span class="na">loglevel</span><span class="o">=</span><span class="s">info</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="nodaemon">▼ nodaemon<a class="headerlink" href="#nodaemon" title="Permanent link">&para;</a></h4>
-<p>supervisordをフォアグラウンドで起動するかどうかを設定する。</p>
+<p>supervisordをフォアグラウンドで起動するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[supervisord]</span><span class="w"></span>
 <span class="na">nodaemon</span><span class="o">=</span><span class="s">true</span><span class="w"></span>
@@ -8646,13 +8646,13 @@ Upload: <span class="m">182</span>.00 Mbit/s <span class="c1"># アップロー�
 <span class="c1"># 〜 中略 〜</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="autorestart">▼ autorestart<a class="headerlink" href="#autorestart" title="Permanent link">&para;</a></h4>
-<p>デーモン化されたプロセスの異常停止時に自動的に起動させるかどうかを設定する。</p>
+<p>デーモン化されたプロセスの異常停止時に自動的に起動させるか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[program:foo]</span><span class="w"></span>
 <span class="na">autorestart</span><span class="o">=</span><span class="s">true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="autostart">▼ autostart<a class="headerlink" href="#autostart" title="Permanent link">&para;</a></h4>
-<p>supervisordの起動時に、デーモン化されたプロセスを自動的に起動させるかどうか、を設定する。</p>
+<p>supervisordの起動時に、デーモン化されたプロセスを自動的に起動させるか否か、を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[program:foo]</span><span class="w"></span>
 <span class="na">autostart</span><span class="o">=</span><span class="s">true</span><span class="w"></span>
@@ -8664,7 +8664,7 @@ Upload: <span class="m">182</span>.00 Mbit/s <span class="c1"># アップロー�
 <span class="na">command</span><span class="o">=</span><span class="s">/usr/sbin/crond -n</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="redirect_stderr_1">▼ redirect_stderr<a class="headerlink" href="#redirect_stderr_1" title="Permanent link">&para;</a></h4>
-<p>デーモン化されたプロセスの標準出力への出力を標準エラー出力に転送するかどうかを設定する。</p>
+<p>デーモン化されたプロセスの標準出力への出力を標準エラー出力に転送するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[program:foo]</span><span class="w"></span>
 <span class="na">redirect_stderr</span><span class="o">=</span><span class="s">true</span><span class="w"></span>
@@ -9068,7 +9068,7 @@ mq959 /usr/sbin/rsyslogd -n
 <span class="m">09</span>:36:20.885482 IP <span class="m">10</span>.0.1.23.65428 &gt; <span class="m">93</span>.184.216.119.http: Flags <span class="o">[</span>.<span class="o">]</span>, ack <span class="m">1</span>, win <span class="m">16384</span>, length <span class="m">0</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<p>awkコマンドやgrepコマンドと組み合わせると、特定のIPアドレスを送信元/送信先としたパケットがあるかどうかを検出できる。</p>
+<p>awkコマンドやgrepコマンドと組み合わせると、特定のIPアドレスを送信元/送信先としたパケットがあるか否かを検出できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ tcpdump &lt;コマンド、オプション&gt; <span class="se">\</span>
@@ -9119,7 +9119,7 @@ mq959 /usr/sbin/rsyslogd -n
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

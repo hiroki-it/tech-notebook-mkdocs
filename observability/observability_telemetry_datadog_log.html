@@ -8456,13 +8456,13 @@
 <tbody>
 <tr>
 <td><code>host</code></td>
-<td>ログの生成元のホスト名を示す。</td>
-<td>ログが生成元とは別の場所から受信した場合に役立つ。datadogコンテナの環境変数にて、<code>DD_HOSTNAME</code>を使用して<code>host</code>属性を設定する。これにより、ホストマップでホストを俯瞰できるようになるだけでなく、ログエクスプローラでホストタグが属性として付与される。他にAWSインテグレーションでは、送信元のロググループ名やバケット名が付与される。</td>
+<td>ログの作成元のホスト名を示す。</td>
+<td>ログが作成元とは別の場所から受信した場合に役立つ。datadogコンテナの環境変数にて、<code>DD_HOSTNAME</code>を使用して<code>host</code>属性を設定する。これにより、ホストマップでホストを俯瞰できるようになるだけでなく、ログエクスプローラでホストタグが属性として付与される。他にAWSインテグレーションでは、送信元のロググループ名やバケット名が付与される。</td>
 <td>・<code>foo</code><br>・<code>foo-backend</code><br>・<code>foo-frontend</code><br>・<code>foo-log-group</code><br>・<code>foo-bucket</code></td>
 </tr>
 <tr>
 <td><code>source</code></td>
-<td>ログの生成元の名前を示す。</td>
+<td>ログの作成元の名前を示す。</td>
 <td>ベンダー名を使用するとわかりやすい。</td>
 <td>・<code>laravel</code><br>・<code>nginx</code><br>・<code>redis</code></td>
 </tr>
@@ -8474,7 +8474,7 @@
 </tr>
 <tr>
 <td><code>service</code></td>
-<td>ログの生成元のアプリケーション名を示す。</td>
+<td>ログの作成元のアプリケーション名を示す。</td>
 <td>ログとAPM分散トレースを紐付けるため、両方に同じ名前を割り当てる必要がある。</td>
 <td>・<code>foo</code><br>・<code>bar-backend</code><br>・<code>baz-frontend</code></td>
 </tr>
@@ -9348,10 +9348,10 @@ error.format %{date(&quot;yyyy/MM/dd HH:mm:ss&quot;):date_access} \[%{word:level
 <p><br></p>
 <h3 id="_24">ストリングビルダープロセッサー<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="_25">▼ ストリングビルダープロセッサーとは<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
-<p>構造化ログの属性にアクセスし、ルールを基に属性値を出力し、新しい文字列を生成する。配列値のキー名にアクセスするようにルールを定義した場合、そのキーの全ての値をカンマ区切りで出力できる。また、配列状のオブジェクトのキー名にアクセスするようにルールを定義した場合、各オブジェクトの同キーの値をカンマ区切りで出力できる。</p>
+<p>構造化ログの属性にアクセスし、ルールを基に属性値を出力し、新しい文字列を作成する。配列値のキー名にアクセスするようにルールを定義した場合、そのキーの全ての値をカンマ区切りで出力できる。また、配列状のオブジェクトのキー名にアクセスするようにルールを定義した場合、各オブジェクトの同キーの値をカンマ区切りで出力できる。</p>
 <p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor</a></p>
 <h4 id="1_3">▼ 例１<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
-<p>ログパイプラインを経て、以下のような構造化ログが生成されているとする。</p>
+<p>ログパイプラインを経て、以下のような構造化ログが作成されているとする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9392,7 +9392,7 @@ error.format %{date(&quot;yyyy/MM/dd HH:mm:ss&quot;):date_access} \[%{word:level
 <span class="w">  </span><span class="p p-Indicator">}</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>これに対して、ストリングビルダープロセッサーのルールを定義する。構造化ログの<code>http.url</code>の値を出力して完全なURLを生成し、これを<code>http.url_full</code>属性として新しく付与する。</p>
+<p>これに対して、ストリングビルダープロセッサーのルールを定義する。構造化ログの<code>http.url</code>の値を出力して完全なURLを作成し、これを<code>http.url_full</code>属性として新しく付与する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>https://example.com%{http.url}
 </code></pre></div></td></tr></table></div>
 <p>これにより、以下の構造化ログが得られる。</p>
@@ -9661,7 +9661,7 @@ autoFilledRule3 ...
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

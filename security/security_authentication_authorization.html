@@ -4212,36 +4212,36 @@
         
           <li class="md-nav__item">
   <a href="#jwt_1" class="md-nav__link">
-    JWTの生成
+    JWTの作成
   </a>
   
-    <nav class="md-nav" aria-label="JWTの生成">
+    <nav class="md-nav" aria-label="JWTの作成">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#jwt_2" class="md-nav__link">
-    ▼ JWT生成の全体像
+    ▼ JWT作成の全体像
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json" class="md-nav__link">
-    ▼ ヘッダーのJSONデータの生成
+    ▼ ヘッダーのJSONデータの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json_1" class="md-nav__link">
-    ▼ ペイロードのJSONデータの生成
+    ▼ ペイロードのJSONデータの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json_2" class="md-nav__link">
-    ▼ 署名のJSONデータの生成
+    ▼ 署名のJSONデータの作成
   </a>
   
 </li>
@@ -7565,36 +7565,36 @@
         
           <li class="md-nav__item">
   <a href="#jwt_1" class="md-nav__link">
-    JWTの生成
+    JWTの作成
   </a>
   
-    <nav class="md-nav" aria-label="JWTの生成">
+    <nav class="md-nav" aria-label="JWTの作成">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#jwt_2" class="md-nav__link">
-    ▼ JWT生成の全体像
+    ▼ JWT作成の全体像
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json" class="md-nav__link">
-    ▼ ヘッダーのJSONデータの生成
+    ▼ ヘッダーのJSONデータの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json_1" class="md-nav__link">
-    ▼ ペイロードのJSONデータの生成
+    ▼ ペイロードのJSONデータの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#json_2" class="md-nav__link">
-    ▼ 署名のJSONデータの生成
+    ▼ 署名のJSONデータの作成
   </a>
   
 </li>
@@ -7702,7 +7702,7 @@
 <span class="err">    &quot;password&quot;: &quot;foo&quot;</span>
 <span class="err">}</span>
 </code></pre></div></td></tr></table></div>
-<p>サーバーは、DBの認証情報を照合し、ログインを許可する。サーバーは、セッションIDを生成し、セッションデータに書き込む。</p>
+<p>サーバーは、DBの認証情報を照合し、ログインを許可する。サーバーは、セッションIDを作成し、セッションデータに書き込む。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># セッションデータ</span>
 <span class="o">{</span> sessionid: ***** <span class="o">}</span>
@@ -7836,14 +7836,14 @@
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">POST https://example.com/foo-form</span>
-<span class="err">authorization: Digest realm=&quot;&lt;認証領域&gt;&quot; nonce=&quot;&lt;サーバー側が生成した任意の文字列&gt;&quot; algorithm=&quot;&lt;ハッシュ関数名&gt;&quot; qoq=&quot;auth&quot;</span>
+<span class="err">authorization: Digest realm=&quot;&lt;認証領域&gt;&quot; nonce=&quot;&lt;サーバー側が作成した任意の文字列&gt;&quot; algorithm=&quot;&lt;ハッシュ関数名&gt;&quot; qoq=&quot;auth&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="bearer">Bearer認証<a class="headerlink" href="#bearer" title="Permanent link">&para;</a></h3>
 <h4 id="bearer_1">▼ Bearer認証とは<a class="headerlink" href="#bearer_1" title="Permanent link">&para;</a></h4>
 <p>認証時に、Bearerトークンを使用する認証スキームのこと。</p>
 <h4 id="bearer_2">▼ Bearerトークン（署名なしトークン）とは<a class="headerlink" href="#bearer_2" title="Permanent link">&para;</a></h4>
-<p>単なる文字列で定義されたアクセストークン。Bearer認証にて、トークンとして使用する。署名なしトークンとも呼ばれ、実際に認証された本人かどうかを判定する機能は無く、トークンを持っていればそれを本人として認可する。そのため、トークンの文字列が流出してしまわないよう、厳重に管理する必要がある。</p>
+<p>単なる文字列で定義されたアクセストークン。Bearer認証にて、トークンとして使用する。署名なしトークンとも呼ばれ、実際に認証された本人か否かを判定する機能は無く、トークンを持っていればそれを本人として認可する。そのため、トークンの文字列が流出してしまわないよう、厳重に管理する必要がある。</p>
 <p>参考：<a href="https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3">https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3</a></p>
 <h4 id="bearer_3">▼ Bearer認証の仕組み<a class="headerlink" href="#bearer_3" title="Permanent link">&para;</a></h4>
 <p>指定されたエンドポイントに対して、<code>POST</code>リクエストを送信する。この時、<code>Content-Type</code>ヘッダーを<code>application/x-www-form-urlencoded</code>とする。必要なボディパラメーターはAPIの提供元によって異なる。クライアントID、付与タイプ、などが必要なことが多い。</p>
@@ -8056,7 +8056,7 @@
 </tr>
 <tr>
 <td>Identity Provider</td>
-<td>トークンを生成するサーバーのこと。</td>
+<td>トークンを作成するサーバーのこと。</td>
 <td>Ouath認証の仕組みにおける認可サーバー。</td>
 </tr>
 <tr>
@@ -8095,7 +8095,7 @@
 </tr>
 <tr>
 <td>認可サーバー</td>
-<td>リソースサーバーがリソースオーナーにアクセスできるトークンを生成する。</td>
+<td>リソースサーバーがリソースオーナーにアクセスできるトークンを作成する。</td>
 <td>認可サーバーがリダイレクト先のクライアントアプリケーションのURLをレスポンスに割り当てられるように、クライアントアプリケーションの開発者がURLを事前登録しておく必要がある。認可サーバーを利用する開発者用に、コンソール画面が用意されていることが多い。<br>参考：<a href="https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844">https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844</a></td>
 </tr>
 <tr>
@@ -8347,11 +8347,11 @@
 <span class="err">authorization: Bearer &lt;ヘッダーJSONエンコード値&gt;.&lt;ペイロードJSONエンコード値&gt;.&lt;署名JSONエンコード値&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="jwt_1">JWTの生成<a class="headerlink" href="#jwt_1" title="Permanent link">&para;</a></h3>
-<h4 id="jwt_2">▼ JWT生成の全体像<a class="headerlink" href="#jwt_2" title="Permanent link">&para;</a></h4>
+<h3 id="jwt_1">JWTの作成<a class="headerlink" href="#jwt_1" title="Permanent link">&para;</a></h3>
+<h4 id="jwt_2">▼ JWT作成の全体像<a class="headerlink" href="#jwt_2" title="Permanent link">&para;</a></h4>
 <p>JWTは以下のサイトから取得できる。</p>
 <p>参考：<a href="https://jwt.io/">https://jwt.io/</a></p>
-<p>JWTの生成時に、例えばJavaScriptであれば、以下のような処理が実行されている。</p>
+<p>JWTの作成時に、例えばJavaScriptであれば、以下のような処理が実行されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8360,7 +8360,7 @@
 <span class="w">      </span><span class="nx">base64urlEncoding</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;.&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
 <span class="w">      </span><span class="nx">base64urlEncoding</span><span class="p">(</span><span class="nx">signature</span><span class="p">)</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="json">▼ ヘッダーのJSONデータの生成<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
+<h4 id="json">▼ ヘッダーのJSONデータの作成<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
 <p>ヘッダーは以下のJSONデータで定義される。署名のための暗号化アルゴリズムは、『<code>HS256</code>』『<code>RS256</code>』『<code>ES256</code>』『<code>none</code>』から選択できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8370,7 +8370,7 @@
 <span class="w">    </span><span class="s2">&quot;alg&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;HS256&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// 署名のための暗号化アルゴリズム</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="json_1">▼ ペイロードのJSONデータの生成<a class="headerlink" href="#json_1" title="Permanent link">&para;</a></h4>
+<h4 id="json_1">▼ ペイロードのJSONデータの作成<a class="headerlink" href="#json_1" title="Permanent link">&para;</a></h4>
 <p>ペイロードは以下のJSONデータで定義される。ペイロードには、実際に送信したいJSONを設定する。必ず設定しなければならない『予約済みクレーム』と、ユーザー側が自由に定義できる『プライベートクレーム』がある。</p>
 <table>
 <thead>
@@ -8422,7 +8422,7 @@
 <span class="w">    </span><span class="s2">&quot;iat&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1452565568</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="json_2">▼ 署名のJSONデータの生成<a class="headerlink" href="#json_2" title="Permanent link">&para;</a></h4>
+<h4 id="json_2">▼ 署名のJSONデータの作成<a class="headerlink" href="#json_2" title="Permanent link">&para;</a></h4>
 <p>例えばJavaScriptであれば、以下のような処理が実行されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8479,7 +8479,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

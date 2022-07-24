@@ -8471,7 +8471,7 @@
 </tr>
 <tr>
 <td>UUID（例：<code>3cc807ab-8e31-3071-aee4-f8f03781cb91</code>）</td>
-<td>CREATE処理でモデルを作成する時に、アプケーションで生成したUUID値をドメインモデルのID値として割り当てる。UUID値が重複することは基本的に起こり得ないため、プライマリーキー制約を満たす。UUID値の生成関数は言語の標準パッケージとして用意されている。</td>
+<td>CREATE処理でモデルを作成する時に、アプケーションで作成したUUID値をドメインモデルのID値として割り当てる。UUID値が重複することは基本的に発生し得ないため、プライマリーキー制約を満たす。UUID値の作成関数は言語の標準パッケージとして用意されている。</td>
 <td>・ドメインモデルとDBがより疎結合にでき、Repositoryパターンと相性が良い。<br>UUID値は文字列として管理されるため、DBアクセス処理の負荷が高まってしまう。<br>プライマリーキーを使用してソートできない。</td>
 </tr>
 </tbody>
@@ -9668,7 +9668,7 @@ possible_keys: index_t2_on_c3
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

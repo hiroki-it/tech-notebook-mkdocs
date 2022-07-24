@@ -11078,7 +11078,7 @@ Insect does not implement Animal <span class="o">(</span>missing Eat method<span
 <h2 id="02">02. 関数<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="main">main関数<a class="headerlink" href="#main" title="Permanent link">&para;</a></h3>
 <h4 id="main_1">▼ <code>main</code>関数とは<a class="headerlink" href="#main_1" title="Permanent link">&para;</a></h4>
-<p>goのエントリーポイントとなる。goのプログラムが起動したときに、各パッケージの<code>init</code>関数が実行された後、<code>main</code>関数が実行される。<code>main</code>関数をビルド対象に指定すると、これを開始点として読み込まれるファイルが枝分かれ状にビルドされていく。ステータス『0』でプロセスを終了する。</p>
+<p>goのエントリーポイントとなる。goのプログラムが起動した時に、各パッケージの<code>init</code>関数が実行された後、<code>main</code>関数が実行される。<code>main</code>関数をビルド対象に指定すると、これを開始点として読み込まれるファイルが枝分かれ状にビルドされていく。ステータス『0』でプロセスを終了する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -11425,7 +11425,7 @@ runtime.main: undefined: main.main
 <h4 id="defer_1">▼ defer関数とは<a class="headerlink" href="#defer_1" title="Permanent link">&para;</a></h4>
 <p>全ての処理の最後に必ず実行される遅延実行関数のこと。たとえ、ランタイムエラーのように処理が強制的に途中終了しても実行される。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>即時関数をdefer関数化している。処理の最後にランタイムエラーが起こったとき、これを<code>recover</code>メソッドで吸収できる。</p>
+<p>即時関数をdefer関数化している。処理の最後にランタイムエラーが発生したとき、これを<code>recover</code>メソッドで吸収できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12337,7 +12337,7 @@ runtime.main: undefined: main.main
 <p><br></p>
 <h3 id="xerrors">xerrorsパッケージ<a class="headerlink" href="#xerrors" title="Permanent link">&para;</a></h3>
 <h4 id="xerrors_1">▼ xerrorsパッケージとは<a class="headerlink" href="#xerrors_1" title="Permanent link">&para;</a></h4>
-<p>標準のerrorsパッケージには、エラーにスタックトレース情報が含まれていない。xerrorsパッケージによって生成されるerrorインターフェースには、errorインターフェースが返却された行数がスタックトレースとして含まれている。</p>
+<p>標準のerrorsパッケージには、エラーにスタックトレース情報が含まれていない。xerrorsパッケージによって作成されるerrorインターフェースには、errorインターフェースが返却された行数がスタックトレースとして含まれている。</p>
 <h4 id="new_1">▼ <code>New</code>関数によるトレース付与<a class="headerlink" href="#new_1" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -13770,7 +13770,7 @@ runtime.main: undefined: main.main
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

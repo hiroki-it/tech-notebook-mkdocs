@@ -6924,7 +6924,7 @@
 </tbody>
 </table>
 <h4 id="cpu">▼ 対応できるCPUアーキテクチャの種類<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
-<p>Dockerは全てのマシンで稼働できるわけではなく、コンテナイメージごとに対応できるCPUアーキテクチャ（AMD系、ARM系、など）がある。同じOSでも、機種ごとに搭載されるCPUアーキテクチャは異なる。例えば、MacBook 2020 にはIntel、またMacBook 2021（M1 Mac）にはARMベースの独自CPUが搭載されているため、ARMに対応したコンテナイメージを選択する必要がある。ただし、コンテナイメージがOSのCPUアーキテクチャに対応しているかどうかを開発者が気にする必要はなく、<code>docker pull</code>時に、OSのCPUアーキテクチャに対応したコンテナイメージが自動的に選択されるようになっている。コンテナの現在のCPUアーキテクチャは、<code>docker inspect</code>コマンドで確認できる。</p>
+<p>Dockerは全てのマシンで稼働できるわけではなく、コンテナイメージごとに対応できるCPUアーキテクチャ（AMD系、ARM系、など）がある。同じOSでも、機種ごとに搭載されるCPUアーキテクチャは異なる。例えば、MacBook 2020 にはIntel、またMacBook 2021（M1 Mac）にはARMベースの独自CPUが搭載されているため、ARMに対応したコンテナイメージを選択する必要がある。ただし、コンテナイメージがOSのCPUアーキテクチャに対応しているか否かを開発者が気にする必要はなく、<code>docker pull</code>時に、OSのCPUアーキテクチャに対応したコンテナイメージが自動的に選択されるようになっている。コンテナの現在のCPUアーキテクチャは、<code>docker inspect</code>コマンドで確認できる。</p>
 <p>参考：<a href="https://github.com/docker-library/official-images#architectures-other-than-amd64">https://github.com/docker-library/official-images#architectures-other-than-amd64</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7141,7 +7141,7 @@ README.md
 <p>1つのDockerfile内に複数の独立したステージを定義する方法。以下の手順で作成する。</p>
 <ol>
 <li>シングルステージビルドに成功するDockerfileを作成する。</li>
-<li>ビルドによって生成されたバイナリファイルがどこに配置されるかを場所を調べる。</li>
+<li>ビルドによって作成されたバイナリファイルがどこに配置されるかを場所を調べる。</li>
 <li>Dockerfileで、2つ目の<code>FROM</code>を宣言する。</li>
 <li>1つ目のステージで、バイナリファイルをコンパイルするだけで終わらせる。</li>
 <li>2つ目のステージで、UNIXユーティリティをインストールする。また、バイナリファイルを1つ目のステージからコピーする。</li>
@@ -7265,7 +7265,7 @@ README.md
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

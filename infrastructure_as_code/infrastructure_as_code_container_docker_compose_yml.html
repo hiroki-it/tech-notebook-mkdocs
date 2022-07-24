@@ -7194,7 +7194,7 @@
 <h3 id="command"><code>command</code><a class="headerlink" href="#command" title="Permanent link">&para;</a></h3>
 <p>コンテナの起動時に最初に実行するコマンドを設定する。Dockerfileを必要とせず、ベンダーが提供するイメージをそのまま使用するような場合に役立つ。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>mysqlイメージを使用してコンテナを作成するときに、最初に文字コードを設定するコマンドを実行する。</p>
+<p>mysqlイメージを使用してコンテナを作成する時に、最初に文字コードを設定するコマンドを実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">services</span><span class="p">:</span><span class="w"></span>
@@ -7352,7 +7352,7 @@ ff02::2 ip6-allrouters
 <p><br></p>
 <h3 id="logging"><code>logging</code><a class="headerlink" href="#logging" title="Permanent link">&para;</a></h3>
 <h4 id="fluentd">▼ <code>fluentd</code><a class="headerlink" href="#fluentd" title="Permanent link">&para;</a></h4>
-<p>コンテナで生成されたログをFluentdコンテナに転送する。ログの転送元よりも先に起動するようにしておく必要がある。</p>
+<p>コンテナで作成されたログをFluentdコンテナに転送する。ログの転送元よりも先に起動するようにしておく必要がある。</p>
 <p>参考：<a href="https://docs.fluentd.org/container-deployment/docker-compose#step-0-create-docker-compose.yml">https://docs.fluentd.org/container-deployment/docker-compose#step-0-create-docker-compose.yml</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7566,7 +7566,7 @@ $ docker network inspect foo-network
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="stdin_open"><code>stdin_open</code><a class="headerlink" href="#stdin_open" title="Permanent link">&para;</a></h3>
-<p>docker-composeコマンドの裏側で実行される<code>docker run</code>コマンドで、<code>i</code>オプションを有効化するかどうかを設定する。</p>
+<p>docker-composeコマンドの裏側で実行される<code>docker run</code>コマンドで、<code>i</code>オプションを有効化するか否かを設定する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7576,7 +7576,7 @@ $ docker network inspect foo-network
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="tty"><code>tty</code><a class="headerlink" href="#tty" title="Permanent link">&para;</a></h3>
-<p>docker-composeコマンドの裏側で実行される<code>docker run</code>コマンドで、<code>t</code>オプションを有効化するかどうかを設定する。疑似ターミナルを割り当てるによって、<code>exit</code>の後もバックグラウンドでコンテナを起動させ続けられる。</p>
+<p>docker-composeコマンドの裏側で実行される<code>docker run</code>コマンドで、<code>t</code>オプションを有効化するか否かを設定する。疑似ターミナルを割り当てるによって、<code>exit</code>の後もバックグラウンドでコンテナを起動させ続けられる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7925,7 +7925,7 @@ NETWORK ID       NAME                DRIVER     SCOPE
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

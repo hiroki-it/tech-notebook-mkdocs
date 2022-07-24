@@ -7289,7 +7289,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <p><br></p>
 <h2 id="02-02-etcdatadog-agentdatadogyaml">02-02. <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#02-02-etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h2>
 <h3 id="datadogyaml"><code>datadog.yaml</code>ファイルとは<a class="headerlink" href="#datadogyaml" title="Permanent link">&para;</a></h3>
-<p>datadogエージェントを設定する。 <code>/etc/datadog-agent</code>ディレクトリに配置される。datadogエージェントをインストールすると、<code>datadog.yaml.example</code>ファイルが生成されるため、これをコピーして作成する。</p>
+<p>datadogエージェントを設定する。 <code>/etc/datadog-agent</code>ディレクトリに配置される。datadogエージェントをインストールすると、<code>datadog.yaml.example</code>ファイルが作成されるため、これをコピーして作成する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://app.datadoghq.com/account/settings#agent">https://app.datadoghq.com/account/settings#agent</a></li>
@@ -7655,7 +7655,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tbody>
 <tr>
 <td><code>DD_APM_ENABLED</code></td>
-<td>APMエージェントを有効化するかどうかを設定する。</td>
+<td>APMエージェントを有効化するか否かを設定する。</td>
 <td>AWS ECS Fargateを使用している場合、APMエージェントを有効化するだけでなく、分散トレースを送信できるように、マイクロサービスにパッケージのインストールが必要である。<br>参考：<a href="https://docs.datadoghq.com/tracing/#send-traces-to-datadog">https://docs.datadoghq.com/tracing/#send-traces-to-datadog</a></td>
 <td><a href="https://app.datadoghq.com/apm/home">https://app.datadoghq.com/apm/home</a></td>
 </tr>
@@ -7680,7 +7680,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tbody>
 <tr>
 <td><code>DD_DOGSTATSD_NON_LOCAL_TRAFFIC</code></td>
-<td>datadogコンテナのカスタムメトリクスの受信を有効化するかどうかを設定する。</td>
+<td>datadogコンテナのカスタムメトリクスの受信を有効化するか否かを設定する。</td>
 </tr>
 </tbody>
 </table>
@@ -7699,7 +7699,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tbody>
 <tr>
 <td><code>DD_LOGS_ENABLED</code></td>
-<td>ログの収集を有効化するかどうかを設定する。</td>
+<td>ログの収集を有効化するか否かを設定する。</td>
 <td>参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents">https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents</a></td>
 </tr>
 <tr>
@@ -7753,7 +7753,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

@@ -2729,10 +2729,10 @@
       
         <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02. オブジェクトの生成、初期化
+    02. オブジェクトの作成、初期化
   </a>
   
-    <nav class="md-nav" aria-label="02. オブジェクトの生成、初期化">
+    <nav class="md-nav" aria-label="02. オブジェクトの作成、初期化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6906,10 +6906,10 @@
       
         <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02. オブジェクトの生成、初期化
+    02. オブジェクトの作成、初期化
   </a>
   
-    <nav class="md-nav" aria-label="02. オブジェクトの生成、初期化">
+    <nav class="md-nav" aria-label="02. オブジェクトの作成、初期化">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7127,10 +7127,10 @@
 <p>JavaScriptの実行環境にあらかじめ組み込まれたオブジェクト。</p>
 <p><br></p>
 <h3 id="object">Object<a class="headerlink" href="#object" title="Permanent link">&para;</a></h3>
-<p>オブジェクトを生成するオブジェクト。他の全ての標準ビルトインオブジェクトの継承元になっているため、標準ビルトインオブジェクトは、Objectが持つメソッドとデータを使用できる。</p>
+<p>オブジェクトを作成するオブジェクト。他の全ての標準ビルトインオブジェクトの継承元になっているため、標準ビルトインオブジェクトは、Objectが持つメソッドとデータを使用できる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// new演算子を使用してインスタンスを生成する。</span><span class="w"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// new演算子を使用してインスタンスを作成する。</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Object</span><span class="p">();</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7243,9 +7243,9 @@
 <span class="c1">// {x:5, y:5 z:&quot;test&quot;}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h2 id="02">02. オブジェクトの生成、初期化<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
+<h2 id="02">02. オブジェクトの作成、初期化<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_3">リテラル表記の使用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>オブジェクトをリテラル表記で生成する方法。キャメルケース（小文字から始める記法）を使用する。</p>
+<p>オブジェクトをリテラル表記で作成する方法。キャメルケース（小文字から始める記法）を使用する。</p>
 <h4 id="_4">▼ 非省略形<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7311,7 +7311,7 @@
 <p><br></p>
 <h3 id="_6">コンストラクタ関数の使用<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="object_1">▼ <code>Object</code>コンストラクタ関数<a class="headerlink" href="#object_1" title="Permanent link">&para;</a></h4>
-<p>キャメルケース（小文字から始める記法）を使用する。プロパティを生成するためには、値を格納する必要がある。関数宣言あるいは関数式で記述する。パスカルケース（大文字から始める記法）を使用する。ちなみに、オブジェクトのプロパティ値として生成された関数を、メソッドと呼ぶ。</p>
+<p>キャメルケース（小文字から始める記法）を使用する。プロパティを作成するためには、値を格納する必要がある。関数宣言あるいは関数式で記述する。パスカルケース（大文字から始める記法）を使用する。ちなみに、オブジェクトのプロパティ値として作成された関数を、メソッドと呼ぶ。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7439,7 +7439,7 @@
 <span class="w">    </span><span class="p">};</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>リテラル表記と<code>Object</code>コンストラクタ関数による生成とは異なり、コンストラクタ関数によって宣言されたオブジェクトは、暗示的に<code>prototype</code>プロパティを持つ。</p>
+<p>リテラル表記と<code>Object</code>コンストラクタ関数による作成とは異なり、コンストラクタ関数によって宣言されたオブジェクトは、暗示的に<code>prototype</code>プロパティを持つ。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7455,13 +7455,13 @@
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// リテラル表記による生成</span><span class="w"></span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// リテラル表記による作成</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">object1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
-<span class="c1">// Objectコンストラクタ関数による生成</span><span class="w"></span>
+<span class="c1">// Objectコンストラクタ関数による作成</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">object2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Object</span><span class="p">({});</span><span class="w"></span>
 
-<span class="c1">// ユーザー宣言Functionコンストラクタ関数による生成</span><span class="w"></span>
+<span class="c1">// ユーザー宣言Functionコンストラクタ関数による作成</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">Object3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
 
 <span class="c1">// 出力結果</span><span class="w"></span>
@@ -7474,7 +7474,7 @@
 <p><br></p>
 <h3 id="class">糖衣構文の<code>class</code>の使用<a class="headerlink" href="#class" title="Permanent link">&para;</a></h3>
 <h4 id="javascript_1">▼ JavaScriptのクラスとは<a class="headerlink" href="#javascript_1" title="Permanent link">&para;</a></h4>
-<p>ES6から、糖衣構文の<code>class</code>によって、オブジェクトを宣言できるようになった。クラス宣言あるいはクラス式で記述する。オブジェクトの生成時、<code>constructor</code>メソッドでオブジェクトの初期化を行う。パスカルケース（大文字から始める記法）を使用する。</p>
+<p>ES6から、糖衣構文の<code>class</code>によって、オブジェクトを宣言できるようになった。クラス宣言あるいはクラス式で記述する。オブジェクトの作成時、<code>constructor</code>メソッドでオブジェクトの初期化を行う。パスカルケース（大文字から始める記法）を使用する。</p>
 <h4 id="_7">▼ クラス宣言記法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7515,7 +7515,7 @@
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ファイルの読み出し</span><span class="w"></span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">Foo</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./foo.js&quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">// 生成、初期化</span><span class="w"></span>
+<span class="c1">// 作成、初期化</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Foo</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// メソッドのコール</span><span class="w"></span>
@@ -7560,7 +7560,7 @@
 <span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ファイルの読み出し</span><span class="w"></span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Foo</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./foo.js&quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">// 生成、初期化</span><span class="w"></span>
+<span class="c1">// 作成、初期化</span><span class="w"></span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Foo</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// メソッドのコール</span><span class="w"></span>
@@ -7891,7 +7891,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

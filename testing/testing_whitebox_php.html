@@ -7576,7 +7576,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">self::assertTrue()</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="asserttrue">▼ assertTrue<a class="headerlink" href="#asserttrue" title="Permanent link">&para;</a></h4>
-<p>実際値が<code>true</code>かどうかを検証する。</p>
+<p>実際値が<code>true</code>か否かを検証する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">$this-&gt;assertTrue($response-&gt;isOk());</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="assertequals">▼ assertEquals<a class="headerlink" href="#assertequals" title="Permanent link">&para;</a></h4>
@@ -7658,7 +7658,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <h4 id="setup">▼ <code>setUp</code>メソッド<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h4>
 <p>前処理として、全てのテスト関数の前にコールされるメソッドである。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>DIコンテナを事前に生成する。</p>
+<p>DIコンテナを事前に作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7690,7 +7690,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
-<p>単体テストで検証するクラスが実際の処理の中でインスタンス化される時、依存先のクラスはすでにインスタンス化されているはずである。そのため、これと同様に依存先のクラスのモックを事前に生成しておく。</p>
+<p>単体テストで検証するクラスが実際の処理の中でインスタンス化される時、依存先のクラスはすでにインスタンス化されているはずである。そのため、これと同様に依存先のクラスのモックを事前に作成しておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7728,7 +7728,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
         <span class="c1">// 基本的には、一番最初に記述する。</span>
         <span class="k">parent</span><span class="o">::</span><span class="na">setUp</span><span class="p">();</span>
 
-        <span class="c1">// 事前にモックを生成しておく。</span>
+        <span class="c1">// 事前にモックを作成しておく。</span>
         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">bar</span> <span class="o">=</span> <span class="nx">Phake</span><span class="o">::</span><span class="na">mock</span><span class="p">(</span><span class="nx">Bar</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
     <span class="p">}</span>
 
@@ -7787,7 +7787,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <p><br></p>
 <h3 id="_11">テストダブル<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <h4 id="createmock">▼ <code>createMock</code>メソッド<a class="headerlink" href="#createmock" title="Permanent link">&para;</a></h4>
-<p>クラスの名前空間を元に、モックまたはスタブとして使用する擬似オブジェクトを生成する。以降の処理での用途によって、呼び名が異なることに注意する。ちなみに、PHPUnitの場合、モックのメソッドは<code>null</code>を返却する。</p>
+<p>クラスの名前空間を元に、モックまたはスタブとして使用する擬似オブジェクトを作成する。以降の処理での用途によって、呼び名が異なることに注意する。ちなみに、PHPUnitの場合、モックのメソッドは<code>null</code>を返却する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8641,7 +8641,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <p><br></p>
 <h3 id="_17">テストダブル<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="mock">▼ <code>mock</code>メソッド<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h4>
-<p>クラスの名前空間を元に、モックまたはスタブとして使用する擬似オブジェクトを生成する。以降の処理での用途によって、呼び名が異なることに注意する。</p>
+<p>クラスの名前空間を元に、モックまたはスタブとして使用する擬似オブジェクトを作成する。以降の処理での用途によって、呼び名が異なることに注意する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8801,7 +8801,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

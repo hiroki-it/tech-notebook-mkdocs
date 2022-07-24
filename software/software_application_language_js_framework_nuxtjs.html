@@ -7066,7 +7066,7 @@ $ yarn start
 <p>アプリケーションをSSGとして稼働させる。</p>
 <p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static</a></p>
 <h4 id="dev_1">▼ <code>dev</code><a class="headerlink" href="#dev_1" title="Permanent link">&para;</a></h4>
-<p>開発環境でSSGアプリケーションを稼働させるために使用する。Nodeサーバーを起動し、サーバー内でJavaScriptから静的ファイルを生成する。そのため、SSGモードで生成されるアプリケーションは完全な静的ファイルでない。また、<code>build</code>コマンドとは異なり、Webpackは使用されないため、静的ファイルの圧縮や画像ファイル名のハッシュ化は実行されない。</p>
+<p>開発環境でSSGアプリケーションを稼働させるために使用する。Nodeサーバーを起動し、サーバー内でJavaScriptから静的ファイルを作成する。そのため、SSGモードで作成されるアプリケーションは完全な静的ファイルでない。また、<code>build</code>コマンドとは異なり、Webpackは使用されないため、静的ファイルの圧縮や画像ファイル名のハッシュ化は実行されない。</p>
 <p>参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt devとなっているが、yarn devで問題ない。</span>
@@ -7075,7 +7075,7 @@ $ yarn dev
 <p>ちなみに、<code>yarn dev</code>コマンドを実行した場合、環境変数の<code>NODE_ENV</code>が<code>development</code>になる。</p>
 <p>参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
 <h4 id="generate">▼ <code>generate</code><a class="headerlink" href="#generate" title="Permanent link">&para;</a></h4>
-<p>本番環境でSSGアプリケーションを稼働させるために使用する。<code>dev</code>コマンドとは異なり、Nodeサーバーは起動せず、そのままJavaScriptから静的ファイルを生成する。そのため、SSGは完全な静的ファイルからなる。ビルド時にバックエンドに接続し、DBに格納したデータ（例：画像パス）を元に、静的ファイルをビルドできる。SSGモードのために使用する。</p>
+<p>本番環境でSSGアプリケーションを稼働させるために使用する。<code>dev</code>コマンドとは異なり、Nodeサーバーは起動せず、そのままJavaScriptから静的ファイルを作成する。そのため、SSGは完全な静的ファイルからなる。ビルド時にバックエンドに接続し、DBに格納したデータ（例：画像パス）を元に、静的ファイルをビルドできる。SSGモードのために使用する。</p>
 <p>参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt generateとなっているが、yarn generateで問題ない。</span>
@@ -7172,7 +7172,7 @@ $ yarn start
 <h2 id="02-02">02-02. プロパティ<a class="headerlink" href="#02-02" title="Permanent link">&para;</a></h2>
 <h3 id="build_1">build<a class="headerlink" href="#build_1" title="Permanent link">&para;</a></h3>
 <h4 id="hardsource">▼ hardSource<a class="headerlink" href="#hardsource" title="Permanent link">&para;</a></h4>
-<p>ビルド時のキャッシュを有効化するかどうかを設定する。ビルドの完了が早くなる。</p>
+<p>ビルド時のキャッシュを有効化するか否かを設定する。ビルドの完了が早くなる。</p>
 <p>参考：<a href="https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource">https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7332,7 +7332,7 @@ $ yarn start
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="buildmodules">buildModules<a class="headerlink" href="#buildmodules" title="Permanent link">&para;</a></h3>
-<p>SSG/SSRモードの<code>yarn dev</code>（開発用コマンド）、またSSRモードの<code>yarn build</code>の時のみ、<code>node_module</code>ディレクトリ内に生成するパッケージを設定する。</p>
+<p>SSG/SSRモードの<code>yarn dev</code>（開発用コマンド）、またSSRモードの<code>yarn build</code>の時のみ、<code>node_module</code>ディレクトリ内に作成するパッケージを設定する。</p>
 <p>参考：<a href="https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/">https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7376,7 +7376,7 @@ $ yarn start
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

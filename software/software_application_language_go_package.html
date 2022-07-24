@@ -7434,7 +7434,7 @@ go 1.16
 <p><br></p>
 <h3 id="gosum">go.sumファイル<a class="headerlink" href="#gosum" title="Permanent link">&para;</a></h3>
 <h4 id="gosum_1">▼ <code>go.sum</code>ファイルとは<a class="headerlink" href="#gosum_1" title="Permanent link">&para;</a></h4>
-<p>PHPにおける<code>composer.lock</code>ファイルに相当する。<code>go.mod</code>ファイルによって実際にインストールされたパッケージが自動的に実装される。パッケージごとのチェックサムが記録されるため、前回のインストール時と比較して、パッケージに変更があるかどうかを検知できる。</p>
+<p>PHPにおける<code>composer.lock</code>ファイルに相当する。<code>go.mod</code>ファイルによって実際にインストールされたパッケージが自動的に実装される。パッケージごとのチェックサムが記録されるため、前回のインストール時と比較して、パッケージに変更があるか否かを検知できる。</p>
 <p><br></p>
 <h2 id="03-aws-sdk-go-v2">03. aws-sdk-go-v2<a class="headerlink" href="#03-aws-sdk-go-v2" title="Permanent link">&para;</a></h2>
 <h3 id="aws-sdk-go-v2">aws-sdk-go-v2とは<a class="headerlink" href="#aws-sdk-go-v2" title="Permanent link">&para;</a></h3>
@@ -7627,7 +7627,7 @@ go 1.16
 <p><br></p>
 <h3 id="_6">マイグレーション<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="tablename">▼ <code>TableName</code>メソッド<a class="headerlink" href="#tablename" title="Permanent link">&para;</a></h4>
-<p>デフォルトではGormモデルの名前をスネークケースに変更し、また複数形とした名前のテーブルが生成される。<code>TableName</code>メソッドにより、独自のテーブル名をつけられる。</p>
+<p>デフォルトではGormモデルの名前をスネークケースに変更し、また複数形とした名前のテーブルが作成される。<code>TableName</code>メソッドにより、独自のテーブル名をつけられる。</p>
 <p>参考：<a href="https://gorm.io/docs/conventions.html#TableName">https://gorm.io/docs/conventions.html#TableName</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7938,7 +7938,7 @@ go 1.16
 </tr>
 <tr>
 <td><code>Mock.AssertExpectations</code>メソッド</td>
-<td>関数の検証時に使用する。関数内部のスタブが正しく実行されたかどうかを検証する。</td>
+<td>関数の検証時に使用する。関数内部のスタブが正しく実行されたか否かを検証する。</td>
 </tr>
 <tr>
 <td><code>assert.Exactly</code>メソッド</td>
@@ -7947,7 +7947,7 @@ go 1.16
 </tbody>
 </table>
 <h4 id="_16">▼ 前処理と後処理<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p>テスト関数を実行する直前に、前処理を実行する。モックの生成のために使用すると良い。PHPUnitにおける前処理と後処理については、以下のリンクを参考にせよ。</p>
+<p>テスト関数を実行する直前に、前処理を実行する。モックの作成のために使用すると良い。PHPUnitにおける前処理と後処理については、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html">https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html</a></p>
 <p>前処理と後処理については、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://github.com/google/go-github/blob/master/github/github_test.go#L36-L66">https://github.com/google/go-github/blob/master/github/github_test.go#L36-L66</a></p>
@@ -7993,7 +7993,7 @@ go 1.16
 </tbody>
 </table>
 <p><strong>＊実装例＊</strong></p>
-<p>事前にモックを生成するために、<code>BeforeTest</code>関数を使用する。</p>
+<p>事前にモックを作成するために、<code>BeforeTest</code>関数を使用する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8041,7 +8041,7 @@ go 1.16
 <span class="cm"> */</span><span class="w"></span>
 <span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">suite</span><span class="w"> </span><span class="o">*</span><span class="nx">FooSuite</span><span class="p">)</span><span class="w"> </span><span class="nx">BeforeTest</span><span class="p">(</span><span class="nx">suiteName</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">testName</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// モックを生成する。</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// モックを作成する。</span><span class="w"></span>
 <span class="w">    </span><span class="nx">suite</span><span class="p">.</span><span class="nx">fooMock</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">FooMock</span><span class="p">{}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
@@ -8082,7 +8082,7 @@ go 1.16
 
 <span class="w">    </span><span class="nx">suite</span><span class="p">.</span><span class="nx">T</span><span class="p">().</span><span class="nx">Helper</span><span class="p">()</span><span class="w"></span>
 
-<span class="w">    </span><span class="c1">// 前処理で生成したモックを使用する。</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// 前処理で作成したモックを使用する。</span><span class="w"></span>
 <span class="w">    </span><span class="nx">fooMock</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">suite</span><span class="p">.</span><span class="nx">fooMock</span><span class="w"></span>
 
 <span class="w">    </span><span class="c1">// 以降にテスト処理</span><span class="w"></span>
@@ -8274,7 +8274,7 @@ go 1.16
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

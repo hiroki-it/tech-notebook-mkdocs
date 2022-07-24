@@ -8121,7 +8121,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h2 id="04-namespacekubernetes">04. Namespace＠Kubernetesでの設定<a class="headerlink" href="#04-namespacekubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="istio-injection">▼ istio-injection<a class="headerlink" href="#istio-injection" title="Permanent link">&para;</a></h4>
-<p>アドミッションコントローラーを使用して、Envoyコンテナを自動的に作成するかどうかを設定する。</p>
+<p>admission-controllersのWebhook機能を使用して、Envoyコンテナを自動的に作成するか否かを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8152,7 +8152,7 @@ $ helm install istio-ingressgateway istio/gateway
 <p>Deploymentの<code>spec.template</code>キーや、Podの<code>metadata</code>キーにて、Envoyコンテナごとのオプション値を設定する。Deploymentの<code>metadata</code>キーで定義しないように注意する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <h4 id="proxyistioioconfigconfigpath">▼ proxy.istio.io/config.configPath<a class="headerlink" href="#proxyistioioconfigconfigpath" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナのプロセスの設定値をファイルとして生成するために、これの生成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが生成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
+<p>Envoyコンテナのプロセスの設定値をファイルとして作成するために、これの作成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが作成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8789,7 +8789,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h2 id="08-peerauthentication">08. PeerAuthentication<a class="headerlink" href="#08-peerauthentication" title="Permanent link">&para;</a></h2>
 <h3 id="specmtls">spec.mtls<a class="headerlink" href="#specmtls" title="Permanent link">&para;</a></h3>
 <h4 id="mtls">▼ mtls<a class="headerlink" href="#mtls" title="Permanent link">&para;</a></h4>
-<p>istio-proxyコンテナ間の通信で相互TLSを有効化するかどうかを設定する。</p>
+<p>istio-proxyコンテナ間の通信で相互TLSを有効化するか否かを設定する。</p>
 <h4 id="mode">▼ mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h4>
 <p>相互TLSのタイプを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode">https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode</a></p>
@@ -8878,7 +8878,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-namespace/foo-gateway</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="mesh">▼ mesh<a class="headerlink" href="#mesh" title="Permanent link">&para;</a></h4>
-<p>マイクロサービス間の通信を有効化するかどうかを設定する。</p>
+<p>マイクロサービス間の通信を有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9196,7 +9196,7 @@ $ helm install istio-ingressgateway istio/gateway
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-21</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

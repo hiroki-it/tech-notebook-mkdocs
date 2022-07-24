@@ -7367,7 +7367,7 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Apply complete! Resources: <span class="m">1</span> added, <span class="m">0</span> changed, <span class="m">0</span> destroyed.
 </code></pre></div></td></tr></table></div>
 <h4 id="_2">▼ 実行プランファイル<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>事前に、<code>terraform plan</code>コマンドによって生成された実行プランファイルを元に、<code>terraform apply</code>コマンドを実行する。実行プランを渡す場合は、変数をオプションに設定する必要はない。</p>
+<p>事前に、<code>terraform plan</code>コマンドによって作成された実行プランファイルを元に、<code>terraform apply</code>コマンドを実行する。実行プランを渡す場合は、変数をオプションに設定する必要はない。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform apply foo.tfplan
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7437,7 +7437,7 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
 <p>また、開発時に一時的にlocalをバックエンドとして使用する場合にも役立つ。</p>
 <p>参考：<a href="https://repl.info/archives/1435/">https://repl.info/archives/1435/</a></p>
 <h4 id="-migrate-state">▼ --migrate-state<a class="headerlink" href="#-migrate-state" title="Permanent link">&para;</a></h4>
-<p>初期化のための<code>terraform init</code>コマンドの時、この時、元々設定していたバックエンドにある<code>.tfstate</code>ファイルをコピーし、指定したバックエンドに移行する。元々のバックエンドの<code>.tfstate</code>ファイルを削除するかどうかを選択できる。</p>
+<p>初期化のための<code>terraform init</code>コマンドの時、この時、元々設定していたバックエンドにある<code>.tfstate</code>ファイルをコピーし、指定したバックエンドに移行する。元々のバックエンドの<code>.tfstate</code>ファイルを削除するか否かを選択できる。</p>
 <p>参考：<a href="https://www.terraform.io/cli/commands/init#backend-initialization">https://www.terraform.io/cli/commands/init#backend-initialization</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform init --migrate-state -backend-config<span class="o">=</span>./foo/backend.tfvars
 </code></pre></div></td></tr></table></div>
@@ -7449,7 +7449,7 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
 <p><br></p>
 <h3 id="fmt">fmt<a class="headerlink" href="#fmt" title="Permanent link">&para;</a></h3>
 <h4 id="-check">▼ -check<a class="headerlink" href="#-check" title="Permanent link">&para;</a></h4>
-<p>インデントを揃えるべき箇所が存在するかどうかを判定する。もし存在する場合『<code>1</code>』、存在しない場合は『<code>0</code>』を返却する。</p>
+<p>インデントを揃えるべき箇所が存在するか否かを判定する。もし存在する場合『<code>1</code>』、存在しない場合は『<code>0</code>』を返却する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform fmt -check
 </code></pre></div></td></tr></table></div>
 <h4 id="-diff">▼ -diff<a class="headerlink" href="#-diff" title="Permanent link">&para;</a></h4>
@@ -7739,7 +7739,7 @@ actions need to be performed.
     -parallelism<span class="o">=</span><span class="m">30</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="-out">▼ -out<a class="headerlink" href="#-out" title="Permanent link">&para;</a></h4>
-<p>実行プランファイルを生成する。<code>terraform apply</code>コマンドのために使用できる。</p>
+<p>実行プランファイルを作成する。<code>terraform apply</code>コマンドのために使用できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8049,7 +8049,7 @@ $ terraform -chdir<span class="o">=</span>&lt;ルートモジュールのディ�
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-21</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

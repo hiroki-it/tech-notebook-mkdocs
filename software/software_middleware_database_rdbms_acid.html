@@ -7506,7 +7506,7 @@
 <p><img alt="DBMSによるメモリとディスクの使い分け" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DBMSによるメモリとディスクの使い分け.jpg" /></p>
 <h4 id="walwrite-ahead-log">▼ WAL：Write ahead log（ログ先行書き込み）<a class="headerlink" href="#walwrite-ahead-log" title="Permanent link">&para;</a></h4>
 <p><img alt="wal" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/wal.png" /></p>
-<p>コミットの結果をメモリ上に書き込むと同時に、ディスク上のジャーナルファイルには更新前ログを書き込む。データファイルに書き込むよりも書き込み量が少なく済むため、短時間で終わる。また、コミットの途中で障害が起こった場合に、メモリ上のデータが削除されてしまう、ジャーナルファイルの更新前ログをバックアップとして、データを復元できる。</p>
+<p>コミットの結果をメモリ上に書き込むと同時に、ディスク上のジャーナルファイルには更新前ログを書き込む。データファイルに書き込むよりも書き込み量が少なく済むため、短時間で終わる。また、コミットの途中で障害が発生した場合に、メモリ上のデータが削除されてしまう、ジャーナルファイルの更新前ログをバックアップとして、データを復元できる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://gihyo.jp/dev/serial/01/db-academy/000202">https://gihyo.jp/dev/serial/01/db-academy/000202</a></li>
@@ -7521,7 +7521,7 @@
 <p><br></p>
 <h3 id="_10">ロールバック<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ ロールバックとは<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>障害によって、トランザクション内の一連のステートメントがすべて実行されなかった場合、ディスク上のジャーナルファイルの更新前ログを使用して、トランザクションの開始前の状態に戻す。</p>
+<p>データの時系列を戻す修復方法である。障害によって、トランザクション内の一連のステートメントがすべて実行されなかった場合、ディスク上のジャーナルファイルの更新前ログを使用して、トランザクションの開始前の状態に戻す。</p>
 <p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1703/01/news198.html">https://atmarkit.itmedia.co.jp/ait/articles/1703/01/news198.html</a></p>
 <h4 id="_12">▼ システム障害からの回復<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
@@ -7530,7 +7530,7 @@
 <p><br></p>
 <h3 id="_13">ロールフォワード<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ ロールフォワードとは<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>障害によって、トランザクションの終了後に一連のステートメントの更新結果がストレージに反映されなかった場合、ディスク上のジャーナルファイルの更新後ログを使用して、ストレージ上のデータファイルに更新結果を反映させる。</p>
+<p>データの時系列を進める修復方法である。障害によって、トランザクションの終了後に一連のステートメントの更新結果がストレージに反映されなかった場合、ディスク上のジャーナルファイルの更新後ログを使用して、ストレージ上のデータファイルに更新結果を反映させる。</p>
 <p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1703/01/news198.html">https://atmarkit.itmedia.co.jp/ait/articles/1703/01/news198.html</a></p>
 <h4 id="_15">▼ システム障害からの回復<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
@@ -7720,7 +7720,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

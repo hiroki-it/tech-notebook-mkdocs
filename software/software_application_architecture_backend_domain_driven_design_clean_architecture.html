@@ -8856,12 +8856,12 @@
 <tr>
 <td></td>
 <td>インフラ層のルーターから入力されるパラメーターをAPI仕様（必須、書式、など）と照らし合わせ、バリデーションを実行する。</td>
-<td>データの値がAPI仕様と比較して正しいかどうかを検証することに止まり、データの値が正しいかどうかの検証は、ユースケース層やドメイン層に実装する。</td>
+<td>データの値がAPI仕様と比較して正しいか否かを検証することに止まり、データの値が正しいか否かの検証は、ユースケース層やドメイン層に実装する。</td>
 </tr>
 <tr>
 <td></td>
 <td>インフラ層のルーターから入力されるパラメーターをリクエストモデルに変換し、ユースケース層のインターラクターに入力する。</td>
-<td>リクエストモデル生成処理で、ドメイン層への依存が必要になる。リクエストモデル生成処理を切り分け、ユースケース層に配置すると、コントローラーがドメイン層に依存することを防げる。</td>
+<td>リクエストモデル作成処理で、ドメイン層への依存が必要になる。リクエストモデル作成処理を切り分け、ユースケース層に配置すると、コントローラーがドメイン層に依存することを防げる。</td>
 </tr>
 <tr>
 <td>出力</td>
@@ -8871,7 +8871,7 @@
 <tr>
 <td></td>
 <td>ユースケース層のインターラクターから出力されるプレゼンターをビューモデルに変換し、バックエンドのテンプレートエンジンに出力する。</td>
-<td>バックエンドでテンプレートエンジンを使用してHTMLを生成する場合、プレゼンターが必要である。</td>
+<td>バックエンドでテンプレートエンジンを使用してHTMLを作成する場合、プレゼンターが必要である。</td>
 </tr>
 </tbody>
 </table>
@@ -8962,7 +8962,7 @@
 <tr>
 <td>入力</td>
 <td>プレゼンテーション層のコントローラーから入力されるリクエストパラメーターを、ソフトウェア上のルール（ユースケース）と照らし合わせてバリデーションを実行する。</td>
-<td>データの値がシステム上あり得ないかどうかを検証する。ビジネス上あり得ない値かどうかはドメイン層にSpecificationパターンとして実装する。</td>
+<td>データの値がシステム上あり得ないか否かを検証する。ビジネス上あり得ない値か否かはドメイン層にSpecificationパターンとして実装する。</td>
 </tr>
 <tr>
 <td></td>
@@ -8982,7 +8982,7 @@
 <tr>
 <td></td>
 <td>ドメイン層のインターフェースリポジトリから出力されるドメインモデルをレスポンスモデルを経てプレゼンターに変換し、インターフェース層のコントローラーに出力する。</td>
-<td>バックエンドでテンプレートエンジンを使用してHTMLを生成する場合、プレゼンターが必要である。</td>
+<td>バックエンドでテンプレートエンジンを使用してHTMLを作成する場合、プレゼンターが必要である。</td>
 </tr>
 </tbody>
 </table>
@@ -10053,7 +10053,7 @@
 <li><a href="https://codezine.jp/article/detail/10318">https://codezine.jp/article/detail/10318</a></li>
 </ul>
 <h4 id="_38">▼ 重複確認<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
-<p>ドメイン層のリポジトリを使用して、該当の名前のエンティティがDBに存在するかどうかを検証する。ドメインサービスではなく、アプリケーションサービスとして定義しても良い。</p>
+<p>ドメイン層のリポジトリを使用して、該当の名前のエンティティがDBに存在するか否かを検証する。ドメインサービスではなく、アプリケーションサービスとして定義しても良い。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/45007667/cqrs-ddd-how-to-validate-products-existence-before-adding-them-to-order">https://stackoverflow.com/questions/45007667/cqrs-ddd-how-to-validate-products-existence-before-adding-them-to-order</a></li>
@@ -10113,7 +10113,7 @@
     <span class="p">}</span>
 
     <span class="sd">/**</span>
-<span class="sd">     * エンティティがすでに存在しているかどうかを判定します。</span>
+<span class="sd">     * エンティティがすでに存在しているか否かを判定します。</span>
 <span class="sd">     *</span>
 <span class="sd">     * @param Foo $foo</span>
 <span class="sd">     * @return bool</span>
@@ -10272,7 +10272,7 @@
 <span class="p">}</span> 
 </code></pre></div></td></tr></table></div>
 <h4 id="_42">▼ 検索条件入力データ<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
-<p>リクエストのパスパラメーターとクエリパラメーターを引数として、検索条件のオブジェクトを生成する。ビジネスルールのバリデーションを行うSpecificationクラスと区別するために、Criteriaオブジェクトという名前としても使用される。</p>
+<p>リクエストのパスパラメーターとクエリパラメーターを引数として、検索条件のオブジェクトを作成する。ビジネスルールのバリデーションを行うSpecificationクラスと区別するために、Criteriaオブジェクトという名前としても使用される。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -10342,7 +10342,7 @@
     <span class="k">private</span> <span class="nx">string</span> <span class="nv">$email</span><span class="p">;</span>
 
     <span class="sd">/**</span>
-<span class="sd">     * 検索条件のオブジェクトを生成します。</span>
+<span class="sd">     * 検索条件のオブジェクトを作成します。</span>
 <span class="sd">     * </span>
 <span class="sd">     * @param array $array</span>
 <span class="sd">     * @return $this</span>
@@ -11280,7 +11280,7 @@
     <span class="p">}</span>
 
     <span class="sd">/**</span>
-<span class="sd">     * 郵便番号を生成し、返却します</span>
+<span class="sd">     * 郵便番号を作成し、返却します</span>
 <span class="sd">     * </span>
 <span class="sd">     * @return string</span>
 <span class="sd">     */</span>
@@ -11294,7 +11294,7 @@
     <span class="p">}</span>
 
     <span class="sd">/**</span>
-<span class="sd">     * 住所を生成し、返却します</span>
+<span class="sd">     * 住所を作成し、返却します</span>
 <span class="sd">     * </span>
 <span class="sd">     * @return string</span>
 <span class="sd">     */</span>
@@ -11463,7 +11463,7 @@
 <p><br></p>
 <h3 id="_62">データの不変性（イミュータブル）<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
 <h4 id="_63">▼ 不変性の実現方法<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
-<p>値オブジェクトは不変的であり、インスタンスとして生成されて以降、データは変更されない。オブジェクトの不変性を実現するために、オブジェクトにセッターを定義しないようにし、データの設定には<code>construct</code>メソッドだけを使用するようにする。</p>
+<p>値オブジェクトは不変的であり、インスタンスとして作成されて以降、データは変更されない。オブジェクトの不変性を実現するために、オブジェクトにセッターを定義しないようにし、データの設定には<code>construct</code>メソッドだけを使用するようにする。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -11675,7 +11675,7 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_67">交換可能性<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h3>
-<p>オブジェクトが新しくインスタンス化された場合、以前に同一オブジェクトから生成されたインスタンスから新しく置き換える必要がある。</p>
+<p>オブジェクトが新しくインスタンス化された場合、以前に同一オブジェクトから作成されたインスタンスから新しく置き換える必要がある。</p>
 <p><br></p>
 <h3 id="_68">属性による等価性<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
 <h4 id="_69">▼ 属性による等価性検証とは<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
@@ -12138,7 +12138,7 @@
 <td>save（upsert）</td>
 <td>ルートエンティティのドメインモデル型</td>
 <td>void型</td>
-<td>ルートエンティティのドメインモデルを作成/更新する。SELECT文のIN句を使用して、同じ識別子のエンティティをDBから取得できるかどうかを確認する。取得できない場合は、更新処理を実行する。<br>参考：<br>・<a href="https://github.com/little-hands/ddd-q-and-a/issues/241">https://github.com/little-hands/ddd-q-and-a/issues/241</a><br>・<a href="https://github.com/little-hands/ddd-q-and-a/issues/129">https://github.com/little-hands/ddd-q-and-a/issues/129</a></td>
+<td>ルートエンティティのドメインモデルを作成/更新する。SELECT文のIN句を使用して、同じ識別子のエンティティをDBから取得できるか否かを確認する。取得できない場合は、更新処理を実行する。<br>参考：<br>・<a href="https://github.com/little-hands/ddd-q-and-a/issues/241">https://github.com/little-hands/ddd-q-and-a/issues/241</a><br>・<a href="https://github.com/little-hands/ddd-q-and-a/issues/129">https://github.com/little-hands/ddd-q-and-a/issues/129</a></td>
 </tr>
 <tr>
 <td>delete</td>
@@ -12368,7 +12368,7 @@
 <span class="sd">     */</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">create</span><span class="p">(</span><span class="nx">DogToy</span> <span class="nv">$dogToy</span><span class="p">)</span><span class="o">:</span> <span class="nx">DogToy</span>
     <span class="p">{</span>
-        <span class="c1">// クエリビルダ生成</span>
+        <span class="c1">// クエリビルダ作成</span>
         <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createQueryBuilder</span><span class="p">();</span>
 
         <span class="c1">// SQLを定義する。</span>
@@ -12432,7 +12432,7 @@
 <span class="sd">     */</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nx">DogToy</span> <span class="nv">$dogToy</span><span class="p">)</span><span class="o">:</span> <span class="nx">DogToy</span>
     <span class="p">{</span>
-        <span class="c1">// クエリビルダ生成</span>
+        <span class="c1">// クエリビルダ作成</span>
         <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createQueryBuilder</span><span class="p">();</span>
 
         <span class="c1">// SQLを定義する。</span>
@@ -12496,7 +12496,7 @@
 <span class="sd">     */</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">delete</span><span class="p">(</span><span class="nx">ToyId</span> <span class="nv">$toyId</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span>
     <span class="p">{</span>
-        <span class="c1">// クエリビルダ生成</span>
+        <span class="c1">// クエリビルダ作成</span>
         <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createQueryBuilder</span><span class="p">();</span>
 
         <span class="c1">// SQLを定義する。</span>
@@ -12604,7 +12604,7 @@
 <span class="sd">     */</span>
     <span class="k">public</span> <span class="k">function</span> <span class="nf">findAll</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
     <span class="p">{</span>
-        <span class="c1">// クエリビルダ生成</span>
+        <span class="c1">// クエリビルダ作成</span>
         <span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">createQueryBuilder</span><span class="p">();</span>
 
         <span class="c1">// SQLを設定する。</span>
@@ -12811,7 +12811,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

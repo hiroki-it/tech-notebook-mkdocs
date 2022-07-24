@@ -7278,19 +7278,19 @@
 
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">ExternalApiErrorException</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="c1">// ExternalApiErrorExceptionが起こったときの処理</span>
+            <span class="c1">// ExternalApiErrorExceptionが発生した時の処理</span>
 
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">HttpRequestErrorException</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="c1">// HttpRequestErrorExceptionが起こったときの処理</span>
+            <span class="c1">// HttpRequestErrorExceptionが発生した時の処理</span>
 
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">Exception</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
 
-            <span class="c1">// その他（自社ソフトウェアなど）のExceptionが起こっときの処理</span>
+            <span class="c1">// その他（自社ソフトウェアなど）のExceptionが起こっ時の処理</span>
 
         <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
 
-            <span class="c1">// 例外を補足したかどうかに関わらず実行する。</span>
+            <span class="c1">// 例外を補足したか否かに関わらず実行する。</span>
             <span class="c1">// try句やcatch句の返却処理や終了処理が行われる直前に実行される。</span>
 
         <span class="p">}</span>
@@ -7573,7 +7573,7 @@
 <p><br></p>
 <h3 id="_21">ログの種類別の振り分け<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <h4 id="_22">▼ 例外ごとのロギング<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
-<p>例えば、メッセージアプリケーションのAPIに対してメッセージ生成のリクエストを送信する時、例外の種類に合わせて、外部APIとの接続失敗によるエラーログを生成と、自社ソフトウェアなどその他原因によるエラーログを生成を行う必要がある。</p>
+<p>例えば、メッセージアプリケーションのAPIに対してメッセージ作成のリクエストを送信する時、例外の種類に合わせて、外部APIとの接続失敗によるエラーログを作成と、自社ソフトウェアなどその他原因によるエラーログを作成を行う必要がある。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7642,7 +7642,7 @@
         <span class="k">try</span> <span class="p">{</span>
 
             <span class="c1">// 外部APIのURL、送信方法、トークンなどのパラメーターが存在するかを検証。</span>
-            <span class="c1">// 外部APIのためのリクエストメッセージを生成。</span>
+            <span class="c1">// 外部APIのためのリクエストメッセージを作成。</span>
             <span class="c1">// 外部APIのURL、送信方法、トークンなどのパラメーターを設定。</span>
 
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\HttpRequestErrorException</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
@@ -7693,7 +7693,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

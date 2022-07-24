@@ -3598,6 +3598,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    04. その他のテスト手法
+  </a>
+  
+    <nav class="md-nav" aria-label="04. その他のテスト手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
+    CDCテスト：Consumer Drive Contract
+  </a>
+  
+    <nav class="md-nav" aria-label="CDCテスト：Consumer Drive Contract">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdc" class="md-nav__link">
+    ▼ CDCテストとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6985,6 +7018,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#04" class="md-nav__link">
+    04. その他のテスト手法
+  </a>
+  
+    <nav class="md-nav" aria-label="04. その他のテスト手法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
+    CDCテスト：Consumer Drive Contract
+  </a>
+  
+    <nav class="md-nav" aria-label="CDCテスト：Consumer Drive Contract">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cdc" class="md-nav__link">
+    ▼ CDCテストとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7044,7 +7110,7 @@
 <p><br></p>
 <h3 id="_11">テストダブルの種類<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <h4 id="_12">▼ モック<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p>上層クラス（上層構造体）が下層クラスを正しくコールできるかどうかを検証したい時に、上層クラス以外の部分の処理は不要であり、下層クラスの実体があるかのように見せかける。この時、見せかけの下層クラスとして使用する擬似オブジェクトを『モック』という。スタブとは、使用されるテストが異なるが、どちらも擬似オブジェクトである。モックでは、クラスのメソッドとデータが全てダミー実装に置き換わる。もし下層クラスを正しい回数実行できているかを検証したい場合は、下層クラスのモックを定義し、実体のある上層クラスが下層クラスにパラメーターを渡した時のコール回数と指定回数を比較する。なお、用語の定義はテストフレームワークごとにやや異なることに注意する。PHPUnitにおけるモックについては、以下のリンクを参考にせよ。</p>
+<p>上層クラス（上層構造体）が下層クラスを正しくコールできるか否かを検証したい時に、上層クラス以外の部分の処理は不要であり、下層クラスの実体があるかのように見せかける。この時、見せかけの下層クラスとして使用する擬似オブジェクトを『モック』という。スタブとは、使用されるテストが異なるが、どちらも擬似オブジェクトである。モックでは、クラスのメソッドとデータが全てダミー実装に置き換わる。もし下層クラスを正しい回数実行できているかを検証したい場合は、下層クラスのモックを定義し、実体のある上層クラスが下層クラスにパラメーターを渡した時のコール回数と指定回数を比較する。なお、用語の定義はテストフレームワークごとにやや異なることに注意する。PHPUnitにおけるモックについては、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://phpunit.readthedocs.io/ja/latest/test-doubles.html#test-doubles-mock-objects">https://phpunit.readthedocs.io/ja/latest/test-doubles.html#test-doubles-mock-objects</a></p>
 <table>
 <thead>
@@ -7246,8 +7312,14 @@
 <p><br></p>
 <h2 id="03">03. 機能テスト<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_19">機能テストとは<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
-<p>エンドポイントにリクエストを送信し、レスポンスが正しく返信されるかどうかを検証する方法。スタブを使用することは少ない。ブラックボックステストの機能テストとは異なることに注意する。</p>
+<p>エンドポイントにリクエストを送信し、レスポンスが正しく返信されるか否かを検証する方法。スタブを使用することは少ない。ブラックボックステストの機能テストとは異なることに注意する。</p>
 <p>参考：<a href="https://eh-career.com/engineerhub/entry/action/2019/10/03/103000/#%E5%A2%83%E7%95%8C%E5%80%A4%E3%83%86%E3%82%B9%E3%83%88">https://eh-career.com/engineerhub/entry/action/2019/10/03/103000/#%E5%A2%83%E7%95%8C%E5%80%A4%E3%83%86%E3%82%B9%E3%83%88</a></p>
+<p><br></p>
+<h2 id="04">04. その他のテスト手法<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
+<h3 id="cdcconsumer-drive-contract">CDCテスト：Consumer Drive Contract<a class="headerlink" href="#cdcconsumer-drive-contract" title="Permanent link">&para;</a></h3>
+<h4 id="cdc">▼ CDCテストとは<a class="headerlink" href="#cdc" title="Permanent link">&para;</a></h4>
+<p>マイクロサービスのコントローラーがコールされてから、DBの操作が完了するまでを、テストする。下流マイクロサービスのコールはモック化またはスタブ化する。</p>
+<p>参考：<a href="https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae">https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae</a></p>
 <p><br></p>
 
   <hr>
@@ -7255,7 +7327,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

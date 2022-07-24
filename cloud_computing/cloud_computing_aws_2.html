@@ -10130,7 +10130,7 @@
 <p><br></p>
 <h3 id="_7">ルートデバイスボリューム<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ ルートデバイスボリュームとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>EC2インスタンスでは、ブロックデバイスにルートデバイスボリュームが紐づいている。複数のブロックデバイスを用意し、それぞれを異なるルートデバイスボリュームから紐づけることもできる。さらに、このブロックデバイスが、マウントポイントtになるディレクトリ紐づいている。つまりEC2インスタンスが作成されると、ボリューム内に保管されたファイルは、ブロックデバイスを経由して、マウントポイントのディレクトリ内に生成される。また反対に、マウント先ディレクトリ内に保存されたファイルは、ルートデバイスボリューム内に保管される。複数のルートボリュームを紐づける場合は、最大サイズの大きなルートボリュームに紐づくルートデバイスを、サイズが大きくなり得るディレクトリにマウントするようにしておく。</p>
+<p>EC2インスタンスでは、ブロックデバイスにルートデバイスボリュームが紐づいている。複数のブロックデバイスを用意し、それぞれを異なるルートデバイスボリュームから紐づけることもできる。さらに、このブロックデバイスが、マウントポイントtになるディレクトリ紐づいている。つまりEC2インスタンスが作成されると、ボリューム内に保管されたファイルは、ブロックデバイスを経由して、マウントポイントのディレクトリ内に作成される。また反対に、マウント先ディレクトリ内に保存されたファイルは、ルートデバイスボリューム内に保管される。複数のルートボリュームを紐づける場合は、最大サイズの大きなルートボリュームに紐づくルートデバイスを、サイズが大きくなり得るディレクトリにマウントするようにしておく。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html</a></li>
@@ -10156,7 +10156,7 @@
 <p><br></p>
 <h3 id="_10">キーペア<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ フィンガープリント値<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>ローカルマシンに配置されている秘密鍵が、該当するEC2に配置されている公開鍵とペアなのかどうか、フィンガープリント値を照合して確認する方法</p>
+<p>ローカルマシンに配置されている秘密鍵が、該当するEC2に配置されている公開鍵とペアなのか否か、フィンガープリント値を照合して確認する方法</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -10271,7 +10271,7 @@
 </tr>
 <tr>
 <td>暗号化</td>
-<td>EC2インスタンスとEBSボリューム間のI/O処理を暗号化するかどうかを設定する。</td>
+<td>EC2インスタンスとEBSボリューム間のI/O処理を暗号化するか否かを設定する。</td>
 <td>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html</a></td>
 </tr>
 </tbody>
@@ -10818,7 +10818,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </code></pre></div></td></tr></table></div>
 <h4 id="_35">▼ タスク実行ロール<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-execution-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-execution-role.png" /></p>
-<p>ECSタスク内のECSコンテナエージェントが、他のAWSリソースにアクセスするために必要なロールのこと。AWS管理ポリシーである『<code>AmazonECSTaskExecutionRolePolicy</code>』が紐付けられたロールを、タスクに紐付ける必要がある。このポリシーには、ECRへのアクセス権限の他、CloudWatchログにログを生成するための権限が設定されている。ECSタスク内のコンテナがリソースにアクセスするために必要なタスクロールとは区別すること。</p>
+<p>ECSタスク内のECSコンテナエージェントが、他のAWSリソースにアクセスするために必要なロールのこと。AWS管理ポリシーである『<code>AmazonECSTaskExecutionRolePolicy</code>』が紐付けられたロールを、タスクに紐付ける必要がある。このポリシーには、ECRへのアクセス権限の他、CloudWatchログにログを作成するための権限が設定されている。ECSタスク内のコンテナがリソースにアクセスするために必要なタスクロールとは区別すること。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
@@ -11593,7 +11593,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <span class="w">    </span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>（５）事前の設定がなされているかどうかをecs-exec-checkerスクリプトを実行して確認する。</p>
+<p>（５）事前の設定がなされているか否かをecs-exec-checkerスクリプトを実行して確認する。</p>
 <p>参考：<a href="https://github.com/aws-containers/amazon-ecs-exec-checker">https://github.com/aws-containers/amazon-ecs-exec-checker</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -11763,7 +11763,7 @@ aws ecs execute-command <span class="se">\</span>
 </tr>
 <tr>
 <td>シークレット</td>
-<td>Secretに保持するデータをAWS KMSで暗号化するかどうかを設定する。</td>
+<td>Secretに保持するデータをAWS KMSで暗号化するか否かを設定する。</td>
 <td>AWS KMSについては、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html</a></td>
 </tr>
 <tr>
@@ -12378,7 +12378,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 </tr>
 <tr>
 <td>自動バックアップ</td>
-<td>AWS Backupに定期的に保存するかどうかを設定する。</td>
+<td>AWS Backupに定期的に保存するか否かを設定する。</td>
 <td></td>
 </tr>
 <tr>
@@ -12472,7 +12472,7 @@ $ umount /var/www/foo
 </tr>
 <tr>
 <td>マルチAZ</td>
-<td>プライマリーノードとリードレプリカを異なるAZに配置するかどうかを設定する。合わせて、自動フェイルオーバーを実行できるようになる。</td>
+<td>プライマリーノードとリードレプリカを異なるAZに配置するか否かを設定する。合わせて、自動フェイルオーバーを実行できるようになる。</td>
 <td></td>
 </tr>
 <tr>
@@ -12687,7 +12687,7 @@ redis *****:6379&gt; monitor
 <p><br></p>
 <h2 id="05-eventbridgecloudwatch">05. EventBridge（CloudWatchイベント）<a class="headerlink" href="#05-eventbridgecloudwatch" title="Permanent link">&para;</a></h2>
 <h3 id="eventbridgecloudwatch">EventBridge（CloudWatchイベント）とは<a class="headerlink" href="#eventbridgecloudwatch" title="Permanent link">&para;</a></h3>
-<p>AWSリソースで起こったイベントを、他のAWSリソースに転送する。サポート対象のAWSリソースは以下のリンクを参考にせよ。</p>
+<p>AWSリソースで発生したイベントを、他のAWSリソースに転送する。サポート対象のAWSリソースは以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html">https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html</a></p>
 <p><br></p>
 <h3 id="_81">パターン<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h3>
@@ -12777,7 +12777,7 @@ redis *****:6379&gt; monitor
 <span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="nx">event</span><span class="p">},</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>対象のAWSリソースで任意のイベントが起こった時に、EventBridgeからLambdaに転送するように設定する。</p>
+<p>対象のAWSリソースで任意のイベントが発生した時に、EventBridgeからLambdaに転送するように設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p p-Indicator">{</span><span class="w"></span>
@@ -12830,7 +12830,7 @@ redis *****:6379&gt; monitor
 <h4 id="_88">▼ 入力トランスフォーマー<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
 <p>入力パスで使用する値を抽出し、入力テンプレートで転送するJSONを定義できる。イベントのJSONの値を変数として出力できる。<code>event</code>キーをドルマークとして、ドットで繋いでアクセスする。</p>
 <p><strong>＊実装例＊</strong></p>
-<p>入力パスにて、使用する値を抽出する。Amplifyで起こったイベントのJSONを変数として取り出す。JSONのキー名が変数名として機能する。</p>
+<p>入力パスにて、使用する値を抽出する。Amplifyで発生したイベントのJSONを変数として取り出す。JSONのキー名が変数名として機能する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -12845,7 +12845,7 @@ redis *****:6379&gt; monitor
 <span class="w">  </span><span class="s">&quot;region&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;$.region&quot;</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>入力テンプレートにて、転送するJSONを定義する。例えばここでは、Slackに送信するJSONに出力する。出力するときは、入力パスの変数名を『<code>&lt;&gt;</code>』で囲う。Slackに送信するメッセージの作成ツールは、以下のリンクを参考にせよ。</p>
+<p>入力テンプレートにて、転送するJSONを定義する。例えばここでは、Slackに送信するJSONに出力する。出力する時は、入力パスの変数名を『<code>&lt;&gt;</code>』で囲う。Slackに送信するメッセージの作成ツールは、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://app.slack.com/block-kit-builder">https://app.slack.com/block-kit-builder</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12942,7 +12942,7 @@ redis *****:6379&gt; monitor
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

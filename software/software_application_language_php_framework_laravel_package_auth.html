@@ -2508,10 +2508,10 @@
         
           <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
-    認証済みかどうかの判定
+    認証済みか否かの判定
   </a>
   
-    <nav class="md-nav" aria-label="認証済みかどうかの判定">
+    <nav class="md-nav" aria-label="認証済みか否かの判定">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2644,14 +2644,14 @@
         
           <li class="md-nav__item">
   <a href="#oauth" class="md-nav__link">
-    ▼ OAuth認証のトークン管理テーブルを生成
+    ▼ OAuth認証のトークン管理テーブルを作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
-    ▼ トークンを生成
+    ▼ トークンを作成
   </a>
   
 </li>
@@ -2853,7 +2853,7 @@
         
           <li class="md-nav__item">
   <a href="#_28" class="md-nav__link">
-    ▼ 認証処理ファイルの自動生成
+    ▼ 認証処理ファイルの自動作成
   </a>
   
 </li>
@@ -2900,7 +2900,7 @@
         
           <li class="md-nav__item">
   <a href="#_31" class="md-nav__link">
-    ▼ 認証処理ファイルの自動生成
+    ▼ 認証処理ファイルの自動作成
   </a>
   
 </li>
@@ -7150,10 +7150,10 @@
         
           <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
-    認証済みかどうかの判定
+    認証済みか否かの判定
   </a>
   
-    <nav class="md-nav" aria-label="認証済みかどうかの判定">
+    <nav class="md-nav" aria-label="認証済みか否かの判定">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7286,14 +7286,14 @@
         
           <li class="md-nav__item">
   <a href="#oauth" class="md-nav__link">
-    ▼ OAuth認証のトークン管理テーブルを生成
+    ▼ OAuth認証のトークン管理テーブルを作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
-    ▼ トークンを生成
+    ▼ トークンを作成
   </a>
   
 </li>
@@ -7495,7 +7495,7 @@
         
           <li class="md-nav__item">
   <a href="#_28" class="md-nav__link">
-    ▼ 認証処理ファイルの自動生成
+    ▼ 認証処理ファイルの自動作成
   </a>
   
 </li>
@@ -7542,7 +7542,7 @@
         
           <li class="md-nav__item">
   <a href="#_31" class="md-nav__link">
-    ▼ 認証処理ファイルの自動生成
+    ▼ 認証処理ファイルの自動作成
   </a>
   
 </li>
@@ -7684,7 +7684,7 @@
 <span class="p">];</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_7">▼ ルーティングの保護<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>BeforeMiddlwareで認証済みのユーザーかどうかを検証し、もし未認証の場合は、ログインページにリダイレクトさせる。これにより、未認証のユーザーがコントローラーを実行することを防ぐ。</p>
+<p>BeforeMiddlwareで認証済みのユーザーか否かを検証し、もし未認証の場合は、ログインページにリダイレクトさせる。これにより、未認証のユーザーがコントローラーを実行することを防ぐ。</p>
 <p>参考：<a href="https://qiita.com/yamotuki/items/b96978f8e379e285ecb6">https://qiita.com/yamotuki/items/b96978f8e379e285ecb6</a></p>
 <p><br></p>
 <h3 id="_8">プロバイダ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
@@ -7936,7 +7936,7 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="_12">認証済みかどうかの判定<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_12">認証済みか否かの判定<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="user">▼ <code>user</code>メソッド<a class="headerlink" href="#user" title="Permanent link">&para;</a></h4>
 <p>現在のセッションにおけるユーザーが認証済みであれば、ユーザーのEloquentモデルを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8224,14 +8224,14 @@
 <span class="p">});</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="authorization">▼ <code>authorization</code>メソッドによる認可<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h4>
-<p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。基底コントローラーを継承したコントローラーでは<code>authorization</code>メソッドをコールでき、現在認証されているユーザーのDBアクセスが認可スコープの範囲内かどうかを検証する。第二引数に、ポリシーに紐付くクラス名前空間あるいはそのインスタンスを渡す。認可に失敗した場合にAuthorizationExceptionを投げるため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
+<p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。基底コントローラーを継承したコントローラーでは<code>authorization</code>メソッドをコールでき、現在認証されているユーザーのDBアクセスが認可スコープの範囲内か否かを検証する。第二引数に、ポリシーに紐付くクラス名前空間あるいはそのインスタンスを渡す。認可に失敗した場合にAuthorizationExceptionを投げるため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-controller-helpers">https://readouble.com/laravel/8.x/ja/authorization.html#via-controller-helpers</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context">https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context</a></li>
 </ul>
 <p><strong>＊実装例＊</strong></p>
-<p>ユーザーが該当IDのFooモデルを更新する権限があるかどうかを検証する。</p>
+<p>ユーザーが該当IDのFooモデルを更新する権限があるか否かを検証する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8307,14 +8307,14 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="can">▼ <code>can</code>メソッドによる認可<a class="headerlink" href="#can" title="Permanent link">&para;</a></h4>
-<p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。現在認証されているユーザーのインスタンスから<code>can</code>メソッドをコールできる。第二引数として、ポリシーに紐付くクラス名前空間またはそのクラスのインスタンスを渡す。DBアクセスが、そのユーザーの認可スコープの範囲内かどうかを検証する。認可に失敗した場合に<code>false</code>を返却するため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
+<p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。現在認証されているユーザーのインスタンスから<code>can</code>メソッドをコールできる。第二引数として、ポリシーに紐付くクラス名前空間またはそのクラスのインスタンスを渡す。DBアクセスが、そのユーザーの認可スコープの範囲内か否かを検証する。認可に失敗した場合に<code>false</code>を返却するため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-the-user-model">https://readouble.com/laravel/8.x/ja/authorization.html#via-the-user-model</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context">https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context</a></li>
 </ul>
 <p><strong>＊実装例＊</strong></p>
-<p>ユーザーがFooモデルを作成する権限があるかどうかを検証する。</p>
+<p>ユーザーがFooモデルを作成する権限があるか否かを検証する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8391,8 +8391,8 @@
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/passport.html">https://readouble.com/laravel/8.x/ja/passport.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ composer require laravel/passport
 </code></pre></div></td></tr></table></div>
-<h4 id="oauth">▼ OAuth認証のトークン管理テーブルを生成<a class="headerlink" href="#oauth" title="Permanent link">&para;</a></h4>
-<p>事前に、Passportの管理テーブルを生成する必要があるため、マイグレーションを実行する。</p>
+<h4 id="oauth">▼ OAuth認証のトークン管理テーブルを作成<a class="headerlink" href="#oauth" title="Permanent link">&para;</a></h4>
+<p>事前に、Passportの管理テーブルを作成する必要があるため、マイグレーションを実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8452,12 +8452,12 @@ Migrated:  2016_06_01_000005_create_oauth_personal_access_clients_table
 </tr>
 <tr>
 <td>oauth_refresh_tokens</td>
-<td>リフレッシュトークンを管理する。アクセストークンの有効期限が切れた時に、再生成をリクエストするために使用する。<br>参考：<a href="https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/">https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/</a></td>
+<td>リフレッシュトークンを管理する。アクセストークンの有効期限が切れた時に、再作成をリクエストするために使用する。<br>参考：<a href="https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/">https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_19">▼ トークンを生成<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>コマンド実行により、<code>/storage/oauth</code>キー、Personal Access Client、Password Grant Clientを生成する。</p>
+<h4 id="_19">▼ トークンを作成<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>コマンド実行により、<code>/storage/oauth</code>キー、Personal Access Client、Password Grant Clientを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8510,7 +8510,7 @@ Client secret: *****
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># oauthキーを生成</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># oauthキーを作成</span>
 $ php artisan passport:keys
 
 <span class="c1"># Persinal Access Tokenを作成する。</span>
@@ -9016,8 +9016,8 @@ $ php artisan passport:client --personal
 <p>パッケージをインストールする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ composer require laravel/breeze:^1.0 --dev
 </code></pre></div></td></tr></table></div>
-<h4 id="_28">▼ 認証処理ファイルの自動生成<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
-<p>認証処理に関連するクラスを自動生成できる。Bladeに組み合わせるJavaScriptを選択できる。</p>
+<h4 id="_28">▼ 認証処理ファイルの自動作成<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<p>認証処理に関連するクラスを自動作成できる。Bladeに組み合わせるJavaScriptを選択できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan breeze:install
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -9031,8 +9031,8 @@ $ php artisan passport:client --personal
 <p>パッケージをインストールする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ composer require laravel/ui:^1.0 --dev
 </code></pre></div></td></tr></table></div>
-<h4 id="_31">▼ 認証処理ファイルの自動生成<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
-<p>認証処理に関連するクラスを自動生成できる。Bladeに組み合わせるJavaScriptを選択できる。</p>
+<h4 id="_31">▼ 認証処理ファイルの自動作成<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<p>認証処理に関連するクラスを自動作成できる。Bladeに組み合わせるJavaScriptを選択できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9055,7 +9055,7 @@ $ php artisan ui bootstrap --auth
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

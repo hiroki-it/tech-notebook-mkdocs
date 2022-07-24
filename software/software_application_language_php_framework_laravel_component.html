@@ -3082,7 +3082,7 @@
         
           <li class="md-nav__item">
   <a href="#url" class="md-nav__link">
-    ▼ ルートエイリアスを基にURL生成
+    ▼ ルートエイリアスを基にURL作成
   </a>
   
 </li>
@@ -3136,7 +3136,7 @@
         
           <li class="md-nav__item">
   <a href="#url_2" class="md-nav__link">
-    ▼ パスを基にURL生成
+    ▼ パスを基にURL作成
   </a>
   
 </li>
@@ -3169,7 +3169,7 @@
         
           <li class="md-nav__item">
   <a href="#faker" class="md-nav__link">
-    ▼ Fakerによるランダム値生成
+    ▼ Fakerによるランダム値作成
   </a>
   
 </li>
@@ -9338,7 +9338,7 @@
         
           <li class="md-nav__item">
   <a href="#url" class="md-nav__link">
-    ▼ ルートエイリアスを基にURL生成
+    ▼ ルートエイリアスを基にURL作成
   </a>
   
 </li>
@@ -9392,7 +9392,7 @@
         
           <li class="md-nav__item">
   <a href="#url_2" class="md-nav__link">
-    ▼ パスを基にURL生成
+    ▼ パスを基にURL作成
   </a>
   
 </li>
@@ -9425,7 +9425,7 @@
         
           <li class="md-nav__item">
   <a href="#faker" class="md-nav__link">
-    ▼ Fakerによるランダム値生成
+    ▼ Fakerによるランダム値作成
   </a>
   
 </li>
@@ -11529,7 +11529,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="eloquentcrud_1">▼ 任意のEloquentモデルCRUDイベントの検知<a class="headerlink" href="#eloquentcrud_1" title="Permanent link">&para;</a></h4>
-<p>Laravelの多くのコンポーネントに、<code>boot</code>メソッドが定義されている。Eloquentモデルでは、インスタンス生成時に<code>boot</code>メソッドがコールされ、これによりに<code>bootTraits</code>メソッドが実行される。Traitに<code>boot+&lt;クラス名&gt;</code>という名前の静的メソッドが定義されていると、<code>bootTraits</code>メソッドはこれをコールする。<code>bootTraits</code>メソッドの中でEloquentモデルのイベントを発生させることにより、全てのEloquentモデルのイベントを一括で発火させられる。</p>
+<p>Laravelの多くのコンポーネントに、<code>boot</code>メソッドが定義されている。Eloquentモデルでは、インスタンス作成時に<code>boot</code>メソッドがコールされ、これによりに<code>bootTraits</code>メソッドが実行される。Traitに<code>boot+&lt;クラス名&gt;</code>という名前の静的メソッドが定義されていると、<code>bootTraits</code>メソッドはこれをコールする。<code>bootTraits</code>メソッドの中でEloquentモデルのイベントを発生させることにより、全てのEloquentモデルのイベントを一括で発火させられる。</p>
 <p>参考：<a href="https://github.com/laravel/framework/blob/9362a29ce298428591369be8d101d51876406fc8/src/Illuminate/Database/Eloquent/Model.php#L255-L285">https://github.com/laravel/framework/blob/9362a29ce298428591369be8d101d51876406fc8/src/Illuminate/Database/Eloquent/Model.php#L255-L285</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>あらかじめTraitを定義する。<code>saved</code>メソッドにEloquentモデルの更新イベントを登録できるようにする。</p>
@@ -11811,7 +11811,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <p>ドキュメントとしてまとめられていないが、デフォルトで様々な例外が備わっている。</p>
 <p>参考：<a href="https://laravel.com/api/8.x/search.html?search=exception">https://laravel.com/api/8.x/search.html?search=exception</a></p>
 <h4 id="_15">▼ スタックトレース<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>Laravelはスローされる例外のメッセージをスタックトレースで生成する。また、Laravel内部で例外キャッチと新たな例外の投げ直しが行われるため、<code>[previous exception]</code>によって例外が結合される。スタックトレースには機密性の高い情報が含まれるため、クライアントへの異常系レスポンスのエラーメッセージには割り当てずに、ロギングだけしておく。エラーが複数行にまたがるため、CloudWatchやFluentBitなどのログ収集ツールでは、各行を繋げて扱えるように設定が必要である。ちなみに、ログの詳細度は<code>APP_DEBUG</code>環境変数で制御できる。</p>
+<p>Laravelはスローされる例外のメッセージをスタックトレースで作成する。また、Laravel内部で例外キャッチと新たな例外の投げ直しが行われるため、<code>[previous exception]</code>によって例外が結合される。スタックトレースには機密性の高い情報が含まれるため、クライアントへの異常系レスポンスのエラーメッセージには割り当てずに、ロギングだけしておく。エラーが複数行にまたがるため、CloudWatchやFluentBitなどのログ収集ツールでは、各行を繋げて扱えるように設定が必要である。ちなみに、ログの詳細度は<code>APP_DEBUG</code>環境変数で制御できる。</p>
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/errors.html#configuration">https://readouble.com/laravel/8.x/ja/errors.html#configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12993,7 +12993,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <h4 id="validator_1">▼ Validatorファサードとは<a class="headerlink" href="#validator_1" title="Permanent link">&para;</a></h4>
 <p>バリデーション処理を提供する。FormRequestクラスの<code>validated</code>メソッドや<code>validate</code>メソッドの代わりに、Validatorファサードを使用しても良い。</p>
 <h4 id="validatorfails">▼ Validatorクラス、<code>fails</code>メソッド<a class="headerlink" href="#validatorfails" title="Permanent link">&para;</a></h4>
-<p>Validateファサードの<code>make</code>メソッドを使用して、ルールを定義する。この時、第一引数で、バリデーションを行うリクエストデータを渡す。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。次に、<code>fails</code>メソッドを使用して、バリデーションでエラーが起こった場合の処理を定義する。</p>
+<p>Validateファサードの<code>make</code>メソッドを使用して、ルールを定義する。この時、第一引数で、バリデーションを行うリクエストデータを渡す。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。次に、<code>fails</code>メソッドを使用して、バリデーションでエラーが発生した場合の処理を定義する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -13051,7 +13051,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
             <span class="s2">&quot;body&quot;</span>  <span class="o">=&gt;</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
         <span class="p">]);</span>
 
-        <span class="c1">// バリデーション時にエラーが起こった場合</span>
+        <span class="c1">// バリデーション時にエラーが発生した場合</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">fails</span><span class="p">())</span> <span class="p">{</span>
             <span class="c1">// 指定したWebページにリダイレクト</span>
             <span class="c1">// validatorを渡すことでエラーメッセージをViewに渡せる。</span>
@@ -13064,7 +13064,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="validate">▼ <code>validate</code>メソッド<a class="headerlink" href="#validate" title="Permanent link">&para;</a></h4>
-<p>Validatorクラスの<code>validate</code>メソッドを使用すると、FormRequestクラスの<code>validate</code>メソッドと同様の処理が実行される。バリデーションでエラーが起こった場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
+<p>Validatorクラスの<code>validate</code>メソッドを使用すると、FormRequestクラスの<code>validate</code>メソッドと同様の処理が実行される。バリデーションでエラーが発生した場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -13123,7 +13123,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
                 <span class="s2">&quot;body&quot;</span>  <span class="o">=&gt;</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
             <span class="p">])</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">();</span>
 
-        <span class="c1">// バリデーション時にエラーが起こった場合</span>
+        <span class="c1">// バリデーション時にエラーが発生した場合</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">fails</span><span class="p">())</span> <span class="p">{</span>
             <span class="c1">// 指定したWebページにリダイレクト</span>
             <span class="c1">// validatorを渡すことでエラーメッセージをViewに渡せる。</span>
@@ -13349,8 +13349,8 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="route_2"><code>route</code>ヘルパー<a class="headerlink" href="#route_2" title="Permanent link">&para;</a></h3>
-<h4 id="url">▼ ルートエイリアスを基にURL生成<a class="headerlink" href="#url" title="Permanent link">&para;</a></h4>
-<p>ルートにエイリアスがついている場合、エイリアスに応じてURLを生成する。ドメインは自動で補完される。</p>
+<h4 id="url">▼ ルートエイリアスを基にURL作成<a class="headerlink" href="#url" title="Permanent link">&para;</a></h4>
+<p>ルートにエイリアスがついている場合、エイリアスに応じてURLを作成する。ドメインは自動で補完される。</p>
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/helpers.html#method-route">https://readouble.com/laravel/8.x/ja/helpers.html#method-route</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -13367,7 +13367,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <p><br></p>
 <h3 id="path"><code>path</code>系ヘルパー<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
 <h4 id="base_path">▼ <code>base_path</code>ヘルパー<a class="headerlink" href="#base_path" title="Permanent link">&para;</a></h4>
-<p>引数を設定しない場合、projectルートディレクトリの絶対パスを生成する。また、projectルートディレクトリからの相対パスを引数として、絶対パスを生成する。</p>
+<p>引数を設定しない場合、projectルートディレクトリの絶対パスを作成する。また、projectルートディレクトリからの相対パスを引数として、絶対パスを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13383,7 +13383,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="nv">$path</span> <span class="o">=</span> <span class="nx">base_path</span><span class="p">(</span><span class="s2">&quot;vendor/bin&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="public_path">▼ <code>public_path</code>ヘルパー<a class="headerlink" href="#public_path" title="Permanent link">&para;</a></h4>
-<p>引数を設定しない場合、publicディレクトリの絶対パスを生成する。また、publicディレクトリからの相対パスを引数として、絶対パスを生成する。</p>
+<p>引数を設定しない場合、publicディレクトリの絶対パスを作成する。また、publicディレクトリからの相対パスを引数として、絶対パスを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13399,7 +13399,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="nv">$path</span> <span class="o">=</span> <span class="nx">public_path</span><span class="p">(</span><span class="s2">&quot;css/app.css&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="storage_path">▼ <code>storage_path</code>ヘルパー<a class="headerlink" href="#storage_path" title="Permanent link">&para;</a></h4>
-<p>引数を設定しない場合、storageディレクトリの絶対パスを生成する。まあ、storageディレクトリからの相対パスを引数として、絶対パスを生成する。</p>
+<p>引数を設定しない場合、storageディレクトリの絶対パスを作成する。まあ、storageディレクトリからの相対パスを引数として、絶対パスを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13416,8 +13416,8 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="url_1"><code>url</code>ヘルパー<a class="headerlink" href="#url_1" title="Permanent link">&para;</a></h3>
-<h4 id="url_2">▼ パスを基にURL生成<a class="headerlink" href="#url_2" title="Permanent link">&para;</a></h4>
-<p>指定したパスに応じてURLを生成する。ドメインは自動で補完される。</p>
+<h4 id="url_2">▼ パスを基にURL作成<a class="headerlink" href="#url_2" title="Permanent link">&para;</a></h4>
+<p>指定したパスに応じてURLを作成する。ドメインは自動で補完される。</p>
 <p>参考：<a href="https://readouble.com/laravel/5.7/ja/urls.html">https://readouble.com/laravel/5.7/ja/urls.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -13430,8 +13430,8 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <p><br></p>
 <h2 id="09-factory">09. Factory<a class="headerlink" href="#09-factory" title="Permanent link">&para;</a></h2>
 <h3 id="_27">初期値レコードの定義<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
-<h4 id="faker">▼ Fakerによるランダム値生成<a class="headerlink" href="#faker" title="Permanent link">&para;</a></h4>
-<p>Fakerはレコードの値をランダムに生成するためのパッケージである。Farkerクラスは、プロパティにランダムなデータを保持している。このプロパティを特に、Formattersという。</p>
+<h4 id="faker">▼ Fakerによるランダム値作成<a class="headerlink" href="#faker" title="Permanent link">&para;</a></h4>
+<p>Fakerはレコードの値をランダムに作成するためのパッケージである。Farkerクラスは、プロパティにランダムなデータを保持している。このプロパティを特に、Formattersという。</p>
 <p>参考：<a href="https://fwhy.github.io/faker-docs/">https://fwhy.github.io/faker-docs/</a></p>
 <h4 id="factory">▼ Factoryによるレコード定義<a class="headerlink" href="#factory" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
@@ -13654,7 +13654,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <h2 id="10-02-httpformrequest">10-02. HTTP｜FormRequest<a class="headerlink" href="#10-02-httpformrequest" title="Permanent link">&para;</a></h2>
 <h3 id="_29">クエリパラメーター/メッセージボディのバリデーション<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
 <h4 id="_30">▼ ルール定義 ＆ バリデーション手動実行<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
-<p>同じくFormRequestクラスの<code>validate</code>メソッドを使用して、ルールを定義し、さらにバリデーションを実行する。<code>validated</code>メソッドと間違わないように注意する。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。バリデーションでエラーが起こった場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
+<p>同じくFormRequestクラスの<code>validate</code>メソッドを使用して、ルールを定義し、さらにバリデーションを実行する。<code>validated</code>メソッドと間違わないように注意する。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。バリデーションでエラーが発生した場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/7.x/ja/validation.html#creating-form-requests">https://readouble.com/laravel/7.x/ja/validation.html#creating-form-requests</a></li>
@@ -13713,7 +13713,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// クエリパラメーターのバリデーションを実行する。</span>
-        <span class="c1">// エラーが起こった場合は元のWebページにリダイレクト</span>
+        <span class="c1">// エラーが発生した場合は元のWebページにリダイレクト</span>
         <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
             <span class="s2">&quot;limit&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;required&quot;</span><span class="p">,</span> <span class="nx">Rule</span><span class="o">::</span><span class="na">in</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">])],</span>
             <span class="s2">&quot;order&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;required&quot;</span><span class="p">,</span> <span class="nx">Rule</span><span class="o">::</span><span class="na">in</span><span class="p">([</span><span class="s2">&quot;ascend&quot;</span><span class="p">,</span> <span class="s2">&quot;descend&quot;</span><span class="p">])],</span>
@@ -13728,7 +13728,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// ルールの定義、バリデーションの実行</span>
-        <span class="c1">// エラーが起こった場合は元のWebページにリダイレクト</span>
+        <span class="c1">// エラーが発生した場合は元のWebページにリダイレクト</span>
         <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
             <span class="s2">&quot;title&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;required&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;max:255&quot;</span><span class="p">],</span>
             <span class="s2">&quot;body&quot;</span>  <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;required&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;max:255&quot;</span><span class="p">],</span>
@@ -13778,7 +13778,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// ルールの定義、メッセージボディのバリデーションを実行する。</span>
-        <span class="c1">// エラーが起こった場合は元のWebページにリダイレクト</span>
+        <span class="c1">// エラーが発生した場合は元のWebページにリダイレクト</span>
         <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">([</span>
             <span class="s2">&quot;title&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;required|string|max:5255&quot;</span><span class="p">,</span>
             <span class="s2">&quot;body&quot;</span>  <span class="o">=&gt;</span> <span class="s2">&quot;required|string|max:255&quot;</span><span class="p">,</span>
@@ -13790,7 +13790,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_31">▼ ルール定義 &amp; バリデーション自動実行<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
-<p>Controllerで、FormRequestクラスを引数に指定すると、コントローラーのメソッドをコールする前にバリデーションを自動的に実行する。そのため、コントローラーの中ではバリデーションを実行する必要はない。代わりに、ルールをFormRequestクラスの<code>rule</code>メソッドに定義する必要がある。FormRequestクラスの<code>validated</code>メソッドを使用して、バリデーション済みのデータを取得できる。バリデーションでエラーが起こった場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
+<p>Controllerで、FormRequestクラスを引数に指定すると、コントローラーのメソッドをコールする前にバリデーションを自動的に実行する。そのため、コントローラーの中ではバリデーションを実行する必要はない。代わりに、ルールをFormRequestクラスの<code>rule</code>メソッドに定義する必要がある。FormRequestクラスの<code>validated</code>メソッドを使用して、バリデーション済みのデータを取得できる。バリデーションでエラーが発生した場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -13837,7 +13837,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="k">public</span> <span class="k">function</span> <span class="nf">index</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// クエリパラメーターのバリデーションを実行する。</span>
-        <span class="c1">// エラーが起こった場合は元のWebページにリダイレクト</span>
+        <span class="c1">// エラーが発生した場合は元のWebページにリダイレクト</span>
         <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validated</span><span class="p">();</span>
 
         <span class="c1">// 続きの処理</span>
@@ -13849,7 +13849,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="k">public</span> <span class="k">function</span> <span class="nf">update</span><span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">)</span>
     <span class="p">{</span>
         <span class="c1">// メッセージボディのバリデーションを実行する。</span>
-        <span class="c1">// エラーが起こった場合は元のWebページにリダイレクト</span>
+        <span class="c1">// エラーが発生した場合は元のWebページにリダイレクト</span>
         <span class="nv">$validated</span> <span class="o">=</span> <span class="nv">$request</span><span class="o">-&gt;</span><span class="na">validated</span><span class="p">();</span>
 
         <span class="c1">// 続きの処理</span>
@@ -14134,7 +14134,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="in">▼ <code>in</code>メソッド<a class="headerlink" href="#in" title="Permanent link">&para;</a></h4>
-<p>決められた複数の値に合致する値であるかどうかを検証する。</p>
+<p>決められた複数の値に合致する値であるか否かを検証する。</p>
 <p>参考：<a href="https://laravel.com/api/8.x/Illuminate/Validation/Rule.html#method_in">https://laravel.com/api/8.x/Illuminate/Validation/Rule.html#method_in</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -14469,7 +14469,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <h4 id="startsession">▼ StartSession<a class="headerlink" href="#startsession" title="Permanent link">&para;</a></h4>
 <p>セッションの開始の開始点になる。</p>
 <p>参考：<a href="https://qiita.com/wim/items/b1db5202cce6b38bc47b">https://qiita.com/wim/items/b1db5202cce6b38bc47b</a></p>
-<p>また、同一セッションで一意なCSRFトークンを生成する。CSRFトークンによるCSRFの防御については、以下のリンクを参考にせよ。</p>
+<p>また、同一セッションで一意なCSRFトークンを作成する。CSRFトークンによるCSRFの防御については、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_cyber_attacks.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_cyber_attacks.html</a></p>
 <h4 id="verifycsrftoken">▼ VerifyCsrfToken<a class="headerlink" href="#verifycsrftoken" title="Permanent link">&para;</a></h4>
 <p>セッションデータに書かれたCSRFトークンと、リクエストボディに割り当てられたトークンを比較する。セッションデータは<code>storage/framework/sessions</code>ディレクトリ配下に配置されている。一般的に、CSRFトークンは<code>Cookie</code>ヘッダーに割り当てることもできるが、Laravelではリクエストボディを使用する必要がある。</p>
@@ -14857,7 +14857,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/logging.html#available-channel-drivers">https://readouble.com/laravel/8.x/ja/logging.html#available-channel-drivers</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>LOG_CHANNEL=&lt;オプション名&gt;
 </code></pre></div></td></tr></table></div>
-<p>なお、<code>storage</code>ディレクトリ配下にログファイルを生成するようなログチャンネルを設定した場合に、phpがこのディレクトリへのアクセス権限を持たないため、アクセスできるようにする必要がある。権限を変更したファイルは差分としてGitに認識されるため、これを共有すればチーム内で権限変更を共有できる。</p>
+<p>なお、<code>storage</code>ディレクトリ配下にログファイルを作成するようなログチャンネルを設定した場合に、phpがこのディレクトリへのアクセス権限を持たないため、アクセスできるようにする必要がある。権限を変更したファイルは差分としてGitに認識されるため、これを共有すればチーム内で権限変更を共有できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Failed to open stream: Permission denied</span>
 $ chmod -R <span class="m">777</span> /var/www/foo/storage
@@ -14986,7 +14986,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <span class="x">];</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="stderr">▼ <code>stderr</code>キー<a class="headerlink" href="#stderr" title="Permanent link">&para;</a></h4>
-<p>全てのログを標準エラー出力に対して出力する。Docker上でLaravelを稼働させる場合は、生成されるログファイルでコンテナのサイズが肥大化することを防ぐために、これを選択する。なお、独自カスタマイズとして、<code>stream</code>キーをstdout変更すれば、標準出力にログを出力もできる。</p>
+<p>全てのログを標準エラー出力に対して出力する。Docker上でLaravelを稼働させる場合は、作成されるログファイルでコンテナのサイズが肥大化することを防ぐために、これを選択する。なお、独自カスタマイズとして、<code>stream</code>キーをstdout変更すれば、標準出力にログを出力もできる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -15674,7 +15674,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="e">▼ Eメール通知内容の定義<a class="headerlink" href="#e" title="Permanent link">&para;</a></h4>
-<p>MailMessageクラスのメソッドを使用して、Eメール通知の内容を生成する。<code>markdown</code>メソッドを使用することにより、マークダウン形式で定義できる。</p>
+<p>MailMessageクラスのメソッドを使用して、Eメール通知の内容を作成する。<code>markdown</code>メソッドを使用することにより、マークダウン形式で定義できる。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/notifications.html#writing-the-message">https://readouble.com/laravel/8.x/ja/notifications.html#writing-the-message</a></li>
@@ -16411,7 +16411,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <h2 id="16-security">16. Security<a class="headerlink" href="#16-security" title="Permanent link">&para;</a></h2>
 <h3 id="csrf">CSRF対策<a class="headerlink" href="#csrf" title="Permanent link">&para;</a></h3>
 <h4 id="_63">▼ アプリケーション側の対応<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
-<p>セッション開始時にCSRFトークンが生成される。Bladeを使用してサーバ側のCSRFトークンを取り出し、inputタグのhidden属性にCSRFトークンを割り当て送信する。</p>
+<p>セッション開始時にCSRFトークンが作成される。Bladeを使用してサーバ側のCSRFトークンを取り出し、inputタグのhidden属性にCSRFトークンを割り当て送信する。</p>
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/csrf.html">https://readouble.com/laravel/8.x/ja/csrf.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -16824,7 +16824,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <tbody>
 <tr>
 <td>AppServiceProvider</td>
-<td>・ServiceContainerへのクラスのバインド（登録）<br>・ServiceContainerからのインスタンスのリゾルブ（生成）</td>
+<td>・ServiceContainerへのクラスのバインド（登録）<br>・ServiceContainerからのインスタンスのリゾルブ（作成）</td>
 </tr>
 <tr>
 <td>MacroServiceProvider</td>
@@ -16925,7 +16925,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <p><br></p>
 <h3 id="appserviceprovider">AppServiceProvider<a class="headerlink" href="#appserviceprovider" title="Permanent link">&para;</a></h3>
 <h4 id="_65">▼ 単一のクラスをバインド/リゾルブ<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
-<p>AppSeriveProviderにて、ServiceContainerにクラスをバインドすることによって、ServiceContainerがインスタンスをリゾルブできるようになる。これにより、メソッドの引数でクラスを指定しさえすれば、そのクラスのインスタンスが渡されるため、自動的に依存オブジェクト注入が実行されたことになる。Laravelでは、クラスはServiceContainerに自動的にバインドされており、引数でクラスを指定するだけでインスタンスが生成されるため、以下の実装を実行する必要はない。ただし、混合型の場合は引数の型を指定できないため、リゾルブは実行できない。</p>
+<p>AppSeriveProviderにて、ServiceContainerにクラスをバインドすることによって、ServiceContainerがインスタンスをリゾルブできるようになる。これにより、メソッドの引数でクラスを指定しさえすれば、そのクラスのインスタンスが渡されるため、自動的に依存オブジェクト注入が実行されたことになる。Laravelでは、クラスはServiceContainerに自動的にバインドされており、引数でクラスを指定するだけでインスタンスが作成されるため、以下の実装を実行する必要はない。ただし、混合型の場合は引数の型を指定できないため、リゾルブは実行できない。</p>
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/container.html#automatic-injection">https://readouble.com/laravel/8.x/ja/container.html#automatic-injection</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>バインドする。なお、Laravelでは不要である。</p>
@@ -17979,7 +17979,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_75">▼ バリデーションメッセージの出力<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h4>
-<p>バリデーションでエラーが起こった場合、バリデーションでエラーがあった場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、MessageBagクラスがViewに渡される。MessageBagクラスは、Blade上で<code>errors</code>変数に格納されており、各メソッドをコールしてエラーメッセージを出力できる。</p>
+<p>バリデーションでエラーが発生した場合、バリデーションでエラーがあった場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、MessageBagクラスがViewに渡される。MessageBagクラスは、Blade上で<code>errors</code>変数に格納されており、各メソッドをコールしてエラーメッセージを出力できる。</p>
 <p>参考：<a href="https://laravel.com/api/8.x/Illuminate/Support/MessageBag.html">https://laravel.com/api/8.x/Illuminate/Support/MessageBag.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>MessageBagクラスの<code>all</code>メソッドで、全てのエラーメッセージを出力する。</p>
@@ -18380,7 +18380,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

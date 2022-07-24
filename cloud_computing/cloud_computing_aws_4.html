@@ -9888,7 +9888,7 @@ $ curl <span class="se">\</span>
 
 <span class="gu">## 想定外の結果</span>
 
-本番環境での対応で起こった想定外の結果を記載する。
+本番環境での対応で発生した想定外の結果を記載する。
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="03-02-rdsaurora">03-02. RDS（Aurora）<a class="headerlink" href="#03-02-rdsaurora" title="Permanent link">&para;</a></h2>
@@ -9923,7 +9923,7 @@ $ curl <span class="se">\</span>
 <tr>
 <td>パラメーターグループ</td>
 <td>グローバルパラメーターを設定する。</td>
-<td>デフォルトを使用せずに独自定義する場合、事前に作成しておく必要がある。クラスターパラメーターグループとインスタンスパラメーターグループがあるが、全てのインスタンスに同じパラメーターループを設定するべきなため、クラスターパラメーターを使用すれば良い。各パラメーターに適用タイプ（dynamic/static）があり、dynamicタイプは設定の適用に再起動が必要である。新しく作成したクラスタパラメーターグループにて以下の値を設定すると良い。<br>・<code>time_zone=Asia/Tokyo</code><br>・<code>character_set_client=utf8mb4</code><br>・<code>character_set_connection=utf8mb4</code><br>・<code>character_set_database=utf8mb4</code><br>・<code>character_set_results=utf8mb4</code><br>・<code>character_set_server=utf8mb4</code><br>・<code>server_audit_logging=1</code>（監査ログをCloudWatchに送信するかどうか）<br>・<code>server_audit_logs_upload=1</code><br>・<code>general_log=1</code>（通常クエリログをCloudWatchに送信するかどうか）<br>・<code>slow_query_log=1</code>（スロークエリログをCloudWatchに送信するかどうか）<br>・<code>long_query_time=3</code>（スロークエリと見なす最短秒数）</td>
+<td>デフォルトを使用せずに独自定義する場合、事前に作成しておく必要がある。クラスターパラメーターグループとインスタンスパラメーターグループがあるが、全てのインスタンスに同じパラメーターループを設定するべきなため、クラスターパラメーターを使用すれば良い。各パラメーターに適用タイプ（dynamic/static）があり、dynamicタイプは設定の適用に再起動が必要である。新しく作成したクラスタパラメーターグループにて以下の値を設定すると良い。<br>・<code>time_zone=Asia/Tokyo</code><br>・<code>character_set_client=utf8mb4</code><br>・<code>character_set_connection=utf8mb4</code><br>・<code>character_set_database=utf8mb4</code><br>・<code>character_set_results=utf8mb4</code><br>・<code>character_set_server=utf8mb4</code><br>・<code>server_audit_logging=1</code>（監査ログをCloudWatchに送信するか否か）<br>・<code>server_audit_logs_upload=1</code><br>・<code>general_log=1</code>（通常クエリログをCloudWatchに送信するか否か）<br>・<code>slow_query_log=1</code>（スロークエリログをCloudWatchに送信するか否か）<br>・<code>long_query_time=3</code>（スロークエリと見なす最短秒数）</td>
 </tr>
 <tr>
 <td>DB認証</td>
@@ -9991,7 +9991,7 @@ $ curl <span class="se">\</span>
 </tr>
 <tr>
 <td>マルチAZ配置</td>
-<td>プライマリーインスタンスとは別に、リードレプリカをマルチAZ配置で追加するかどうかを設定する。</td>
+<td>プライマリーインスタンスとは別に、リードレプリカをマルチAZ配置で追加するか否かを設定する。</td>
 <td>後からでもリードレプリカを追加できる。また、フェイルオーバー時にリードレプリカが存在していなければ、昇格後のプライマリーインスタンスが自動で作成される。</td>
 </tr>
 <tr>
@@ -10587,7 +10587,7 @@ NOW()
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

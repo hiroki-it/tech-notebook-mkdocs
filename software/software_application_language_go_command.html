@@ -6889,9 +6889,9 @@
 <p><br></p>
 <h3 id="build">build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h3>
 <h4 id="build_1">▼ buildとは<a class="headerlink" href="#build_1" title="Permanent link">&para;</a></h4>
-<p>指定したパスをビルド対象として、ビルドのアーティファクトを生成する。<code>foo_test.go</code>ファイルはビルドから自動的に除外される。</p>
+<p>指定したパスをビルド対象として、ビルドのアーティファクトを作成する。<code>foo_test.go</code>ファイルはビルドから自動的に除外される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># cmdディレクトリをビルド対象として、ルートディレクトリにcmdアーティファクトを生成する。</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># cmdディレクトリをビルド対象として、ルートディレクトリにcmdアーティファクトを作成する。</span>
 $ go build ./cmd
 </code></pre></div></td></tr></table></div>
 <p>もし、ビルドのエラー時に終了ステータスのみが返却され、原因が不明の場合、<code>panic</code>メソッドが原因を握りつぶしている可能性を考える。</p>
@@ -6899,18 +6899,18 @@ $ go build ./cmd
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">exit</span> status <span class="m">2</span>. Docker build ran into internal error. Please retry. If this keeps happening, please open an issue..
 </code></pre></div></td></tr></table></div>
 <h4 id="-o">▼ <code>-o</code><a class="headerlink" href="#-o" title="Permanent link">&para;</a></h4>
-<p>指定したパスにビルドのアーティファクトを生成する。ビルド対象パスを指定しない場合、ルートディレクトリのgoファイルをビルドの対象とする。</p>
+<p>指定したパスにビルドのアーティファクトを作成する。ビルド対象パスを指定しない場合、ルートディレクトリのgoファイルをビルドの対象とする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ルートディレクトリ内のgoファイルをビルド対象として</span>
-<span class="c1"># $HOME/go/binディレクトリにルートディレクトリ名アーティファクトを生成する。</span>
+<span class="c1"># $HOME/go/binディレクトリにルートディレクトリ名アーティファクトを作成する。</span>
 $ go build -o <span class="nv">$HOME</span>/go/bin
 </code></pre></div></td></tr></table></div>
-<p>また、指定したパス内のgoファイルをビルド対象として、指定したパスにビルドのアーティファクトを生成もできる。</p>
+<p>また、指定したパス内のgoファイルをビルド対象として、指定したパスにビルドのアーティファクトを作成もできる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># cmdディレクトリ内のgoファイルをビルド対象として</span>
-<span class="c1"># $HOME/go/binディレクトリにcmdアーティファクトを生成する。</span>
+<span class="c1"># $HOME/go/binディレクトリにcmdアーティファクトを作成する。</span>
 $ go build -o <span class="nv">$HOME</span>/go/bin ./cmd
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、事前のインストールに失敗に、ビルド対象が存在していないと、以下のようなエラーになる。</p>
@@ -7040,7 +7040,7 @@ $ go build -o <span class="nv">$HOME</span>/go/bin ./cmd
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

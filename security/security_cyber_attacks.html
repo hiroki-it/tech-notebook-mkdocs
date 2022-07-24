@@ -7942,7 +7942,7 @@
 <p>参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
 <h4 id="_5">▼ パケットフィルタリング型ファイアウォール<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="パケットフィルタリング" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/パケットフィルタリング.gif" /></p>
-<p>パケットのヘッダ情報の送信元IPアドレスやポート番号などに基づいて、パケットを許可するべきかどうかを決定する。パケットのデータは検査しない。速度を重視する場合はこちら。ファイアウォールとWebサーバーの間には、NATルーターやNAPTルーターが設置されている。</p>
+<p>パケットのヘッダ情報の送信元IPアドレスやポート番号などに基づいて、パケットを許可するべきか否かを決定する。パケットのデータは検査しない。速度を重視する場合はこちら。ファイアウォールとWebサーバーの間には、NATルーターやNAPTルーターが設置されている。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></li>
@@ -8028,7 +8028,7 @@ public
 <p>参考：<a href="https://pc-karuma.net/windows-10-firewall-open-port/">https://pc-karuma.net/windows-10-firewall-open-port/</a></p>
 <p><img alt="パケットフィルタリングの設定" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/パケットフィルタリングの設定.gif" /></p>
 <h4 id="_6">▼ ゲートウェイ型ファイアウォール（プロキシサーバー型）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>パケットのデータに基づいて、パケットを許可するべきかどうかを決定する。</p>
+<p>パケットのデータに基づいて、パケットを許可するべきか否かを決定する。</p>
 <p>参考：<a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></p>
 <h4 id="_7">▼ サーキットレベル型ファイアウォール<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>トランスポート層の段階でサイバー攻撃を遮断するファイアウォールのこと。</p>
@@ -8132,7 +8132,7 @@ public
 <h4 id="_13">▼ 【対策】通信の暗号化<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html</a></p>
 <h4 id="_14">▼ 【対策】チェックサム<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>sha256によって生成された文字列をファイル情報として添付し、これを送受信の両側で照合することにより、通知途中でファイルが改竄されていないことを保証する。</p>
+<p>sha256によって作成された文字列をファイル情報として添付し、これを送受信の両側で照合することにより、通知途中でファイルが改竄されていないことを保証する。</p>
 <p>参考：<a href="https://academy.gmocloud.com/know/20200116/8627">https://academy.gmocloud.com/know/20200116/8627</a></p>
 <p><br></p>
 <h3 id="csrfcross-site-request-forgeries">CSRF：Cross-Site Request Forgeries<a class="headerlink" href="#csrfcross-site-request-forgeries" title="Permanent link">&para;</a></h3>
@@ -8311,7 +8311,7 @@ public
 <span class="err">Access-Control-Allow-Headers: *</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="set-cookiedomain">▼ 【対策】<code>Set-Cookie</code>ヘッダーのDomain属性<a class="headerlink" href="#set-cookiedomain" title="Permanent link">&para;</a></h4>
-<p>リクエストメッセージが<code>Cookie</code>ヘッダーを持つことを許可した場合、サブドメインのオリジンにも<code>Cookie</code>ヘッダーの送信を許可するかどうかを制御できる。サブドメインレスポンスメッセージの<code>Set-Cookie</code>ヘッダーにて、Domain属性にドメインが割り当てなかった場合は、ページを表示するサーバーのドメインにのみ<code>Cookie</code>ヘッダーを持つリクエストを許可でき、サブドメインへの送信を拒否できる。一方で、ドメインが割り当てた場合は、そのページからサブドメインに対しても、<code>Cookie</code>ヘッダーを持つリクエストを許可できる。ドメインではなく、オリジンであることに注意する。</p>
+<p>リクエストメッセージが<code>Cookie</code>ヘッダーを持つことを許可した場合、サブドメインのオリジンにも<code>Cookie</code>ヘッダーの送信を許可するか否かを制御できる。サブドメインレスポンスメッセージの<code>Set-Cookie</code>ヘッダーにて、Domain属性にドメインが割り当てなかった場合は、ページを表示するサーバーのドメインにのみ<code>Cookie</code>ヘッダーを持つリクエストを許可でき、サブドメインへの送信を拒否できる。一方で、ドメインが割り当てた場合は、そのページからサブドメインに対しても、<code>Cookie</code>ヘッダーを持つリクエストを許可できる。ドメインではなく、オリジンであることに注意する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://zenn.dev/agektmr/articles/f8dcd345a88c97">https://zenn.dev/agektmr/articles/f8dcd345a88c97</a></li>
@@ -8390,7 +8390,7 @@ public
 <p>レインボーテーブルの文字列とハッシュ値の対応関係を元にして、ハッシュ化された暗号からパスワードを推測する手法。</p>
 <p><img alt="レインボー攻撃" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/Rainbow攻撃.png" /></p>
 <h4 id="bcrypt">▼ 【対策】BCryptによるハッシュ化<a class="headerlink" href="#bcrypt" title="Permanent link">&para;</a></h4>
-<p>BCryptを使用して、Blowfish方式に基づく暗号化を実行する。Blowfish方式では、同じパスワードの文字列であっても異なるハッシュ値が生成されるため、レインボー攻撃を防げる。Blowfish方式で生成されたハッシュ値は、異なるルールで生成された複数のハッシュ値の組み合わせである。</p>
+<p>BCryptを使用して、Blowfish方式に基づく暗号化を実行する。Blowfish方式では、同じパスワードの文字列であっても異なるハッシュ値が作成されるため、レインボー攻撃を防げる。Blowfish方式で作成されたハッシュ値は、異なるルールで作成された複数のハッシュ値の組み合わせである。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://medium-company.com/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0/">https://medium-company.com/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0/</a></li>
@@ -8458,7 +8458,7 @@ $2y$10$1QVmWNzk.TsaZQLQ/zeI9OAZL02AWP.VdFPPyAc9hSc2Cp4yOXKtG
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

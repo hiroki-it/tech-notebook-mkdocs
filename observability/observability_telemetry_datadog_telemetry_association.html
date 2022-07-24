@@ -7015,7 +7015,7 @@
 <tbody>
 <tr>
 <td><code>host</code></td>
-<td>メトリクス、ログ、分散トレースの送信元のホスト名を示す。テレメトリーが生成元とは別の場所から受信した場合に役立つ。</td>
+<td>メトリクス、ログ、分散トレースの送信元のホスト名を示す。テレメトリーが作成元とは別の場所から受信した場合に役立つ。</td>
 </tr>
 <tr>
 <td><code>device</code></td>
@@ -7023,19 +7023,19 @@
 </tr>
 <tr>
 <td><code>source</code></td>
-<td>ログの生成元のベンダー名を示す。</td>
+<td>ログの作成元のベンダー名を示す。</td>
 </tr>
 <tr>
 <td><code>service</code></td>
-<td>メトリクス、ログ、分散トレースの生成元のアプリケーション名を示す。</td>
+<td>メトリクス、ログ、分散トレースの作成元のアプリケーション名を示す。</td>
 </tr>
 <tr>
 <td><code>env</code></td>
-<td>メトリクス、ログ、分散トレースの生成元の実行環境名を示す。</td>
+<td>メトリクス、ログ、分散トレースの作成元の実行環境名を示す。</td>
 </tr>
 <tr>
 <td><code>version</code></td>
-<td>メトリクス、ログ、分散トレースの生成元のリリースバージョンを示す。</td>
+<td>メトリクス、ログ、分散トレースの作成元のリリースバージョンを示す。</td>
 </tr>
 </tbody>
 </table>
@@ -7102,7 +7102,7 @@
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="service">▼ service<a class="headerlink" href="#service" title="Permanent link">&para;</a></h4>
-<p>分散トレースの生成元のアプリケーション名を表す。</p>
+<p>分散トレースの作成元のアプリケーション名を表す。</p>
 <table>
 <thead>
 <tr>
@@ -7123,7 +7123,7 @@
 <p>フレームワーク以外のパッケージなどの分散トレースに関しては、紐づけられないことを許容している。APMのservice名とECSタスク/ログのserviceタグは、名前の付け方が異なることに注意する。service名はインテグレーション名が自動で割り当てられるが、トレーサーに環境変数を渡して変更もできる。フレームワークのインテグレーション名は <code>DD_SERVICE_NAME</code> から設定する一方で、それ以外のタグ名は <code>DD_SERVICE_MAPPING</code> から設定する。</p>
 <p>参考：<a href="https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D">https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D</a></p>
 <h4 id="env">▼ env<a class="headerlink" href="#env" title="Permanent link">&para;</a></h4>
-<p>分散トレースの生成元の環境名を表す。envタグは、datadogコンテナの環境変数を使用してタグ付けする。</p>
+<p>分散トレースの作成元の環境名を表す。envタグは、datadogコンテナの環境変数を使用してタグ付けする。</p>
 <table>
 <thead>
 <tr>
@@ -7211,7 +7211,7 @@
 <h4 id="_9">▼ セットアップ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>FluentBitの設定ファイルからタグ付けする。</p>
 <h4 id="env_2">▼ env<a class="headerlink" href="#env_2" title="Permanent link">&para;</a></h4>
-<p>ログの生成元の環境名を表す。</p>
+<p>ログの作成元の環境名を表す。</p>
 <table>
 <thead>
 <tr>
@@ -7227,7 +7227,7 @@
 </tbody>
 </table>
 <h4 id="service_2">▼ service<a class="headerlink" href="#service_2" title="Permanent link">&para;</a></h4>
-<p>ログの生成元のアプリケーション名を表す。</p>
+<p>ログの作成元のアプリケーション名を表す。</p>
 <table>
 <thead>
 <tr>
@@ -7243,7 +7243,7 @@
 </tbody>
 </table>
 <h4 id="source">▼ source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h4>
-<p>ログの生成元のベンダー名を表す。</p>
+<p>ログの作成元のベンダー名を表す。</p>
 <table>
 <thead>
 <tr>
@@ -7282,7 +7282,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

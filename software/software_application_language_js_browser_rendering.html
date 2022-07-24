@@ -8292,16 +8292,16 @@
 <span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>リソースの文字列からHTMLタグが認識され、トークンに変換される。各トークンは、<code>1</code>個のオブジェクトに変換される。</p>
-<p><img alt="DOMツリーが生成されるまで" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DOMツリーが生成されるまで.png" /></p>
-<p>HTMLパーサーは、オブジェクトをノードとして、DOMツリーを生成する。DOMツリーを生成する途中でscriptタグに到達すると、一旦、JSファイルを読み込んでScripting処理を終えてから、DOMツリーの生成を再開する。DOMのインターフェースについては、以下のリンクを参考にせよ。</p>
+<p><img alt="DOMツリーが作成されるまで" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DOMツリーが作成されるまで.png" /></p>
+<p>HTMLパーサーは、オブジェクトをノードとして、DOMツリーを作成する。DOMツリーを作成する途中でscriptタグに到達すると、一旦、JSファイルを読み込んでScripting処理を終えてから、DOMツリーの作成を再開する。DOMのインターフェースについては、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model">https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model</a></p>
 <p><img alt="DOMツリー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DOMツリー.png" /></p>
-<p>同時に、CSSパーサーは、headタグにあるlinkタグを基にサーバーにリクエストを行う。レスポンスされた<code>.css</code>ファイルに対してDownloading処理を行った後、オブジェクトをノードとして、CSSOMツリーを生成する。</p>
+<p>同時に、CSSパーサーは、headタグにあるlinkタグを基にサーバーにリクエストを行う。レスポンスされた<code>.css</code>ファイルに対してDownloading処理を行った後、オブジェクトをノードとして、CSSOMツリーを作成する。</p>
 <p><img alt="CSSOMツリー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/CSSOMツリー.png" /></p>
 <p><br></p>
 <h3 id="xml_1">XML形式テキストファイルの構造解析<a class="headerlink" href="#xml_1" title="Permanent link">&para;</a></h3>
 <h4 id="_12">▼ 構造解析の流れ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p>レンダリングエンジンは、最初に出現するルート要素を根（ルート）、またすべての要素や属性を、そこから延びる枝葉として意味づけ、レンダリングツリーを生成する。</p>
+<p>レンダリングエンジンは、最初に出現するルート要素を根（ルート）、またすべての要素や属性を、そこから延びる枝葉として意味づけ、レンダリングツリーを作成する。</p>
 <p><strong>＊例＊</strong></p>
 <p><img alt="DOMによるツリー構造化" src="https://user-images.githubusercontent.com/42175286/59778015-a59f5600-92f0-11e9-9158-36cc937876fb.png" /></p>
 <p>参考：<a href="https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB">https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB</a></p>
@@ -8405,11 +8405,11 @@
 <p><br></p>
 <h2 id="04-rendering">04. Rendering処理<a class="headerlink" href="#04-rendering" title="Permanent link">&para;</a></h2>
 <h3 id="rendering">Rendering処理とは<a class="headerlink" href="#rendering" title="Permanent link">&para;</a></h3>
-<p>レンダリングツリーが生成され、ブラウザ上のどこに何を描画するのかを計算する。CalculateStyle処理とLayout処理に分けられる。</p>
+<p>レンダリングツリーが作成され、ブラウザ上のどこに何を描画するのかを計算する。CalculateStyle処理とLayout処理に分けられる。</p>
 <p><br></p>
 <h2 id="04-02-calculatestyle">04-02. CalculateStyle処理<a class="headerlink" href="#04-02-calculatestyle" title="Permanent link">&para;</a></h2>
 <h3 id="calculatestyle">CalculateStyle処理とは<a class="headerlink" href="#calculatestyle" title="Permanent link">&para;</a></h3>
-<p>レンダリングエンジンは、DOMツリーのルートのノードから順にCSSOSツリーを適用し、Renderツリーを生成する。</p>
+<p>レンダリングエンジンは、DOMツリーのルートのノードから順にCSSOSツリーを適用し、Renderツリーを作成する。</p>
 <p><img alt="Renderツリー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/Renderツリー.png" /></p>
 <p><br></p>
 <h2 id="04-03-layout">04-03. Layout処理<a class="headerlink" href="#04-03-layout" title="Permanent link">&para;</a></h2>
@@ -8469,7 +8469,7 @@
 <p>=== （１）キャッシュの有効時間が切れるまで ===</p>
 <ol>
 <li>クライアントのブラウザは、リクエストをサーバーに送信する。</li>
-<li>サーバーは、特定のアルゴリズムを使用してハッシュ値を生成し、これをコンテンツのETag値とする。</li>
+<li>サーバーは、特定のアルゴリズムを使用してハッシュ値を作成し、これをコンテンツのETag値とする。</li>
 <li>サーバーは、<code>ETag</code>ヘッダーにETag値を設定し、コンテンツとともにレスポンスをクライアントに送信する。</li>
 <li>クライアントのブラウザは、コンテンツとETag値をキャッシュする。</li>
 <li>キャッシュの有効時間が切れるまで、ブラウザキャッシュを使用し続ける。</li>
@@ -8489,7 +8489,7 @@
 <p>=== （４）検証により、ブラウザキャッシュを使用せず ===</p>
 <ol>
 <li>ETag値の比較検証の結果、一致しない。</li>
-<li>サーバーは、両方の値が一致しない場合、ETag値を生成し、これをコンテンツの新しいETag値とする。</li>
+<li>サーバーは、両方の値が一致しない場合、ETag値を作成し、これをコンテンツの新しいETag値とする。</li>
 <li>サーバーは、<code>ETag</code>ヘッダーにETag値を設定し、コンテンツとともにレスポンスをクライアントに送信する。</li>
 <li>クライアントのブラウザは、コンテンツとETag値をキャッシュする。</li>
 </ol>
@@ -8551,7 +8551,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

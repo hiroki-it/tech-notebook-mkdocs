@@ -6368,10 +6368,10 @@
       
         <li class="md-nav__item">
   <a href="#03" class="md-nav__link">
-    03. 分散トレースの生成
+    03. 分散トレースの作成
   </a>
   
-    <nav class="md-nav" aria-label="03. 分散トレースの生成">
+    <nav class="md-nav" aria-label="03. 分散トレースの作成">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7095,10 +7095,10 @@
       
         <li class="md-nav__item">
   <a href="#03" class="md-nav__link">
-    03. 分散トレースの生成
+    03. 分散トレースの作成
   </a>
   
-    <nav class="md-nav" aria-label="03. 分散トレースの生成">
+    <nav class="md-nav" aria-label="03. 分散トレースの作成">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7316,7 +7316,7 @@
 <p><br></p>
 <h2 id="02-traceaws-ecs-fargate">02. Traceエージェント（AWS ECS Fargateの場合）<a class="headerlink" href="#02-traceaws-ecs-fargate" title="Permanent link">&para;</a></h2>
 <h3 id="trace_1">Traceエージェントとは<a class="headerlink" href="#trace_1" title="Permanent link">&para;</a></h3>
-<p>サーバーの場合と同様にして、アプリケーションから分散トレースを受信し、Datadogに転送する。サーバーの場合とは異なり、自身が収集しにいくことはできない。仕組みとして、アプリケーションコンテナのトレースパッケージは分散トレースを生成し、datadogコンテナの『<code>http://localhost:8126</code>』にこれを送信する。datadogコンテナ内のdatadogエージェントはこれをHTTPSでDatadogに転送する。</p>
+<p>サーバーの場合と同様にして、アプリケーションから分散トレースを受信し、Datadogに転送する。サーバーの場合とは異なり、自身が収集しにいくことはできない。仕組みとして、アプリケーションコンテナのトレースパッケージは分散トレースを作成し、datadogコンテナの『<code>http://localhost:8126</code>』にこれを送信する。datadogコンテナ内のdatadogエージェントはこれをHTTPSでDatadogに転送する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/tracing/#datadog-%E3%81%B8%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E9%80%81%E4%BF%A1">https://docs.datadoghq.com/tracing/#datadog-%E3%81%B8%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E9%80%81%E4%BF%A1</a></li>
@@ -7437,7 +7437,7 @@ $ rm datadog-php-tracer.deb
   <span class="o">&amp;&amp;</span> rm datadog-php-tracer.deb
 </code></pre></div></td></tr></table></div>
 <h4 id="_9">▼ インストールの動作確認<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>パッケージが正しく読み込まれているかどうかは、<code>php --ri=ddtrace</code>コマンドまたは<code>phpinfo</code>メソッドの結果から確認できる。</p>
+<p>パッケージが正しく読み込まれているか否かは、<code>php --ri=ddtrace</code>コマンドまたは<code>phpinfo</code>メソッドの結果から確認できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7467,7 +7467,7 @@ $  php --ri<span class="o">=</span>ddtrace
 Extension <span class="s1">&#39;ddtrace&#39;</span> not present.
 </code></pre></div></td></tr></table></div>
 <h4 id="_10">▼ パラメータの動作確認<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>パラメーターがトレーサーに渡されたかどうかは、<code>DATADOG TRACER CONFIGURATION</code>の項目で確認できる。</p>
+<p>パラメーターがトレーサーに渡されたか否かは、<code>DATADOG TRACER CONFIGURATION</code>の項目で確認できる。</p>
 <p>参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/">https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7696,7 +7696,7 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <p>初期化時に環境変数を設定できる。APMのマイクロサービスのタグ名に反映される。</p>
 <p>参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
 <p><br></p>
-<h2 id="03">03. 分散トレースの生成<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
+<h2 id="03">03. 分散トレースの作成<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_16">分散トレース<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ 分散トレースとは<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html</a></p>
@@ -7880,7 +7880,7 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

@@ -9729,7 +9729,7 @@ status code: <span class="m">400</span>, request id: *****
 <span class="w">  </span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>ALBのアクセスログを送信するバケット内には、自動的に『/AWSLogs/&lt;アカウントID&gt;』の名前でディレクトリが生成される。そのため、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』の部分を最小権限として、『<code>arn:aws:s3:::&lt;バケット名&gt;/AWSLogs/&lt;アカウントID&gt;/;*</code>』にしても良い。東京リージョンのELBサービスアカウントIDは、『582318560864』である。</p>
+<p>ALBのアクセスログを送信するバケット内には、自動的に『/AWSLogs/&lt;アカウントID&gt;』の名前でディレクトリが作成される。そのため、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』の部分を最小権限として、『<code>arn:aws:s3:::&lt;バケット名&gt;/AWSLogs/&lt;アカウントID&gt;/;*</code>』にしても良い。東京リージョンのELBサービスアカウントIDは、『582318560864』である。</p>
 <p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9785,7 +9785,7 @@ status code: <span class="m">400</span>, request id: *****
 <span class="w">  </span><span class="p">)</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>NLBのアクセスログを送信するバケット内には、自動的に『<code>/AWSLogs/&lt;アカウントID&gt;</code>』の名前でディレクトリが生成される。そのため、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』の部分を最小権限として、『<code>arn:aws:s3:::&lt;バケット名&gt;/AWSLogs/&lt;アカウントID&gt;/;*</code>』にしても良い。</p>
+<p>NLBのアクセスログを送信するバケット内には、自動的に『<code>/AWSLogs/&lt;アカウントID&gt;</code>』の名前でディレクトリが作成される。そのため、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』の部分を最小権限として、『<code>arn:aws:s3:::&lt;バケット名&gt;/AWSLogs/&lt;アカウントID&gt;/;*</code>』にしても良い。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10878,7 +10878,7 @@ status code: <span class="m">400</span>, request id: *****
 <tr>
 <td>Global Accelerator</td>
 <td>セキュリティグループ</td>
-<td>リソースを作成するとセキュリティグループが自動生成されるため、セキュリティグループのみTerraformで管理できない。</td>
+<td>リソースを作成するとセキュリティグループが自動作成されるため、セキュリティグループのみTerraformで管理できない。</td>
 </tr>
 <tr>
 <td>IAMユーザー</td>
@@ -10997,7 +10997,7 @@ status code: <span class="m">400</span>, request id: *****
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

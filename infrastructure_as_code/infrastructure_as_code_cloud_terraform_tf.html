@@ -8073,7 +8073,7 @@
 <h2 id="01">01. ルートモジュールにおける実装<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="tfstate"><code>.tfstate</code>ファイル<a class="headerlink" href="#tfstate" title="Permanent link">&para;</a></h3>
 <h4 id="tfstate_1">▼ <code>.tfstate</code>ファイルとは<a class="headerlink" href="#tfstate_1" title="Permanent link">&para;</a></h4>
-<p>実インフラのインフラの状態が定義されたjsonファイルのこと。初回時、<code>terraform apply</code>コマンドを実行した後、成功もしくは失敗したタイミングで生成される。</p>
+<p>実インフラのインフラの状態が定義されたjsonファイルのこと。初回時、<code>terraform apply</code>コマンドを実行した後、成功もしくは失敗したタイミングで作成される。</p>
 <p>参考：<a href="https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa">https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa</a></p>
 <h4 id="_2">▼ 読み方<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>参考：<a href="https://chroju.dev/blog/terraform_state_introduction">https://chroju.dev/blog/terraform_state_introduction</a></p>
@@ -9322,7 +9322,7 @@ $ terraform plan
 <p><br></p>
 <h3 id="depends_on">depends_on<a class="headerlink" href="#depends_on" title="Permanent link">&para;</a></h3>
 <h4 id="depends_on_1">▼ depends_onとは<a class="headerlink" href="#depends_on_1" title="Permanent link">&para;</a></h4>
-<p><code>resource</code>ブロック間の依存関係を明示的に定義する。Terraformでは、基本的に<code>resource</code>ブロック間の依存関係が暗黙的に定義されている。しかし、複数の<code>resource</code>ブロックが関わると、<code>resource</code>ブロックを適切な順番で作成できない場合があるため、そういったときに使用する。</p>
+<p><code>resource</code>ブロック間の依存関係を明示的に定義する。Terraformでは、基本的に<code>resource</code>ブロック間の依存関係が暗黙的に定義されている。しかし、複数の<code>resource</code>ブロックが関わると、<code>resource</code>ブロックを適切な順番で作成できない場合があるため、そういった時に使用する。</p>
 <h4 id="alb-target-group-vs-albecs">▼ ALB target group vs. ALB、ECS<a class="headerlink" href="#alb-target-group-vs-albecs" title="Permanent link">&para;</a></h4>
 <p>例として、ALB target groupを示す。ALB Target groupとALBの<code>resource</code>ブロックを適切な順番で作成できないため、ECSの作成時にエラーが起こる。ALBの後にALB target groupを作成する必要がある。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -10285,7 +10285,7 @@ $ terraform plan
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ignore_changes">▼ ignore_changes<a class="headerlink" href="#ignore_changes" title="Permanent link">&para;</a></h4>
-<p>実インフラのみで起こった<code>resource</code>ブロックの作成・更新・削除を無視し、<code>tfstate</code>ファイルに反映しないようにする。これにより、オプションを<code>ignore_changes</code>したタイミング以降、実インフラと<code>tfstate</code>ファイルに差分があっても、<code>tfstate</code>ファイルの値が更新されなくなる。</p>
+<p>実インフラのみで発生した<code>resource</code>ブロックの作成・更新・削除を無視し、<code>tfstate</code>ファイルに反映しないようにする。これにより、オプションを<code>ignore_changes</code>したタイミング以降、実インフラと<code>tfstate</code>ファイルに差分があっても、<code>tfstate</code>ファイルの値が更新されなくなる。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、ECSを示す。ECSでは、AutoScalingによってECSタスク数が増加する。そのため、これらを無視する必要がある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -10689,7 +10689,7 @@ $ terraform plan
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-21</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

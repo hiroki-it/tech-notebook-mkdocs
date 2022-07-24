@@ -7344,28 +7344,28 @@
 <td>BytesUsedForCache</td>
 <td>バイト数</td>
 <td>Redisで使用されているメモリ使用量をデータポイントとする。</td>
-<td>・統計 : 期間内合計サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 8</code>GB</td>
+<td>・統計 : 期間内合計サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 8</code>GB</td>
 <td></td>
 </tr>
 <tr>
 <td>CPUUtilization</td>
 <td>%</td>
 <td>ノードのCPU使用率をデータポイントとする。</td>
-<td>・統計 : 期間内平均使用率<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 80</code></td>
+<td>・統計 : 期間内平均使用率<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 80</code></td>
 <td></td>
 </tr>
 <tr>
 <td>Evictions</td>
 <td>カウント</td>
 <td>空きサイズを確保するために削除されたRedisのキー数をデータポイントとする。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 1</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 1</code></td>
 <td></td>
 </tr>
 <tr>
 <td>SwapUsage</td>
 <td>バイト数</td>
 <td>ストレージ上のスワップ領域の使用量をデータポイントとする。</td>
-<td>・統計 : 期間内最大サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 50</code>GB</td>
+<td>・統計 : 期間内最大サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 50</code>GB</td>
 <td>使用可能な最大メモリを超えると、Redisはストレージ上のスワップ領域を使用する。<br>参考：<a href="https://zenn.dev/dehio3/scraps/710a9714ce9496">https://zenn.dev/dehio3/scraps/710a9714ce9496</a></td>
 </tr>
 </tbody>
@@ -7388,7 +7388,7 @@
 <td>BlockedTransactions</td>
 <td>カウント</td>
 <td>秒あたりトランザクションの拒否の回数をデータポイントとする。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 1</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 1</code></td>
 <td></td>
 </tr>
 <tr>
@@ -7402,14 +7402,14 @@
 <td>DatabaseConnections</td>
 <td>カウント</td>
 <td>Aurora DBインスタンスへの接続数をデータポイントとする。失敗した接続も含まれている可能性があり、実際よりはやや多めに計測される。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 400</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 400</code></td>
 <td>クライアントがDBにアクセスしている時間帯がわかるため、メンテナンスウィンドウを実施時間の参考になる。</td>
 </tr>
 <tr>
 <td>Deadlocks</td>
 <td>カウント</td>
 <td>秒あたりデッドロック平均数をデータポイントとする。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 1</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 1</code></td>
 <td></td>
 </tr>
 <tr>
@@ -7423,21 +7423,21 @@
 <td>FreeableMemory</td>
 <td>バイト数</td>
 <td>Aurora DBインスタンスの使用できるメモリの最大空きサイズをデータポイントとする。</td>
-<td>・統計 : 期間内最大サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 2</code>GB</td>
+<td>・統計 : 期間内最大サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 2</code>GB</td>
 <td></td>
 </tr>
 <tr>
 <td>FreeLocalStorage</td>
 <td>バイト数</td>
 <td>Aurora DBインスタンスの使用できるローカルストレージの最大空きサイズをデータポイントとする。</td>
-<td>・統計 : 期間内最大サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 10</code>GB</td>
+<td>・統計 : 期間内最大サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 10</code>GB</td>
 <td>DBインスタンスのローカルストレージは、一時テーブルやログの保管に使用される。</td>
 </tr>
 <tr>
 <td>LoginFailures</td>
 <td>カウント</td>
 <td>Aurora DBへのログインの失敗回数をデータポイントとする。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 1</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 1</code></td>
 <td></td>
 </tr>
 </tbody>
@@ -7467,14 +7467,14 @@
 <td>DatabaseConnections</td>
 <td>カウント</td>
 <td>DBインスタンスへの接続数をデータポイントとする。失敗した接続も含まれている可能性があり、実際よりはやや多めに計測される。</td>
-<td>・統計 : 期間内合計数<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 400</code></td>
+<td>・統計 : 期間内合計数<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 400</code></td>
 <td>クライアントがDBにアクセスしている時間帯がわかるため、メンテナンスウィンドウを実施時間の参考になる。</td>
 </tr>
 <tr>
 <td>FreeableMemory</td>
 <td>バイト数</td>
 <td>DBインスタンスの使用できるメモリサイズをデータポイントとする。</td>
-<td>・統計 : 期間内最大サイズ<br/>・期間 : <code>5</code>分<br/>・閾値 : <code>&gt;= 2</code>GB</td>
+<td>・統計 : 期間内最大サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 2</code>GB</td>
 <td></td>
 </tr>
 </tbody>
@@ -7506,7 +7506,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

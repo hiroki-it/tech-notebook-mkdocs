@@ -8383,7 +8383,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &lt;&lt; parameters.to &gt;&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="string">▼ string型<a class="headerlink" href="#string" title="Permanent link">&para;</a></h4>
-<p>引数として、任意の文字列を渡したいときに使用する。<code>workflows</code>にて、値を設定する。</p>
+<p>引数として、任意の文字列を渡したい時に使用する。<code>workflows</code>にて、値を設定する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8505,7 +8505,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <span class="w">          </span><span class="nt">custom_checkout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="enum">▼ enum型<a class="headerlink" href="#enum" title="Permanent link">&para;</a></h4>
-<p>引数として、特定の文字列や整数のみを渡したいときに使用する。<code>workflows</code>にて、値を設定する。</p>
+<p>引数として、特定の文字列や整数のみを渡したい時に使用する。<code>workflows</code>にて、値を設定する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8543,7 +8543,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <span class="w">        </span><span class="nt">enum</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;dev&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;stg&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;prd&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"></span>
-<span class="w">        </span><span class="c1"># デフォルト値testを与えるときは何も設定しない</span><span class="w"></span>
+<span class="w">        </span><span class="c1"># デフォルト値testを与える時は何も設定しない</span><span class="w"></span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to &lt;&lt; parameters.environment &gt;&gt;</span><span class="w"></span>
 <span class="w">        </span><span class="nt">command</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="c1"># 何らかの処理</span><span class="w"></span>
@@ -8562,7 +8562,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;&lt; parameters.foo &gt;&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="job-parameters_1">▼ job parametersを参照<a class="headerlink" href="#job-parameters_1" title="Permanent link">&para;</a></h4>
-<p>引数として、任意の文字列を<code>executors</code>に渡したいときに使用する。他のparametersとは異なり、<code>job</code>にて、値を設定する。</p>
+<p>引数として、任意の文字列を<code>executors</code>に渡したい時に使用する。他のparametersとは異なり、<code>job</code>にて、値を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10204,7 +10204,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

@@ -7043,15 +7043,15 @@
 <p><br></p>
 <h3 id="up">up<a class="headerlink" href="#up" title="Permanent link">&para;</a></h3>
 <h4 id="up_1">▼ upとは<a class="headerlink" href="#up_1" title="Permanent link">&para;</a></h4>
-<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー生成、コンテナ作成、コンテナ起動を行う。コンテナ作成までが完了していて停止中が存在する場合、これをコンテナを起動する。また起動中コンテナがあれば、これを再起動する。オプションにより起動モードが異なる。</p>
+<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー作成、コンテナ作成、コンテナ起動を行う。コンテナ作成までが完了していて停止中が存在する場合、これをコンテナを起動する。また起動中コンテナがあれば、これを再起動する。オプションにより起動モードが異なる。</p>
 <h4 id="_2">▼ オプション無し<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー生成、コンテナ作成、コンテナ起動を行う。アタッチモードでコンテナを起動する。</p>
+<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー作成、コンテナ作成、コンテナ起動を行う。アタッチモードでコンテナを起動する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># アタッチモード</span>
 $ docker-compose up &lt;サービス名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-d">▼ -d<a class="headerlink" href="#-d" title="Permanent link">&para;</a></h4>
-<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー生成、コンテナ作成、コンテナ起動を行う。デタッチドモードでコンテナを起動する。</p>
+<p>指定したサービスのコンテナイメージのビルド、コンテナレイヤー作成、コンテナ作成、コンテナ起動を行う。デタッチドモードでコンテナを起動する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># デタッチモード</span>
 $ docker-compose up -d &lt;サービス名&gt;
@@ -7069,13 +7069,13 @@ $ docker-compose up -d &lt;サービス名&gt;
 <h4 id="run_1">▼ runとは<a class="headerlink" href="#run_1" title="Permanent link">&para;</a></h4>
 <p>すでに停止中または起動中コンテナが存在していても、これとは別にコンテナを新しく作成し、起動する。さらにそのコンテナ内でコマンドを実行する。起動時に<code>bash</code>プロセスや<code>shell</code>プロセスを実行すると、コンテナに接続できる。何も渡さない場合は、デフォルトのプロセスとして<code>bash</code>プロセスが実行される。<code>docker-compose run</code>コマンドでは、アタッチモードとデタッチモードを選択できる。新しく起動したコンテナを停止後に自動削除する場合は、<code>rm</code>オプションを付けるようにする。<code>service-ports</code>オプションを使用しないと、ホストとコンテナ間のポートフォワーディングを有効化できないため注意する。</p>
 <h4 id="-service-ports">▼ --service-ports<a class="headerlink" href="#-service-ports" title="Permanent link">&para;</a></h4>
-<p>既存コンテナを残して、指定したサービスの新しいコンテナをアタッチモードで起動する。また、ホストとコンテナ間のポートフォワーディングを有効化するかどうかを設定する。</p>
+<p>既存コンテナを残して、指定したサービスの新しいコンテナをアタッチモードで起動する。また、ホストとコンテナ間のポートフォワーディングを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># アタッチモード</span>
 $ docker-compose run --rm --service-ports &lt;サービス名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-d-service-ports">▼ -d --service-ports<a class="headerlink" href="#-d-service-ports" title="Permanent link">&para;</a></h4>
-<p>既存コンテナを残して、指定したサービスの新しいコンテナをデタッチドモードで起動する。また、ホストとコンテナ間のポートフォワーディングを有効化するかどうかを設定する。</p>
+<p>既存コンテナを残して、指定したサービスの新しいコンテナをデタッチドモードで起動する。また、ホストとコンテナ間のポートフォワーディングを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># デタッチモード</span>
 $ docker-compose run --rm -d --service-ports &lt;サービス名&gt;
@@ -7122,7 +7122,7 @@ $ docker-compose run --rm -d --service-ports &lt;サービス名&gt;
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>

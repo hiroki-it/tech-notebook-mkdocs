@@ -7244,14 +7244,14 @@
 <p>マイクロサービスアーキテクチャの各サービスから収集されたログを、バラバラに分析/管理する。</p>
 <p>参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
 <h4 id="centralized-logging">▼ Centralized logging（集中ロギング）<a class="headerlink" href="#centralized-logging" title="Permanent link">&para;</a></h4>
-<p>マイクロサービスアーキテクチャの各サービスから収集されたログを、一元的に分析/管理する。</p>
+<p>マイクロサービスアーキテクチャの各サービスから収集されたログを、一元的に分析/管理する。各ログに一意なIDを割り当て、人繋ぎに紐付ける必要がある。</p>
 <p>参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
 <p><br></p>
 <h2 id="04">04. 分散トレース<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_21">分散トレースとは<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p><img alt="distributed-trace" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed-trace.png" /></p>
-<p>マイクロサービスから収集されたスパンのセットのこと。スパンを紐付けることによって、異なるマイクロサービスを横断するを一繋ぎにし、リクエストによる一連の処理を認識できるようになる。</p>
-<p>参考：</p>
+<p>マイクロサービスから収集されたスパンのセットのこと。スパンをIDで紐付けることによって、異なるマイクロサービスを横断するを一繋ぎにし、リクエストによる一連の処理を認識できるようになる。</p>
+<p>か参考：</p>
 <ul>
 <li><a href="https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/">https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/</a></li>
 <li><a href="https://docs.newrelic.com/jp/docs/distributed-tracing/concepts/introduction-distributed-tracing/">https://docs.newrelic.com/jp/docs/distributed-tracing/concepts/introduction-distributed-tracing/</a></li>
@@ -7268,8 +7268,13 @@
 <li><a href="https://docs.newrelic.com/jp/docs/distributed-tracing/trace-api/report-new-relic-format-traces-trace-api/#new-relic-guidelines">https://docs.newrelic.com/jp/docs/distributed-tracing/trace-api/report-new-relic-format-traces-trace-api/#new-relic-guidelines</a></li>
 </ul>
 <h4 id="_24">▼ スパン間の紐付け<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
-<p>リクエストヘッダーやボディにIDを割り当て、異なるマイクロサービスのスパン間を紐付ける。AWSを使用している場合、例えばALBが<code>X-Amzn-Trace-Id</code>ヘッダーにリクエストIDを付与してくれるため、アプリケーションでリクエストIDを実装せずに分散トレースを実現できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html</a></p>
+<p>リクエストヘッダーやボディにIDを割り当て、異なるマイクロサービスのスパン間を紐付ける。各マイクロサービスで、リクエストにIDが割り当てられているか確認し、もしなければ割り当てるといった処理が繰り返される。AWSを使用している場合、例えばALBが<code>X-Amzn-Trace-Id</code>ヘッダーにリクエストIDを付与してくれるため、アプリケーションでリクエストIDを実装せずに分散トレースを実現できる。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html</a></li>
+<li><a href="https://zenn.dev/lempiji/articles/b752b644d22a59">https://zenn.dev/lempiji/articles/b752b644d22a59</a></li>
+</ul>
+<p><img alt="distributed-tracing" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed-tracing.png" /></p>
 <h4 id="_25">▼ データポイント化<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>スパンが持つデータをデータポイントとして集計することにより、メトリクスのデータポイントを収集できる。</p>
 <p><br></p>
@@ -7297,7 +7302,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
       
     
   </small>
