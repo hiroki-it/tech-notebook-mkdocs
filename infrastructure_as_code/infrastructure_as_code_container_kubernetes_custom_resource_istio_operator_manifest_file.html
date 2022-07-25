@@ -4233,6 +4233,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../virtualization/virtualization_container_orchestration_kubernetes_addon.html" class="md-nav__link">
+        kubernetesアドオン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../virtualization/virtualization_container_orchestration_kubernetes_istio.html" class="md-nav__link">
         Istio
       </a>
@@ -7360,10 +7374,10 @@ istiooperator.install.istio.io/istio-operator created
 <p><br></p>
 <h3 id="specmeshconfig">spec.meshConfig<a class="headerlink" href="#specmeshconfig" title="Permanent link">&para;</a></h3>
 <h4 id="meshconfig">▼ meshConfigとは<a class="headerlink" href="#meshconfig" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに共通する値を設定する。ここではEnvoyを使用した場合を説明する。</p>
+<p>全てのistio-proxyコンテナに共通する値を設定する。ここではEnvoyを使用した場合を説明する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig</a></p>
 <h4 id="accesslogfile">▼ accessLogFile<a class="headerlink" href="#accesslogfile" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、アクセスログの出力先を設定する。</p>
+<p>全てのistio-proxyコンテナに関して、アクセスログの出力先を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7381,7 +7395,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="nt">accessLogFile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/stdout</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="defaultconfig">▼ defaultConfig<a class="headerlink" href="#defaultconfig" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナ別に設定値を上書きしたい時に、そのデフォルト値を設定する。これを上書きしたい場合は、各Podの<code>metadata.annotations.proxy.istio.io/config.configPath</code>キーにオプションを設定する。</p>
+<p>istio-proxyコンテナ別に設定値を上書きしたい時に、そのデフォルト値を設定する。これを上書きしたい場合は、各Podの<code>metadata.annotations.proxy.istio.io/config.configPath</code>キーにオプションを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7401,7 +7415,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="c1"># 〜 中略 〜</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="enabletracing">▼ enableTracing<a class="headerlink" href="#enabletracing" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、分散トレースの収集を有効化するか否かを設定する。</p>
+<p>全てのistio-proxyコンテナに関して、分散トレースの収集を有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7419,7 +7433,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="nt">enableTracing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ingressselector">▼ ingressSelector<a class="headerlink" href="#ingressselector" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、使用するGatewayの<code>metadata.labels.istio</code>キー値を設定する。IngressGatewayをIngressコントローラーとして使用でき、デフォルトでは<code>ingressgateway</code>が設定される。</p>
+<p>全てのistio-proxyコンテナに関して、使用するGatewayの<code>metadata.labels.istio</code>キー値を設定する。IngressGatewayをIngressコントローラーとして使用でき、デフォルトでは<code>ingressgateway</code>が設定される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7437,7 +7451,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="nt">ingressSelector</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingressgateway</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ingressservice">▼ ingressService<a class="headerlink" href="#ingressservice" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、使用するIngressコントローラーの<code>metadata.labels.istio</code>キー値を設定する。IngressGatewayをIngressとして使用でき、デフォルトでは<code>ingressgateway</code>が設定される。</p>
+<p>全てのistio-proxyコンテナに関して、使用するIngressコントローラーの<code>metadata.labels.istio</code>キー値を設定する。IngressGatewayをIngressとして使用でき、デフォルトでは<code>ingressgateway</code>が設定される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7455,7 +7469,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="nt">ingressService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ingressgateway</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="proxyhttpport">▼ proxyHttpPort<a class="headerlink" href="#proxyhttpport" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、Cluster外からのインバウンド通信（特にHTTPプロトコル通信）を待ち受けるポート番号を設定する。</p>
+<p>全てのistio-proxyコンテナに関して、Cluster外からのインバウンド通信（特にHTTPプロトコル通信）を待ち受けるポート番号を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7473,7 +7487,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">    </span><span class="nt">proxyHttpPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="proxylistenport">▼ proxyListenPort<a class="headerlink" href="#proxylistenport" title="Permanent link">&para;</a></h4>
-<p>全てのEnvoyコンテナに関して、他マイクロサービスからのインバウンド通信を待ち受けるポート番号を設定する。</p>
+<p>全てのistio-proxyコンテナに関して、他マイクロサービスからのインバウンド通信を待ち受けるポート番号を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7601,7 +7615,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">        </span><span class="nt">runAsRoot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecarinjectorwebhook">▼ sidecarInjectorWebhook<a class="headerlink" href="#sidecarinjectorwebhook" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナごとのオプション値を設定する。</p>
+<p>istio-proxyコンテナごとのオプション値を設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7638,7 +7652,7 @@ istiooperator.install.istio.io/istio-operator created
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>

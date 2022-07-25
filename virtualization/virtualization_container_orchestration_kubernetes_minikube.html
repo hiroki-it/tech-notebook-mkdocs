@@ -4239,6 +4239,20 @@
   
   
     <li class="md-nav__item">
+      <a href="virtualization_container_orchestration_kubernetes_addon.html" class="md-nav__link">
+        kubernetesアドオン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="virtualization_container_orchestration_kubernetes_istio.html" class="md-nav__link">
         Istio
       </a>
@@ -8236,7 +8250,7 @@ $ <span class="nb">eval</span> <span class="k">$(</span>minikube -p minikube doc
 <span class="normal">26</span>
 <span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube kubectl -- version
 
-<span class="c1"># kubectlのバージョン</span>
+<span class="c1"># kubectlコマンドのバージョン</span>
 Client Version: version.Info<span class="o">{</span>
   Major:<span class="s2">&quot;1&quot;</span>,
   Minor:<span class="s2">&quot;22&quot;</span>,
@@ -8249,11 +8263,11 @@ Client Version: version.Info<span class="o">{</span>
   Platform:<span class="s2">&quot;darwin/amd64&quot;</span>
 <span class="o">}</span>
 
-<span class="c1"># Kubernetesのバージョン</span>
+<span class="c1"># kube-apiserverのバージョン</span>
 Server Version: version.Info<span class="o">{</span>
   Major:<span class="s2">&quot;1&quot;</span>,
   Minor:<span class="s2">&quot;22&quot;</span>,
-  GitVersion:<span class="s2">&quot;v1.22.3&quot;</span>,
+  GitVersion:<span class="s2">&quot;v1.22.3&quot;</span>, <span class="c1"># EKSであれば、『v1.22.10-eks-84b4fe6』になっている。</span>
   GitCommit:<span class="s2">&quot;*****&quot;</span>,
   GitTreeState:<span class="s2">&quot;clean&quot;</span>,
   BuildDate:<span class="s2">&quot;2021-11-17T15:41:42Z&quot;</span>,
@@ -8723,7 +8737,7 @@ minikube-m03   Ready    &lt;none&gt;                 19s   v1.20.2
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>

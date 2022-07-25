@@ -4233,6 +4233,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../virtualization/virtualization_container_orchestration_kubernetes_addon.html" class="md-nav__link">
+        kubernetesアドオン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../virtualization/virtualization_container_orchestration_kubernetes_istio.html" class="md-nav__link">
         Istio
       </a>
@@ -8060,7 +8074,7 @@ $ helm install istio-ingressgateway istio/gateway
 <p>istio-proxyコンテナの設定を上書きできる。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/">https://istio.io/latest/docs/reference/config/networking/envoy-filter/</a></p>
 <h4 id="annotations">▼ annotationsの定義<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h4>
-<p>DeploymentやPodの<code>metadata.anontations</code>キーにて、Envoyコンテナごとのオプション値を設定する。Deploymentの場合は、<code>template</code>キーよりも下層の<code>metadata</code>キーを使用することに注意する。</p>
+<p>DeploymentやPodの<code>metadata.anontations</code>キーにて、istio-proxyコンテナごとのオプション値を設定する。Deploymentの場合は、<code>template</code>キーよりも下層の<code>metadata</code>キーを使用することに注意する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <h4 id="istio-proxy">▼ istio-proxyコンテナの定義<a class="headerlink" href="#istio-proxy" title="Permanent link">&para;</a></h4>
 <p>DeploymentやPodでistio-proxyコンテナを定義することにより設定を上書きできる。</p>
@@ -8121,7 +8135,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h2 id="04-namespacekubernetes">04. Namespace＠Kubernetesでの設定<a class="headerlink" href="#04-namespacekubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="istio-injection">▼ istio-injection<a class="headerlink" href="#istio-injection" title="Permanent link">&para;</a></h4>
-<p>admission-controllersのWebhook機能を使用して、Envoyコンテナを自動的に作成するか否かを設定する。</p>
+<p>admission-controllersのWebhook機能を使用して、サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成するか否かを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8149,10 +8163,10 @@ $ helm install istio-ingressgateway istio/gateway
 <h2 id="04-02-podkubernetes">04-02. Pod＠Kubernetesでの設定<a class="headerlink" href="#04-02-podkubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="annotations_1">annotationsとは<a class="headerlink" href="#annotations_1" title="Permanent link">&para;</a></h3>
 <h4 id="annotations_2">▼ annotations<a class="headerlink" href="#annotations_2" title="Permanent link">&para;</a></h4>
-<p>Deploymentの<code>spec.template</code>キーや、Podの<code>metadata</code>キーにて、Envoyコンテナごとのオプション値を設定する。Deploymentの<code>metadata</code>キーで定義しないように注意する。</p>
+<p>Deploymentの<code>spec.template</code>キーや、Podの<code>metadata</code>キーにて、istio-proxyコンテナごとのオプション値を設定する。Deploymentの<code>metadata</code>キーで定義しないように注意する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <h4 id="proxyistioioconfigconfigpath">▼ proxy.istio.io/config.configPath<a class="headerlink" href="#proxyistioioconfigconfigpath" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナのプロセスの設定値をファイルとして作成するために、これの作成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが作成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
+<p>istio-proxyコンテナのプロセスの設定値をファイルとして作成するために、これの作成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが作成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8181,7 +8195,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">          </span><span class="no">configPath: ./etc/istio/proxy</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioinject">▼ sidecar.istio.io/inject<a class="headerlink" href="#sidecaristioioinject" title="Permanent link">&para;</a></h4>
-<p>特定のPodでのみ、Envoyコンテナを自動的に作成しないようにする。</p>
+<p>特定のPodでのみ、istio-proxyコンテナを自動的に作成しないようにする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8207,7 +8221,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">        </span><span class="nt">sidecar.istio.io/inject</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxycpu">▼ sidecar.istio.io/proxyCPU<a class="headerlink" href="#sidecaristioioproxycpu" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナで使用するCPUサイズを設定する。</p>
+<p>istio-proxyコンテナで使用するCPUサイズを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8234,7 +8248,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">        </span><span class="nt">sidecar.istio.io/proxyCPU</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxyimage">▼ sidecar.istio.io/proxyImage<a class="headerlink" href="#sidecaristioioproxyimage" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナの作成に使用するコンテナイメージを設定する。</p>
+<p>istio-proxyコンテナの作成に使用するコンテナイメージを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8261,7 +8275,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">        </span><span class="nt">sidecar.istio.io/proxyImage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-envoy</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxymemory">▼ sidecar.istio.io/proxyMemory<a class="headerlink" href="#sidecaristioioproxymemory" title="Permanent link">&para;</a></h4>
-<p>Envoyコンテナで使用するメモリサイズを設定する。</p>
+<p>istio-proxyコンテナで使用するメモリサイズを設定する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9196,7 +9210,7 @@ $ helm install istio-ingressgateway istio/gateway
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>

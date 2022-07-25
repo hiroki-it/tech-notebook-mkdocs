@@ -3213,11 +3213,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#05-gorm" class="md-nav__link">
-    05. gorm
+  <a href="#05-client-go" class="md-nav__link">
+    05. client-go
   </a>
   
-    <nav class="md-nav" aria-label="05. gorm">
+    <nav class="md-nav" aria-label="05. client-go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-go" class="md-nav__link">
+    client-goとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-gorm" class="md-nav__link">
+    06. gorm
+  </a>
+  
+    <nav class="md-nav" aria-label="06. gorm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3382,11 +3402,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#06-testify" class="md-nav__link">
-    06. testify
+  <a href="#07-testify" class="md-nav__link">
+    07. testify
   </a>
   
-    <nav class="md-nav" aria-label="06. testify">
+    <nav class="md-nav" aria-label="07. testify">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3443,11 +3463,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#07-validator" class="md-nav__link">
-    07. validator
+  <a href="#08-validator" class="md-nav__link">
+    08. validator
   </a>
   
-    <nav class="md-nav" aria-label="07. validator">
+    <nav class="md-nav" aria-label="08. validator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4670,6 +4690,20 @@
     <li class="md-nav__item">
       <a href="../virtualization/virtualization_container_orchestration_kubernetes.html" class="md-nav__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtualization/virtualization_container_orchestration_kubernetes_addon.html" class="md-nav__link">
+        kubernetesアドオン
       </a>
     </li>
   
@@ -7045,11 +7079,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#05-gorm" class="md-nav__link">
-    05. gorm
+  <a href="#05-client-go" class="md-nav__link">
+    05. client-go
   </a>
   
-    <nav class="md-nav" aria-label="05. gorm">
+    <nav class="md-nav" aria-label="05. client-go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-go" class="md-nav__link">
+    client-goとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06-gorm" class="md-nav__link">
+    06. gorm
+  </a>
+  
+    <nav class="md-nav" aria-label="06. gorm">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7214,11 +7268,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#06-testify" class="md-nav__link">
-    06. testify
+  <a href="#07-testify" class="md-nav__link">
+    07. testify
   </a>
   
-    <nav class="md-nav" aria-label="06. testify">
+    <nav class="md-nav" aria-label="07. testify">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7275,11 +7329,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#07-validator" class="md-nav__link">
-    07. validator
+  <a href="#08-validator" class="md-nav__link">
+    08. validator
   </a>
   
-    <nav class="md-nav" aria-label="07. validator">
+    <nav class="md-nav" aria-label="08. validator">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7456,7 +7510,14 @@ go 1.16
 <p>以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html</a></p>
 <p><br></p>
-<h2 id="05-gorm">05. gorm<a class="headerlink" href="#05-gorm" title="Permanent link">&para;</a></h2>
+<h2 id="05-client-go">05. client-go<a class="headerlink" href="#05-client-go" title="Permanent link">&para;</a></h2>
+<h3 id="client-go">client-goとは<a class="headerlink" href="#client-go" title="Permanent link">&para;</a></h3>
+<p>Kubernetesのkube-apiserverと通信できるパッケージ。使用できるAPIの型を拡張するために、<code>k8s.io/api</code>パッケージや<code>k8s.io/apimachinery</code>パッケージも必要になる。</p>
+<p>参考：<a href="https://zenn.dev/castaneai/articles/k8s-go-client-first-step">https://zenn.dev/castaneai/articles/k8s-go-client-first-step</a></p>
+<p>kube-apiserverの認証認可を通過するために、kubeconfigファイルをコンテナにマウントする必要がある。</p>
+<p>参考：<a href="https://nishipy.com/archives/1363">https://nishipy.com/archives/1363</a></p>
+<p><br></p>
+<h2 id="06-gorm">06. gorm<a class="headerlink" href="#06-gorm" title="Permanent link">&para;</a></h2>
 <h3 id="gorm">gormとは<a class="headerlink" href="#gorm" title="Permanent link">&para;</a></h3>
 <p>Go製のORMである。</p>
 <p><br></p>
@@ -7805,7 +7866,7 @@ go 1.16
 <span class="c1">// UPDATE users SET name=&#39;jinzhu 2&#39;, age=100, birthday=&#39;2016-01-01&#39;, updated_at = &#39;2013-11-17 21:34:10&#39; WHERE id=111;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h2 id="06-testify">06. testify<a class="headerlink" href="#06-testify" title="Permanent link">&para;</a></h2>
+<h2 id="07-testify">07. testify<a class="headerlink" href="#07-testify" title="Permanent link">&para;</a></h2>
 <h3 id="testify">testifyとは<a class="headerlink" href="#testify" title="Permanent link">&para;</a></h3>
 <p>モック、スタブ、アサーションメソッドを提供するパッケージ。Goではオブジェクトの概念がないため、モックオブジェクトとは言わない。モックとスタブについては、以下のリンクを参考にせよ。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html">https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html</a></p>
@@ -8089,7 +8150,7 @@ go 1.16
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h2 id="07-validator">07. validator<a class="headerlink" href="#07-validator" title="Permanent link">&para;</a></h2>
+<h2 id="08-validator">08. validator<a class="headerlink" href="#08-validator" title="Permanent link">&para;</a></h2>
 <h3 id="validator">validatorとは<a class="headerlink" href="#validator" title="Permanent link">&para;</a></h3>
 <p><br></p>
 <h3 id="_17">バリデーションとエラーメッセージ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
@@ -8274,7 +8335,7 @@ go 1.16
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>

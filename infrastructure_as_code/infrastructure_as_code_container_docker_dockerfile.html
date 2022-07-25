@@ -4233,6 +4233,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../virtualization/virtualization_container_orchestration_kubernetes_addon.html" class="md-nav__link">
+        kubernetesアドオン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../virtualization/virtualization_container_orchestration_kubernetes_istio.html" class="md-nav__link">
         Istio
       </a>
@@ -7156,6 +7170,9 @@
 <p>ビルドに失敗したコンテナイメージからコンテナを作成し、接続する。<code>rm</code>オプションを設定し、接続の切断後にコンテナを削除する。Dockerfileで、コンテナイメージのプロセスの起動コマンドを<code>ENTRYPOINT</code>で設定している場合は、後から上書きできなくなるため、<code>docker run</code>コマンドの引数として新しいコマンドを渡せずに、デバッグできないことがある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker run --rm -it &lt;ビルドに失敗したコンテナイメージID&gt; /bin/bash
 </code></pre></div></td></tr></table></div>
+<p>その他、プルしたコンテナイメージ内でちょっとしたコマンドを検証したいといった場合にも役立つ。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker run --rm -it &lt;検証したいコンテナイメージID&gt; ls
+</code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="02">02. 命令<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="add">ADD<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
@@ -7372,7 +7389,7 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
       
     
   </small>
