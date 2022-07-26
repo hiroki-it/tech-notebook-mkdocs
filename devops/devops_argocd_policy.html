@@ -5823,8 +5823,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#application_1" class="md-nav__link">
+    Applicationの削除時にエラーが起こる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    既に存在しないリソースを検出し続けてしまう
+    ヘルスチェックが終わらない
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#out-of-sync" class="md-nav__link">
+    同期してもOut of syncが解消されない
   </a>
   
 </li>
@@ -6751,8 +6765,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#application_1" class="md-nav__link">
+    Applicationの削除時にエラーが起こる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    既に存在しないリソースを検出し続けてしまう
+    ヘルスチェックが終わらない
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#out-of-sync" class="md-nav__link">
+    同期してもOut of syncが解消されない
   </a>
   
 </li>
@@ -6970,8 +6998,7 @@
 <p><br></p>
 <h2 id="03">03. セキュリティ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_6">ダッシュボード<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>ダッシュボード</p>
-<p>のURLはIngressを入り口に作成することで公開する。また、ログイン方法は、デフォルトのBasic認証ではなく、SSOを使用する。</p>
+<p>ダッシュボードのURLはIngressを入り口に作成することで公開する。また、ログイン方法は、デフォルトのBasic認証ではなく、SSOを使用する。</p>
 <p><br></p>
 <h3 id="_7">機密な環境変数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Applicationで使用する機密な環境変数は、Secretで管理する。このSecretをどの場所に保存するかについて議論がなされている。</p>
@@ -6982,25 +7009,46 @@
 </ul>
 <p><br></p>
 <h2 id="04">04. エラー解決<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<h3 id="_8">既に存在しないリソースを検出し続けてしまう<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>PruneによるKubernetesリソースの削除を有効化した場合、Prune後に存在しないリソースを監視し続けてしまう現象が起こることがある。また、Applicationの削除時に、削除中ステータスのまま処理が進まないなる場合がある。これらの場合には、<code>spec.syncPolicy.allowEmpty</code>キーを有効化しつつ、Applicationの<code>metadata.finalizers</code>キーの値を<code>kubectl edit</code>コマンドで空配列に変更する。</p>
+<h3 id="application_1">Applicationの削除時にエラーが起こる<a class="headerlink" href="#application_1" title="Permanent link">&para;</a></h3>
+<p>PruneによるKubernetesリソースの削除を有効化し、フォアグラウンドで削除した場合、Applicationが配下にリソースを持たないことでエラーが起こることがある。これらの場合には、以下の手順でApplicationを削除する。</p>
 <p>参考：<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl edit apps &lt;ArgoCDのアプリケーション名&gt; -n argocd
-</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Applicationの<code>spec.syncPolicy.allowEmpty</code>キーを有効化する。</p>
+</li>
+<li>
+<p>フォアグラウンドで削除すると、Applicationの<code>metadata.finalizers</code>キーの値に削除中のリソースが設定される。この配列を空配列に変更する。ArgoCDのUIからは変更できず、<code>kubectl edit</code>コマンドを使用する必要がある。</p>
+</li>
+</ol>
+<p>参考：<a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></p>
+<ol>
+<li>1つ目の<code>spec.syncPolicy.allowEmpty</code>キーの変更を元に戻す。</li>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">finalizers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[]</span><span class="w"> </span><span class="c1"># 空配列に変更する。</span><span class="w"></span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl edit apps &lt;ArgoCDのアプリケーション名&gt; -n argocd
 
-<span class="c1"># 〜 中略 〜</span><span class="w"></span>
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers: <span class="o">[]</span> <span class="c1"># 空配列に変更する。</span>
+spec:
+
+<span class="c1"># 〜 中略 〜</span>
 </code></pre></div></td></tr></table></div>
+<p><br></p>
+<h3 id="_8">ヘルスチェックが終わらない<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
+<p><br></p>
+<h3 id="out-of-sync">同期してもOut of syncが解消されない<a class="headerlink" href="#out-of-sync" title="Permanent link">&para;</a></h3>
+<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></p>
+<p><br></p>
 <p><br></p>
 <h2 id="04_1">04. アップグレード<a class="headerlink" href="#04_1" title="Permanent link">&para;</a></h2>
 <p>ArgoCDが自分自身をアップグレードできるように、親Applicationを子Applicationで管理する。</p>
@@ -7010,7 +7058,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-19</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
       
     
   </small>

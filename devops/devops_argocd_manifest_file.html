@@ -5931,33 +5931,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    Tips
-  </a>
-  
-    <nav class="md-nav" aria-label="Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    ▼ ヘルスチェックが終わらない
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#out-of-sync" class="md-nav__link">
-    ▼ 同期してもOut of syncが解消されない
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -5987,14 +5960,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     ▼ マニフェストリポジトリの場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     ▼ チャートレジストリの場合
   </a>
   
@@ -6041,7 +6014,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     ▼ 自己監視
   </a>
   
@@ -7535,33 +7508,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    Tips
-  </a>
-  
-    <nav class="md-nav" aria-label="Tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    ▼ ヘルスチェックが終わらない
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#out-of-sync" class="md-nav__link">
-    ▼ 同期してもOut of syncが解消されない
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7591,14 +7537,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     ▼ マニフェストリポジトリの場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     ▼ チャートレジストリの場合
   </a>
   
@@ -7645,7 +7591,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     ▼ 自己監視
   </a>
   
@@ -8377,18 +8323,12 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> $ argocd app sync &lt;ArgoCDのアプリケーション名&gt; --local<span class="o">=</span>&lt;ディレクトリへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
-<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
-<h4 id="_18">▼ ヘルスチェックが終わらない<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
-<h4 id="out-of-sync">▼ 同期してもOut of syncが解消されない<a class="headerlink" href="#out-of-sync" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></p>
-<p><br></p>
 <h2 id="03-labelsargocdargoprojiosecret-type">03. labels（<code>argocd.argoproj.io/secret-type</code>の場合）<a class="headerlink" href="#03-labelsargocdargoprojiosecret-type" title="Permanent link">&para;</a></h2>
 <h3 id="repository">repository<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h3>
 <h4 id="repository_1">▼ repositoryとは<a class="headerlink" href="#repository_1" title="Permanent link">&para;</a></h4>
 <p>監視対象のマニフェストリポジトリ、チャートレジストリ、OCIレジストリの認証情報を設定する。</p>
 <p>参考：<a href="https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60">https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60</a></p>
-<h4 id="_19">▼ マニフェストリポジトリの場合<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<h4 id="_18">▼ マニフェストリポジトリの場合<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>マニフェストリポジトリの認証情報を設定する。マニフェストレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
 <p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8449,7 +8389,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <span class="w">  </span><span class="nt">sshPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">    </span><span class="no">MIIEpgIBAAKCAQEA7yn3bRHQ5FHMQ ...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_20">▼ チャートレジストリの場合<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<h4 id="_19">▼ チャートレジストリの場合<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>チャートレジストリの認証情報を設定する。チャートレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
 <p>参考：</p>
 <ul>
@@ -8589,7 +8529,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h4 id="kuberneres">▼ Kuberneresリソースの監視<a class="headerlink" href="#kuberneres" title="Permanent link">&para;</a></h4>
 <p>Kubernetesのカスタムリソースから定義される。監視対象のKubernetesリソースやカスタムリソースを設定する。</p>
 <p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml">https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml</a></p>
-<h4 id="_21">▼ 自己監視<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h4 id="_20">▼ 自己監視<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>Application自体もカスタムリソースなため、ApplicationがApplication自身のソースの変更を監視し、同期できる。</p>
 <p>参考：</p>
 <ul>
@@ -9072,7 +9012,7 @@ ID  DATE                           REVISION
 <tbody>
 <tr>
 <td><code>prune</code></td>
-<td>リソースの削除を自動同期するか否かを設定する。デフォルトでは、GtiHubリポジトリでマニフェストファイルが削除されても、ArgoCDはリソースの削除を自動同期しない。</td>
+<td>リソースをapplyしつつ、不要になったリソースを自動削除するか否かを設定する。デフォルトでは、GtiHubリポジトリでマニフェストファイルが削除されても、ArgoCDはリソースを自動的に削除しない。</td>
 <td>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning</a></td>
 </tr>
 <tr>
@@ -9082,7 +9022,7 @@ ID  DATE                           REVISION
 </tr>
 <tr>
 <td><code>allowEmpty</code></td>
-<td>自動同期中に、ApplicationやApplication配下のリソースを検出できなくなってしまい、マニフェストファイルから空の状態を許可するか否かを設定する。</td>
+<td>Prune中に、Application配下にリソースを検出できなくなると、Pruneは失敗するようになっている。Applicationが空（配下にリソースがない）状態を許可するか否かを設定する。</td>
 <td>参考：<br>・<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18</a><br>・<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></td>
 </tr>
 </tbody>
@@ -9449,7 +9389,7 @@ ID  DATE                           REVISION
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
       
     
   </small>

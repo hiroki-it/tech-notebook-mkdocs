@@ -7936,7 +7936,7 @@ $ minikube start
 <p>ワーカーNode内で<code>ip addr</code>コマンドを実行すると、ワーカーNodeに割り当てられたCIDRブロックを確認できる。</p>
 <p>参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
 <p><strong>＊例＊</strong></p>
-<p>CNIとしてBridgeプラグインを使用している。CIDRブロックは、<code>192.168.49.2/24</code>である。</p>
+<p>CNIとしてBridgeアドオンを使用している。CIDRブロックは、<code>192.168.49.2/24</code>である。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7955,7 +7955,7 @@ docker@minikube:~$ ip addr <span class="p">|</span> grep eth0
 <p>ワーカーNode内で<code>/etc/cni/net.d</code>ディレクトリ配下にあるファイルを確認すると、Podに割り当てられたCIDRブロックを確認できる。</p>
 <p>参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
 <p><strong>＊例＊</strong></p>
-<p>CNIとしてBridgeプラグインを使用している。CIDRブロックは、<code>10.85.0.0/16</code>である。</p>
+<p>CNIとしてBridgeアドオンを使用している。CIDRブロックは、<code>10.85.0.0/16</code>である。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8018,9 +8018,9 @@ docker@minikube:~$ cat /etc/cni/net.d/100-crio-bridge.conf
 <h2 id="03-minikube">03. minikubeコマンド<a class="headerlink" href="#03-minikube" title="Permanent link">&para;</a></h2>
 <h3 id="addons">addons<a class="headerlink" href="#addons" title="Permanent link">&para;</a></h3>
 <h4 id="addons_1">▼ addonsとは<a class="headerlink" href="#addons_1" title="Permanent link">&para;</a></h4>
-<p>Minikubeのプラグインを操作する。</p>
+<p>Minikubeのアドオンを操作する。</p>
 <h4 id="enable">▼ enable<a class="headerlink" href="#enable" title="Permanent link">&para;</a></h4>
-<p>プラグインを有効化するか否かを設定する。</p>
+<p>アドオンを有効化するか否かを設定する。</p>
 <p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/addons/">https://minikube.sigs.k8s.io/docs/commands/addons/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>開発環境専用のIngressコントローラーとして、Nginx Ingressコントローラーを有効化するか否かを設定する。本番環境では、同じくNginxIngressコントローラーや、クラウドプロバイダーのロードバランサーなどを使用する。</p>
@@ -8038,7 +8038,7 @@ NAME          CLASS   HOSTS   ADDRESS        PORTS   AGE
 foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span>      12m
 </code></pre></div></td></tr></table></div>
 <h4 id="list">▼ list<a class="headerlink" href="#list" title="Permanent link">&para;</a></h4>
-<p>有効できるプラグインの一覧を取得する。</p>
+<p>有効できるアドオンの一覧を取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8111,7 +8111,7 @@ foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="cni">cni<a class="headerlink" href="#cni" title="Permanent link">&para;</a></h3>
-<p>使用するcniプラグインを設定する。</p>
+<p>使用するcniアドオンを設定する。</p>
 <p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/start/">https://minikube.sigs.k8s.io/docs/commands/start/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube start --cni<span class="o">=</span>bridge
 </code></pre></div></td></tr></table></div>
@@ -8737,7 +8737,7 @@ minikube-m03   Ready    &lt;none&gt;                 19s   v1.20.2
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
       
     
   </small>

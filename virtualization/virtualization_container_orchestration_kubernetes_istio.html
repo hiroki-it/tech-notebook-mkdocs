@@ -4330,6 +4330,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#istio-proxy" class="md-nav__link">
+    ▼ istio-proxyコンテナが作成される仕組み
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7095,6 +7102,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#istio-proxy" class="md-nav__link">
+    ▼ istio-proxyコンテナが作成される仕組み
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7657,6 +7671,10 @@
 </tr>
 </tbody>
 </table>
+<h4 id="istio-proxy">▼ <code>istio-proxy</code>コンテナが作成される仕組み<a class="headerlink" href="#istio-proxy" title="Permanent link">&para;</a></h4>
+<p>サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成する処理は、admission-controllersのmutating-admission-webhookを使用した機能である。istio-injectionが有効になっている場合、Podの作成処理時に、KubernetesからIstioにWebhookが送信される。具体的には、Pod、Deployment、StatefulSet、DaemonSet、によるPodの作成処理でkube-apiserverにコールすると、mutating-admission時に、WebhookがIstio内のsidecar-injector-webhookサーバーの<code>/inject</code>エンドポイントに送信される。これを受信したsidecar-injector-webhookサーバーは、istio-proxyコンテナを作成する処理を返信する。Kubernetesはこれを受信し、Podにistio-proxyコンテナを作成する。</p>
+<p>参考：<a href="https://www.sobyte.net/post/2022-07/istio-sidecar-injection/">https://www.sobyte.net/post/2022-07/istio-sidecar-injection/</a></p>
+<p><img alt="kubernetes_admission-controllers_istio-injection.ong" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers_istio-injection.ong.png" /></p>
 <p><br></p>
 <h3 id="_5">コントロールプレーン<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ コントロールプレーンとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -7926,6 +7944,7 @@
 <h3 id="_8">サーキットブレイカー<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ サーキットブレイカーとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス間に設置され、他のマイクロサービスに連鎖的に起こる障害（カスケード障害）を吸収する仕組みのこと。下流マイクロサービスに障害が発生した時に、上流マイクロサービスにエラーを返してしまわないよう、一旦マイクロサービスへのルーティングを停止し、直近の成功時の処理結果を返信する。</p>
+<p>参考：<a href="https://digitalvarys.com/what-is-circuit-breaker-design-pattern/">https://digitalvarys.com/what-is-circuit-breaker-design-pattern/</a></p>
 <p><img alt="circuit-breaker" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/circuit-breaker.png" /></p>
 <p><br></p>
 <h2 id="07">07. 認証<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
@@ -7944,7 +7963,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
       
     
   </small>
