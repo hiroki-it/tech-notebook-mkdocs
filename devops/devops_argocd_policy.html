@@ -5815,16 +5815,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04" class="md-nav__link">
-    04. エラー解決
+  <a href="#05" class="md-nav__link">
+    05. エラー解決
   </a>
   
-    <nav class="md-nav" aria-label="04. エラー解決">
+    <nav class="md-nav" aria-label="05. エラー解決">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#application_1" class="md-nav__link">
     Applicationの削除時にエラーが起こる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    すでに削除されたPodが監視され続ける
   </a>
   
 </li>
@@ -5849,8 +5856,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04_1" class="md-nav__link">
-    04. アップグレード
+  <a href="#06" class="md-nav__link">
+    06. アップグレード
   </a>
   
 </li>
@@ -6757,16 +6764,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04" class="md-nav__link">
-    04. エラー解決
+  <a href="#05" class="md-nav__link">
+    05. エラー解決
   </a>
   
-    <nav class="md-nav" aria-label="04. エラー解決">
+    <nav class="md-nav" aria-label="05. エラー解決">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#application_1" class="md-nav__link">
     Applicationの削除時にエラーが起こる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod" class="md-nav__link">
+    すでに削除されたPodが監視され続ける
   </a>
   
 </li>
@@ -6791,8 +6805,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#04_1" class="md-nav__link">
-    04. アップグレード
+  <a href="#06" class="md-nav__link">
+    06. アップグレード
   </a>
   
 </li>
@@ -7008,7 +7022,7 @@
 <li><a href="https://blog.mmmcorp.co.jp/blog/2022/02/24/yassan-argocd-with-aws-secrets-manager/">https://blog.mmmcorp.co.jp/blog/2022/02/24/yassan-argocd-with-aws-secrets-manager/</a></li>
 </ul>
 <p><br></p>
-<h2 id="04">04. エラー解決<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
+<h2 id="05">05. エラー解決<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="application_1">Applicationの削除時にエラーが起こる<a class="headerlink" href="#application_1" title="Permanent link">&para;</a></h3>
 <p>PruneによるKubernetesリソースの削除を有効化し、フォアグラウンドで削除した場合、Applicationが配下にリソースを持たないことでエラーが起こることがある。これらの場合には、以下の手順でApplicationを削除する。</p>
 <p>参考：<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></p>
@@ -7043,14 +7057,20 @@ spec:
 <span class="c1"># 〜 中略 〜</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="pod">すでに削除されたPodが監視され続ける<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h3>
+<p>すでに削除したPodを監視し続けてしまうことがあり、この場合Podが存在しないため、Podの削除すらできなくなってしまう。この問題が起こった場合、以下のいずれかで解決する。</p>
+<ul>
+<li>argocd-serverを再起動する。親になるリソースを削除する必要がなく、apply先のClusterには影響がないため、安全な方法である。ArgoCDの使用者に周知しさえすれば問題ない。</li>
+<li>親になるリソース（Deployment、DaemonSet、など）を一度削除する。ただ、親になるリソースを削除する必要があるため、やや危険である。</li>
+</ul>
+<p><br></p>
 <h3 id="_8">ヘルスチェックが終わらない<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
 <p><br></p>
 <h3 id="out-of-sync">同期してもOut of syncが解消されない<a class="headerlink" href="#out-of-sync" title="Permanent link">&para;</a></h3>
 <p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></p>
 <p><br></p>
-<p><br></p>
-<h2 id="04_1">04. アップグレード<a class="headerlink" href="#04_1" title="Permanent link">&para;</a></h2>
+<h2 id="06">06. アップグレード<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
 <p>ArgoCDが自分自身をアップグレードできるように、親Applicationを子Applicationで管理する。</p>
 
   <hr>
@@ -7058,7 +7078,7 @@ spec:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>

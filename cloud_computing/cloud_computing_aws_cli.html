@@ -4557,6 +4557,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#systems-managerssm" class="md-nav__link">
+    Systems Manager（旧SSM）
+  </a>
+  
+    <nav class="md-nav" aria-label="Systems Manager（旧SSM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-parameters-by-path" class="md-nav__link">
+    ▼ get-parameters-by-path
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -7685,6 +7705,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#systems-managerssm" class="md-nav__link">
+    Systems Manager（旧SSM）
+  </a>
+  
+    <nav class="md-nav" aria-label="Systems Manager（旧SSM）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-parameters-by-path" class="md-nav__link">
+    ▼ get-parameters-by-path
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8169,6 +8209,79 @@ $ aws sqs receive-message --queue-url <span class="si">${</span><span class="nv"
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="systems-managerssm">Systems Manager（旧SSM）<a class="headerlink" href="#systems-managerssm" title="Permanent link">&para;</a></h3>
+<h4 id="get-parameters-by-path">▼ get-parameters-by-path<a class="headerlink" href="#get-parameters-by-path" title="Permanent link">&para;</a></h4>
+<p>特定のパスで始まる全てのSSMパラメーターを取得する。</p>
+<p>参考：<a href="https://dev.classmethod.jp/articles/aws-cli-all-ssm-parameter-get/">https://dev.classmethod.jp/articles/aws-cli-all-ssm-parameter-get/</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># パスのないパラメーターの場合</span>
+$ aws ssm get-parameters-by-path --path <span class="s2">&quot;/&quot;</span>
+
+<span class="o">{</span>
+    <span class="s2">&quot;Parameters&quot;</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;FOO&quot;</span>,
+
+            <span class="c1"># 〜 中略 〜</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;BAR&quot;</span>,
+
+            <span class="c1"># 〜 中略 〜</span>
+        <span class="o">}</span>,
+   <span class="o">]</span>
+ <span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 『/FOO』で始まるパラメーターの場合</span>
+$ aws ssm get-parameters-by-path --path <span class="s2">&quot;/FOO&quot;</span>
+
+<span class="o">{</span>
+    <span class="s2">&quot;Parameters&quot;</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;/FOO&quot;</span>,
+
+            <span class="c1"># 〜 中略 〜</span>
+        <span class="o">}</span>,
+        <span class="o">{</span>
+            <span class="s2">&quot;Name&quot;</span>: <span class="s2">&quot;/FOO/BAR&quot;</span>,
+
+            <span class="c1"># 〜 中略 〜</span>
+        <span class="o">}</span>,
+   <span class="o">]</span>
+ <span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h2 id="07-tips">07. 認証認可のTips<a class="headerlink" href="#07-tips" title="Permanent link">&para;</a></h2>
 <h3 id="sso">SSO<a class="headerlink" href="#sso" title="Permanent link">&para;</a></h3>
 <h4 id="saml2aws">▼ saml2aws<a class="headerlink" href="#saml2aws" title="Permanent link">&para;</a></h4>
@@ -8253,7 +8366,7 @@ Note that it will expire at <span class="m">2022</span>-01-01 <span class="m">12
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>

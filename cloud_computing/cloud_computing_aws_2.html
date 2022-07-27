@@ -12278,7 +12278,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 </tbody>
 </table>
 <h4 id="ec2-nodeami_1">▼ EC2 NodeのカスタムAMI<a class="headerlink" href="#ec2-nodeami_1" title="Permanent link">&para;</a></h4>
-<p>EC2 NodeのAMIにカスタムAMIを使用する場合、EC2のユーザーデータとして、パラメーターを渡す必要がある。最適化AMIにはデフォルトでパラメーターが設定されているため、これは不要である。</p>
+<p>EC2 NodeのAMIにカスタムAMIを使用する場合、EC2起動時にユーザーデータとして、<code>bootstrap.sh</code>ファイルにパラメーターを渡す必要がある。一方で、最適化AMIにはデフォルトでこれらのパラメーターが設定されているため、設定は不要である。</p>
 <p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12310,7 +12310,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
   --apiserver-endpoint https://G6jWLdSk*****.*.ap-northeast-1.eks.amazonaws.com <span class="se">\</span>
   --container-runtime containerd
 </code></pre></div></td></tr></table></div>
-<p>ユーザーデータの注意点として、各パラメーターはハードコーディングせずに、SSMパラメーターストアから取得するようにする。</p>
+<p>ユーザーデータの注意点として、各パラメーターはハードコーディングせずに、パラメーターストアから取得するようにする。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://qiita.com/th_/items/8ffb28dd6d27779a6c9d">https://qiita.com/th_/items/8ffb28dd6d27779a6c9d</a></li>
