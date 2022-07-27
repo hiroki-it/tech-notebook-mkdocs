@@ -11003,32 +11003,39 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <tr>
 <th>AMI名</th>
 <th>説明</th>
+<th>特に相性の良いアプリ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>ECS最適化Amazon Linux 2</td>
 <td>ECSのための標準的なEC2インスタンスを作成できる。最も推奨。</td>
+<td></td>
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux 2022</td>
 <td>Amazon Linux 2よりも先進的な機能を持つEC2インスタンスを作成できる。<br>参考：<a href="https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html">https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html</a></td>
+<td></td>
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux</td>
 <td>ECSのための標準的なEC2インスタンスを作成できる。非推奨であり、Amazon Linux 2を使用した方が良い。</td>
+<td></td>
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux 2 arm64</td>
 <td>arm64ベースのGravitonプロセッサーが搭載されたEC2インスタンスを作成できる。</td>
+<td></td>
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux 2 GPU</td>
-<td>GPUが搭載されたEC2インスタンスを作成できる。GPUが必要名アプリケーション（計算処理系、機械学習系のアプリケーション）のために選択する。</td>
+<td>GPUが搭載されたEC2インスタンスを作成できる。</td>
+<td>GPUが必要なアプリケーション（計算処理系、機械学習系のアプリケーション）</td>
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux 2 推定</td>
 <td>Amazon EC2 Inf1インスタンスを作成できる。</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -12242,27 +12249,31 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <p>EC2で稼働するKubernetesのホストのこと。Fargateと比べてカスタマイズ性が高く、Node当たりで稼働するPod数に重み付けを設定できる。一方で、各EC2のサチュレーションをユーザーが管理しなければならないため、Kubernetesのホストの管理が大変である。</p>
 <p>参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
 <h4 id="ec2-nodeami">▼ EC2 Nodeの最適化AMI<a class="headerlink" href="#ec2-nodeami" title="Permanent link">&para;</a></h4>
-<p>任意のEC2 Nodeを使用できるが、AWSが用意している最適化AMIを選んだ方が良い。このAMIには、EC2がEKSと連携するために必要なソフトウェアがプリインストールされており、EC2 Nodeをセットアップする手間が省ける。</p>
+<p>任意のEC2 Nodeを使用できるが、AWSが用意している最適化AMIを選んだ方が良い。このAMIには、EC2がEKSと連携するために必要なソフトウェアがプリインストールされており、EC2 Nodeをセットアップする手間が省ける。必ずしも、全てのワーカーNodeを同じAMIで構築する必要はない。ワーカーNodeを種類ごとに異なるAMIで作成し、特定のアプリを含むPodは特定のワーカーNode上で稼働させる（例：計算処理系アプリはEKS最適化高速AMIのワーカーNode上で動かす）といった方法でもよい。</p>
 <p>参考：<a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html</a></p>
 <table>
 <thead>
 <tr>
 <th>AMI名</th>
 <th>説明</th>
+<th>特に相性の良いPod</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>EKS最適化Amazon Linux</td>
 <td>EKSのための標準的なEC2インスタンスを作成できる。最も推奨。</td>
+<td></td>
 </tr>
 <tr>
 <td>EKS最適化高速Amazon Linux</td>
-<td>GPUが搭載されたEC2インスタンスやAmazon EC2 Inf1インスタンスを作成できる。GPUが必要名アプリケーション（計算処理系、機械学習系のアプリケーション）のために選択する。</td>
+<td>GPUが搭載されたEC2インスタンスやAmazon EC2 Inf1インスタンスを作成できる。</td>
+<td>GPUが必要なアプリケーションの含むPod（計算処理系、機械学習系のアプリケーション）</td>
 </tr>
 <tr>
 <td>EKS最適化Arm Amazon Linux</td>
 <td>Armベースのプロセッサーが搭載されたEC2インスタンスを作成できる。</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -12956,7 +12967,7 @@ redis *****:6379&gt; monitor
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>

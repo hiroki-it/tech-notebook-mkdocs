@@ -7870,6 +7870,10 @@ NAME　                URL
 
 <span class="s2">&quot;&lt;チャートリポジトリ名&gt;&quot;</span> has been removed from your repositories
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># チャート名をreleasesとしている場合</span>
+$ helm repo remove releases
+</code></pre></div></td></tr></table></div>
 <h4 id="update">▼ update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h4>
 <p>事前に<code>helm repo add</code>コマンドで追加しておいたチャートリポジトリの情報を更新する。チャートを特定のバージョンにアップグレードする前にリポジトリの情報を更新しておく必要がある。</p>
 <p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories">https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories</a></p>
@@ -7906,6 +7910,10 @@ URL               CHART VERSION      APP VERSION                       DESCRIPTI
 <p>チャート内の全てのマニフェストファイルを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm show all &lt;チャート名&gt;
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># チャート名をreleasesとしている場合</span>
+$ helm show all releases
+</code></pre></div></td></tr></table></div>
 <h4 id="chart">▼ chart<a class="headerlink" href="#chart" title="Permanent link">&para;</a></h4>
 <p>チャートの<code>Chart.yaml</code>ファイルを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7935,11 +7943,19 @@ version: &lt;バージョンタグ&gt;
 
 <span class="c1"># valuesファイルが表示される。</span>
 </code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># チャート名をreleasesとしている場合</span>
+$ helm show values releases
+</code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="template">template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h3>
 <h4 id="template_1">▼ templateとは<a class="headerlink" href="#template_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesにapplyされるリソースのマニフェストファイルを出力する。<code>.yaml</code>ファイルにリダイレクトするようにすると良い。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm template &lt;リリース名&gt; &lt;チャートへのパス&gt; &gt;<span class="p">|</span> &lt;出力先ファイル&gt;
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># チャート名をreleasesとしている場合</span>
+$ helm template prd releases &gt;<span class="p">|</span> releases.yaml
 </code></pre></div></td></tr></table></div>
 <h4 id="-f_2">▼ -f<a class="headerlink" href="#-f_2" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイル使用して、<code>helm template</code>コマンドを実行する。</p>
@@ -8063,7 +8079,7 @@ db:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>

@@ -5971,6 +5971,46 @@
     アーキテクチャ
   </a>
   
+    <nav class="md-nav" aria-label="アーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ▼ リモートストレージとして
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ▼ 監視ツールとして
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ロードバランサー
+  </a>
+  
+    <nav class="md-nav" aria-label="ロードバランサー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ▼ ロードバランサーとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -5983,7 +6023,7 @@
         
           <li class="md-nav__item">
   <a href="#vmselect_1" class="md-nav__link">
-    ▼ vmselect
+    ▼ vmselectとは
   </a>
   
 </li>
@@ -6023,7 +6063,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     ▼ ストレージの必要サイズの見積もり
   </a>
   
@@ -6641,6 +6681,46 @@
     アーキテクチャ
   </a>
   
+    <nav class="md-nav" aria-label="アーキテクチャ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ▼ リモートストレージとして
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ▼ 監視ツールとして
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ロードバランサー
+  </a>
+  
+    <nav class="md-nav" aria-label="ロードバランサー">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ▼ ロードバランサーとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -6653,7 +6733,7 @@
         
           <li class="md-nav__item">
   <a href="#vmselect_1" class="md-nav__link">
-    ▼ vmselect
+    ▼ vmselectとは
   </a>
   
 </li>
@@ -6693,7 +6773,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     ▼ ストレージの必要サイズの見積もり
   </a>
   
@@ -6768,12 +6848,25 @@
 <p><br></p>
 <h2 id="01-victoriametrics">01. VictoriaMetricsの仕組み<a class="headerlink" href="#01-victoriametrics" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>リモートストレージとして、Prometheusで収集したメトリクスを保管する。シングルNodeモードとクラスターNodeモードがあり、Clusterモードでは各コンポーネントが冗長化される。エンドポイントとしてロードバランサーがあり、書き込みエンドポイントを指定すれば、ストレージにメトリクスを書き込める。また読み出しエンドポイントを指定すれば、ストレージからメトリクスを読み込める。</p>
+<h4 id="_3">▼ リモートストレージとして<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>ロードバランサー、vmselect、vmstorage、vminsert、から構成されている。リモートストレージとして、Prometheusで収集したメトリクスを保管する。シングルNodeモードとクラスターNodeモードがあり、Clusterモードでは各コンポーネントが冗長化される。エンドポイントとしてロードバランサーがあり、書き込みエンドポイントを指定すれば、vminsertを経由して、vmstorageにメトリクスを書き込める。また読み出しエンドポイントを指定すれば、vmselectを経由して、vmstorageからメトリクスを読み込める。</p>
 <p>参考：<a href="https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html#architecture-overview">https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html#architecture-overview</a></p>
-<p><img alt="victoria-metrics_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/victoria-metrics_architecture.png" /></p>
+<p><img alt="victoria-metrics_remote-storage_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/victoria-metrics_remote-storage_architecture.png" /></p>
+<h4 id="_4">▼ 監視ツールとして<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>vmagent、vmalert、から構成されている。また、アラートのルーティングのためにalertmanager、可視化のためにGrafana、が必要である。vmagentがPull型でメトリクスを収集し、エラーイベントが検出されれば、vmalertがアラームを作成する。この場合はPrometheusが不要になる。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://speakerdeck.com/bo0km4n/victoriametrics-plus-prometheusdegou-zhu-surufu-shu-kubernetesfalsejian-shi-ji-pan?slide=30">https://speakerdeck.com/bo0km4n/victoriametrics-plus-prometheusdegou-zhu-surufu-shu-kubernetesfalsejian-shi-ji-pan?slide=30</a></li>
+<li><a href="https://www.sobyte.net/post/2022-05/vmalert/">https://www.sobyte.net/post/2022-05/vmalert/</a></li>
+</ul>
+<p><img alt="victoria-metrics_monitoring_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/victoria-metrics_monitoring_architecture.png" /></p>
+<p><br></p>
+<h3 id="_5">ロードバランサー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="_6">▼ ロードバランサーとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>HTTPSプロトコルの<code>8224</code>番ポートでインバウンド通信を待ち受け、vmselectやvminsertに通信をルーティングする。このロードバランサー自体をヘルスチェックすれば、VictoriaMetricsのプロセスが稼働しているか否かを監視できる。</p>
 <p><br></p>
 <h3 id="vmselect">vmselect<a class="headerlink" href="#vmselect" title="Permanent link">&para;</a></h3>
-<h4 id="vmselect_1">▼ vmselect<a class="headerlink" href="#vmselect_1" title="Permanent link">&para;</a></h4>
+<h4 id="vmselect_1">▼ vmselectとは<a class="headerlink" href="#vmselect_1" title="Permanent link">&para;</a></h4>
 <p>クライアントから読み出しリクエストを受信し、vmstorageからデータを読み出す。</p>
 <p><br></p>
 <h3 id="vmstorage">vmstorage<a class="headerlink" href="#vmstorage" title="Permanent link">&para;</a></h3>
@@ -6807,8 +6900,8 @@
 <h4 id="readonly">▼ ReadOnlyモード<a class="headerlink" href="#readonly" title="Permanent link">&para;</a></h4>
 <p>vmstorageは、サイズいっぱいまでデータが保管されると、ランタイムエラーを起こしてしまう。これを回避するために、ReadOnlyモードがある。ReadOnlyモードにより、vmstorageの空きサイズが<code>minFreeDiskSpaceBytes</code>オプション値を超えると、書き込みできなくなるような仕様になっている。これにより、vmstorageの最大サイズを超えてデータを書き込むことを防いでいる。</p>
 <p>参考：<a href="https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269">https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269</a></p>
-<h4 id="_3">▼ ストレージの必要サイズの見積もり<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>vmstorageの<code>/var/lib/victoriametrics/</code>ディレクトリ配下の増加量（日）を調査し、これに非機能要件の保管日数をかけることで、vmstorageの必要最低限のサイズを算出できる。また、<code>20</code>%の空きサイズを考慮するために、増加量を<code>1.2</code>倍する必要がある。</p>
+<h4 id="_7">▼ ストレージの必要サイズの見積もり<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>vmstorageの<code>/var/lib/victoriametrics</code>ディレクトリ配下の増加量（日）を調査し、これに非機能要件の保管日数をかけることで、vmstorageの必要最低限のサイズを算出できる。また、<code>20</code>%の空きサイズを考慮するために、増加量を<code>1.2</code>倍する必要がある。</p>
 <p>参考：<a href="https://docs.victoriametrics.com/#capacity-planning">https://docs.victoriametrics.com/#capacity-planning</a></p>
 <p><strong>＊例＊</strong></p>
 <p>ここでは、増加率を以下の数式で算出している。</p>
@@ -6952,7 +7045,7 @@ $ systemctl start victoriametrics
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>

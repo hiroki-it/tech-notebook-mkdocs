@@ -1570,6 +1570,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#journalctl" class="md-nav__link">
+    journalctl
+  </a>
+  
+    <nav class="md-nav" aria-label="journalctl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#journalctl_1" class="md-nav__link">
+    ▼ journalctlとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-u" class="md-nav__link">
+    ▼ -u
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd" class="md-nav__link">
+    systemdのアラート
+  </a>
+  
+    <nav class="md-nav" aria-label="systemdのアラート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ▼ アラートを直接的に通知する場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    ▼ アラートを間接的に通知する場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1584,7 +1638,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     インストール
   </a>
   
@@ -8149,6 +8203,60 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#journalctl" class="md-nav__link">
+    journalctl
+  </a>
+  
+    <nav class="md-nav" aria-label="journalctl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#journalctl_1" class="md-nav__link">
+    ▼ journalctlとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-u" class="md-nav__link">
+    ▼ -u
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd" class="md-nav__link">
+    systemdのアラート
+  </a>
+  
+    <nav class="md-nav" aria-label="systemdのアラート">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    ▼ アラートを直接的に通知する場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    ▼ アラートを間接的に通知する場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8163,7 +8271,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     インストール
   </a>
   
@@ -8800,7 +8908,8 @@ $ sops -e &lt;暗号化前の.yamlファイル/.jsonファイル&gt; &gt; &lt;�
 <li><a href="https://www.crazyengineers.com/threads/supervisord-vs-systemd-which-is-better-and-why.103871">https://www.crazyengineers.com/threads/supervisord-vs-systemd-which-is-better-and-why.103871</a></li>
 </ul>
 <h4 id="systemdsystem-daemon">▼ systemd：system daemon<a class="headerlink" href="#systemdsystem-daemon" title="Permanent link">&para;</a></h4>
-<p>ユニットファイルに基づいて、プロセスをユニット別に管理し、ユニットごとに起動する。ユニットは拡張子の違いで判別する。</p>
+<p>ユニットファイルに基づいて、プロセスをユニット別に管理する。ユニットは拡張子の違いで判別する。</p>
+<p>参考：<a href="https://www.kabegiwablog.com/entry/2018/06/11/100000">https://www.kabegiwablog.com/entry/2018/06/11/100000</a></p>
 <table>
 <thead>
 <tr>
@@ -8837,7 +8946,7 @@ $ sops -e &lt;暗号化前の.yamlファイル/.jsonファイル&gt; &gt; &lt;�
 <p><br></p>
 <h3 id="_13">ユニットファイル<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ ユニットファイルとは<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>systemdによるプロセスの起動/停止方法を定義したファイル。デフォルト値が定義されたファイルは<code>/usr/lib/systemd/system</code>ディレクトリ配下に配置され、これは変更できない。カスタムユニットファイルは、<code>/etc/sytemd/system</code>ディレクトリ配下に配置する。</p>
+<p>デーモンの起動/停止方法を定義したファイル。デフォルト値が定義されたファイルは<code>/usr/lib/systemd/system</code>ディレクトリ配下に配置され、これは変更できない。カスタムユニットファイルは、<code>/etc/sytemd/system</code>ディレクトリ配下に配置する。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://tex2e.github.io/blog/linux/create-my-systemd-service">https://tex2e.github.io/blog/linux/create-my-systemd-service</a></li>
@@ -8851,12 +8960,16 @@ $ sops -e &lt;暗号化前の.yamlファイル/.jsonファイル&gt; &gt; &lt;�
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
 <span class="na">Description</span><span class="o">=</span><span class="s">The Apache HTTP Server</span><span class="w"></span>
 <span class="c1"># このユニットの前に実行するユニット</span><span class="w"></span>
 <span class="na">After</span><span class="o">=</span><span class="s">network.target remote-fs.target nss-lookup.target</span><span class="w"></span>
 <span class="na">Documentation</span><span class="o">=</span><span class="s">man:httpd(8)</span><span class="w"></span>
 <span class="na">Documentation</span><span class="o">=</span><span class="s">man:apachectl(8)</span><span class="w"></span>
+<span class="c1"># ユニットが失敗状態時に起動するユニット</span><span class="w"></span>
+<span class="na">OnFailure</span><span class="o">=</span><span class="s">notify-email@%i.service</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="service">▼ Serviceセクション<a class="headerlink" href="#service" title="Permanent link">&para;</a></h4>
 <p>serviceユニットのオプションを設定する。</p>
@@ -9036,8 +9149,78 @@ mq959 /usr/sbin/rsyslogd -n
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ systemctl stop nginx.service
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="journalctl">journalctl<a class="headerlink" href="#journalctl" title="Permanent link">&para;</a></h3>
+<h4 id="journalctl_1">▼ journalctlとは<a class="headerlink" href="#journalctl_1" title="Permanent link">&para;</a></h4>
+<p>systemで管理する全てのユニットのログを取得する。<code>grep</code>コマンドで特定のエラーログレベルに絞る必要がある。</p>
+<p>参考：<a href="https://qiita.com/aosho235/items/9fbff75e9cccf351345c">https://qiita.com/aosho235/items/9fbff75e9cccf351345c</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ journalctl <span class="p">|</span> grep error
+</code></pre></div></td></tr></table></div>
+<h4 id="-u">▼ -u<a class="headerlink" href="#-u" title="Permanent link">&para;</a></h4>
+<p>特定のユニットのみのログを取得する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ journalctl -u foo.service <span class="p">|</span> grep error
+</code></pre></div></td></tr></table></div>
+<p><br></p>
+<h3 id="systemd">systemdのアラート<a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h3>
+<h4 id="_15">▼ アラートを直接的に通知する場合<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>デーモンが失敗状態になった時に、メールアドレスやチャット宛にアラートを直接的に送信するためには、<code>OnFailure</code>オプションを使用する。この時に指定するユニットファイル名には、「<code>@%i</code>』が必要である（実際のファイル名に<code>%i</code>は不要である）。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://serverfault.com/a/924434">https://serverfault.com/a/924434</a></li>
+<li><a href="https://northernlightlabs.se/2014-07-05/systemd-status-mail-on-unit-failure.html">https://northernlightlabs.se/2014-07-05/systemd-status-mail-on-unit-failure.html</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
+
+<span class="c1"># 〜 中略 〜</span><span class="w"></span>
+
+<span class="c1"># ユニットが失敗状態時に起動するユニット</span><span class="w"></span>
+<span class="na">OnFailure</span><span class="o">=</span><span class="s">notify-email@%i.service</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><code>/etc/systemd/system/notify-email@.service</code>ファイルで、失敗状態時に起動するユニットを定義しておく。<code>ExecStart</code>オプションで、特定のアドレスにメールを送信するようにする。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># notify-email@.serviceファイル</span><span class="w"></span>
+<span class="k">[Unit]</span><span class="w"></span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Sent email </span><span class="w"></span>
+
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/bash -c \</span><span class="w"></span>
+<span class="w">    </span><span class="na">&#39;systemctl status %i | /mailx -Ssendwait -s &quot;[SYSTEMD_%i] Fail&quot; example@gmail.com&#39;</span><span class="w"></span>
+
+<span class="k">[Install]</span><span class="w"></span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<h4 id="_16">▼ アラートを間接的に通知する場合<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>デーモンが失敗状態になった時に、ログを経由して、アラートを間接的に送信するためには、<code>StandardOutput</code>オプションや<code>StandardError</code>オプションを使用する。一度、ログとして出力し、このログをCloudWatchログなどに送信する。</p>
+<p>参考：<a href="https://gist.github.com/adam-hanna/06afe09209589c80ba460662f7dce65c">https://gist.github.com/adam-hanna/06afe09209589c80ba460662f7dce65c</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[Service]</span><span class="w"></span>
+
+<span class="c1"># 〜 中略 〜</span><span class="w"></span>
+
+<span class="na">StandardOutput</span><span class="o">=</span><span class="s">file:/var/log/foo-service/stdout.log</span><span class="w"></span>
+<span class="na">StandardError</span><span class="o">=</span><span class="s">file:/var/log/foo-service/stderr.log</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h2 id="08-tcpdump">08. tcpdump<a class="headerlink" href="#08-tcpdump" title="Permanent link">&para;</a></h2>
-<h3 id="_15">インストール<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<h3 id="_17">インストール<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="apt_5">▼ aptリポジトリから<a class="headerlink" href="#apt_5" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ apt install tcpdump
 </code></pre></div></td></tr></table></div>
@@ -9133,7 +9316,7 @@ mq959 /usr/sbin/rsyslogd -n
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
       
     
   </small>
