@@ -5163,13 +5163,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#kubernetesistio" class="md-nav__link">
-    KubernetesにおけるIstioの有効化
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -6938,13 +6931,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#kubernetesistio" class="md-nav__link">
-    KubernetesにおけるIstioの有効化
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -7345,11 +7331,6 @@ $ <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</
 </tbody>
 </table>
 <p><br></p>
-<h3 id="kubernetesistio">KubernetesにおけるIstioの有効化<a class="headerlink" href="#kubernetesistio" title="Permanent link">&para;</a></h3>
-<p>KubernetesリソースでIstioリソースを使用できるように、<code>istio-injection</code>キーの値に<code>enabled</code>を設定する。istio-proxyコンテナをサイドカーコンテナとして自動的にapplyできるようになる。<code>default</code>以外のNamespace名をつける場合は、コマンドではなく、マニフェストファイル上でこれを設定できる。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl label namespace default istio-injection<span class="o">=</span>enabled
-</code></pre></div></td></tr></table></div>
-<p><br></p>
 <h2 id="02-istioctl">02. istioctlコマンド<a class="headerlink" href="#02-istioctl" title="Permanent link">&para;</a></h2>
 <h3 id="analyze">analyze<a class="headerlink" href="#analyze" title="Permanent link">&para;</a></h3>
 <h4 id="analyze_1">▼ analyzeとは<a class="headerlink" href="#analyze_1" title="Permanent link">&para;</a></h4>
@@ -7643,7 +7624,7 @@ data plane version: <span class="m">1</span>.12.1 <span class="o">(</span><span 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
       
     
   </small>

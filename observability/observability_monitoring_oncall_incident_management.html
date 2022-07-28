@@ -6022,8 +6022,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloudwatch" class="md-nav__link">
-    ▼ CloudWatchアラームの場合
+  <a href="#slack" class="md-nav__link">
+    ▼ Slackの場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerduty" class="md-nav__link">
+    ▼ PagerDutyの場合
   </a>
   
 </li>
@@ -6273,7 +6280,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pagerduty" class="md-nav__link">
+  <a href="#pagerduty_1" class="md-nav__link">
     ▼ PagerDutyのテンプレート
   </a>
   
@@ -7065,8 +7072,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloudwatch" class="md-nav__link">
-    ▼ CloudWatchアラームの場合
+  <a href="#slack" class="md-nav__link">
+    ▼ Slackの場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerduty" class="md-nav__link">
+    ▼ PagerDutyの場合
   </a>
   
 </li>
@@ -7316,7 +7330,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pagerduty" class="md-nav__link">
+  <a href="#pagerduty_1" class="md-nav__link">
     ▼ PagerDutyのテンプレート
   </a>
   
@@ -7364,7 +7378,7 @@
 <p><br></p>
 <h2 id="01">01. オンコール<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">オンコールとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>エラーイベントが通知された時に、エラー修正の担当者に連絡できる状態（メールアドレス、電話番号、SMS、など）にあること。</p>
+<p>アラートが通知された時に、エラー修正の担当者に連絡できる状態（メールアドレス、電話番号、SMS、など）にあること。</p>
 <p>参考：<a href="https://response.pagerduty.com/oncall/being_oncall/">https://response.pagerduty.com/oncall/being_oncall/</a></p>
 <p><br></p>
 <h3 id="_4">オンコール対応時間<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -7573,12 +7587,13 @@
 <p><img alt="pagerduty_incident_phase" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pagerduty_incident_phase.png" /></p>
 <p><br></p>
 <h3 id="_14">一次オンコール担当者の作業<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<h4 id="cloudwatch">▼ CloudWatchアラームの場合<a class="headerlink" href="#cloudwatch" title="Permanent link">&para;</a></h4>
-<p>ここでは、Slackに通知されたアラートをオンコール担当者が作業する手順を示す。</p>
-<p>（１）Slackに通知されたアラートを確認する。</p>
-<p>（２）アラーム名（例：prd-foo-ecs-container-laravel-log-alarm）から、CloudWatchアラームを探す。</p>
-<p>（３）アラームがどのロググループに紐づいているかを探す。執筆時点（2021/12/09）では、AWSの仕様ではこれがわかりにくくなっている。メトリクスフィルターが設定されているロググループは、アラームに紐づいている可能性があり、メトリクスフィルターで作成されているメトリクス名（例：ErrorCount）がアラームに記載されたものであれば、紐づいているとわかる。</p>
-<p>（４）Log Insightsを使用して、ロググループの直近のエラーログを抽出する。</p>
+<h4 id="slack">▼ Slackの場合<a class="headerlink" href="#slack" title="Permanent link">&para;</a></h4>
+<p>ここでは、Slackをインシデント管理ツールとして、Slackに通知されたアラートをオンコール担当者が作業する。</p>
+<p>（１）CloudWactchアラームからSlackのチャンネルに、アラートが通知される。ただし、Slackからオンコール担当者に電話をかけることはできない。</p>
+<p>（２）オンコール担当者は、Slackに通知されたアラートを確認する。</p>
+<p>（３）アラーム名（例：prd-foo-ecs-container-laravel-log-alarm）から、CloudWatchアラームを探す。</p>
+<p>（４）アラームがどのロググループに紐づいているかを探す。執筆時点（2021/12/09）では、AWSの仕様ではこれがわかりにくくなっている。メトリクスフィルターが設定されているロググループは、アラームに紐づいている可能性があり、メトリクスフィルターで作成されているメトリクス名（例：ErrorCount）がアラームに記載されたものであれば、紐づいているとわかる。</p>
+<p>（５）Log Insightsを使用して、ロググループの直近のエラーログを抽出する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7589,13 +7604,20 @@
 <span class="o">|</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">@</span><span class="k">timestamp</span><span class="w"> </span><span class="k">desc</span><span class="w"></span>
 <span class="o">|</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>（５）クエリの結果から、アラートの原因になっているエラーを見つける。CloudWatchのタイムスタンプとSlackのアラートの通知時刻には若干のタイムラグがある。</p>
-<p>（６）クエリの結果をコピーし、アラートのThreadに貼り付ける。</p>
+<p>（６）クエリの結果から、アラートの原因になっているエラーを見つける。CloudWatchのタイムスタンプとSlackのアラートの通知時刻には若干のタイムラグがある。</p>
+<p>（７）クエリの結果をコピーし、アラートのThreadに貼り付ける。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> [2021-12-01 00:00:00] request.ERROR: Uncaught PHP Exception ***** 
 </code></pre></div></td></tr></table></div>
-<p>（７）ログイベントが許容できるものあれば、保留として、その旨を連絡する。</p>
-<p>（８）ログイベントがインシデントであれば、その旨を連絡する。また、タスク化し、迅速に対応する。</p>
-<p>（９）ログイベントがインシデントでないエラーイベントであれば、その旨を連絡する。タスク化し、時間のある時に対応する。</p>
+<p>（８）ログイベントが許容できるものあれば、保留として、その旨をエスカレーションする。</p>
+<p>（９）ログイベントがインシデントであれば、その旨をエスカレーションする。また、タスク化し、迅速に対応する。</p>
+<p>（１０）ログイベントがインシデントでないエラーイベントであれば、その旨をエスカレーションする。タスク化し、時間のある時に対応する。</p>
+<h4 id="pagerduty">▼ PagerDutyの場合<a class="headerlink" href="#pagerduty" title="Permanent link">&para;</a></h4>
+<p>ここでは、PagerDutyをインシデント管理ツールとして、PagerDutyに通知されたアラートをオンコール担当者が作業する。</p>
+<p><img alt="pagerduty_on-call" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pagerduty_on-call.png" /></p>
+<p>参考：<a href="https://blog.mapbox.com/building-on-call-mapboxs-managed-incident-response-tool-59fadd87317a">https://blog.mapbox.com/building-on-call-mapboxs-managed-incident-response-tool-59fadd87317a</a></p>
+<p>（１）CloudWactchアラームからPagerDutyのServiceに、アラートが通知される。場合によっては、PagerDutyからオンコール担当者に電話がかかる。</p>
+<p>（２）オンコール担当者は、PagerDutyのServiceを確認する。</p>
+<p>（３）解決フェーズがOpenになっているインシデント</p>
 <p><br></p>
 <h2 id="03">03. インシデント管理の組織化<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_15">インシデントコマンドシステムに基づく役割分離<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
@@ -7789,7 +7811,7 @@
 
 <span class="gu">## 障害発生から対応までのタイムライン</span>
 </code></pre></div></td></tr></table></div>
-<h4 id="pagerduty">▼ PagerDutyのテンプレート<a class="headerlink" href="#pagerduty" title="Permanent link">&para;</a></h4>
+<h4 id="pagerduty_1">▼ PagerDutyのテンプレート<a class="headerlink" href="#pagerduty_1" title="Permanent link">&para;</a></h4>
 <p>参考：<a href="https://response.pagerduty.com/after/post_mortem_template/">https://response.pagerduty.com/after/post_mortem_template/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7898,7 +7920,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
       
     
   </small>

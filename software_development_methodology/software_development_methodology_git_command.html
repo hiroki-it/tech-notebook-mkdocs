@@ -6460,6 +6460,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ignore" class="md-nav__link">
+    ignore
+  </a>
+  
+    <nav class="md-nav" aria-label="ignore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-ignore" class="md-nav__link">
+    ▼ global ignore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#remote" class="md-nav__link">
     remote
   </a>
@@ -7176,6 +7196,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ignore" class="md-nav__link">
+    ignore
+  </a>
+  
+    <nav class="md-nav" aria-label="ignore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-ignore" class="md-nav__link">
+    ▼ global ignore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#remote" class="md-nav__link">
     remote
   </a>
@@ -7776,6 +7816,15 @@ Date:   Sat Sep <span class="m">12</span> <span class="m">00</span>:00:00 <span 
 <h3 id="init">init<a class="headerlink" href="#init" title="Permanent link">&para;</a></h3>
 <p>ローカルマシンのディレクトリとGitHubリポジトリを紐づける。エディタにGitHubリポジトリを再反映するためにも使用できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git init
+</code></pre></div></td></tr></table></div>
+<p><br></p>
+<h3 id="ignore">ignore<a class="headerlink" href="#ignore" title="Permanent link">&para;</a></h3>
+<h4 id="global-ignore">▼ global ignore<a class="headerlink" href="#global-ignore" title="Permanent link">&para;</a></h4>
+<p><code>~/.config/git/ignore</code>ファイルに設定されたファイルは、グローバルに無視される。</p>
+<p>参考：<a href="https://zenn.dev/phi/articles/gitignore-global-ds-store">https://zenn.dev/phi/articles/gitignore-global-ds-store</a></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>.DS_Store
+.idea/
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="remote">remote<a class="headerlink" href="#remote" title="Permanent link">&para;</a></h3>
@@ -8572,7 +8621,7 @@ $ git gc --aggressive --prune<span class="o">=</span>now
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
       
     
   </small>

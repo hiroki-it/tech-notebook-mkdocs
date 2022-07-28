@@ -5278,15 +5278,22 @@
         
           <li class="md-nav__item">
   <a href="#annotations_1" class="md-nav__link">
-    annotationsとは
+    annotations
   </a>
   
-    <nav class="md-nav" aria-label="annotationsとは">
+    <nav class="md-nav" aria-label="annotations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#annotations_2" class="md-nav__link">
-    ▼ annotations
+    ▼ annotationsとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istioiorev_1" class="md-nav__link">
+    ▼ istio.io/rev
   </a>
   
 </li>
@@ -7471,15 +7478,22 @@
         
           <li class="md-nav__item">
   <a href="#annotations_1" class="md-nav__link">
-    annotationsとは
+    annotations
   </a>
   
-    <nav class="md-nav" aria-label="annotationsとは">
+    <nav class="md-nav" aria-label="annotations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#annotations_2" class="md-nav__link">
-    ▼ annotations
+    ▼ annotationsとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istioiorev_1" class="md-nav__link">
+    ▼ istio.io/rev
   </a>
   
 </li>
@@ -8135,36 +8149,66 @@ $ helm install istio-ingressgateway istio/gateway
 <h2 id="04-namespacekubernetes">04. Namespace＠Kubernetesでの設定<a class="headerlink" href="#04-namespacekubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="istio-injection">▼ istio-injection<a class="headerlink" href="#istio-injection" title="Permanent link">&para;</a></h4>
-<p>admission-controllersアドオンのWebhook機能を使用して、サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成するか否かを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#automatic-sidecar-injection</a></p>
+<p>特定のNamespaceで、Istioとこれのインプレースアップグレードを有効化するか否かを設定する。admission-controllersアドオンのWebhook機能を使用して、サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成するか否かを設定する。</p>
+<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span><span class="w"></span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-namespace</span><span class="w"></span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">istio-injection</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enabled</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="istioiorev">▼ istio.io/rev<a class="headerlink" href="#istioiorev" title="Permanent link">&para;</a></h4>
-<p>IstoOperatorの<code>spec.revision</code>キーと同じ。</p>
+<p>IstoOperatorの<code>spec.revision</code>キーと同じ。特定のNamespaceで、Istioとこれのカナリアリリースを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span><span class="w"></span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-namespace</span><span class="w"></span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">istio.io/rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-12-1</span><span class="w"> </span><span class="c1"># ハイフン繋ぎのバージョン表記</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="04-02-podkubernetes">04-02. Pod＠Kubernetesでの設定<a class="headerlink" href="#04-02-podkubernetes" title="Permanent link">&para;</a></h2>
-<h3 id="annotations_1">annotationsとは<a class="headerlink" href="#annotations_1" title="Permanent link">&para;</a></h3>
-<h4 id="annotations_2">▼ annotations<a class="headerlink" href="#annotations_2" title="Permanent link">&para;</a></h4>
+<h3 id="annotations_1">annotations<a class="headerlink" href="#annotations_1" title="Permanent link">&para;</a></h3>
+<h4 id="annotations_2">▼ annotationsとは<a class="headerlink" href="#annotations_2" title="Permanent link">&para;</a></h4>
 <p>Deploymentの<code>spec.template</code>キーや、Podの<code>metadata</code>キーにて、istio-proxyコンテナごとのオプション値を設定する。Deploymentの<code>metadata</code>キーで定義しないように注意する。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<h4 id="istioiorev_1">▼ istio.io/rev<a class="headerlink" href="#istioiorev_1" title="Permanent link">&para;</a></h4>
+<p>IstoOperatorの<code>spec.revision</code>キーと同じ。特定のPodで、Istioとこれのカナリアリリースを有効化するか否かを設定する。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span><span class="w"> </span><span class="c1"># もしくはPod</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-deployment</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">app.kubernetes.io/app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-pod</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">istio.io/rev</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1-12-1</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
 <h4 id="proxyistioioconfigconfigpath">▼ proxy.istio.io/config.configPath<a class="headerlink" href="#proxyistioioconfigconfigpath" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナのプロセスの設定値をファイルとして作成するために、これの作成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが作成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
 <p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig</a></p>
@@ -8195,7 +8239,8 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">          </span><span class="no">configPath: ./etc/istio/proxy</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioinject">▼ sidecar.istio.io/inject<a class="headerlink" href="#sidecaristioioinject" title="Permanent link">&para;</a></h4>
-<p>特定のPodでのみ、istio-proxyコンテナを自動的に作成しないようにする。</p>
+<p>特定のPodで、Istioとこれのインプレースアップグレードを有効化するか否かを設定する。</p>
+<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9210,7 +9255,7 @@ $ helm install istio-ingressgateway istio/gateway
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
       
     
   </small>

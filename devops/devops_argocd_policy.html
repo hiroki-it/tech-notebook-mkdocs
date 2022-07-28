@@ -6876,7 +6876,7 @@
 <span class="l l-Scalar l-Scalar-Plain">└── stg/</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="application">▼ Applicationのマニフェストファイルを監視する場合<a class="headerlink" href="#application" title="Permanent link">&para;</a></h4>
-<p>監視対象リポジトリごとにApplicationを作成し、これらを同じリポジトリで管理する。この時、監視対象リポジトリにはApplicationが管理されている。これにより、親Applicationで子Applicationをグループ化したように構成できる。また、親Applicationを使用して、ArgoCDが自身をアップグレードできるようになる。ここでは、子Applicationが監視するKubernetesリソースやhelmチャートのリポジトリは『ポリリポジトリ』としているが、『モノリポジトリ』でも良い。注意点として、同期時の操作手順として、親Applicationの同期を実行し、その後子Applicationの同期を実行することになる。</p>
+<p>監視対象リポジトリごとにApplicationを作成し、これらを同じリポジトリで管理する。この時、監視対象リポジトリにはApplicationが管理されている。これにより、親Applicationで子Applicationをグループ化したように構成できる。また、親Applicationを使用して、ArgoCDが自身をアップグレードできるようになる。ここでは、子Applicationが監視するKubernetesリソースやhelmチャートのリポジトリは『ポリリポジトリ』としているが、『モノリポジトリ』でも良い。注意点として、同期時の操作手順として、親Applicationの画面で子Applicationの同期を実行し、その後子Applicationの画面で同期を実行することになる。</p>
 <p>参考：<a href="https://www.arthurkoziel.com/setting-up-argocd-with-helm/">https://www.arthurkoziel.com/setting-up-argocd-with-helm/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7068,7 +7068,12 @@ spec:
 <p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
 <p><br></p>
 <h3 id="out-of-sync">同期してもOut of syncが解消されない<a class="headerlink" href="#out-of-sync" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></p>
+<p>admission-controllersのmutating-admission-webhookによって、同期後にKubernetesリソースの状態が変更されるような場合、同期してもOut of syncになってしまう。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/">https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/</a></li>
+<li><a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></li>
+</ul>
 <p><br></p>
 <h2 id="06">06. アップグレード<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
 <p>ArgoCDが自分自身をアップグレードできるように、親Applicationを子Applicationで管理する。</p>
@@ -7078,7 +7083,7 @@ spec:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
       
     
   </small>
