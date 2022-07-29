@@ -7363,7 +7363,7 @@
 <p><br></p>
 <h2 id="02">02. リポジトリ構成<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_4">リポジトリ分割のメリット<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>リポジトリを分割することで、以下のメリットがある。</p>
+<p>リポジトリを分割することにより、以下のメリットがある。</p>
 <ul>
 <li>認可スコープをリポジトリ内に閉じられるため、運用チームを別に分けられる。</li>
 </ul>
@@ -7628,7 +7628,7 @@
 <h3 id="cluster">Clusterのアップグレード手法<a class="headerlink" href="#cluster" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ ライブアップグレード<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_live-upgrade" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_live-upgrade.png" /></p>
-<p>既存のClusterのバージョンをそのままアップグレードする方法。Cluster内で旧ワーカーNodeと旧マスターNodeを残したまま、新マスターNodeとワーカーNodeをapplyする。新Nodeが正常に稼働したことが確認できたら、ここで<code>kubectl drain --ignore-daemonsets</code>コマンドを実行すると、Drain処理が始まる。コマンドで<code>--ignore-daemonsets</code>オプションを有効化しないと、DaemonSetのPodを退避させられない。Drain処理では、旧NodeからPodが退避し、現在稼働中の新しいNodeでPodが再作成される。Drain処理が完了すれば、旧Nodeは停止してもよい。一度に作業するNode数（Surge数）を増やすことで、アップグレードの速さを制御できる。デメリットとして、新しいバージョンを1つずつしかアップグレードできない。</p>
+<p>既存のClusterのバージョンをそのままアップグレードする方法。Cluster内で旧ワーカーNodeと旧マスターNodeを残したまま、新マスターNodeとワーカーNodeをapplyする。新Nodeが正常に稼働したことが確認できたら、ここで<code>kubectl drain --ignore-daemonsets</code>コマンドを実行すると、Drain処理が始まる。コマンドで<code>--ignore-daemonsets</code>オプションを有効化しないと、DaemonSetのPodを退避させられない。Drain処理では、旧NodeからPodが退避し、現在稼働中の新しいNodeでPodが再作成される。Drain処理が完了すれば、旧Nodeは停止してもよい。一度に作業するNode数（Surge数）を増やすことにより、アップグレードの速さを制御できる。デメリットとして、新しいバージョンを1つずつしかアップグレードできない。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://logmi.jp/tech/articles/323032">https://logmi.jp/tech/articles/323032</a></li>
@@ -7809,7 +7809,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
       
     
   </small>

@@ -13068,7 +13068,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
         <span class="c1">// バリデーション時にエラーが発生した場合</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">fails</span><span class="p">())</span> <span class="p">{</span>
             <span class="c1">// 指定したWebページにリダイレクト</span>
-            <span class="c1">// validatorを渡すことでエラーメッセージをViewに渡せる。</span>
+            <span class="c1">// validatorを渡すことにより、エラーメッセージをViewに渡せる。</span>
             <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withErrors</span><span class="p">(</span><span class="nv">$validator</span><span class="p">)</span>
                 <span class="o">-&gt;</span><span class="na">withInput</span><span class="p">();</span>
         <span class="p">}</span>
@@ -13140,7 +13140,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
         <span class="c1">// バリデーション時にエラーが発生した場合</span>
         <span class="k">if</span> <span class="p">(</span><span class="nv">$validator</span><span class="o">-&gt;</span><span class="na">fails</span><span class="p">())</span> <span class="p">{</span>
             <span class="c1">// 指定したWebページにリダイレクト</span>
-            <span class="c1">// validatorを渡すことでエラーメッセージをViewに渡せる。</span>
+            <span class="c1">// validatorを渡すことにより、エラーメッセージをViewに渡せる。</span>
             <span class="k">return</span> <span class="nx">redirect</span><span class="p">(</span><span class="s2">&quot;error&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">withErrors</span><span class="p">(</span><span class="nv">$validator</span><span class="p">)</span>
                 <span class="o">-&gt;</span><span class="na">withInput</span><span class="p">();</span>
         <span class="p">}</span>
@@ -14102,7 +14102,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>テーブルにカラム数が多い場合は、Where句をつけることで、特定のカラムのみ検証もできる。</p>
+<p>テーブルにカラム数が多い場合は、Where句をつけることにより、特定のカラムのみ検証もできる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -17293,7 +17293,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="make">▼ <code>make</code>メソッド<a class="headerlink" href="#make" title="Permanent link">&para;</a></h4>
-<p>引数の型でリゾルブを実行する以外に、<code>make</code>メソッドも使用できる。<code>make</code>メソッドの引数にクラスの名前空間を渡すことで、インスタンスがリゾルブされる。</p>
+<p>引数の型でリゾルブを実行する以外に、<code>make</code>メソッドも使用できる。<code>make</code>メソッドの引数にクラスの名前空間を渡すことにより、インスタンスがリゾルブされる。</p>
 <p>参考：<a href="https://readouble.com/laravel/8.x/ja/container.html#the-make-method">https://readouble.com/laravel/8.x/ja/container.html#the-make-method</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -18394,7 +18394,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
       
     
   </small>

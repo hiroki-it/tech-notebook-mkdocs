@@ -6928,7 +6928,7 @@ $ curl -X GET http://&lt;VictoriaMetricsのIPアドレス&gt;:8428/prometheus/ap
 <p>vm-storageは、サイズいっぱいまでデータが保管されると、ランタイムエラーを起こしてしまう。これを回避するために、ReadOnlyモードがある。ReadOnlyモードにより、vm-storageの空きサイズが<code>minFreeDiskSpaceBytes</code>オプション値を超えると、書き込みできなくなるような仕様になっている。これにより、vm-storageの最大サイズを超えてデータを書き込むことを防いでいる。</p>
 <p>参考：<a href="https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269">https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269</a></p>
 <h4 id="_8">▼ ストレージの必要サイズの見積もり<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>vm-storageの<code>/var/lib/victoriametrics</code>ディレクトリ配下の増加量（日）を調査し、これに非機能要件の保管日数をかけることで、vm-storageの必要最低限のサイズを算出できる。また、<code>20</code>%の空きサイズを考慮するために、増加量を<code>1.2</code>倍する必要がある。</p>
+<p>vm-storageの<code>/var/lib/victoriametrics</code>ディレクトリ配下の増加量（日）を調査し、これに非機能要件の保管日数をかけることにより、vm-storageの必要最低限のサイズを算出できる。また、<code>20</code>%の空きサイズを考慮するために、増加量を<code>1.2</code>倍する必要がある。</p>
 <p>参考：<a href="https://docs.victoriametrics.com/#capacity-planning">https://docs.victoriametrics.com/#capacity-planning</a></p>
 <p><strong>＊例＊</strong></p>
 <p>ここでは、増加率を以下の数式で算出している。</p>
@@ -7072,7 +7072,7 @@ $ systemctl start victoriametrics
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
       
     
   </small>

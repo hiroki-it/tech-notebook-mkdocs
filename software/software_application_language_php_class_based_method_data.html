@@ -8762,7 +8762,7 @@
 <p><br></p>
 <h3 id="static">static<a class="headerlink" href="#static" title="Permanent link">&para;</a></h3>
 <h4 id="static_1">▼ <code>static</code>とは<a class="headerlink" href="#static_1" title="Permanent link">&para;</a></h4>
-<p>別ファイルでのメソッドの呼び出しにはインスタンス化が必要である。しかし、static修飾子をつけることで、インスタンス化しなくともコールできる。データ値は使用せず（静的）、引数の値のみを使用して処理を行うメソッドに対して使用する。</p>
+<p>別ファイルでのメソッドの呼び出しにはインスタンス化が必要である。しかし、static修飾子をつけることにより、インスタンス化しなくともコールできる。データ値は使用せず（静的）、引数の値のみを使用して処理を行うメソッドに対して使用する。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8865,7 +8865,7 @@
 <span class="p">}</span>    
 </code></pre></div></td></tr></table></div>
 <h4 id="__construct">▼ マジックメソッドの<code>__construct</code>メソッド<a class="headerlink" href="#__construct" title="Permanent link">&para;</a></h4>
-<p>マジックメソッドの<code>__construct</code>メソッドを持たせることで、このデータを持っていなければならないとい制約を明示できる。Setterを持たせずに、<code>__construct</code>メソッドだけを持たせれば、ValueObjectのような、『イミュータブル』なオブジェクトを実現できる。</p>
+<p>マジックメソッドの<code>__construct</code>メソッドを持たせることにより、このデータを持っていなければならないとい制約を明示できる。Setterを持たせずに、<code>__construct</code>メソッドだけを持たせれば、ValueObjectのような、『イミュータブル』なオブジェクトを実現できる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9581,7 +9581,7 @@
 <p><br></p>
 <h3 id="dispatcher">Dispatcher<a class="headerlink" href="#dispatcher" title="Permanent link">&para;</a></h3>
 <h4 id="dispatcher_1">▼ Dispatcherとは<a class="headerlink" href="#dispatcher_1" title="Permanent link">&para;</a></h4>
-<p>特定の名前と関数を紐付け、名前を渡すことで関数をコールするオブジェクトをDispatcherという。</p>
+<p>特定の名前と関数を紐付け、名前を渡すことにより、関数をコールするオブジェクトをDispatcherという。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9823,7 +9823,7 @@
 
 <span class="nv">$item</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">;</span>
 
-<span class="c1">// 最初の括弧を使用しないことで、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
+<span class="c1">// 最初の括弧を使用しないことにより、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
 <span class="c1">// use()に、親メソッド（$optionName）のスコープの$itemを渡す。</span>
 <span class="nv">$optionName</span> <span class="o">=</span> <span class="k">function</span> <span class="p">()</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
     <span class="nv">$item</span><span class="o">-&gt;</span><span class="na">optionName</span><span class="p">();</span>
@@ -9864,7 +9864,7 @@
 
 <span class="nv">$item</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">;</span>
 
-<span class="c1">// 最初の括弧を使用しないことで、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
+<span class="c1">// 最初の括弧を使用しないことにより、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
 <span class="c1">// 親メソッド（$optionName）のスコープの$itemを、use()に渡す。</span>
 <span class="c1">// $paramは、コール時に使用する変数。</span>
 <span class="nv">$optionName</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$para</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="nv">$item</span><span class="p">)</span> <span class="p">{</span>
@@ -9921,7 +9921,7 @@
 
 <span class="nv">$item</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Item</span><span class="p">;</span>
 
-<span class="c1">// 最初の括弧を使用しないことで、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
+<span class="c1">// 最初の括弧を使用しないことにより、普段よくやっている値渡しのメソッドを定義しているのと同じになる。</span>
 <span class="c1">// use()に、親メソッドのスコープの$itemを渡す。</span>
 <span class="c1">// $paramは、コール時に使用する変数。</span>
 <span class="nv">$option</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Option</span><span class="p">;</span>
@@ -10808,7 +10808,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
       
     
   </small>
