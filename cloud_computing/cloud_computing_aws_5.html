@@ -6983,14 +6983,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8024,7 +8024,7 @@
 <tr>
 <td>バケットポリシー</td>
 <td>IAMユーザー（クロスアカウントも可）またはAWSリソースがS3へにアクセスするためのポリシーで管理する。</td>
-<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースに紐付けることによりも、アクセスを許可できる。<br>参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーを紐付けできないCloudFrontやALBなどでは、自身へのアクセスログを作成するために必須である。</td>
+<td>・ブロックパブリックアクセスを無効にしたうえで、IAMユーザー（クロスアカウントも可）やAWSリソースがS3にアクセスするために必要である。ただし代わりに、IAMポリシーをAWSリソースに紐付けることによりも、アクセスを許可できる。<br>ℹ️ 参考：<a href="https://awesome-linus.com/2020/02/04/s3-bucket-public-access/">https://awesome-linus.com/2020/02/04/s3-bucket-public-access/</a><br>・ポリシーを紐付けできないCloudFrontやALBなどでは、自身へのアクセスログを作成するために必須である。</td>
 </tr>
 <tr>
 <td>アクセスコントロールリスト</td>
@@ -8093,7 +8093,7 @@
 <p>ポリシーでは、S3のARでは、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』のように、最後にバックスラッシュアスタリスクが必要。</p>
 <h4 id="alb">▼ ALBのアクセスログの保存を許可<a class="headerlink" href="#alb" title="Permanent link">&para;</a></h4>
 <p>パブリックアクセスが無効化されたS3に対して、ALBへのアクセスログを保存したい場合、バケットポリシーを設定する必要がある。バケットポリシーには、ALBからS3へのログ書き込み権限を実装する。『<code>"AWS": "arn:aws:iam::582318560864:root"</code>』では、<code>582318560864</code>はALBアカウントIDと呼ばれ、リージョンごとに値が決まっている。これは、東京リージョンのアカウントIDである。その他のリージョンのアカウントIDについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8271,7 +8271,7 @@
 <h3 id="url">署名付きURL<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
 <h4 id="url_1">▼ 署名付きURLとは<a class="headerlink" href="#url_1" title="Permanent link">&para;</a></h4>
 <p>認証/認可情報をパラメーターに持つURLのこと。S3では、署名付きURLを発行し、S3へのアクセス権限を外部のユーザーに一時的に付与する。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2107/15/news009.html">https://atmarkit.itmedia.co.jp/ait/articles/2107/15/news009.html</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2107/15/news009.html">https://atmarkit.itmedia.co.jp/ait/articles/2107/15/news009.html</a></p>
 <p><br></p>
 <h2 id="02">02. セキュリティグループ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_6">セキュリティグループとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
@@ -8283,10 +8283,10 @@
 <h3 id="ip_1">送信元IPアドレスの指定<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h3>
 <h4 id="id">▼ セキュリティグループIDの紐付け<a class="headerlink" href="#id" title="Permanent link">&para;</a></h4>
 <p>許可する送信元IPアドレスにセキュリティグループIDを設定した場合、そのセキュリティグループが紐付けられているENIと、このENIに紐付けられたリソースからのトラフィックを許可できる。リソースのIPアドレスが動的に変化する場合、有効な方法である。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html#DefaultSecurityGroup</a></p>
 <h4 id="_8">▼ 自己参照<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>許可する送信元IPアドレスに、自分自身のセキュリティグループIDを設定した場合、同じセキュリティグループが紐付けられている同士で通信できるようになる。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups">https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups">https://stackoverflow.com/questions/51565372/self-referencing-aws-security-groups</a></p>
 <p><br></p>
 <h2 id="03-sessimple-email-service">03. SES：Simple Email Service<a class="headerlink" href="#03-sessimple-email-service" title="Permanent link">&para;</a></h2>
 <h3 id="ses">SESとは<a class="headerlink" href="#ses" title="Permanent link">&para;</a></h3>
@@ -8382,7 +8382,7 @@
 <h3 id="smtp-auth">SMTP-AUTH<a class="headerlink" href="#smtp-auth" title="Permanent link">&para;</a></h3>
 <h4 id="awssmtp-auth">▼ AWSにおけるSMTP-AUTHの仕組み<a class="headerlink" href="#awssmtp-auth" title="Permanent link">&para;</a></h4>
 <p>一般的なSMTP-AUTHでは、クライアントユーザーの認証が必要である。同様にして、AWSでもこれが必要であり、IAMユーザーを使用してこれを実現する。送信元となるアプリケーションにIAMユーザーを紐付け、このIAMユーザーにはユーザー名とパスワードを設定する。アプリケーションがSESを介してメールを送信する時、アプリケーションに対して、SESがユーザー名とパスワードを使用した認証を実行する。ユーザー名とパスワードは後から確認できないため、メモしておくこと。SMTP-AUTHの仕組みについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
 <p><br></p>
 <h2 id="04-systems-managerssm">04. Systems Manager（旧SSM）<a class="headerlink" href="#04-systems-managerssm" title="Permanent link">&para;</a></h2>
 <h3 id="parameter-store">Parameter Store<a class="headerlink" href="#parameter-store" title="Permanent link">&para;</a></h3>
@@ -8391,7 +8391,7 @@
 <h4 id="kms">▼ KMSを使用した暗号化と復号化<a class="headerlink" href="#kms" title="Permanent link">&para;</a></h4>
 <p><img alt="parameter-store_kms" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/parameter-store_kms.png" /></p>
 <p>Parameter Storeで管理される環境変数はKMSによって暗号化されており、EC2インスタンス（ECSやEKSのコンテナのホストを含む）で参照する時に復号化される。セキュリティ上の理由で、本来はできないSecretのバージョン管理が、KMSで暗号化することにより、可能になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li>
 <p><a href="https://docs.aws.amazon.com/kms/latest/developerguide/services-parameter-store.html">https://docs.aws.amazon.com/kms/latest/developerguide/services-parameter-store.html</a></p>
@@ -8409,14 +8409,14 @@
 <h3 id="session-manager">Session Manager<a class="headerlink" href="#session-manager" title="Permanent link">&para;</a></h3>
 <h4 id="session-manager_1">▼ Session Managerとは<a class="headerlink" href="#session-manager_1" title="Permanent link">&para;</a></h4>
 <p>EC2インスタンス（ECSやEKSのコンテナのホストを含む）に接続できるようにする。SSH接続とは異なり、Internet Gateway経由ではなく、ssmmessagesエンドポイント経由でインスタンスにアクセスできる。接続したいインスタンスにsystems-managerエージェントをインストールする必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#session-manager-features">https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#session-manager-features</a></li>
 <li><a href="https://blog.denet.co.jp/aws-systems-manager-session-manager/">https://blog.denet.co.jp/aws-systems-manager-session-manager/</a></li>
 </ul>
 <h4 id="aws">▼ AWSセッション<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h4>
 <p>TLS、Sigv4、KMSを使用して暗号化された接続のこと。</p>
-<p>参考：：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#what-is-a-session">https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#what-is-a-session</a></p>
+<p>ℹ️ 参考：：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#what-is-a-session">https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html#what-is-a-session</a></p>
 <h4 id="aws_1">▼ 同時AWSセッションの上限数<a class="headerlink" href="#aws_1" title="Permanent link">&para;</a></h4>
 <p>同時AWSセッションの上限数は2つまでである。以下のようなエラーが出た時は、セッション途中のユーザーが他ににいるか、過去のセッションを終了できていない可能性がある。Session Managerで既存のセッションを終了できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8448,12 +8448,12 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <tbody>
 <tr>
 <td>Automationタイプ</td>
-<td>サーバー/コンテナ外でコマンドを実行する。内部的には、Python製のLambdaが使用されている（たぶん）。<br>参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html</a></td>
+<td>サーバー/コンテナ外でコマンドを実行する。内部的には、Python製のLambdaが使用されている（たぶん）。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html</a></td>
 <td>EC2インスタンスを起動し、状態がOKになるまで監視する手順を自動化した例： <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-walk-document-builder.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-walk-document-builder.html</a></td>
 </tr>
 <tr>
 <td>Commandタイプ</td>
-<td>サーバー/コンテナ内でコマンドを実行する。内部的には、Run Commandが使用されている。<br>参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#what-are-document-types">https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#what-are-document-types</a></td>
+<td>サーバー/コンテナ内でコマンドを実行する。内部的には、Run Commandが使用されている。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#what-are-document-types">https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html#what-are-document-types</a></td>
 <td>・EC2インスタンス内で実行するlinuxコマンドを自動化した例： <a href="https://dev.classmethod.jp/articles/check-os-setting-ssm-doc-al2/">https://dev.classmethod.jp/articles/check-os-setting-ssm-doc-al2/</a> <br>・EC2インスタンス内で実行するawscliコマンドを自動化した例： <a href="https://dev.classmethod.jp/articles/autoscalling-terminating-log-upload/">https://dev.classmethod.jp/articles/autoscalling-terminating-log-upload/</a></td>
 </tr>
 <tr>
@@ -8466,10 +8466,10 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <h4 id="_14">▼ テンプレート<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>作業内容の鋳型こと。ランブックを指定し、変更箇所に基づいた作業内容を定義する。
 デフォルトではテンプレートの作成自体にも承認が必要になる。ただし、指定した権限を持つユーザーはテンプレートの承認をスキップするように設定できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/change-templates.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/change-templates.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/change-templates.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/change-templates.html</a></p>
 <h4 id="_15">▼ 変更リクエスト<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>鋳型に基づいた実際の作業のこと。作業のたびにテンプレートを指定し、リクエストを提出する。承認が必要になる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/change-requests.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/change-requests.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/change-requests.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/change-requests.html</a></p>
 <p><br></p>
 <h2 id="05-snssimple-notification-service">05. SNS：Simple Notification Service<a class="headerlink" href="#05-snssimple-notification-service" title="Permanent link">&para;</a></h2>
 <h3 id="sns">SNSとは<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h3>
@@ -8514,7 +8514,7 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 </tr>
 <tr>
 <td>配信再試行ポリシー</td>
-<td>サブスクリプションのHTTP/HTTPSエンドポイントが失敗した時のリトライ方法を設定する。<br>参考：<a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html">https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html</a></td>
+<td>サブスクリプションのHTTP/HTTPSエンドポイントが失敗した時のリトライ方法を設定する。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html">https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html</a></td>
 </tr>
 <tr>
 <td>配信ステータスのログ記録</td>
@@ -8605,10 +8605,10 @@ An error occurred <span class="o">(</span>ClientException<span class="o">)</span
 <p>IAMユーザーに対して、特定のAWSアカウントのAWSリソースに一時的にアクセスできるクレデンシャル情報（アクセスキーID、シークレットアクセスキー、セッショントークン）を発行する。このクレデンシャル情報は、一時的なクレデンシャル情報として使用できる。</p>
 <p><img alt="STS" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/STS.jpg" /></p>
 <p>STSへのリクエストの結果、新しいIAMユーザーを取得できる。このIAMユーザーには、そのAWSアカウント内でのみ使用できるロールが紐付けられている。この情報には有効秒数が存在し、期限が過ぎると新しいIAMユーザーになる。秒数の最大値は、該当するIAMロールの概要の最大セッション時間から変更できる。</p>
-<p>参考：<a href="https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role">https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role</a></p>
+<p>ℹ️ 参考：<a href="https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role">https://www.slideshare.net/tetsunorinishizawa/aws-cliassume-role</a></p>
 <p><img alt="AssumeRole" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/AssumeRole.png" /></p>
 <p>IAMユーザーを一括で管理しておき、特定のAWSアカウントでは特定の権限を委譲するようにする。</p>
-<p>参考：<a href="https://garafu.blogspot.com/2020/11/how-to-switch-role.html">https://garafu.blogspot.com/2020/11/how-to-switch-role.html</a></p>
+<p>ℹ️ 参考：<a href="https://garafu.blogspot.com/2020/11/how-to-switch-role.html">https://garafu.blogspot.com/2020/11/how-to-switch-role.html</a></p>
 <p><img alt="sts_multi-account" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/sts_multi-account.png" /></p>
 <p><br></p>
 <h3 id="_20">セットアップ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
@@ -8740,7 +8740,7 @@ aws configure <span class="nb">set</span> aws_default_region <span class="s2">&q
 </code></pre></div></td></tr></table></div>
 <h4 id="3">3. 返信されたレスポンスからクレデンシャル情報を取得<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
 <p>STSのエンドポイントから一時的なクレデンシャル情報が発行される。また同時に、このクレデンシャル情報は、<code>~/.aws/cli/cache</code>ディレクトリ配下にも<code>.json</code>ファイルで保管される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/cli/latest/topic/config-vars.html">https://docs.aws.amazon.com/cli/latest/topic/config-vars.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/cli/latest/topic/config-vars.html">https://docs.aws.amazon.com/cli/latest/topic/config-vars.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8793,7 +8793,7 @@ aws configure <span class="nb">set</span> aws_default_region <span class="s2">&q
 </code></pre></div></td></tr></table></div>
 <h4 id="4-1">4. クレデンシャル情報を取得（１）<a class="headerlink" href="#4-1" title="Permanent link">&para;</a></h4>
 <p>レスポンスされたデータからクレデンシャル情報を抽出する。この時、アクセスキーID、シークレットアクセスキー、セッショントークン、が必要になる。代わりに、<code>~/.aws/cli/cache</code>ディレクトリ配下の<code>.json</code>ファイルから取得しても良い。クレデンシャル情報を環境変数として出力し、使用できるようにする。</p>
-<p>参考：<a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></p>
+<p>ℹ️ 参考：<a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8852,7 +8852,7 @@ aws s3 ls --profile &lt;プロファイル名&gt;
 <p><br></p>
 <h3 id="awsapi">AWSリソースのAPIコール<a class="headerlink" href="#awsapi" title="Permanent link">&para;</a></h3>
 <h4 id="api">▼ APIコールできるリソース<a class="headerlink" href="#api" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html">https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html">https://docs.aws.amazon.com/step-functions/latest/dg/connect-supported-services.html</a></p>
 <h4 id="lambda_1">▼ Lambda<a class="headerlink" href="#lambda_1" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8902,7 +8902,7 @@ aws s3 ls --profile &lt;プロファイル名&gt;
 <p><br></p>
 <h3 id="api-gateway">API Gatewayとの連携<a class="headerlink" href="#api-gateway" title="Permanent link">&para;</a></h3>
 <h4 id="_21">▼ 注意が必要な項目<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html">https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html">https://docs.aws.amazon.com/step-functions/latest/dg/tutorial-api-gateway.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8966,7 +8966,7 @@ aws s3 ls --profile &lt;プロファイル名&gt;
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

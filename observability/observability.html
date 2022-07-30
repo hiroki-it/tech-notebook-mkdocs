@@ -6657,14 +6657,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7272,13 +7272,13 @@
 <h1 id="_1">可観測性<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 可観測性<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">可観測性とは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="observality_and_monitoring" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/observality_and_monitoring.png" /></p>
 <p>『収集されたデータから、システムと想定内と想定外の両方の不具合を、どれだけ正確に推測できるか』を表す程度のこと。システムの想定内の不具合は『監視』や『テスト』によって検知できるが、想定外のものを検知できない。可観測性は、監視やテストも含むスーパーセットであり、想定内の不具合だけでなく、想定外の不具合も表面化する。想定外の不具合はインシデントの原因になるため、想定外の不具合の表面化はインシデントの予防につながる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.thundra.io/observability-driven-development-for-serverless">https://blog.thundra.io/observability-driven-development-for-serverless</a></li>
 <li><a href="https://sookocheff.com/post/architecture/testing-in-production/">https://sookocheff.com/post/architecture/testing-in-production/</a></li>
@@ -7295,7 +7295,7 @@
 <h2 id="01-02">01-02. テレメトリー<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="_7">テレメトリーとは<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>可観測性を実現するために収集する必要のある<code>3</code>個のデータ要素（『メトリクス』『ログ』『分散トレース』）のこと。NewRelicやDatadogはテレメトリーの要素を全て持つ。また、AWSではCloudWatch（メトリクス＋ログ）とX-Ray（分散トレース）を両方利用すると、これらの要素を満たせたことになり、可観測性を実現できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.forbes.com/sites/andythurai/2021/02/02/aiops-vs-observability-vs-monitoringwhat-is-the-difference-are-you-using-the-right-one-for-your-enterprise/">https://www.forbes.com/sites/andythurai/2021/02/02/aiops-vs-observability-vs-monitoringwhat-is-the-difference-are-you-using-the-right-one-for-your-enterprise/</a></li>
 <li><a href="https://knowledge.sakura.ad.jp/26395/">https://knowledge.sakura.ad.jp/26395/</a></li>
@@ -7303,7 +7303,7 @@
 <p><br></p>
 <h3 id="_8">計装（インスツルメント化）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>システムを、テレメトリーを収集できるような状態にすること。計装するためには、メトリクス収集用のツール、ロギングパッケージ、分散トレースのためのリクエストIDの付与、などを用意する必要がある。多くの場合、各テレメトリーの収集ツールは別々に用意する必要があるが、OpenTelemetryではこれらの収集機能をフレームワークとして提供しようとしている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://syu-m-5151.hatenablog.com/entry/2022/07/12/115434">https://syu-m-5151.hatenablog.com/entry/2022/07/12/115434</a></li>
 <li><a href="https://www.splunk.com/en_us/data-insider/what-is-opentelemetry.html">https://www.splunk.com/en_us/data-insider/what-is-opentelemetry.html</a></li>
@@ -7312,7 +7312,7 @@
 <h2 id="02">02. メトリクス<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_9">メトリクスとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>とある分析にて、一定期間に発生した複数のデータポイントの集計値のこと。『平均』『合計』『最小/最大』『平方根』などを使用して、データポイントを集計する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.slideshare.net/AmazonWebServicesJapan/20190326-aws-black-belt-online-seminar-amazon-cloudwatch">https://www.slideshare.net/AmazonWebServicesJapan/20190326-aws-black-belt-online-seminar-amazon-cloudwatch</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Metric">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Metric</a></li>
@@ -7322,7 +7322,7 @@
 <h3 id="_10">データポイント<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ データポイントとは<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>分析対象から得られる最小単位の数値データのこと。データポイントは、分析ごとに存在している。例えば、とある分析で一分ごとに対象が測定される場合、一分ごとに得られる数値データがデータポイントとなる。一方で、一時間ごとの測定の場合、一時間ごとに得られる数値データがデータポイントである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://whatis.techtarget.com/definition/data-point">https://whatis.techtarget.com/definition/data-point</a></li>
 <li><a href="https://aws.amazon.com/jp/about-aws/whats-new/2017/12/amazon-cloudwatch-alarms-now-alerts-you-when-any-m-out-of-n-metric-datapoints-in-an-interval-are-above-your-threshold/">https://aws.amazon.com/jp/about-aws/whats-new/2017/12/amazon-cloudwatch-alarms-now-alerts-you-when-any-m-out-of-n-metric-datapoints-in-an-interval-are-above-your-threshold/</a></li>
@@ -7361,7 +7361,7 @@
 <h2 id="03">03. ログ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_16">ログとは<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>特定の瞬間に発生したイベントが記載されたデータのこと。</p>
-<p>参考：<a href="https://newrelic.com/jp/blog/how-to-relic/metrics-events-logs-and-traces">https://newrelic.com/jp/blog/how-to-relic/metrics-events-logs-and-traces</a></p>
+<p>ℹ️ 参考：<a href="https://newrelic.com/jp/blog/how-to-relic/metrics-events-logs-and-traces">https://newrelic.com/jp/blog/how-to-relic/metrics-events-logs-and-traces</a></p>
 <p><br></p>
 <h3 id="_17">構造からみた種類<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="_18">▼ 非構造化ログ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
@@ -7388,16 +7388,16 @@
 <h3 id="_20">ロギング<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <h4 id="distributed-logging">▼ Distributed logging（分散ロギング）<a class="headerlink" href="#distributed-logging" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスアーキテクチャの各サービスから収集されたログを、バラバラに分析/管理する。</p>
-<p>参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
+<p>ℹ️ 参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
 <h4 id="centralized-logging">▼ Centralized logging（集中ロギング）<a class="headerlink" href="#centralized-logging" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスアーキテクチャの各サービスから収集されたログを、一元的に分析/管理する。各ログに一意なIDを割り当て、人繋ぎに紐付ける必要がある。</p>
-<p>参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
+<p>ℹ️ 参考：<a href="https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging">https://www.splunk.com/en_us/data-insider/what-is-distributed-tracing.html#centralized-logging</a></p>
 <p><br></p>
 <h2 id="04">04. 分散トレース<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_21">分散トレースとは<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p><img alt="distributed-trace" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed-trace.png" /></p>
 <p>マイクロサービスから収集されたスパンのセットのこと。スパンをIDで紐付けることによって、異なるマイクロサービスを横断するを一繋ぎにし、リクエストによる一連の処理を認識できるようになる。</p>
-<p>か参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/">https://www.dynatrace.com/news/blog/open-observability-part-1-distributed-tracing-and-observability/</a></li>
 <li><a href="https://docs.newrelic.com/jp/docs/distributed-tracing/concepts/introduction-distributed-tracing/">https://docs.newrelic.com/jp/docs/distributed-tracing/concepts/introduction-distributed-tracing/</a></li>
@@ -7407,7 +7407,7 @@
 <h3 id="_22">スパン<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <h4 id="_23">▼ スパンとは<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスアーキテクチャの特定のサービスにて、1つのリクエストで発生したデータのセットのこと。JSON型で定義されることが多い。SaaSツールによってJSON型の構造が異なる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://opentracing.io/docs/overview/spans/">https://opentracing.io/docs/overview/spans/</a></li>
 <li><a href="https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/#%E3%83%A2%E3%83%87%E3%83%AB">https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/#%E3%83%A2%E3%83%87%E3%83%AB</a></li>
@@ -7416,7 +7416,7 @@
 <h4 id="_24">▼ スパン間の紐付け<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p><img alt="distributed-tracing" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed-tracing.png" /></p>
 <p>リクエストヘッダーやボディにIDを割り当て、異なるマイクロサービスのスパン間を紐付ける。各マイクロサービスで、リクエストにIDが割り当てられているか確認し、もしなければ割り当てるといった処理が繰り返される。AWSを使用している場合、例えばALBが<code>X-Amzn-Trace-Id</code>ヘッダーにリクエストIDを付与してくれるため、アプリケーションでリクエストIDを実装せずに分散トレースを実現できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/lempiji/articles/b752b644d22a59">https://zenn.dev/lempiji/articles/b752b644d22a59</a></li>
 <li><a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-request-tracing.html</a></li>
@@ -7427,11 +7427,11 @@
 <h3 id="_26">分散トレースの読み方<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <p><img alt="distributed-trace_reading" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed-trace_reading.png" /></p>
 <p>上から下に読むと、上流サービス（上位スパン）が下流サービス（下位スパン）を処理をコールしていることを確認できる。下から上に読むと、下流サービス（下位スパン）から上流サービス（上位スパン）に結果を返却していることを確認できる。</p>
-<p>参考：<a href="https://cloud.google.com/architecture/using-distributed-tracing-to-observe-microservice-latency-with-opencensus-and-stackdriver-trace">https://cloud.google.com/architecture/using-distributed-tracing-to-observe-microservice-latency-with-opencensus-and-stackdriver-trace</a></p>
+<p>ℹ️ 参考：<a href="https://cloud.google.com/architecture/using-distributed-tracing-to-observe-microservice-latency-with-opencensus-and-stackdriver-trace">https://cloud.google.com/architecture/using-distributed-tracing-to-observe-microservice-latency-with-opencensus-and-stackdriver-trace</a></p>
 <p><br></p>
 <h3 id="_27">モノリスにおける分散トレース<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
 <p>モノリスなアプリケーションでは、システムが分散していないため、単なるトレースとなる。</p>
-<p>参考：<a href="https://deepsource.io/blog/distributed-tracing/#monolithic-observability">https://deepsource.io/blog/distributed-tracing/#monolithic-observability</a></p>
+<p>ℹ️ 参考：<a href="https://deepsource.io/blog/distributed-tracing/#monolithic-observability">https://deepsource.io/blog/distributed-tracing/#monolithic-observability</a></p>
 <p><strong>＊例＊</strong></p>
 <p>（１）<code>a1</code>：クライアントがリクエストを送信する。</p>
 <p>（２）<code>a1</code>：リクエストがロードバランサ－に到達する。</p>
@@ -7448,7 +7448,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

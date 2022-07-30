@@ -6456,14 +6456,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6868,7 +6868,7 @@
 <h1 id="_1">コンテナオーケストレーション＠仮想化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. コンテナオーケストレーションの種類<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">単一ホスト上のコンテナオーケストレーション<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -6894,7 +6894,7 @@
 <p><br></p>
 <h3 id="_4">複数ホストに渡るコンテナオーケストレーション<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>複数ホスト上のコンテナが対象である。どのホスト上のdockerデーモンに対して、どのコンテナに関する操作を行うのかを選択的に命令できる。</p>
-<p>参考：<a href="https://www.techrepublic.com/article/simplifying-the-mystery-when-to-use-docker-docker-compose-and-kubernetes/">https://www.techrepublic.com/article/simplifying-the-mystery-when-to-use-docker-docker-compose-and-kubernetes/</a></p>
+<p>ℹ️ 参考：<a href="https://www.techrepublic.com/article/simplifying-the-mystery-when-to-use-docker-docker-compose-and-kubernetes/">https://www.techrepublic.com/article/simplifying-the-mystery-when-to-use-docker-docker-compose-and-kubernetes/</a></p>
 <table>
 <thead>
 <tr>
@@ -6924,15 +6924,15 @@
 <p>アプリケーションコンテナと同じPod内や、ECSタスク内に、アプリケーションの一部の機能のみを持つコンテナを配置する。</p>
 <h4 id="_7">▼ ロギングコンテナの配置<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>FluentBitコンテナをサイドカーコンテナとして稼働させ、アプリケーションコンテナからログを受信し、他にルーティングする。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit.html</a></p>
 <h4 id="_8">▼ メトリクス収集コンテナの配置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>datadogコンテナをサイドカーコンテナとして稼働させ、アプリケーションコンテナからメトリクスのデータポイントを収集する。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html</a></p>
 <p><br></p>
 <h3 id="_9">アンバサダーパターン<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ アンバサダーパターンとは<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>アプリケーションコンテナと同じPod内や、ECSタスク内に、リバースプロキシコンテナ（Envoy、Linkerd、など）を配置する。サービスメッシュを実現するために採用される。サイドカーパターンではないが、このプロキシコンテナのことをサイドカーコンテナともいう。</p>
-<p>参考：<a href="https://logmi.jp/tech/articles/321841">https://logmi.jp/tech/articles/321841</a></p>
+<p>ℹ️ 参考：<a href="https://logmi.jp/tech/articles/321841">https://logmi.jp/tech/articles/321841</a></p>
 <p><br></p>
 <h3 id="_11">アダプターパターン<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 
@@ -6941,7 +6941,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

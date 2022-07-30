@@ -6708,14 +6708,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7370,7 +7370,7 @@
 <h1 id="datadog">監視＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. モニター<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">モニターとは<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7379,7 +7379,7 @@
 <h3 id="_3">ログモニター<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ ログクエリの動作確認<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>ログモニターのクエリは、ログコンソールと同じ仕組みで機能する。そのため、最初はログコンソールで必要なログを絞り込めるかを確認し、問題なければログモニターのクエリを設定する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/monitor_types/log/#%E6%A4%9C%E7%B4%A2%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B">https://docs.datadoghq.com/monitors/monitor_types/log/#%E6%A4%9C%E7%B4%A2%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/monitor_types/log/#%E6%A4%9C%E7%B4%A2%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B">https://docs.datadoghq.com/monitors/monitor_types/log/#%E6%A4%9C%E7%B4%A2%E3%82%AF%E3%82%A8%E3%83%AA%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B</a></p>
 <h4 id="_5">▼ シングルアラート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <h4 id="_6">▼ マルチアラート<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>ログクエリで<code>group by</code>句を定義すると、選択できるようになる。</p>
@@ -7390,24 +7390,24 @@
 <h3 id="_8">作成条件<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="auto-resolve">▼ Auto resolve<a class="headerlink" href="#auto-resolve" title="Permanent link">&para;</a></h4>
 <p>アラートを通知した後に、一定期間同じエラーイベントが発生しなければ、通知したアラートを取り下げる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/create/configuration/?tab=thresholdalert#auto-resolve">https://docs.datadoghq.com/monitors/create/configuration/?tab=thresholdalert#auto-resolve</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/create/configuration/?tab=thresholdalert#auto-resolve">https://docs.datadoghq.com/monitors/create/configuration/?tab=thresholdalert#auto-resolve</a></p>
 <p><br></p>
 <h2 id="01-03">01-03. アラートの通知内容<a class="headerlink" href="#01-03" title="Permanent link">&para;</a></h2>
 <h3 id="_9">変数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ 変数を使用した重要度レベルの共通化<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>重要度レベルは、アプリケーション間で共通である方が良い。通知内容に変数を使用することにより、異なるアプリケーションに共通のアラート条件を適用できるようになる。そのため、アプリケーション間で重要度レベルを共通化できる。ステータスに応じてアラートするか否かの決め方については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html</a></p>
 <h4 id="_11">▼ テンプレート変数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#template-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#template-variables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#template-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#template-variables</a></p>
 <h4 id="_12">▼ マルチアラート変数<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>クエリの<code>group by</code>句に割り当てたタグやファセットを変数として出力する。マルチアラートモニターを使用する場合のみ、使用できる。</p>
 <h4 id="_13">▼ タグ変数<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>構造化ログの属性値またはタグ値を変数として出力する。<code>{{log.attributes.&lt;キー名&gt;}}</code> または<code>{{log.tags.&lt;キー名&gt;}}</code>として実装する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#matching-attributetag-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#matching-attributetag-variables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#matching-attributetag-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#matching-attributetag-variables</a></p>
 <h4 id="_14">▼ コンポジットモニター変数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#composite-monitor-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#composite-monitor-variables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#composite-monitor-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#composite-monitor-variables</a></p>
 <h4 id="_15">▼ 条件変数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#conditional-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#conditional-variables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#conditional-variables">https://docs.datadoghq.com/monitors/notify/variables/?tab=is_alert#conditional-variables</a></p>
 <p><br></p>
 <h3 id="_16">メッセージの構成<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ タイトル<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
@@ -7418,7 +7418,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_18">▼ 本文<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>通知先とテキストを定義する。マークダウン記法を使用できる。</p>
-<p>参考：<a href="https://www.datadoghq.com/ja/blog/tagging-best-practices/#%e3%83%81%e3%83%bc%e3%83%a0%e7%94%a8%e3%81%ae%e8%87%aa%e5%8b%95%e7%9a%84%e3%81%8b%e3%81%a4%e5%8b%95%e7%9a%84%e3%81%aa%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">https://www.datadoghq.com/ja/blog/tagging-best-practices/#%e3%83%81%e3%83%bc%e3%83%a0%e7%94%a8%e3%81%ae%e8%87%aa%e5%8b%95%e7%9a%84%e3%81%8b%e3%81%a4%e5%8b%95%e7%9a%84%e3%81%aa%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b</a></p>
+<p>ℹ️ 参考：<a href="https://www.datadoghq.com/ja/blog/tagging-best-practices/#%e3%83%81%e3%83%bc%e3%83%a0%e7%94%a8%e3%81%ae%e8%87%aa%e5%8b%95%e7%9a%84%e3%81%8b%e3%81%a4%e5%8b%95%e7%9a%84%e3%81%aa%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">https://www.datadoghq.com/ja/blog/tagging-best-practices/#%e3%83%81%e3%83%bc%e3%83%a0%e7%94%a8%e3%81%ae%e8%87%aa%e5%8b%95%e7%9a%84%e3%81%8b%e3%81%a4%e5%8b%95%e7%9a%84%e3%81%aa%e3%82%a2%e3%83%a9%e3%83%bc%e3%83%88%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7454,7 +7454,7 @@
 <h3 id="_19">ブラウザエラー<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <h4 id="_20">▼ ブラウザエラーとは<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>Datadogで、ブラウザのエラーは以下に分類される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/real_user_monitoring/browser/collecting_browser_errors/?tab=npm">https://docs.datadoghq.com/real_user_monitoring/browser/collecting_browser_errors/?tab=npm</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/real_user_monitoring/browser/collecting_browser_errors/?tab=npm">https://docs.datadoghq.com/real_user_monitoring/browser/collecting_browser_errors/?tab=npm</a></p>
 <table>
 <thead>
 <tr>
@@ -7482,9 +7482,9 @@
 <h3 id="_21">ブラウザテスト<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <h4 id="ip">▼ 送信元IPアドレス<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
 <p>Datadog社の物理サーバーからリクエストが送信される。物理サーバー自体はAWSやAzureによって管理されており、使用する物理サーバーのリージョンを選択できる。リージョンごとに数個ずつ物理サーバーが存在しているため、もし合成監視対象のアプリケーションでIP制限が行われている場合は、これらの物理サーバーのIPからのリクエストを許可する必要がある。</p>
-<p>参考：<a href="https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests">https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests">https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests</a></p>
 <h4 id="_22">▼ ヘッダー<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests#default-headers">https://docs.datadoghq.com/synthetics/guide/identify_synthetics_bots/?tab=singleandmultistepapitests#default-headers</a></li>
 <li><a href="https://docs.datadoghq.com/synthetics/apm/#how-are-traces-linked-to-tests">https://docs.datadoghq.com/synthetics/apm/#how-are-traces-linked-to-tests</a></li>
@@ -7545,7 +7545,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

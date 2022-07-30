@@ -7115,14 +7115,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8178,20 +8178,20 @@
 <h1 id="istio">マニフェストファイル＠Istio<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">コマンドを使用して<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="istioctl">▼ istioctlコマンドを使用して<a class="headerlink" href="#istioctl" title="Permanent link">&para;</a></h4>
 <p>プロファイルを指定し、Istioリソースをapplyする。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile">https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile">https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ istioctl install --set <span class="nv">profile</span><span class="o">=</span>demo
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_3">チャートリポジトリから<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="googleapis">▼ googleapisチャートリポジトリから<a class="headerlink" href="#googleapis" title="Permanent link">&para;</a></h4>
 <p>googleapisチャートリポジトリからapplyする。</p>
-<p>参考：<a href="https://github.com/istio/istio/tree/master/manifests/charts">https://github.com/istio/istio/tree/master/manifests/charts</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/istio/istio/tree/master/manifests/charts">https://github.com/istio/istio/tree/master/manifests/charts</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8210,7 +8210,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="envoy">Envoyのカスタマイズ<a class="headerlink" href="#envoy" title="Permanent link">&para;</a></h3>
 <h4 id="virtualservicedestinationrule">▼ VirtualService、DestinationRuleの定義<a class="headerlink" href="#virtualservicedestinationrule" title="Permanent link">&para;</a></h4>
 <p>VirtualServiceとDestinationRuleの設定値は、istio-proxyコンテナに適用される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://sreake.com/blog/istio/">https://sreake.com/blog/istio/</a></li>
 <li><a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/">https://istio.io/latest/docs/reference/config/networking/virtual-service/</a></li>
@@ -8218,13 +8218,13 @@ $ helm install istio-ingressgateway istio/gateway
 </ul>
 <h4 id="envoyfilter">▼ EnvoyFilterの定義<a class="headerlink" href="#envoyfilter" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナの設定を上書きできる。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/">https://istio.io/latest/docs/reference/config/networking/envoy-filter/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/">https://istio.io/latest/docs/reference/config/networking/envoy-filter/</a></p>
 <h4 id="annotations">▼ annotationsの定義<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h4>
 <p>DeploymentやPodの<code>metadata.anontations</code>キーにて、istio-proxyコンテナごとのオプション値を設定する。Deploymentの場合は、<code>template</code>キーよりも下層の<code>metadata</code>キーを使用することに注意する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <h4 id="istio-proxy">▼ istio-proxyコンテナの定義<a class="headerlink" href="#istio-proxy" title="Permanent link">&para;</a></h4>
 <p>DeploymentやPodでistio-proxyコンテナを定義することにより設定を上書きできる。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#customizing-injection">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#customizing-injection</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#customizing-injection">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#customizing-injection</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8282,7 +8282,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="istio-injection">▼ istio-injection<a class="headerlink" href="#istio-injection" title="Permanent link">&para;</a></h4>
 <p>特定のNamespaceで、Istioとこれのインプレースアップグレードを有効化するか否かを設定する。admission-controllersアドオンのWebhook機能を使用して、サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成するか否かを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8314,7 +8314,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="annotations_1">annotations<a class="headerlink" href="#annotations_1" title="Permanent link">&para;</a></h3>
 <h4 id="annotations_2">▼ annotationsとは<a class="headerlink" href="#annotations_2" title="Permanent link">&para;</a></h4>
 <p>Deploymentの<code>spec.template</code>キーや、Podの<code>metadata</code>キーにて、istio-proxyコンテナごとのオプション値を設定する。Deploymentの<code>metadata</code>キーで定義しないように注意する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <h4 id="istioiorev_1">▼ istio.io/rev<a class="headerlink" href="#istioiorev_1" title="Permanent link">&para;</a></h4>
 <p>IstoOperatorの<code>spec.revision</code>キーと同じ。特定のPodで、Istioとこれのカナリアリリースを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8343,7 +8343,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="proxyistioioconfigconfigpath">▼ proxy.istio.io/config.configPath<a class="headerlink" href="#proxyistioioconfigconfigpath" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナのプロセスの設定値をファイルとして作成するために、これの作成先ディレクトリを設定する。デフォルトでは、<code>./etc/istio/proxy</code>ディレクトリ配下にファイルが作成される。IstioOperatorの<code>spec.meshConfig.defaultConfig</code>キーにデフォルト値を設定できる。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8372,7 +8372,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioinject">▼ sidecar.istio.io/inject<a class="headerlink" href="#sidecaristioioinject" title="Permanent link">&para;</a></h4>
 <p>特定のPodで、Istioとこれのインプレースアップグレードを有効化するか否かを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#controlling-the-injection-policy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8399,7 +8399,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxycpu">▼ sidecar.istio.io/proxyCPU<a class="headerlink" href="#sidecaristioioproxycpu" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナで使用するCPUサイズを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8426,7 +8426,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxyimage">▼ sidecar.istio.io/proxyImage<a class="headerlink" href="#sidecaristioioproxyimage" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナの作成に使用するコンテナイメージを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8453,7 +8453,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecaristioioproxymemory">▼ sidecar.istio.io/proxyMemory<a class="headerlink" href="#sidecaristioioproxymemory" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナで使用するメモリサイズを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/annotations/">https://istio.io/latest/docs/reference/config/annotations/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8483,7 +8483,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specexportto">spec.exportTo<a class="headerlink" href="#specexportto" title="Permanent link">&para;</a></h3>
 <h4 id="exportto">▼ exportToとは<a class="headerlink" href="#exportto" title="Permanent link">&para;</a></h4>
 <p>DestinationRule上のインバウンド通信をルーティングできるNamespaceを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
 <h4 id="_4">▼ <code>*</code>（アスタリスク）<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>全てのNamespaceで使用できるようにする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8523,7 +8523,7 @@ $ helm install istio-ingressgateway istio/gateway
 <p><br></p>
 <h3 id="spechost">spec.host<a class="headerlink" href="#spechost" title="Permanent link">&para;</a></h3>
 <p>インバウンド通信のルーティング元とするServiceの名前を設定する。これにより、Envoyは特定のServiceからのルーティングのみ受信するようになる。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#DestinationRule">https://istio.io/latest/docs/reference/config/networking/destination-rule/#DestinationRule</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#DestinationRule">https://istio.io/latest/docs/reference/config/networking/destination-rule/#DestinationRule</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8542,7 +8542,7 @@ $ helm install istio-ingressgateway istio/gateway
 <p><br></p>
 <h3 id="specsubsets">spec.subsets<a class="headerlink" href="#specsubsets" title="Permanent link">&para;</a></h3>
 <p>VirtualServiceのサブセット名に関して、ルーティング先とするPodの<code>metadata.labels</code>キーを設定する</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#Subset">https://istio.io/latest/docs/reference/config/networking/destination-rule/#Subset</a></li>
 <li><a href="https://blog.1q77.com/2020/03/istio-part3/">https://blog.1q77.com/2020/03/istio-part3/</a></li>
@@ -8579,7 +8579,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="spectrafficpolicy">spec.trafficPolicy<a class="headerlink" href="#spectrafficpolicy" title="Permanent link">&para;</a></h3>
 <h4 id="connectionpool">▼ connectionPool<a class="headerlink" href="#connectionpool" title="Permanent link">&para;</a></h4>
 <p>Podの同時接続数の制限数を設定する。制限を超過した場合、Podへのルーティングが停止し、直近の成功時の処理結果を返信する（サーキットブレイカー）。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/">https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/</a></li>
 <li><a href="https://istio.io/latest/docs/concepts/traffic-management/#circuit-breakers">https://istio.io/latest/docs/concepts/traffic-management/#circuit-breakers</a></li>
@@ -8612,7 +8612,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="loadbalancer">▼ loadBalancer<a class="headerlink" href="#loadbalancer" title="Permanent link">&para;</a></h4>
 <p>Podへのルーティング時に使用するロードバランシングアルゴリズムを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings">https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings">https://istio.io/latest/docs/reference/config/networking/destination-rule/#LoadBalancerSettings</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8633,7 +8633,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="portlevelsettingsloadbalancer">▼ portLevelSettings.loadBalancer<a class="headerlink" href="#portlevelsettingsloadbalancer" title="Permanent link">&para;</a></h4>
 <p>ポート番号別のルーティングのロードバランシングアルゴリズムを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy">https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy">https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8656,7 +8656,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="portlevelsettingsport">▼ portLevelSettings.port<a class="headerlink" href="#portlevelsettingsport" title="Permanent link">&para;</a></h4>
 <p>ポート番号別のルーティングで使用するポート番号を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy">https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy">https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy-PortTrafficPolicy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8679,7 +8679,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="tlsmode">▼ tls.mode<a class="headerlink" href="#tlsmode" title="Permanent link">&para;</a></h4>
 <p>Podへのルーティング時に使用するHTTPSプロトコルのタイプを設定する。HTTPSプロトコルを使用しない場合は、<code>DISABLE</code>とする。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#ClientTLSSettings-TLSmode">https://istio.io/latest/docs/reference/config/networking/destination-rule/#ClientTLSSettings-TLSmode</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/destination-rule/#ClientTLSSettings-TLSmode">https://istio.io/latest/docs/reference/config/networking/destination-rule/#ClientTLSSettings-TLSmode</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8703,7 +8703,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specconfigpatches">spec.configPatches<a class="headerlink" href="#specconfigpatches" title="Permanent link">&para;</a></h3>
 <h4 id="applyto">▼ ApplyTo<a class="headerlink" href="#applyto" title="Permanent link">&para;</a></h4>
 <p>変更を適用する<code>envoy.yaml</code>ファイルの項目を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ApplyTo">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ApplyTo</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ApplyTo">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ApplyTo</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8744,7 +8744,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="listenermatch">▼ ListenerMatch<a class="headerlink" href="#listenermatch" title="Permanent link">&para;</a></h4>
 <p>変更を適用するリスナーを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ListenerMatch">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ListenerMatch</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ListenerMatch">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-ListenerMatch</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8771,7 +8771,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="patchcontext">▼ PatchContext<a class="headerlink" href="#patchcontext" title="Permanent link">&para;</a></h4>
 <p>変更を適用する通信の方向を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-PatchContext">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-PatchContext</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-PatchContext">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-PatchContext</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8818,7 +8818,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">          </span><span class="nt">typed_config</span><span class="p">:</span><span class="w"></span>
 <span class="w">            </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-Patch">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-Patch</a></li>
 <li><a href="https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-Patch-Operation">https://istio.io/latest/docs/reference/config/networking/envoy-filter/#EnvoyFilter-Patch-Operation</a></li>
@@ -8829,7 +8829,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specselector">spec.selector<a class="headerlink" href="#specselector" title="Permanent link">&para;</a></h3>
 <h4 id="selector">▼ selectorとは<a class="headerlink" href="#selector" title="Permanent link">&para;</a></h4>
 <p>Gatewayの適用対象のIngressGatewayに付与された<code>metadata.labels</code>キーを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway">https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway">https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8850,7 +8850,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specservers">spec.servers<a class="headerlink" href="#specservers" title="Permanent link">&para;</a></h3>
 <h4 id="portnumber">▼ port.number<a class="headerlink" href="#portnumber" title="Permanent link">&para;</a></h4>
 <p>ポート名を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8871,7 +8871,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="portnumber_1">▼ port.number<a class="headerlink" href="#portnumber_1" title="Permanent link">&para;</a></h4>
 <p>インバウンド通信を待ち受けるポート番号を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8892,7 +8892,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="portprotocol">▼ port.protocol<a class="headerlink" href="#portprotocol" title="Permanent link">&para;</a></h4>
 <p>受信するインバウンド通信のプロトコルを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8914,7 +8914,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="hosts">▼ hosts<a class="headerlink" href="#hosts" title="Permanent link">&para;</a></h4>
 <p>Gatewayに紐づけれたVirtualServiceのドメイン名を設定する。ワイルドカードを使用できる。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8935,7 +8935,7 @@ $ helm install istio-ingressgateway istio/gateway
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <h4 id="tlsprivatekey">▼ tls.privateKey<a class="headerlink" href="#tlsprivatekey" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8956,7 +8956,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="tlsservercertificate">▼ tls.serverCertificate<a class="headerlink" href="#tlsservercertificate" title="Permanent link">&para;</a></h4>
 <p>受信するインバウンド通信がHTTPS、またはVirtualServiceへのルーティングでHTTPからHTTPSにリダイレクトする場合に、SSL/TLS証明書を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/gateway/#Port">https://istio.io/latest/docs/reference/config/networking/gateway/#Port</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8983,7 +8983,7 @@ $ helm install istio-ingressgateway istio/gateway
 <p>istio-proxyコンテナ間の通信で相互TLSを有効化するか否かを設定する。</p>
 <h4 id="mode">▼ mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h4>
 <p>相互TLSのタイプを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode">https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode">https://istio.io/latest/docs/reference/config/security/peer_authentication/#PeerAuthentication-MutualTLS-Mode</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9008,7 +9008,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specexportto_1">spec.exportTo<a class="headerlink" href="#specexportto_1" title="Permanent link">&para;</a></h3>
 <h4 id="exportto_1">▼ exportToとは<a class="headerlink" href="#exportto_1" title="Permanent link">&para;</a></h4>
 <p>VirtualService上のインバウンド通信をルーティングできるNamespaceを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
 <h4 id="_6">▼ <code>*</code>（アスタリスク）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>全てのNamespaceで使用できるようにする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9049,7 +9049,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="specgateways">spec.gateways<a class="headerlink" href="#specgateways" title="Permanent link">&para;</a></h3>
 <h4 id="gateways">▼ gatewaysとは<a class="headerlink" href="#gateways" title="Permanent link">&para;</a></h4>
 <p>インバウンド通信をいずれのGatewayから受信するかを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService">https://istio.io/latest/docs/reference/config/networking/virtual-service/#VirtualService</a></p>
 <h4 id="_8">▼ <Namespace名>/<Gateway名><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>Gateway名とこれのNamespaceを設定する。VirtualServiceとGatewayが同じNamespaceに属する場合は、Namespaceを省略できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9090,7 +9090,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="spechttp">spec.http<a class="headerlink" href="#spechttp" title="Permanent link">&para;</a></h3>
 <h4 id="http">▼ httpとは<a class="headerlink" href="#http" title="Permanent link">&para;</a></h4>
 <p>HTTP/1.1、HTTP/2、gRPC、のプロトコルによるインバウンド通信をServiceにルーティングする。ルーティング先のServiceを厳格に指定するために、Serviceの<code>spec.ports.appProtocol</code>キーまたはプロトコル名をIstioのルールに沿ったものにする必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute">https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute</a></li>
 <li><a href="https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/#explicit-protocol-selection">https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/#explicit-protocol-selection</a></li>
@@ -9146,7 +9146,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="routedestinationhost">▼ route.destination.host<a class="headerlink" href="#routedestinationhost" title="Permanent link">&para;</a></h4>
 <p>受信するインバウンド通信のルーティング先のドメイン名あるいはService名を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9163,7 +9163,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="routedestinationport">▼ route.destination.port<a class="headerlink" href="#routedestinationport" title="Permanent link">&para;</a></h4>
 <p>受信するインバウンド通信のルーティング先のポート番号を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9190,7 +9190,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="routedestinationsubset">▼ route.destination.subset<a class="headerlink" href="#routedestinationsubset" title="Permanent link">&para;</a></h4>
 <p>Serviceのサブセット名を設定する。DestinationRuleにて、ルーティング先の設定に使用する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#Destination</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9229,7 +9229,7 @@ $ helm install istio-ingressgateway istio/gateway
 </code></pre></div></td></tr></table></div>
 <h4 id="routeweight">▼ route.weight<a class="headerlink" href="#routeweight" title="Permanent link">&para;</a></h4>
 <p>重み付けルーティングの割合を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRouteDestination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRouteDestination</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRouteDestination">https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRouteDestination</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9274,7 +9274,7 @@ $ helm install istio-ingressgateway istio/gateway
 <h3 id="spectcp">spec.tcp<a class="headerlink" href="#spectcp" title="Permanent link">&para;</a></h3>
 <h4 id="tcp">▼ tcpとは<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h4>
 <p>TCP/IPのプロトコルによるインバウンド通信をServiceにルーティングする。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#TCPRoute">https://istio.io/latest/docs/reference/config/networking/virtual-service/#TCPRoute</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/networking/virtual-service/#TCPRoute">https://istio.io/latest/docs/reference/config/networking/virtual-service/#TCPRoute</a></p>
 <h4 id="match_1">▼ match<a class="headerlink" href="#match_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9387,7 +9387,7 @@ $ helm install istio-ingressgateway istio/gateway
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7642,14 +7642,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9238,20 +9238,20 @@
 <h1 id="kubernetes">Kubernetes＠仮想化<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-kubernetes">01. Kubernetesの仕組み<a class="headerlink" href="#01-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/overview/components/">https://kubernetes.io/docs/concepts/overview/components/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/overview/components/">https://kubernetes.io/docs/concepts/overview/components/</a></p>
 <p><img alt="kubernetes_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_architecture.png" /></p>
 <p><br></p>
 <h3 id="iac">IaC<a class="headerlink" href="#iac" title="Permanent link">&para;</a></h3>
 <p>KubernetesのIaCについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html</a></p>
 <p><br></p>
 <h2 id="01-02">01-02. マスターコンポーネント<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="_3">マスターコンポーネントとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://cstoku.dev/posts/2018/k8sdojo-24/">https://cstoku.dev/posts/2018/k8sdojo-24/</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/overview/components/">https://kubernetes.io/docs/concepts/overview/components/</a></li>
@@ -9266,7 +9266,7 @@
 <h3 id="etcd">etcd<a class="headerlink" href="#etcd" title="Permanent link">&para;</a></h3>
 <h4 id="etcd_1">▼ etcdとは<a class="headerlink" href="#etcd_1" title="Permanent link">&para;</a></h4>
 <p>Clusterの様々な設定値を保持し、冗長化されたKubernetesリソース間にこれを共有する。Kubernetesに標準で組み込まれているが、別のOSSである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></li>
 <li><a href="https://landscape.cncf.io/?selected=etcd">https://landscape.cncf.io/?selected=etcd</a></li>
@@ -9279,14 +9279,14 @@
 <p>kubernetesクライアントにkueneretes-APIを公開する。クライアントが<code>kubectl</code>コマンドを実行すると、kube-apiserverがコールされ、コマンドに沿ってKubernetesリソースが操作される。何らかの理由でkubernetesクライアントのリクエストのパラメーターと、kube-apiserverのエンドポイントの仕様が合致しないと、kube-apiserverのバリデーションが失敗し、以下のようなエラーログが返却される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>the server could not find the requested resource
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></li>
 <li><a href="https://vamdemicsystem.black/kubernetes/%E3%80%90macosx%E3%80%91%E3%80%90kubernetes%E3%80%91kubectl-apply%E3%82%92%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8Cfailed-to-download-openapi-the-server-could-not-find-the-requested-resource-falling-bac">https://vamdemicsystem.black/kubernetes/%E3%80%90macosx%E3%80%91%E3%80%90kubernetes%E3%80%91kubectl-apply%E3%82%92%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8Cfailed-to-download-openapi-the-server-could-not-find-the-requested-resource-falling-bac</a></li>
 </ul>
 <h4 id="_4">▼ ヘルスチェックエンドポイント<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>kube-apiserverにはヘルスチェック（<code>healthy</code>、<code>liveness</code>、<code>readiness</code>）のエンドポイントがある。<code>kubectl get</code>コマンドでヘルスチェックを実行できる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/using-api/health-checks/">https://kubernetes.io/docs/reference/using-api/health-checks/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/using-api/health-checks/">https://kubernetes.io/docs/reference/using-api/health-checks/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9335,10 +9335,10 @@ healthz check passed
 <h3 id="kube-controller-manager">kube-controller-manager<a class="headerlink" href="#kube-controller-manager" title="Permanent link">&para;</a></h3>
 <h4 id="kube-controller-manager_1">▼ kube-controller-managerとは<a class="headerlink" href="#kube-controller-manager_1" title="Permanent link">&para;</a></h4>
 <p>kube-controlerを一括で管理する。kube-controlerを使用して、kube-apiserverがKubernetesリソースを操作できるようにする。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <h4 id="kube-controller">▼ kube-controller<a class="headerlink" href="#kube-controller" title="Permanent link">&para;</a></h4>
 <p>各Kubernetesリソースの状態が、マニフェストファイルの宣言的設定通りになるように制御する。Kubernetesリソースごとにkube-controllerが存在している。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/architecture/controller/">https://kubernetes.io/docs/concepts/architecture/controller/</a></li>
 <li><a href="https://github.com/kubernetes/kubernetes/tree/master/pkg/controller">https://github.com/kubernetes/kubernetes/tree/master/pkg/controller</a></li>
@@ -9346,7 +9346,7 @@ healthz check passed
 <h4 id="reconciliation">▼ reconciliation<a class="headerlink" href="#reconciliation" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_reconciliation" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_reconciliation.png" /></p>
 <p>Controllerは、マニフェストファイルで宣言された状態と、実際の状態を比較し、宣言通りに回復する。この比較を繰り返すことにより、自己修復できるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.oreilly.com/library/view/programming-kubernetes/9781492047094/ch01.html">https://www.oreilly.com/library/view/programming-kubernetes/9781492047094/ch01.html</a></li>
 <li><a href="https://speakerdeck.com/yosshi_/korekaraxue-hukubernetesfalsereconciliation-loop?slide=27">https://speakerdeck.com/yosshi_/korekaraxue-hukubernetesfalsereconciliation-loop?slide=27</a></li>
@@ -9355,7 +9355,7 @@ healthz check passed
 <h3 id="kube-scheduler">kube-scheduler<a class="headerlink" href="#kube-scheduler" title="Permanent link">&para;</a></h3>
 <h4 id="kube-scheduler_1">▼ kube-schedulerとは<a class="headerlink" href="#kube-scheduler_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNodeが複数ある場合に、ワーカーNodeとPodのスペックを基に、Podを配置するべきNodeを判定する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <p><img alt="kubernetes_kube-scheduler" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-scheduler.png" /></p>
 <h4 id="kube-scheduler_2">▼ kube-schedulerの仕組み<a class="headerlink" href="#kube-scheduler_2" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_kube-scheduler_flow" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-scheduler_flow.png" /></p>
@@ -9363,7 +9363,7 @@ healthz check passed
 <li>フィルタリングを行う。フィルタリングステップでは、まず全てのワーカーNodeの一覧を取得する。その後、Pod作成の条件を満たすNodeを選定する。</li>
 <li>スコアリングを行う。スコアリングステップでは、まずフィルタリングで選定されたワーカーNodeに点数をつける。その後、点数に基づいて、Pod作成に最も望ましいワーカーNodeを選定する。この時、Podの作成先のNodeグループが設定されていれば、Nodeグループの中から望ましいものを選定する。</li>
 </ol>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/">https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/</a></li>
 <li><a href="https://techblog.ap-com.co.jp/entry/2019/06/20/191459">https://techblog.ap-com.co.jp/entry/2019/06/20/191459</a></li>
@@ -9373,7 +9373,7 @@ healthz check passed
 <h2 id="01-03-node">01-03. Nodeコンポーネント<a class="headerlink" href="#01-03-node" title="Permanent link">&para;</a></h2>
 <h3 id="node">Nodeコンポーネントとは<a class="headerlink" href="#node" title="Permanent link">&para;</a></h3>
 <p>ワーカーNode上で稼働するKubernetesコンポーネントのこと。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://cstoku.dev/posts/2018/k8sdojo-24/">https://cstoku.dev/posts/2018/k8sdojo-24/</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/overview/components/">https://kubernetes.io/docs/concepts/overview/components/</a></li>
@@ -9382,14 +9382,14 @@ healthz check passed
 <h3 id="kubelet">kubelet<a class="headerlink" href="#kubelet" title="Permanent link">&para;</a></h3>
 <h4 id="kubelet_1">▼ kubeletとは<a class="headerlink" href="#kubelet_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode上で稼働し、コンテナランタイムを操作することにより、Podを作成する。また、ワーカーNodeやPodを監視し、メトリクスのデータポイントをkube-apiserverに提供する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <p><img alt="kubernetes_kubelet" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kubelet.png" /></p>
 <p><br></p>
 <h3 id="kube-proxy">kube-proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">&para;</a></h3>
 <h4 id="kube-proxy_1">▼ kube-proxyとは<a class="headerlink" href="#kube-proxy_1" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_kube-proxy" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-proxy.png" /></p>
 <p>iptablesのルールで定義されたルーティング先のIPアドレスを、その時点のPodのものに書き換える。これにより、PodのIPアドレスが変わっても、ワーカーNode外部からのインバウンド通信をPodに継続的にルーティングできる。モードごとに、Podの名前解決の方法が異なる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies">https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies</a></li>
 <li><a href="https://www.imagazine.co.jp/%e5%ae%9f%e8%b7%b5-kubernetes%e3%80%80%e3%80%80%ef%bd%9e%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e7%ae%a1%e7%90%86%e3%81%ae%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%80%e3%83%bc%e3%83%89%e3%83%84%e3%83%bc%e3%83%ab/">https://www.imagazine.co.jp/%e5%ae%9f%e8%b7%b5-kubernetes%e3%80%80%e3%80%80%ef%bd%9e%e3%82%b3%e3%83%b3%e3%83%86%e3%83%8a%e7%ae%a1%e7%90%86%e3%81%ae%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%80%e3%83%bc%e3%83%89%e3%83%84%e3%83%bc%e3%83%ab/</a></li>
@@ -9407,23 +9407,23 @@ healthz check passed
 <tr>
 <td>iptables</td>
 <td><img alt="kubernetes_kube-proxy_iptables" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-proxy_iptables.png" /></td>
-<td>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-iptables">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-iptables</a></td>
+<td>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-iptables">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-iptables</a></td>
 </tr>
 <tr>
 <td>userspace</td>
 <td><img alt="kubernetes_kube-proxy_userspace" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-proxy_userspace.png" /></td>
-<td>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-userspace">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-userspace</a></td>
+<td>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-userspace">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-userspace</a></td>
 </tr>
 <tr>
 <td>ipvs</td>
 <td><img alt="kubernetes_kube-proxy_ipvs" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_kube-proxy_ipvs.png" /></td>
-<td>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs</a></td>
+<td>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs">https://kubernetes.io/docs/concepts/services-networking/service/#proxy-mode-ipvs</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="_5">▼ その他のプロキシー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode外部からのインバウンド通信をPodにルーティングするためのプロキシーが、他にもいくつかある。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/cluster-administration/proxies/">https://kubernetes.io/docs/concepts/cluster-administration/proxies/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/cluster-administration/proxies/">https://kubernetes.io/docs/concepts/cluster-administration/proxies/</a></p>
 <ul>
 <li><code>kubectl proxy</code>コマンド</li>
 <li><code>minikube tunnel</code>コマンド</li>
@@ -9433,19 +9433,19 @@ healthz check passed
 <h3 id="_6">コンテナランタイム（コンテナエンジン）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ コンテナランタイムとは<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>イメージのプル、コンテナ作成削除、コンテナ起動停止、などを行う。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></p>
 <p><br></p>
 <h3 id="node_1">Nodeグループ<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h3>
 <h4 id="node_2">▼ Nodeグループとは<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
 <p>同じ設定値（<code>metadata.labels</code>キー、CPU、メモリ、など）や同じ役割を持ったNodeのグループのこと。KubernetesにはNodeグループというリソースがなく、グループを宣言的に定義することはできないが、クラウドプロバイダーの機能を使用して、Nodeグループを実現できる。基本的には、Nodeグループは冗長化されたNodeで構成されており、IDは違えど、Node名は全て同じである。Nodeグループをターゲットとするロードバランサーでは、Nodeグループ内で冗長化Nodeのいずれかに対してルーティングすることになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/mumoshu/items/9ee00307d6bbab43edb6">https://qiita.com/mumoshu/items/9ee00307d6bbab43edb6</a></li>
 <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler">https://docs.aws.amazon.com/eks/latest/userguide/autoscaling.html#cluster-autoscaler</a></li>
 </ul>
 <h4 id="node_3">▼ Nodeのオートスケーリング<a class="headerlink" href="#node_3" title="Permanent link">&para;</a></h4>
 <p>20220720時点で、KubernetesのAPIにはNodeのオートスケーリング機能はない。ただ、cluster-autoscalerアドオンを使用すると、各クラウドプロバイダーのAPIからNodeのオートスケーリングを実行できるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#cluster-autoscaler">https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler#cluster-autoscaler</a></li>
 <li><a href="https://blog.inductor.me/entry/2021/12/06/165743">https://blog.inductor.me/entry/2021/12/06/165743</a></li>
@@ -9459,40 +9459,40 @@ healthz check passed
 <h2 id="03-kubernetes">03. Kubernetesリソースとオブジェクト<a class="headerlink" href="#03-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="kubernetes_3">Kubernetesリソース<a class="headerlink" href="#kubernetes_3" title="Permanent link">&para;</a></h3>
 <p>Kubernetes上でアプリケーションを稼働させる概念のこと。Kubernetesリソースは、IaCによってマニフェストファイルで定義される。マニフェストファイルについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html</a></p>
 <p><br></p>
 <h3 id="kubernetes_4">Kubernetesオブジェクト<a class="headerlink" href="#kubernetes_4" title="Permanent link">&para;</a></h3>
 <p>マニフェストファイルによって量産されたKubernetesリソースのインスタンスのこと。</p>
-<p>参考：<a href="https://qiita.com/cvusk/items/773e222e0971a5391a51">https://qiita.com/cvusk/items/773e222e0971a5391a51</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/cvusk/items/773e222e0971a5391a51">https://qiita.com/cvusk/items/773e222e0971a5391a51</a></p>
 <p><br></p>
 <h2 id="03-02-workload">03-02. Workloadリソース<a class="headerlink" href="#03-02-workload" title="Permanent link">&para;</a></h2>
 <h3 id="workload">Workloadリソースとは<a class="headerlink" href="#workload" title="Permanent link">&para;</a></h3>
 <p>コンテナの実行に関する機能を提供する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
 <p><br></p>
 <h3 id="daemonset">DaemonSet<a class="headerlink" href="#daemonset" title="Permanent link">&para;</a></h3>
 <h4 id="daemonset_1">▼ DaemonSetとは<a class="headerlink" href="#daemonset_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode上のPodの個数を維持管理する。ただしReplicaSetとは異なり、ワーカーNode内でPodを1つだけ維持管理する。ワーカーNodeで1つだけ稼働させる必要のあるプロセス（FluentBit、datadogエージェント、cAdvisorエージェントなどのデータ収集プロセス）のために使用される。こういったプロセスが稼働するコンテナは、ワーカーNode内の全てのコンテナからデータを収集し、可観測性のためのデータセットを整備する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13611">https://thinkit.co.jp/article/13611</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13611">https://thinkit.co.jp/article/13611</a></p>
 <h4 id="pod">▼ Pod数の固定<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h4>
 <p>DaemonSetは、ワーカーNode内でPodを1つだけ維持管理する。そのため、例えばClusterネットワーク内に複数のNodeが存在していて、いずれかのNodeが停止したとしても、稼働中のNode内のPodを増やすことはない。</p>
 <p><br></p>
 <h3 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h3>
 <h4 id="deployment_1">▼ Deploymentとは<a class="headerlink" href="#deployment_1" title="Permanent link">&para;</a></h4>
 <p>ReplicaSetを操作し、新しいPodをapplyする。また、ワーカーNodeのCPUやメモリの使用率に合わせて、Clusterネットワーク内のPodのレプリカ数を維持管理する。ただしStatefulSetとは異なり、ストレートレス（例：appコンテナ）なコンテナを含むPodを扱う。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</a></li>
 <li><a href="https://sorarinu.dev/2021/08/kubernetes_01/">https://sorarinu.dev/2021/08/kubernetes_01/</a></li>
 </ul>
 <h4 id="pod_1">▼ Pod数の維持<a class="headerlink" href="#pod_1" title="Permanent link">&para;</a></h4>
 <p>Deploymentは、Cluster内のPodのレプリカ数を指定された数だけ維持する。そのため、例えばCluster内に複数のNodeが存在していて、いずれかのNodeが停止した場合、稼働中のNode内でレプリカ数を維持するようにPod数を増やす。</p>
-<p>参考：<a href="https://dr-asa.hatenablog.com/entry/2018/04/02/174006">https://dr-asa.hatenablog.com/entry/2018/04/02/174006</a></p>
+<p>ℹ️ 参考：<a href="https://dr-asa.hatenablog.com/entry/2018/04/02/174006">https://dr-asa.hatenablog.com/entry/2018/04/02/174006</a></p>
 <p><br></p>
 <h3 id="job">Job<a class="headerlink" href="#job" title="Permanent link">&para;</a></h3>
 <h4 id="job_1">▼ Jobとは<a class="headerlink" href="#job_1" title="Permanent link">&para;</a></h4>
 <p>複数のPodを作成（SuccessfulCreate）し、指定された数のPodを正常に終了（SuccessfulDelete）させる。デフォルトでは、ログの確認のためにPodは削除されず、Jobが削除されて初めてPodも削除される。<code>spec.ttlSecondsAfterFinished</code>キーを使用すると、Podのみを自動削除できるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/">https://kubernetes.io/docs/concepts/workloads/controllers/job/</a></li>
 <li><a href="https://qiita.com/MahoTakara/items/82853097a1911671a704">https://qiita.com/MahoTakara/items/82853097a1911671a704</a></li>
@@ -9502,12 +9502,12 @@ healthz check passed
 <h3 id="pod_2">Pod<a class="headerlink" href="#pod_2" title="Permanent link">&para;</a></h3>
 <h4 id="pod_3">▼ Podとは<a class="headerlink" href="#pod_3" title="Permanent link">&para;</a></h4>
 <p>コンテナの最小グループ単位のこと。Podを単位として、コンテナ起動/停止や水平スケールイン/スケールアウトを実行する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/workloads/pods/">https://kubernetes.io/docs/concepts/workloads/pods/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/workloads/pods/">https://kubernetes.io/docs/concepts/workloads/pods/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>PHP-FPMコンテナとNginxコンテナを稼働させる場合、これら同じPodに配置する。</p>
 <p><img alt="kubernetes_pod_php-fpm_nginx" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_pod_php-fpm_nginx.png" /></p>
 <h4 id="_8">▼ リソースの単位<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a></p>
 <table>
 <thead>
 <tr>
@@ -9528,7 +9528,7 @@ healthz check passed
 </table>
 <h4 id="pod_4">▼ Podが終了するまでの流れ<a class="headerlink" href="#pod_4" title="Permanent link">&para;</a></h4>
 <p><img alt="pod_terminating_process" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pod_terminating_process.png" /></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/superbrothers/items/3ac78daba3560ea406b2">https://qiita.com/superbrothers/items/3ac78daba3560ea406b2</a></li>
 <li><a href="https://zenn.dev/hhiroshell/articles/kubernetes-graceful-shutdown-experiment">https://zenn.dev/hhiroshell/articles/kubernetes-graceful-shutdown-experiment</a></li>
@@ -9542,7 +9542,7 @@ healthz check passed
 <h3 id="replicaset">ReplicaSet<a class="headerlink" href="#replicaset" title="Permanent link">&para;</a></h3>
 <h4 id="replicaset_1">▼ ReplicaSetとは<a class="headerlink" href="#replicaset_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode上のPod数を維持管理する。ただしDaemonSetとは異なり、Podを指定した個数に維持管理できる。ワーカーNodeのCPUやメモリの使用率に合わせて、Podを動的に増減させる。ReplicaSetを直接的に操作するのではなく、Deployment使用してこれを行うことが推奨される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#replicaset%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D">https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/#replicaset%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E3%81%8D</a></li>
 <li><a href="https://thinkit.co.jp/article/13611">https://thinkit.co.jp/article/13611</a></li>
@@ -9553,7 +9553,7 @@ healthz check passed
 <p>ReplicaSetを操作し、ワーカーNodeのCPUやメモリの使用率に合わせて、Podの個数を維持管理する。ただしDeploymentとは異なり、ストレートフルなコンテナ（例：dbコンテナ）を含むPodを扱える。Podが削除されてもPersistentVolumeClaimsは削除されないため、新しいPodにも同じPersistentVolumeを継続的にマウントできる。その代わり、StatefulSetの作成後に一部の設定変更が禁止されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>The StatefulSet <span class="s2">&quot;foo-pod&quot;</span> is invalid: spec: Forbidden: updates to statefulset spec <span class="k">for</span> fields other than <span class="s1">&#39;replicas&#39;</span>, <span class="s1">&#39;template&#39;</span>, <span class="s1">&#39;updateStrategy&#39;</span> and <span class="s1">&#39;minReadySeconds&#39;</span> are forbidden
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#%E5%AE%89%E5%AE%9A%E3%81%97%E3%81%9F%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8">https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#%E5%AE%89%E5%AE%9A%E3%81%97%E3%81%9F%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8</a></li>
 <li><a href="https://sorarinu.dev/2021/08/kubernetes_01/">https://sorarinu.dev/2021/08/kubernetes_01/</a></li>
@@ -9562,13 +9562,13 @@ healthz check passed
 <h2 id="03-03-discoverylb">03-03. Discovery&amp;LBリソース<a class="headerlink" href="#03-03-discoverylb" title="Permanent link">&para;</a></h2>
 <h3 id="discoverylb">Discovery&amp;LBリソースとは<a class="headerlink" href="#discoverylb" title="Permanent link">&para;</a></h3>
 <p>ワーカーNode上のコンテナをNode外に公開する機能を提供する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
 <p><br></p>
 <h3 id="ingress">Ingress<a class="headerlink" href="#ingress" title="Permanent link">&para;</a></h3>
 <h4 id="ingress_1">▼ Ingressとは<a class="headerlink" href="#ingress_1" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_ingress" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress.png" /></p>
 <p>IngressコントローラーによってClusterネットワーク外からインバウンド通信を受信し、単一/複数のServiceにルーティングする。Ingressを使用する場合、ルーティング先のIngressは、Cluster IP Serviceとする。NodePort ServiceやLoadBalancer Serviceと同様に、外部からのインバウンド通信を受信する方法の1つである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress">https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress</a></li>
 <li><a href="https://thinkit.co.jp/article/18263">https://thinkit.co.jp/article/18263</a></li>
@@ -9585,25 +9585,25 @@ healthz check passed
 <tbody>
 <tr>
 <td>パス</td>
-<td>パスの値に基づいて、Serviceにルーティングする。<br>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#simple-fanout">https://kubernetes.io/docs/concepts/services-networking/ingress/#simple-fanout</a><br><img alt="kubernetes_ingress_path" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress_path.png" /></td>
+<td>パスの値に基づいて、Serviceにルーティングする。<br>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#simple-fanout">https://kubernetes.io/docs/concepts/services-networking/ingress/#simple-fanout</a><br><img alt="kubernetes_ingress_path" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress_path.png" /></td>
 </tr>
 <tr>
 <td><code>Host</code>ヘッダー</td>
-<td><code>Host</code>ヘッダーの値に基づいて、Serviceにルーティングする。<br>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#name-based-virtual-hosting">https://kubernetes.io/docs/concepts/services-networking/ingress/#name-based-virtual-hosting</a><br><img alt="kubernetes_ingress_host" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress_host.png" /></td>
+<td><code>Host</code>ヘッダーの値に基づいて、Serviceにルーティングする。<br>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#name-based-virtual-hosting">https://kubernetes.io/docs/concepts/services-networking/ingress/#name-based-virtual-hosting</a><br><img alt="kubernetes_ingress_host" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress_host.png" /></td>
 </tr>
 </tbody>
 </table>
 <h4 id="ingress_2">▼ Ingressコントローラー<a class="headerlink" href="#ingress_2" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_ingress-controller" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_ingress-controller.png" /></p>
 <p>Ingressの設定に基づいてClusterネットワーク外からのインバウンド通信を受信し、単一/複数のIngressにルーティングする。Kubernetesの周辺ツール（Prometheus、AlertManager、Grafana、ArgoCD）のダッシュボードを複数人で共有して閲覧する場合には、何らかのアクセス制限を付与したIngressを作成することになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developers.freee.co.jp/entry/kubernetes-ingress-controller">https://developers.freee.co.jp/entry/kubernetes-ingress-controller</a></li>
 <li><a href="https://www.containiq.com/post/kubernetes-ingress">https://www.containiq.com/post/kubernetes-ingress</a></li>
 <li><a href="https://www.mirantis.com/blog/your-app-deserves-more-than-kubernetes-ingress-kubernetes-ingress-vs-istio-gateway-webinar/">https://www.mirantis.com/blog/your-app-deserves-more-than-kubernetes-ingress-kubernetes-ingress-vs-istio-gateway-webinar/</a></li>
 </ul>
 <h4 id="ingress_3">▼ Ingressコントローラーの種類<a class="headerlink" href="#ingress_3" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/</a></li>
 <li><a href="https://www.nginx.com/blog/how-do-i-choose-api-gateway-vs-ingress-controller-vs-service-mesh/">https://www.nginx.com/blog/how-do-i-choose-api-gateway-vs-ingress-controller-vs-service-mesh/</a></li>
@@ -9653,10 +9653,10 @@ healthz check passed
 <h3 id="service">Service<a class="headerlink" href="#service" title="Permanent link">&para;</a></h3>
 <h4 id="service_1">▼ Serviceとは<a class="headerlink" href="#service_1" title="Permanent link">&para;</a></h4>
 <p>Serviceタイプごとに、特定のネットワーク範囲にPodを公開する。マイクロサービスアーキテクチャのコンポーネントである『Service』とは区別する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</a></p>
 <h4 id="clusterip-service">▼ ClusterIP Service<a class="headerlink" href="#clusterip-service" title="Permanent link">&para;</a></h4>
 <p>ClusterネットワークのIPアドレスを返却し、Serviceに対するインバウンド通信をPodにルーティングする。Clusterネットワーク内からのみアクセスできる。ClusterネットワークのIPアドレスは、Podの<code>/etc/resolv.conf</code>ファイルに記載されている。Pod内に複数のコンテナがある場合、各コンテナに同じ内容の<code>/etc/resolv.conf</code>ファイルが配置される。デフォルトのタイプである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/suiudou/articles/aa2194b6f53f8f">https://zenn.dev/suiudou/articles/aa2194b6f53f8f</a></li>
 <li><a href="https://thinkit.co.jp/article/18263">https://thinkit.co.jp/article/18263</a></li>
@@ -9677,24 +9677,24 @@ options ndots:5
 </code></pre></div></td></tr></table></div>
 <h4 id="loadbalancer-service">▼ LoadBalancer Service<a class="headerlink" href="#loadbalancer-service" title="Permanent link">&para;</a></h4>
 <p>ロードバランサーのみからアクセスできるIPアドレスを返却し、Serviceに対するインバウンド通信をPodにルーティングする。Clusterネットワーク外/内の両方からアクセスできる。本番環境をクラウドインフラ上で稼働させ、AWS ALBからインバウンド通信を受信する場合に使用する。ロードバランサーから各Serviceにインバウンド通信をルーティングすることになるため、通信数が増え、金銭的負担が大きい。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0">https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0</a></li>
 <li><a href="https://thinkit.co.jp/article/18263">https://thinkit.co.jp/article/18263</a></li>
 </ul>
 <h4 id="nodeport-service">▼ NodePort Service<a class="headerlink" href="#nodeport-service" title="Permanent link">&para;</a></h4>
 <p>NodeのIPアドレスを返却し、Serviceの指定したポートに対するインバウンド通信をPodにルーティングする。Clusterネットワーク外/内の両方からアクセスできる。1つのポートから1つのServiceにしかルーティングできない。ServiceNodeのIPアドレスは別に確認する必要があり、NodeのIPアドレスが変わるたびに、これに合わせて他の設定を変更しなければならず、本番環境には向いていない。AWSのAurora RDSのClusterエンドポイントには、NodePortの概念が取り入れられている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0">https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0</a></li>
 <li><a href="https://thinkit.co.jp/article/18263">https://thinkit.co.jp/article/18263</a></li>
 </ul>
 <h4 id="externalname-service">▼ ExternalName Service<a class="headerlink" href="#externalname-service" title="Permanent link">&para;</a></h4>
 <p>PodのCNAMEを返却し、Serviceに対するインバウンド通信をPodにルーティングする。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13739">https://thinkit.co.jp/article/13739</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13739">https://thinkit.co.jp/article/13739</a></p>
 <h4 id="headless-service">▼ Headless Service<a class="headerlink" href="#headless-service" title="Permanent link">&para;</a></h4>
 <p>PodのIPアドレスを返却し、Serviceに対するインバウンド通信をPodにルーティングする。Podが複数ある場合は、DNSラウンドロビンのルールでIPアドレスが返却されるため、負荷の高いPodにルーティングされる可能性があり、負荷分散には向いていない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thinkit.co.jp/article/13739">https://thinkit.co.jp/article/13739</a></li>
 <li><a href="https://hyoublog.com/2020/05/22/kubernetes-headless-service/">https://hyoublog.com/2020/05/22/kubernetes-headless-service/</a></li>
@@ -9718,7 +9718,7 @@ options ndots:5
 &lt;Service名&gt;.&lt;Namespace名&gt;.svc.cluster.local. <span class="m">30</span> IN A       <span class="m">10</span>.8.2.55
 </code></pre></div></td></tr></table></div>
 <p>また、Headless ServiceからStatefulSetにルーティングする場合は、唯一、Podで直接的に名前解決できるようになる。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13739">https://thinkit.co.jp/article/13739</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13739">https://thinkit.co.jp/article/13739</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9737,7 +9737,7 @@ options ndots:5
 <h2 id="03-04-configstorage">03-04. Config&amp;Storageリソース<a class="headerlink" href="#03-04-configstorage" title="Permanent link">&para;</a></h2>
 <h3 id="configstorage">Config&amp;Storageリソースとは<a class="headerlink" href="#configstorage" title="Permanent link">&para;</a></h3>
 <p>Kubernetesリソースの設定データ、機密データ、ボリュームに関する機能を提供する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
 <p><br></p>
 <h3 id="configmap">ConfigMap<a class="headerlink" href="#configmap" title="Permanent link">&para;</a></h3>
 <h4 id="configmap_1">▼ ConfigMapとは<a class="headerlink" href="#configmap_1" title="Permanent link">&para;</a></h4>
@@ -9752,17 +9752,17 @@ options ndots:5
 <p>セキュリティに関するデータを管理し、コンテナに選択的に提供する。</p>
 <h4 id="_10">▼ コンテナの環境変数として<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>機密性の高い値を暗号化した状態で管理し、復号化した上で、環境変数としてPodに出力する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables">https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables">https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-environment-variables</a></p>
 <p><br></p>
 <h2 id="03-05-cluster">03-05. Clusterリソース<a class="headerlink" href="#03-05-cluster" title="Permanent link">&para;</a></h2>
 <h3 id="cluster">Clusterリソースとは<a class="headerlink" href="#cluster" title="Permanent link">&para;</a></h3>
 <p>セキュリティやクォーターに関する機能を提供する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
 <p><br></p>
 <h3 id="account">Account<a class="headerlink" href="#account" title="Permanent link">&para;</a></h3>
 <h4 id="account_1">▼ Accountとは<a class="headerlink" href="#account_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesに関する実行ユーザーに認証認可を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/">https://kubernetes.io/docs/reference/access-authn-authz/authentication/</a></li>
 <li><a href="https://tech-blog.cloud-config.jp/2021-12-04-kubernetes-authentication/">https://tech-blog.cloud-config.jp/2021-12-04-kubernetes-authentication/</a></li>
@@ -9792,7 +9792,7 @@ options ndots:5
 <h3 id="networkpolicy">NetworkPolicy<a class="headerlink" href="#networkpolicy" title="Permanent link">&para;</a></h3>
 <h4 id="networkpolicy_1">▼ NetworkPolicyとは<a class="headerlink" href="#networkpolicy_1" title="Permanent link">&para;</a></h4>
 <p>Pod間で通信する場合のインバウンド/アウトバウンド通信の送受信ルールを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.amazon.co.jp/dp/B08FZX8PYW">https://www.amazon.co.jp/dp/B08FZX8PYW</a></li>
 <li><a href="https://qiita.com/dingtianhongjie/items/983417de88db2553f0c2">https://qiita.com/dingtianhongjie/items/983417de88db2553f0c2</a></li>
@@ -9805,7 +9805,7 @@ options ndots:5
 <h3 id="node_4">Node<a class="headerlink" href="#node_4" title="Permanent link">&para;</a></h3>
 <h4 id="nodekubernetes">▼ マスターNode（kubernetesマスター）<a class="headerlink" href="#nodekubernetes" title="Permanent link">&para;</a></h4>
 <p>kubernetesマスターともいう。マスターコンポーネントが稼働する。クライアントが<code>kubectl</code>コマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC">https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC</a></li>
 <li><a href="https://medium.com/easyread/step-by-step-introduction-to-basic-concept-of-kubernetes-e20383bdd118">https://medium.com/easyread/step-by-step-introduction-to-basic-concept-of-kubernetes-e20383bdd118</a></li>
@@ -9813,7 +9813,7 @@ options ndots:5
 </ul>
 <h4 id="node_5">▼ ワーカーNode<a class="headerlink" href="#node_5" title="Permanent link">&para;</a></h4>
 <p>ノードコンポーネントが稼働する。Kubernetesの実行時に自動的に作成される。もし手動で作成する場合は、<code>kubectl</code>コマンドで<code>--register-node=false</code>とする必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/architecture/nodes/">https://kubernetes.io/docs/concepts/architecture/nodes/</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/architecture/nodes/#manual-node-administration">https://kubernetes.io/docs/concepts/architecture/nodes/#manual-node-administration</a></li>
@@ -9822,7 +9822,7 @@ options ndots:5
 <h3 id="persistentvolume">PersistentVolume<a class="headerlink" href="#persistentvolume" title="Permanent link">&para;</a></h3>
 <h4 id="persistentvolume_1">▼ PersistentVolumeとは<a class="headerlink" href="#persistentvolume_1" title="Permanent link">&para;</a></h4>
 <p>新しく作成したストレージ領域をPluggableなボリュームとし、これをコンテナにボリュームマウントする。Node上のPod間でボリュームを共有できる。PodがPersistentVolumeを使用するためには、PersistentVolumeClaimにPersistentVolumeを要求させておき、PodでこのPersistentVolumeClaimを指定する必要がある。アプリケーションのディレクトリ名を変更した場合は、PersistentVolumeを再作成しないと、アプリケーション内のディレクトリの読み出しでパスを解決できない場合がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thinkit.co.jp/article/14195">https://thinkit.co.jp/article/14195</a></li>
 </ul>
@@ -9833,14 +9833,14 @@ options ndots:5
 </ul>
 <h4 id="hostpath">▼ HostPath（本番環境で非推奨）<a class="headerlink" href="#hostpath" title="Permanent link">&para;</a></h4>
 <p>Node上に新しく作成したストレージ領域をボリュームとし、これをコンテナにバインドマウントする。機能としては、Volumeの一種であるHostPathと同じである。マルチNodeには対応していないため、本番環境では非推奨である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#types-of-persistent-volumes</a></li>
 <li><a href="https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/">https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/</a></li>
 </ul>
 <h4 id="local">▼ Local（本番環境で推奨）<a class="headerlink" href="#local" title="Permanent link">&para;</a></h4>
 <p>Node上に新しく作成したストレージ領域をボリュームとし、これをコンテナにバインドマウントする。マルチNodeに対応している（明言されているわけではく、HostPathとの明確な違いがよくわからない）。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/volumes/#local">https://kubernetes.io/docs/concepts/storage/volumes/#local</a></li>
 <li><a href="https://qiita.com/sotoiwa/items/09d2f43a35025e7be782#local">https://qiita.com/sotoiwa/items/09d2f43a35025e7be782#local</a></li>
@@ -9849,7 +9849,7 @@ options ndots:5
 <h3 id="roleclusterrole">Role、ClusterRole<a class="headerlink" href="#roleclusterrole" title="Permanent link">&para;</a></h3>
 <h4 id="roleclusterrole_1">▼ Role、ClusterRoleとは<a class="headerlink" href="#roleclusterrole_1" title="Permanent link">&para;</a></h4>
 <p>認可スコープを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole</a></p>
 <table>
 <thead>
 <tr>
@@ -9875,7 +9875,7 @@ options ndots:5
 <h3 id="rolebindingclusterrolebinding">RoleBinding、ClusterRoleBinding<a class="headerlink" href="#rolebindingclusterrolebinding" title="Permanent link">&para;</a></h3>
 <h4 id="rolebindingclusterrolebinding_1">▼ RoleBinding、ClusterRoleBindingとは<a class="headerlink" href="#rolebindingclusterrolebinding_1" title="Permanent link">&para;</a></h4>
 <p>定義された認可スコープをAccountに紐づける。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
 <table>
 <thead>
 <tr>
@@ -9901,7 +9901,7 @@ options ndots:5
 <h3 id="volume">Volume<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h3>
 <h4 id="volume_1">▼ Volumeとは<a class="headerlink" href="#volume_1" title="Permanent link">&para;</a></h4>
 <p>既存（ワーカーNode、NFS、iSCSI、Cephなど）のボリュームをそのままKubernetesのボリュームとして使用する。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/14195">https://thinkit.co.jp/article/14195</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/14195">https://thinkit.co.jp/article/14195</a></p>
 <p>Dockerのボリュームとは独立した機能であることに注意する。</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume">https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume</a></li>
@@ -9941,9 +9941,9 @@ tmpfs           <span class="m">3</span>.9G     <span class="m">0</span>  <span 
 </code></pre></div></td></tr></table></div>
 <h4 id="hostpath_1">▼ HostPath（本番環境で非推奨）<a class="headerlink" href="#hostpath_1" title="Permanent link">&para;</a></h4>
 <p>Node上の既存のストレージ領域をボリュームとし、コンテナにバインドマウントする。バインドマウントは、NodeとPod内コンテナ間で実行され、同一Node上のPod間でこのボリュームを共有できる。</p>
-<p>参考：<a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></p>
 <p>HostPathは非推奨である。</p>
-<p>参考：<a href="https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/">https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/</a></p>
+<p>ℹ️ 参考：<a href="https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/">https://thenewstack.io/10-kubernetes-best-practices-you-can-easily-apply-to-your-clusters/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10018,23 +10018,23 @@ $ docker inspect &lt;コンテナID&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="emptydir">▼ EmptyDir<a class="headerlink" href="#emptydir" title="Permanent link">&para;</a></h4>
 <p>Podの既存のストレージ領域をボリュームとし、コンテナにボリュームマウントする。そのため、Podが削除されると、このボリュームも同時に削除される。Node上のPod間でボリュームを共有できない。</p>
-<p>参考：<a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></p>
 <h4 id="_11">▼ 外部ボリューム<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>クラウドプロバイダーやNFSから提供されるストレージ領域を使用したボリュームとし、コンテナにマウントする。</p>
-<p>参考：<a href="https://zenn.dev/suiudou/articles/31ab107f3c2de6#%E2%96%A0kubernetes%E3%81%AE%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0">https://zenn.dev/suiudou/articles/31ab107f3c2de6#%E2%96%A0kubernetes%E3%81%AE%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/suiudou/articles/31ab107f3c2de6#%E2%96%A0kubernetes%E3%81%AE%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0">https://zenn.dev/suiudou/articles/31ab107f3c2de6#%E2%96%A0kubernetes%E3%81%AE%E3%81%84%E3%82%8D%E3%82%93%E3%81%AA%E3%83%9C%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%A0</a></p>
 <p><br></p>
 <h2 id="03-06-metadata">03-06. Metadataリソース<a class="headerlink" href="#03-06-metadata" title="Permanent link">&para;</a></h2>
 <h3 id="metadata">Metadataリソースとは<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/13542">https://thinkit.co.jp/article/13542</a></p>
 <p><br></p>
 <h3 id="horizontalpodautoscaler">HorizontalPodAutoscaler<a class="headerlink" href="#horizontalpodautoscaler" title="Permanent link">&para;</a></h3>
 <h4 id="horizontalpodautoscaler_1">▼ HorizontalPodAutoscalerとは<a class="headerlink" href="#horizontalpodautoscaler_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesリソースの水平スケーリングを定義する。Metric serverから取得したKubernetesリソースのメトリクス値のうち、指定したメトリクス値とターゲット値の比較に基づいて、Podをスケールイン/スケールアウトさせる。</p>
-<p>参考：<a href="https://www.stacksimplify.com/aws-eks/aws-eks-kubernetes-autoscaling/learn-to-master-horizontal-pod-autoscaling-on-aws-eks/">https://www.stacksimplify.com/aws-eks/aws-eks-kubernetes-autoscaling/learn-to-master-horizontal-pod-autoscaling-on-aws-eks/</a></p>
+<p>ℹ️ 参考：<a href="https://www.stacksimplify.com/aws-eks/aws-eks-kubernetes-autoscaling/learn-to-master-horizontal-pod-autoscaling-on-aws-eks/">https://www.stacksimplify.com/aws-eks/aws-eks-kubernetes-autoscaling/learn-to-master-horizontal-pod-autoscaling-on-aws-eks/</a></p>
 <p><img alt="horizontal-pod-autoscaler" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/horizontal-pod-autoscaler.png" /></p>
 <h4 id="pod_5">▼ 最大Pod数の求め方<a class="headerlink" href="#pod_5" title="Permanent link">&para;</a></h4>
 <p>オートスケーリング時の現在のPod数は、次の計算式で算出される。算出結果に基づいて、スケールアウト/スケールインが実行される。</p>
-<p>参考：<a href="https://speakerdeck.com/oracle4engineer/kubernetes-autoscale-deep-dive?slide=14">https://speakerdeck.com/oracle4engineer/kubernetes-autoscale-deep-dive?slide=14</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/oracle4engineer/kubernetes-autoscale-deep-dive?slide=14">https://speakerdeck.com/oracle4engineer/kubernetes-autoscale-deep-dive?slide=14</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="err">必要な最大</span><span class="n">Pod</span><span class="err">数</span><span class="p">)</span><span class="w"></span>
 <span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="err">現在の</span><span class="n">Pod</span><span class="err">数</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">(</span><span class="err">現在の</span><span class="n">Pod</span><span class="err">の</span><span class="n">CPU</span><span class="err">平均使用率</span><span class="p">)</span><span class="w"> </span><span class="err">÷</span><span class="w"> </span><span class="p">(</span><span class="err">現在の</span><span class="n">Pod</span><span class="err">の</span><span class="n">CPU</span><span class="err">使用率のターゲット値</span><span class="p">)</span><span class="w"></span>
@@ -10047,7 +10047,7 @@ $ docker inspect &lt;コンテナID&gt;
 <h2 id="03-07">03-07. カスタムリソース<a class="headerlink" href="#03-07" title="Permanent link">&para;</a></h2>
 <h3 id="_12">カスタムリソースとは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>Kubernetesに標準で備わっていないKubernetesリソースを提供する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/">https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/</a></li>
 <li><a href="https://www.amazon.co.jp/dp/B08FZX8PYW">https://www.amazon.co.jp/dp/B08FZX8PYW</a></li>
@@ -10058,40 +10058,40 @@ $ docker inspect &lt;コンテナID&gt;
 <p>外部Secretストアのデータを参照するための機能を提供する。</p>
 <h4 id="_13">▼ セットアップ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>プロバイダーが提供するCSIドライバーを、Kubernetes上にインストールする必要がある。</p>
-<p>参考：<a href="https://secrets-store-csi-driver.sigs.k8s.io/getting-started/installation.html">https://secrets-store-csi-driver.sigs.k8s.io/getting-started/installation.html</a></p>
+<p>ℹ️ 参考：<a href="https://secrets-store-csi-driver.sigs.k8s.io/getting-started/installation.html">https://secrets-store-csi-driver.sigs.k8s.io/getting-started/installation.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm install -n kube-system csi-secrets-store secrets-store-csi-driver/secrets-store-csi-driver
 </code></pre></div></td></tr></table></div>
 <h4 id="csi">▼ CSIドライバー<a class="headerlink" href="#csi" title="Permanent link">&para;</a></h4>
 <p>SecretProviderClassで定義されたプロバイダーのAPIと通信し、外部Secretのデータを参照する。その後、tmpfとしてVolumeに書き込む。</p>
-<p>参考：<a href="https://secrets-store-csi-driver.sigs.k8s.io/concepts.html">https://secrets-store-csi-driver.sigs.k8s.io/concepts.html</a></p>
+<p>ℹ️ 参考：<a href="https://secrets-store-csi-driver.sigs.k8s.io/concepts.html">https://secrets-store-csi-driver.sigs.k8s.io/concepts.html</a></p>
 <p><img alt="secrets-store-csi-volume" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/secrets-store-csi-volume.png" /></p>
 <h4 id="csi-volume">▼ CSI Volume<a class="headerlink" href="#csi-volume" title="Permanent link">&para;</a></h4>
 <p>CSIの仕様によって標準化された外部ボリューム。プロバイダー上に新しく作成したストレージ領域をボリュームとし、これをコンテナにバインドマウントする。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/17635">https://thinkit.co.jp/article/17635</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/17635">https://thinkit.co.jp/article/17635</a></p>
 <p><br></p>
 <h2 id="04-kubernetes">04. Kubernetesネットワーク<a class="headerlink" href="#04-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="node_6">Nodeネットワーク<a class="headerlink" href="#node_6" title="Permanent link">&para;</a></h3>
 <h4 id="node_7">▼ Nodeネットワークとは<a class="headerlink" href="#node_7" title="Permanent link">&para;</a></h4>
 <p>同じサブネットマスク内にあるNodeのNIC間を接続するネットワーク。</p>
-<p>参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=10</a></p>
 <p><img alt="kubernetes_node-network" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_node-network.png" /></p>
 <p><br></p>
 <h3 id="cluster_1">Clusterネットワーク<a class="headerlink" href="#cluster_1" title="Permanent link">&para;</a></h3>
 <h4 id="cluster_2">▼ Clusterネットワークとは<a class="headerlink" href="#cluster_2" title="Permanent link">&para;</a></h4>
 <p>同じClusterネットワーク内にあるPodの仮想NIC（veth）間を接続するネットワーク。</p>
-<p>参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=11">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=11</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=11">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=11</a></p>
 <p><img alt="kubernetes_cluster-network" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_cluster-network.png" /></p>
 <p><br></p>
 <h3 id="service_2">Serviceネットワーク<a class="headerlink" href="#service_2" title="Permanent link">&para;</a></h3>
 <h4 id="service_3">▼ Serviceネットワークとは<a class="headerlink" href="#service_3" title="Permanent link">&para;</a></h4>
 <p>Podのアウトバウンド通信に割り当てられたホスト名を認識し、そのホスト名を持つServiceまでアウトバウンド通信を送信する。</p>
-<p>参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=13">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=13</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=13">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=13</a></p>
 <p><img alt="kubernetes_service-network" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_service-network.png" /></p>
 <p><br></p>
 <h2 id="04-02-pod">04-02. 同じPod内のコンテナ間通信<a class="headerlink" href="#04-02-pod" title="Permanent link">&para;</a></h2>
 <h3 id="_14">通信経路<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>同じPod内のコンテナ間で通信するため、Pod内のネットワークのみを経由する。Podごとにネットワークインターフェースが付与され、またIPアドレスが割り当てられる。</p>
-<p>参考：<a href="https://www.tutorialworks.com/kubernetes-pod-communication/#how-do-containers-in-the-same-pod-communicate">https://www.tutorialworks.com/kubernetes-pod-communication/#how-do-containers-in-the-same-pod-communicate</a></p>
+<p>ℹ️ 参考：<a href="https://www.tutorialworks.com/kubernetes-pod-communication/#how-do-containers-in-the-same-pod-communicate">https://www.tutorialworks.com/kubernetes-pod-communication/#how-do-containers-in-the-same-pod-communicate</a></p>
 <p><br></p>
 <h3 id="_15">デバッグ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ 疎通確認<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
@@ -10108,7 +10108,7 @@ $ kubectl <span class="nb">exec</span> -it &lt;Pod名&gt; -c &lt;コンテナ名
 <h2 id="04-03-pod">04-03. 異なるPodのコンテナ間通信<a class="headerlink" href="#04-03-pod" title="Permanent link">&para;</a></h2>
 <h3 id="_17">通信経路<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>Podの稼働するNodeが同じ/異なるで経由するネットワークが異なる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/">https://kubernetes.io/docs/concepts/cluster-administration/networking/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/">https://kubernetes.io/docs/concepts/cluster-administration/networking/</a></p>
 <table>
 <thead>
 <tr>
@@ -10140,7 +10140,7 @@ $ kubectl <span class="nb">exec</span> -it &lt;Pod名&gt; -c &lt;コンテナ名
 <span class="o">[</span>root@&lt;Pod名&gt;:~<span class="o">]</span> $ curl -X GET http://&lt;Serviceのドメイン名やIPアドレス&gt;
 </code></pre></div></td></tr></table></div>
 <p>一方で、<code>kubectl exec</code>コマンドが運用的に禁止されているような状況もある。そのような状況下で、シングルNodeの場合は、<code>kubectl run</code>コマンドで、<code>--rm</code>オプションを有効化しつつ、Clusterネットワーク内にcurlコマンドによるデバッグ用のPodを一時的に新規作成する。マルチNodeの場合は、（たぶん）名前が一番昇順のNode上でPodが作成されてしまい、Nodeを指定できない。そのため、代わりに<code>kubectl debug</code>コマンドを使用する。ただし、<code>kubectl debug</code>コマンドで作成されたPodは、使用後に手動で削除する必要がある。デバッグの実行環境として、<code>yauritux/busybox-curl</code>イメージは、軽量かつ<code>curl</code>コマンドと<code>nslookup</code>コマンドの両方が使用できるのでおすすめである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/tkusumi/items/a62c209972bd0d4913fc">https://qiita.com/tkusumi/items/a62c209972bd0d4913fc</a></li>
 <li><a href="https://scrapbox.io/jiroshin-knowledge/kubernetes_cluster%E3%81%ABcurl%E3%81%AEPod%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%99%E3%82%8B%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">https://scrapbox.io/jiroshin-knowledge/kubernetes_cluster%E3%81%ABcurl%E3%81%AEPod%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%99%E3%82%8B%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89</a></li>
@@ -10217,7 +10217,7 @@ $ kubectl get pod &lt;Pod名&gt; -o yaml <span class="p">|</span> grep container
 <h3 id="_21">環境変数を使用する場合<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <h4 id="_22">▼ 環境変数の設定<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>Serviceにリクエストを送信するために必要な情報を、環境変数として出力する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services">https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services">https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>foo-app-serviceというServiceを作成した場合の環境変数を示す。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -10244,7 +10244,7 @@ $ kubectl get pod &lt;Pod名&gt; -o yaml <span class="p">|</span> grep container
 <h3 id="dns">権威DNSサーバーを使用する場合<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
 <h4 id="dns_1">▼ 権威DNSサーバーの設定<a class="headerlink" href="#dns_1" title="Permanent link">&para;</a></h4>
 <p>Cluster内に権威DNSサーバーとしてのKubernetesリソース（CoreDNS、kube-dns、HashiCorp Consul、など）を配置し、Serviceの名前解決を行う。Podを作成すると、kubeletによって、Pod内コンテナの<code>/etc/resolv.conf</code>ファイルに権威DNSサーバーのIPアドレスが自動的に設定される。Pod内コンテナが他のコンテナにアウトバウンド通信を送信する場合、自身の<code>/etc/resolv.conf</code>ファイルを確認し、権威DNSサーバーによって宛先のコンテナの名前解決を行う。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.mosuke.tech/entry/2020/09/09/kuubernetes-dns-test/">https://blog.mosuke.tech/entry/2020/09/09/kuubernetes-dns-test/</a></li>
 <li><a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=42">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=42</a></li>
@@ -10281,7 +10281,7 @@ kube-dns   ClusterIP   <span class="m">10</span>.96.0.10   &lt;none&gt;        <
 </code></pre></div></td></tr></table></div>
 <h4 id="_23">▼ レコードタイプとドメイン名の関係<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>Clusterネットワーク内の全てのServiceにDNS名が割り当てられている。レコードタイプごとに、DNS名が異なる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services">https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#services</a></li>
 <li><a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=44">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=44</a></li>
@@ -10339,7 +10339,7 @@ Address:  <span class="m">10</span>.105.157.184
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Pod内コンテナから正引きの名前解決を行う。</span>
 <span class="o">[</span>root@&lt;Pod名&gt;:~<span class="o">]</span> $ nslookup &lt;Service名&gt;.&lt;Namespace名&gt;
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.mosuke.tech/entry/2020/09/09/kuubernetes-dns-test/">https://blog.mosuke.tech/entry/2020/09/09/kuubernetes-dns-test/</a></li>
 <li><a href="https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/#does-the-service-work-by-dns-name">https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/#does-the-service-work-by-dns-name</a></li>
@@ -10351,7 +10351,7 @@ Address:  <span class="m">10</span>.105.157.184
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7270,14 +7270,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8496,33 +8496,33 @@
 <h1 id="argocd">マニフェストファイル＠ArgoCD<a class="headerlink" href="#argocd" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-argocd">01. ArgoCDの仕組み<a class="headerlink" href="#01-argocd" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>ArgoCDサーバー、リポジトリサーバー、アプリケーションコントローラー、RedisDexサーバー、から構成される。</p>
-<p>参考：<a href="https://blog.searce.com/argocd-gitops-continuous-delivery-approach-on-google-kubernetes-engine-2a6b3f6813c0">https://blog.searce.com/argocd-gitops-continuous-delivery-approach-on-google-kubernetes-engine-2a6b3f6813c0</a></p>
+<p>ℹ️ 参考：<a href="https://blog.searce.com/argocd-gitops-continuous-delivery-approach-on-google-kubernetes-engine-2a6b3f6813c0">https://blog.searce.com/argocd-gitops-continuous-delivery-approach-on-google-kubernetes-engine-2a6b3f6813c0</a></p>
 <p><img alt="argocd_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd_architecture.png" /></p>
 <p><br></p>
 <h3 id="api">APIサーバー<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
 <h4 id="api_1">▼ APIサーバーとは<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h4>
 <p><code>argocd</code>コマンドのクライアントやダッシュボードからリクエストを受信し、ArgoCDのApplicationを操作する。また、リポジトリの監視やKubernetes Clusterへのapplyに必要なクレデンシャル情報を管理し、連携可能な認証認可ツールに認証認可処理を委譲する。</p>
-<p>参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
+<p>ℹ️ 参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
 <p><br></p>
 <h3 id="_3">リポジトリサーバー<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ リポジトリサーバーとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>監視対象リポジトリを<code>/tmp</code>ディレクトリ以下にクローンする。もし、HelmやKustomizeを使用している場合は、これらを実行し、サーバー内にマニフェストファイルを作成する。</p>
-<p>参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
+<p>ℹ️ 参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
 <p><br></p>
 <h3 id="application">Applicationコントローラー<a class="headerlink" href="#application" title="Permanent link">&para;</a></h3>
 <h4 id="application_1">▼ Applicationコントローラーとは<a class="headerlink" href="#application_1" title="Permanent link">&para;</a></h4>
 <p>kube-controllerとして機能し、Applicationの状態がマニフェストファイルの宣言的設定通りになるように制御する。リポジトリサーバーからマニフェストファイルを取得し、指定されたKubernetes Clusterにこれをapplyする。Applicationが管理するKubernetesリソースのマニフェストファイルと、監視対象リポジトリのマニフェストファイルの間に、差分がないか否かを継続的に監視する。この時、監視対象リポジトリを定期的にポーリングし、もしリポジトリ側に更新があった場合に、再同期を試みる。</p>
-<p>参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
+<p>ℹ️ 参考：<a href="https://weseek.co.jp/tech/95/#i-7">https://weseek.co.jp/tech/95/#i-7</a></p>
 <p><br></p>
 <h3 id="redis">Redisサーバー<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h3>
 <h4 id="redis_1">▼ Redisサーバーとは<a class="headerlink" href="#redis_1" title="Permanent link">&para;</a></h4>
 <p>リポジトリサーバー内のマニフェストファイルのキャッシュを作成し、これを管理する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://weseek.co.jp/tech/95/">https://weseek.co.jp/tech/95/</a></li>
 <li><a href="https://blog.manabusakai.com/2021/04/argo-cd-cache/">https://blog.manabusakai.com/2021/04/argo-cd-cache/</a></li>
@@ -8531,7 +8531,7 @@
 <h3 id="dex">Dexサーバー<a class="headerlink" href="#dex" title="Permanent link">&para;</a></h3>
 <h4 id="dex_1">▼ Dexサーバーとは<a class="headerlink" href="#dex_1" title="Permanent link">&para;</a></h4>
 <p>ArgoCDに認証機能を付与し、権限を持つユーザー以外のリクエストを拒否する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://weseek.co.jp/tech/95/">https://weseek.co.jp/tech/95/</a></li>
 <li><a href="https://qiita.com/superbrothers/items/1822dbc5fc94e1ab5295">https://qiita.com/superbrothers/items/1822dbc5fc94e1ab5295</a></li>
@@ -8543,7 +8543,7 @@
 <h4 id="_6">▼ 基本構成<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p><img alt="argocd" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd.png" /></p>
 <p>指定したブランチのコードの状態を監視する。プッシュによってコードが変更された場合に、Kubernetesの状態をこれに同期する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.vpantry.net/2021/01/cicd-2/">https://blog.vpantry.net/2021/01/cicd-2/</a></li>
 <li><a href="https://qiita.com/kanazawa1226/items/bb760bddf8bd594379cb">https://qiita.com/kanazawa1226/items/bb760bddf8bd594379cb</a></li>
@@ -8551,7 +8551,7 @@
 </ul>
 <h4 id="_7">▼ 検証<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>Applicationさえ削除しなければ、Kubernetesリソースをダッシュボード上からマニフェストを修正したり、Kubernetesリソースを削除しても、これが差分として認識される。そのため、同期すれば元の状態に戻る。こういった点でも、ArgoCDを入れる方が、Kubernetesの修正の検証がしやすい。注意点として、マニフェストファイルに何かを追加するような変更は差分として認識されないため、同期しても元に戻らない。</p>
-<p>参考：<a href="https://qiita.com/masahata/items/e22b0d30b77251b941d8">https://qiita.com/masahata/items/e22b0d30b77251b941d8</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/masahata/items/e22b0d30b77251b941d8">https://qiita.com/masahata/items/e22b0d30b77251b941d8</a></p>
 <p><br></p>
 <h3 id="_8">アプリケーションリポジトリ起点<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ テンプレート構成管理ツールを使用しない場合<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
@@ -8562,7 +8562,7 @@
 <p>（４）プルリクエストを自動作成する。</p>
 <p>（５）マニフェストリポジトリで、リリース責任者がプルリクエストをmainブランチにマージする。</p>
 <p>（６）ArgoCDがマニフェストファイルの変更を検知し、Kubernetesにプルする。</p>
-<p>参考：<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part1.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part1.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part1.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part1.html</a></p>
 <h4 id="_10">▼ テンプレート構成管理ツールを使用した場合<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p><img alt="argocd_eks_helm" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd_eks_helm.png" /></p>
 <p>（１）同じ</p>
@@ -8571,7 +8571,7 @@
 <p>（４）同じ</p>
 <p>（５）同じ</p>
 <p>（６）ArgoCDがマニフェストファイルの変更を検知し、Kubernetesにプルする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://medium.com/riskified-technology/how-to-build-a-ci-cd-process-that-deploys-on-kubernetes-and-focuses-on-developer-independence-7dc4c20984a">https://medium.com/riskified-technology/how-to-build-a-ci-cd-process-that-deploys-on-kubernetes-and-focuses-on-developer-independence-7dc4c20984a</a></li>
 <li><a href="https://docs.microsoft.com/ja-jp/azure/architecture/microservices/ci-cd-kubernetes">https://docs.microsoft.com/ja-jp/azure/architecture/microservices/ci-cd-kubernetes</a></li>
@@ -8579,7 +8579,7 @@
 <p><br></p>
 <h3 id="_11">マニフェストリポジトリ起点<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p><img alt="argocd_gcp" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd_gcp.png" /></p>
-<p>参考：<a href="https://qiita.com/Nishi53454367/items/4a4716dfbeebd70295d1">https://qiita.com/Nishi53454367/items/4a4716dfbeebd70295d1</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/Nishi53454367/items/4a4716dfbeebd70295d1">https://qiita.com/Nishi53454367/items/4a4716dfbeebd70295d1</a></p>
 <p>（１）マニフェストリポジトリで、開発者がマニフェストファイルの変更をmainブランチにマージする。</p>
 <p>（２）マニフェストリポジトリで、リリース責任者がマニフェストファイルやチャートの変更をmainブランチにマージする。</p>
 <p>（３）ArgoCDがマニフェストファイルの変更を検知し、Kubernetesにプルする。</p>
@@ -8588,13 +8588,13 @@
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_13">インストール<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ 共通の手順<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <p>（１）ローカルマシンから本番環境にArgoCDをインストールする場合、<code>kubectl</code>コマンドのコンテキストを間違える可能性がある。そのため、<code>kubectl</code>コマンド専用の踏み台サーバーを用意してもよい。EKSのコンテキストを作成し、<code>kubectl</code>コマンドの宛先を、EKSのkube-apiserverに変更する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$ aws eks update-kubeconfig --region ap-northeast-1 --name foo-eks-cluster
 $ kubectl config use-context &lt;ClusterのARN&gt;
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html">https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html</a></li>
 <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html">https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html</a></li>
@@ -8605,7 +8605,7 @@ $ kubectl config use-context &lt;ClusterのARN&gt;
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl create namespace argocd
 </code></pre></div></td></tr></table></div>
 <p>（３）ArgoCDのマニフェストファイルを指定し、Kubernetes上にArgoCDをapplyする。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">https://argo-cd.readthedocs.io/en/stable/getting_started/</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/getting_started/">https://argo-cd.readthedocs.io/en/stable/getting_started/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8633,7 +8633,7 @@ $ kubectl get all -n argocd
 </code></pre></div></td></tr></table></div>
 <h4 id="argocd_1">▼ argocdコマンドを使用して<a class="headerlink" href="#argocd_1" title="Permanent link">&para;</a></h4>
 <p>（７）<code>argocd</code>コマンドをインストールする。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/cli_installation/">https://argo-cd.readthedocs.io/en/stable/cli_installation/</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/cli_installation/">https://argo-cd.readthedocs.io/en/stable/cli_installation/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$ curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 $ chmod +x /usr/local/bin/argocd
@@ -8650,7 +8650,7 @@ Password: *****
 <span class="s1">&#39;admin:login&#39;</span> logged <span class="k">in</span> successfully
 </code></pre></div></td></tr></table></div>
 <p>（９）ArgoCDのアプリケーションを作成する。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/release-1.8/user-guide/commands/argocd_app_create/">https://argo-cd.readthedocs.io/en/release-1.8/user-guide/commands/argocd_app_create/</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/release-1.8/user-guide/commands/argocd_app_create/">https://argo-cd.readthedocs.io/en/release-1.8/user-guide/commands/argocd_app_create/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8676,7 +8676,7 @@ Password: *****
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ argocd app <span class="nb">set</span> guestbook --sync-policy automated
 </code></pre></div></td></tr></table></div>
 <p>（１２）クラウドプロバイダーのコンテナイメージレジストリやチャートレジストリを使用している場合は、ログインが必要になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://medium.com/@Technorite">https://medium.com/@Technorite</a></li>
 <li><a href="https://stackoverflow.com/questions/66851895/how-to-deploy-helm-charts-which-are-stored-in-aws-ecr-using-argocd">https://stackoverflow.com/questions/66851895/how-to-deploy-helm-charts-which-are-stored-in-aws-ecr-using-argocd</a></li>
@@ -8741,7 +8741,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="_16">アンインストール<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="argocd_2">▼ argocdコマンドを使用して<a class="headerlink" href="#argocd_2" title="Permanent link">&para;</a></h4>
 <p>ArgoCDのApplicationを削除する。<code>--cascade</code>キーを有効化すると、ArgoCDのApplication自体と、Application配下のリソースの両方を連鎖的に削除できる。反対に無効化すると、Applicationのみを単体で削除する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/faq/">https://argo-cd.readthedocs.io/en/stable/faq/</a></li>
 <li><a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></li>
@@ -8750,7 +8750,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </code></pre></div></td></tr></table></div>
 <h4 id="kubectl">▼ kubectlコマンドを使用して<a class="headerlink" href="#kubectl" title="Permanent link">&para;</a></h4>
 <p>ArgoCDのApplicationを削除する。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#deletion-using-kubectl">https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#deletion-using-kubectl</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#deletion-using-kubectl">https://argo-cd.readthedocs.io/en/stable/user-guide/app_deletion/#deletion-using-kubectl</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl delete app &lt;ArgoCDのアプリケーション名&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8760,7 +8760,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <p>（例）Skaffold</p>
 <h4 id="_18">▼ ローカルマシンを監視<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>ローカルマシンのディレクトリをリポジトリとして監視する。あらかじめ、リポジトリの自動プルの設定を無効化しておく必要がある。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/issues/839#issuecomment-452270836">https://github.com/argoproj/argo-cd/issues/839#issuecomment-452270836</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/issues/839#issuecomment-452270836">https://github.com/argoproj/argo-cd/issues/839#issuecomment-452270836</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> $ argocd app sync &lt;ArgoCDのアプリケーション名&gt; --local<span class="o">=</span>&lt;ディレクトリへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8768,17 +8768,17 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="application_2">Applicationとは<a class="headerlink" href="#application_2" title="Permanent link">&para;</a></h3>
 <h4 id="kuberneres">▼ Kuberneresリソースの監視<a class="headerlink" href="#kuberneres" title="Permanent link">&para;</a></h4>
 <p>Kubernetesのカスタムリソースから定義される。監視対象のKubernetesリソースやカスタムリソースを設定する。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml">https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml">https://github.com/argoproj/argo-cd/blob/master/manifests/crds/application-crd.yaml</a></p>
 <h4 id="_19">▼ 自己監視<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>Application自体もカスタムリソースなため、ApplicationがApplication自身のソースの変更を監視し、同期できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#manage-argo-cd-using-argo-cd">https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#manage-argo-cd-using-argo-cd</a></li>
 <li><a href="https://github.com/argoproj/argo-cd/discussions/7908">https://github.com/argoproj/argo-cd/discussions/7908</a></li>
 <li><a href="https://speakerdeck.com/sshota0809/argocd-teshi-xian-suru-kubernetes-niokeruxuan-yan-de-risosuteriharifalseshi-jian?slide=49">https://speakerdeck.com/sshota0809/argocd-teshi-xian-suru-kubernetes-niokeruxuan-yan-de-risosuteriharifalseshi-jian?slide=49</a></li>
 </ul>
 <h4 id="_20">▼ 操作の種類<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/core_concepts/">https://argo-cd.readthedocs.io/en/stable/core_concepts/</a></li>
 <li><a href="https://github.com/argoproj/argo-cd/discussions/8260">https://github.com/argoproj/argo-cd/discussions/8260</a></li>
@@ -8805,7 +8805,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </tr>
 <tr>
 <td>Restart</td>
-<td>すでにapply済みのKubernetesリソース内のコンテナを再デプロイする。コンテナを再起動するだけで、Kubernetesリソースをapplyすることはない。<br>参考：<a href="https://twitter.com/reoring/status/1476046977599406087">https://twitter.com/reoring/status/1476046977599406087</a></td>
+<td>すでにapply済みのKubernetesリソース内のコンテナを再デプロイする。コンテナを再起動するだけで、Kubernetesリソースをapplyすることはない。<br>ℹ️ 参考：<a href="https://twitter.com/reoring/status/1476046977599406087">https://twitter.com/reoring/status/1476046977599406087</a></td>
 </tr>
 </tbody>
 </table>
@@ -8813,7 +8813,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="specignoredifferences">spec.ignoreDifferences<a class="headerlink" href="#specignoredifferences" title="Permanent link">&para;</a></h3>
 <h4 id="ignoredifferences">▼ ignoreDifferencesとは<a class="headerlink" href="#ignoredifferences" title="Permanent link">&para;</a></h4>
 <p>特定のKubernetesリソースの特定の設定値の差分を無視する。同期後にKubernetesリソースが変化するような仕様（動的な設定値、Jobによる変更、mutating-admission-webhook機能、マニフェストファイルの自動整形、など）の場合に使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration">https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration</a></li>
 <li><a href="https://blog.framinal.life/entry/2021/10/04/224722">https://blog.framinal.life/entry/2021/10/04/224722</a></li>
@@ -8858,7 +8858,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="specproject">spec.project<a class="headerlink" href="#specproject" title="Permanent link">&para;</a></h3>
 <h4 id="project">▼ projectとは<a class="headerlink" href="#project" title="Permanent link">&para;</a></h4>
 <p>アプリケーションのプロジェクト名を設定する。プロジェクト名は『<code>default</code>』は必ず作成する必要がある。<code>default</code>以外のプロジェクトは、実行環境別に作成すると良い。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8877,7 +8877,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="specsource">spec.source<a class="headerlink" href="#specsource" title="Permanent link">&para;</a></h3>
 <h4 id="source">▼ sourceとは<a class="headerlink" href="#source" title="Permanent link">&para;</a></h4>
 <p>マニフェストリポジトリ、チャートレジストリ、の変更を監視し、これらからプルしたマニフェストファイルをapplyする。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
 <table>
 <thead>
 <tr>
@@ -8908,7 +8908,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="specsource_1">spec.source（マニフェストリポジトリの場合）<a class="headerlink" href="#specsource_1" title="Permanent link">&para;</a></h3>
 <h4 id="directory">▼ directory<a class="headerlink" href="#directory" title="Permanent link">&para;</a></h4>
 <p>監視対象のマニフェストリポジトリのディレクトリ構造に関して設定する。<code>path</code>キーで指定したディレクトリの構造に合わせて、特定のマニフェストファイルを指定できるようにする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L78">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L78</a></li>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tool_detection/">https://argo-cd.readthedocs.io/en/stable/user-guide/tool_detection/</a></li>
@@ -8975,7 +8975,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </code></pre></div></td></tr></table></div>
 <h4 id="repourl">▼ repoURL<a class="headerlink" href="#repourl" title="Permanent link">&para;</a></h4>
 <p>監視対象のマニフェストリポジトリのURLを設定する。パブリックリポジトリであれば認証が不要であるが、プライベートリポジトリであればこれが必要になる。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8994,7 +8994,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </code></pre></div></td></tr></table></div>
 <h4 id="targetrevision">▼ targetRevision<a class="headerlink" href="#targetrevision" title="Permanent link">&para;</a></h4>
 <p>監視対象のマニフェストリポジトリのブランチやバージョンタグを設定する。各実行環境に、実行環境に対応したブランチを指定するマニフェストファイルをapplyしておくとよい。これにより、各実行環境内のApplicationは特定のブランチのみを監視するようになる。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9043,7 +9043,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <h3 id="specsource_2">spec.source（チャートレジストリ内リポジトリの場合）<a class="headerlink" href="#specsource_2" title="Permanent link">&para;</a></h3>
 <h4 id="chart">▼ chart<a class="headerlink" href="#chart" title="Permanent link">&para;</a></h4>
 <p>監視対象のチャートレジストリ内のリポジトリにあるチャート名を設定する。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9062,7 +9062,7 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </code></pre></div></td></tr></table></div>
 <h4 id="helm">▼ helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h4>
 <p>helmコマンドに相当するパラメーターを設定する。Helmfileのように、helmコマンドを宣言的に実行できる。注意点として、</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L25">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L25</a></li>
 <li><a href="https://mixi-developers.mixi.co.jp/argocd-with-helm-fee954d1003c">https://mixi-developers.mixi.co.jp/argocd-with-helm-fee954d1003c</a></li>
@@ -9142,9 +9142,9 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <span class="w">        </span><span class="no">baz: BAZ</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ArgoCDはHelmの<code>v2</code>と<code>v3</code>の両方を保持している。リリースするチャートの<code>apiVersion</code>キーの値が<code>v1</code>であれば、ArgoCDはHelmの<code>v2</code>を使用し、一方で<code>apiVersion</code>キーの値が<code>v2</code>であれば、Helmの<code>v3</code>を使用するようになっている。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/issues/2383#issuecomment-584441681">https://github.com/argoproj/argo-cd/issues/2383#issuecomment-584441681</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/issues/2383#issuecomment-584441681">https://github.com/argoproj/argo-cd/issues/2383#issuecomment-584441681</a></p>
 <p>内部的に<code>helm template</code>コマンドと<code>kubectl apply</code>コマンドを組み合わせて実行しているため、<code>helm list</code>コマンドでリリース履歴として確認できない。その代わりに、<code>argocd app history</code>コマンドで確認できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/helm/#random-data">https://argo-cd.readthedocs.io/en/stable/user-guide/helm/#random-data</a></li>
 <li><a href="https://qiita.com/kyohmizu/items/118bf654d0288da2294e">https://qiita.com/kyohmizu/items/118bf654d0288da2294e</a></li>
@@ -9162,7 +9162,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="repourl_1">▼ repoURL<a class="headerlink" href="#repourl_1" title="Permanent link">&para;</a></h4>
 <p>監視対象のチャートレジストリ内のリポジトリのURLを設定する。パブリックリポジトリであれば認証が不要であるが、プライベートリポジトリであればこれが必要になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications</a></li>
 <li><a href="https://cloud.redhat.com/blog/continuous-delivery-with-helm-and-argo-cd">https://cloud.redhat.com/blog/continuous-delivery-with-helm-and-argo-cd</a></li>
@@ -9185,7 +9185,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="targetrevision_1">▼ targetRevision<a class="headerlink" href="#targetrevision_1" title="Permanent link">&para;</a></h4>
 <p>監視対象のチャートレジストリ内のリポジトリのブランチ（GitHubをチャートリポジトリとしている場合のみ）やバージョンタグを設定する。チャートリポジトリとして、GitHubやArtifactHubを指定できる。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git">https://argo-cd.readthedocs.io/en/stable/user-guide/tracking_strategies/#git</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9210,7 +9210,7 @@ ID  DATE                           REVISION
 <p>チャートレジストリと同じ。</p>
 <h4 id="repourl_2">▼ repoURL<a class="headerlink" href="#repourl_2" title="Permanent link">&para;</a></h4>
 <p>監視対象のOCIレジストリ内のリポジトリのURLを設定する。パブリックリポジトリであれば認証が不要であるが、プライベートリポジトリであればこれが必要になる。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/68219458/connecting-an-app-in-argocd-to-use-a-helm-oci-repository">https://stackoverflow.com/questions/68219458/connecting-an-app-in-argocd-to-use-a-helm-oci-repository</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/68219458/connecting-an-app-in-argocd-to-use-a-helm-oci-repository">https://stackoverflow.com/questions/68219458/connecting-an-app-in-argocd-to-use-a-helm-oci-repository</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9249,7 +9249,7 @@ ID  DATE                           REVISION
 <h3 id="specdestination">spec.destination<a class="headerlink" href="#specdestination" title="Permanent link">&para;</a></h3>
 <h4 id="destination">▼ destinationとは<a class="headerlink" href="#destination" title="Permanent link">&para;</a></h4>
 <p>apply先のKubernetesを設定する。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
 <h4 id="namespace">▼ namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h4>
 <p>apply先のNamespaceを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9310,14 +9310,14 @@ ID  DATE                           REVISION
 <h3 id="specsyncpolicy">spec.syncPolicy<a class="headerlink" href="#specsyncpolicy" title="Permanent link">&para;</a></h3>
 <h4 id="syncpolicy">▼ syncPolicyとは<a class="headerlink" href="#syncpolicy" title="Permanent link">&para;</a></h4>
 <p>GitOpsでのリポジトリ（GitHub、Helm）とKubernetesの間の自動同期を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy</a></li>
 <li><a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L113">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml#L113</a></li>
 </ul>
 <h4 id="automated">▼ automated<a class="headerlink" href="#automated" title="Permanent link">&para;</a></h4>
 <p>GitOpsでのリポジトリ（GitHub、Helm）とKubernetesの間の自動同期を有効化するか否かを設定する。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automated-sync-policy</a></p>
 <table>
 <thead>
 <tr>
@@ -9330,17 +9330,17 @@ ID  DATE                           REVISION
 <tr>
 <td><code>prune</code></td>
 <td>リソースをapplyしつつ、不要になったリソースを自動削除するか否かを設定する。デフォルトでは、GtiHubリポジトリでマニフェストファイルが削除されても、ArgoCDはリソースを自動的に削除しない。</td>
-<td>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning</a></td>
+<td>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning</a></td>
 </tr>
 <tr>
 <td><code>selfHeal</code></td>
 <td>Kubernetes側に変更があった場合、リポジトリ（GitHub、Helm）の状態に戻すようにする。デフォルトでは、Kubernetes側のリソースを変更しても、リポジトリの状態に戻すための自動同期は実行されない。</td>
-<td>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-self-healing">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-self-healing</a></td>
+<td>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-self-healing">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-self-healing</a></td>
 </tr>
 <tr>
 <td><code>allowEmpty</code></td>
 <td>Prune中に、Application配下にリソースを検出できなくなると、Pruneは失敗するようになっている。Applicationが空（配下にリソースがない）状態を許可するか否かを設定する。</td>
-<td>参考：<br>・<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18</a><br>・<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18">https://argo-cd.readthedocs.io/en/stable/user-guide/auto_sync/#automatic-pruning-with-allow-empty-v18</a><br>・<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></td>
 </tr>
 </tbody>
 </table>
@@ -9368,7 +9368,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="syncoptions">▼ syncOptions<a class="headerlink" href="#syncoptions" title="Permanent link">&para;</a></h4>
 <p>GtiOpsでのマニフェストファイルの同期処理の詳細を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#sync-options">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#sync-options</a></li>
 <li><a href="https://dev.classmethod.jp/articles/argocd-for-external-cluster/">https://dev.classmethod.jp/articles/argocd-for-external-cluster/</a></li>
@@ -9395,12 +9395,12 @@ ID  DATE                           REVISION
 <tr>
 <td><code>PrunePropagationPolicy</code></td>
 <td>同期後に不要になったKubernetesリソースの削除方法を設定する。削除方法は、Kubernetesでのリソースの削除の仕組みと同様に、バックグラウンド、フォアグラウンド、オルファン、がある。</td>
-<td>参考：<br>・<a href="https://www.devopsschool.com/blog/sync-options-in-argo-cd/">https://www.devopsschool.com/blog/sync-options-in-argo-cd/</a><br>・<a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://www.devopsschool.com/blog/sync-options-in-argo-cd/">https://www.devopsschool.com/blog/sync-options-in-argo-cd/</a><br>・<a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></td>
 </tr>
 <tr>
 <td><code>PruneLast</code></td>
 <td>全てのKubernetesが正常になった後で、Pruneを実行する。</td>
-<td>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last</a></td>
+<td>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last</a></td>
 </tr>
 </tbody>
 </table>
@@ -9429,7 +9429,7 @@ ID  DATE                           REVISION
 <h3 id="metadata">metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h3>
 <h4 id="generatename">▼ generateName<a class="headerlink" href="#generatename" title="Permanent link">&para;</a></h4>
 <p>同期フェーズフック名を設定する。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#generate-name">https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#generate-name</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#generate-name">https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#generate-name</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9442,7 +9442,7 @@ ID  DATE                           REVISION
 <h3 id="metadataannotations">metadata.annotations<a class="headerlink" href="#metadataannotations" title="Permanent link">&para;</a></h3>
 <h4 id="argocdargoprojiohook">▼ argocd.argoproj.io/hook<a class="headerlink" href="#argocdargoprojiohook" title="Permanent link">&para;</a></h4>
 <p>フックを設定する同期フェーズ（同期前、同期時、同期スキップ時、同期後、同期失敗時）を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#usage">https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#usage</a></li>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/#sync-phases-and-waves">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/#sync-phases-and-waves</a></li>
@@ -9459,7 +9459,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="argocdargoprojiosync-wave">▼ argocd.argoproj.io/sync-wave<a class="headerlink" href="#argocdargoprojiosync-wave" title="Permanent link">&para;</a></h4>
 <p>同じ同期フェーズに実行するように設定したフックが複数ある場合に、これらの実行の優先度付けを設定する。正負の数字を設定でき、数字が小さい方が優先される。優先度が同じ場合、ArgoCDがよしなに順番を決めてしまう。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://weseek.co.jp/tech/95/">https://weseek.co.jp/tech/95/</a></li>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/#how-do-i-configure-waves">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/#how-do-i-configure-waves</a></li>
@@ -9505,7 +9505,7 @@ ID  DATE                           REVISION
 <h3 id="specanalysis">spec.analysis<a class="headerlink" href="#specanalysis" title="Permanent link">&para;</a></h3>
 <h4 id="analysis">▼ analysisとは<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h4>
 <p>Progressive Deliveryを使用する場合に、詳細を設定する。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml">https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml</a></p>
 <h4 id="successfulrunhistorylimit">▼ successfulRunHistoryLimit<a class="headerlink" href="#successfulrunhistorylimit" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9543,7 +9543,7 @@ ID  DATE                           REVISION
 <h4 id="bluegreen">▼ blueGreen<a class="headerlink" href="#bluegreen" title="Permanent link">&para;</a></h4>
 <p><img alt="argocd_blue-green-deployment" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd_blue-green-deployment.png" /></p>
 <p>ブルー/グリーンデプロイメントを使用して、新しいPodをリリースする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argoproj.github.io/argo-rollouts/features/bluegreen/">https://argoproj.github.io/argo-rollouts/features/bluegreen/</a></li>
 <li><a href="https://korattablog.com/2020/06/19/argocd%E3%81%AB%E3%82%88%E3%82%8Bbluegreen%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%82%92%E8%A9%A6%E3%81%99/">https://korattablog.com/2020/06/19/argocd%E3%81%AB%E3%82%88%E3%82%8Bbluegreen%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%82%92%E8%A9%A6%E3%81%99/</a></li>
@@ -9609,7 +9609,7 @@ ID  DATE                           REVISION
 <h4 id="canary">▼ canary<a class="headerlink" href="#canary" title="Permanent link">&para;</a></h4>
 <p><img alt="argocd_canary-release" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/argocd_canary-release.png" /></p>
 <p>カナリアリリースを使用して、新しいPodをリリースする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argoproj.github.io/argo-rollouts/features/canary/">https://argoproj.github.io/argo-rollouts/features/canary/</a></li>
 <li><a href="https://korattablog.com/2020/06/19/argocd%E3%81%AEcanary-deployment%E3%82%92%E8%A9%A6%E3%81%99/">https://korattablog.com/2020/06/19/argocd%E3%81%AEcanary-deployment%E3%82%92%E8%A9%A6%E3%81%99/</a></li>
@@ -9655,10 +9655,10 @@ ID  DATE                           REVISION
 <h3 id="metadatalabels">metadata.labels<a class="headerlink" href="#metadatalabels" title="Permanent link">&para;</a></h3>
 <h4 id="argocdargoprojiosecret-type">▼ argocd.argoproj.io/secret-typeとは<a class="headerlink" href="#argocdargoprojiosecret-type" title="Permanent link">&para;</a></h4>
 <p>設定値は<code>repository</code>とする。監視対象のマニフェストリポジトリ、チャートレジストリ、OCIレジストリの認証情報を設定する。</p>
-<p>参考：<a href="https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60">https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60">https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60</a></p>
 <h4 id="_21">▼ マニフェストリポジトリの場合<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>マニフェストリポジトリの認証情報を設定する。マニフェストレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9719,7 +9719,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="_22">▼ チャートレジストリの場合<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>チャートレジストリの認証情報を設定する。チャートレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#helm-chart-repositories">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#helm-chart-repositories</a></li>
 <li><a href="https://github.com/argoproj/argo-cd/issues/7121#issuecomment-921165708">https://github.com/argoproj/argo-cd/issues/7121#issuecomment-921165708</a></li>
@@ -9780,7 +9780,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="oci">▼ OCIレジストリの場合<a class="headerlink" href="#oci" title="Permanent link">&para;</a></h4>
 <p>OCIレジストリの認証情報を設定する。OCIプロトコルの有効化（<code>enableOCI</code>キー）が必要であるが、内部的にOCIプロトコルが<code>repoURL</code>キーの最初に追記されるため、プロトコルの設定は不要である。チャートレジストリと同様にして、OCIレジストリごとに別々のSecretで認証情報を設定する必要がある。ただし、1つのOCIレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/argoproj/argo-cd/blob/master/util/helm/cmd.go#L262">https://github.com/argoproj/argo-cd/blob/master/util/helm/cmd.go#L262</a></li>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#helm-chart-repositories">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#helm-chart-repositories</a></li>
@@ -9845,7 +9845,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">enableOCI</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>AWS ECRのように認証情報に有効期限がある場合は、認証情報を定期的に書き換えられるようにする。例えば、aws-ecr-credentialチャートを使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/moriryota62/items/7d94027881d6fe9a478d">https://qiita.com/moriryota62/items/7d94027881d6fe9a478d</a></li>
 <li><a href="https://stackoverflow.com/questions/66851895/how-to-deploy-helm-charts-which-are-stored-in-aws-ecr-using-argocd">https://stackoverflow.com/questions/66851895/how-to-deploy-helm-charts-which-are-stored-in-aws-ecr-using-argocd</a></li>
@@ -9856,7 +9856,7 @@ ID  DATE                           REVISION
 <h3 id="specentrypoint">spec.entrypoint<a class="headerlink" href="#specentrypoint" title="Permanent link">&para;</a></h3>
 <h4 id="entrypoint">▼ entrypointとは<a class="headerlink" href="#entrypoint" title="Permanent link">&para;</a></h4>
 <p>一番最初に使用するテンプレート名を設定する。</p>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9873,7 +9873,7 @@ ID  DATE                           REVISION
 <h3 id="spectemplates">spec.templates<a class="headerlink" href="#spectemplates" title="Permanent link">&para;</a></h3>
 <h4 id="templates">▼ templatesとは<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h4>
 <p>パイプラインの処理を設定する。WorkflowTemplateとして切り分けても良い。</p>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9904,7 +9904,7 @@ ID  DATE                           REVISION
 <h3 id="specworkflowtemplateref">spec.workflowTemplateRef<a class="headerlink" href="#specworkflowtemplateref" title="Permanent link">&para;</a></h3>
 <h4 id="workflowtemplateref">▼ workflowTemplateRefとは<a class="headerlink" href="#workflowtemplateref" title="Permanent link">&para;</a></h4>
 <p>切り分けたWorkflowTemplateの名前を設定する。</p>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9924,7 +9924,7 @@ ID  DATE                           REVISION
 <h3 id="spectemplates_1">spec.templates<a class="headerlink" href="#spectemplates_1" title="Permanent link">&para;</a></h3>
 <h4 id="templates_1">▼ templatesとは<a class="headerlink" href="#templates_1" title="Permanent link">&para;</a></h4>
 <p>パイプラインの処理を設定する。</p>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9949,7 +9949,7 @@ ID  DATE                           REVISION
 </code></pre></div></td></tr></table></div>
 <h4 id="script">▼ script<a class="headerlink" href="#script" title="Permanent link">&para;</a></h4>
 <p>コンテナをプルし、コンテナ内でスクリプトを実行する。</p>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9975,7 +9975,7 @@ ID  DATE                           REVISION
 <span class="w">            </span><span class="no">echo &quot;Hello World&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="steps">▼ steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220">https://zenn.dev/nameless_gyoza/articles/argo-wf-20200220</a></p>
 <p><br></p>
 
   <hr>
@@ -9983,7 +9983,7 @@ ID  DATE                           REVISION
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

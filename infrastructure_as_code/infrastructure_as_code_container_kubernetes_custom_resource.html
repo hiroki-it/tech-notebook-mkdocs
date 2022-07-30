@@ -6511,14 +6511,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6972,7 +6972,7 @@
 <h1 id="kubernetes">カスタムリソース@Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. カスタムリソース定義<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="apiversion">apiVersion<a class="headerlink" href="#apiversion" title="Permanent link">&para;</a></h3>
@@ -6989,7 +6989,7 @@
 <p><br></p>
 <h3 id="specgroup">spec.group<a class="headerlink" href="#specgroup" title="Permanent link">&para;</a></h3>
 <p>カスタムリソースが属するAPIグループを設定する。例えば『<code>example.com</code>』というグループに定義とすると、<code>example.com/v1</code>というAPIからコールできるようになる。カスタムリソースを管理する組織の完全修飾ドメイン名にすると良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></li>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html">https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html</a></li>
@@ -7008,7 +7008,7 @@
 </code></pre></div></td></tr></table></div>
 <h3 id="specscope">spec.scope<a class="headerlink" href="#specscope" title="Permanent link">&para;</a></h3>
 <p>カスタムリソースがNamespaceあるいはClusterのいずれかに属するかを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></li>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html">https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html</a></li>
@@ -7029,7 +7029,7 @@
 <h3 id="specnames">spec.names<a class="headerlink" href="#specnames" title="Permanent link">&para;</a></h3>
 <h4 id="kind_1">▼ kind<a class="headerlink" href="#kind_1" title="Permanent link">&para;</a></h4>
 <p>カスタムリソースをAPIからコールする時の宣言名を設定する。例えば『<code>FooCrd</code>』という宣言名にすると、マニフェストファイルの<code>kind</code>キーで、<code>FooCrd</code>というカスタムリソース名で使用できるようになる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7046,7 +7046,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="plural">▼ plural<a class="headerlink" href="#plural" title="Permanent link">&para;</a></h4>
 <p>カスタムリソースをAPIからコールする時のURLで使用するリソースの複数形名を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7063,7 +7063,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="singular">▼ singular<a class="headerlink" href="#singular" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドで使用するカスタムリソースの単数形名を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7082,7 +7082,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="shortnames">▼ shortNames<a class="headerlink" href="#shortnames" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドで使用するカスタムリソースの省略名を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7105,7 +7105,7 @@
 <h3 id="versions">versions<a class="headerlink" href="#versions" title="Permanent link">&para;</a></h3>
 <h4 id="name">▼ name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h4>
 <p>APIのバージョン名を設定する。例えば『<code>v1</code>』というstring型のキーを設定すると、マニフェストファイルの<code>apiVersion</code>で、<code>/v1</code>を最後につけてコールすることになる。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html">https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html">https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7122,7 +7122,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="served">▼ served<a class="headerlink" href="#served" title="Permanent link">&para;</a></h4>
 <p>APIのバージョンを有効化するかを設定する。もしカスタムリソースに複数のバージョンが存在する場合に、旧バージョンを無効化し、マニフェストファイルで使用できないようにできる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7139,7 +7139,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="schema">▼ schema<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h4>
 <p>カスタムリソースの<code>spec</code>キー以下に設定できるキーを設定する。例えば『<code>message</code>』というstring型のキーを設定すると、カスタムリソースの<code>spec.message</code>キーに任意の文字列を設定できるようになる。カスタムリソース内部のPodのデプロイ戦略は、Deployment、StatefulSet、DaemonSet、の設定値によって決まることになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#specifying-a-structural-schema">https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#specifying-a-structural-schema</a></li>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html">https://atmarkit.itmedia.co.jp/ait/articles/2109/10/news013.html</a></li>
@@ -7176,7 +7176,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="storage">▼ storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h4>
 <p>APIのバージョンをetcdのストレージに保存してもよいどうかを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/69558910/what-does-storage-means-in-kubernetes-crd">https://stackoverflow.com/questions/69558910/what-does-storage-means-in-kubernetes-crd</a></li>
 <li><a href="https://speakerdeck.com/uesyn/k8s-storage-version-migration?slide=5">https://speakerdeck.com/uesyn/k8s-storage-version-migration?slide=5</a></li>
@@ -7199,10 +7199,10 @@
 <h2 id="02-operator">02. Operator<a class="headerlink" href="#02-operator" title="Permanent link">&para;</a></h2>
 <h3 id="operator">Operatorとは<a class="headerlink" href="#operator" title="Permanent link">&para;</a></h3>
 <p>kube-controllerにように、カスタムリソースを宣言通りに作成してくれる。自分自身でカスタムリソースを定義する必要がない。</p>
-<p>参考：<a href="https://kubernetes.io/ja/docs/concepts/extend-kubernetes/operator/">https://kubernetes.io/ja/docs/concepts/extend-kubernetes/operator/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/ja/docs/concepts/extend-kubernetes/operator/">https://kubernetes.io/ja/docs/concepts/extend-kubernetes/operator/</a></p>
 <p><br></p>
 <h3 id="_2">一覧<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://operatorhub.io/">https://operatorhub.io/</a></p>
+<p>ℹ️ 参考：<a href="https://operatorhub.io/">https://operatorhub.io/</a></p>
 <p><br></p>
 
   <hr>
@@ -7210,7 +7210,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6612,14 +6612,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7174,55 +7174,55 @@
 <h1 id="nuxtjs">Nuxt.js<a class="headerlink" href="#nuxtjs" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-nuxtjsyarn">01. Nuxt.js用yarnコマンド<a class="headerlink" href="#01-nuxtjsyarn" title="Permanent link">&para;</a></h2>
 <h3 id="serverssr">serverモード（SSRモード）<a class="headerlink" href="#serverssr" title="Permanent link">&para;</a></h3>
 <h4 id="server">▼ serverモードとは<a class="headerlink" href="#server" title="Permanent link">&para;</a></h4>
 <p>アプリケーションをSSRとして稼働させる。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
 <h4 id="dev">▼ <code>dev</code><a class="headerlink" href="#dev" title="Permanent link">&para;</a></h4>
 <p>開発環境のため、SSRアプリケーションをビルドし、Nodeサーバーを起動する。Webpackは使用されないため、静的ファイルの圧縮や画像ファイル名のハッシュ化は実行されない。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt devとなっているが、yarn devで問題ない。</span>
 $ yarn dev
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、<code>yarn dev</code>コマンドを実行した場合、環境変数の<code>NODE_ENV</code>が<code>development</code>になる。</p>
-<p>参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
 <h4 id="build">▼ <code>build</code><a class="headerlink" href="#build" title="Permanent link">&para;</a></h4>
 <p>本番環境のため、Node.jsサーバーの起動前にSSRアプリケーションのビルドを実行する。<code>dev</code>コマンドとは異なり、ビルド時にWebpackによる最適化が実行される。これにより、<code>.js</code>ファイルと<code>.css</code>ファイルはminifyされる。minifyにより、不要な改行やインデントが削除され、パッケージの読み出し用のURLはまとめられ、圧縮される。画像名はハッシュ化される。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt buildとなっているが、yarn buildで問題ない。</span>
 $ yarn build
 </code></pre></div></td></tr></table></div>
 <h4 id="start">▼ <code>start</code><a class="headerlink" href="#start" title="Permanent link">&para;</a></h4>
 <p>本番環境のため、<code>yarn build</code>コマンドによるビルド完了後にNodeサーバーを起動する。SSRモードのために使用する。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-server</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt startとなっているが、yarn startで問題ない。</span>
 $ yarn start
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、<code>yarn start</code>コマンドを実行した場合、環境変数の<code>NODE_ENV</code>が<code>production</code>になる。</p>
-<p>参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
 <p><br></p>
 <h3 id="staticssg">staticモード（SSGモード）<a class="headerlink" href="#staticssg" title="Permanent link">&para;</a></h3>
 <h4 id="static">▼ staticモードとは<a class="headerlink" href="#static" title="Permanent link">&para;</a></h4>
 <p>アプリケーションをSSGとして稼働させる。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static">https://ja.nuxtjs.org/docs/2.x/get-started/commands#target-static</a></p>
 <h4 id="dev_1">▼ <code>dev</code><a class="headerlink" href="#dev_1" title="Permanent link">&para;</a></h4>
 <p>開発環境でSSGアプリケーションを稼働させるために使用する。Nodeサーバーを起動し、サーバー内でJavaScriptから静的ファイルを作成する。そのため、SSGモードで作成されるアプリケーションは完全な静的ファイルでない。また、<code>build</code>コマンドとは異なり、Webpackは使用されないため、静的ファイルの圧縮や画像ファイル名のハッシュ化は実行されない。</p>
-<p>参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt devとなっているが、yarn devで問題ない。</span>
 $ yarn dev
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、<code>yarn dev</code>コマンドを実行した場合、環境変数の<code>NODE_ENV</code>が<code>development</code>になる。</p>
-<p>参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
 <h4 id="generate">▼ <code>generate</code><a class="headerlink" href="#generate" title="Permanent link">&para;</a></h4>
 <p>本番環境でSSGアプリケーションを稼働させるために使用する。<code>dev</code>コマンドとは異なり、Nodeサーバーは起動せず、そのままJavaScriptから静的ファイルを作成する。そのため、SSGは完全な静的ファイルからなる。ビルド時にバックエンドに接続し、DBに格納したデータ（例：画像パス）を元に、静的ファイルをビルドできる。SSGモードのために使用する。</p>
-<p>参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/ja/docs/get-started/commands/#target-static">https://nuxtjs.org/ja/docs/get-started/commands/#target-static</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># リファレンスでは nuxt generateとなっているが、yarn generateで問題ない。</span>
 $ yarn generate
@@ -7234,7 +7234,7 @@ $ yarn generate
 $ yarn start
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、<code>yarn start</code>コマンドを実行した場合、環境変数の<code>NODE_ENV</code>が<code>production</code>になる。</p>
-<p>参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc">https://qiita.com/y-temp4/items/84bb16e2ccf8efaf82fc</a></p>
 <p><br></p>
 <h3 id="webpack">ビルド時のWebpackオプション<a class="headerlink" href="#webpack" title="Permanent link">&para;</a></h3>
 <p>SSRモードとSSGモードで、<code>build</code>コマンド時に使用されるWebpackの最適化方法を指定できる。`</p>
@@ -7248,7 +7248,7 @@ $ yarn start
 <h2 id="02-nuxtconfigjs">02. <code>nuxt.config.js</code>ファイル<a class="headerlink" href="#02-nuxtconfigjs" title="Permanent link">&para;</a></h2>
 <h3 id="nuxtconfigjs"><code>nuxt.config.js</code>ファイルとは<a class="headerlink" href="#nuxtconfigjs" title="Permanent link">&para;</a></h3>
 <p>Nuxtがデフォルトで用意している設定をプロパティの設定値で上書きできる。各プロパティは以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/directory-structure/nuxt-config#nuxtconfigjs">https://ja.nuxtjs.org/docs/2.x/directory-structure/nuxt-config#nuxtconfigjs</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/directory-structure/nuxt-config#nuxtconfigjs">https://ja.nuxtjs.org/docs/2.x/directory-structure/nuxt-config#nuxtconfigjs</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7263,7 +7263,7 @@ $ yarn start
 <h3 id="_3">環境変数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="env">▼ <code>.env</code>ファイルの読み出し<a class="headerlink" href="#env" title="Permanent link">&para;</a></h4>
 <p>あらかじめ、dotenvモジュールをインストールしておく。<code>process.env</code>から<code>.env</code>ファイルの変数を参照する。定数に代入する場合は、まとめて代入すると良い。</p>
-<p>参考：<a href="https://levelup.gitconnected.com/what-are-env-files-and-how-to-use-them-in-nuxt-7f194f083e3d">https://levelup.gitconnected.com/what-are-env-files-and-how-to-use-them-in-nuxt-7f194f083e3d</a></p>
+<p>ℹ️ 参考：<a href="https://levelup.gitconnected.com/what-are-env-files-and-how-to-use-them-in-nuxt-7f194f083e3d">https://levelup.gitconnected.com/what-are-env-files-and-how-to-use-them-in-nuxt-7f194f083e3d</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ npm install @nuxtjs/dotenv
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7319,7 +7319,7 @@ $ yarn start
 <h3 id="build_1">build<a class="headerlink" href="#build_1" title="Permanent link">&para;</a></h3>
 <h4 id="hardsource">▼ hardSource<a class="headerlink" href="#hardsource" title="Permanent link">&para;</a></h4>
 <p>ビルド時のキャッシュを有効化するか否かを設定する。ビルドの完了が早くなる。</p>
-<p>参考：<a href="https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource">https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource">https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#hardsource</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7338,7 +7338,7 @@ $ yarn start
 </code></pre></div></td></tr></table></div>
 <h4 id="privateruntimeconfig">▼ privateRuntimeConfig<a class="headerlink" href="#privateruntimeconfig" title="Permanent link">&para;</a></h4>
 <p>クライアントサイドのみで参照できる環境変数を設定する。すなわち、SSRモードのクライアント側のみが対応している。環境変数は、<code>pages</code>、<code>store</code>、<code>components</code>、<code>plugin</code>ディレクトリで使用できる。ブラウザのJavaScriptソースタブで公開されてしまうため、機密な値は設定しないようにする。もし<code>publicRuntimeConfig</code>で同じ名前の変数が設定されていた場合は、この値を上書きする。環境変数は、<code>context</code>オブジェクトの<code>config</code>変数から取得できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://nuxtjs.org/docs/directory-structure/nuxt-config/#privateruntimeconfig">https://nuxtjs.org/docs/directory-structure/nuxt-config/#privateruntimeconfig</a></li>
 <li><a href="https://blog.mktia.com/dotenv-is-no-longer-need-in-nuxt/">https://blog.mktia.com/dotenv-is-no-longer-need-in-nuxt/</a></li>
@@ -7387,7 +7387,7 @@ $ yarn start
 </code></pre></div></td></tr></table></div>
 <h4 id="publicruntimeconfig">▼ publicRuntimeConfig<a class="headerlink" href="#publicruntimeconfig" title="Permanent link">&para;</a></h4>
 <p>サーバーサイドとクライアントサイドの両方で参照できる環境変数を設定する。すなわち、全モード（SSG/SPA/SSRモード）が対応している。環境変数は、<code>pages</code>、<code>store</code>、<code>components</code>、<code>plugin</code>ディレクトリで使用できる。環境変数は、<code>context</code>オブジェクトの<code>config</code>変数から取得できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://nuxtjs.org/docs/directory-structure/nuxt-config/#publicruntimeconfig">https://nuxtjs.org/docs/directory-structure/nuxt-config/#publicruntimeconfig</a></li>
 <li><a href="https://blog.mktia.com/dotenv-is-no-longer-need-in-nuxt/">https://blog.mktia.com/dotenv-is-no-longer-need-in-nuxt/</a></li>
@@ -7434,7 +7434,7 @@ $ yarn start
 </code></pre></div></td></tr></table></div>
 <h4 id="quiet">▼ quiet<a class="headerlink" href="#quiet" title="Permanent link">&para;</a></h4>
 <p>ビルド時にログを最小限にする。CI/CDツールでログが確認できなくなるため、無効化しておいた方が良い。</p>
-<p>参考：<a href="https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#quiet">https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#quiet</a></p>
+<p>ℹ️ 参考：<a href="https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#quiet">https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#quiet</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7453,7 +7453,7 @@ $ yarn start
 </code></pre></div></td></tr></table></div>
 <h4 id="servermiddleware">▼ serverMiddleware<a class="headerlink" href="#servermiddleware" title="Permanent link">&para;</a></h4>
 <p>リクエストを受信できるエンドポイントと、紐付けるハンドラー関数を設定する。</p>
-<p>参考：<a href="https://nuxtjs.org/docs/configuration-glossary/configuration-servermiddleware/">https://nuxtjs.org/docs/configuration-glossary/configuration-servermiddleware/</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/docs/configuration-glossary/configuration-servermiddleware/">https://nuxtjs.org/docs/configuration-glossary/configuration-servermiddleware/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7479,7 +7479,7 @@ $ yarn start
 <p><br></p>
 <h3 id="buildmodules">buildModules<a class="headerlink" href="#buildmodules" title="Permanent link">&para;</a></h3>
 <p>SSG/SSRモードの<code>yarn dev</code>（開発用コマンド）、またSSRモードの<code>yarn build</code>の時のみ、<code>node_module</code>ディレクトリ内に作成するパッケージを設定する。</p>
-<p>参考：<a href="https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/">https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/</a></p>
+<p>ℹ️ 参考：<a href="https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/">https://www.reddit.com/r/Nuxt/comments/gnzgrp/nuxtconfig_modules_vs_build_modules/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7504,13 +7504,13 @@ $ yarn start
 <h2 id="03">03. ディレクトリ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="distdistribution"><code>dist</code>ディレクトリ：<code>distribution</code><a class="headerlink" href="#distdistribution" title="Permanent link">&para;</a></h3>
 <p>SSGモードの<code>generate</code>コマンドの実行時に、アーティファクトが配置される。</p>
-<p>参考：<a href="https://nuxtjs.org/ja/docs/directory-structure/dist">https://nuxtjs.org/ja/docs/directory-structure/dist</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/ja/docs/directory-structure/dist">https://nuxtjs.org/ja/docs/directory-structure/dist</a></p>
 <p><br></p>
 <h3 id="module"><code>module</code>ディレクトリ<a class="headerlink" href="#module" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://nuxtjs.org/docs/directory-structure/modules">https://nuxtjs.org/docs/directory-structure/modules</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/docs/directory-structure/modules">https://nuxtjs.org/docs/directory-structure/modules</a></p>
 <p><br></p>
 <h3 id="plugin"><code>plugin</code>ディレクトリ<a class="headerlink" href="#plugin" title="Permanent link">&para;</a></h3>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://nuxtjs.org/docs/directory-structure/plugins/">https://nuxtjs.org/docs/directory-structure/plugins/</a></li>
 <li><a href="https://github.com/nuxt/nuxt.js/issues/2820">https://github.com/nuxt/nuxt.js/issues/2820</a></li>
@@ -7522,7 +7522,7 @@ $ yarn start
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

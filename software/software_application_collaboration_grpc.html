@@ -6585,14 +6585,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7124,13 +7124,13 @@
 <h1 id="grpc">gRPC＠アプリケーション連携<a class="headerlink" href="#grpc" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-grpc">01. gRPCの仕組み<a class="headerlink" href="#01-grpc" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="grpc_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/grpc_architecture.png" /></p>
 <p>RPCフレームワークの一つで、プロトコルバッファーを使用してRPC（リモートプロシージャーコール）を実行する。RESTful-APIに対するリクエストではリクエストメッセージのヘッダーやボディを作成する必要があるが、リモートプロシージャーコールであれば通信先の関数を指定して引数を渡せばよく、まるで自身の関数のようにコールできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></li>
 <li><a href="https://openstandia.jp/oss_info/grpc/">https://openstandia.jp/oss_info/grpc/</a></li>
@@ -7155,10 +7155,10 @@
 <h3 id="_4">実装<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="proto">▼ サービス定義ファイル（<code>proto</code>ファイル）<a class="headerlink" href="#proto" title="Permanent link">&para;</a></h4>
 <p>gRPCでのAPI仕様であり、実装によりAPI仕様を説明する。サービス定義ファイルにインターフェースとメッセージ構造を実装し、このファイルから<code>pb</code>ファイルを自動作成する。このファイルには、サーバー側とクライアント側で必要な実装が定義されている。</p>
-<p>参考：<a href="https://engineering.mercari.com/blog/entry/2019-05-31-040000/">https://engineering.mercari.com/blog/entry/2019-05-31-040000/</a></p>
+<p>ℹ️ 参考：<a href="https://engineering.mercari.com/blog/entry/2019-05-31-040000/">https://engineering.mercari.com/blog/entry/2019-05-31-040000/</a></p>
 <h4 id="grpc_1">▼ gRPCサーバー<a class="headerlink" href="#grpc_1" title="Permanent link">&para;</a></h4>
 <p>リモートプロシージャーコールを受け付けるサーバーを定義する。サーバーをgRPCサーバーとして登録する必要がある。</p>
-<p>参考：<a href="https://y-zumi.hatenablog.com/entry/2019/09/07/011741">https://y-zumi.hatenablog.com/entry/2019/09/07/011741</a></p>
+<p>ℹ️ 参考：<a href="https://y-zumi.hatenablog.com/entry/2019/09/07/011741">https://y-zumi.hatenablog.com/entry/2019/09/07/011741</a></p>
 <p><br></p>
 <h2 id="02-02">02-02. クライアント側のセットアップ<a class="headerlink" href="#02-02" title="Permanent link">&para;</a></h2>
 <h3 id="grpc_2">gRPCライブラリのインストール<a class="headerlink" href="#grpc_2" title="Permanent link">&para;</a></h3>
@@ -7178,13 +7178,13 @@
 <h3 id="_5">実装<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="grpc_3">▼ gRPCクライアント<a class="headerlink" href="#grpc_3" title="Permanent link">&para;</a></h4>
 <p>gRPCサーバーのリモートプロシージャーコールを実行する。</p>
-<p>参考：<a href="https://y-zumi.hatenablog.com/entry/2019/09/07/011741">https://y-zumi.hatenablog.com/entry/2019/09/07/011741</a></p>
+<p>ℹ️ 参考：<a href="https://y-zumi.hatenablog.com/entry/2019/09/07/011741">https://y-zumi.hatenablog.com/entry/2019/09/07/011741</a></p>
 <p><br></p>
 <h2 id="03-go">03. Goの場合<a class="headerlink" href="#03-go" title="Permanent link">&para;</a></h2>
 <h3 id="_6">サーバー側<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="proto_1">▼ protoファイル<a class="headerlink" href="#proto_1" title="Permanent link">&para;</a></h4>
 <p>クライアント側で呼び出せるようにする構造体や関数を定義する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></li>
 <li><a href="https://christina04.hatenablog.com/entry/protoc-usage">https://christina04.hatenablog.com/entry/protoc-usage</a></li>
@@ -7223,7 +7223,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="pbgo">▼ pb.goファイル<a class="headerlink" href="#pbgo" title="Permanent link">&para;</a></h4>
 <p>事前に用意した<code>proto</code>ファイルを使用して、<code>pb.go</code>ファイルを自動作成する。<code>pb.go</code>ファイルには、gRPCを使用する上で必要な構造体や関数が定義されており、ユーザーはこのファイルをそのまま使用すれば良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://christina04.hatenablog.com/entry/protoc-usage">https://christina04.hatenablog.com/entry/protoc-usage</a></li>
 <li><a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></li>
@@ -7251,7 +7251,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="grpc_4">▼ gRPCサーバー<a class="headerlink" href="#grpc_4" title="Permanent link">&para;</a></h4>
 <p>gRPCサーバーを実装する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></li>
 <li><a href="https://entgo.io/ja/docs/grpc-server-and-client/">https://entgo.io/ja/docs/grpc-server-and-client/</a></li>
@@ -7348,7 +7348,7 @@
 <h3 id="_7">クライアント側<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="grpc_5">▼ gRPCクライアント<a class="headerlink" href="#grpc_5" title="Permanent link">&para;</a></h4>
 <p>gRPCクライアントを実装する。</p>
-<p>参考：<a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96">https://qiita.com/gold-kou/items/a1cc2be6045723e242eb#%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%BA%E3%81%A7%E9%AB%98%E9%80%9F%E5%8C%96</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7424,7 +7424,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

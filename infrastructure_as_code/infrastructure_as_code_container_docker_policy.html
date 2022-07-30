@@ -6528,14 +6528,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7008,7 +7008,7 @@
 <h1 id="docker">設計ポリシー＠Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. プロセス単位でコンテナを分割する<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>これは、Dockerの原則である。アプリケーションを稼働させるには、最低限、Webサーバーミドルウェア、アプリケーション、DBMSが必要である。これらのプロセスは、同じコンテナに共存させることなく、個別のコンテナで稼働させ、ネットワークで接続する。</p>
@@ -7020,7 +7020,7 @@
 <p><br></p>
 <h3 id="_3">ベースイメージの種類<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ 接尾辞の種類<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://prograshi.com/platform/docker/docker-image-tags-difference/">https://prograshi.com/platform/docker/docker-image-tags-difference/</a></p>
+<p>ℹ️ 参考：<a href="https://prograshi.com/platform/docker/docker-image-tags-difference/">https://prograshi.com/platform/docker/docker-image-tags-difference/</a></p>
 <table>
 <thead>
 <tr>
@@ -7071,7 +7071,7 @@
 </table>
 <h4 id="cpu">▼ 対応できるCPUアーキテクチャの種類<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
 <p>Dockerは全てのマシンで稼働できるわけではなく、コンテナイメージごとに対応できるCPUアーキテクチャ（AMD系、ARM系、など）がある。同じOSでも、機種ごとに搭載されるCPUアーキテクチャは異なる。例えば、MacBook 2020 にはIntel、またMacBook 2021（M1 Mac）にはARMベースの独自CPUが搭載されているため、ARMに対応したコンテナイメージを選択する必要がある。ただし、コンテナイメージがOSのCPUアーキテクチャに対応しているか否かを開発者が気にする必要はなく、<code>docker pull</code>時に、OSのCPUアーキテクチャに対応したコンテナイメージが自動的に選択されるようになっている。コンテナの現在のCPUアーキテクチャは、<code>docker inspect</code>コマンドで確認できる。</p>
-<p>参考：<a href="https://github.com/docker-library/official-images#architectures-other-than-amd64">https://github.com/docker-library/official-images#architectures-other-than-amd64</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/docker-library/official-images#architectures-other-than-amd64">https://github.com/docker-library/official-images#architectures-other-than-amd64</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7090,7 +7090,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_5">▼ バージョン<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>イメージのバージョンには種類があり、追跡できるバージョンアップが異なる。</p>
-<p>参考：<a href="https://hub.docker.com/_/composer/?tab=description&amp;page=1&amp;ordering=last_updated">https://hub.docker.com/_/composer/?tab=description&amp;page=1&amp;ordering=last_updated</a></p>
+<p>ℹ️ 参考：<a href="https://hub.docker.com/_/composer/?tab=description&amp;page=1&amp;ordering=last_updated">https://hub.docker.com/_/composer/?tab=description&amp;page=1&amp;ordering=last_updated</a></p>
 <table>
 <thead>
 <tr>
@@ -7241,7 +7241,7 @@ README.md
 <h3 id="_8">イメージレイヤーの数を減らす<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="run">▼ <code>RUN</code>コマンドをまとめる<a class="headerlink" href="#run" title="Permanent link">&para;</a></h4>
 <p>イメージレイヤー数が多くなると、コンテナイメージが大きくなる。Dockerfileの各命令によって、コンテナイメージ レイヤーが1つ増えてしまうため、同じ命令に異なるパラメーターを与える時は、『<code>&amp;&amp;</code>』で1つにまとめてしまう方が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.itbook.info/network/docker02.html">https://www.itbook.info/network/docker02.html</a></li>
 <li><a href="https://yuhabeem.com/2021/03/27/311/">https://yuhabeem.com/2021/03/27/311/</a></li>
@@ -7399,7 +7399,7 @@ README.md
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="04">04. イメージのサイバー攻撃を対策する<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.aquasec.com/docker-security-best-practices">https://blog.aquasec.com/docker-security-best-practices</a></li>
 <li><a href="https://www.creationline.com/lab/aquasecurity/43087">https://www.creationline.com/lab/aquasecurity/43087</a></li>
@@ -7411,7 +7411,7 @@ README.md
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

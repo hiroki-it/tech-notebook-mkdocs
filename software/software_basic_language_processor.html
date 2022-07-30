@@ -6608,14 +6608,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7170,7 +7170,7 @@
 <h1 id="_1">言語プロセッサー（言語処理プログラム）＠基本ソフトウェア<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. アセンブラ方式<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">アセンブラ方式とは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -7183,7 +7183,7 @@
 <h3 id="_5">仕組み<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ 機械語翻訳と実行<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>コードをバイナリ形式のコードに翻訳した後、CPU上で命令が実行される。命令の結果はメモリに保管される。</p>
-<p>参考：<a href="https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF">https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF">https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF</a></p>
 <p><img alt="compiler_language" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/compiler_language.png" /></p>
 <h4 id="_7">▼ コンパイラによるビルド<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>コンパイルによって、コードは機械語からなるバイナリ形式のコードに変換される。その後、バイナリ形式のコードはリンクされ。exeファイルとなる。この一連のプロセスを『ビルド』という。また、ビルドによって作成されたファイルを『アーティファクト（成果物）』という。</p>
@@ -7193,11 +7193,11 @@
 <p><img alt="lexical_syntax_semantics" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/lexical_syntax_semantics.png" /></p>
 <h4 id="1lexical-analysis">（１）Lexical analysis（字句解析）<a class="headerlink" href="#1lexical-analysis" title="Permanent link">&para;</a></h4>
 <p>コードの文字列を言語の最小単位（トークン）の列に分解する。 以下に、トークンの分類方法の例を以下に示す。字句解析のアルゴリズムは、LexやFlexで実装されている。解析器をルーツを辿れない問題をブートストラップ問題という。</p>
-<p>参考：<a href="https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator">https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator</a>)</p>
+<p>ℹ️ 参考：<a href="https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator">https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator</a>)</p>
 <p><img alt="構文規則と説明" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/構文規則と説明.png" /></p>
 <h4 id="2syntax-analysis">（２）Syntax analysis（構文解析）<a class="headerlink" href="#2syntax-analysis" title="Permanent link">&para;</a></h4>
 <p>トークンの列をツリー構造に変換する。構文解析のアルゴリズムは、BisonやYaccで実装されている。解析器をルーツを辿れない問題をブートストラップ問題という。コンパイラ型言語の構文解析に失敗した時、これらの構文解析言語はシンタックスエラーを出力する。</p>
-<p>参考：<a href="https://ja.wikipedia.org/wiki/Bison">https://ja.wikipedia.org/wiki/Bison</a></p>
+<p>ℹ️ 参考：<a href="https://ja.wikipedia.org/wiki/Bison">https://ja.wikipedia.org/wiki/Bison</a></p>
 <h4 id="3semantics-analysis">（３）Semantics analysis（意味解析）<a class="headerlink" href="#3semantics-analysis" title="Permanent link">&para;</a></h4>
 <p>ツリー構造を基に、コードに論理的な誤りがないかを解析する。</p>
 <h4 id="4code-optimization">（４）Code optimization（コード最適化）<a class="headerlink" href="#4code-optimization" title="Permanent link">&para;</a></h4>
@@ -7216,7 +7216,7 @@
 <h3 id="_10">仕組み<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ 機械語翻訳と実行<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>コードをバイナリ形式のコードに一行ずつ変換し、その都度、CPU上で命令が実行される。命令の結果はメモリに保管される。</p>
-<p>参考：<a href="https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF">https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF">https://qiita.com/tk_01/items/a84408b5436ec97bfbe1#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E5%8B%95%E3%81%8F%E4%BB%95%E7%B5%84%E3%81%BF</a></p>
 <p><img alt="interpreted_language" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/interpreted_language.png" /></p>
 <p><br></p>
 <h3 id="_12">機械語翻訳とは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -7250,7 +7250,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

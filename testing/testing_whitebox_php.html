@@ -6801,14 +6801,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7558,7 +7558,7 @@
 <h1 id="php">PHP＠ホワイトボックステスト<a class="headerlink" href="#php" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ホワイトボックステストのツール<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">整形<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7629,10 +7629,10 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <h3 id="phpunitxml">phpunit.xmlファイル<a class="headerlink" href="#phpunitxml" title="Permanent link">&para;</a></h3>
 <h4 id="phpunitxml_1">▼ <code>phpunit.xml</code>ファイルとは<a class="headerlink" href="#phpunitxml_1" title="Permanent link">&para;</a></h4>
 <p>PHPUnitの設定を行う。デフォルトの設定では、あらかじめルートディレクトリに<code>tests</code>ディレクトリを配置し、これを<code>Units</code>ディレクトリまたは<code>Feature</code>ディレクトリに分割しておく。また、<code>Test</code>で終わるphpファイルを作成しておく必要がある。</p>
-<p>参考：<a href="http://phpunit.readthedocs.io/ja/latest/configuration.html">http://phpunit.readthedocs.io/ja/latest/configuration.html</a></p>
+<p>ℹ️ 参考：<a href="http://phpunit.readthedocs.io/ja/latest/configuration.html">http://phpunit.readthedocs.io/ja/latest/configuration.html</a></p>
 <h4 id="testsuites">▼ <code>testsuites</code>タグ<a class="headerlink" href="#testsuites" title="Permanent link">&para;</a></h4>
 <p>テストスイートを定義できる。<code>testsuites</code>タグ内の<code>testsuites</code>タグを追加変更すると、検証対象のディレクトリを増やし、また対象のディレクトリ名を変更できる。</p>
-<p>参考：<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-testsuites">https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-testsuites</a></p>
+<p>ℹ️ 参考：<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-testsuites">https://phpunit.readthedocs.io/ja/latest/configuration.html#appendixes-configuration-testsuites</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7669,7 +7669,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 </code></pre></div></td></tr></table></div>
 <h4 id="php_1">▼ <code>php</code>タグ<a class="headerlink" href="#php_1" title="Permanent link">&para;</a></h4>
 <p>PHPUnitの実行前に設定する<code>ini_set</code>関数、<code>define</code>関数、グローバル変数、を定義できる。タグ名との対応関係については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#php-ini">https://phpunit.readthedocs.io/ja/latest/configuration.html#php-ini</a></p>
+<p>ℹ️ 参考：<a href="https://phpunit.readthedocs.io/ja/latest/configuration.html#php-ini">https://phpunit.readthedocs.io/ja/latest/configuration.html#php-ini</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>Composerの実行時にメモリ不足にならないようにメモリを拡張する。また、テスト用のDBに接続できるよう、DBに関する環境変数を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7716,7 +7716,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <h3 id="_7">アサーションメソッド<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ アサーションメソッドとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>実際の値と期待値を比較し、結果に応じて<code>SUCCESS</code>または<code>FAILURES</code>を返却する。非staticまたはstaticとしてコールできる。</p>
-<p>参考：<a href="https://phpunit.readthedocs.io/ja/latest/assertions.html">https://phpunit.readthedocs.io/ja/latest/assertions.html</a></p>
+<p>ℹ️ 参考：<a href="https://phpunit.readthedocs.io/ja/latest/assertions.html">https://phpunit.readthedocs.io/ja/latest/assertions.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">$this-&gt;assertTrue();</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="x">self::assertTrue()</span>
@@ -7737,7 +7737,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <h3 id="_9">テストデータ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="data-provider">▼ Data Provider<a class="headerlink" href="#data-provider" title="Permanent link">&para;</a></h4>
 <p>テスト対象のメソッドの引数を事前に用意する。メソッドのアノテーションで、<code>@test</code>と<code>@dataProvider データプロバイダ名</code>を宣言する。データプロバイダの返却値として配列を設定し、配列の値の順番で、引数に値を渡せる。</p>
-<p>参考：<a href="https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers">https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers</a></p>
+<p>ℹ️ 参考：<a href="https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers">https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8783,7 +8783,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
 <h2 id="03-phake">03. Phake<a class="headerlink" href="#03-phake" title="Permanent link">&para;</a></h2>
 <h3 id="phake">Phakeとは<a class="headerlink" href="#phake" title="Permanent link">&para;</a></h3>
 <p>ユニットテスト時のテストダブルを提供する。</p>
-<p>参考：<a href="https://github.com/mlively/Phake#phake">https://github.com/mlively/Phake#phake</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/mlively/Phake#phake">https://github.com/mlively/Phake#phake</a></p>
 <p><br></p>
 <h3 id="_17">テストダブル<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="mock">▼ <code>mock</code>メソッド<a class="headerlink" href="#mock" title="Permanent link">&para;</a></h4>
@@ -8947,7 +8947,7 @@ Available test<span class="o">(</span>s<span class="o">)</span>:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

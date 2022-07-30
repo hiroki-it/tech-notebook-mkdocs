@@ -6517,14 +6517,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6990,13 +6990,13 @@
 <h1 id="victoriametrics">VictoriaMetrics＠テレメトリー収集ツール<a class="headerlink" href="#victoriametrics" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-victoriametrics">01. VictoriaMetricsの仕組み<a class="headerlink" href="#01-victoriametrics" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ リモートストレージとして<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>ロードバランサー、vm-select、vm-storage、vm-insert、から構成されている。リモートストレージとして、Prometheusで収集したメトリクスを保管する。シングルNodeモードとクラスターNodeモードがあり、Clusterモードでは各コンポーネントが冗長化される。エンドポイントとしてロードバランサーがあり、書き込みエンドポイントを指定すれば、vm-insertを経由して、vm-storageにメトリクスを書き込める。また読み出しエンドポイントを指定すれば、vm-selectを経由して、vm-storageからメトリクスを読み込める。なおPrometheusがリモートストレージとしてVictoriaMetricsを使用する時、Grafanaのようにリアルタイムにデータを取得し続けることはできない。代わりに、PrometheusのダッシュボードでPromQLを実行し、読み出しエンドポイントからその都度データを取得することはできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html#architecture-overview">https://docs.victoriametrics.com/Cluster-VictoriaMetrics.html#architecture-overview</a></li>
 <li><a href="https://docs.victoriametrics.com/FAQ.html#why-doesnt-victoriametrics-support-the-prometheus-remote-read-api">https://docs.victoriametrics.com/FAQ.html#why-doesnt-victoriametrics-support-the-prometheus-remote-read-api</a></li>
@@ -7005,7 +7005,7 @@
 <p><img alt="victoria-metrics_remote-storage_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/victoria-metrics_remote-storage_architecture.png" /></p>
 <h4 id="_4">▼ 監視ツールとして<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>vm-agent、vm-storage、vm-alert、から構成されている。また、アラートのルーティングのためにalertmanager、可視化のためにGrafana、が必要である。vm-agentがPull型でメトリクスを収集し、vm-storageに保管する。vm-alertは、vm-storageに対してMetricsQLを定期的に実行し、条件に合致したエラーイベントからアラートを作成する。VictoriaMetricsを監視ツールとして使用する場合はPrometheusは不要になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://speakerdeck.com/cybozuinsideout/monitoring-feat-victoriametrics?slide=10">https://speakerdeck.com/cybozuinsideout/monitoring-feat-victoriametrics?slide=10</a></li>
 <li><a href="https://www.sobyte.net/post/2022-05/vmalert/">https://www.sobyte.net/post/2022-05/vmalert/</a></li>
@@ -7031,7 +7031,7 @@ $ curl -X GET http://&lt;VictoriaMetricsのIPアドレス&gt;:8428/prometheus/ap
 <h3 id="vm-storage">vm-storage<a class="headerlink" href="#vm-storage" title="Permanent link">&para;</a></h3>
 <h4 id="vm-storage_1">▼ vm-storageとは<a class="headerlink" href="#vm-storage_1" title="Permanent link">&para;</a></h4>
 <p>データをファイルシステムに保管する。保管時にデータを圧縮している。公式での情報は見つからなかったが、圧縮率は約<code>10%</code>らしい。</p>
-<p>参考：<a href="https://qiita.com/nikita/items/482a77a829c81cd919f0#1%E5%9C%A7%E7%B8%AE%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84">https://qiita.com/nikita/items/482a77a829c81cd919f0#1%E5%9C%A7%E7%B8%AE%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/nikita/items/482a77a829c81cd919f0#1%E5%9C%A7%E7%B8%AE%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84">https://qiita.com/nikita/items/482a77a829c81cd919f0#1%E5%9C%A7%E7%B8%AE%E7%8E%87%E3%81%8C%E9%AB%98%E3%81%84</a></p>
 <h4 id="storagedatapath">▼ storageDataPath<a class="headerlink" href="#storagedatapath" title="Permanent link">&para;</a></h4>
 <p>VictoriaMetricsのプロセスの起動時にて、<code>storageDataPath</code>オプションでディレクトリ名を渡すことにより、マウント先のディレクトリを設定できる。ディレクトリ構造は以下のようになっている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7058,10 +7058,10 @@ $ curl -X GET http://&lt;VictoriaMetricsのIPアドレス&gt;:8428/prometheus/ap
 </code></pre></div></td></tr></table></div>
 <h4 id="readonly">▼ ReadOnlyモード<a class="headerlink" href="#readonly" title="Permanent link">&para;</a></h4>
 <p>vm-storageは、サイズいっぱいまでデータが保管されると、ランタイムエラーを起こしてしまう。これを回避するために、ReadOnlyモードがある。ReadOnlyモードにより、vm-storageの空きサイズが<code>minFreeDiskSpaceBytes</code>オプション値を超えると、書き込みできなくなるような仕様になっている。これにより、vm-storageの最大サイズを超えてデータを書き込むことを防いでいる。</p>
-<p>参考：<a href="https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269">https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269">https://github.com/VictoriaMetrics/VictoriaMetrics/issues/269</a></p>
 <h4 id="_8">▼ ストレージの必要サイズの見積もり<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>vm-storageの<code>/var/lib/victoriametrics</code>ディレクトリ配下の増加量（日）を調査し、これに非機能要件の保管日数をかけることにより、vm-storageの必要最低限のサイズを算出できる。また、<code>20</code>%の空きサイズを考慮するために、増加量を<code>1.2</code>倍する必要がある。</p>
-<p>参考：<a href="https://docs.victoriametrics.com/#capacity-planning">https://docs.victoriametrics.com/#capacity-planning</a></p>
+<p>ℹ️ 参考：<a href="https://docs.victoriametrics.com/#capacity-planning">https://docs.victoriametrics.com/#capacity-planning</a></p>
 <p><strong>＊例＊</strong></p>
 <p>ここでは、増加率を以下の数式で算出している。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="err">増加率</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="err">当該時刻のサイズ</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="err">前時刻のサイズ</span><span class="p">))</span><span class="w"> </span><span class="err">÷</span><span class="w"> </span><span class="p">(</span><span class="err">前時刻のサイズ</span><span class="p">)</span><span class="w"> </span><span class="err">×</span><span class="w"> </span><span class="mi">100</span><span class="w"></span>
@@ -7133,7 +7133,7 @@ $ curl -X GET http://&lt;VictoriaMetricsのIPアドレス&gt;:8428/prometheus/ap
 <p><br></p>
 <h2 id="02-systemctl">02. systemctlによる設定<a class="headerlink" href="#02-systemctl" title="Permanent link">&para;</a></h2>
 <p>systemctlを使用して、VictoriaMetricsプロセスをデーモンとして起動する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/package/victoria-metrics.service">https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/package/victoria-metrics.service</a></li>
 <li><a href="https://hnakamur.github.io/blog/2019/12/23/install-victoria-metrics/">https://hnakamur.github.io/blog/2019/12/23/install-victoria-metrics/</a></li>
@@ -7204,7 +7204,7 @@ $ systemctl start victoriametrics
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -8081,14 +8081,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10123,7 +10123,7 @@
 <h2 id="01-ec2elastic-computer-cloud">01. EC2：Elastic Computer Cloud<a class="headerlink" href="#01-ec2elastic-computer-cloud" title="Permanent link">&para;</a></h2>
 <h3 id="ec2">EC2とは<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h3>
 <p>クラウドサーバーとして働く。注意点があるものだけまとめる。ベストプラクティスについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-best-practices.html</a></p>
 <p><br></p>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <table>
@@ -10251,7 +10251,7 @@
 <h3 id="_5">インスタンスタイプ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ 世代と大きさ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>『世代』と『大きさ』からなる名前で構成される。世代の数字が上がるにつれて、より小さな世代と同じ大きさであっても、パフォーマンスと低コストになる。AMIのOSのバージョンによっては、新しく登場したインスタンスタイプを適用できないことがあるため注意する。例えば、CentOS 6系のAMIでは、<code>t3.small</code>を選択できない。</p>
-<p>参考：<a href="https://aws.amazon.com/marketplace/pp/prodview-gkh3rqhqbgzme?ref=cns_srchrow">https://aws.amazon.com/marketplace/pp/prodview-gkh3rqhqbgzme?ref=cns_srchrow</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/marketplace/pp/prodview-gkh3rqhqbgzme?ref=cns_srchrow">https://aws.amazon.com/marketplace/pp/prodview-gkh3rqhqbgzme?ref=cns_srchrow</a></p>
 <table>
 <thead>
 <tr>
@@ -10272,12 +10272,12 @@
 </table>
 <h4 id="cpu">▼ CPUバーストモード<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
 <p>バーストモードのインスタンスタイプの場合、一定水準のベースラインCPU使用率を提供しつつ、これを超過できる。CPU使用率がベースラインを超えたとき、超過した分だけEC2はCPUクレジットを消費する。CPUクレジットは一定の割合で回復する。蓄積できる最大CPUクレジット、クレジットの回復率、ベースラインCPU使用率は、インスタンスタイプによって異なる。詳しくは以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html</a></p>
 <p><br></p>
 <h3 id="_7">ルートデバイスボリューム<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ ルートデバイスボリュームとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>EC2インスタンスでは、ブロックデバイスにルートデバイスボリュームが紐づいている。複数のブロックデバイスを用意し、それぞれを異なるルートデバイスボリュームから紐づけることもできる。さらに、このブロックデバイスが、マウントポイントtになるディレクトリ紐づいている。つまりEC2インスタンスが作成されると、ボリューム内に保管されたファイルは、ブロックデバイスを経由して、マウントポイントのディレクトリ内に作成される。また反対に、マウント先ディレクトリ内に保存されたファイルは、ルートデバイスボリューム内に保管される。複数のルートボリュームを紐づける場合は、最大サイズの大きなルートボリュームに紐づくルートデバイスを、サイズが大きくなり得るディレクトリにマウントするようにしておく。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html</a></li>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html">https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html</a></li>
@@ -10285,7 +10285,7 @@
 <h4 id="ebs">▼ EBSボリューム<a class="headerlink" href="#ebs" title="Permanent link">&para;</a></h4>
 <p><img alt="ec2_ebs-backed-instance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ec2_ebs-backed-instance.png" /></p>
 <p>EBSで保管されているルートデバイスボリュームで、推奨の方法である。インスタンスストアボリュームとは異なり、コンピューティングとして機能するEC2インスタンスと、ストレージとして機能するルートデバイスボリュームが分離されている。そのため、EC2インスタンスが誤って削除されてしまったとしても、ボリュームは削除されずに、データを守れる。また、両者が分離されていないインスタンスボリュームと比較して、再起動が早いため、再起動に伴うダウンタイムが短い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#RootDeviceStorageConcepts">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#RootDeviceStorageConcepts</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></li>
@@ -10294,7 +10294,7 @@
 <h4 id="_9">▼ インスタンスストアボリューム<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p><img alt="ec2_instance-store-backed-instance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ec2_instance-store-backed-instance.png" /></p>
 <p>インスタンスストアで保管されているルートデバイスボリュームで、非推奨の方法である。EBSボリュームとは異なり、コンピューティングとして機能するEC2インスタンス内にルートデバイスボリュームが存在している。そのため、インスタンスストアボリュームは、EC2インスタンスが終了すると一緒に削除されてしまう。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#RootDeviceStorageConcepts">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#RootDeviceStorageConcepts</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></li>
@@ -10351,7 +10351,7 @@
 </tbody>
 </table>
 <p>Session Managerを使用してEC2インスタンスに接続し、ログインシェルを起動する。System Managerを使用してEC2インスタンスに接続する場合、EC2インスタンス自体にsystems-managerエージェントをインストールしておく必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/ec2-systems-manager-vpc-endpoints/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/ec2-systems-manager-vpc-endpoints/</a></li>
 <li><a href="https://garafu.blogspot.com/2020/08/connect-private-ec2-with-ssm.html">https://garafu.blogspot.com/2020/08/connect-private-ec2-with-ssm.html</a></li>
@@ -10361,7 +10361,7 @@
 <h2 id="01-02-ec2-based-on-amiamazon-machine-image">01-02. EC2 based on AMI：Amazon Machine Image<a class="headerlink" href="#01-02-ec2-based-on-amiamazon-machine-image" title="Permanent link">&para;</a></h2>
 <h3 id="ami">AMIとは<a class="headerlink" href="#ami" title="Permanent link">&para;</a></h3>
 <p>EC2インスタンスのマシンイメージであり、EC2インスタンス上でアプリケーションソフトウェアを稼働させるために必要なソフトウェア（OS、ミドルウェア）とEBSボリュームのコピーが内蔵されたテンプレートである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html</a></li>
 <li><a href="https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html">https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html</a></li>
@@ -10370,16 +10370,16 @@
 <h3 id="ami_1">AMIタイプ<a class="headerlink" href="#ami_1" title="Permanent link">&para;</a></h3>
 <h4 id="ebs-backed-ami">▼ EBS-backed AMI<a class="headerlink" href="#ebs-backed-ami" title="Permanent link">&para;</a></h4>
 <p>EBSボリュームを持つEC2インスタンスを作成するAMIのこと。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></p>
 <h4 id="instance-store-backed-ami">▼ instance store-backed AMI<a class="headerlink" href="#instance-store-backed-ami" title="Permanent link">&para;</a></h4>
 <p>インスタンスストアボリュームを持つEC2インスタンスを作成するAMIのこと。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device</a></p>
 <p><br></p>
 <h3 id="ami-os">AMI OS<a class="headerlink" href="#ami-os" title="Permanent link">&para;</a></h3>
 <h4 id="amazon-linux">▼ Amazon Linux<a class="headerlink" href="#amazon-linux" title="Permanent link">&para;</a></h4>
 <h4 id="centos">▼ CentOS<a class="headerlink" href="#centos" title="Permanent link">&para;</a></h4>
 <p>ベンダー公式あるいは非公式が提供しているAMIが区別しにくいので、確実に公式ベンダーが提供しているもの選択すること。</p>
-<p>参考： <a href="https://wiki.centos.org/Cloud/AWS">https://wiki.centos.org/Cloud/AWS</a></p>
+<p>ℹ️ 参考： <a href="https://wiki.centos.org/Cloud/AWS">https://wiki.centos.org/Cloud/AWS</a></p>
 <p><br></p>
 <h2 id="01-03-ec2-with-ebselastic-block-storage">01-03. EC2 with EBS：Elastic Block Storage<a class="headerlink" href="#01-03-ec2-with-ebselastic-block-storage" title="Permanent link">&para;</a></h2>
 <h3 id="ebs_1">EBSとは<a class="headerlink" href="#ebs_1" title="Permanent link">&para;</a></h3>
@@ -10418,7 +10418,7 @@
 <tr>
 <td>暗号化</td>
 <td>EC2インスタンスとEBSボリューム間のI/O処理を暗号化するか否かを設定する。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -10504,7 +10504,7 @@
 </table>
 <h4 id="_14">▼ サイズの拡張<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>サイズを拡張するためには、実際のEBSボリューム、EBSボリューム内のパーティション、EC2内のファイルシステム、に関して対応する必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html#extend-file-system">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html#extend-file-system</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html#extend-file-system">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html#extend-file-system</a></p>
 <p><strong>＊例＊</strong></p>
 <p>（１）任意で、バックアップのために拡張対象のEC2インスタンスのAMIを作成しておく。</p>
 <p>（２）EC2インスタンスのEBSボリュームを<code>8</code>GiBから<code>16</code>GiBに拡張する例を考える。lsblkコマンドで現在のボリュームのサイズを確認すると、EBSボリュームが<code>8</code>GiBである。この時、EBSボリューム内にパーティションがある。また、<code>df</code>コマンドでボリュームに紐づくデバイスファイルのサイズを確認すると、同じく<code>8</code>GiBである。</p>
@@ -10647,7 +10647,7 @@ Filesystem     Type  Size  Used  Avail  Use%  Mounted on
 <h3 id="ebs_4">EBSボリュームの永続化<a class="headerlink" href="#ebs_4" title="Permanent link">&para;</a></h3>
 <h4 id="ebs_5">▼ EBSボリュームの永続化とは<a class="headerlink" href="#ebs_5" title="Permanent link">&para;</a></h4>
 <p>EC2インスタンスの初期作成時に、ストレージの追加の項目で『終了時に削除』の設定を無効化しておく。これにより、EC2インスタンスが削除されても、EBSボリュームを削除しないようにできる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#Using_RootDeviceStorage">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#Using_RootDeviceStorage</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#Using_RootDeviceStorage">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html#Using_RootDeviceStorage</a></p>
 <h4 id="ec2_2">▼ EC2インスタンスの作成後に永続化する<a class="headerlink" href="#ec2_2" title="Permanent link">&para;</a></h4>
 <p>EC2インスタンスの作成後に、EBSボリュームを永続化したい場合は、CLIを実行する必要がある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -10678,12 +10678,12 @@ Filesystem     Type  Size  Used  Avail  Use%  Mounted on
 </code></pre></div></td></tr></table></div>
 <h4 id="_15">▼ 注意点<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>EC2インスタンスにオートスケーリングを適用している場合は、EBSボリュームを永続化しない方が良いかもしれない。オートスケーリングのスケールイン時に、削除されたEC2インスタンスのEBSボリュームが削除されないため、未使用のEBSボリュームがどんどん溜まっていく問題が起こる。</p>
-<p>参考：<a href="https://qiita.com/YujiHamada3/items/c890a3de8937ea20bbb2">https://qiita.com/YujiHamada3/items/c890a3de8937ea20bbb2</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/YujiHamada3/items/c890a3de8937ea20bbb2">https://qiita.com/YujiHamada3/items/c890a3de8937ea20bbb2</a></p>
 <p><br></p>
 <h3 id="_16">スナップショット<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ スナップショットとは<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>バックアップとしてのEBSボリュームのコピーのこと。ソフトウェアとEBSボリュームのコピーの両方が内蔵されたAMIとは区別すること。</p>
-<p>参考：<a href="https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html">https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html</a></p>
+<p>ℹ️ 参考：<a href="https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html">https://aws.typepad.com/sajp/2014/04/trainingfaqbest10.html</a></p>
 <h4 id="_18">▼ セットアップ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -10721,7 +10721,7 @@ Filesystem     Type  Size  Used  Avail  Use%  Mounted on
 <tr>
 <td>可視性</td>
 <td>イメージリポジトリをパブリックあるいはプライベートにするかを設定する。</td>
-<td>様々なベンダーがパブリックリポジトリでECRイメージを提供している。<br>参考：<a href="https://gallery.ecr.aws/">https://gallery.ecr.aws/</a></td>
+<td>様々なベンダーがパブリックリポジトリでECRイメージを提供している。<br>ℹ️ 参考：<a href="https://gallery.ecr.aws/">https://gallery.ecr.aws/</a></td>
 </tr>
 <tr>
 <td>タグのイミュータビリティ</td>
@@ -10731,7 +10731,7 @@ Filesystem     Type  Size  Used  Avail  Use%  Mounted on
 <tr>
 <td>プッシュ時にスキャン</td>
 <td>イメージがプッシュされた時に、コンテナイメージにインストールされているパッケージの脆弱性を検証し、一覧表示する。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html</a></td>
 </tr>
 <tr>
 <td>暗号化設定</td>
@@ -10743,7 +10743,7 @@ Filesystem     Type  Size  Used  Avail  Use%  Mounted on
 <p><br></p>
 <h3 id="_20">イメージのプッシュ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <h4 id="_21">▼ コンテナイメージの場合<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html</a></p>
 <p>（１）ECRにログインする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -10766,7 +10766,7 @@ $ docker tag &lt;イメージID&gt; &lt;イメージリポジトリURL&gt;:&lt;�
 $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="helm">▼ helmチャートの場合<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html">https://docs.aws.amazon.com/AmazonECR/latest/userguide/push-oci-artifact.html</a></p>
 <p><br></p>
 <h3 id="_22">ライフサイクル<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <h4 id="_23">▼ ライフサイクルポリシー<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
@@ -10801,7 +10801,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h3 id="_24">バージョンタグ<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="_25">▼ タグ名のベストプラクティス<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>Dockerのベストプラクティスに則り、タグ名にlatestを使用しないようにする。その代わりに、コンテナイメージのバージョンごとに異なるタグ名になるようハッシュ値（例：GitHubのコミットID）を使用する。</p>
-<p>参考：<a href="https://matsuand.github.io/docs.docker.jp.onthefly/develop/dev-best-practices/">https://matsuand.github.io/docs.docker.jp.onthefly/develop/dev-best-practices/</a></p>
+<p>ℹ️ 参考：<a href="https://matsuand.github.io/docs.docker.jp.onthefly/develop/dev-best-practices/">https://matsuand.github.io/docs.docker.jp.onthefly/develop/dev-best-practices/</a></p>
 <p><br></p>
 <h2 id="03-ecsekselastic-containerkubernetes-service">03. ECS、EKS：Elastic Container/Kubernetes Service<a class="headerlink" href="#03-ecsekselastic-containerkubernetes-service" title="Permanent link">&para;</a></h2>
 <h3 id="_26">コントロールプレーンとデータプレーンの対応関係<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
@@ -10822,7 +10822,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <tr>
 <td>EKS</td>
 <td>EC2、Fargate</td>
-<td>複数のOS上それぞれでコンテナオーケストレーションを実行する。<br>参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></td>
+<td>複数のOS上それぞれでコンテナオーケストレーションを実行する。<br>ℹ️ 参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></td>
 </tr>
 </tbody>
 </table>
@@ -10832,11 +10832,11 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p>コンテナオーケストレーションを実行する環境を提供する。データプレーンのVPC外に存在している。</p>
 <h4 id="ecs">▼ ECSの場合<a class="headerlink" href="#ecs" title="Permanent link">&para;</a></h4>
 <p>開発者や他のAWSリソースからのアクセスを待ち受けるAPI、データプレーンを管理するコンポーネント、からなる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-amazon-elastic-container-service-and-aws-fargate-increase-task-launch-rates/">https://aws.amazon.com/jp/blogs/news/under-the-hood-amazon-elastic-container-service-and-aws-fargate-increase-task-launch-rates/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-amazon-elastic-container-service-and-aws-fargate-increase-task-launch-rates/">https://aws.amazon.com/jp/blogs/news/under-the-hood-amazon-elastic-container-service-and-aws-fargate-increase-task-launch-rates/</a></p>
 <p><img alt="ecs_control-plane" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_control-plane.png" /></p>
 <h4 id="eks">▼ EKSの場合<a class="headerlink" href="#eks" title="Permanent link">&para;</a></h4>
 <p>開発者や他のAWSリソースからのアクセスを待ち受けるAPI、アクセスをAPIにルーティングするNLB、データプレーンを管理するコンポーネント、からなる。</p>
-<p>参考：<a href="https://aws.github.io/aws-eks-best-practices/reliability/docs/controlplane/">https://aws.github.io/aws-eks-best-practices/reliability/docs/controlplane/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.github.io/aws-eks-best-practices/reliability/docs/controlplane/">https://aws.github.io/aws-eks-best-practices/reliability/docs/controlplane/</a></p>
 <p><img alt="eks_control-plane" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/eks_control-plane.png" /></p>
 <p><br></p>
 <h3 id="_29">データプレーン<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
@@ -10846,18 +10846,18 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p>EC2インスタンスをホストとして、コンテナを作成する。</p>
 <h4 id="fargate">▼ Fargateの場合<a class="headerlink" href="#fargate" title="Permanent link">&para;</a></h4>
 <p>マネージドなサーバーをホストとして、コンテナを作成する。実体は、EC2インスタンスをホストとして、コンテナを稼働させている（ドキュメントに記載がないが、AWSサポートに確認済み）。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/">https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/">https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/</a></p>
 <p><img alt="fargate_data-plane" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fargate_data-plane.png" /></p>
 <p><br></p>
 <h2 id="03-02-ecs">03-02. ECSデータプレーン<a class="headerlink" href="#03-02-ecs" title="Permanent link">&para;</a></h2>
 <h3 id="ecs_1">ECSクラスター<a class="headerlink" href="#ecs_1" title="Permanent link">&para;</a></h3>
 <p>ECSサービスの管理グループ単位のこと。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/clusters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/clusters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/clusters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/clusters.html</a></p>
 <p><img alt="ecs_cluster" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_cluster.png" /></p>
 <p><br></p>
 <h3 id="ecs_2">ECSサービス<a class="headerlink" href="#ecs_2" title="Permanent link">&para;</a></h3>
 <p>ECSタスクの管理グループ単位のこと。ECSタスクへのロードバランシング、タスクの数の維持管理や、リリースの成否の管理を行う。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/service_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/service_definition_parameters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/service_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/service_definition_parameters.html</a></p>
 <p><br></p>
 <h3 id="ecs_3">ECSタスク<a class="headerlink" href="#ecs_3" title="Permanent link">&para;</a></h3>
 <h4 id="ecs_4">▼ ECSタスク<a class="headerlink" href="#ecs_4" title="Permanent link">&para;</a></h4>
@@ -10866,7 +10866,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="ecs_5">▼ ECSコンテナエージェント<a class="headerlink" href="#ecs_5" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-execution-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-execution-role.png" /></p>
 <p>ECSタスク実行ロールを使用して、ECSタスクのライフサイクルを管理する。Fargateの場合、ECSコンテナエージェントがプリインストールされている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
 <li><a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-task-networking-for-amazon-ecs/">https://aws.amazon.com/jp/blogs/news/under-the-hood-task-networking-for-amazon-ecs/</a></li>
@@ -10876,14 +10876,14 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="ecs_7">▼ ECSタスクのライフサイクル<a class="headerlink" href="#ecs_7" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task_life-cycle" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task_life-cycle.png" /></p>
 <p>ECSタスクは、必須コンテナ異常停止時、デプロイ、自動スケーリング、手動操作、の時にライフサイクルを持つ。AWS側の操作が終了した時点でRunningステータスになるが、コンテナの起動に時間がかかるようなアプリケーション（例：SSR）の場合は、Runningステータスであっても使用できる状態ではないことに注意する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle.html#lifecycle-states">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle.html#lifecycle-states</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle.html#lifecycle-states">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle.html#lifecycle-states</a></p>
 <p>正常停止と異常停止に関わらず、停止理由を確認できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-errors.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-errors.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-errors.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/stopped-task-errors.html</a></p>
 <p><br></p>
 <h3 id="_31">ロール<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
 <h4 id="_32">▼ サービスロール<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
 <p>ECSサービスがECSタスクを操作するために必要なロールである。サービスリンクロールに含まれ、ECSの作成時に自動的に紐付けられる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
@@ -10891,7 +10891,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="_33">▼ コンテナインスタンスロール<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_container-instance-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_container-instance-role.png" /></p>
 <p>コンテナのホストが他のAWSリソースにアクセスするために必要なロールである。Fargateの場合、不要である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
@@ -10899,7 +10899,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="_34">▼ タスクロール<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-role.png" /></p>
 <p>ECSタスク内のコンテナのアプリケーションが、他のAWSリソースにアクセスするために必要なロールである。アプリケーションにS3やSystems Managerへのアクセス権限を与えたい場合は、タスク実行ロールではなくタスクロールに権限を紐付ける。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
@@ -10965,7 +10965,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="_35">▼ タスク実行ロール<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p><img alt="ecs_task-execution-role" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_task-execution-role.png" /></p>
 <p>ECSタスク内のECSコンテナエージェントが、他のAWSリソースにアクセスするために必要なロールのこと。AWS管理ポリシーである『<code>AmazonECSTaskExecutionRolePolicy</code>』が紐付けられたロールを、タスクに紐付ける必要がある。このポリシーには、ECRへのアクセス権限の他、CloudWatchログにログを作成するための権限が設定されている。ECSタスク内のコンテナがリソースにアクセスするために必要なタスクロールとは区別すること。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/ecs_fargate_iamrole/">https://dev.classmethod.jp/articles/ecs_fargate_iamrole/</a></li>
 <li><a href="https://dev.classmethod.jp/articles/ecs_ec2_iamrole/">https://dev.classmethod.jp/articles/ecs_ec2_iamrole/</a></li>
@@ -11040,15 +11040,15 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p>外部ネットワークが無く、タスクと外と通信できない。</p>
 <h4 id="host">▼ hostモード<a class="headerlink" href="#host" title="Permanent link">&para;</a></h4>
 <p>EC2でのみ使用できる。Dockerのhostネットワークに相当する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-host">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-host</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-host">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-host</a></p>
 <p><img alt="network-mode_host-mode" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/network-mode_host-mode.png" /></p>
 <h4 id="bridge">▼ bridgeモード<a class="headerlink" href="#bridge" title="Permanent link">&para;</a></h4>
 <p>EC2でのみ使用できる。Dockerのbridgeネットワークに相当する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge</a></p>
 <p><img alt="network-mode_host-mode" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/network-mode_host-mode.png" /></p>
 <h4 id="awsvpc">▼ awsvpcモード<a class="headerlink" href="#awsvpc" title="Permanent link">&para;</a></h4>
 <p>FargateとEC2の両方で使用できる。awsの独自ネットワークモード。タスクはElastic Networkインターフェースと紐付けられ、コンテナではなくタスク単位でプライベートIPアドレスが割り当てられる。Fargateの場合、同じタスクに属するコンテナ間は、localhostインターフェイスというENI経由で通信できるようになる（推測ではあるが、FargateとしてのEC2インスタンスにlocalhostインターフェースが紐付けられる）。これにより、コンテナからコンテナに通信するとき（例：NginxコンテナからPHP-FPMコンテナへのルーティング）は、通信元コンテナにて、通信先のアドレスを『localhost（<code>127.0.0.1</code>）』で指定すれば良い。また、awsvpcモードの独自の仕組みとして、同じECSタスク内であれば、互いにコンテナポートを開放せずとも、インバウンド通信を待ち受けるポートを指定するだけで、コンテナ間で通信できる。例えば、NginxコンテナからPHP-FPMコンテナにリクエストをルーティングするためには、PHP-FPMプロセスが<code>9000</code>番ポートでインバウンド通信を受信し、さらにコンテナが<code>9000</code>番ポートを開放する必要がある。しかし、awsvpcモードではコンテナポートを開放する必要はない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-awsvpc">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-awsvpc</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-task-networking.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-task-networking.html</a></li>
@@ -11058,11 +11058,11 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h3 id="ecs_8">マルチECSサービス<a class="headerlink" href="#ecs_8" title="Permanent link">&para;</a></h3>
 <h4 id="ecs_9">▼ マルチECSサービスとは<a class="headerlink" href="#ecs_9" title="Permanent link">&para;</a></h4>
 <p>ECSクラスターが複数のECSサービスから構成される。マイクロサービスアーキテクチャのアプリケーション群を稼働させる時、Kubernetesを使用するのが基本である。ただし、ECSクラスター内に複数のECSサービスを作成することにより、Kubernetesのような構成を実現できる。</p>
-<p>参考：<a href="https://tangocode.com/2018/11/when-to-use-lambdas-vs-ecs-docker-containers/">https://tangocode.com/2018/11/when-to-use-lambdas-vs-ecs-docker-containers/</a></p>
+<p>ℹ️ 参考：<a href="https://tangocode.com/2018/11/when-to-use-lambdas-vs-ecs-docker-containers/">https://tangocode.com/2018/11/when-to-use-lambdas-vs-ecs-docker-containers/</a></p>
 <p><img alt="ecs-fargate_microservices" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs-fargate_microservices.png" /></p>
 <h4 id="ecs_10">▼ ECSサービスディスカバリー<a class="headerlink" href="#ecs_10" title="Permanent link">&para;</a></h4>
 <p>Istioと同様にして、マイクロサービスが他のマイクロサービスにリクエストを送信する時に、Route53を使用してIPアドレスの名前解決を行う。オートスケーリングなどでマイクロサービスのIPアドレスが変更されても、動的にレコードを変更する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://practical-aws.dev/p/ecs-service-discovery/">https://practical-aws.dev/p/ecs-service-discovery/</a></li>
 <li><a href="https://medium.com/@toddrosner/ecs-service-discovery-1366b8a75ad6">https://medium.com/@toddrosner/ecs-service-discovery-1366b8a75ad6</a></li>
@@ -11077,16 +11077,16 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p>データプレーンをプライベートサブネットに配置した場合、パブリックネットワークに対してアウトバウンド通信を送信するためには、NAT Gatewayを配置する必要がある。</p>
 <h4 id="vpcaws">▼ VPC外のAWSリソースに対する通信<a class="headerlink" href="#vpcaws" title="Permanent link">&para;</a></h4>
 <p>データプレーンをプライベートサブネットに配置した場合、VPC外にあるAWSリソース（コントロールプレーン、ECR、S3、Systems Manager、CloudWatch、DynamoDB、など）に対してアウトバウンド通信を送信するためには、NAT GatewayあるいはVPCエンドポイントを配置する必要がある。もしNAT Gatewayを設置したとする。この場合、VPCエンドポイントよりもNAT Gatewayの方が高く、AWSリソースに対する通信でもNAT Gatewayを通過するため、高額料金を請求されてしまう。</p>
-<p>参考：<a href="https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint">https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint">https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint</a></p>
 <p><img alt="ecs_nat-gateway" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_nat-gateway.png" /></p>
 <p>代わりに、VPCエンドポイントを設置する。より低額でデータプレーンがVPC外のAWSリソースのアクセスできるようになる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-connecting-vpc.html#networking-connecting-privatelink">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-connecting-vpc.html#networking-connecting-privatelink</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-connecting-vpc.html#networking-connecting-privatelink">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-connecting-vpc.html#networking-connecting-privatelink</a></p>
 <p><img alt="ecs_control-plane_vpc-endpoint" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs_control-plane_vpc-endpoint.png" /></p>
 <p><br></p>
 <h3 id="_40">ログ転送<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
 <h4 id="awslogs">▼ awslogsドライバー<a class="headerlink" href="#awslogs" title="Permanent link">&para;</a></h4>
 <p>標準出力/標準エラー出力に出力されたログをCloudWatch-APIに送信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.docker.com/config/containers/logging/awslogs/">https://docs.docker.com/config/containers/logging/awslogs/</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html#create_awslogs_logdriver_options">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_awslogs.html#create_awslogs_logdriver_options</a></li>
@@ -11108,7 +11108,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <tr>
 <td><code>awslogs-datetime-format</code></td>
 <td>日時フォーマットを定義し、またこれをログの区切り単位としてログストリームに出力する。</td>
-<td>正規表現で設定する必要があり、さらにJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。例えば『<code>\\[%Y-%m-%d %H:%M:%S\\]</code>』となる。<br>参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format">https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format</a></td>
+<td>正規表現で設定する必要があり、さらにJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。例えば『<code>\\[%Y-%m-%d %H:%M:%S\\]</code>』となる。<br>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format">https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format</a></td>
 </tr>
 <tr>
 <td><code>awslogs-region</code></td>
@@ -11124,12 +11124,12 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </table>
 <h4 id="firelens">▼ FireLensコンテナ<a class="headerlink" href="#firelens" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html</a></p>
 <p><br></p>
 <h2 id="03-02-02-on-ec2">03-02-02. on EC2<a class="headerlink" href="#03-02-02-on-ec2" title="Permanent link">&para;</a></h2>
 <h3 id="ec2ami">EC2インスタンスの最適化AMI<a class="headerlink" href="#ec2ami" title="Permanent link">&para;</a></h3>
 <p>任意のEC2インスタンスを使用できるが、AWSが用意している最適化AMIを選んだ方が良い。このAMIには、EC2がECSと連携するために必要なソフトウェアがプリインストールされており、EC2インスタンスをセットアップする手間が省ける。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html</a> </p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html</a> </p>
 <table>
 <thead>
 <tr>
@@ -11146,7 +11146,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </tr>
 <tr>
 <td>ECS最適化Amazon Linux 2022</td>
-<td>Amazon Linux 2よりも先進的な機能を持つEC2インスタンスを作成できる。<br>参考：<a href="https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html">https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html</a></td>
+<td>Amazon Linux 2よりも先進的な機能を持つEC2インスタンスを作成できる。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html">https://docs.aws.amazon.com/linux/al2022/ug/compare-al2-to-AL2022.html</a></td>
 <td></td>
 </tr>
 <tr>
@@ -11237,12 +11237,12 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <tr>
 <td>最小ヘルス率</td>
 <td>ECSタスクの必要数の設定を<code>100</code>%とし、新しいタスクのデプロイ時に、稼働中タスクの最低合計数を割合で設定する。</td>
-<td>例として、タスク必要数が4個だと仮定する。タスクヘルス最小率を50%とすれば、稼働中タスクの最低合計数は2個となる。デプロイ時の既存タスク停止と新タスク起動では、稼働中の既存タスク/新タスクの数が最低合計数未満にならないように制御される。<br>参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments</a></td>
+<td>例として、タスク必要数が4個だと仮定する。タスクヘルス最小率を50%とすれば、稼働中タスクの最低合計数は2個となる。デプロイ時の既存タスク停止と新タスク起動では、稼働中の既存タスク/新タスクの数が最低合計数未満にならないように制御される。<br>ℹ️ 参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments</a></td>
 </tr>
 <tr>
 <td>最大率</td>
 <td>ECSタスクの必要数の設定を<code>100</code>%とし、新しいタスクのデプロイ時に、稼働中/停止中タスクの最高合計数を割合で設定する。</td>
-<td>例として、タスク必要数が4個だと仮定する。タスク最大率を200%とすれば、稼働中/停止中タスクの最高合計数は８個となる。デプロイ時の既存タスク停止と新タスク起動では、稼働中/停止中の既存タスク/新タスクの数が最高合計数を超過しないように制御される。<br>参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments</a></td>
+<td>例として、タスク必要数が4個だと仮定する。タスク最大率を200%とすれば、稼働中/停止中タスクの最高合計数は８個となる。デプロイ時の既存タスク停止と新タスク起動では、稼働中/停止中の既存タスク/新タスクの数が最高合計数を超過しないように制御される。<br>ℹ️ 参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments</a></td>
 </tr>
 <tr>
 <td>ヘルスチェックの猶予期間</td>
@@ -11360,7 +11360,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </table>
 <h4 id="_43">▼ コンテナ定義<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
 <p>ECSタスク内のコンテナ1つに対して、環境を設定する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/task_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/task_definition_parameters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/task_definition_parameters.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/task_definition_parameters.html</a></p>
 <table>
 <thead>
 <tr>
@@ -11375,7 +11375,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <td>cpu</td>
 <td><code>--cpus</code></td>
 <td>タスク全体に割り当てられたメモリ（タスクメモリ）のうち、該当のコンテナに最低限割り当てるCPUユニット数を設定する。cpuReservationという名前になっていないことに注意する。 CPUユニット数の比率に基づいて、タスク全体のCPUが各コンテナに割り当てられる。『ソフト制限』ともいう。</td>
-<td>参考：<br>・<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment</a><br>・<a href="https://qiita.com/_akiyama_/items/e9760dd61d94b8031247">https://qiita.com/_akiyama_/items/e9760dd61d94b8031247</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment</a><br>・<a href="https://qiita.com/_akiyama_/items/e9760dd61d94b8031247">https://qiita.com/_akiyama_/items/e9760dd61d94b8031247</a></td>
 </tr>
 <tr>
 <td>dnsServers</td>
@@ -11417,7 +11417,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <td>image</td>
 <td></td>
 <td>ECRのURLを設定する。</td>
-<td>指定できるURLの記法は、Dockerfileの<code>FROM</code>と同じである。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html</a></td>
+<td>指定できるURLの記法は、Dockerfileの<code>FROM</code>と同じである。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html</a></td>
 </tr>
 <tr>
 <td>logConfiguration<br>(logDriver)</td>
@@ -11435,7 +11435,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <td>portMapping</td>
 <td><code>--publish</code><br><code>--expose</code></td>
 <td>ホストとFargateのアプリケーションのポート番号をマッピングし、ポートフォワーディングを行う。</td>
-<td><code>containerPort</code>のみを設定し、<code>hostPort</code>は設定しなければ、EXPOSEとして定義できる。<br>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html">https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html</a></td>
+<td><code>containerPort</code>のみを設定し、<code>hostPort</code>は設定しなければ、EXPOSEとして定義できる。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html">https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html</a></td>
 </tr>
 <tr>
 <td>secrets<br>(volumesFrom)</td>
@@ -11447,19 +11447,19 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <td>memory</td>
 <td><code>--memory</code></td>
 <td>コンテナのメモリサイズの閾値を設定し、これを超えた場合にコンテナを停止する『ハード制限』ともいう。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory</a></td>
 </tr>
 <tr>
 <td>memoryReservation</td>
 <td><code>--memory-reservation</code></td>
 <td>タスク全体に割り当てられたメモリ（タスクメモリ）のうち、該当のコンテナに最低限割り当てるメモリ分を設定する。『ソフト制限』ともいう。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_memory</a></td>
 </tr>
 <tr>
 <td>mountPoints</td>
 <td></td>
 <td>隠蔽されたホストとコンテナの間でボリュームマウントを実行する。Fargateは、脆弱性とパフォーマンスの観点で、バインドマウントに対応していない。</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html</a></td>
 </tr>
 <tr>
 <td>ulimit</td>
@@ -11476,7 +11476,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="fargateip">▼ FargateのIPアドレス<a class="headerlink" href="#fargateip" title="Permanent link">&para;</a></h4>
 <p><img alt="NatGatewayを介したFargateから外部サービスへのアウトバウンド通信" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/NatGatewayを介したFargateから外部サービスへのアウトバウンド通信.png" /></p>
 <p>Fargateは動的パブリックIPアドレス（Fargateの再作成後に変化するIPアドレス）を持ち、固定パブリックIPアドレスであるElastic IPアドレスを設定できない。アウトバウンド通信の先にある外部サービスが、セキュリティ上で静的なIPアドレスを要求する場合、アウトバウンド通信（パブリックネットワーク向き通信）時に送信元パケットに付加されるIPアドレスが動的になり、リクエストできなくなってしまう。そこで、Fargateのアウトバウンド通信が、Elastic IPアドレスを持つNAT Gatewayを経由する（Fargateは、パブリックサブネットとプライベートサブネットのどちらに置いても良い）。これによって、NAT GatewayのElastic IPアドレスが送信元パケットに付加されるため、Fargateの送信元IPアドレスを見かけ上静的に扱えるようになる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/ecs-fargate-static-elastic-ip-address/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/ecs-fargate-static-elastic-ip-address/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/ecs-fargate-static-elastic-ip-address/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/ecs-fargate-static-elastic-ip-address/</a></p>
 <p><br></p>
 <h3 id="ecs_13">ECSタスクの一時起動<a class="headerlink" href="#ecs_13" title="Permanent link">&para;</a></h3>
 <h4 id="_44">▼ マイグレーション<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
@@ -11612,7 +11612,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h3 id="ecs_14">ECSタスクのデプロイ手法<a class="headerlink" href="#ecs_14" title="Permanent link">&para;</a></h3>
 <h4 id="_45">▼ ローリングアップデート<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
 <p><img alt="rolling-update" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/rolling-update.png" /></p>
-<p>参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments/">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments/</a></p>
+<p>ℹ️ 参考：<a href="https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments/">https://toris.io/2021/04/speeding-up-amazon-ecs-container-deployments/</a></p>
 <ol>
 <li>最小ヘルス率の設定値を基に、ローリングアップデート時の稼働中タスクの最低合計数が決定される。</li>
 <li>最大率の設定値を基に、ローリングアップデート時の稼働中/停止中タスクの最高合計数が決まる</li>
@@ -11663,7 +11663,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 </tbody>
 </table>
 <p>プライベートサブネット内のFargateからVPC外のAWSリソース（コントロールプレーン、ECR、S3、Systems Manager、CloudWatch、DynamoDB、など）にアクセスする場合、専用のVPCエンドポイントを設け、これに対してアウトバウンド通信を行うようにすると良い。NAT GatewayとVPCエンドポイントの両方を作成している場合、ルートテーブルでは、VPCエンドポイントへのアウトバウンド通信の方が優先される。そのため、NAT Gatewayがある状態でVPCエンドポイントを作成すると、接続先が自動的に変わってしまうことに注意する。注意点として、パブリックネットワークにアウトバウンド通信を送信する場合は、VPCエンドポイントだけでなくNAT Gatewayも作成する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/vpc-endpoints.html#ecs-vpc-endpoint-ecsexec">https://docs.aws.amazon.com/AmazonECS/latest/userguide/vpc-endpoints.html#ecs-vpc-endpoint-ecsexec</a></li>
 <li><a href="https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint">https://zenn.dev/yoshinori_satoh/articles/ecs-fargate-vpc-endpoint</a></li>
@@ -11674,7 +11674,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <h4 id="session-managerecs-exec">▼ Session Managerを使用したECS Exec<a class="headerlink" href="#session-managerecs-exec" title="Permanent link">&para;</a></h4>
 <p><img alt="fargate_ecs-exec" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fargate_ecs-exec.png" /></p>
 <p>Session Managerを使用してECSタスク内のコンテナに接続し、コンテナのログインシェルを起動する。System Managerを使用してコンテナに接続する場合、コンテナのホストにsystems-managerエージェントをインストールしておく必要がある。ただし、FargateとしてのEC2インスタンスには、systems-managerエージェントがプリインストールされているため、これは不要である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/ecs-exec.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/ecs-exec.html</a></li>
 <li><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-messageAPIs.html">https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-setting-up-messageAPIs.html</a></li>
@@ -11747,7 +11747,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>（５）事前の設定がなされているか否かをecs-exec-checkerスクリプトを実行して確認する。</p>
-<p>参考：<a href="https://github.com/aws-containers/amazon-ecs-exec-checker">https://github.com/aws-containers/amazon-ecs-exec-checker</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws-containers/amazon-ecs-exec-checker">https://github.com/aws-containers/amazon-ecs-exec-checker</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11799,11 +11799,11 @@ aws ecs execute-command <span class="se">\</span>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ aws configure
 </code></pre></div></td></tr></table></div>
 <p>（２）EKSのコンテキストを作成する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html">https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html">https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ aws eks update-kubeconfig --region ap-northeast-1 --name foo-eks-cluster
 </code></pre></div></td></tr></table></div>
 <p>（３）<code>kubectl</code>コマンドの宛先を、EKSのkube-apiserverに変更する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl config use-context &lt;ClusterのARN&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="vpc">▼ VPC<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h4>
@@ -11811,7 +11811,7 @@ aws ecs execute-command <span class="se">\</span>
 <p><br></p>
 <h3 id="eks_1">EKSの仕組み<a class="headerlink" href="#eks_1" title="Permanent link">&para;</a></h3>
 <h4 id="ekskubernetes">▼ EKSとKubernetesの対応<a class="headerlink" href="#ekskubernetes" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://zenn.dev/yoshinori_satoh/articles/2021-02-13-eks-ecs-compare">https://zenn.dev/yoshinori_satoh/articles/2021-02-13-eks-ecs-compare</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/yoshinori_satoh/articles/2021-02-13-eks-ecs-compare">https://zenn.dev/yoshinori_satoh/articles/2021-02-13-eks-ecs-compare</a></p>
 <p><img alt="eks" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/eks.png" /></p>
 <table>
 <thead>
@@ -11825,42 +11825,42 @@ aws ecs execute-command <span class="se">\</span>
 <tr>
 <td>Cluster</td>
 <td>EKS Cluster</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">https://docs.aws.amazon.com/eks/latest/userguide/clusters.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/clusters.html">https://docs.aws.amazon.com/eks/latest/userguide/clusters.html</a></td>
 </tr>
 <tr>
 <td>Ingress</td>
 <td>ALB Ingress</td>
-<td>AWS LBコントローラーによって、自動的に作成される。<br>参考：<br>・<a href="https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html">https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html</a><br>・<a href="https://blog.linkode.co.jp/entry/2020/06/26/095917#AWS-ALB-Ingress-Controller-for-Kubernetes">https://blog.linkode.co.jp/entry/2020/06/26/095917#AWS-ALB-Ingress-Controller-for-Kubernetes</a></td>
+<td>AWS LBコントローラーによって、自動的に作成される。<br>ℹ️ 参考：<br>・<a href="https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html">https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html</a><br>・<a href="https://blog.linkode.co.jp/entry/2020/06/26/095917#AWS-ALB-Ingress-Controller-for-Kubernetes">https://blog.linkode.co.jp/entry/2020/06/26/095917#AWS-ALB-Ingress-Controller-for-Kubernetes</a></td>
 </tr>
 <tr>
 <td>Ingressコントローラー</td>
 <td>AWS LBコントローラー</td>
-<td>参考：<a href="https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/">https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/</a></td>
+<td>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/">https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/</a></td>
 </tr>
 <tr>
 <td></td>
 <td>API Gateway＋NLB</td>
-<td>参考：<a href="https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/">https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/</a></td>
+<td>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/">https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/</a></td>
 </tr>
 <tr>
 <td>マスターNode</td>
 <td>EKSコントロールプレーン</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html">https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html">https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html</a></td>
 </tr>
 <tr>
 <td>ワーカーNode</td>
 <td>Fargate Node、EC2 Node</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html">https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html">https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html</a></td>
 </tr>
 <tr>
 <td>PersistentVolume</td>
 <td>EBS、EFS</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/storage.html">https://docs.aws.amazon.com/eks/latest/userguide/storage.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/storage.html">https://docs.aws.amazon.com/eks/latest/userguide/storage.html</a></td>
 </tr>
 <tr>
 <td>Secret</td>
 <td>System Manager</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/manage-secrets.html">https://docs.aws.amazon.com/eks/latest/userguide/manage-secrets.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/manage-secrets.html">https://docs.aws.amazon.com/eks/latest/userguide/manage-secrets.html</a></td>
 </tr>
 <tr>
 <td>kube-dns</td>
@@ -11875,7 +11875,7 @@ aws ecs execute-command <span class="se">\</span>
 <tr>
 <td>種々のCNIプラグイン</td>
 <td>aws-nodeコンテナ</td>
-<td>VPCのIPアドレスをPodに割り当て、Clusterネットワーク内にある通信がPodに接続できるようにする。<br>参考：<br>・<a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html">https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html</a><br>・<a href="https://tech-blog.optim.co.jp/entry/2021/11/10/100000">https://tech-blog.optim.co.jp/entry/2021/11/10/100000</a></td>
+<td>VPCのIPアドレスをPodに割り当て、Clusterネットワーク内にある通信がPodに接続できるようにする。<br>ℹ️ 参考：<br>・<a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html">https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html</a><br>・<a href="https://tech-blog.optim.co.jp/entry/2021/11/10/100000">https://tech-blog.optim.co.jp/entry/2021/11/10/100000</a></td>
 </tr>
 <tr>
 <td>これら以外のリソース</td>
@@ -11888,7 +11888,7 @@ aws ecs execute-command <span class="se">\</span>
 <h3 id="eks-cluster_1">EKS Cluster<a class="headerlink" href="#eks-cluster_1" title="Permanent link">&para;</a></h3>
 <h4 id="eks-cluster_2">▼ EKS Clusterとは<a class="headerlink" href="#eks-cluster_2" title="Permanent link">&para;</a></h4>
 <p>Fargate NodeやEC2 Nodeの管理グループ単位のこと。KubernetesのClusterに相当する。</p>
-<p>参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
+<p>ℹ️ 参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
 <h4 id="_48">▼ セットアップ<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -11907,17 +11907,17 @@ aws ecs execute-command <span class="se">\</span>
 <tr>
 <td>Kubernetesバージョン</td>
 <td>EKS上で稼働するKubernetesのバージョンを設定する。</td>
-<td>EKSが対応できるKubernetesのバージョンは以下を参考にせよ。<br>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html">https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html</a></td>
+<td>EKSが対応できるKubernetesのバージョンは以下を参考にせよ。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html">https://docs.aws.amazon.com/eks/latest/userguide/platform-versions.html</a></td>
 </tr>
 <tr>
 <td>クラスターサービスロール</td>
 <td>EKS Clusterのサービスリンクロールを設定する。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html">https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html">https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html</a></td>
 </tr>
 <tr>
 <td>シークレット</td>
 <td>Secretに保持するデータをAWS KMSで暗号化するか否かを設定する。</td>
-<td>AWS KMSについては、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html</a></td>
+<td>AWS KMSについては、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_4.html</a></td>
 </tr>
 <tr>
 <td>VPC、サブネット</td>
@@ -11927,7 +11927,7 @@ aws ecs execute-command <span class="se">\</span>
 <tr>
 <td>クラスターセキュリティグループ</td>
 <td>EKS Clusterのセキュリティグループを設定する。</td>
-<td>インバウンドとアウトバウンドの両方のルールで、全てのIPアドレスを許可する必要がある。このセキュリティグループは、追加のセキュリティグループとして設定され、別途、AWSによって<code>eks-cluster-sg-&lt;EKS Cluster名&gt;</code>というセキュリティグループも自動設定される。<br>参考：<a href="https://yuutookun.hatenablog.com/entry/fargate_for_eks">https://yuutookun.hatenablog.com/entry/fargate_for_eks</a></td>
+<td>インバウンドとアウトバウンドの両方のルールで、全てのIPアドレスを許可する必要がある。このセキュリティグループは、追加のセキュリティグループとして設定され、別途、AWSによって<code>eks-cluster-sg-&lt;EKS Cluster名&gt;</code>というセキュリティグループも自動設定される。<br>ℹ️ 参考：<a href="https://yuutookun.hatenablog.com/entry/fargate_for_eks">https://yuutookun.hatenablog.com/entry/fargate_for_eks</a></td>
 </tr>
 <tr>
 <td>クラスターIPアドレスファミリー</td>
@@ -11960,11 +11960,11 @@ aws ecs execute-command <span class="se">\</span>
 <h3 id="vpc_1">プライベートサブネット内のデータプレーンへのVPC外からのインバウンド通信<a class="headerlink" href="#vpc_1" title="Permanent link">&para;</a></h3>
 <h4 id="pod">▼ Podへのインバウンド通信<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h4>
 <p>EKSでは、Podをプライベートサブネットに配置する必要がある。そのため、パブリックネットワークからのインバウンド通信をAWS LBコントローラーで受信し、ALB Ingressを使用してPodにルーティングする。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-a-grpc-based-application-on-an-amazon-eks-cluster-and-access-it-with-an-application-load-balancer.html">https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-a-grpc-based-application-on-an-amazon-eks-cluster-and-access-it-with-an-application-load-balancer.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-a-grpc-based-application-on-an-amazon-eks-cluster-and-access-it-with-an-application-load-balancer.html">https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-a-grpc-based-application-on-an-amazon-eks-cluster-and-access-it-with-an-application-load-balancer.html</a></p>
 <p><img alt="eks_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/eks_architecture.png" /></p>
 <h4 id="_49">▼ コントロールプレーンへのインバウンド通信<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
 <p>コントロールプレーンでは、<code>kubectl</code> コマンドのエンドポイントとしてNLBが配置されている。VPC外からNLBへの<code>443</code>番ポートに対するアクセスはデフォルトでは許可されているが、拒否するように設定できる。もし拒否した場合、このNLBは閉じられ、VPC内からしか<code>443</code>番ポートでコントロールプレーンにアクセスできなくなる。この状態でコントロールプレーンにアクセスできるようにする方法としては、以下のパターンがある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html#private-access">https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html#private-access</a></li>
 <li><a href="https://note.com/tyrwzl/n/nf28cd4372b18">https://note.com/tyrwzl/n/nf28cd4372b18</a></li>
@@ -11996,13 +11996,13 @@ aws ecs execute-command <span class="se">\</span>
 <h3 id="_50">プライベートサブネット内のデータプレーンからのアウトバウンド通信<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
 <h4 id="vpcaws_1">▼ VPC外の他のAWSリソースへのアウトバウンド通信<a class="headerlink" href="#vpcaws_1" title="Permanent link">&para;</a></h4>
 <p>EKSでは、Podをプライベートサブネットに配置する必要がある。プライベートサブネットにを配置した場合、VPC外にあるAWSリソース（ECR、S3、Systems Manager、CloudWatch、DynamoDB、など）に対してアウトバウンド通信を送信するためには、NAT GatewayまたはVPCエンドポイントを配置する必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html">https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html</a></p>
 <p>以下のようなエラーでPodが起動しない場合、Podが何らかの理由でイメージをプルできない可能性がある。また、Podが作成されない限り、Nodeも作成されないことに注意する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Pod provisioning timed out (will retry) for pod
 </code></pre></div></td></tr></table></div>
 <h4 id="vpc_2">▼ VPC外のコントロールプレーンへのアウトバウンド通信<a class="headerlink" href="#vpc_2" title="Permanent link">&para;</a></h4>
 <p>EKS Clusterを作成すると、ENIが作成される。これにより、データプレーンがVPC外のコントロールプレーンと通信できるようになる。執筆時点（2022/05/27）では、データプレーンがコントロールプレーンと通信するためには、VPCエンドポイントではなくNAT Gatewayを配置する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dev.classmethod.jp/articles/eks_basic/">https://dev.classmethod.jp/articles/eks_basic/</a></li>
 <li><a href="https://aws.amazon.com/jp/blogs/news/de-mystifying-cluster-networking-for-amazon-eks-worker-nodes/">https://aws.amazon.com/jp/blogs/news/de-mystifying-cluster-networking-for-amazon-eks-worker-nodes/</a></li>
@@ -12011,16 +12011,16 @@ aws ecs execute-command <span class="se">\</span>
 <h3 id="node">マルチNode<a class="headerlink" href="#node" title="Permanent link">&para;</a></h3>
 <h4 id="node_1">▼ マルチNodeとは<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h4>
 <p>マルチNodeを作成する場合、AZごとにNodeを作成する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-networking.html">https://docs.aws.amazon.com/eks/latest/userguide/eks-networking.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-networking.html">https://docs.aws.amazon.com/eks/latest/userguide/eks-networking.html</a></p>
 <p><img alt="eks_multi-node" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/eks_multi-node.png" /></p>
 <h4 id="node_2">▼ Node間のファイル共有<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
 <p>EFSを使用して、Node間でファイルを共有する。</p>
-<p>参考：<a href="https://blog.linkode.co.jp/entry/2020/07/01/142155">https://blog.linkode.co.jp/entry/2020/07/01/142155</a></p>
+<p>ℹ️ 参考：<a href="https://blog.linkode.co.jp/entry/2020/07/01/142155">https://blog.linkode.co.jp/entry/2020/07/01/142155</a></p>
 <p><br></p>
 <h3 id="aws-lb-controller">AWS LB Controller<a class="headerlink" href="#aws-lb-controller" title="Permanent link">&para;</a></h3>
 <h4 id="_51">▼ セットアップ<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
 <p>（１）ローカルマシンにIAMポリシーの<code>.json</code>ファイルをダウンロードする。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html">https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html">https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ curl -o iam_policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.4.0/docs/install/iam_policy.json
 </code></pre></div></td></tr></table></div>
 <p>（２）<code>.json</code>ファイルを使用して、IAMポリシーを作成する。</p>
@@ -12063,7 +12063,7 @@ aws ecs execute-command <span class="se">\</span>
     --approve
 </code></pre></div></td></tr></table></div>
 <p>（６）ServiceAccountがデプロイされたことを確認する。</p>
-<p>参考：<a href="https://developer.mamezou-tech.com/containers/k8s/tutorial/ingress/ingress-aws/">https://developer.mamezou-tech.com/containers/k8s/tutorial/ingress/ingress-aws/</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mamezou-tech.com/containers/k8s/tutorial/ingress/ingress-aws/">https://developer.mamezou-tech.com/containers/k8s/tutorial/ingress/ingress-aws/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12180,9 +12180,9 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p p-Indicator">{</span><span class="s">&quot;level&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;error&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;ts&quot;</span><span class="p p-Indicator">:</span><span class="err">*****</span><span class="nv">.*****</span><span class="p p-Indicator">,</span><span class="s">&quot;logger&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;controller-runtime.manager.controller.ingress&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;msg&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;Reconciler</span><span class="nv"> </span><span class="s">error&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;foo-ingress&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;namespace&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;foo&quot;</span><span class="p p-Indicator">,</span><span class="s">&quot;error&quot;</span><span class="p p-Indicator">:</span><span class="s">&quot;ingress:</span><span class="nv"> </span><span class="s">foo/foo-ingress:</span><span class="nv"> </span><span class="s">WebIdentityErr:</span><span class="nv"> </span><span class="s">failed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">retrieve</span><span class="nv"> </span><span class="s">credentials\ncaused</span><span class="nv"> </span><span class="s">by:</span><span class="nv"> </span><span class="s">RequestError:</span><span class="nv"> </span><span class="s">send</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">failed\ncaused</span><span class="nv"> </span><span class="s">by:</span><span class="nv"> </span><span class="s">Post</span><span class="nv"> </span><span class="s">\&quot;https://sts.ap-northeast-1.amazonaws.com/\&quot;:</span><span class="nv"> </span><span class="s">dial</span><span class="nv"> </span><span class="s">tcp:</span><span class="nv"> </span><span class="s">lookup</span><span class="nv"> </span><span class="s">sts.ap-northeast-1.amazonaws.com</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">*.*.*.*:53:</span><span class="nv"> </span><span class="s">read</span><span class="nv"> </span><span class="s">udp</span><span class="nv"> </span><span class="s">*.*.*.*:43958-&gt;*.*.*.*:53:</span><span class="nv"> </span><span class="s">read:</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">refused&quot;</span><span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>（９）Ingressをデプロイし、IngressからALB Ingressを自動的に作成させる。以下の条件を満たす必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html">https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html">https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html</a></p>
 <h4 id="ingressalb">▼ IngressとALBの紐付け<a class="headerlink" href="#ingressalb" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/guide/ingress/annotations/">https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/guide/ingress/annotations/</a></li>
 <li><a href="https://qiita.com/murata-tomohide/items/ea4d9acefda92e05e20f">https://qiita.com/murata-tomohide/items/ea4d9acefda92e05e20f</a></li>
@@ -12229,15 +12229,15 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <h3 id="_52">デバッグ<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
 <h4 id="_53">▼ ダッシュボード<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
 <p>（１）EKSのコンテキストを作成する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html">https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html">https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ aws eks update-kubeconfig --region ap-northeast-1 --name foo-eks-cluster
 </code></pre></div></td></tr></table></div>
 <p>（２）<code>kubectl</code>コマンドの宛先を、EKSのkube-apiserverに変更する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#deploy-dashboard</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl config use-context &lt;ClusterのARN&gt;
 </code></pre></div></td></tr></table></div>
 <p>（３）マニフェストファイルを使用して、ダッシュボードのKubernetesリソースをEKSにデプロイする。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#eks-admin-service-account">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#eks-admin-service-account</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#eks-admin-service-account">https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html#eks-admin-service-account</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.5/aio/deploy/recommended.yaml
 </code></pre></div></td></tr></table></div>
 <p>（４）ダッシュボードに安全に接続するために、ServiceAccountをEKSにデプロイする</p>
@@ -12257,19 +12257,19 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <h3 id="_54">セットアップ<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h3>
 <h4 id="_55">▼ 制約<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
 <p>EC2にはない制約については、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate.html">https://docs.aws.amazon.com/eks/latest/userguide/fargate.html</a></li>
 <li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html">https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/install-ssm-agent-on-amazon-eks-worker-nodes-by-using-kubernetes-daemonset.html</a></li>
 </ul>
 <h4 id="_56">▼ メトリクス収集<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode内のメトリクスのデータポイントを収集する上で、FargateはDaemonSetに非対応のため、メトリクス収集コンテナをサイドカーコンテナとして設置する必要がある。収集ツールとして、OpenTelemetryをサポートしている。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/introducing-amazon-cloudwatch-container-insights-for-amazon-eks-fargate-using-aws-distro-for-opentelemetry/">https://aws.amazon.com/jp/blogs/news/introducing-amazon-cloudwatch-container-insights-for-amazon-eks-fargate-using-aws-distro-for-opentelemetry/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/introducing-amazon-cloudwatch-container-insights-for-amazon-eks-fargate-using-aws-distro-for-opentelemetry/">https://aws.amazon.com/jp/blogs/news/introducing-amazon-cloudwatch-container-insights-for-amazon-eks-fargate-using-aws-distro-for-opentelemetry/</a></p>
 <h4 id="_57">▼ ログルーティング<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode内のログを転送する上で、FargateはDaemonSetに非対応のため、ログ転送コンテナをサイドカーコンテナとして設置する必要がある。ロググーティングツールとして、FluentBitをサポートしている。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-logging.html">https://docs.aws.amazon.com/eks/latest/userguide/fargate-logging.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-logging.html">https://docs.aws.amazon.com/eks/latest/userguide/fargate-logging.html</a></p>
 <p>（１）ログ転送コンテナのためのNamespaceを作成する。名前は、必ず<code>aws-observability</code>とする。</p>
-<p>参考：<a href="https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/">https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/</a> </p>
+<p>ℹ️ 参考：<a href="https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/">https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/</a> </p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -12283,7 +12283,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <span class="w">    </span><span class="nt">aws-observability</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">enabled</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>（２）<code>aws-observability</code>内で<code>aws-logging</code>という名前のConfigMapを作成することにより、ログ転送コンテナとしてFluentBitコンテナが作成され、PodからCloudWatchログにログを送信できるようになる。名前は、必ず<code>aws-logging</code>とする。</p>
-<p>参考：<a href="https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/">https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/</a></p>
+<p>ℹ️ 参考：<a href="https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/">https://blog.mmmcorp.co.jp/blog/2021/08/11/post-1704/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl apply -f config-map.yaml
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12315,7 +12315,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <span class="w">        </span><span class="no">auto_create_group true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>（３）ワーカーNode（EC2、Fargate）にECRやCloudWatchへのアクセス権限を持つポッド実行ロールを付与しておく。これにより、KubernetesリソースにAWSへのアクセス権限が付与され、ServiceAccountやSecretを作成せずとも、PodがECRからコンテナイメージをプルできる様になる。一方で、Pod内のコンテナには権限が付与されないため、Podが作成された後に必要な権限（例：コンテナがRDSにアクセスする権限など）に関しては、ServiceAccountとIAMロールの紐付けが必要である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://nishipy.com/archives/1122">https://nishipy.com/archives/1122</a></li>
 <li><a href="https://toris.io/2021/01/how-kubernetes-pulls-private-container-images-on-aws/">https://toris.io/2021/01/how-kubernetes-pulls-private-container-images-on-aws/</a></li>
@@ -12333,7 +12333,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <li>Fargateで設定可能な最大スペックを超えたスペックが必要</li>
 <li>emptyDirボリューム以外が必要</li>
 </ul>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></li>
 <li><a href="https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/">https://aws.amazon.com/jp/blogs/news/using-alb-ingress-controller-with-amazon-eks-on-fargate/</a></li>
@@ -12341,7 +12341,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 </ul>
 <h4 id="fargate_2">▼ Fargateプロファイル<a class="headerlink" href="#fargate_2" title="Permanent link">&para;</a></h4>
 <p>Fargateを設定する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html#fargate-profile-components">https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html#fargate-profile-components</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html#fargate-profile-components">https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html#fargate-profile-components</a></p>
 <table>
 <thead>
 <tr>
@@ -12354,7 +12354,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <tr>
 <td>Pod実行ロール</td>
 <td>kubeletがAWSリソースにアクセスできるように、Podにロールを設定する。</td>
-<td>・実行ポリシー（AmazonEKSFargatePodExecutionRolePolicy）には、ECRへのアクセス権限のみが付与されている。<br>・信頼されたエンティティでは、<code>eks-fargate-pods.amazonaws.com</code>を設定する必要がある。<br>参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html">https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html</a></td>
+<td>・実行ポリシー（AmazonEKSFargatePodExecutionRolePolicy）には、ECRへのアクセス権限のみが付与されている。<br>・信頼されたエンティティでは、<code>eks-fargate-pods.amazonaws.com</code>を設定する必要がある。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html">https://docs.aws.amazon.com/eks/latest/userguide/pod-execution-role.html</a></td>
 </tr>
 <tr>
 <td>サブネット</td>
@@ -12379,10 +12379,10 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <h4 id="ec2-node_1">▼ EC2 Nodeとは<a class="headerlink" href="#ec2-node_1" title="Permanent link">&para;</a></h4>
 <p><img alt="eks_on_ec2" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/eks_on_ec2.png" /></p>
 <p>EC2で稼働するKubernetesのホストのこと。Fargateと比べてカスタマイズ性が高く、Node当たりで稼働するPod数に重み付けを設定できる。一方で、各EC2のサチュレーションをユーザーが管理しなければならないため、Kubernetesのホストの管理が大変である。</p>
-<p>参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
+<p>ℹ️ 参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
 <h4 id="ec2-nodeami">▼ EC2 Nodeの最適化AMI<a class="headerlink" href="#ec2-nodeami" title="Permanent link">&para;</a></h4>
 <p>任意のEC2 Nodeを使用できるが、AWSが用意している最適化AMIを選んだ方が良い。このAMIには、EC2がEKSと連携するために必要なソフトウェアがプリインストールされており、EC2 Nodeをセットアップする手間が省ける。必ずしも、全てのワーカーNodeを同じAMIで構築する必要はない。ワーカーNodeを種類ごとに異なるAMIで作成し、特定のアプリを含むPodは特定のワーカーNode上で稼働させる（例：計算処理系アプリはEKS最適化高速AMIのワーカーNode上で動かす）といった方法でもよい。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html</a></p>
 <table>
 <thead>
 <tr>
@@ -12411,7 +12411,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 </table>
 <h4 id="ec2-nodeami_1">▼ EC2 NodeのカスタムAMI<a class="headerlink" href="#ec2-nodeami_1" title="Permanent link">&para;</a></h4>
 <p>EC2 NodeのAMIにカスタムAMIを使用する場合、EC2起動時にユーザーデータとして、<code>bootstrap.sh</code>ファイルにパラメーターを渡す必要がある。一方で、最適化AMIにはデフォルトでこれらのパラメーターが設定されているため、設定は不要である。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/eks-worker-nodes-cluster/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12443,7 +12443,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
   --container-runtime containerd
 </code></pre></div></td></tr></table></div>
 <p>ユーザーデータの注意点として、各パラメーターはハードコーディングせずに、パラメーターストアから取得するようにする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/th_/items/8ffb28dd6d27779a6c9d">https://qiita.com/th_/items/8ffb28dd6d27779a6c9d</a></li>
 <li><a href="https://garafu.blogspot.com/2020/08/ec2-set-env-from-paramstore.html">https://garafu.blogspot.com/2020/08/ec2-set-env-from-paramstore.html</a></li>
@@ -12484,7 +12484,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <h3 id="node_3">Nodeグループタイプ<a class="headerlink" href="#node_3" title="Permanent link">&para;</a></h3>
 <h4 id="_58">▼ マネージド<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
 <p>Nodeグループ内の各Nodeと、Nodeグループごとのオートスケーリングの設定を、自動的にセットアップする。オートスケーリングは、Nodeが配置される全てのプライベートサブネットに適用される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/managed-node-groups.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/managed-node-groups.html</a></li>
 <li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/create-managed-node-group.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/create-managed-node-group.html</a></li>
@@ -12492,7 +12492,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 </ul>
 <h4 id="_59">▼ セルフマネージド<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h4>
 <p>Nodeグループ内の各Nodeと、Nodeグループごとのオートスケーリングの設定を、手動でセットアップする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/worker.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/worker.html</a></li>
 <li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/launch-workers.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/launch-workers.html</a></li>
@@ -12526,7 +12526,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <tr>
 <td>ライフサイクルポリシー</td>
 <td>しばらくリクエストされていないファイルが低頻度アクセス（IA：Infrequent Access）ストレージクラスに移動保存するまでの期限を設定する。</td>
-<td>・ライフサイクルポリシーを有効にしない場合、スタンダードストレージクラスのみが使用される。<br>・画面から両ストレージのサイズを確認できる。<br>参考：<a href="https://ap-northeast-1.console.aws.amazon.com/efs/home?region=ap-northeast-1#/file-systems/fs-f77d60d6">https://ap-northeast-1.console.aws.amazon.com/efs/home?region=ap-northeast-1#/file-systems/fs-f77d60d6</a></td>
+<td>・ライフサイクルポリシーを有効にしない場合、スタンダードストレージクラスのみが使用される。<br>・画面から両ストレージのサイズを確認できる。<br>ℹ️ 参考：<a href="https://ap-northeast-1.console.aws.amazon.com/efs/home?region=ap-northeast-1#/file-systems/fs-f77d60d6">https://ap-northeast-1.console.aws.amazon.com/efs/home?region=ap-northeast-1#/file-systems/fs-f77d60d6</a></td>
 </tr>
 <tr>
 <td>ファイルシステムポリシー</td>
@@ -12551,19 +12551,19 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <p>スループット性能の自動スケーリングに残高があり、ベースラインを超過した分だけ自動スケーリング残高が減っていく。また、ベースライン未満の分は残高として蓄積されていく。</p>
 <p><img alt="burst-mode_balance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/burst-mode_credit-balance-algorithm.png" /></p>
 <p>元の残高は、ファイルシステムのスタンダードストレージクラスのサイズに応じて大きくなる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#efs-burst-credits">https://docs.aws.amazon.com/efs/latest/ug/performance.html#efs-burst-credits</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#efs-burst-credits">https://docs.aws.amazon.com/efs/latest/ug/performance.html#efs-burst-credits</a></p>
 <p><img alt="burst-mode_credit" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/burst-mode_credit-balance-size.png" /></p>
 <p>残高は、<code>BurstCreditBalance</code>メトリクスから確認できる。このメトリクスが常に減少し続けている場合はプロビジョニングモードの方がより適切である。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#using-throughputmode">https://docs.aws.amazon.com/efs/latest/ug/performance.html#using-throughputmode</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#using-throughputmode">https://docs.aws.amazon.com/efs/latest/ug/performance.html#using-throughputmode</a></p>
 <h4 id="_63">▼ プロビジョニングモードの仕組み<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
 <p>スループット性能の自動スケーリング機能は無いが、一定の性能は保証されている。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput">https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput">https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput</a></p>
 <p><img alt="burst-mode_credit" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/provisioning-mode_credit-balance-size.png" /></p>
 <p><br></p>
 <h3 id="_64">マウントポイントの登録と解除<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h3>
 <h4 id="_65">▼ マウントポイントの登録と解除とは<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
 <p><code>mount</code>コマンドと<code>unmount</code>コマンドで、EFSに対してマウントポイントの登録と解除を実行できる。</p>
-<p>参考：<a href="https://qiita.com/tandfy/items/829f9fcc68c4caabc660">https://qiita.com/tandfy/items/829f9fcc68c4caabc660</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/tandfy/items/829f9fcc68c4caabc660">https://qiita.com/tandfy/items/829f9fcc68c4caabc660</a></p>
 <h4 id="_66">▼ 登録<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># mount -t efs -o tls &lt;ファイルシステムID&gt;:&lt;マウント元ディレクトリ&gt; &lt;マウントポイント&gt;</span>
@@ -12645,7 +12645,7 @@ $ umount /var/www/foo
 <tr>
 <td>クラスターへのデータのインポート</td>
 <td>あらかじめ作成しておいたバックアップをインポートし、これを元にRedisを作成する。</td>
-<td>セッションやクエリキャッシュを引き継げる。そのため、新しいRedisへのセッションデータの移行に役立つ。<br>参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-seeding-redis.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-seeding-redis.html</a></td>
+<td>セッションやクエリキャッシュを引き継げる。そのため、新しいRedisへのセッションデータの移行に役立つ。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-seeding-redis.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/backups-seeding-redis.html</a></td>
 </tr>
 <tr>
 <td>バックアップ</td>
@@ -12664,7 +12664,7 @@ $ umount /var/www/foo
 <h4 id="redis_1">▼ Redisクラスターとは<a class="headerlink" href="#redis_1" title="Permanent link">&para;</a></h4>
 <p><img alt="redis-cluster" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/redis-cluster.png" /></p>
 <p>複数のRedisノードを持つRedisシャードから構成されている。<code>1</code>個のリクエストを処理するグループ単位である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li>
 <p><a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Terms.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Terms.html</a></p>
@@ -12675,12 +12675,12 @@ $ umount /var/www/foo
 </ul>
 <h4 id="_69">▼ クラスターモード<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
 <p>クラスターモードを有効にすると、Redisクラスター内に複数のRedisシャードが作成される。反対に無効化すると、シャードは1つだけ作成される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.ReplicationGroups">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.ReplicationGroups</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.ReplicationGroups">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.ReplicationGroups</a></p>
 <p><br></p>
 <h3 id="redis_2">Redisシャード<a class="headerlink" href="#redis_2" title="Permanent link">&para;</a></h3>
 <h4 id="redis_3">▼ Redisシャードとは<a class="headerlink" href="#redis_3" title="Permanent link">&para;</a></h4>
 <p>Redisノードのグループ。同じデータを保持するグループ単位であり、プライマリーノードとレプリカノードが含まれる。同じRedisシャード内にあるRedisノード間では、セッションやクエリキャッシュが同期される。一方で、AuroraのDBクラスターはこれに相当する概念である。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.Shards">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.Shards</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.Shards">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.Components.html#WhatIs.Components.Shards</a></p>
 <p><br></p>
 <h3 id="redis_4">Redisノード<a class="headerlink" href="#redis_4" title="Permanent link">&para;</a></h3>
 <h4 id="redis_5">▼ Redisノードとは<a class="headerlink" href="#redis_5" title="Permanent link">&para;</a></h4>
@@ -12689,7 +12689,7 @@ $ umount /var/www/foo
 <h3 id="_70">セッション管理機能<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
 <h4 id="_71">▼ セッション管理機能とは<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
 <p>サーバー内のセッションデータの代わりにセッションIDを管理し、冗長化されたアプリケーション間で共通のセッションIDを使用できるようにする。そのため、リリース後に既存のセッションが破棄されることがなくなり、ログイン状態を保持できるようになる。セッションIDについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <p><img alt="ElastiCacheのセッション管理機能" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ElastiCacheのセッション管理機能.png" /></p>
 <p><br></p>
 <h3 id="_72">クエリキャッシュ管理機能<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h3>
@@ -12845,12 +12845,12 @@ redis *****:6379&gt; monitor
 <h2 id="05-eventbridgecloudwatch">05. EventBridge（CloudWatchイベント）<a class="headerlink" href="#05-eventbridgecloudwatch" title="Permanent link">&para;</a></h2>
 <h3 id="eventbridgecloudwatch">EventBridge（CloudWatchイベント）とは<a class="headerlink" href="#eventbridgecloudwatch" title="Permanent link">&para;</a></h3>
 <p>AWSリソースで発生したイベントを、他のAWSリソースに転送する。サポート対象のAWSリソースは以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html">https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html">https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html</a></p>
 <p><br></p>
 <h3 id="_81">パターン<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h3>
 <h4 id="_82">▼ イベントパターン<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h4>
 <p>指定したAWSリソースでイベントが起こると、以下のようなJSONが送信される。イベントパターンを定義し、JSON構造が一致するイベントのみをターゲットに転送する。イベントパターンに定義しないキーは任意のデータと見なされる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12917,11 +12917,11 @@ redis *****:6379&gt; monitor
 </code></pre></div></td></tr></table></div>
 <h4 id="_83">▼ スケジュール<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h4>
 <p>cron式またはrate式を使用して、スケジュールを定義する。これとLambdaを組み合わせることにより、ジョブを実行できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html</a></p>
 <p><br></p>
 <h3 id="_84">ターゲット<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
 <h4 id="_85">▼ ターゲットの一覧<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html">https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html">https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html</a></p>
 <h4 id="_86">▼ デバッグ<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h4>
 <p>EventBridgeでは、どのようなJSONのイベントをターゲットに転送したかを確認できない。そこで、デバッグ時はEventBridgeのターゲットにLambdaを設定し、イベント構造をログから確認する。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -13003,7 +13003,7 @@ redis *****:6379&gt; monitor
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>入力テンプレートにて、転送するJSONを定義する。例えばここでは、Slackに送信するJSONに出力する。出力する時は、入力パスの変数名を『<code>&lt;&gt;</code>』で囲う。Slackに送信するメッセージの作成ツールは、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://app.slack.com/block-kit-builder">https://app.slack.com/block-kit-builder</a></p>
+<p>ℹ️ 参考：<a href="https://app.slack.com/block-kit-builder">https://app.slack.com/block-kit-builder</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -13099,7 +13099,7 @@ redis *****:6379&gt; monitor
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

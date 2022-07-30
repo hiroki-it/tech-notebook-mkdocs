@@ -6793,14 +6793,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7538,13 +7538,13 @@
 <h1 id="envoyyamlenvoy">envoy.yaml＠Envoy<a class="headerlink" href="#envoyyamlenvoy" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-envoy">01. Envoyの仕組み<a class="headerlink" href="#01-envoy" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Envoyは、コントロールプレーンに相当するxDSサーバーと、データプレーンに相当するプロキシコンテナから構成される。Envoyには静的/動的な設定がある。静的な設定は、Envoyの起動時に適用される。一方で動的な設定は、xDSサーバーによってEnvoyの実行時に初めて適用される。インバウンド通信を受信したプロキシコンテナは、ルーティングに必要な情報をxDSサーバーに問い合わせ、返却された情報に基づいてルーティングを実行する。</p>
 <p><img alt="envoy_structure" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/envoy_structure.png" /></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/kitauji/items/a2a7b583ed3f5b4cc47e">https://qiita.com/kitauji/items/a2a7b583ed3f5b4cc47e</a></li>
 <li><a href="https://i-beam.org/2019/03/13/envoy-xds-server/">https://i-beam.org/2019/03/13/envoy-xds-server/</a></li>
@@ -7553,7 +7553,7 @@
 <p><br></p>
 <h3 id="xds">xDSサーバー<a class="headerlink" href="#xds" title="Permanent link">&para;</a></h3>
 <p>動的な設定に関する情報を返却するAPIを持つサーバー。主要なサーバーの一覧を示す。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration">https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/operations/dynamic_configuration</a></li>
 <li><a href="https://www.netstars.co.jp/kubestarblog/k8s-10/">https://www.netstars.co.jp/kubestarblog/k8s-10/</a></li>
@@ -7597,7 +7597,7 @@
 <h3 id="_3">リバースプロキシサーバーのミドルウェアとして<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="pod">▼ Pod内の場合<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h4>
 <p>Istioは、マイクロサービスのリバースプロキシコンテナとして、Pod内にistio-proxyコンテナを作成する。Istioによって自動的に作成されるが、Istioリソースを使用しなくとも作成できる。マイクロサービスからネットワークに関する責務を分離することを目標としており、各マイクロサービスはリクエスト送信先のマイクロサービスのIPアドレスを知らなくとも、これをEnvoyが解決してくれる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.linkode.co.jp/entry/2020/07/06/162915">https://blog.linkode.co.jp/entry/2020/07/06/162915</a></li>
 <li><a href="https://openstandia.jp/oss_info/envoy/">https://openstandia.jp/oss_info/envoy/</a></li>
@@ -7606,7 +7606,7 @@
 <p><br></p>
 <h4 id="pod_1">▼ Pod外の場合（フロントプロキシ）<a class="headerlink" href="#pod_1" title="Permanent link">&para;</a></h4>
 <p>フロントプロキシ機能と呼ばれている。</p>
-<p>参考：<a href="https://tech.uzabase.com/entry/2020/09/28/140046">https://tech.uzabase.com/entry/2020/09/28/140046</a></p>
+<p>ℹ️ 参考：<a href="https://tech.uzabase.com/entry/2020/09/28/140046">https://tech.uzabase.com/entry/2020/09/28/140046</a></p>
 <p><br></p>
 <h3 id="_4">ロードバランサーのミドルウェアとして<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p><br></p>
@@ -7615,11 +7615,11 @@
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_6">インストール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>かなり大変なので、DockerfileやIstio経由でインストールすることが推奨。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/install">https://www.envoyproxy.io/docs/envoy/latest/start/install</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/install">https://www.envoyproxy.io/docs/envoy/latest/start/install</a></p>
 <p><br></p>
 <h3 id="dockerfile">Dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">&para;</a></h3>
 <p>Dockerfileにて、独自の<code>envoy.yaml</code>ファイルを組み込む。拡張子は、<code>.yml</code>ではなく、<code>.yaml</code>とする。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/docker">https://www.envoyproxy.io/docs/envoy/latest/start/docker</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/docker">https://www.envoyproxy.io/docs/envoy/latest/start/docker</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">envoyproxy/envoy:v1.20.1</span>
@@ -7628,11 +7628,11 @@
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="istio">Istio<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
 <p><br></p>
 <h2 id="03-admin">03. admin<a class="headerlink" href="#03-admin" title="Permanent link">&para;</a></h2>
 <h3 id="admin">adminとは<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#admin">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#admin</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#admin">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#admin</a></p>
 <p><br></p>
 <h2 id="03-02-adminaddress">03-02. admin.address<a class="headerlink" href="#03-02-adminaddress" title="Permanent link">&para;</a></h2>
 <h3 id="address">addressとは<a class="headerlink" href="#address" title="Permanent link">&para;</a></h3>
@@ -7672,12 +7672,12 @@
 <h2 id="04-static_resources">04. static_resources<a class="headerlink" href="#04-static_resources" title="Permanent link">&para;</a></h2>
 <h3 id="static_resources">static_resourcesとは<a class="headerlink" href="#static_resources" title="Permanent link">&para;</a></h3>
 <p>固定値を設定する。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#static-resources">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#static-resources</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#static-resources">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#static-resources</a></p>
 <p><br></p>
 <h2 id="04-02-static_resourceslisteners">04-02. static_resources.listeners<a class="headerlink" href="#04-02-static_resourceslisteners" title="Permanent link">&para;</a></h2>
 <h3 id="listeners">listenersとは<a class="headerlink" href="#listeners" title="Permanent link">&para;</a></h3>
 <p>受信するインバウンド通信のリスナーを設定する。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#listeners">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#listeners</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#listeners">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#listeners</a></p>
 <p><br></p>
 <h3 id="address_2">address<a class="headerlink" href="#address_2" title="Permanent link">&para;</a></h3>
 <h4 id="protocol_1">▼ protocol<a class="headerlink" href="#protocol_1" title="Permanent link">&para;</a></h4>
@@ -7720,7 +7720,7 @@
 <h3 id="filter_chainsfilters">filter_chains.filters<a class="headerlink" href="#filter_chainsfilters" title="Permanent link">&para;</a></h3>
 <h4 id="name">▼ name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h4>
 <p>特定のインバウンド通信を処理するフィルターを設定する。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/filter/filter">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/filter/filter</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/filter/filter">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/filter/filter</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7752,7 +7752,7 @@
 <span class="w">                </span><span class="s">&quot;@type&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="typed_confighttp_filters">▼ typed_config.http_filters<a class="headerlink" href="#typed_confighttp_filters" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router">https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router</a></li>
 <li><a href="https://i-beam.org/2019/02/03/envoy-static-load-balancer/">https://i-beam.org/2019/02/03/envoy-static-load-balancer/</a></li>
@@ -7791,7 +7791,7 @@
 </tr>
 </tbody>
 </table>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route.proto">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route.proto</a></li>
 <li><a href="https://blog.kamijin-fanta.info/2020/12/consul-with-envoy/">https://blog.kamijin-fanta.info/2020/12/consul-with-envoy/</a></li>
@@ -7828,7 +7828,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="typed_configstat_prefix">▼ typed_config.stat_prefix<a class="headerlink" href="#typed_configstat_prefix" title="Permanent link">&para;</a></h4>
 <p>統計ダッシュボードのメトリクスの接頭辞を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#stat-prefix">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/admin#stat-prefix</a></li>
 <li><a href="https://i-beam.org/2019/02/03/envoy-static-load-balancer/">https://i-beam.org/2019/02/03/envoy-static-load-balancer/</a></li>
@@ -7861,7 +7861,7 @@
 <p><br></p>
 <h3 id="name_1">name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h3>
 <p>インバウンド通信を受信するリスナーの名前を設定する。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto">https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/listener/v3/listener.proto</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">static_resources</span><span class="p">:</span><span class="w"></span>
@@ -7872,7 +7872,7 @@
 <h2 id="05-static_resourcesclusters">05. static_resources.clusters<a class="headerlink" href="#05-static_resourcesclusters" title="Permanent link">&para;</a></h2>
 <h3 id="clusters">clustersとは<a class="headerlink" href="#clusters" title="Permanent link">&para;</a></h3>
 <p>インバウンド通信のルーティング先のマイクロサービスをグループ化する。対象が1つであっても、<code>clusters</code>キーは必須である。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#clusters">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#clusters</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#clusters">https://www.envoyproxy.io/docs/envoy/latest/start/quick-start/configuration-static#clusters</a></p>
 <p><br></p>
 <h3 id="connect_timeout">connect_timeout<a class="headerlink" href="#connect_timeout" title="Permanent link">&para;</a></h3>
 <p>タイムアウトまでの時間を設定する。</p>
@@ -7903,7 +7903,7 @@
 <h3 id="load_assignment">load_assignment<a class="headerlink" href="#load_assignment" title="Permanent link">&para;</a></h3>
 <h4 id="endpoints">▼ endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h4>
 <p>ルーティング先のIPアドレスとポート番号のリストを設定する。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router">https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router">https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/router/v3/router.proto#envoy-v3-api-msg-extensions-filters-http-router-v3-router</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7979,7 +7979,7 @@
 <p><br></p>
 <h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
 <p>サービスディスカバリーの種類を設定する。ルーティング先のアドレスをIPアドレスではなくドメイン名で指定する場合、必須である。</p>
-<p>参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/service_discovery#arch-overview-service-discovery-types">https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/service_discovery#arch-overview-service-discovery-types</a></p>
+<p>ℹ️ 参考：<a href="https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/service_discovery#arch-overview-service-discovery-types">https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/service_discovery#arch-overview-service-discovery-types</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">static_resources</span><span class="p">:</span><span class="w">  </span>
@@ -7992,7 +7992,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

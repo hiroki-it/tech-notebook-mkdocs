@@ -7172,14 +7172,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8300,11 +8300,11 @@
 <h1 id="configymlcircleci">config.yml@CircleCI<a class="headerlink" href="#configymlcircleci" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-circleci">01. CircleCIの仕組み<a class="headerlink" href="#01-circleci" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://circleci.com/docs/2.0/server-3-overview/">https://circleci.com/docs/2.0/server-3-overview/</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/2.0/server-3-overview/">https://circleci.com/docs/2.0/server-3-overview/</a></p>
 <p><img alt="circleci_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/circleci_architecture.png" /></p>
 <p><br></p>
 <h3 id="_3">パイプライン構成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -8313,7 +8313,7 @@
 <h3 id="_4">インストール<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="webhook">▼ Webhook<a class="headerlink" href="#webhook" title="Permanent link">&para;</a></h4>
 <p>CircleCIの鍵をGitHubに登録すると、リポジトリへのプッシュによって、CircleCIをフック（プッシュフック）できるようになる。鍵のうちでデプロイキーを使用することが推奨されている。なお、デプロイキーを追加するには、GitHubアカウントにAdmin権限が必要である。</p>
-<p>参考：<a href="https://circleci.com/docs/2.0/gh-bb-integration/">https://circleci.com/docs/2.0/gh-bb-integration/</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/2.0/gh-bb-integration/">https://circleci.com/docs/2.0/gh-bb-integration/</a></p>
 <h4 id="_5">▼ デバッグの事前準備<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>デバッグでは行数がわからない仕様になっている。そこで、workflowのjobのどこで失敗しているのかを特定するために、検証しないjobをコメントアウトしておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8371,7 +8371,7 @@ $ circleci config process .circleci/config.yml &gt; .circleci/process.yml
 $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job &lt;job名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="circlecissh">▼ CircleCIコンテナにSSH接続<a class="headerlink" href="#circlecissh" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/add-ssh-key/">https://circleci.com/docs/ja/2.0/add-ssh-key/</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/add-ssh-key/">https://circleci.com/docs/ja/2.0/add-ssh-key/</a></p>
 <p>（１）CircleCI用に鍵を作成してもよいが、ここではGitHubの鍵をそのまま使用することとする。GitHubの秘密鍵の中身をコピーし、CircleCIのプロジェクト設定に登録する。この時、他の連携サービスと区別しやすいように、ホスト名を<code>github</code>とする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ pbcopy &lt; ~/.ssh/github/&lt;秘密鍵名&gt;
 </code></pre></div></td></tr></table></div>
@@ -8383,7 +8383,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <p><a href="https://circleci.com/docs/2.0/insights-tests/">https://circleci.com/docs/2.0/insights-tests/</a></p>
 <h4 id="ssh">▼ SSHキー<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
 <p>SSHキーを作成する必要がある。</p>
-<p>参考：<a href="https://circleci.com/docs/2.0/add-ssh-key/">https://circleci.com/docs/2.0/add-ssh-key/</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/2.0/add-ssh-key/">https://circleci.com/docs/2.0/add-ssh-key/</a></p>
 <table>
 <thead>
 <tr>
@@ -8955,7 +8955,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <p>jobを実行する仮想環境を選択できる。</p>
 <h4 id="docker">▼ dockerタイプとは<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
 <p>dockerコンテナを実行環境として設定する。これを選択したうえで、コンテナイメージのビルド（Docker composeを含む）を実行する場合、実行環境dockerコンテナの中でdockerコンテナを作成するという入れ子構造になる。これは非推奨のため、<code>setup_remote_docker</code>を使用して、実行環境dockerコンテナとは別の環境で<code>job</code>を行う必要がある。また、dockerコマンドがプリインストールされていないイメージであった場合、<code>setup_remote_docker</code>を有効化すると、これを使用できるようになる。<code>machine</code>タイプを選択した場合、<code>setup_remote_docker</code>は不要である。ただし、ボリュームマウントを使用できなくなるので注意する。また、DockerfileのCOPYコマンドが機能しなくなる。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/building-docker-images/">https://circleci.com/docs/ja/2.0/building-docker-images/</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/building-docker-images/">https://circleci.com/docs/ja/2.0/building-docker-images/</a></p>
 <p><img alt="machine_executor" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/docker_executor.png" /></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9035,7 +9035,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <p><br></p>
 <h3 id="resource_class">resource_class<a class="headerlink" href="#resource_class" title="Permanent link">&para;</a></h3>
 <p>CircleCIの実行環境のスペックを設定する。Workflow間のキャッシュの使い回しと同様にして、ビルドの完了までの速さを改善できる。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/configuration-reference#resourceclass">https://circleci.com/docs/ja/configuration-reference#resourceclass</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/configuration-reference#resourceclass">https://circleci.com/docs/ja/configuration-reference#resourceclass</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9118,7 +9118,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <h4 id="restore_cachesave_cache">▼ restore_cache、save_cache<a class="headerlink" href="#restore_cachesave_cache" title="Permanent link">&para;</a></h4>
 <p><img alt="CircleCIキャッシュ" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/CircleCIキャッシュ.png" /></p>
 <p>Workflow間で使いまわせるキャッシュを作成する。<code>resource_class</code>オプションによる実行環境のスペック設定と同様にして、ビルドの完了までの速さを改善できる。この機能を使用しない場合、例えば、CircleCIコンテナで<code>composer install</code>を実行すると、毎回のworkflowで同じパッケージがインストールされる。しかし、workflowのたびに、パッケージをインストールするのは非効率である。そこで、<code>composer.json</code>ファイルの実装が変更されない限り、前回のworkflowのビルド時に、vendorディレクトリ配下に配置されたアーティファクトを再利用する。この機能は、複数のworkflowの間だけでなく、1つのworkflowの中でも利用できる。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/caching/#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5">https://circleci.com/docs/ja/2.0/caching/#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/caching/#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5">https://circleci.com/docs/ja/2.0/caching/#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>Composerを使用してパッケージをインストールする時に、前回の結果を再利用する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9723,7 +9723,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <p><br></p>
 <h2 id="09-working_directory">09. working_directory<a class="headerlink" href="#09-working_directory" title="Permanent link">&para;</a></h2>
 <p>処理を実行するディレクトリーを指定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.engilaboo.com/circleci-working-directory/">https://www.engilaboo.com/circleci-working-directory/</a></li>
 <li><a href="https://nju33.com/notes/circleci/articles">https://nju33.com/notes/circleci/articles</a></li>
@@ -9751,7 +9751,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <h3 id="circleci">CircleCIにおける環境変数とは<a class="headerlink" href="#circleci" title="Permanent link">&para;</a></h3>
 <h4 id="_20">▼ 環境変数の出力可能<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>環境変数は基本的にシェルの実行時のみ使用でき、CircleCIのオプション値としては出力できない。ただし、<code>docker</code>オプションだけは例外的に出力できる。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/env-vars/#using-parameters-and-bash-environment">https://circleci.com/docs/ja/2.0/env-vars/#using-parameters-and-bash-environment</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/env-vars/#using-parameters-and-bash-environment">https://circleci.com/docs/ja/2.0/env-vars/#using-parameters-and-bash-environment</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 出力できない</span><span class="w"></span>
 <span class="nt">working_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/go/src/github.com/$ORGNAME/$REPONAME</span><span class="w"></span>
@@ -9814,7 +9814,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 </code></pre></div></td></tr></table></div>
 <h4 id="env">▼ <code>.env</code>ファイルの安全な複製方法<a class="headerlink" href="#env" title="Permanent link">&para;</a></h4>
 <p>アプリケーションの<code>.env</code>ファイルをCirlcCI内で使用したい時は、あらかじめエンコードされた環境変数をProject変数として管理しておき、CirlcleCI内でデコードするようにすれば、envファイルを安全に複製できる。ここで出力している環境変数は、以下のリンクを参考にせよ</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_js_framework_nuxtjs.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_js_framework_nuxtjs.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_js_framework_nuxtjs.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_js_framework_nuxtjs.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9865,7 +9865,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <h3 id="bash">Bashレベル<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h3>
 <h4 id="command">▼ commandキーによる設定<a class="headerlink" href="#command" title="Permanent link">&para;</a></h4>
 <p>一番参照範囲が小さく、<code>run</code>における同じ<code>command</code>内のみで参照できる。<code>command</code>内で使用する環境変数を定義するためには、『<code>$BASH_ENV</code>』に<code>export</code>コマンドを格納する必要がある。定義したものを使用するためには、『<code>$BASH_ENV</code>』を<code>source</code>で読み込む必要があるために注意する。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/env-vars/#%E3%82%B7%E3%82%A7%E3%83%AB-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%81%AE%E8%A8%AD%E5%AE%9A">https://circleci.com/docs/ja/2.0/env-vars/#%E3%82%B7%E3%82%A7%E3%83%AB-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%81%AE%E8%A8%AD%E5%AE%9A</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/env-vars/#%E3%82%B7%E3%82%A7%E3%83%AB-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%81%AE%E8%A8%AD%E5%AE%9A">https://circleci.com/docs/ja/2.0/env-vars/#%E3%82%B7%E3%82%A7%E3%83%AB-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%81%AE%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0%E3%81%AE%E8%A8%AD%E5%AE%9A</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -9904,7 +9904,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 <span class="w">            </span><span class="no">echo &quot;$VERY_IMPORTANT&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>CircleCIでは<code>run</code>を実行する時に『<code>$BASH_ENV</code>』が<code>source</code>で自動的に読み込まれるようになっている。そのため、『<code>$BASH_ENV</code>』は複数の<code>run</code>間』で共有できる。ただし、Alpine Linuxでは、この共有機能を使えないため注意する（かなりたくさんある）。</p>
-<p>参考：<a href="https://github.com/circleci/circleci-docs/issues/1650">https://github.com/circleci/circleci-docs/issues/1650</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/circleci/circleci-docs/issues/1650">https://github.com/circleci/circleci-docs/issues/1650</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10089,12 +10089,12 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
 </code></pre></div></td></tr></table></div>
 <h4 id="machine_1">▼ machineタイプの場合（推奨）<a class="headerlink" href="#machine_1" title="Permanent link">&para;</a></h4>
 <p>実行環境にmachineタイプを選択した場合、docker-composeがプリインストールされている。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/configuration-reference/#%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AA-machine-%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">https://circleci.com/docs/ja/2.0/configuration-reference/#%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AA-machine-%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/configuration-reference/#%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AA-machine-%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">https://circleci.com/docs/ja/2.0/configuration-reference/#%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AA-machine-%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8</a></p>
 <p><br></p>
 <h3 id="docker-compose-dockerize">docker-compose &amp; dockerize<a class="headerlink" href="#docker-compose-dockerize" title="Permanent link">&para;</a></h3>
 <h4 id="dockerinstall-dockerize">▼ docker/install-dockerize<a class="headerlink" href="#dockerinstall-dockerize" title="Permanent link">&para;</a></h4>
 <p>CircleCIでDocker Composeを使用する場合に必要である。Docker Composeは、コンテナの作成の順番を制御できるものの、コンテナ内のプロセスの状態を気にしない。そのため、コンテナの作成後に、プロセスが完全に起動していないのにも関わらず、次のコンテナの作成を開始してしまう。これにより、プロセスが完全に起動していないコンテナに対して、次に作成されたコンテナが接続処理を行ってしまうことがある。これを防ぐために、プロセスの起動を待機してから、接続処理を行うようにする。dockerizeの代わりの方法として、sleepコマンドを使用しても良い。</p>
-<p>参考：<a href="https://github.com/docker/compose/issues/374#issuecomment-126312313">https://github.com/docker/compose/issues/374#issuecomment-126312313</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/docker/compose/issues/374#issuecomment-126312313">https://github.com/docker/compose/issues/374#issuecomment-126312313</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>LaravelコンテナとMySQLコンテナの場合を示す。コンテナ内に対してコマンドを実行する時のディレクトリは、Dockerfileの<code>WORKDIR</code>によって決まるので注意する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -10350,7 +10350,7 @@ $ circleci <span class="nb">local</span> execute -c .circleci/process.yml --job 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7082,14 +7082,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8116,12 +8116,12 @@
 <h1 id="apacheconfapache">apache.conf@Apache<a class="headerlink" href="#apacheconfapache" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-apache">01. Apacheの仕組み<a class="headerlink" href="#01-apache" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Apacheは、Apacheコアとモジュールから構成される。モジュールには、静的/動的モジュールがある。静的モジュールはApacheをインストールした時点でApacheコアに組み込まれている。一方で、動的モジュールは<code>mod_so</code>を使用して拡張機能的に組み込め、また取り外しできる。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/120/1">https://thinkit.co.jp/article/120/1</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/120/1">https://thinkit.co.jp/article/120/1</a></p>
 <p><img alt="apache_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/apache_architecture.png" /></p>
 <p><br></p>
 <h2 id="01-02">01-02. ユースケース<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
@@ -8129,7 +8129,7 @@
 <h4 id="httphttps">▼ HTTP/HTTPSプロトコルでルーティング<a class="headerlink" href="#httphttps" title="Permanent link">&para;</a></h4>
 <h4 id="fastcgi">▼ FastCGIプロトコルでルーティング<a class="headerlink" href="#fastcgi" title="Permanent link">&para;</a></h4>
 <p>mod_fcgidモジュールを読み込むことによって、FastCGIプロトコルでルーティングできるようになる。</p>
-<p>参考：<a href="https://httpd.apache.org/mod_fcgid/">https://httpd.apache.org/mod_fcgid/</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/mod_fcgid/">https://httpd.apache.org/mod_fcgid/</a></p>
 <p><br></p>
 <h3 id="app">Appサーバーのミドルウェアとして<a class="headerlink" href="#app" title="Permanent link">&para;</a></h3>
 <p>mod_phpモジュールを読み込むことによって、Appサーバーのミドルウェアとしても機能させられる。</p>
@@ -8143,23 +8143,23 @@
 <h2 id="03">03. 設定ファイルの種類<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="httpdconf"><code>httpd.conf</code>ファイル<a class="headerlink" href="#httpdconf" title="Permanent link">&para;</a></h3>
 <p>Apacheの主要な設定ファイル。Includeディレクティブを使用すれば、任意の名前で設定ファイルを追加できる。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/ja/configuring.html#main">https://httpd.apache.org/docs/2.4/ja/configuring.html#main</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/ja/configuring.html#main">https://httpd.apache.org/docs/2.4/ja/configuring.html#main</a></p>
 <p><br></p>
 <h3 id="htaccess"><code>.htaccess</code>ファイル<a class="headerlink" href="#htaccess" title="Permanent link">&para;</a></h3>
 <h4 id="htaccess_1">▼ <code>.htaccess</code>ファイルとは<a class="headerlink" href="#htaccess_1" title="Permanent link">&para;</a></h4>
 <p>基本的に、<code>httpd.conf</code>ファイルで全ての機能を設定できる。ただし、このファイルはインフラエンジニアの責務であり、アプリエンジニアでApacheの設定を定義したい場合に、<code>.htaccess</code>ファイルを使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://httpd.apache.org/docs/2.4/ja/configuring.html#htaccess">https://httpd.apache.org/docs/2.4/ja/configuring.html#htaccess</a></li>
 <li><a href="https://ja.wikipedia.org/wiki/.htaccess">https://ja.wikipedia.org/wiki/.htaccess</a></li>
 </ul>
 <h4 id="_5">▼ ルートディレクトリに置いた場合<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>全てのファイルに対して、ディレクティブが適用される。</p>
-<p>参考：<a href="https://htaccess.cman.jp/attention/">https://htaccess.cman.jp/attention/</a></p>
+<p>ℹ️ 参考：<a href="https://htaccess.cman.jp/attention/">https://htaccess.cman.jp/attention/</a></p>
 <p><img alt="htaccess影響範囲" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/htaccess影響範囲.png" /></p>
 <h4 id="_6">▼ それ以外のディレクトリに置いた場合<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>設置したディレクトリ配下の階層のファイルに対して適用される。</p>
-<p>参考：<a href="https://htaccess.cman.jp/attention/">https://htaccess.cman.jp/attention/</a></p>
+<p>ℹ️ 参考：<a href="https://htaccess.cman.jp/attention/">https://htaccess.cman.jp/attention/</a></p>
 <p><img alt="htaccess影響範囲_2" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/htaccess影響範囲_2.png" /></p>
 <p><br></p>
 <h2 id="04-core">04. Coreにおける設定ディレクティブ<a class="headerlink" href="#04-core" title="Permanent link">&para;</a></h2>
@@ -8354,7 +8354,7 @@
 <h3 id="rewriterule">RewriteRule<a class="headerlink" href="#rewriterule" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ リダイレクトとリライトの違い<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <h4 id="rewriterule_1">▼ RewriteRuleとは<a class="headerlink" href="#rewriterule_1" title="Permanent link">&para;</a></h4>
 <p>条件分岐による処理を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">RewriteRule</span><span class="w"> </span>URL書換＆ルーティングの記述<span class="w"></span>
@@ -8501,7 +8501,7 @@
 <p>レスポンスヘッダーを追加する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p><code>Referrer-Policy</code>ヘッダーを追加し、値を<code>no-referrer-when-downgrade</code>とする。ちなみに、Chrome85以降の<code>Referrer-Policy</code>ヘッダー初期値の仕様変更については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://www.chromestatus.com/feature/6251880185331712">https://www.chromestatus.com/feature/6251880185331712</a></p>
+<p>ℹ️ 参考：<a href="https://www.chromestatus.com/feature/6251880185331712">https://www.chromestatus.com/feature/6251880185331712</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Header</span><span class="w"> </span>set<span class="w"> </span>Referrer-Policy<span class="w"> </span><span class="s2">&quot;no-referrer-when-downgrade&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Header</span><span class="w"> </span>set<span class="w"> </span>Referrer-Policy<span class="w"> </span><span class="s2">&quot;no-referrer-when-downgrade&quot;</span><span class="w"> </span>always<span class="w"></span>
@@ -8520,7 +8520,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

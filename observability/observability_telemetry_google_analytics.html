@@ -6498,14 +6498,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6950,20 +6950,20 @@
 <h1 id="google">Googleアナリティクス＠テレメトリー収集ツール<a class="headerlink" href="#google" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">グローバルサイトタグ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ グローバルサイトタグとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>Webページのローディング時に、非同期通信を使用してGoogleのCollection-APIにメトリクスを送信する。送信されたデータは、Googleアナリティクスコンソールから確認できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developers.google.com/analytics/devguides/collection/gtagjs">https://developers.google.com/analytics/devguides/collection/gtagjs</a></li>
 <li><a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/reference">https://developers.google.com/analytics/devguides/collection/protocol/v1/reference</a></li>
 </ul>
 <h4 id="_4">▼ グローバルサイトタグの組み込み<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Googleアナリティクスで、メトリクスのデータポイントを収集するためには、アプリケーションの<code>head</code>タグに、トラッキングコードが設定されたグローバルサイトタグを組み込む必要がある。</p>
-<p>参考：<a href="https://wacul-ai.com/blog/access-analysis/google-analytics-method/what-is-tracking-code/">https://wacul-ai.com/blog/access-analysis/google-analytics-method/what-is-tracking-code/</a></p>
+<p>ℹ️ 参考：<a href="https://wacul-ai.com/blog/access-analysis/google-analytics-method/what-is-tracking-code/">https://wacul-ai.com/blog/access-analysis/google-analytics-method/what-is-tracking-code/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7000,7 +7000,7 @@
 <h3 id="_5">動作確認方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="developer">▼ ブラウザのdeveloperツール<a class="headerlink" href="#developer" title="Permanent link">&para;</a></h4>
 <p>ブラウザのdeveloperツールで、グローバルサイトタグが非同期通信を実行しているかを確認する。Chromeであれば、networkタブにて、『<code>www.google-analytics.com/collect</code>』に対するリクエストを探す。これが<code>200</code>系ステータスになっていれば、正しく動作していると見なせる。</p>
-<p>参考：<a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/reference#endpoint">https://developers.google.com/analytics/devguides/collection/protocol/v1/reference#endpoint</a></p>
+<p>ℹ️ 参考：<a href="https://developers.google.com/analytics/devguides/collection/protocol/v1/reference#endpoint">https://developers.google.com/analytics/devguides/collection/protocol/v1/reference#endpoint</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">POST https://www.google-analytics.com/g/collect</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7016,31 +7016,31 @@
 <tbody>
 <tr>
 <td>セッション数</td>
-<td>ユーザーがWebサイトに訪問してから離脱するまでを1セッションとした時に、この数のこと。<br>参考：<a href="https://support.google.com/analytics/answer/9191807?hl=ja&amp;ref_topic=11151952">https://support.google.com/analytics/answer/9191807?hl=ja&amp;ref_topic=11151952</a></td>
+<td>ユーザーがWebサイトに訪問してから離脱するまでを1セッションとした時に、この数のこと。<br>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/9191807?hl=ja&amp;ref_topic=11151952">https://support.google.com/analytics/answer/9191807?hl=ja&amp;ref_topic=11151952</a></td>
 </tr>
 <tr>
 <td>直帰数</td>
-<td>ユーザーがWebサイトに訪問した後に、Webページのどの部分もクリックせずに離脱した場合に、このセッション数のこと。<br>参考：<a href="https://support.google.com/analytics/answer/1009409?hl=ja">https://support.google.com/analytics/answer/1009409?hl=ja</a></td>
+<td>ユーザーがWebサイトに訪問した後に、Webページのどの部分もクリックせずに離脱した場合に、このセッション数のこと。<br>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/1009409?hl=ja">https://support.google.com/analytics/answer/1009409?hl=ja</a></td>
 </tr>
 <tr>
 <td>新規ユーザー数</td>
-<td>新しく訪問したユーザー数のこと。リクエストのIPアドレスやユーザエージェントの組み合わせを基に、新規ユーザーか否かを判定する。セッションの違いに影響されない。<br>参考：<a href="https://www.mitsue.co.jp/case/glossary/l_009.html">https://www.mitsue.co.jp/case/glossary/l_009.html</a></td>
+<td>新しく訪問したユーザー数のこと。リクエストのIPアドレスやユーザエージェントの組み合わせを基に、新規ユーザーか否かを判定する。セッションの違いに影響されない。<br>ℹ️ 参考：<a href="https://www.mitsue.co.jp/case/glossary/l_009.html">https://www.mitsue.co.jp/case/glossary/l_009.html</a></td>
 </tr>
 <tr>
 <td>ページビュー数</td>
-<td>Webページの閲覧数のこと。リロードしても<code>+1</code>される。<br>参考：<br>・<a href="https://support.google.com/analytics/answer/6086080?hl=ja">https://support.google.com/analytics/answer/6086080?hl=ja</a><br>・<a href="http://www.designcross.net/google-analytics/pageviews.html">http://www.designcross.net/google-analytics/pageviews.html</a></td>
+<td>Webページの閲覧数のこと。リロードしても<code>+1</code>される。<br>ℹ️ 参考：<br>・<a href="https://support.google.com/analytics/answer/6086080?hl=ja">https://support.google.com/analytics/answer/6086080?hl=ja</a><br>・<a href="http://www.designcross.net/google-analytics/pageviews.html">http://www.designcross.net/google-analytics/pageviews.html</a></td>
 </tr>
 <tr>
 <td>離脱数</td>
-<td>セッションの最後で発生したイベント数のこと。<br>参考：<a href="https://support.google.com/analytics/answer/11080047?hl=ja#">https://support.google.com/analytics/answer/11080047?hl=ja#</a></td>
+<td>セッションの最後で発生したイベント数のこと。<br>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/11080047?hl=ja#">https://support.google.com/analytics/answer/11080047?hl=ja#</a></td>
 </tr>
 <tr>
 <td>ランディングページ</td>
-<td>ユーザーが最初に訪問したWebページのこと。<br>参考：<a href="https://support.google.com/google-ads/answer/14086?hl=ja">https://support.google.com/google-ads/answer/14086?hl=ja</a></td>
+<td>ユーザーが最初に訪問したWebページのこと。<br>ℹ️ 参考：<a href="https://support.google.com/google-ads/answer/14086?hl=ja">https://support.google.com/google-ads/answer/14086?hl=ja</a></td>
 </tr>
 <tr>
 <td>コンバージョン</td>
-<td>セッションの間で、ユーザーが目標達成条件を満たす行動を行ったこと。目標達成に至ったセッション数はコンバージョン数という。これを計測するためには、Googleアナリティクスの画面で達成条件の設定が必要である。<br>参考：<br>・<a href="https://support.google.com/analytics/topic/1007030?hl=ja&amp;ref_topic=1631741">https://support.google.com/analytics/topic/1007030?hl=ja&amp;ref_topic=1631741</a><br>・<a href="https://www.sakurasaku-labo.jp/blogs/analytics-glossary#%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">https://www.sakurasaku-labo.jp/blogs/analytics-glossary#%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3</a><br>ちなみに、『単なる消費者から顧客に転換する』ことから、コンバージョンという単語が使われている。<br>参考：<a href="https://e-words.jp/w/%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3.html">https://e-words.jp/w/%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3.html</a></td>
+<td>セッションの間で、ユーザーが目標達成条件を満たす行動を行ったこと。目標達成に至ったセッション数はコンバージョン数という。これを計測するためには、Googleアナリティクスの画面で達成条件の設定が必要である。<br>ℹ️ 参考：<br>・<a href="https://support.google.com/analytics/topic/1007030?hl=ja&amp;ref_topic=1631741">https://support.google.com/analytics/topic/1007030?hl=ja&amp;ref_topic=1631741</a><br>・<a href="https://www.sakurasaku-labo.jp/blogs/analytics-glossary#%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">https://www.sakurasaku-labo.jp/blogs/analytics-glossary#%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3</a><br>ちなみに、『単なる消費者から顧客に転換する』ことから、コンバージョンという単語が使われている。<br>ℹ️ 参考：<a href="https://e-words.jp/w/%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3.html">https://e-words.jp/w/%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3.html</a></td>
 </tr>
 <tr>
 <td>参照URL</td>
@@ -7064,7 +7064,7 @@
 <tbody>
 <tr>
 <td>直帰率</td>
-<td>全セッションのうちで、直帰に至ったセッション数が占める割合のこと（<code>直帰数/セッション数</code>』）。<br>参考：<a href="https://support.google.com/analytics/answer/1009409?hl=ja">https://support.google.com/analytics/answer/1009409?hl=ja</a></td>
+<td>全セッションのうちで、直帰に至ったセッション数が占める割合のこと（<code>直帰数/セッション数</code>』）。<br>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/1009409?hl=ja">https://support.google.com/analytics/answer/1009409?hl=ja</a></td>
 </tr>
 <tr>
 <td>コンバージョン率</td>
@@ -7072,11 +7072,11 @@
 </tr>
 <tr>
 <td>離脱率</td>
-<td>1ページビュー当たりの離脱数のこと（<code>離脱数/ページビュー数</code>）。<br>参考：<a href="https://support.google.com/analytics/answer/11080047?hl=ja">https://support.google.com/analytics/answer/11080047?hl=ja</a></td>
+<td>1ページビュー当たりの離脱数のこと（<code>離脱数/ページビュー数</code>）。<br>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/11080047?hl=ja">https://support.google.com/analytics/answer/11080047?hl=ja</a></td>
 </tr>
 <tr>
 <td>ページ/セッション（回遊率）</td>
-<td>1セッション当たりのページビュー数のこと。<br>参考：<a href="https://pro-atmedia.jp/media/page-views-per-visit/#toc2">https://pro-atmedia.jp/media/page-views-per-visit/#toc2</a></td>
+<td>1セッション当たりのページビュー数のこと。<br>ℹ️ 参考：<a href="https://pro-atmedia.jp/media/page-views-per-visit/#toc2">https://pro-atmedia.jp/media/page-views-per-visit/#toc2</a></td>
 </tr>
 </tbody>
 </table>
@@ -7092,7 +7092,7 @@
 <h3 id="_8">ランディングページ当たりのセッション数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>Googleアナリティクスでは、1つのドメイン当たりのセッション数が計測される。そのため、1つのドメインが複数のアプリケーションからなる場合は、これらのセッション数が合算されてしまっている。アプリケーション当たりのセッション数は、以下の手順で推定する。ただし、対象のアプリケーションに訪問したことがわかるコンバージョンを設定しておく必要がある。</p>
 <p>（１）以下のURLにて、ランディングページ当たりのセッションの割合データを確認する。</p>
-<p>参考：<a href="https://analytics.google.com/analytics/web/?authuser=1#/report/content-landing-pages">https://analytics.google.com/analytics/web/?authuser=1#/report/content-landing-pages</a></p>
+<p>ℹ️ 参考：<a href="https://analytics.google.com/analytics/web/?authuser=1#/report/content-landing-pages">https://analytics.google.com/analytics/web/?authuser=1#/report/content-landing-pages</a></p>
 <p>（２）ランディングページの割合データの合計値をアプリケーションのものと見なし、対象のアプリケーション以外に関するURLをフィルタリングする。これにより、対象以外のセッション数の割合がわかる。例えば、対象が<code>/foo</code>を持ち、対象以外が<code>/bar</code>と<code>/baz</code>のURLを持つとする。この時、<code>/bar</code>と<code>/baz</code>のみがフィルタリングされるように条件を設定する。</p>
 <p>（３）『<code>100 - 対象以外のセッション数の割合（%）</code>』とすることにより、対象をランディングページとするセッション数の割合を導く。例えば、対象以外のセッション数の割合が<code>40</code>%であれば、対象は<code>60%</code>である。</p>
 <p>（４）コンバージョン数（目標の完了数）を確認する。コンバージョン数は目標に至ったセッション数を表すため、これにより、対象以外から対象に訪問した時のセッション数と割合がわかる。</p>
@@ -7101,7 +7101,7 @@
 <h3 id="_9">増加率<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p><img alt="increase-rate" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/increase-rate.png" /></p>
 <p>増加率は、増加量が基準量全体の何倍（何割分）であるかで表される。そのため、以下で算出できる。</p>
-<p>参考：<a href="https://kj01.kgu.mydns.jp/fujimoto/inen/kaisetu_zoka.html">https://kj01.kgu.mydns.jp/fujimoto/inen/kaisetu_zoka.html</a></p>
+<p>ℹ️ 参考：<a href="https://kj01.kgu.mydns.jp/fujimoto/inen/kaisetu_zoka.html">https://kj01.kgu.mydns.jp/fujimoto/inen/kaisetu_zoka.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="err">増加量</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="err">ある量</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="err">基準量</span><span class="p">)</span><span class="w"></span>
@@ -7122,7 +7122,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-04</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

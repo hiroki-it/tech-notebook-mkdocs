@@ -6471,14 +6471,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6896,13 +6896,13 @@
 <h1 id="kubernetes">kubernetesアドオン＠仮想化<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-admission-controllers">01. admission-controllersアドオン<a class="headerlink" href="#01-admission-controllers" title="Permanent link">&para;</a></h2>
 <h3 id="admission-controllers">admission-controllersアドオンとは<a class="headerlink" href="#admission-controllers" title="Permanent link">&para;</a></h3>
 <p><img alt="kubernetes_admission-controllers" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers.png" /></p>
 <p>kube-apiserverのリクエストの処理時には認証認可プロセスがある。admission-controllersアドオンを導入すると、この後に、作成リクエストや変更リクエストのパラメーターを条件に応じて書き換える処理や、パラメーターのバリデーションを実行する処理を定義できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/">https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/</a></li>
 <li><a href="https://knowledge.sakura.ad.jp/21129/">https://knowledge.sakura.ad.jp/21129/</a></li>
@@ -6913,7 +6913,7 @@
 <h4 id="admission-controllers_2">▼ admission-controllersアドオンの構成<a class="headerlink" href="#admission-controllers_2" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_admission-controllers_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers_architecture.png" /></p>
 <p>admission-controllersアドオンは、2つのステップから構成されている。各ステップで実行する具体的な処理は、admission-controllersアドオンで定義する以外に、Webhookアドオンで独自処理をコールするように定義することもできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/">https://kubernetes.io/blog/2019/03/21/a-guide-to-kubernetes-admission-controllers/</a></li>
 <li><a href="https://gashirar.hatenablog.com/entry/2020/10/31/141357">https://gashirar.hatenablog.com/entry/2020/10/31/141357</a></li>
@@ -6938,7 +6938,7 @@
 </table>
 <h4 id="_2">▼ 使用アドオンの確認<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>有効化されているadmission-controllersアドオンの機能は、コントロールプレーンのログから確認できる。</p>
-<p>参考：<a href="https://sotoiwa.hatenablog.com/entry/2020/12/28/115826">https://sotoiwa.hatenablog.com/entry/2020/12/28/115826</a></p>
+<p>ℹ️ 参考：<a href="https://sotoiwa.hatenablog.com/entry/2020/12/28/115826">https://sotoiwa.hatenablog.com/entry/2020/12/28/115826</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -6964,7 +6964,7 @@ I1228 <span class="m">00</span>:21:20.695026 <span class="m">1</span> flags.go:3
 <p><br></p>
 <h3 id="webhook">Webhookで送受信されるデータ<a class="headerlink" href="#webhook" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ 構成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/">https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/</a></li>
 <li><a href="https://zenn.dev/kanatakita/articles/6d6e5391336c1c5669c2">https://zenn.dev/kanatakita/articles/6d6e5391336c1c5669c2</a></li>
@@ -7090,7 +7090,7 @@ I1228 <span class="m">00</span>:21:20.695026 <span class="m">1</span> flags.go:3
 <h3 id="cni">cniアドオンとは<a class="headerlink" href="#cni" title="Permanent link">&para;</a></h3>
 <p><img alt="kubernetes_cni-plugin" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_cni-plugin.png" /></p>
 <p>Clusterネットワーク内のIPアドレスをPodに割り当て、Clusterネットワーク内にある通信がPodに接続できるようにする。kubeletによって実行される。Clusterネットワークの種類に応じたcniアドオンが用意されている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=27">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=27</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/cluster-administration/networking/">https://kubernetes.io/docs/concepts/cluster-administration/networking/</a></li>
@@ -7099,12 +7099,12 @@ I1228 <span class="m">00</span>:21:20.695026 <span class="m">1</span> flags.go:3
 <h2 id="03-core-dnskube-dns">03. core-dnsアドオン（旧kube-dns）<a class="headerlink" href="#03-core-dnskube-dns" title="Permanent link">&para;</a></h2>
 <h3 id="core-dns">core-dnsアドオンとは<a class="headerlink" href="#core-dns" title="Permanent link">&para;</a></h3>
 <p>ワーカーNode内の権威DNSサーバーとして、Kubernetesリソースの名前解決を行う。</p>
-<p>参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=29">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=29</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=29">https://speakerdeck.com/hhiroshell/kubernetes-network-fundamentals-69d5c596-4b7d-43c0-aac8-8b0e5a633fc2?slide=29</a></p>
 <p><img alt="kubernetes_coredns" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_coredns.png" /></p>
 <p><br></p>
 <h3 id="coredns-servicepod">CoreDNS Service/Pod<a class="headerlink" href="#coredns-servicepod" title="Permanent link">&para;</a></h3>
 <p>CoreDNSはワーカーNode内にPodとして稼働しており、これはCoreDNS Serviceによって管理されている。</p>
-<p>参考：<a href="https://amateur-engineer-blog.com/kubernetes-dns/#toc6">https://amateur-engineer-blog.com/kubernetes-dns/#toc6</a></p>
+<p>ℹ️ 参考：<a href="https://amateur-engineer-blog.com/kubernetes-dns/#toc6">https://amateur-engineer-blog.com/kubernetes-dns/#toc6</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7136,7 +7136,7 @@ coredns-558bd4d5db-ltbxt                 <span class="m">1</span>/1     Running 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

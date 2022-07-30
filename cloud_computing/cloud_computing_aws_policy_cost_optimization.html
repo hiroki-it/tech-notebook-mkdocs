@@ -6578,14 +6578,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7110,7 +7110,7 @@
 <h1 id="aws">コスト最適化＠AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. コスト最適化の観点<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>スペック、時間単価、数量、月額料金</p>
@@ -7118,13 +7118,13 @@
 <h2 id="02-service-quotas">02. Service Quotas<a class="headerlink" href="#02-service-quotas" title="Permanent link">&para;</a></h2>
 <h3 id="service-quotast">Service Quotastとは<a class="headerlink" href="#service-quotast" title="Permanent link">&para;</a></h3>
 <p>各種AWSリソースの設定の上限値を上げられる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html</a></p>
 <p><br></p>
 <h3 id="aws_1">各種AWSリソースの上限値<a class="headerlink" href="#aws_1" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html">https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html</a></p>
 <p><br></p>
 <h3 id="_2">方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html">https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html</a></p>
 <p><br></p>
 <h2 id="03">03. リソース別コスト<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="cloudfront">CloudFront<a class="headerlink" href="#cloudfront" title="Permanent link">&para;</a></h3>
@@ -7134,7 +7134,7 @@
 <h3 id="ebs">EBS<a class="headerlink" href="#ebs" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ 料金体系<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>EBSボリュームは、ボリュームの使用率に関わらず、最大サイズに基づいて料金が発生する。また、複数のEBSボリュームをEC2に紐づけている場合は、その合計サイズで料金が発生する。そのため、必要最低限のサイズを選択するように、過剰なサイズを選択してはいけない。その他、ボリュームタイプによっては、IOPSやスループットの設定値が課金対象になっている。汎用SSD（gp2タイプ）であれば、EBSボリュームの最大サイズのみを考慮すれば良い。また、注意点として、リージョンごとに料金体系が異なる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/ebs-volume-charges/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/ebs-volume-charges/</a></li>
 <li><a href="https://aws.amazon.com/jp/ebs/pricing/">https://aws.amazon.com/jp/ebs/pricing/</a></li>
@@ -7143,7 +7143,7 @@
 <h3 id="ec2">EC2<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ 料金体系<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>使い方に応じた料金体系を選択できる。レスポンスの返信時に料金が発生する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html#ec2-pricing</a></p>
 <table>
 <thead>
 <tr>
@@ -7156,7 +7156,7 @@
 <tr>
 <td>オンデマンドインスタンス</td>
 <td></td>
-<td>参考：<a href="https://aws.amazon.com/jp/ec2/pricing/on-demand/">https://aws.amazon.com/jp/ec2/pricing/on-demand/</a></td>
+<td>ℹ️ 参考：<a href="https://aws.amazon.com/jp/ec2/pricing/on-demand/">https://aws.amazon.com/jp/ec2/pricing/on-demand/</a></td>
 </tr>
 <tr>
 <td>Savings Plans</td>
@@ -7177,7 +7177,7 @@
 </table>
 <h4 id="_6">▼ 実行時間<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>インスタンスのライフサイクルの状態に応じて、料金が発生する。EC2インスタンスを実行している時間分だけ料金がかかる。インスタンスを使用せずに設置しているだけであれば、料金はかからない。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7227,7 +7227,7 @@
 <h3 id="fargate">Fargate<a class="headerlink" href="#fargate" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ リソースサイズ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>Fargateでは、Fargate Node内でPodが使用したリソースサイズによって、料金が決定する。そのため、冗長化するPod数を減らすことにより、料金を抑えられる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/fargate/pricing/">https://aws.amazon.com/jp/fargate/pricing/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/fargate/pricing/">https://aws.amazon.com/jp/fargate/pricing/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>バージニア北部のFargate Node内で、Podが<code>10</code>個を毎日<code>1</code>時間稼働させ、Podが<code>0.25</code>vCPUと<code>1</code>GiBメモリを使用したとする。この場合、１ヶ月の請求額は以下のようになる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7260,7 +7260,7 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
 <h3 id="rds">RDS<a class="headerlink" href="#rds" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ 料金体系の種類<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/User_DBInstanceBilling.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7271,11 +7271,11 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
 <tbody>
 <tr>
 <td align="left">オンデマンドインスタンス</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_OnDemandDBInstances.html</a></td>
 </tr>
 <tr>
 <td align="left">リザーブドインスタンス</td>
-<td>RDSインスタンスの一定期間分の使用料金を前払いし、その代わりに安く利用できるようになる。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html</a></td>
+<td>RDSインスタンスの一定期間分の使用料金を前払いし、その代わりに安く利用できるようになる。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithReservedDBInstances.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -7290,7 +7290,7 @@ Fargate のコンピューティングの月額料金 = 3.04 USD + 1.33 USD = 4.
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

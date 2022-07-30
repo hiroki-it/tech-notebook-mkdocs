@@ -6915,14 +6915,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7782,7 +7782,7 @@
 <h1 id="kubernetes">コマンド＠Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-kubectl">01. kubectlコマンド<a class="headerlink" href="#01-kubectl" title="Permanent link">&para;</a></h2>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7790,7 +7790,7 @@
 <p><code>kubectl</code>コマンドは、<code>~/.kube</code>以下にある<code>config</code>ファイルに設定された認証情報を基に、kube-apiserverにアクセスする。</p>
 <h4 id="config-kubeconfig">▼ configシンボリックリンク、--kubeconfig<a class="headerlink" href="#config-kubeconfig" title="Permanent link">&para;</a></h4>
 <p>ユーザーが、<code>config</code>ファイルを任意のディレクトリで管理する場合、シンボリックリンクを作成するか、あるいはコマンドの実行時に<code>config</code>ファイルを明示的に指定する必要がある。</p>
-<p>参考：<a href="https://blog.inductor.me/entry/2021/03/13/205452">https://blog.inductor.me/entry/2021/03/13/205452</a></p>
+<p>ℹ️ 参考：<a href="https://blog.inductor.me/entry/2021/03/13/205452">https://blog.inductor.me/entry/2021/03/13/205452</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7805,7 +7805,7 @@ $ ln -s /etc/kubernetes/kubeconfig config
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
 <h4 id="apply_1">▼ applyとは<a class="headerlink" href="#apply_1" title="Permanent link">&para;</a></h4>
 <p>同じ識別子（名前）のリソースが存在しない場合は、リソースを作成し、存在する場合はマニフェストファイルの差分を更新する。全ての項目を更新できるわけでない。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply</a></p>
 <h4 id="-f-r">▼ -f -R<a class="headerlink" href="#-f-r" title="Permanent link">&para;</a></h4>
 <p>マニフェストファイルを指定し、<code>kubectl apply</code>コマンドを実行する。<code>-R</code>オプションでディレクトリ内のファイルを再帰的に指定もできる。</p>
 <p><strong>＊実行例＊</strong></p>
@@ -7837,7 +7837,7 @@ pod/foo-pod configured
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <h4 id="config_1">▼ configとは<a class="headerlink" href="#config_1" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドに関するパラメーターを操作する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#config</a></p>
 <h4 id="current-context">▼ current-context<a class="headerlink" href="#current-context" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドの宛先になっているkube-apiserverを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7985,7 +7985,7 @@ users:
 <h3 id="cp">cp<a class="headerlink" href="#cp" title="Permanent link">&para;</a></h3>
 <h4 id="cp_1">▼ cpとは<a class="headerlink" href="#cp_1" title="Permanent link">&para;</a></h4>
 <p>ホストPCのファイルまたはディレクトリを指定したPod内コンテナにコピーする。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cp">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cp</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cp">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#cp</a></p>
 <h4 id="_3">▼ オプション無し<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl cp &lt;ホストPCのパス&gt; &lt;Namespace名&gt;/&lt;PodID&gt;:&lt;コンテナのパス&gt;
 </code></pre></div></td></tr></table></div>
@@ -7995,7 +7995,7 @@ users:
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
 <h4 id="create_1">▼ createとは<a class="headerlink" href="#create_1" title="Permanent link">&para;</a></h4>
 <p>様々なリソースを作成する。<code>kubectl expose</code>コマンドと<code>kubectl run</code>コマンドで作成できるリソースを含む様々なものを作成できるが、オプションが少ない。そのため、<code>f</code>オプションでマニフェストファイルを指定し、おぶえジェクトを作成した方が良い。同じ識別子（リソース名）のリソースが存在する場合は重複エラーになる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create</a></p>
 <p><strong>＊例＊</strong></p>
 <p>マニフェストファイルを指定し、<code>kubectl create</code>コマンドを実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8017,7 +8017,7 @@ service/foo-service created
 </code></pre></div></td></tr></table></div>
 <h4 id="secret-docker-registry">▼ secret docker-registry<a class="headerlink" href="#secret-docker-registry" title="Permanent link">&para;</a></h4>
 <p>イメージレジストリの認証情報を持つSecretを作成する。Podと同じNamespaceに属するする必要があるため、作成時にNamespaceの指定を忘れないようにする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-docker-registry-em-">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-docker-registry-em-</a></li>
 <li><a href="https://stackoverflow.com/questions/46297949/sharing-secret-across-namespaces">https://stackoverflow.com/questions/46297949/sharing-secret-across-namespaces</a></li>
@@ -8038,7 +8038,7 @@ $ kubectl create secret docker-registry foo-secret <span class="se">\</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="secret-generic">▼ secret generic<a class="headerlink" href="#secret-generic" title="Permanent link">&para;</a></h4>
 <p>Secretを作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-generic-em-">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-generic-em-</a></li>
 <li><a href="https://qiita.com/toshihirock/items/38d09b2822a347c3f958">https://qiita.com/toshihirock/items/38d09b2822a347c3f958</a></li>
@@ -8067,14 +8067,14 @@ secret/foo-secret created
 </code></pre></div></td></tr></table></div>
 <h4 id="secret-tls">▼ secret tls<a class="headerlink" href="#secret-tls" title="Permanent link">&para;</a></h4>
 <p>SSL証明書を持つSecretを作成する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-tls-em-">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-tls-em-</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-tls-em-">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-secret-tls-em-</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl create secret tls tls-secret --cert<span class="o">=</span>./foo.cert --key<span class="o">=</span>./foo.key
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="describe">describe<a class="headerlink" href="#describe" title="Permanent link">&para;</a></h3>
 <h4 id="describe_1">▼ describeとは<a class="headerlink" href="#describe_1" title="Permanent link">&para;</a></h4>
 <p>リソースの詳細な情報を参照する。簡易的な情報を参照する時は、<code>kubectl get</code>コマンドを使用する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl describe nodes
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8085,14 +8085,14 @@ $ kubectl describe pod &lt;Pod名&gt; <span class="p">|</span> grep Node:
 <h3 id="edit">edit<a class="headerlink" href="#edit" title="Permanent link">&para;</a></h3>
 <h4 id="edit_1">▼ editとは<a class="headerlink" href="#edit_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesリソースの設定値をapplyせずに変更する。Podの設定値は直接的に変更できず、代わりにDeploymentやStatefulSet上での設定値を変更する必要がある。</p>
-<p>参考：<a href="https://github.com/kubernetes/kubernetes/issues/24913">https://github.com/kubernetes/kubernetes/issues/24913</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/kubernetes/kubernetes/issues/24913">https://github.com/kubernetes/kubernetes/issues/24913</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl edit &lt;Pod以外のリソース名&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="exec">exec<a class="headerlink" href="#exec" title="Permanent link">&para;</a></h3>
 <h4 id="exec_1">▼ execとは<a class="headerlink" href="#exec_1" title="Permanent link">&para;</a></h4>
 <p>指定したPod内コンテナでコマンドを実行する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec</a></p>
 <h4 id="-it">▼ -it<a class="headerlink" href="#-it" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>コンテナを指定して、デタッチモードで <code>kubectl exec</code>コマンドを実行する。</p>
@@ -8113,7 +8113,7 @@ Defaulted container <span class="s2">&quot;foo-container&quot;</span> out of: fo
 <h3 id="expose">expose<a class="headerlink" href="#expose" title="Permanent link">&para;</a></h3>
 <h4 id="expose_1">▼ exposeとは<a class="headerlink" href="#expose_1" title="Permanent link">&para;</a></h4>
 <p>Serviceを作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#expose</a></li>
 <li><a href="https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908">https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908</a></li>
@@ -8133,7 +8133,7 @@ Defaulted container <span class="s2">&quot;foo-container&quot;</span> out of: fo
 <h3 id="get">get &lt;リソース&gt;<a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
 <h4 id="get_1">▼ getとは<a class="headerlink" href="#get_1" title="Permanent link">&para;</a></h4>
 <p>リソースの簡易的な情報を参照する。詳細な情報を参照する時は、<code>kubectl describe</code>コマンドを使用する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get</a></p>
 <p><strong>＊例＊</strong></p>
 <p>指定したNodeの情報を取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8290,7 +8290,7 @@ $ kubectl get pods -l &lt;キー&gt;<span class="o">=</span>&lt;値&gt;
 <h3 id="logs">logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h3>
 <h4 id="logs_1">▼ logsとは<a class="headerlink" href="#logs_1" title="Permanent link">&para;</a></h4>
 <p>指定したリソースのログを取得する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs</a></p>
 <h4 id="-c">▼ -c<a class="headerlink" href="#-c" title="Permanent link">&para;</a></h4>
 <p>Pod名とコンテナ名を指定し、コンテナのログを取得する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8319,26 +8319,26 @@ $ kubectl get pods -l &lt;キー&gt;<span class="o">=</span>&lt;値&gt;
 <h3 id="rollout">rollout<a class="headerlink" href="#rollout" title="Permanent link">&para;</a></h3>
 <h4 id="rollout_1">▼ rolloutとは<a class="headerlink" href="#rollout_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesリソースをダウンタイム無しで更新する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout</a></li>
 <li><a href="https://aaabbb-200904.hatenablog.jp/entry/2018/05/04/013848">https://aaabbb-200904.hatenablog.jp/entry/2018/05/04/013848</a></li>
 </ul>
 <h4 id="restart">▼ restart<a class="headerlink" href="#restart" title="Permanent link">&para;</a></h4>
 <p>指定したKubernetesをローリングリスタートする。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/57559357/how-to-rolling-restart-pods-without-changing-deployment-yaml-in-kubernetes">https://stackoverflow.com/questions/57559357/how-to-rolling-restart-pods-without-changing-deployment-yaml-in-kubernetes</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/57559357/how-to-rolling-restart-pods-without-changing-deployment-yaml-in-kubernetes">https://stackoverflow.com/questions/57559357/how-to-rolling-restart-pods-without-changing-deployment-yaml-in-kubernetes</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl rollout restart deployment -n kube-system
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="patch">patch<a class="headerlink" href="#patch" title="Permanent link">&para;</a></h3>
 <h4 id="patch_1">▼ patchとは<a class="headerlink" href="#patch_1" title="Permanent link">&para;</a></h4>
 <p>JSON/YAML形式を入力値として、リソースの設定値を変更する。ただし、マニフェストファイルは変更されない。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch</a></p>
 <h4 id="pv">▼ pv<a class="headerlink" href="#pv" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeの設定値を変更する。</p>
 <p><strong>＊例＊</strong></p>
 <p>削除されないボリュームを削除する。</p>
-<p>参考：<a href="https://github.com/kubernetes/kubernetes/issues/77258#issuecomment-514543465">https://github.com/kubernetes/kubernetes/issues/77258#issuecomment-514543465</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/kubernetes/kubernetes/issues/77258#issuecomment-514543465">https://github.com/kubernetes/kubernetes/issues/77258#issuecomment-514543465</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8351,7 +8351,7 @@ $ kubectl get pods -l &lt;キー&gt;<span class="o">=</span>&lt;値&gt;
 <h3 id="port-forward">port-forward<a class="headerlink" href="#port-forward" title="Permanent link">&para;</a></h3>
 <h4 id="port-forward_1">▼ port-forwardとは<a class="headerlink" href="#port-forward_1" title="Permanent link">&para;</a></h4>
 <p>ホストのポートから指定したリソースのポートに対して、ポートフォワーディングを実行する。開発環境にて、Serviceを経由せずに直接的にPodにリクエストを送信したい場合や、SQLクライアントを使用してPod内のDBコンテナにTCP/IP接続したい場合に使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/#forward-a-local-port-to-a-port-on-the-pod">https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/#forward-a-local-port-to-a-port-on-the-pod</a></li>
 <li><a href="https://stackoverflow.com/questions/53898627/mysql-remote-connect-over-ssh-to-a-kubernetes-pod">https://stackoverflow.com/questions/53898627/mysql-remote-connect-over-ssh-to-a-kubernetes-pod</a></li>
@@ -8364,7 +8364,7 @@ $ kubectl get pods -l &lt;キー&gt;<span class="o">=</span>&lt;値&gt;
 <h4 id="proxy_1">▼ proxyとは<a class="headerlink" href="#proxy_1" title="Permanent link">&para;</a></h4>
 <p>ローカルホストとkube-apiserverの間にフォワード/リバースプロキシサーバーとして機能するリソースを作成する。kube-proxyとは異なるリソースであることに注意する。</p>
 <h4 id="-address-accept-hosts">▼ --address、--accept-hosts<a class="headerlink" href="#-address-accept-hosts" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#proxy">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#proxy</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#proxy">https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#proxy</a></p>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8376,7 +8376,7 @@ Starting to serve on <span class="o">[</span>::<span class="o">]</span>:8001
 <h3 id="run">run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h3>
 <h4 id="run_1">▼ runとは<a class="headerlink" href="#run_1" title="Permanent link">&para;</a></h4>
 <p>Deployment、Pod、Jobを作成する。</p>
-<p>参考：<a href="https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908">https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908">https://qiita.com/sourjp/items/f0c8c8b4a2a494a80908</a></p>
 <h4 id="-restart-image-port">▼ --restart、--image、--port<a class="headerlink" href="#-restart-image-port" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>もし<code>restart</code>オプションが<code>Always</code>なら、Deploymentが作成される。</p>
@@ -8402,7 +8402,7 @@ minikube   523m         <span class="m">13</span>%    4393Mi          <span clas
 <p><br></p>
 <h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
 <p>kubectlとKubernetesのバージョンをそれぞれ取得する。両方のバージョンに差があっても、1つ以内のメジャーバージョンであれば許容範囲である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/60991658/kubectl-what-does-client-vs-server">https://stackoverflow.com/questions/60991658/kubectl-what-does-client-vs-server</a></li>
 <li><a href="https://github.com/kubernetes/kubernetes/issues/93635#issuecomment-667702194">https://github.com/kubernetes/kubernetes/issues/93635#issuecomment-667702194</a></li>
@@ -8468,7 +8468,7 @@ Server Version: version.Info<span class="o">{</span>
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7132,14 +7132,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8214,15 +8214,15 @@
 <h1 id="tfterraform">tfファイル＠Terraform<a class="headerlink" href="#tfterraform" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ルートモジュールにおける実装<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="tfstate"><code>.tfstate</code>ファイル<a class="headerlink" href="#tfstate" title="Permanent link">&para;</a></h3>
 <h4 id="tfstate_1">▼ <code>.tfstate</code>ファイルとは<a class="headerlink" href="#tfstate_1" title="Permanent link">&para;</a></h4>
 <p>実インフラのインフラの状態が定義されたjsonファイルのこと。初回時、<code>terraform apply</code>コマンドを実行した後、成功もしくは失敗したタイミングで作成される。</p>
-<p>参考：<a href="https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa">https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa</a></p>
+<p>ℹ️ 参考：<a href="https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa">https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa</a></p>
 <h4 id="_2">▼ 読み方<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://chroju.dev/blog/terraform_state_introduction">https://chroju.dev/blog/terraform_state_introduction</a></p>
+<p>ℹ️ 参考：<a href="https://chroju.dev/blog/terraform_state_introduction">https://chroju.dev/blog/terraform_state_introduction</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8339,7 +8339,7 @@
 <h3 id="terraformlockhcl"><code>.terraform.lock.hcl</code>ファイル<a class="headerlink" href="#terraformlockhcl" title="Permanent link">&para;</a></h3>
 <h4 id="terraformlock">▼ <code>.terraform.lock</code>.ファイルとは<a class="headerlink" href="#terraformlock" title="Permanent link">&para;</a></h4>
 <p>開発者間で共有するべき情報（バージョン、ハッシュ値、など）が設定される。これにより例えば、他の人がリポジトリを使用する時に、異なるプロバイダーを宣言できないようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.terraform.io/language/files/dependency-lock">https://www.terraform.io/language/files/dependency-lock</a></li>
 <li><a href="https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently">https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently</a></li>
@@ -8389,7 +8389,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="hashes">▼ hashes<a class="headerlink" href="#hashes" title="Permanent link">&para;</a></h4>
 <p>ハッシュ値を設定する、タグごとに役割が異なる。</p>
-<p>参考：<a href="https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently?slide=12">https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently?slide=12</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently?slide=12">https://speakerdeck.com/minamijoyo/how-to-update-terraform-dot-lock-dot-hcl-efficiently?slide=12</a></p>
 <table>
 <thead>
 <tr>
@@ -8471,7 +8471,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="backend">▼ backend<a class="headerlink" href="#backend" title="Permanent link">&para;</a></h4>
 <p>インフラの状態ファイル（<code>.tfstate</code>ファイル）を管理する場所を設定する。S3などの実インフラで管理する場合、クレデンシャル情報を設定する必要がある。代わりに、<code>terraform init</code>コマンド実行時に指定しても良い。デフォルト値は<code>local</code>である。変数を使用できず、ハードコーディングする必要があるため、もし値を動的に変更したい場合は、ローカルマシンでは<code>providers.tf</code>ファイルの<code>backend</code>オプションを参照し、CDの中で<code>terraform init</code>コマンドのオプションを使用して値を渡すようにする。</p>
-<p>参考：<a href="https://www.terraform.io/language/settings/backends/s3">https://www.terraform.io/language/settings/backends/s3</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/settings/backends/s3">https://www.terraform.io/language/settings/backends/s3</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8910,7 +8910,7 @@ $ <span class="nb">export</span> <span class="nv">AWS_SESSION_TOKEN</span><span 
 <h3 id="module">module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h3>
 <h4 id="module_1">▼ moduleとは<a class="headerlink" href="#module_1" title="Permanent link">&para;</a></h4>
 <p>ルートモジュールでネストモジュール読み出し、ネストモジュールに対して変数を渡す。</p>
-<p>参考：<a href="https://www.terraform.io/language/modules/sources">https://www.terraform.io/language/modules/sources</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/modules/sources">https://www.terraform.io/language/modules/sources</a></p>
 <h4 id="_6">▼ 同一リポジトリ内から読み込む<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>同じリポジトリ内にmoduleがある場合に、それを指定して読み込む。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -8959,7 +8959,7 @@ $ <span class="nb">export</span> <span class="nv">AWS_SESSION_TOKEN</span><span 
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>サブディレクトリを指定することもできる。リポジトリ以下にスラッシュを２つ（<code>//</code>）つけ、その後にパスを続ける。</p>
-<p>参考：<a href="https://www.terraform.io/language/modules/sources#modules-in-package-sub-directories">https://www.terraform.io/language/modules/sources#modules-in-package-sub-directories</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/modules/sources#modules-in-package-sub-directories">https://www.terraform.io/language/modules/sources#modules-in-package-sub-directories</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8987,7 +8987,7 @@ $ <span class="nb">export</span> <span class="nv">AWS_SESSION_TOKEN</span><span 
 <h3 id="_8">環境変数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ 優先順位<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>上の項目ほど優先される。</p>
-<p>参考：<a href="https://www.terraform.io/language/values/variables#variable-definition-precedence">https://www.terraform.io/language/values/variables#variable-definition-precedence</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/values/variables#variable-definition-precedence">https://www.terraform.io/language/values/variables#variable-definition-precedence</a></p>
 <h4 id="-var-var-file">▼ <code>-var</code>、<code>-var-file</code><a class="headerlink" href="#-var-var-file" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$ terraform plan -var<span class="o">=</span><span class="s2">&quot;foo=foo&quot;</span>
@@ -9251,7 +9251,7 @@ $ terraform plan
 <h3 id="local">local<a class="headerlink" href="#local" title="Permanent link">&para;</a></h3>
 <h4 id="local_1">▼ localとは<a class="headerlink" href="#local_1" title="Permanent link">&para;</a></h4>
 <p>ネストモジュール内にスコープを持つ変数。ルートモジュールとネストモジュールが別のリポジトリで管理されている場合に有効であり、これらが同じリポジトリにある場合は、環境変数を使用した方が可読性が高くなる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.terraform.io/language/values/locals">https://www.terraform.io/language/values/locals</a></li>
 <li><a href="https://febc-yamamoto.hatenablog.jp/entry/2018/01/30/185416">https://febc-yamamoto.hatenablog.jp/entry/2018/01/30/185416</a></li>
@@ -9277,7 +9277,7 @@ $ terraform plan
 <p>AWSのAPIに対してリクエストを送信し、クラウドインフラを作成する。</p>
 <h4 id="resource_2">▼ <code>resource</code>タイプ<a class="headerlink" href="#resource_2" title="Permanent link">&para;</a></h4>
 <p>操作されるAWSリソースの種類のこと。AWSリソースとTerraformの<code>resource</code>タイプはおおよそ一致している。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html">https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html">https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html</a></p>
 <h4 id="_11">▼ 実装方法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9387,7 +9387,7 @@ $ terraform plan
 <h3 id="output">output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <h4 id="output_1">▼ outputとは<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h4>
 <p>モジュール内の<code>resource</code>ブロックが持つ値をモジュール外に出力する。または、他の<code>.tfstate</code>ファイルの<code>resource</code>ブロックで使用できるようにする。可読性の観点から、<code>resource</code>ブロック一括ではなく、具体的な<code>attribute</code>を出力するようにした方が良い。</p>
-<p>参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
 <h4 id="_13">▼ 実装方法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <p>例として、ALBを示す。<code>resource</code>ブロックと<code>data</code>ブロックで<code>output</code>ブロックの方法が異なる。</p>
@@ -10125,7 +10125,7 @@ $ terraform plan
 <h3 id="dynamic">dynamic<a class="headerlink" href="#dynamic" title="Permanent link">&para;</a></h3>
 <h4 id="dynamic_1">▼ dynamicとは<a class="headerlink" href="#dynamic_1" title="Permanent link">&para;</a></h4>
 <p>指定したブロックを繰り返し作成する。</p>
-<p>参考：<a href="https://www.terraform.io/language/expressions/dynamic-blocks">https://www.terraform.io/language/expressions/dynamic-blocks</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/expressions/dynamic-blocks">https://www.terraform.io/language/expressions/dynamic-blocks</a></p>
 <h4 id="map">▼ map型の場合<a class="headerlink" href="#map" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
 <p>map型のキー名と値の両方を設定値として使用する。例として、RDSパラメーターグループの<code>parameter</code>ブロックを、map型変数を使用して繰り返し作成する。</p>
@@ -10645,7 +10645,7 @@ $ terraform plan
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="path">▼ path式<a class="headerlink" href="#path" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.terraform.io/language/expressions/references#filesystem-and-workspace-info">https://www.terraform.io/language/expressions/references#filesystem-and-workspace-info</a></p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/language/expressions/references#filesystem-and-workspace-info">https://www.terraform.io/language/expressions/references#filesystem-and-workspace-info</a></p>
 <table>
 <thead>
 <tr>
@@ -10835,7 +10835,7 @@ $ terraform plan
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

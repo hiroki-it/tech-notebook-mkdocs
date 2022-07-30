@@ -7172,14 +7172,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8298,7 +8298,7 @@
 <h1 id="datadog">ログ収集＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 仕組み<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">バックエンド<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -8306,28 +8306,28 @@
 <p>（１）サーバーの場合、稼働するdatadogエージェントが、datadog-APIにアプリケーションログを送信する。コンテナの場合、FluentBitが代わりにアプリケーションログを送信する。</p>
 <p>（２）Datadogにて、ログはパイプラインで処理され、構造化ログになる。</p>
 <p>（３）ユーザーは、ログの属性値を基に、ログを検索できるようになる。</p>
-<p>参考：<a href="https://developers.cyberagent.co.jp/blog/archives/12565/">https://developers.cyberagent.co.jp/blog/archives/12565/</a></p>
+<p>ℹ️ 参考：<a href="https://developers.cyberagent.co.jp/blog/archives/12565/">https://developers.cyberagent.co.jp/blog/archives/12565/</a></p>
 <p><br></p>
 <h3 id="_3">フロントエンド<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>（１）ブラウザのコンソールに出力されるログを収集する。</p>
 <p>（２）Datadogにて、ログはパイプラインで処理され、構造化ログになる。</p>
 <p>（３）ユーザーは、ログの属性値を基に、ログを検索できるようになる。</p>
-<p>参考：<a href="https://qiita.com/komtaki/items/a2d3f06e2265e55b0c08#2-js%E3%83%AD%E3%82%AC%E3%83%BC%E3%81%AE%E6%A7%8B%E7%AF%89">https://qiita.com/komtaki/items/a2d3f06e2265e55b0c08#2-js%E3%83%AD%E3%82%AC%E3%83%BC%E3%81%AE%E6%A7%8B%E7%AF%89</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/komtaki/items/a2d3f06e2265e55b0c08#2-js%E3%83%AD%E3%82%AC%E3%83%BC%E3%81%AE%E6%A7%8B%E7%AF%89">https://qiita.com/komtaki/items/a2d3f06e2265e55b0c08#2-js%E3%83%AD%E3%82%AC%E3%83%BC%E3%81%AE%E6%A7%8B%E7%AF%89</a></p>
 <p><br></p>
 <h2 id="02">02. ログエージェント（サーバーの場合）<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_4">ログエージェントとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>デーモンであるdatadogエージェントに含まれている。アプリケーションからログを収集し、Datadogに転送する。</p>
-<p>参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
+<p>ℹ️ 参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
 <p><img alt="datadog-agent_on-server" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on-server.png" /></p>
 <p><br></p>
 <h3 id="_5">セットアップ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="etcdatadog-agentdatadogyaml">▼ <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
 <p><br></p>
 <h2 id="03-aws-ecs-fargate">03. ログエージェント（AWS ECS Fargateの場合）<a class="headerlink" href="#03-aws-ecs-fargate" title="Permanent link">&para;</a></h2>
 <h3 id="_6">ログエージェントとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>サーバーの場合とは異なり、AWS ECS Fargateのdatadogエージェントはログを収集できない。そのため、代わりにFireLensコンテナを使用する必要がある。メトリクスと分散トレースであれば収集できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html</a></li>
@@ -8335,7 +8335,7 @@
 <p><br></p>
 <h3 id="firelens">FireLensコンテナ<a class="headerlink" href="#firelens" title="Permanent link">&para;</a></h3>
 <p>FluentBitを稼働させたコンテナのこと。Datadogの代わりにログを収集する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_firelens.html</a></li>
@@ -8346,14 +8346,14 @@
 <h4 id="kubernetes">▼ Kubernetesの場合<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h4>
 <p><img alt="datadog-agent_on_kubernetes" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on_kubernetes.png" /></p>
 <p>KubernetesのClusterやワーカーNodeからメトリクスを受信し、マスターNodeのkube-apiserverに転送する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.datadoghq.com/ja/blog/datadog-cluster-agent/">https://www.datadoghq.com/ja/blog/datadog-cluster-agent/</a></li>
 <li><a href="https://blog.serverworks.co.jp/k8s-datadog">https://blog.serverworks.co.jp/k8s-datadog</a></li>
 </ul>
 <h4 id="kubernetesistio">▼ Kubernetes＋Istioの場合<a class="headerlink" href="#kubernetesistio" title="Permanent link">&para;</a></h4>
 <p><img alt="datadog-agent_on_kubernetes_istio" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on_kubernetes_istio.png" /></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/01946/021500003/">https://xtech.nikkei.com/atcl/nxt/column/18/01946/021500003/</a></li>
 <li><a href="https://docs.datadoghq.com/integrations/istio/">https://docs.datadoghq.com/integrations/istio/</a></li>
@@ -8363,11 +8363,11 @@
 <h3 id="sdk">ブラウザログSDK<a class="headerlink" href="#sdk" title="Permanent link">&para;</a></h3>
 <h4 id="sdk_1">▼ ブラウザログSDKとは<a class="headerlink" href="#sdk_1" title="Permanent link">&para;</a></h4>
 <p>ブラウザ上のJavaScriptで実行され、<code>console.error</code>メソッドの実行結果、キャッチされていない例外、ネットワークエラー、を含む構造化ログをDatadogに送信する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript">https://docs.datadoghq.com/logs/log_collection/javascript</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript">https://docs.datadoghq.com/logs/log_collection/javascript</a></p>
 <h4 id="_7">▼ パラメーター<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript/#initialization-parameters">https://docs.datadoghq.com/logs/log_collection/javascript/#initialization-parameters</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript/#initialization-parameters">https://docs.datadoghq.com/logs/log_collection/javascript/#initialization-parameters</a></p>
 <h4 id="_8">▼ 送信される構造化ログ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript/#results">https://docs.datadoghq.com/logs/log_collection/javascript/#results</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_collection/javascript/#results">https://docs.datadoghq.com/logs/log_collection/javascript/#results</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8589,7 +8589,7 @@
 <h2 id="05">05. ログの識別子<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="attribute">attribute（属性）<a class="headerlink" href="#attribute" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ 予約済み属性<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/">https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/">https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/</a></p>
 <table>
 <thead>
 <tr>
@@ -8640,10 +8640,10 @@
 </table>
 <h4 id="_11">▼ 標準属性<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>デフォルトで用意された属性。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#standard-attributes">https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#standard-attributes</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#standard-attributes">https://docs.datadoghq.com/logs/log_configuration/attributes_naming_convention/#standard-attributes</a></p>
 <h4 id="_12">▼ スタックトレース属性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>スタックトレースログを構成する要素に付与される属性のこと。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_collection/?tab=host#attributes-for-stack-traces">https://docs.datadoghq.com/logs/log_collection/?tab=host#attributes-for-stack-traces</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_collection/?tab=host#attributes-for-stack-traces">https://docs.datadoghq.com/logs/log_collection/?tab=host#attributes-for-stack-traces</a></p>
 <table>
 <thead>
 <tr>
@@ -8676,12 +8676,12 @@
 </table>
 <p><br></p>
 <h3 id="_13">タグ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_telemetry_association.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_telemetry_association.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_telemetry_association.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_telemetry_association.html</a></p>
 <h2 id="06">06. 収集されたログの送信<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
 <h3 id="ec2">EC2におけるログの送信<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h3>
 <h4 id="php-monolog">▼ PHP Monologの場合<a class="headerlink" href="#php-monolog" title="Permanent link">&para;</a></h4>
 <p>LogパッケージにMonologを使用している場合、<code>/etc/datadog-agent/conf.d/php.d</code>ディレクトリ配下に<code>conf.yaml</code>ファイルを作成する。ここに、Datadogにログを送信するための設定を行う。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_collection/php/?tab=phpmonolog#agent-configuration">https://docs.datadoghq.com/logs/log_collection/php/?tab=phpmonolog#agent-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_collection/php/?tab=phpmonolog#agent-configuration">https://docs.datadoghq.com/logs/log_collection/php/?tab=phpmonolog#agent-configuration</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8710,7 +8710,7 @@
 <p><br></p>
 <h3 id="aws-ecs-fargate">AWS ECS Fargateにおけるログの送信<a class="headerlink" href="#aws-ecs-fargate" title="Permanent link">&para;</a></h3>
 <p>FireLensコンテナで稼働するFluentBitが、Datadogにログを送信する。以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_vs_fluentd.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_vs_fluentd.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_vs_fluentd.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_fluentbit_vs_fluentd.html</a></p>
 <p><br></p>
 <h2 id="07">07. ログパイプライン<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
 <h3 id="_14">ログパイプラインとは<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -8904,11 +8904,11 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_17">▼ ログステータスリマッパー<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>指定した属性/タグに割り当てられた値を、ルールを基に、ステータスファセットの各ステータス（<code>INFO</code>、<code>WARNING</code>、<code>ERROR</code>、など）として登録する。ログコンソール画面にて、ステータスファセットとして表示される。判定ルールについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#log-status-remapper">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#log-status-remapper</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#log-status-remapper">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#log-status-remapper</a></p>
 <p><img alt="datadog_status-facet" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog_status-facet.png" /></p>
 <h4 id="_18">▼ サービスリマッパー<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>指定した属性/タグに割り当てられた値を、サービスファセットのサービス名として登録する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#service-remapper">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#service-remapper</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#service-remapper">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#service-remapper</a></p>
 <p><img alt="datadog_service-facet" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog_service-facet.png" /></p>
 <p><br></p>
 <h3 id="_19">プロセッサー系<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
@@ -8961,7 +8961,7 @@ error.format %{date(&quot;yyyy/MM/dd HH:mm:ss&quot;):date_access} \[%{word:level
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>これに対して、以下のようなカテゴリパーサーのルールを定義する。<code>http.status_code</code>属性のステータスコード値に応じて、<code>http.status_category</code>属性にレベル値（<code>info</code>、<code>notice</code>、<code>warning</code>、<code>critical</code>）に変換する。ステータスコードとレベルの対応関係については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9003,7 +9003,7 @@ CRITICAL @http.status_code:<span class="o">[</span><span class="m">500</span> TO
 <h3 id="grok">Grokパーサー<a class="headerlink" href="#grok" title="Permanent link">&para;</a></h3>
 <h4 id="grok_1">▼ Grokパーサーとは<a class="headerlink" href="#grok_1" title="Permanent link">&para;</a></h4>
 <p>パースルール（<code>%{&lt;マッチャー名&gt;:&lt;エクストラクト名&gt;:&lt;フィルター名&gt;}</code>）を使用して、<code>message</code>属性に割り当てられた非構造化ログを構造化し、構造化ログに付与する。また、Extract機能を使用すると、<code>message</code>属性以外に対してGrokパーサーを使用できるようになるため、構造化ログも扱えるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher">https://docs.datadoghq.com/logs/processing/parsing/?tab=matcher</a></li>
 <li><a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#grok-parser">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#grok-parser</a></li>
@@ -9022,7 +9022,7 @@ CRITICAL @http.status_code:<span class="o">[</span><span class="m">500</span> TO
 <tr>
 <td>マッチャー名</td>
 <td>パース対象の文字列を検出できるマッチャー関数を設定する。それぞれマッチャーは、検出後に何らかの処理を行う。</td>
-<td>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#matcher-and-filter">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#matcher-and-filter</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#matcher-and-filter">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#matcher-and-filter</a></td>
 </tr>
 <tr>
 <td>エクストラクト名</td>
@@ -9032,7 +9032,7 @@ CRITICAL @http.status_code:<span class="o">[</span><span class="m">500</span> TO
 <tr>
 <td>フィルター名</td>
 <td>マッチャーの追加処理を行うフィルター関数を設定する。</td>
-<td>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=filters#matcher-and-filter">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=filters#matcher-and-filter</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=filters#matcher-and-filter">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=filters#matcher-and-filter</a></td>
 </tr>
 </tbody>
 </table>
@@ -9070,7 +9070,7 @@ CRITICAL @http.status_code:<span class="o">[</span><span class="m">500</span> TO
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>以下のようなGrokパーサールールを定義する。<code>date</code>マッチャーを使用して、また<code>date</code>属性をエクストラクト先とする。<code>word</code>マッチャーを使用して、また<code>log_status</code>カスタム属性をエクストラクト先とする。任意のルール名を設定できる。<code>date</code>マッチャーのタイムスタンプ形式の指定は以下を参考にせよ。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#parsing-dates">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#parsing-dates</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#parsing-dates">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#parsing-dates</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>FooRule \[%{date(&quot;yyyy-MM-dd HH:mm:ss&quot;):date}\]\s+(production|staging).%{word:log_status}\:.+
 </code></pre></div></td></tr></table></div>
 <p>これにより、非構造化ログは以下の様に構造化され、構造化ログに付与される。</p>
@@ -9182,7 +9182,7 @@ CRITICAL @http.status_code:<span class="o">[</span><span class="m">500</span> TO
 <h3 id="url">Urlパーサー<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
 <h4 id="url_1">▼ Urlパーサーとは<a class="headerlink" href="#url_1" title="Permanent link">&para;</a></h4>
 <p>構造化ログのURL値からパスパラメーターやクエリパラメーターを検出し、詳細な属性として新しく付与する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#url-parser">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#url-parser</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#url-parser">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#url-parser</a></p>
 <h4 id="1_1">▼ 例１<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
 <p>とあるアプリケーションから、以下のような非構造化ログを受信する例を考える。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>192.168.0.1 [2021-01-01 12:00:00] GET /users?paginate=10&amp;fooId=1 200
@@ -9495,7 +9495,7 @@ error.format %{date(&quot;yyyy/MM/dd HH:mm:ss&quot;):date_access} \[%{word:level
 <h3 id="_24">ストリングビルダープロセッサー<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="_25">▼ ストリングビルダープロセッサーとは<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>構造化ログの属性にアクセスし、ルールを基に属性値を出力し、新しい文字列を作成する。配列値のキー名にアクセスするようにルールを定義した場合、そのキーの全ての値をカンマ区切りで出力できる。また、配列状のオブジェクトのキー名にアクセスするようにルールを定義した場合、各オブジェクトの同キーの値をカンマ区切りで出力できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor">https://docs.datadoghq.com/logs/log_configuration/processors/?tab=ui#string-builder-processor</a></p>
 <h4 id="1_3">▼ 例１<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
 <p>ログパイプラインを経て、以下のような構造化ログが作成されているとする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9705,7 +9705,7 @@ error.format %{date(&quot;yyyy/MM/dd HH:mm:ss&quot;):date_access} \[%{word:level
 <h3 id="_34">パーサーに関して<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
 <h4 id="grok_2">▼ Grokパーサーのルールにコメント<a class="headerlink" href="#grok_2" title="Permanent link">&para;</a></h4>
 <p>ベストプラクティス通り、Grokパーサーではコメントでログサンプルを示すようにする。ログの種類が1つしかない場合は任意であるが、ログの種類が複数あり、それぞれを解析するルールも複数ある場合は必ずコメントする。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/guide/log-parsing-best-practice/">https://docs.datadoghq.com/logs/guide/log-parsing-best-practice/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/guide/log-parsing-best-practice/">https://docs.datadoghq.com/logs/guide/log-parsing-best-practice/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9724,27 +9724,27 @@ autoFilledRule3 ...
 </code></pre></div></td></tr></table></div>
 <h4 id="_35">▼ ヘルパールールを使用する<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p>ヘルパールールを使用すると、正規表現ルールを共通化し、複数のルールで使いまわせる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#using-helper-rules-to-factorize-multiple-parsing-rules">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#using-helper-rules-to-factorize-multiple-parsing-rules</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#using-helper-rules-to-factorize-multiple-parsing-rules">https://docs.datadoghq.com/logs/log_configuration/parsing/?tab=matchers#using-helper-rules-to-factorize-multiple-parsing-rules</a></p>
 <p><br></p>
 <h2 id="07-04">07-04. パイプラインの前後処理<a class="headerlink" href="#07-04" title="Permanent link">&para;</a></h2>
 <h3 id="_36">前処理<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
 <h4 id="_37">▼ プリプロセッサー<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
 <p>予約済み属性（<code>message</code>、<code>timestamp</code>、<code>status</code>、<code>host</code>、<code>service</code>）に基づいて、ログを構造化する。例えば、受信したログが非構造化ログの場合、これはDatadogの基底構造化ログの<code>message</code>属性に割り当てられる。一方で、構造化ログであった場合は<code>message</code>属性は使用されない。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#preprocessing">https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#preprocessing</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#preprocessing">https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#preprocessing</a></p>
 <p><br></p>
 <h3 id="_38">後処理<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
 <h4 id="_39">▼ 標準属性<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
 <p>標準属性を新しく付与する。</p>
 <h4 id="live-tail">▼ Live Tail<a class="headerlink" href="#live-tail" title="Permanent link">&para;</a></h4>
 <p>ログパイプライン処理後のログをリアルタイムで確認できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/explorer/live_tail/">https://docs.datadoghq.com/logs/explorer/live_tail/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/explorer/live_tail/">https://docs.datadoghq.com/logs/explorer/live_tail/</a></p>
 <h4 id="_40">▼ ログのメトリクス<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
 <p>パイプラインで処理を終えたログに関して、属性/タグに基づくメトリクスを作成する。メトリクスを作成しておくと、ログのレポートとして使用できる。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/1800568738">https://www.amazon.co.jp/dp/1800568738</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/1800568738">https://www.amazon.co.jp/dp/1800568738</a></p>
 <p><br></p>
 <h4 id="_41">▼ インデックス<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
 <p>パイプラインで処理を終えたログをグループ化し、ログの破棄ルールや保管期間をグループごとに定義できる。インデックスを使用すれば、Datadogのログ保管のネックになる保管料金を抑えられる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/logs/indexes/">https://docs.datadoghq.com/logs/indexes/</a></li>
 <li><a href="https://tech-blog.abeja.asia/entry/why-datadog">https://tech-blog.abeja.asia/entry/why-datadog</a></li>
@@ -9756,7 +9756,7 @@ autoFilledRule3 ...
 <h3 id="_44">ログクエリ<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
 <h4 id="_45">▼ ログクエリとは<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
 <p>構造化ログの属性名と値を基に、ログを絞り込める。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/explorer/search_syntax/">https://docs.datadoghq.com/logs/explorer/search_syntax/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/explorer/search_syntax/">https://docs.datadoghq.com/logs/explorer/search_syntax/</a></p>
 <h4 id="_46">▼ オートコンプリート<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
 <p>入力欄右のアイコンで切り替える。検索条件として属性名と値を補完入力できる。オートコンプリートをの使用時は、小文字で入力した属性名の頭文字が画面上で大文字に変換される。</p>
 <p><strong>＊例＊</strong></p>
@@ -9794,7 +9794,7 @@ autoFilledRule3 ...
 <h3 id="_49">ファセット<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
 <h4 id="_50">▼ ファセットとは<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
 <p>属性/タグの値を基に、ログをグルーピングしたもの。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/explorer/facets/#facet-panel">https://docs.datadoghq.com/logs/explorer/facets/#facet-panel</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/explorer/facets/#facet-panel">https://docs.datadoghq.com/logs/explorer/facets/#facet-panel</a></p>
 <h4 id="_51">▼ 属性のファセット化<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
 <p>Pathの値に属性までのアクセスを『<code>@</code>』から入力すると、ログの属性がファセットの値に登録される。</p>
 <p><img alt="datadog_facet_attribute" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog_facet_attribute.png" /></p>
@@ -9807,7 +9807,7 @@ autoFilledRule3 ...
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6518,14 +6518,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6990,26 +6990,26 @@
 <h1 id="datadog">メトリクス収集＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-process">01. Processエージェント（サーバーの場合）<a class="headerlink" href="#01-process" title="Permanent link">&para;</a></h2>
 <h3 id="process">Processエージェントとは<a class="headerlink" href="#process" title="Permanent link">&para;</a></h3>
 <p>デーモンであるdatadogエージェントに含まれている。アプリケーションからメトリクスのデータポイントを収集し、Datadogに転送する。</p>
-<p>参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
+<p>ℹ️ 参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
 <p><img alt="datadog-agent_on-server" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on-server.png" /></p>
 <p><br></p>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="etcdatadog-agentdatadogyaml">▼ <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
 <p><br></p>
 <h2 id="02-processaws-ecs-fargate">02. Processエージェント（AWS ECS Fargateの場合）<a class="headerlink" href="#02-processaws-ecs-fargate" title="Permanent link">&para;</a></h2>
 <h3 id="process_1">Processエージェントとは<a class="headerlink" href="#process_1" title="Permanent link">&para;</a></h3>
 <p>サーバーの場合と同様にして、アプリケーションからメトリクスを受信し、Datadogに転送する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97</a></p>
 <h3 id="_3">トレースエージェント<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ トレースエージェントとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>dockerエージェントにて、<code>DD_APM_ENABLED</code>の環境変数に<code>true</code>を割り当てると、トレースエージェントが有効になる。APMエージェントを有効化し、分散トレースを収集できる。APMでは、分散トレースを元にして、マイクロサービス間の依存関係をマイクロサービスマップとして確認できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/agent/docker/apm/?tab=linux">https://docs.datadoghq.com/agent/docker/apm/?tab=linux</a></li>
 <li><a href="https://docs.datadoghq.com/tracing/#explore-datadog-apm">https://docs.datadoghq.com/tracing/#explore-datadog-apm</a></li>
@@ -7020,14 +7020,14 @@
 <h4 id="kubernetes">▼ Kubernetesの場合<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h4>
 <p><img alt="datadog-agent_on_kubernetes" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on_kubernetes.png" /></p>
 <p>KubernetesのClusterやワーカーNodeからメトリクスを受信し、マスターNodeのkube-apiserverに転送する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.datadoghq.com/ja/blog/datadog-cluster-agent/">https://www.datadoghq.com/ja/blog/datadog-cluster-agent/</a></li>
 <li><a href="https://blog.serverworks.co.jp/k8s-datadog">https://blog.serverworks.co.jp/k8s-datadog</a></li>
 </ul>
 <h4 id="kubernetesistio">▼ Kubernetes＋Istioの場合<a class="headerlink" href="#kubernetesistio" title="Permanent link">&para;</a></h4>
 <p><img alt="datadog-agent_on_kubernetes_istio" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on_kubernetes_istio.png" /></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/01946/021500003/">https://xtech.nikkei.com/atcl/nxt/column/18/01946/021500003/</a></li>
 <li><a href="https://docs.datadoghq.com/integrations/istio/">https://docs.datadoghq.com/integrations/istio/</a></li>
@@ -7036,24 +7036,24 @@
 <h2 id="03">03. メトリクス送信<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_5">セットアップ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>いくつかの方法で、収集されたメトリクスを送信できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/metrics/#submitting-metrics-to-datadog">https://docs.datadoghq.com/metrics/#submitting-metrics-to-datadog</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/metrics/#submitting-metrics-to-datadog">https://docs.datadoghq.com/metrics/#submitting-metrics-to-datadog</a></p>
 <p><br></p>
 <h3 id="_6">インテグレーションのセットアップ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>Datadogでインテグレーションを有効化すると同時に、アプリケーションにエージェントをインストールする。</p>
 <p><br></p>
 <h3 id="_7">メトリクスの削除<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Datadogに送信されなくなったメトリクスは、時間経過とともにDatadogから削除される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/dashboards/faq/historical-data/">https://docs.datadoghq.com/dashboards/faq/historical-data/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/dashboards/faq/historical-data/">https://docs.datadoghq.com/dashboards/faq/historical-data/</a></p>
 <p><br></p>
 <h2 id="04">04. 他テレメトリーとの相関付け<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<p>参考：<a href="https://docs.datadoghq.com/logs/guide/correlate-logs-with-metrics/">https://docs.datadoghq.com/logs/guide/correlate-logs-with-metrics/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/guide/correlate-logs-with-metrics/">https://docs.datadoghq.com/logs/guide/correlate-logs-with-metrics/</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6833,14 +6833,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7622,18 +7622,18 @@
 <h1 id="docker">Docker＠仮想化<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-docker">01. Dockerの仕組み<a class="headerlink" href="#01-docker" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Dockerは、ホストOS、ベースイメージ、コンテナイメージレイヤー、コンテナレイヤー、から構成される。</p>
-<p>参考：<a href="https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f">https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f</a></p>
+<p>ℹ️ 参考：<a href="https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f">https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f</a></p>
 <p><img alt="docker_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/docker_architecture.png" /></p>
 <p><br></p>
 <h3 id="_3">イメージレイヤー<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="イメージレイヤーからなるコンテナイメージのビルド" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/コンテナイメージのビルド.png" /></p>
 <p>イメージレイヤーの実体は、<code>/var/lib/docker/overlay2</code>ディレクトリ配下にハッシュ値の名前からなるファイルとして保存されている。Dockerは、オーバーレイファイルシステムを使用して、各ファイルを層状に管理する。1つの命令につき、1つのコンテナイメージレイヤーを積み重ねるようになっている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.creationline.com/lab/35518">https://www.creationline.com/lab/35518</a></li>
 <li><a href="https://tech-lab.sios.jp/archives/21103#OverlayFS">https://tech-lab.sios.jp/archives/21103#OverlayFS</a></li>
@@ -7657,18 +7657,18 @@
 <p><br></p>
 <h3 id="_4">コンテナレイヤー<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>コンテナイメージからコンテナを作成する時に、コンテナイメージレイヤーの上にコンテナレイヤーが積み重ねられる。</p>
-<p>参考：<a href="https://blog.codecamp.jp/programming-docker-image-container">https://blog.codecamp.jp/programming-docker-image-container</a></p>
+<p>ℹ️ 参考：<a href="https://blog.codecamp.jp/programming-docker-image-container">https://blog.codecamp.jp/programming-docker-image-container</a></p>
 <p><img alt="コンテナイメージ上へのコンテナレイヤーの積み重ね" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/コンテナイメージ上へのコンテナレイヤーの積み重ね.png" /></p>
 <p><br></p>
 <h3 id="iac">IaC<a class="headerlink" href="#iac" title="Permanent link">&para;</a></h3>
 <p>DockerのIaCについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_docker_dockerfile.html</a></p>
 <p><br></p>
 <h2 id="02-docker">02. Dockerクライアント<a class="headerlink" href="#02-docker" title="Permanent link">&para;</a></h2>
 <h3 id="docker_1">dockerクライアント<a class="headerlink" href="#docker_1" title="Permanent link">&para;</a></h3>
 <h4 id="docker_2">▼ dockerクライアントとは<a class="headerlink" href="#docker_2" title="Permanent link">&para;</a></h4>
 <p>dockerクライアントは、dockerコマンドを使用してdockerデーモンAPIをコールできる。</p>
-<p>参考：<a href="https://www.slideshare.net/zembutsu/docker-underlying-and-containers-lifecycle">https://www.slideshare.net/zembutsu/docker-underlying-and-containers-lifecycle</a></p>
+<p>ℹ️ 参考：<a href="https://www.slideshare.net/zembutsu/docker-underlying-and-containers-lifecycle">https://www.slideshare.net/zembutsu/docker-underlying-and-containers-lifecycle</a></p>
 <p><img alt="docker-daemon" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/docker-client.png" /></p>
 <p><br></p>
 <h3 id="docker_3">dockerデーモン<a class="headerlink" href="#docker_3" title="Permanent link">&para;</a></h3>
@@ -7679,7 +7679,7 @@
 <h2 id="03-docker">03. Dockerマウント<a class="headerlink" href="#03-docker" title="Permanent link">&para;</a></h2>
 <h3 id="docker_5">Dockerマウントとは<a class="headerlink" href="#docker_5" title="Permanent link">&para;</a></h3>
 <p>コンテナのファイルデータをホスト上のストレージに一時化/非永続化/永続化するための方法である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://geekylane.com/what-is-docker-storage-learn-everything-about-docker-storage-theory/">https://geekylane.com/what-is-docker-storage-learn-everything-about-docker-storage-theory/</a></li>
 <li><a href="https://maku77.github.io/docker/mount/">https://maku77.github.io/docker/mount/</a></li>
@@ -7690,7 +7690,7 @@
 <h4 id="_6">▼ バインドマウントとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p><img alt="docker_bind-mount" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/docker_bind-mount.png" /></p>
 <p>ホスト側のストレージ上のディレクトリを、コンテナ側にマウントすることにより、データを永続化する。ホストで作成されるデータが継続的に変化する場合に適しており、例えば開発環境でアプリケーションをホストコンテナ間と共有する方法として推奨である。しかし、ホスト側のデータを永続化する方法としては不適である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.docker.com/storage/bind-mounts/">https://docs.docker.com/storage/bind-mounts/</a></li>
 <li><a href="https://www.takapy.work/entry/2019/02/24/110932">https://www.takapy.work/entry/2019/02/24/110932</a></li>
@@ -7753,14 +7753,14 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 <h4 id="_10">▼ ボリュームマウントとは<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p><img alt="docker_volume-mount" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/docker_volume-mount.png" /></p>
 <p>ホスト側のストレージ上にあるdockerエリア（<code>/var/lib/docker/volumes</code>ディレクトリ）のマウントポイント（<code>/var/lib/docker/volumes/&lt;ボリューム名&gt;/_data</code>）を、コンテナ側にマウントすることより、データを永続化する。ホストで作成されるデータをめったに変更しない場合に適しており、例えばDBのデータをホストコンテナ間と共有する方法として推奨である。しかし、例えばアプリケーションやパッケージといったような変更されやすいデータを共有する方法としては不適である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.docker.com/storage/volumes/">https://docs.docker.com/storage/volumes/</a></li>
 <li><a href="https://www.takapy.work/entry/2019/02/24/110932">https://www.takapy.work/entry/2019/02/24/110932</a></li>
 </ul>
 <h4 id="_11">▼ ボリューム、マウントポイントとは<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>dockerエリア（<code>/var/lib/docker/volumes</code>ディレクトリ）に保存される永続データをボリュームという。また、デバイスファイルに紐づくディレクトリ（<code>/var/lib/docker/volumes/&lt;ボリューム名&gt;/_data</code>）をマウントポイントといい、マウントポイントに対してマウント処理が必要である。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html">https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html">https://atmarkit.itmedia.co.jp/ait/articles/1802/23/news024.html</a></p>
 <h4 id="_12">▼ 使用方法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>Dockerfileや<code>docker-compose.yml</code>ファイルへの定義、<code>docker</code>コマンドの実行、で使用できるが、<code>docker-compose.yml</code>ファイルでの定義が推奨である。</p>
 <p><strong>＊実行例＊</strong></p>
@@ -7777,12 +7777,12 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 <h3 id="tmpfs">tmpfsマウント<a class="headerlink" href="#tmpfs" title="Permanent link">&para;</a></h3>
 <h4 id="tmpfs_1">▼ tmpfsマウントとは<a class="headerlink" href="#tmpfs_1" title="Permanent link">&para;</a></h4>
 <p>Docker on Linuxでのみ使用できる。ホスト側のメモリ上にあるディレクトリを、コンテナ側にマウントすることにより、データを非永続化する。コンテナが停止すると、tmpfsマウントは終了し、ディレクトリは削除される。</p>
-<p>参考：<a href="https://docs.docker.com/storage/tmpfs/">https://docs.docker.com/storage/tmpfs/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/storage/tmpfs/">https://docs.docker.com/storage/tmpfs/</a></p>
 <p><br></p>
 <h3 id="copynfs">バインドマウント、ボリュームマウント、<code>COPY</code>、NFS<a class="headerlink" href="#copynfs" title="Permanent link">&para;</a></h3>
 <h4 id="_13">▼ 脆弱性の比較<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>本番環境で、ホストからコンテナにバインドマウントを実行できる。しかしバインドマウントでは、ホスト側のコードが隔離されておらず、コンテナ側のコードからホスト側のマウントに関係ないファイルへもアクセスできてしまう（例：<code>cd</code>コマンドによって、ホスト側のマウントに関係ないディレクトリにアクセスできてしまう）。一方でボリュームマウントでは、ホスト側のコードはdockerエリア内に隔離されており、ホストの他のファイルからは切り離されている。これにより、マウントに関係のないファイルへはアクセスできないようになっている。そのため、バインドマウントより安全である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://geekylane.com/what-is-docker-storage-learn-everything-about-docker-storage-theory/">https://geekylane.com/what-is-docker-storage-learn-everything-about-docker-storage-theory/</a></li>
 <li><a href="https://blog.logrocket.com/docker-volumes-vs-bind-mounts/">https://blog.logrocket.com/docker-volumes-vs-bind-mounts/</a></li>
@@ -7791,9 +7791,9 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 </ul>
 <h4 id="_14">▼ 本番環境での使いやすさの比較<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>脆弱性の観点から、本番環境ではボリュームマウント（<code>VOLUME</code>）や<code>COPY</code>を使用して、アプリケーションをコンテナイメージに組み込むようにする。</p>
-<p>参考：<a href="https://docs.docker.com/develop/dev-best-practices/#differences-in-development-and-production-environments">https://docs.docker.com/develop/dev-best-practices/#differences-in-development-and-production-environments</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/develop/dev-best-practices/#differences-in-development-and-production-environments">https://docs.docker.com/develop/dev-best-practices/#differences-in-development-and-production-environments</a></p>
 <p>その上で、ボリュームマウントでは、組み込んだアプリケーションのコードをコンテナ起動後しか参照できないため、コードの組み込みとコンテナ起動の間にアプリケーションを加工する（例：ディレクトリの実行権限を変更するなど）場合は<code>COPY</code>の方が便利である。方法として、コンテナイメージレジストリ内のプライベートリポジトリにデプロイするイメージのビルド時に、ホスト側のアプリケーションをイメージ側に<code>COPY</code>しておく。これにより、本番環境ではこのコンテナイメージをプルしさえすれば、アプリケーションを使用できるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.nyamucoro.com/entry/2018/03/15/200412">https://www.nyamucoro.com/entry/2018/03/15/200412</a></li>
 <li><a href="https://blog.fagai.net/2018/02/22/docker%E3%81%AE%E7%90%86%E8%A7%A3%E3%82%92%E3%81%84%E3%81%8F%E3%82%89%E3%81%8B%E5%8B%98%E9%81%95%E3%81%84%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%E8%A9%B1/">https://blog.fagai.net/2018/02/22/docker%E3%81%AE%E7%90%86%E8%A7%A3%E3%82%92%E3%81%84%E3%81%8F%E3%82%89%E3%81%8B%E5%8B%98%E9%81%95%E3%81%84%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%E8%A9%B1/</a></li>
@@ -7812,12 +7812,12 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 <tr>
 <td>バインドマウント</td>
 <td>バインドマウントでは、ホストとコンテナ間のライフサイクルは同じであり、ファイルの状態が同期されている。この時、コンテナからホストにアウトプット処理、またホストからコンテナにインプット処理が発生する。そのため、コンテナではアプリケーションの処理を実行しながら、合わせてホスト間とI/O処理も実行することになり、コンテナのパフォーマンスは悪い。</td>
-<td>参考：<br>・<a href="https://stackoverflow.com/questions/64629569/docker-bind-mount-directory-vs-named-volume-performance-comparison">https://stackoverflow.com/questions/64629569/docker-bind-mount-directory-vs-named-volume-performance-comparison</a><br>・<a href="https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163">https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://stackoverflow.com/questions/64629569/docker-bind-mount-directory-vs-named-volume-performance-comparison">https://stackoverflow.com/questions/64629569/docker-bind-mount-directory-vs-named-volume-performance-comparison</a><br>・<a href="https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163">https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163</a></td>
 </tr>
 <tr>
 <td>ボリュームマウント</td>
 <td>ボリュームマウントでは、ホストとコンテナ間のライフサイクルは分離されており、ファイルの状態は同期されていない。そのため、ボリュームマウントよりはコンテナのパフォーマンスが良い。</td>
-<td>参考：<a href="https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163">https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163</a></td>
+<td>ℹ️ 参考：<a href="https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163">https://qiita.com/ucan-lab/items/a88e2e5c2a79f2426163</a></td>
 </tr>
 <tr>
 <td><code>COPY</code></td>
@@ -7827,7 +7827,7 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 <tr>
 <td>NFS</td>
 <td>NFSを使用したマウントでは、高速でI/O処理が実行される。そのため、コンテナのパフォーマンスが良い。</td>
-<td>参考：<a href="https://qiita.com/kunit/items/36d9e5fa710ad26f8010">https://qiita.com/kunit/items/36d9e5fa710ad26f8010</a></td>
+<td>ℹ️ 参考：<a href="https://qiita.com/kunit/items/36d9e5fa710ad26f8010">https://qiita.com/kunit/items/36d9e5fa710ad26f8010</a></td>
 </tr>
 </tbody>
 </table>
@@ -7836,7 +7836,7 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
 <h3 id="bridge">bridgeネットワーク<a class="headerlink" href="#bridge" title="Permanent link">&para;</a></h3>
 <h4 id="bridge_1">▼ bridgeネットワークとは<a class="headerlink" href="#bridge_1" title="Permanent link">&para;</a></h4>
 <p>複数のコンテナ間に対して、仮想ネットワークで接続させる。また、仮想ネットワークを物理ネットワークの間を、仮想ブリッジを使用してbridge接続する。ほとんどの場合、この方法を使用する。</p>
-<p>参考：<a href="https://www.itmedia.co.jp/enterprise/articles/1609/21/news001.html">https://www.itmedia.co.jp/enterprise/articles/1609/21/news001.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.itmedia.co.jp/enterprise/articles/1609/21/news001.html">https://www.itmedia.co.jp/enterprise/articles/1609/21/news001.html</a></p>
 <p><img alt="Dockerエンジン内の仮想ネットワーク" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/Dockerエンジン内の仮想ネットワーク.jpg" /></p>
 <p>サーバーへのリクエストメッセージがコンテナに届くまでを以下に示す。サーバーの<code>8080</code>番ポートと、WWWコンテナの<code>80</code>番ポートのアプリケーションの間で、ポートフォワーディングを行う。これにより、『<code>http://&lt;サーバーのプライベートIPアドレス（localhost）&gt;:8080</code>』にリクエストを送信すると、WWWコンテナのポート番号に転送されるようになる。</p>
 <table>
@@ -7944,7 +7944,7 @@ $ curl --fail http://127.0.0.1:8080
 <h3 id="_17">コンテナから<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="_18">▼ 『コンテナ』から『コンテナ』にリクエスト<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>『コンテナ』から『コンテナ』に対して、アウトバウンド通信を送信する。ここでのコンテナのホスト名は、コンテナ内の『<code>/etc/hosts</code>』に定義されたものとなる。リクエストはホストを経由せず、そのままコンテナに送信される。コンテナ間のネットワーク接続の成否を確認できる。コンテナのホスト名の定義方法については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration.html</a></p>
 <p><strong>＊実行例＊</strong></p>
 <p>『appコンテナ』から『webコンテナ』に対して、アウトバウンド通信を送信し、appコンテナとwebコンテナの間の成否を確認する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7983,7 +7983,7 @@ $ curl --fail http://host.docker.internal:8080
 </code></pre></div></td></tr></table></div>
 <h4 id="fluentd">▼ fluentd<a class="headerlink" href="#fluentd" title="Permanent link">&para;</a></h4>
 <p>構造化ログに変換し、サイドカーとして稼働するFluentdコンテナに送信する。ECSコンテナのawsfirelensドライバーは、fluentdドライバーをラッピングしたものである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.docker.com/config/containers/logging/fluentd/">https://docs.docker.com/config/containers/logging/fluentd/</a></li>
 <li><a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></li>
@@ -8004,7 +8004,7 @@ $ curl --fail http://host.docker.internal:8080
 <p>標準出力/標準エラー出力に出力されたログを、ファイルやAPIに転送しない。 ファイルに出力しないことにより、開発環境のアプリケーションサイズの肥大化を防ぐ。</p>
 <h4 id="awslogs">▼ awslogs<a class="headerlink" href="#awslogs" title="Permanent link">&para;</a></h4>
 <p>標準出力/標準エラー出力に出力されたログをCloudWatch-APIに送信する。</p>
-<p>参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/">https://docs.docker.com/config/containers/logging/awslogs/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/">https://docs.docker.com/config/containers/logging/awslogs/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8019,7 +8019,7 @@ $ curl --fail http://host.docker.internal:8080
 </code></pre></div></td></tr></table></div>
 <h4 id="gcplogs">▼ gcplogs<a class="headerlink" href="#gcplogs" title="Permanent link">&para;</a></h4>
 <p>標準出力/標準エラー出力に出力されたログを、Google Cloud LoggingのAPIに転送する。</p>
-<p>参考：<a href="https://docs.docker.com/config/containers/logging/gcplogs/">https://docs.docker.com/config/containers/logging/gcplogs/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/gcplogs/">https://docs.docker.com/config/containers/logging/gcplogs/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8078,7 +8078,7 @@ crw-rw-rw- <span class="m">1</span> root root <span class="m">1</span>, <span cl
 </code></pre></div></td></tr></table></div>
 <h4 id="nginx">▼ nginxイメージ<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h4>
 <p>公式のnginxイメージは、<code>/dev/stdout</code>というシンボリックリンクを、<code>/var/log/nginx/access.log</code>ファイルに作成している。また、<code>/dev/stderr</code>というシンボリックリンクを、<code>/var/log/nginx/error.log</code>ファイルに作成している。これにより、これらのファイルに対するログの出力は、<code>/dev/stdout</code>と<code>/dev/stderr</code>に転送される。</p>
-<p>参考：<a href="https://docs.docker.com/config/containers/logging/">https://docs.docker.com/config/containers/logging/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/">https://docs.docker.com/config/containers/logging/</a></p>
 <h4 id="php-fpm">▼ php-fpmイメージ<a class="headerlink" href="#php-fpm" title="Permanent link">&para;</a></h4>
 <p>調査中...</p>
 <p><br></p>
@@ -8088,7 +8088,7 @@ crw-rw-rw- <span class="m">1</span> root root <span class="m">1</span>, <span cl
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

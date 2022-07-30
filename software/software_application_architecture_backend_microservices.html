@@ -7219,14 +7219,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8390,13 +8390,13 @@
 <h1 id="_1">マイクロサービスアーキテクチャ＠アーキテクチャ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. イントロダクション<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">バックエンドのアーキテクチャの歴史<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ マイクロサービスアーキテクチャを取り巻く環境<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><img alt="architecture_history" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/architecture_history.png" /></p>
-<p>参考：<a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></p>
+<p>ℹ️ 参考：<a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></p>
 <table>
 <thead>
 <tr>
@@ -8411,31 +8411,31 @@
 <td>1999 ～</td>
 <td>モノリシックアーキテクチャ</td>
 <td>1999年台、バックエンドのアーキテクチャとしてモノリシックアーキテクチャが台頭していた。しかし、モノリシックアーキテクチャは無秩序でつぎはぎだらけのアプリケーションになることが論文（『大きな泥だんご』）で指摘された。</td>
-<td>参考：<a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E3%81%8D%E3%81%AA%E6%B3%A5%E3%81%A0%E3%82%93%E3%81%94">https://ja.wikipedia.org/wiki/%E5%A4%A7%E3%81%8D%E3%81%AA%E6%B3%A5%E3%81%A0%E3%82%93%E3%81%94</a></td>
+<td>ℹ️ 参考：<a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E3%81%8D%E3%81%AA%E6%B3%A5%E3%81%A0%E3%82%93%E3%81%94">https://ja.wikipedia.org/wiki/%E5%A4%A7%E3%81%8D%E3%81%AA%E6%B3%A5%E3%81%A0%E3%82%93%E3%81%94</a></td>
 </tr>
 <tr>
 <td>2014</td>
 <td>マイクロサービスアーキテクチャ</td>
 <td>2014年にThoughtWorks社は、マイクロサービス指向アーキテクチャとドメイン駆動設計を統合し、アプリケーションを独立したマイクロサービスの集まりに分割するアーキテクチャを考案した。</td>
-<td>参考：<br>・<a href="https://martinfowler.com/articles/microservices.html">https://martinfowler.com/articles/microservices.html</a><br>・<a href="https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html">https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://martinfowler.com/articles/microservices.html">https://martinfowler.com/articles/microservices.html</a><br>・<a href="https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html">https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html</a></td>
 </tr>
 <tr>
 <td>2017</td>
 <td>ミニマイクロサービスアーキテクチャ</td>
 <td>マイクロサービスアーキテクチャのマイクロサービス自体を独立したモノリスなアプリケーションと捉えると、その分だけ開発チーム（マネージャーとエンジニア）が必要になってしまう。2017年にCloud Elements社は、これに対処するためにミニマイクロサービスアーキテクチャを考案した。このアーキテクチャでは、マイクロサービスアーキテクチャとモノリスアーキテクチャの間をとった粒度で、アプリケーションを複数のマイクロサービスに分割する。この粒度を、マイクロサービスに対抗して『ミニマイクロサービス』または『MASA』とよぶ。</td>
-<td>参考：<br>・<a href="https://blog.cloud-elements.com/pragmatic-microservices-architecture">https://blog.cloud-elements.com/pragmatic-microservices-architecture</a><br>・<a href="https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html">https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://blog.cloud-elements.com/pragmatic-microservices-architecture">https://blog.cloud-elements.com/pragmatic-microservices-architecture</a><br>・<a href="https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html">https://atmarkit.itmedia.co.jp/ait/articles/2110/22/news006.html</a></td>
 </tr>
 <tr>
 <td>2018</td>
 <td>モジュラーモノリス</td>
 <td>ミニマイクロサービスアーキテクチャではマイクロサービスの粒度が大きくなったものの、複数のマイクロサービスが必要になることは変わらず、その分だけ開発チームが必要になる問題は解決されなかった。そこで、Root Insurance社はモジュラモノリスを考案した。モジュラモノリスでは、マイクロサービスの概念を取り入れずに、アプリケーションを細かいモジュールに分割する。反対に、最初モジュラーモノリスとして設計し、マイクロサービスアーキテクチャに移行していくという選択肢もある。</td>
-<td>参考：<br>・<a href="https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4">https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4</a><br>・<a href="https://creators-note.chatwork.com/entry/2020/12/02/090000#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">https://creators-note.chatwork.com/entry/2020/12/02/090000#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3</a><br>・<a href="https://eh-career.com/engineerhub/entry/2022/07/25/093000">https://eh-career.com/engineerhub/entry/2022/07/25/093000</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4">https://medium.com/@dan_manges/the-modular-monolith-rails-architecture-fb1023826fc4</a><br>・<a href="https://creators-note.chatwork.com/entry/2020/12/02/090000#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">https://creators-note.chatwork.com/entry/2020/12/02/090000#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%A9%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3</a><br>・<a href="https://eh-career.com/engineerhub/entry/2022/07/25/093000">https://eh-career.com/engineerhub/entry/2022/07/25/093000</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="_5">▼ モジュール/マイクロサービスの粒度の比較<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="architecture_deployment_comparison" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/architecture_deployment_comparison.png" /></p>
-<p>参考：<a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></p>
+<p>ℹ️ 参考：<a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></p>
 <table>
 <thead>
 <tr>
@@ -8453,7 +8453,7 @@
 <tr>
 <td></td>
 <td>モジュラー</td>
-<td>アプリケーションがモジュールに分割されており、アプリケーションをデプロイの単位とする。モジュール間のデータのやり取りに通信を使うか否かや、モジュール間でDBを共有するか否かの選択によって、作成パターンがいくつかある。<br>参考：<a href="https://scrapbox.io/tsuwatch/%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%81%82%E3%81%84%E3%81%A0">https://scrapbox.io/tsuwatch/%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%81%82%E3%81%84%E3%81%A0</a></td>
+<td>アプリケーションがモジュールに分割されており、アプリケーションをデプロイの単位とする。モジュール間のデータのやり取りに通信を使うか否かや、モジュール間でDBを共有するか否かの選択によって、作成パターンがいくつかある。<br>ℹ️ 参考：<a href="https://scrapbox.io/tsuwatch/%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%81%82%E3%81%84%E3%81%A0">https://scrapbox.io/tsuwatch/%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B9%E3%81%A8%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E3%81%82%E3%81%84%E3%81%A0</a></td>
 </tr>
 <tr>
 <td></td>
@@ -8482,7 +8482,7 @@
 <p><br></p>
 <h3 id="_12">マイクロサービスアーキテクチャのフレームワーク<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="dapr">▼ dapr<a class="headerlink" href="#dapr" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.publickey1.jp/blog/19/dapr.html">https://www.publickey1.jp/blog/19/dapr.html</a></li>
 <li><a href="https://github.com/dapr/dapr">https://github.com/dapr/dapr</a></li>
@@ -8497,11 +8497,11 @@
 </ul>
 <h4 id="_15">▼ モノリポジトリ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>バックエンドのマイクロサービス、バックエンドから分離されたフロントエンドアプリケーション、IaCツール（KubernetesやTerraformなど）、を<code>1</code>個のリポジトリでディレクトリで分割して管理する。ただし、バックエンド/フロントエンド/IaCツールは異なるモノリポジトリとしても良い。Googleではモノリポジトリによるマイクロサービスアーキテクチャが採用されている。</p>
-<p>参考：<a href="https://www.fourtheorem.com/blog/monorepo">https://www.fourtheorem.com/blog/monorepo</a></p>
+<p>ℹ️ 参考：<a href="https://www.fourtheorem.com/blog/monorepo">https://www.fourtheorem.com/blog/monorepo</a></p>
 <p><img alt="monorepo" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/monorepo.png" /></p>
 <h4 id="_16">▼ ポリリポジトリ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>バックエンドのマイクロサービス、バックエンドから分離されたフロントエンドアプリケーション、IaCツール（KubernetesやTerraformなど）、をそれぞれ異なるリポジトリで管理する。</p>
-<p>参考：<a href="https://www.fourtheorem.com/blog/monorepo">https://www.fourtheorem.com/blog/monorepo</a></p>
+<p>ℹ️ 参考：<a href="https://www.fourtheorem.com/blog/monorepo">https://www.fourtheorem.com/blog/monorepo</a></p>
 <p><img alt="polyrepo" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/polyrepo.png" /></p>
 <p><br></p>
 <h3 id="_17">アプリケーションリポジトリ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
@@ -8622,7 +8622,7 @@
 <p><br></p>
 <h3 id="iac_1">クラウドインフラIaCツールリポジトリ<a class="headerlink" href="#iac_1" title="Permanent link">&para;</a></h3>
 <p>IaCツールにTerraformを使用した場合を示す。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_cloud_terraform_policy.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_cloud_terraform_policy.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_cloud_terraform_policy.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_cloud_terraform_policy.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8641,7 +8641,7 @@
 <h4 id="_22">▼ マイクロサービスとは<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p><img alt="anti-corruption-layer" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/anti-corruption-layer.png" /></p>
 <p>マイクロサービスアーキテクチャにおける分散システム状のバックエンドのコンポーネントのこと。特定のマイクロサービスが他のマイクロサービスに侵食され、マイクロサービスの凝集度が低くならないようにするために、ACL：Anti Corruption Layer（腐食防止レイヤー）を設ける必要がある。腐食防止レイヤーは、異なるコンテキストから受信したデータを、そのマイクロサービスのコンテキストにあったデータ形式に変換する責務を持つ。CQRSでは、これはプロセスマネージャパターンとして知られている。一方でSagaパターンとも呼ばれるが、分散トランザクションでも同じ用語があるため、混乱を避けるためにプロセスマネージャパターンとする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/czeslavo/process-manager">https://github.com/czeslavo/process-manager</a></li>
 <li><a href="https://www.oreilly.com/library/view/what-is-domain-driven/9781492057802/ch04.html">https://www.oreilly.com/library/view/what-is-domain-driven/9781492057802/ch04.html</a></li>
@@ -8650,7 +8650,7 @@
 <h4 id="_23">▼ 各マイクロサービスのアーキテクチャ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>各マイクロサービスのアーキテクチャは自由である。この時、ドメイン駆動設計のアーキテクチャを基に実装できる。</p>
 <p><strong>＊例＊</strong></p>
-<p>参考：<a href="https://little-hands.hatenablog.com/entry/2017/12/07/bouded-context-implementation">https://little-hands.hatenablog.com/entry/2017/12/07/bouded-context-implementation</a></p>
+<p>ℹ️ 参考：<a href="https://little-hands.hatenablog.com/entry/2017/12/07/bouded-context-implementation">https://little-hands.hatenablog.com/entry/2017/12/07/bouded-context-implementation</a></p>
 <p>ECサイトがあり、これの商品販売ドメインを販売サブドメインと配送サブドメインに分割できるとする。この時、それぞれのサブドメインの問題を解決する販売コンテキストと配送コンテキストをマイクロサービスの粒度となり、オニオンアーキテクチャのアプリケーション間で同期通信/非同期通信を行う。</p>
 <p><img alt="microservices-architecture_onion-architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/microservices-architecture_onion-architecture.png" /></p>
 <p><br></p>
@@ -8693,7 +8693,7 @@
 <h4 id="_26">▼ サブドメイン、境界付けられたコンテキストを単位とした分割<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p><img alt="service_bounded-context" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/service_bounded-context.png" /></p>
 <p>サブドメインまたは境界付けられたコンテキストをマイクロサービスの粒度とする。解決領域となる境界付けられたコンテキストがサブドメインの中に<code>1</code>個しか含まれていない場合は、境界付けられたコンテキストをマイクロサービスの粒度して考えることになる。図にて、境界付けられたコンテキスト間で、『利用者』という単語に対する定義づけ/意味合いが異なっていることに留意する。ドメイン駆動設計では境界付けられたコンテキストが<code>1</code>個のアプリケーションに相当するため、境界付けられたコンテキストで分割した場合、マイクロサービスアーキテクチャは複数のアプリケーションから構成されるアーキテクチャと捉えられる。さらに小さな粒度に分割する方法として、ルートエンティティを粒度ともできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/architect-microservice-container-applications/identify-microservice-domain-model-boundaries">https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/architect-microservice-container-applications/identify-microservice-domain-model-boundaries</a></li>
 <li><a href="https://microservices.io/patterns/decomposition/decompose-by-subdomain.html">https://microservices.io/patterns/decomposition/decompose-by-subdomain.html</a></li>
@@ -8702,7 +8702,7 @@
 </ul>
 <h4 id="_27">▼ ルートエンティティを単位とした分割<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
 <p>ルートエンティティをマイクロサービスの単位とする。ただし、データに着目した従来のステートソーシングのルートエンティティを使用することはアンチパターンである。最良な解決策として、振舞に着目したイベントソーシングを使用する必要がある。また、各マイクロサービスを名詞ではなく動詞で命名すると良い。その他、各マイクロサービスでDBを完全に独立させることや、SAGAパターンを使用すること、がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.koslib.com/posts/entity-services-anti-pattern/">https://www.koslib.com/posts/entity-services-anti-pattern/</a></li>
 <li><a href="https://www.michaelnygard.com/blog/2018/01/services-by-lifecycle/">https://www.michaelnygard.com/blog/2018/01/services-by-lifecycle/</a></li>
@@ -8712,7 +8712,7 @@
 <h3 id="_28">粒度のアンチパターン<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
 <h4 id="_29">▼ 分散モノリス<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>複数のマイクロサービスをセットでデプロイしなければならず、マイクロサービス間のデプロイが独立していないような粒度のパターン。例えば、マイクロサービス間で重複するロギングライブラリをマイクロサービスとして分離した結果、複数のマイクロサービスがこのロギングマイクロサービスに依存してしまうような場合がある。分散モノリスにならないように、マイクロサービス間で使用するライブラリが重複することを許容する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.infoq.com/jp/news/2016/03/services-distributed-monolith/">https://www.infoq.com/jp/news/2016/03/services-distributed-monolith/</a></li>
 <li><a href="https://r-kaga.com/blog/what-is-distributed-monolith">https://r-kaga.com/blog/what-is-distributed-monolith</a></li>
@@ -8723,7 +8723,7 @@
 <h4 id="_31">▼ リクエストリプライ方式とは<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
 <p><img alt="service_request_reply" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/service_request_reply.png" /></p>
 <p>マイクロサービス間で相互通信を行う。送信側と受信側で通信処理が同時に実行されるため、HTTPやgRPCによる同期通信を行うことになる。また、マイクロサービス間で直接的にリクエストを送受信することになる。</p>
-<p>参考：<a href="https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F">https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F">https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F</a></p>
 <h4 id="_32">▼ 直接的な通信<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
 <p>リクエストリプライ方式では、直接的にマイクロサービス間の通信を行う。使用することのできる通信プロトコルは以下の通りである。</p>
 <table>
@@ -8740,7 +8740,7 @@
 </tr>
 <tr>
 <td>gRPC</td>
-<td>HTTP/1.1に代わるHTTP/2が組み込まれたgRPCプロトコルを使用する。HTTPであると、通信相手のマイクロサービスのエンドポイントをコールした後、エンドポイントに紐づくコントローラーのメソッドが実行される。一方でgRPCであると、通信相手のマイクロサービスのメソッドを直接的に実行できる。そのため、HTTPよりもマイクロサービスの連携に適している。<br>参考：<a href="https://techdozo.dev/grpc-for-microservices-communication/">https://techdozo.dev/grpc-for-microservices-communication/</a></td>
+<td>HTTP/1.1に代わるHTTP/2が組み込まれたgRPCプロトコルを使用する。HTTPであると、通信相手のマイクロサービスのエンドポイントをコールした後、エンドポイントに紐づくコントローラーのメソッドが実行される。一方でgRPCであると、通信相手のマイクロサービスのメソッドを直接的に実行できる。そのため、HTTPよりもマイクロサービスの連携に適している。<br>ℹ️ 参考：<a href="https://techdozo.dev/grpc-for-microservices-communication/">https://techdozo.dev/grpc-for-microservices-communication/</a></td>
 </tr>
 </tbody>
 </table>
@@ -8749,14 +8749,14 @@
 <h4 id="_34">▼ イベント駆動方式とは<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p><img alt="service_event_driven" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/service_event_driven.png" /></p>
 <p>マイクロサービスからマイクロサービスに一方通行の通信を行う。送信側と受信側で通信処理が独立して実行されるため、メッセージキューを介した非同期通信を行うことになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Message_queue">https://en.wikipedia.org/wiki/Message_queue</a></li>
 <li><a href="https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F">https://qiita.com/yasuabe2613/items/3bff44e662c922083264#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%83%B3%E3%82%B0%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E5%95%8F%E9%A1%8C%E9%A0%98%E5%9F%9F</a></li>
 </ul>
 <h4 id="_35">▼ メッセージキューを介した通信<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p>イベント駆動方式では、メッセージキューを介してマイクロサービス間の通信を行う。メッセージキューでは受信したメッセージを一方向にしか配信できないため、もしマイクロサービス間双方向に送信したい場合は、上流マイクロサービスからメッセージを受信するメッセージキューと。下流マイクロサービスから受信するメッセージキューを別々に設置する。メッセージキューはPub/Subデザインパターンで自前で実装するか、または外部サービス（AWS-SQS、Kafka、など）を使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Message_queue">https://en.wikipedia.org/wiki/Message_queue</a></li>
 <li><a href="https://www.scaleuptech.com/de/blog/api-gateway-vs-service-mesh-vs-message-queue/">https://www.scaleuptech.com/de/blog/api-gateway-vs-service-mesh-vs-message-queue/</a></li>
@@ -8779,7 +8779,7 @@
 <h4 id="_40">▼ サービスメッシュ<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
 <p><img alt="service-mesh" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/service-mesh.png" /></p>
 <p>マイクロサービス間の通信方式でリクエストリプライ方式を採用した場合に使用するメッシュ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.ibm.com/blogs/think/jp-ja/cloud-native-concept-03/#servicemesh">https://www.ibm.com/blogs/think/jp-ja/cloud-native-concept-03/#servicemesh</a></li>
 <li><a href="https://qiita.com/Ladicle/items/4ba57078128d6affadd5">https://qiita.com/Ladicle/items/4ba57078128d6affadd5</a></li>
@@ -8788,13 +8788,13 @@
 </ul>
 <h4 id="_41">▼ イベントメッシュ<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス間の通信方式でイベント駆動方式を採用した場合に使用するメッシュ。</p>
-<p>参考：<a href="https://www.redhat.com/ja/topics/integration/what-is-an-event-mesh">https://www.redhat.com/ja/topics/integration/what-is-an-event-mesh</a></p>
+<p>ℹ️ 参考：<a href="https://www.redhat.com/ja/topics/integration/what-is-an-event-mesh">https://www.redhat.com/ja/topics/integration/what-is-an-event-mesh</a></p>
 <p><br></p>
 <h2 id="05">05. プレゼンテーションドメイン分離<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="_42">プレゼンテーションドメイン分離とは<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
 <p><img alt="presentation_domain_separation" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/presentation_domain_separation.png" /></p>
 <p>モノリシックなアプリケーションがドメイン層だけでなくプレゼンテーション層のロジックも持っている場合、ドメイン層をマイクロサービスに分離する前に、プレゼンテーション層をフロントエンドアプリケーションとして分離しておく必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/azure/architecture/microservices/migrate-monolith">https://docs.microsoft.com/ja-jp/azure/architecture/microservices/migrate-monolith</a></li>
 <li><a href="https://bliki-ja.github.io/PresentationDomainSeparation/">https://bliki-ja.github.io/PresentationDomainSeparation/</a></li>
@@ -8812,7 +8812,7 @@
 <li>キャッシュの作成</li>
 <li>リクエスト制限</li>
 </ul>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://banzaicloud.com/blog/backyards-api-gateway/#api-gateway-pattern">https://banzaicloud.com/blog/backyards-api-gateway/#api-gateway-pattern</a></li>
 <li><a href="https://www.getambassador.io/resources/challenges-api-gateway-kubernetes/">https://www.getambassador.io/resources/challenges-api-gateway-kubernetes/</a></li>
@@ -8820,31 +8820,31 @@
 <p><br></p>
 <h3 id="_43">設計パターン<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
 <h4 id="restful-api">▼ RESTful-API<a class="headerlink" href="#restful-api" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <h4 id="graphql-api">▼ GraphQL-API<a class="headerlink" href="#graphql-api" title="Permanent link">&para;</a></h4>
 <p>従来のRESTful-APIを使用した場合、バックエンドのエンドポイントが増えるたびに、フロントエンドが指定すべきエンドポイントも増えていく。一方で、GraphQL-APIを使用した場合、単一のエンドポイントをGraphQLで指定すれば、GraphQL-APIが適切な宛先にルーティングしてくれる。</p>
-<p>参考：<a href="https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/">https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/</a></p>
+<p>ℹ️ 参考：<a href="https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/">https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/</a></p>
 <p><img alt="graphql-api" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/graphql-api.png" /></p>
 <p><br></p>
 <h3 id="_44">実装パターン<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
 <h4 id="_45">▼ 自前で実装<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
 <p>API Gatewayを自前で実装する。Kubernetes内で管理できるメリットがある。</p>
-<p>参考：<a href="https://techblog.zozo.com/entry/zozotown-phased-istio-service-meshing-strategy">https://techblog.zozo.com/entry/zozotown-phased-istio-service-meshing-strategy</a></p>
+<p>ℹ️ 参考：<a href="https://techblog.zozo.com/entry/zozotown-phased-istio-service-meshing-strategy">https://techblog.zozo.com/entry/zozotown-phased-istio-service-meshing-strategy</a></p>
 <h4 id="oss">▼ OSSを使用<a class="headerlink" href="#oss" title="Permanent link">&para;</a></h4>
 <p>API GatewayのOSS（Kong、Tyk、Apigee）を使用する。Kubernetes内で管理できるメリットがある。</p>
-<p>参考：<a href="https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/">https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/</a> </p>
+<p>ℹ️ 参考：<a href="https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/">https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/</a> </p>
 <h4 id="_46">▼ クラウドプロバイダーのマネージドサービスを使用<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
 <p>クラウドプロバイダー（例：AWS）が提供するAPI Gatewayを使用する。クラウドプロバイダーの対応状況によっては、Kubernetes内で管理できない可能性がある。その場合、フロントエンドアプリケーションがAPI Gatewayに通信を送信できるように、フロントエンドアプリケーションとバックエンドアプリケーションを異なるKubernetesで動かす必要がある。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/">https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/">https://aws.amazon.com/jp/blogs/news/api-gateway-as-an-ingress-controller-for-eks/</a></p>
 <p><br></p>
 <h3 id="_47">設置パターン<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
 <h4 id="public-api">▼ Public API<a class="headerlink" href="#public-api" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスにリクエストを送信するアプリケーションの種類に関係なく、API Gatewayを<code>1</code>個だけ作成する。</p>
-<p>参考：<a href="https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/">https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/</a></p>
+<p>ℹ️ 参考：<a href="https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/">https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/</a></p>
 <p><img alt="apigateway_public-api-pattern" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/apigateway_public-api-pattern.png" /></p>
 <h4 id="bffbackends-for-frontends">▼ BFF：Backends  For Frontends<a class="headerlink" href="#bffbackends-for-frontends" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスにリクエストを送信するアプリケーションの種類（Webアプリケーション、Mobileアプリケーション、他社アプリケーション）に応じたAPI Gatewayを作成する。ただし、複数のクライアントをWebアプリとして開発することもできるため、同じWebからのアクセスであっても、別々のAPI Gatewayを作成する場合がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/">https://www.mobilelive.ca/blog/why-backend-for-frontend-application-architecture/</a></li>
 <li><a href="https://codezine.jp/article/detail/11305?p=4">https://codezine.jp/article/detail/11305?p=4</a></li>
@@ -8855,21 +8855,21 @@
 <h3 id="_48">ローカルトランザクション<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
 <h4 id="_49">▼ ローカルトランザクションとは<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
 <p><code>1</code>個のトランザクション処理によって、<code>1</code>個のマイクロサービスのDBを操作する方法。推奨される。マイクロサービスアーキテクチャでローカルトランザクションを使用する場合、これを連続的に行う仕組みが必要になる。デザインパターンとして、Sagaパターン、TCCパターン、などがある。</p>
-<p>参考：<a href="https://software.fujitsu.com/jp/manual/manualfiles/M090098/B1WS0321/03Z200/B0321-00-03-12-01.html">https://software.fujitsu.com/jp/manual/manualfiles/M090098/B1WS0321/03Z200/B0321-00-03-12-01.html</a></p>
+<p>ℹ️ 参考：<a href="https://software.fujitsu.com/jp/manual/manualfiles/M090098/B1WS0321/03Z200/B0321-00-03-12-01.html">https://software.fujitsu.com/jp/manual/manualfiles/M090098/B1WS0321/03Z200/B0321-00-03-12-01.html</a></p>
 <h4 id="_50">▼ ローカルトランザクションの種類<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://qiita.com/yasuabe2613/items/b0c92ab8c45d80318420#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%A8%AE%E9%A1%9E">https://qiita.com/yasuabe2613/items/b0c92ab8c45d80318420#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%A8%AE%E9%A1%9E</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/yasuabe2613/items/b0c92ab8c45d80318420#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%A8%AE%E9%A1%9E">https://qiita.com/yasuabe2613/items/b0c92ab8c45d80318420#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E7%A8%AE%E9%A1%9E</a></p>
 <p><br></p>
 <h3 id="_51">グローバルトランザクション（分散トランザクション）<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
 <h4 id="_52">▼ グローバルトランザクションとは<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h4>
 <p>分散トランザクションとも言う。<code>1</code>個のトランザクション処理によって、複数のマイクロサービスのDBを操作する方法。非推奨である。</p>
-<p>参考：<a href="https://thinkit.co.jp/article/14639?page=0%2C1">https://thinkit.co.jp/article/14639?page=0%2C1</a></p>
+<p>ℹ️ 参考：<a href="https://thinkit.co.jp/article/14639?page=0%2C1">https://thinkit.co.jp/article/14639?page=0%2C1</a></p>
 <p><br></p>
 <h2 id="06-02-saga">06-02. Sagaパターン<a class="headerlink" href="#06-02-saga" title="Permanent link">&para;</a></h2>
 <h3 id="saga">Sagaパターンとは<a class="headerlink" href="#saga" title="Permanent link">&para;</a></h3>
 <h4 id="saga_1">▼ Sagaパターンの仕組み<a class="headerlink" href="#saga_1" title="Permanent link">&para;</a></h4>
 <p><img alt="saga-pattern" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/saga-pattern.png" /></p>
 <p>複数のローカルトランザクションを非同期通信で連続的に実行する方法。上流マイクロサービスのローカルトランザクションの完了をイベントとして、下流マイクロサービスのDB処理を連続的にコールしていく。ロールバックの代わりに、補償トランザクションという仕組みを実装する必要がある。補償トランザクションでは、いずれかのローカルトランザクションが失敗した時に、それ以前の各ローカルトランザクションの実行結果を元に戻すような逆順のクエリ処理が実行される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thinkit.co.jp/article/14639?page=0%2C1">https://thinkit.co.jp/article/14639?page=0%2C1</a></li>
 <li><a href="https://qiita.com/nk2/items/d9e9a220190549107282">https://qiita.com/nk2/items/d9e9a220190549107282</a></li>
@@ -8879,7 +8879,7 @@
 <p>ローカルトランザクションを逆順に実行し、Sagaパターンによるトランザクションの結果を元に戻す仕組みのこと。</p>
 <p><strong>＊例＊</strong></p>
 <p>受注に関するトランザクションが異なるマイクロサービスにまたがる例。</p>
-<p>参考：<a href="https://docs.microsoft.com/ja-jp/dotnet/architecture/cloud-native/distributed-data#distributed-transactions">https://docs.microsoft.com/ja-jp/dotnet/architecture/cloud-native/distributed-data#distributed-transactions</a></p>
+<p>ℹ️ 参考：<a href="https://docs.microsoft.com/ja-jp/dotnet/architecture/cloud-native/distributed-data#distributed-transactions">https://docs.microsoft.com/ja-jp/dotnet/architecture/cloud-native/distributed-data#distributed-transactions</a></p>
 <p><img alt="saga-pattern_example" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/saga-pattern_example.png" /></p>
 <p>補償トランザクションによって、各ローカルトランザクションを元に戻す逆順のクエリ処理が実行される。</p>
 <p><img alt="saga-pattern_compensating_transaction_example" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/saga-pattern_compensating-transaction_example.png" /></p>
@@ -8888,7 +8888,7 @@
 <h4 id="_54">▼ オーケストレーションとは<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
 <p><img alt="orchestration" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/orchestration.png" /></p>
 <p>Sagaパターンにて、一連のローカルトランザクションの実行をまとめて制御する責務を持ったコンポーネント（オペレーションサービス）を設置する。<code>1</code>個のリクエストが送信された時に、オーケストレーションプログラムは各マイクロサービスをコールしながら処理の結果を繋いでいく。マイクロサービスアーキテクチャだけでなく、サービス指向アーキテクチャでも使用される。オーケストレーションが推奨である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blogs.itmedia.co.jp/itsolutionjuku/2019/08/post_729.html">https://blogs.itmedia.co.jp/itsolutionjuku/2019/08/post_729.html</a></li>
 <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/1598">https://news.mynavi.jp/itsearch/article/devsoft/1598</a></li>
@@ -8897,7 +8897,7 @@
 </ul>
 <h4 id="_55">▼ ローカルトランザクションの連携方式<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス間のローカルトランザクションの連携方式として、メッセージキューを使用する。各マイクロサービスがイベントのパブリッシュとサブスクライブを行う。各マイクロサービスは、自身の次に実行されるマイクロサービスを知らない。各マイクロサービスは、処理結果をオーケストレーターに返却する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.12-technology.com/2021/08/dbsaga.html">https://www.12-technology.com/2021/08/dbsaga.html</a></li>
 <li><a href="https://qiita.com/somen440/items/a6c323695627235128e9">https://qiita.com/somen440/items/a6c323695627235128e9</a></li>
@@ -8909,7 +8909,7 @@
 <h4 id="_56">▼ コレオグラフィとは<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
 <p><img alt="choreography" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/choreography.png" /></p>
 <p>Sagaパターンにて、各マイクロサービスで下流マイクロサービスに連携する責務を持たせ、ローカルトランザクションを連続的に実行する。<code>1</code>個のリクエストが送信された時に、マイクロサービスからマイクロサービスに処理が繋がっていく。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blogs.itmedia.co.jp/itsolutionjuku/2019/08/post_729.html">https://blogs.itmedia.co.jp/itsolutionjuku/2019/08/post_729.html</a></li>
 <li><a href="https://zenn.dev/yoshii0110/articles/74dfcf4132a805">https://zenn.dev/yoshii0110/articles/74dfcf4132a805</a></li>
@@ -8917,18 +8917,18 @@
 </ul>
 <p><strong>＊実装例＊</strong></p>
 <p>以下のリポジトリを参考にせよ。</p>
-<p>参考：<a href="https://github.com/fedeoliv/microservices-transactions">https://github.com/fedeoliv/microservices-transactions</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/fedeoliv/microservices-transactions">https://github.com/fedeoliv/microservices-transactions</a></p>
 <p><img alt="choreography_example" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/choreography_example.png" /></p>
 <h4 id="_57">▼ ローカルトランザクションの連携方式<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス間のローカルトランザクションの連携方式として、メッセージキューを使用する。各マイクロサービスがイベントのパブリッシュとサブスクライブを行う。各マイクロサービスは、自身の次に実行されるマイクロサービスを知っている。各マイクロサービスは、次のマイクロサービスにイベントを渡せる別のキューに処理結果を返却する。</p>
-<p>参考：<a href="https://www.12-technology.com/2021/08/dbsaga.html">https://www.12-technology.com/2021/08/dbsaga.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.12-technology.com/2021/08/dbsaga.html">https://www.12-technology.com/2021/08/dbsaga.html</a></p>
 <p><img alt="choreography_message-queue" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/choreography_message-queue.png" /></p>
 <p><br></p>
 <h2 id="07">07. オブジェクトモデリング方式<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
 <h3 id="_58">イベントソーシング<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h3>
 <h4 id="_59">▼ イベントソーシングとは<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h4>
 <p>ビジネスの出来事をモデリングし、データとして永続化する。現在の状態を取得する場合は、初期のデータに全ての出来事を適用する。CQRSと相性が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/suin/items/f559e3dcde7c811ed4e1">https://qiita.com/suin/items/f559e3dcde7c811ed4e1</a></li>
 <li><a href="https://martinfowler.com/articles/201701-event-driven.html">https://martinfowler.com/articles/201701-event-driven.html</a></li>
@@ -8937,7 +8937,7 @@
 <h3 id="_60">ステートソーシング<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
 <h4 id="_61">▼ ステートソーシングとは<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
 <p>ビジネスの現在の状態をモデリングし、データとして永続化する。過去の状態は上書きされる。</p>
-<p>参考：<a href="http://masuda220.jugem.jp/?eid=435">http://masuda220.jugem.jp/?eid=435</a></p>
+<p>ℹ️ 参考：<a href="http://masuda220.jugem.jp/?eid=435">http://masuda220.jugem.jp/?eid=435</a></p>
 <p><br></p>
 <h2 id="08">08. 認証<a class="headerlink" href="#08" title="Permanent link">&para;</a></h2>
 <h3 id="_62">認証サービス<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
@@ -8946,7 +8946,7 @@
 <h3 id="form">Form認証の場合<a class="headerlink" href="#form" title="Permanent link">&para;</a></h3>
 <h4 id="_63">▼ 独立型<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
 <p>セッションデータを作成する認証マイクロサービスを<code>1</code>個だけ配置し、セッションベースのForm認証を実現する。各マイクロサービスはセッションデータに基づいてユーザーを認証する。<code>1</code>個のセッション中の認証情報をマイクロサービス間で共有するために、セッションデータを保存できるセッションストレージを各マイクロサービスに配置する。認証マイクロサービスが単一障害点になるというデメリットがある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></li>
 <li><a href="https://engineer.retty.me/entry/2019/12/21/171549">https://engineer.retty.me/entry/2019/12/21/171549</a></li>
@@ -8954,7 +8954,7 @@
 <p><img alt="micro-auth_type_sso" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/micro-auth_type_sso.png" /></p>
 <h4 id="_64">▼ 中央集権型<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
 <p>セッションデータを作成する認証マイクロサービスを<code>1</code>個だけ配置し、セッションベースのForm認証を実現する。各マイクロサービスはセッションデータに基づいてユーザーを認証する。<code>1</code>個のセッション中の認証情報をマイクロサービス間で共有するために、セッションデータを保存できるセッションストレージを<code>1</code>個だけ配置する。耐障害性のあるセッションストレージが必要になるというデメリットがある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></li>
 <li><a href="https://engineer.retty.me/entry/2019/12/21/171549">https://engineer.retty.me/entry/2019/12/21/171549</a></li>
@@ -8962,7 +8962,7 @@
 <p><img alt="micro-auth_type_centralization" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/micro-auth_type_centralization.png" /></p>
 <h4 id="_65">▼ 分散型<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
 <p>JWTを作成する認証マイクロサービスを<code>1</code>個だけ配置し、CookieベースのForm認証を実現する。各マイクロサービスはJWTに基づいてユーザーを認証する。<code>1</code>個のセッション中の認証情報をマイクロサービス間で共有するために、リクエスト/レスポンスのヘッダーにJWTを埋め込み、クライアント側にJWTを保存させる。クライアント側に保存されたJWTの失効が難しいというデメリットがある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></li>
 <li><a href="https://engineer.retty.me/entry/2019/12/21/171549">https://engineer.retty.me/entry/2019/12/21/171549</a></li>
@@ -8970,7 +8970,7 @@
 <p><img alt="micro-auth_type_distribution" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/micro-auth_type_distribution.png" /></p>
 <h4 id="_66">▼ ゲートウェイ分散型<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h4>
 <p>JWTを作成する認証マイクロサービスを<code>1</code>個だけ配置し、CookieベースのForm認証を実現する。各マイクロサービスはJWTに基づいてユーザーを認証する。<code>1</code>個のセッション中の認証情報をマイクロサービス間で共有するために、リクエスト/レスポンスのヘッダーにJWTを埋め込む。ただ分散型の認証とは異なり、クライアント側にはJWTの代わりとなるOpaqueトークンを保存させるようにする。また、API Gatewayやロードバランサーで、OpaqueトークンとJWTの間の相互変換を通信のたびに実行する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></li>
 <li><a href="https://engineer.retty.me/entry/2019/12/21/171549">https://engineer.retty.me/entry/2019/12/21/171549</a></li>
@@ -8980,11 +8980,11 @@
 <h2 id="08-02">08-02. 認可<a class="headerlink" href="#08-02" title="Permanent link">&para;</a></h2>
 <h3 id="_67">分散型<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h3>
 <p>マイクロサービスが個別に認可を担う。各マイクロサービスで認可処理が重複する可能性がある。</p>
-<p>参考：<a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></p>
+<p>ℹ️ 参考：<a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></p>
 <p><br></p>
 <h3 id="_68">中央集権型<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
 <p>全てのマイクロサービスの認可処理を担うマイクロサービスを<code>1</code>個だけ配置する。各マイクロサービスの認可処理が密結合になる可能性がある。</p>
-<p>参考：<a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></p>
+<p>ℹ️ 参考：<a href="https://please-sleep.cou929.nu/microservices-auth-design.html">https://please-sleep.cou929.nu/microservices-auth-design.html</a></p>
 <p><br></p>
 
   <hr>
@@ -8992,7 +8992,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

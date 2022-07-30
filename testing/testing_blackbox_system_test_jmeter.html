@@ -6391,14 +6391,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6736,15 +6736,15 @@
 <h1 id="jmeter">JMeter＠システムテスト<a class="headerlink" href="#jmeter" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>JMeterをインストールし、環境を作成する。</p>
-<p>参考：<a href="https://jmeter.apache.org/download_jmeter.cgi">https://jmeter.apache.org/download_jmeter.cgi</a></p>
+<p>ℹ️ 参考：<a href="https://jmeter.apache.org/download_jmeter.cgi">https://jmeter.apache.org/download_jmeter.cgi</a></p>
 <p><br></p>
 <h2 id="02-jmeter">02. JMeterの仕組み<a class="headerlink" href="#02-jmeter" title="Permanent link">&para;</a></h2>
 <p>JMeterは、以下のコンポーネントから構成されている。</p>
-<p>参考：<a href="https://www.guru99.com/jmeter-element-reference.html">https://www.guru99.com/jmeter-element-reference.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.guru99.com/jmeter-element-reference.html">https://www.guru99.com/jmeter-element-reference.html</a></p>
 <p><img alt="jmeter_architecuture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/jmeter_architecuture.png" /></p>
 <p><br></p>
 <h2 id="03">03. ユースケース<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
@@ -6752,7 +6752,7 @@
 <p>以下の手順で、JMeterを使用したロードテストを実施する。</p>
 <p>（１）URLのアクセスランキングを元に、リクエストを送信するためのURLリストを<code>csv</code>ファイルで作成する。Googleを参考にしたが、ALBアクセスログを参考にした方が、より正確かもしれない。</p>
 <p>（２）JMeterのGUI版にて、シナリオ（<code>jmx</code>ファイル）を作成する。スループットコントローラーでURLリスト（<code>csv</code>ファイル）をJMeterの組み込み関数で読み込むようにする。csvファイルのリストからランダムに読み出したい場合は、Random関数が適している。スレッド数が例えば<code>10000</code>個といった高負荷であると、ローカルマシンがフリーズするため注意すること。</p>
-<p>参考：<a href="https://jmeter.apache.org/usermanual/functions.html#__Random">https://jmeter.apache.org/usermanual/functions.html#__Random</a></p>
+<p>ℹ️ 参考：<a href="https://jmeter.apache.org/usermanual/functions.html#__Random">https://jmeter.apache.org/usermanual/functions.html#__Random</a></p>
 <p>（３）AWSリソースのスペック、VPNなど、再現テストの周辺準備が整っていることを確認する。</p>
 <p>（４）JMeterのCUI版のバイナリファイルに、<code>jmx</code>ファイルをドラッグ＆ドロップし、テストを実施する。または、バイナリファイルへのパスを通した上で、以下のコマンドでも実行できる。</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -6780,7 +6780,7 @@ Don<span class="err">&#39;</span>t use GUI mode <span class="k">for</span> load 
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

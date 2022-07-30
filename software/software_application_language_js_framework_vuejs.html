@@ -6936,14 +6936,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7822,12 +7822,12 @@
 <h1 id="vuejs">Vue.js<a class="headerlink" href="#vuejs" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-vuejsmvvm">01. Vue.jsを使用したMVVMアーキテクチャ<a class="headerlink" href="#01-vuejsmvvm" title="Permanent link">&para;</a></h2>
 <h3 id="mvvm">MVVMアーキテクチャ、双方向データバインディング<a class="headerlink" href="#mvvm" title="Permanent link">&para;</a></h3>
 <h4 id="mvvm_1">▼ MVVMアーキテクチャとは<a class="headerlink" href="#mvvm_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_frontend.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_frontend.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_frontend.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_frontend.html</a></p>
 <h4 id="mvvm_2">▼ MVVMアーキテクチャにおける各層の責務<a class="headerlink" href="#mvvm_2" title="Permanent link">&para;</a></h4>
 <ol>
 <li>View層（<code>foo.html</code>、<code>/foo.twig</code>、<code>foo-component.vue</code>の<code>template</code>タグ部分）</li>
@@ -7926,7 +7926,7 @@
 <h4 id="1-2-viewmodelvueindexjs">(1-2) 【ViewModel層】データの初期化を行うVueコンストラクタ関数（<code>index.js</code>）<a class="headerlink" href="#1-2-viewmodelvueindexjs" title="Permanent link">&para;</a></h4>
 <p><img alt="vue-instance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/vue-instance.png" /></p>
 <p>Vueコンストラクタ関数を使用して、インスタンス化することによって、ルートVueインスタンスが作成される。インスタンスの変数名<code>vm</code>はVIewModelの意味である。インスタンス化時、全てのコンポーネントのデータが初期化される。各コンポーネントで個別に状態を変化させたいものは、<code>props</code>オプションではなく、<code>data</code>オプションとして扱う。</p>
-<p>参考：<a href="https://v1-jp.vuejs.org/guide/instance.html">https://v1-jp.vuejs.org/guide/instance.html</a></p>
+<p>ℹ️ 参考：<a href="https://v1-jp.vuejs.org/guide/instance.html">https://v1-jp.vuejs.org/guide/instance.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8656,7 +8656,7 @@
 </tr>
 </tbody>
 </table>
-<p>参考：<a href="https://router.vuejs.org/guide/essentials/navigation.html">https://router.vuejs.org/guide/essentials/navigation.html</a></p>
+<p>ℹ️ 参考：<a href="https://router.vuejs.org/guide/essentials/navigation.html">https://router.vuejs.org/guide/essentials/navigation.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// users/?foo=xyz が履歴スタックに追加される。</span><span class="w"></span>
@@ -8950,7 +8950,7 @@
 <h3 id="_11">ライフサイクルフック<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <h4 id="_12">▼ ライフサイクルフックとは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>Vueインスタンスの作成から破棄までの間に実行される関数のこと。全ての関数を使用する必要はない。</p>
-<p>参考：<a href="https://jp.vuejs.org/v2/api/index.html#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%83%95%E3%83%83%E3%82%AF">https://jp.vuejs.org/v2/api/index.html#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%83%95%E3%83%83%E3%82%AF</a></p>
+<p>ℹ️ 参考：<a href="https://jp.vuejs.org/v2/api/index.html#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%83%95%E3%83%83%E3%82%AF">https://jp.vuejs.org/v2/api/index.html#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E3%83%95%E3%83%83%E3%82%AF</a></p>
 <table>
 <thead>
 <tr>
@@ -9004,7 +9004,7 @@
 </table>
 <h4 id="_13">▼ マウントとは<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>ブラウザ上のリアルDOMの要素を、Vue.jsの処理によって作成される仮想DOMの要素で置き換えること。</p>
-<p>参考：<a href="https://jp.vuejs.org/v2/guide/render-function.html#%E3%83%8E%E3%83%BC%E3%83%89%E3%80%81%E3%83%84%E3%83%AA%E3%83%BC%E3%80%81%E3%81%8A%E3%82%88%E3%81%B3%E4%BB%AE%E6%83%B3-DOM">https://jp.vuejs.org/v2/guide/render-function.html#%E3%83%8E%E3%83%BC%E3%83%89%E3%80%81%E3%83%84%E3%83%AA%E3%83%BC%E3%80%81%E3%81%8A%E3%82%88%E3%81%B3%E4%BB%AE%E6%83%B3-DOM</a></p>
+<p>ℹ️ 参考：<a href="https://jp.vuejs.org/v2/guide/render-function.html#%E3%83%8E%E3%83%BC%E3%83%89%E3%80%81%E3%83%84%E3%83%AA%E3%83%BC%E3%80%81%E3%81%8A%E3%82%88%E3%81%B3%E4%BB%AE%E6%83%B3-DOM">https://jp.vuejs.org/v2/guide/render-function.html#%E3%83%8E%E3%83%BC%E3%83%89%E3%80%81%E3%83%84%E3%83%AA%E3%83%BC%E3%80%81%E3%81%8A%E3%82%88%E3%81%B3%E4%BB%AE%E6%83%B3-DOM</a></p>
 <h4 id="beforecreate">▼ beforeCreate<a class="headerlink" href="#beforecreate" title="Permanent link">&para;</a></h4>
 <p>Vueインスタンスの作成前に実行される。</p>
 <p><strong>＊検証例＊</strong></p>
@@ -9345,7 +9345,7 @@ var vm = new Vue({
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

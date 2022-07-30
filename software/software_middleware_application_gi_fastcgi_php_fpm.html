@@ -6900,14 +6900,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7752,23 +7752,23 @@
 <h1 id="php-fpmphp-fastcgi-process-manager">PHP-FPM：PHP FastCGI Process Manager＠ミドルウェア<a class="headerlink" href="#php-fpmphp-fastcgi-process-manager" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-php-fpm">01. PHP-FPMの仕組み<a class="headerlink" href="#01-php-fpm" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>PHP-FPMは、Server API、Zend Engine、から構成される。</p>
-<p>参考：<a href="https://qiita.com/taichitk/items/5cf2e6778f1209620e72#php-fpm%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98">https://qiita.com/taichitk/items/5cf2e6778f1209620e72#php-fpm%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/taichitk/items/5cf2e6778f1209620e72#php-fpm%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98">https://qiita.com/taichitk/items/5cf2e6778f1209620e72#php-fpm%E3%81%AE%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AD%98</a></p>
 <p><img alt="php-fpm_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/php-fpm_architecture.png" /></p>
 <p><br></p>
 <h3 id="_3">プロセスプール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>PHP-FPMでは、リクエストのたびにプロセスを起動するわけでなく、あらかじめ複数のプロセスを起動している。そして、リクエストを受信するたびに、プロセスを割り当てている。あらかじめ準備されたプロセス群を『プール』という。</p>
-<p>参考：<a href="https://hackers-high.com/linux/php-fpm-config/#php-fpm">https://hackers-high.com/linux/php-fpm-config/#php-fpm</a></p>
+<p>ℹ️ 参考：<a href="https://hackers-high.com/linux/php-fpm-config/#php-fpm">https://hackers-high.com/linux/php-fpm-config/#php-fpm</a></p>
 <p><br></p>
 <h2 id="01-02">01-02. ユースケース<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="fastcgi">FastCGIとして<a class="headerlink" href="#fastcgi" title="Permanent link">&para;</a></h3>
 <p><img alt="php-fpm_fastcgi" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/php-fpm_fastcgi.png" /></p>
 <p>PHP-FPMは、FastCGIとしてWebサーバーとPHPファイルの間でデータ通信を行う。PHP-FPMとPHPは、それぞれ独立した子プロセスとして実行されている。そのため、設定値を別々に設定する必要がある。例えば、ログの出力先はそれぞれ個別に設定する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developpaper.com/shared-cgi-fastcgi-and-php-fpm-1/">https://developpaper.com/shared-cgi-fastcgi-and-php-fpm-1/</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_framework_laravel_component.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_framework_laravel_component.html</a></li>
@@ -7831,7 +7831,7 @@
 <h3 id="usrlocaletcphp-fpmconf"><code>/usr/local/etc/php-fpm.conf</code>ファイル<a class="headerlink" href="#usrlocaletcphp-fpmconf" title="Permanent link">&para;</a></h3>
 <h4 id="php-fpmconf">▼ <code>php-fpm.conf</code>ファイルとは<a class="headerlink" href="#php-fpmconf" title="Permanent link">&para;</a></h4>
 <p>PHP-FPMの全てのプロセスを設定する。設定ファイルを切り分ける場合、<code>/etc/php-fpm.d</code>ディレクトリ配下に<code>&lt;実行ユーザー名&gt;.conf</code>ファイルの名前で配置する。PHP-FPMの仕様として、異なる<code>.conf</code>ファイルで同じプールで同じオプションを設定した場合は、後ろにくる名前のファイルの設定が優先されるようになっている。そのため、同じプールの設定を異なる<code>.conf</code>ファイルに分割する場合に、同じオプションを設定しないように注意する。</p>
-<p>参考：<a href="https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/">https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/</a></p>
+<p>ℹ️ 参考：<a href="https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/">https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7912,14 +7912,14 @@
 <h3 id="usrlocaletcphp-fpmdwwwconf"><code>/usr/local/etc/php-fpm.d/www.conf</code>ファイル<a class="headerlink" href="#usrlocaletcphp-fpmdwwwconf" title="Permanent link">&para;</a></h3>
 <h4 id="wwwconf">▼ <code>www.conf</code>ファイルとは<a class="headerlink" href="#wwwconf" title="Permanent link">&para;</a></h4>
 <p>PHP-FPMの<code>www</code>プロセスのプールを設定する。<code>www.conf</code>ファイルは、<code>/usr/local/etc/php-fpm.d</code>ディレクトリ配下に配置されている。<code>php.ini</code>ファイルによって読み込まれ、<code>php.ini</code>ファイルよりも優先されるので、設定項目が重複している場合は、こちらを変更する。NginxからPHP-FPMにインバウンド通信をルーティングする場合、Nginxの設定ファイル（<code>/etc/nginx/nginx.conf</code>ファイル）とPHP-FPMの設定ファイル（<code>/usr/local/etc/php-fpm.d/www.conf</code>ファイル）の両方で、プロセスのユーザー名を『<code>www-data</code>』とする必要がある。ちなみに、『<code>www-data</code>』はApacheプロセスのユーザー名のデフォルト値である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.php.net/manual/ja/install.fpm.configuration.php">https://www.php.net/manual/ja/install.fpm.configuration.php</a></li>
 <li><a href="https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/">https://yoshinorin.net/2017/03/06/php-official-docker-image-trap/</a></li>
 </ul>
 <h4 id="zz-dockerconf">▼ <code>zz-docker.conf</code>ファイルについて<a class="headerlink" href="#zz-dockerconf" title="Permanent link">&para;</a></h4>
 <p>PHP-FPMのベースイメージには<code>zz-docker.conf</code>ファイルが組み込まれており、このファイルにはPHP-FPMの一部の設定が実装されている。PHP-FPMの仕様では、同じプールに同じオプションを設定した場合は、名前が後ろに来るファイルの設定が優先されるため、デフォルトのベースイメージでは<code>zz-docker.conf</code>ファイルの設定が最優先になっている。このファイルに後勝ちできるように、ホストでは<code>www.conf</code>ファイルとして定義しておき、コンテナ側にコピーする時は<code>zzz-www.conf</code>ファイルとする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.kengotakimoto.com/posts/laravel_with_docker-compose">https://www.kengotakimoto.com/posts/laravel_with_docker-compose</a></li>
 <li><a href="https://github.com/usabilla/php-docker-template/blob/master/src/php/fpm/conf/zz-docker.conf.template">https://github.com/usabilla/php-docker-template/blob/master/src/php/fpm/conf/zz-docker.conf.template</a></li>
@@ -7983,7 +7983,7 @@
 <h2 id="05-www">05. wwwセクション<a class="headerlink" href="#05-www" title="Permanent link">&para;</a></h2>
 <h3 id="www">wwwセクションとは<a class="headerlink" href="#www" title="Permanent link">&para;</a></h3>
 <p>PHP-FPMの<code>www</code>プロセスのプールを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.php.net/manual/ja/install.fpm.configuration.php">https://www.php.net/manual/ja/install.fpm.configuration.php</a></li>
 <li><a href="https://hackers-high.com/linux/php-fpm-config/">https://hackers-high.com/linux/php-fpm-config/</a></li>
@@ -7991,7 +7991,7 @@
 <p><br></p>
 <h3 id="clear_env">clear_env<a class="headerlink" href="#clear_env" title="Permanent link">&para;</a></h3>
 <p>デフォルトでは、環境変数の衝突や悪意ある注入を防ぐために、最初にプール内の環境変数を全て削除している。これにより、設定ファイルに環境変数を出力できないようになっている。この最初の削除処理を無効化する。</p>
-<p>参考：<a href="https://takapi86.hatenablog.com/entry/2019/07/29/225558">https://takapi86.hatenablog.com/entry/2019/07/29/225558</a></p>
+<p>ℹ️ 参考：<a href="https://takapi86.hatenablog.com/entry/2019/07/29/225558">https://takapi86.hatenablog.com/entry/2019/07/29/225558</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">clear_env</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">no</span><span class="w"></span>
@@ -8058,7 +8058,7 @@
 <h3 id="php_admin_flag">php_admin_flag<a class="headerlink" href="#php_admin_flag" title="Permanent link">&para;</a></h3>
 <h4 id="php_admin_flag_1">▼ php_admin_flagとは<a class="headerlink" href="#php_admin_flag_1" title="Permanent link">&para;</a></h4>
 <p>Apacheでのみ使用できる。PHPの<code>ini</code>ファイルで設定されたbool値のオプションを上書きし、他から上書きされないようにする。全てのオプションを上書きできるわけでなく、オプションごとの変更モードによる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_admin_flag">https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_admin_flag</a></li>
 <li><a href="https://www.php.net/manual/en/ini.list.php">https://www.php.net/manual/en/ini.list.php</a></li>
@@ -8072,7 +8072,7 @@
 <h3 id="php_admin_value">php_admin_value<a class="headerlink" href="#php_admin_value" title="Permanent link">&para;</a></h3>
 <h4 id="php_admin_value_1">▼ php_admin_valueとは<a class="headerlink" href="#php_admin_value_1" title="Permanent link">&para;</a></h4>
 <p>Apacheでのみ使用できる。PHPの<code>ini</code>ファイルで設定されたbool値以外のオプションを上書きし、他から上書きされないようにする。全てのオプションを上書きできるわけでなく、オプションごとの変更モードによる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_admin_value">https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_admin_value</a></li>
 <li><a href="https://www.php.net/manual/en/ini.list.php">https://www.php.net/manual/en/ini.list.php</a></li>
@@ -8087,7 +8087,7 @@
 <h3 id="php_flag">php_flag<a class="headerlink" href="#php_flag" title="Permanent link">&para;</a></h3>
 <h4 id="php_flag_1">▼ php_flagとは<a class="headerlink" href="#php_flag_1" title="Permanent link">&para;</a></h4>
 <p>PHPの<code>ini</code>ファイルで設定されたbool値のオプションを上書きする。全てのオプションを上書きできるわけでなく、オプションごとの変更モードによる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_flag">https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_flag</a></li>
 <li><a href="https://www.php.net/manual/en/ini.list.php">https://www.php.net/manual/en/ini.list.php</a></li>
@@ -8102,14 +8102,14 @@
 <h3 id="php_value">php_value<a class="headerlink" href="#php_value" title="Permanent link">&para;</a></h3>
 <h4 id="php_value_1">▼ php_valueとは<a class="headerlink" href="#php_value_1" title="Permanent link">&para;</a></h4>
 <p>PHPの<code>ini</code>ファイルで設定されたbool値以外のオプションを上書きする。全てのオプションを上書きできるわけでなく、オプションごとの変更モードによる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_value">https://ma.ttias.be/php-php_value-vs-php_admin_value-and-the-use-of-php_flag-explained/#php_value</a></li>
 <li><a href="https://www.php.net/manual/en/ini.list.php">https://www.php.net/manual/en/ini.list.php</a></li>
 </ul>
 <h4 id="php_valuesessionsave_handler">▼ php_value[session.save_handler]<a class="headerlink" href="#php_valuesessionsave_handler" title="Permanent link">&para;</a></h4>
 <p>セッションの保存形式を設定する。デフォルト値は<code>files</code>形式でサーバー内に保存する。<code>redis</code>レコード形式でセッションDB（PHP Redis、ElastiCache Redisなど）に保存するように設定もできる。</p>
-<p>参考：<a href="https://zapanet.info/blog/item/3364">https://zapanet.info/blog/item/3364</a></p>
+<p>ℹ️ 参考：<a href="https://zapanet.info/blog/item/3364">https://zapanet.info/blog/item/3364</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">php_value[session.save_handler]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">redis</span><span class="w"></span>
@@ -8117,7 +8117,7 @@
 <p><br></p>
 <h4 id="php_valuesessionsave_path">▼ php_value[session.save_path]<a class="headerlink" href="#php_valuesessionsave_path" title="Permanent link">&para;</a></h4>
 <p>セッションの保存場所のディレクトリを設定する。保存形式に<code>redis</code>を設定した場合には、Redisのエンドポイントを設定できる。デフォルト値は<code>/var/lib/php/session</code>ディレクトリである。</p>
-<p>参考：<a href="https://zapanet.info/blog/item/3364">https://zapanet.info/blog/item/3364</a></p>
+<p>ℹ️ 参考：<a href="https://zapanet.info/blog/item/3364">https://zapanet.info/blog/item/3364</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">php_value[session.save_path]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tcp://foo-redis.*****.ng.0001.apne1.cache.amazonaws.com:6379&quot;</span><span class="w"></span>
@@ -8131,7 +8131,7 @@
 <p><br></p>
 <h3 id="pm">pm<a class="headerlink" href="#pm" title="Permanent link">&para;</a></h3>
 <p>子プロセス数の増減タイプを設定する。<code>static</code>の場合は、リクエスト数によらず一定数の子プロセスをメモリに割り当て、<code>dynamic</code>の場合はリクエスト数によって子プロセスを増減させる。</p>
-<p>参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
+<p>ℹ️ 参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">pm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">dynamic</span><span class="w"></span>
@@ -8139,7 +8139,7 @@
 <p><br></p>
 <h3 id="pmmax_children">pm.max_children<a class="headerlink" href="#pmmax_children" title="Permanent link">&para;</a></h3>
 <p>子プロセスの最大数を設定する。子プロセスの最大数は、同時に処理できるリクエストの最大数に相当する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_kernel_memory_management.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_kernel_memory_management.html</a></li>
@@ -8151,7 +8151,7 @@
 <p><br></p>
 <h3 id="pmmax_spare_servers">pm.max_spare_servers<a class="headerlink" href="#pmmax_spare_servers" title="Permanent link">&para;</a></h3>
 <p>アイドル状態にしておく子プロセスの最大数を設定する。</p>
-<p>参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
+<p>ℹ️ 参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">pm.max_spare_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">35</span><span class="w"></span>
@@ -8159,7 +8159,7 @@
 <p><br></p>
 <h3 id="pmmin_spare_servers">pm.min_spare_servers<a class="headerlink" href="#pmmin_spare_servers" title="Permanent link">&para;</a></h3>
 <p>アイドル状態にしておく子プロセスの最小数を設定する。</p>
-<p>参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
+<p>ℹ️ 参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">pm.min_spare_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span><span class="w"></span>
@@ -8167,7 +8167,7 @@
 <p><br></p>
 <h3 id="pmstart_servers">pm.start_servers<a class="headerlink" href="#pmstart_servers" title="Permanent link">&para;</a></h3>
 <p>PHP-FPM起動時の子プロセス数を設定する。</p>
-<p>参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
+<p>ℹ️ 参考：<a href="https://life.iua.jp/?p=230">https://life.iua.jp/?p=230</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[www]</span><span class="w"></span>
 <span class="na">pm.start_servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">5</span><span class="w"></span>
@@ -8204,7 +8204,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7088,14 +7088,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8128,7 +8128,7 @@
 <h1 id="terraform">設計ポリシー＠Terraform<a class="headerlink" href="#terraform" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. リポジトリ構成<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">リポジトリ分割のメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -8174,7 +8174,7 @@
 <h3 id="tfstate"><code>.tfstate</code>ファイル分割とは<a class="headerlink" href="#tfstate" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ メリット<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p><code>.tfstate</code>ファイルを分割することにより、以下のメリットがある。</p>
-<p>参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></p>
 <ul>
 <li><code>terraform apply</code>コマンドの実行途中に問題が発生し、<code>.tfstate</code>ファイルが破損したとしても、影響範囲をクラウドプロバイダーの実行環境内に閉じられる。</li>
 <li><code>terraform plan</code>コマンドや<code>terraform apply</code>コマンドの実行時間を短縮できる。</li>
@@ -8282,7 +8282,7 @@
 <h3 id="_11">任意のコンポーネント別<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <h4 id="_12">▼ コンポーネントの目安<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>CloudFormationでは、クラウドインフラのリソースの設定変更頻度、運用チームの責務範囲、爆発半径、などを状態管理の単位とすることが推奨されており、Terraformでのコンポーネント分割でもこれを真似すると良い。これらの観点の分割が混在してしまうと混乱するため、個人的には、いずれかの観点に統一した方が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zoo200.net/terraform-tutorial-module-and-directory/">https://zoo200.net/terraform-tutorial-module-and-directory/</a></li>
 <li><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks</a></li>
@@ -8290,7 +8290,7 @@
 </ul>
 <h4 id="_13">▼ クラウドインフラのリソースの変更頻度<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>クラウドインフラのリソースの設定変更頻度ごとにコンポーネントを分割する。各環境で独立して作成した<code>.tfstate</code>ファイルの管理リソース（AWSならS3バケット）内でディレクトリを作り、各ディレクトリに<code>.tfstate</code>ファイルを配置する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://towardsdatascience.com/data-quality-dataops-and-the-trust-blast-radius-4b0e9556bbda">https://towardsdatascience.com/data-quality-dataops-and-the-trust-blast-radius-4b0e9556bbda</a></li>
 <li><a href="https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4">https://qiita.com/yukihira1992/items/a674fe717a8ead7263e4</a></li>
@@ -9126,7 +9126,7 @@
 <h2 id="05">05. 開発環境<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="_40">開発方法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
 <p>前提として、バックエンドにS3を使用しているものとする。Makefileのコマンドを実行する前に、<code>provider.tf</code>ファイルのbackendオプションを、『s3』から『local』に変更する。</p>
-<p>参考：<a href="https://repl.info/archives/1435/">https://repl.info/archives/1435/</a></p>
+<p>ℹ️ 参考：<a href="https://repl.info/archives/1435/">https://repl.info/archives/1435/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9281,12 +9281,12 @@ $ asdf install
 <p>低いバージョンのTerraformに対して、より高いバージョンはデプロイできる。しかし、高いバージョンのTerraformに対して、より低いバージョンをデプロイできない。そのため、アップグレードしてしまうと、それ以外のTerraformバージョンの異なる作業に影響が出る。</p>
 <h3 id="3">3. メジャーバージョン単位でアップグレード＆リリース<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <p>Terraformでは、メジャーバージョン単位でアップグレードを行うことが推奨されている。そのため、現在のバージョンと最新バージョンがどんなに離れていても、必ず1つずつメジャーバージョンをアップグレードするように気をつける。この時、次のメジャーバージョンの『最新』までアップグレードしてしまって問題ない（例：現在のバージョンが <code>v0.13.0</code> であれば、<code>0.14</code>系の最新にアップグレード）。また、アップグレードの都度、リリースを行う。</p>
-<p>参考：<a href="https://www.terraform.io/upgrade-guides/1-0.html">https://www.terraform.io/upgrade-guides/1-0.html</a> </p>
+<p>ℹ️ 参考：<a href="https://www.terraform.io/upgrade-guides/1-0.html">https://www.terraform.io/upgrade-guides/1-0.html</a> </p>
 <h3 id="4-terraform-plan">4. terraform planコマンドの警告/エラーを解決<a class="headerlink" href="#4-terraform-plan" title="Permanent link">&para;</a></h3>
 <p>アップグレードに伴って、非推奨/廃止の機能がリリースされ、警告/エラーが出力される場合がある。警告/エラーを解決できるように、記法やオプション値を修正する。場合によっては<code>.tfstate</code>ファイルの差分として表示されているだけで、実インフラとの差分ではない場合もあるため、<code>terraform plan</code>コマンド時に差分があったとしても、実インフラに影響がなければ問題ない。</p>
 <h3 id="5-terraform">5. プロバイダーをアップグレードしたい場合はTerraformもアップグレード<a class="headerlink" href="#5-terraform" title="Permanent link">&para;</a></h3>
 <p>Terraformとプロバイダーのバージョンは独立して管理されている。プロバイダーはTerraformが土台になって稼働するため、もしプロバイダーをアップグレードしたい場合は、Terraformもアップグレードする。一方で、Terraformをアップグレードしたい場合は、必ずしもプロバイダーをアップグレードする必要はない。アップグレードガイドについては、以下のリンクを参考せよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li>Terraform：<a href="https://www.terraform.io/language/upgrade-guides">https://www.terraform.io/language/upgrade-guides</a></li>
 <li>AWSプロバイダー：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-4-upgrade">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/version-4-upgrade</a></li>
@@ -9344,7 +9344,7 @@ $ asdf install
 <li>プライマリーインスタンスの変更をリリースする。リリース時にフェールオーバーを発生し、現プライマリーインスタンスはリードレプリカに降格する。また、前のリリースですでに更新されたリードレプリカがプライマリーインスタンスに昇格する。新しいリードレプリカがアップグレードされる間、代わりに新しいプライマリーインスタンスが機能する。</li>
 </ol>
 <p>ダウンタイムが発生するDBインスタンスの設定項目は以下のリンクを参考にせよ。RDSの項目として書かれており、Auroraではないが、おおよそ同じなため参考にしている。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
 <p><br></p>
 <h3 id="_45">ロールバックの方法<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
 <p>Terraformには、インフラのバージョンのロールバック機能がない。そこで、1つ前のリリースタグをRerunすることにより、バージョンのロールバックを実行する。今回のリリースのcreate処理が少ないほどRerunでdestroy処理が少なく、反対にdestroy処理が少ないほどcreate処理が少なくなる。もしリリース時に問題が発生した場合、インフラのバージョンのロールバックを行う必要があるが、経験則でcreate処理やdestroy処理よりもupdate処理の方がエラーが少ないため、ロールバックにもたつきにくい。そのため、Rerun時にどのくらいのcreate処理やdestroy処理が実行されるかと考慮し、1つ前のリリースタグをRerunするか否かを判断する。</p>
@@ -9355,7 +9355,7 @@ $ asdf install
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

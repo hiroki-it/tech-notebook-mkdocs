@@ -6747,14 +6747,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7448,22 +7448,22 @@
 <h1 id="datadog">分散トレース収集＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-trace">01. Traceエージェント（サーバーの場合）<a class="headerlink" href="#01-trace" title="Permanent link">&para;</a></h2>
 <h3 id="trace">Traceエージェントとは<a class="headerlink" href="#trace" title="Permanent link">&para;</a></h3>
 <p>デーモンであるdatadogエージェントに含まれている。アプリケーションから分散トレースを収集し、Datadogに転送する。</p>
-<p>参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
+<p>ℹ️ 参考：<a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/">https://www.netone.co.jp/knowledge-center/netone-blog/20210716-1/</a></p>
 <p><img alt="datadog-agent_on-server" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog-agent_on-server.png" /></p>
 <p><br></p>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="etcdatadog-agentdatadogyaml">▼ <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_agent_conf.html</a></p>
 <p><br></p>
 <h2 id="02-traceaws-ecs-fargate">02. Traceエージェント（AWS ECS Fargateの場合）<a class="headerlink" href="#02-traceaws-ecs-fargate" title="Permanent link">&para;</a></h2>
 <h3 id="trace_1">Traceエージェントとは<a class="headerlink" href="#trace_1" title="Permanent link">&para;</a></h3>
 <p>サーバーの場合と同様にして、アプリケーションから分散トレースを受信し、Datadogに転送する。サーバーの場合とは異なり、自身が収集しにいくことはできない。仕組みとして、アプリケーションコンテナのトレースパッケージは分散トレースを作成し、datadogコンテナの『<code>http://localhost:8126</code>』にこれを送信する。datadogコンテナ内のdatadogエージェントはこれをHTTPSでDatadogに転送する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/tracing/#datadog-%E3%81%B8%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E9%80%81%E4%BF%A1">https://docs.datadoghq.com/tracing/#datadog-%E3%81%B8%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%92%E9%80%81%E4%BF%A1</a></li>
 <li><a href="https://inokara.hateblo.jp/entry/2017/10/01/164446">https://inokara.hateblo.jp/entry/2017/10/01/164446</a></li>
@@ -7472,7 +7472,7 @@
 <p><br></p>
 <h3 id="_3">セットアップ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ パッケージ一覧<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/developers/libraries/#apm-%E3%81%A8%E5%88%86%E6%95%A3%E5%9E%8B%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">https://docs.datadoghq.com/developers/libraries/#apm-%E3%81%A8%E5%88%86%E6%95%A3%E5%9E%8B%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/developers/libraries/#apm-%E3%81%A8%E5%88%86%E6%95%A3%E5%9E%8B%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">https://docs.datadoghq.com/developers/libraries/#apm-%E3%81%A8%E5%88%86%E6%95%A3%E5%9E%8B%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%B3%E3%82%B0%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA</a></p>
 <h4 id="_5">▼ デバッグ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -7486,17 +7486,17 @@
 <tr>
 <td>起動ログの有効化</td>
 <td>環境変数の<code>DD_TRACE_STARTUP_LOGS</code>を有効化することにより、起動ログを標準出力に出力できるようにする。起動ログから、トレーサーの設定値を確認できる。</td>
-<td>参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datadog-support">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datadog-support</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datadog-support">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datadog-support</a></td>
 </tr>
 <tr>
 <td>デバッグログの有効化</td>
 <td>各トレーサーが持つデバッグパラメーターを有効化することにより、デバッグログを標準出力に出力できるようにする。デバッグログから、実際にDatadogに送信されるスパンデータを確認できる。</td>
-<td>参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad</a></td>
 </tr>
 <tr>
 <td>Agent Flareコマンドの実行</td>
 <td>datadogコンテナ内でAgent Flareコマンドを実行し、Datadogサポートにdatadogコンテナの構成情報をメール送信する。</td>
-<td>参考：<br>・<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad</a><br>・<a href="https://docs.datadoghq.com/agent/troubleshooting/send_a_flare/?tab=agentv6v7">https://docs.datadoghq.com/agent/troubleshooting/send_a_flare/?tab=agentv6v7</a></td>
+<td>ℹ️ 参考：<br>・<a href="https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad">https://docs.datadoghq.com/tracing/troubleshooting/#troubleshooting-data-requested-by-datad</a><br>・<a href="https://docs.datadoghq.com/agent/troubleshooting/send_a_flare/?tab=agentv6v7">https://docs.datadoghq.com/agent/troubleshooting/send_a_flare/?tab=agentv6v7</a></td>
 </tr>
 </tbody>
 </table>
@@ -7534,7 +7534,7 @@ $ rm datadog-php-tracer.deb
 <span class="na">env[DD_ENV]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;prd&#39;</span><span class="w"></span>
 <span class="na">env[DD_VERSION]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;&lt;バージョンタグ&gt;&#39;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/tracing/setup/php/">https://docs.datadoghq.com/tracing/setup/php/</a></li>
 <li><a href="https://app.datadoghq.com/apm/docs?architecture=host-based&amp;framework=php-fpm&amp;language=php">https://app.datadoghq.com/apm/docs?architecture=host-based&amp;framework=php-fpm&amp;language=php</a></li>
@@ -7565,7 +7565,7 @@ $ rm datadog-php-tracer.deb
 </code></pre></div></td></tr></table></div>
 <h4 id="_8">▼ インストール（コンテナの場合）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>アプリケーションコンテナのDockerfileにて、PHPトレーサーをインストールする。また、コンテナの環境変数として、<code>DD_SERVICE</code>、<code>DD_ENV</code>、<code>DD_VERSION</code>を渡す。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers">https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers">https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7614,7 +7614,7 @@ Extension <span class="s1">&#39;ddtrace&#39;</span> not present.
 </code></pre></div></td></tr></table></div>
 <h4 id="_10">▼ パラメータの動作確認<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>パラメーターがトレーサーに渡されたか否かは、<code>DATADOG TRACER CONFIGURATION</code>の項目で確認できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/">https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/">https://docs.datadoghq.com/tracing/troubleshooting/tracer_startup_logs/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7720,7 +7720,7 @@ DATADOG TRACER <span class="nv">CONFIGURATION</span> <span class="o">=</span>&gt
 <h3 id="_12">セットアップ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="_13">▼ インストール<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>TypeScriptやモジュールバンドルを使用している場合、パッケージの読み出し処理が巻き上げられ、意図しない読み出しの順番になってしまうことがある。対策として、<code>dd-trace</code>パッケージの<code>init</code>メソッドの実行をを別ファイルに分割し、これをエントリーポイント（<code>nuxt.config.js</code>ファイル）の先頭で読み込むようにする。また、フレームワークよりも先に読み込むことになるため、<code>.env</code>ファイル参照機能を使えない。そこで、環境変数はインフラ側で設定する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#typescript-%E3%81%A8%E3%83%90%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC">https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#typescript-%E3%81%A8%E3%83%90%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#typescript-%E3%81%A8%E3%83%90%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC">https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#typescript-%E3%81%A8%E3%83%90%E3%83%B3%E3%83%89%E3%83%A9%E3%83%BC</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7840,15 +7840,15 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <p><br></p>
 <h3 id="_15">環境変数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>初期化時に環境変数を設定できる。APMのマイクロサービスのタグ名に反映される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">https://docs.datadoghq.com/tracing/setup_overview/setup/nodejs/?tab=%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A#%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A3%E3%82%AE%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
 <p><br></p>
 <h2 id="03">03. 分散トレースの作成<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_16">分散トレース<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ 分散トレースとは<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html</a></p>
 <h4 id="datadog_1">▼ Datadogにおける分散トレース<a class="headerlink" href="#datadog_1" title="Permanent link">&para;</a></h4>
 <p>Datadogで、分散トレースはスパンを持つ配列データとして定義される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/">https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/">https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7873,10 +7873,10 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <p><br></p>
 <h3 id="_18">スパン<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <h4 id="_19">▼ スパンとは<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability.html</a></p>
 <h4 id="datadog_2">▼ Datadogにおけるスパン<a class="headerlink" href="#datadog_2" title="Permanent link">&para;</a></h4>
 <p>Datadogで、スパンはJSON型データとして定義される。アプリケーション内のトレーサーで、指定されたJSON型のスパンが作成され、スパンはdatadog-APIに送信される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/">https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/">https://docs.datadoghq.com/tracing/guide/send_traces_to_agent_by_api/</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7974,10 +7974,10 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <h3 id="_21">スパンのメトリクス<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <h4 id="_22">▼ スパンのデータポイント化<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>スパンの持つデータをデータポイントとして集計すると、メトリクスのデータポイントを収集できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/generate_metrics/">https://docs.datadoghq.com/tracing/generate_metrics/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/generate_metrics/">https://docs.datadoghq.com/tracing/generate_metrics/</a></p>
 <h4 id="_23">▼ メトリクス名の構成要素<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>メトリクス名は『<code>trace.&lt;スパン名&gt;.&lt;メトリクス接尾辞名&gt;</code>』の名前で構成される。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/guide/metrics_namespace/">https://docs.datadoghq.com/tracing/guide/metrics_namespace/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/guide/metrics_namespace/">https://docs.datadoghq.com/tracing/guide/metrics_namespace/</a></p>
 <h4 id="_24">▼ メトリクスのスパン名<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>データポイントとなったスパン名が割り当てられる。</p>
 <p><strong>＊例＊</strong></p>
@@ -7988,7 +7988,7 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 </ul>
 <h4 id="_25">▼ メトリクスのメトリクス接尾辞名<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>メトリクスの種類に応じた接尾辞名が割り当てられる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/guide/metrics_namespace/#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/tracing/guide/metrics_namespace/#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/guide/metrics_namespace/#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/tracing/guide/metrics_namespace/#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9%E3%82%B5%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B9</a></p>
 <p><strong>＊例＊</strong></p>
 <ul>
 <li><code>trace.&lt;スパン名&gt;.hits.*****</code>（該当スパンのヒット数）</li>
@@ -8000,13 +8000,13 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <h3 id="_26">エラートラッキング<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <h4 id="_27">▼ エラートラッキングの仕組み<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
 <p>エントリす</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/error_tracking/#how-datadog-error-tracking-works">https://docs.datadoghq.com/tracing/error_tracking/#how-datadog-error-tracking-works</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/error_tracking/#how-datadog-error-tracking-works">https://docs.datadoghq.com/tracing/error_tracking/#how-datadog-error-tracking-works</a></p>
 <p><br></p>
 <h2 id="04">04. マイクロサービスの識別<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_28">マイクロサービスタイプ<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
 <h4 id="_29">▼ マイクロサービスタイプとは<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>トレーサによって、マイクロサービスは『Web』『DB』『Cache』『Cache』の4つに分類される。各マイクロサービスの<code>span.type</code>属性に割り当てられるタイプ名から自動的に割り振られる。タイプ名の種類については、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/DataDog/dd-trace-php/blob/master/src/api/Type.php">https://github.com/DataDog/dd-trace-php/blob/master/src/api/Type.php</a></li>
 <li><a href="https://docs.datadoghq.com/tracing/visualization/services_list/#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%97">https://docs.datadoghq.com/tracing/visualization/services_list/#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%97</a></li>
@@ -8015,7 +8015,7 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
 <h3 id="_30">マイクロサービスのタグ<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
 <h4 id="_31">▼ マイクロサービスのタグとは<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
 <p>トレーサによって、マイクロサービスにタグを追加できる。PHPトレーサの各インテグレーションのコードについては以下のリンクを参考にせよ。コードから、PHPトレーサーがアプリケーションからどのように情報を抜き出し、分散トレースのタグの値を決定しているかがわかる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations">https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations</a></li>
 <li><a href="https://github.com/DataDog/dd-trace-php/blob/master/src/api/Tag.php">https://github.com/DataDog/dd-trace-php/blob/master/src/api/Tag.php</a></li>
@@ -8026,7 +8026,7 @@ WARN  DATADOG TRACER DIAGNOSTIC - Agent Error: Network error trying to reach the
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

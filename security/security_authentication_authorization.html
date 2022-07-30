@@ -6919,14 +6919,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7796,7 +7796,7 @@
 <h1 id="authenticateauthorization">Authenticate（認証）/Authorization（認可）＠セキュリティ<a class="headerlink" href="#authenticateauthorization" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 認証<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">認証とは<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7805,7 +7805,7 @@
 <h3 id="http">HTTP認証<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
 <h4 id="http_1">▼ HTTP認証とは<a class="headerlink" href="#http_1" title="Permanent link">&para;</a></h4>
 <p>HTTP通信の中で認証を行う認証スキームのこと。リクエストの<code>authorization</code>ヘッダーとレスポンスの<code>WWW-Authenticate</code>ヘッダーで認証スキームを指定する。認証スキームの種類には、『Basic認証』、『Digest認証』、『Bearer認証』などがある。認証情報の一時的な保存は、ブラウザのWebStoregeで行うため、認証解除（ログアウト）をサーバー側で完全に制御できない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml</a></li>
 <li><a href="https://architecting.hateblo.jp/entry/2020/03/27/130535">https://architecting.hateblo.jp/entry/2020/03/27/130535</a></li>
@@ -7815,7 +7815,7 @@
 <h3 id="formcookie">Form認証（Cookieベースの認証）<a class="headerlink" href="#formcookie" title="Permanent link">&para;</a></h3>
 <h4 id="form">▼ Form認証とは<a class="headerlink" href="#form" title="Permanent link">&para;</a></h4>
 <p>認証時に、<code>Cookie</code>ヘッダーの値を使用する認証スキームのこと。『Cookieベースの認証』ともいう。ステートフル化を行うため、HTTP認証には属していない。認証情報の一時的な保存は、サーバーのセッションデータで行うため、認証解除（ログアウト）をサーバー側で制御できる。<code>Cookie</code>ヘッダーによる送受信では、CSRFの危険性がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://h50146.www5.hpe.com/products/software/security/icewall/iwsoftware/report/pdfs/certification.pdf">https://h50146.www5.hpe.com/products/software/security/icewall/iwsoftware/report/pdfs/certification.pdf</a></li>
 <li><a href="https://auth0.com/docs/sessions/cookies#cookie-based-authentication">https://auth0.com/docs/sessions/cookies#cookie-based-authentication</a></li>
@@ -7864,14 +7864,14 @@
 <span class="err">cookie: sessionid=&lt;セッションID&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>認証解除時、サーバーでセッションデータを削除する。</p>
-<p>参考：<a href="https://blog.tokumaru.org/2013/02/purpose-and-implementation-of-the-logout-function.html">https://blog.tokumaru.org/2013/02/purpose-and-implementation-of-the-logout-function.html</a></p>
+<p>ℹ️ 参考：<a href="https://blog.tokumaru.org/2013/02/purpose-and-implementation-of-the-logout-function.html">https://blog.tokumaru.org/2013/02/purpose-and-implementation-of-the-logout-function.html</a></p>
 <h4 id="form_1">▼ トークンを使用したForm認証の場合（トークンベース）<a class="headerlink" href="#form_1" title="Permanent link">&para;</a></h4>
 <p>トークンを<code>Cookie</code>ヘッダーに割り当て、リクエストを送信する。この時のトークンの選択肢として、単なるランダムな文字列やJWTがある。</p>
-<p>参考：<a href="https://scrapbox.io/fendo181/JWT(JSON_Web_Token)%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%80%82">https://scrapbox.io/fendo181/JWT(JSON_Web_Token)%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%80%82</a></p>
+<p>ℹ️ 参考：<a href="https://scrapbox.io/fendo181/JWT(JSON_Web_Token)%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%80%82">https://scrapbox.io/fendo181/JWT(JSON_Web_Token)%E3%82%92%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%80%82</a></p>
 <p><img alt="JWT" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/JWT.png" /></p>
 <h4 id="cookie">▼ <code>Cookie</code>ヘッダーの値のクライアント保持<a class="headerlink" href="#cookie" title="Permanent link">&para;</a></h4>
 <p>再利用のため、<code>Cookie</code>ヘッダーに割り当てるための値（セッションID、トークン）は、ブラウザを通して、ローカルマシンに有効期限に応じた間だけ保持できる。またはブラウザの設定によって、ブラウザのWebストレージでも保持できる。Chromeの場合は、Cookieストレージに保持される。確認方法については、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.chrome.com/docs/devtools/storage/cookies/">https://developer.chrome.com/docs/devtools/storage/cookies/</a></li>
 <li><a href="https://qiita.com/cobachan/items/05fa537a4ffcb189d001">https://qiita.com/cobachan/items/05fa537a4ffcb189d001</a></li>
@@ -7880,10 +7880,10 @@
 <h3 id="api">APIキー認証<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
 <h4 id="api_1">▼ APIキー認証とは<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h4>
 <p>事前にAPIキーとなる文字列を配布し、認証フェースは行わずに認可フェーズのみでユーザーを照合する認証スキームのこと。API GatewayにおけるAPIキー認証については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html</a></p>
 <h4 id="_3">▼ 照合情報の送信方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>独自ヘッダーとして、<code>x-api-key</code>ヘッダーを定義する。これにAPIキーを割り当て、リクエストを送信する。リクエストヘッダへのパラメータの割り当てについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">GET https://example.com/bar.php</span>
 <span class="err">x-api-key: &lt;APIキー&gt;</span>
@@ -7892,7 +7892,7 @@
 <h3 id="patpersonal-access-token">PAT：Personal Access Tokenによる認証<a class="headerlink" href="#patpersonal-access-token" title="Permanent link">&para;</a></h3>
 <h4 id="pat">▼ PATによる認証<a class="headerlink" href="#pat" title="Permanent link">&para;</a></h4>
 <p>クライアントがPersonal Access Token（個人用アクセストークン）の付与をリクエストし、認証フェースは行わずに認可フェーズのみでユーザーを照合する。<code>Authorization</code>ヘッダーにPATを割りあてて、リクエストを送信する。作成時以降、アクセストークンを確認できなくなるため、クライアントがアクセストークンを管理する必要がある。</p>
-<p>参考：<a href="https://www.contentful.com/help/personal-access-tokens/">https://www.contentful.com/help/personal-access-tokens/</a></p>
+<p>ℹ️ 参考：<a href="https://www.contentful.com/help/personal-access-tokens/">https://www.contentful.com/help/personal-access-tokens/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">GET https://example.com/bar.php</span>
 <span class="err">authorization: &lt;Personal Acccess Token&gt;</span>
@@ -7909,7 +7909,7 @@
 <tr>
 <td>GitHub</td>
 <td>Personal access Token</td>
-<td>HTTPSを使用して、プライベートリポジトリにリクエストを送信するために必要。HTTPSを使用する場面として、アプリケーションの拡張機能のGitHub連携、リポジトリのパッケージ化、などがある。<br>参考：<a href="https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token</a></td>
+<td>HTTPSを使用して、プライベートリポジトリにリクエストを送信するために必要。HTTPSを使用する場面として、アプリケーションの拡張機能のGitHub連携、リポジトリのパッケージ化、などがある。<br>ℹ️ 参考：<a href="https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token">https://docs.github.com/ja/github/authenticating-to-github/creating-a-personal-access-token</a></td>
 </tr>
 </tbody>
 </table>
@@ -7961,7 +7961,7 @@
 <span class="err">WWW-Authenticate: Basic realm=&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p>認証の解除時は、誤った認証情報をブラウザに意図的に送信させて認証を失敗させるようにする。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/4163122/http-basic-authentication-log-out">https://stackoverflow.com/questions/4163122/http-basic-authentication-log-out</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/4163122/http-basic-authentication-log-out">https://stackoverflow.com/questions/4163122/http-basic-authentication-log-out</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">POST https://example.com/foo-form/logout</span>
 <span class="err">authorization: Basic &lt;誤った認証情報&gt;</span>
@@ -7990,10 +7990,10 @@
 <p>認証時に、Bearerトークンを使用する認証スキームのこと。</p>
 <h4 id="bearer_2">▼ Bearerトークン（署名なしトークン）とは<a class="headerlink" href="#bearer_2" title="Permanent link">&para;</a></h4>
 <p>単なる文字列で定義されたアクセストークン。Bearer認証にて、トークンとして使用する。署名なしトークンとも呼ばれ、実際に認証された本人か否かを判定する機能は無く、トークンを持っていればそれを本人として認可する。そのため、トークンの文字列が流出してしまわないよう、厳重に管理する必要がある。</p>
-<p>参考：<a href="https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3">https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3</a></p>
+<p>ℹ️ 参考：<a href="https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3">https://openid-foundation-japan.github.io/rfc6750.ja.html#anchor3</a></p>
 <h4 id="bearer_3">▼ Bearer認証の仕組み<a class="headerlink" href="#bearer_3" title="Permanent link">&para;</a></h4>
 <p>指定されたエンドポイントに対して、<code>POST</code>リクエストを送信する。この時、<code>Content-Type</code>ヘッダーを<code>application/x-www-form-urlencoded</code>とする。必要なボディパラメーターはAPIの提供元によって異なる。クライアントID、付与タイプ、などが必要なことが多い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.amazon.com/ja/docs/adm/request-access-token.html#request-format">https://developer.amazon.com/ja/docs/adm/request-access-token.html#request-format</a></li>
 <li><a href="https://ja.developer.box.com/reference/post-oauth2-token/#request">https://ja.developer.box.com/reference/post-oauth2-token/#request</a></li>
@@ -8009,7 +8009,7 @@
 <span class="err">client_id=*****&amp;grant_type=client_credentials&amp;scope=messaging:push</span>
 </code></pre></div></td></tr></table></div>
 <p>レスポンスボディにBearerトークンを含むレスポンスが返信される。他に、有効期限、権限のスコープ、指定できる認証スキーマ、などが提供されることが多い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.amazon.com/ja/docs/adm/request-access-token.html#request-format">https://developer.amazon.com/ja/docs/adm/request-access-token.html#request-format</a></li>
 <li><a href="https://ja.developer.box.com/reference/resources/access-token/">https://ja.developer.box.com/reference/resources/access-token/</a></li>
@@ -8035,7 +8035,7 @@
 <span class="err">}</span>
 </code></pre></div></td></tr></table></div>
 <p>発行されたBearerトークンを指定された認証スキーマで<code>Authorization</code>ヘッダーに割り当て、リクエストを送信する。ここでは詳しく言及しないが、BearerトークンをForm認証のように<code>Cookie</code>ヘッダーに割り当てることもある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorage-or-cookie">https://stackoverflow.com/questions/34817617/should-jwt-be-stored-in-localstorage-or-cookie</a></li>
 <li><a href="https://ja.developer.box.com/reference/post-oauth2-token/#response">https://ja.developer.box.com/reference/post-oauth2-token/#response</a></li>
@@ -8050,7 +8050,7 @@
 <span class="err">WWW-Authenticate: Bearer realm=&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p>認証の解除時は、Redis/DBでBearerトークンの状態を無効化する。またサーバーは、<code>401</code>ステータスでレスポンスを返信し、認証が解除される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/21978658/invalidating-json-web-tokens">https://stackoverflow.com/questions/21978658/invalidating-json-web-tokens</a></li>
 <li><a href="https://medium.com/devgorilla/how-to-log-out-when-using-jwt-a8c7823e8a6">https://medium.com/devgorilla/how-to-log-out-when-using-jwt-a8c7823e8a6</a></li>
@@ -8060,7 +8060,7 @@
 <span class="err">WWW-Authenticate: Basic realm=&quot;&lt;認証領域&gt;&quot;, charaset=&quot;UTF-8&quot;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_5">▼ 正常系/異常系レスポンス<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://qiita.com/h_tyokinuhata/items/ab8e0337085997be04b1">https://qiita.com/h_tyokinuhata/items/ab8e0337085997be04b1</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/h_tyokinuhata/items/ab8e0337085997be04b1">https://qiita.com/h_tyokinuhata/items/ab8e0337085997be04b1</a></p>
 <p>成功の場合は、realm属性を空にしたレスポンスを返信する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">200 OK</span>
@@ -8081,7 +8081,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="authorization">▼ <code>Authorization</code>ヘッダーのトークンのクライアント保持<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h4>
 <p>不便ではあるが、<code>Authorization</code>ヘッダーは<code>Cookie</code>ヘッダーとは異なり、ローカルマシンに保存できない。その代わり、ブラウザの設定によって、ブラウザのWebStorageでも保持できる。Chromeでは、LocalStorage/SessionStorageに保持される。LocalStorageはSessionStorageと比べて保存期間が長いため、XSSの危険性がより高い。これらの確認方法については、以下のリンクを参考にせよ</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.chrome.com/docs/devtools/storage/localstorage/">https://developer.chrome.com/docs/devtools/storage/localstorage/</a></li>
 <li><a href="https://developer.chrome.com/docs/devtools/storage/sessionstorage/">https://developer.chrome.com/docs/devtools/storage/sessionstorage/</a></li>
@@ -8179,7 +8179,7 @@
 <h4 id="_7">▼ 認証フェーズと認可フェーズ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p><img alt="sso" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/sso.jpg" /></p>
 <p>SSOには、認証フェーズと認可フェーズがあり、<code>3</code>個の役割が定義されている。</p>
-<p>参考：<a href="https://japan.zdnet.com/article/35126144/">https://japan.zdnet.com/article/35126144/</a></p>
+<p>ℹ️ 参考：<a href="https://japan.zdnet.com/article/35126144/">https://japan.zdnet.com/article/35126144/</a></p>
 <ol>
 <li>クライアントが、HTTPリクエストにIDとパスワードを設定してリクエスト。</li>
 <li>IdP：Identity Providerが、IDを『認証』し、クライアント側にアクセストークンを発行。</li>
@@ -8214,7 +8214,7 @@
 </table>
 <h4 id="_8">▼ ステータスコード<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>認証フェーズにて、誤ったトークンが発行されたことを表現したい場合、<code>401</code>ステータスを使用する。認可フェーズにて、正しいトークンが発行されたが、トークンの所有者に閲覧権限がないことを表現したい場合、<code>403</code>ステータスを使用する。ステータスコードについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <p><br></p>
 <h2 id="02-02-sso">02-02. SSOの種類<a class="headerlink" href="#02-02-sso" title="Permanent link">&para;</a></h2>
 <h3 id="oauth_1">OAuth認証<a class="headerlink" href="#oauth_1" title="Permanent link">&para;</a></h3>
@@ -8242,7 +8242,7 @@
 <tr>
 <td>認可サーバー</td>
 <td>リソースサーバーがリソースオーナーにアクセスできるトークンを作成する。</td>
-<td>認可サーバーがリダイレクト先のクライアントアプリケーションのURLをレスポンスに割り当てられるように、クライアントアプリケーションの開発者がURLを事前登録しておく必要がある。認可サーバーを利用する開発者用に、コンソール画面が用意されていることが多い。<br>参考：<a href="https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844">https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844</a></td>
+<td>認可サーバーがリダイレクト先のクライアントアプリケーションのURLをレスポンスに割り当てられるように、クライアントアプリケーションの開発者がURLを事前登録しておく必要がある。認可サーバーを利用する開発者用に、コンソール画面が用意されていることが多い。<br>ℹ️ 参考：<a href="https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844">https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844</a></td>
 </tr>
 <tr>
 <td>リソースサーバー</td>
@@ -8253,7 +8253,7 @@
 </table>
 <h4 id="_9">▼ 認可コードフローの場合<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>最も基本的な認可コードフローを説明する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kb.authlete.com/ja/s/oauth-and-openid-connect/a/how-to-choose-the-appropriate-oauth-2-flow">https://kb.authlete.com/ja/s/oauth-and-openid-connect/a/how-to-choose-the-appropriate-oauth-2-flow</a></li>
 <li><a href="https://qiita.com/TakahikoKawasaki/items/200951e5b5929f840a1f">https://qiita.com/TakahikoKawasaki/items/200951e5b5929f840a1f</a></li>
@@ -8394,7 +8394,7 @@
 </tbody>
 </table>
 <p>（６）Instagramは認可コードを照合し、アクセストークンを発行する。また、Facebookにリダイレクトできるように、<code>Location</code>ヘッダーにURLを割り当て、ブラウザにレスポンスを返信する。ブラウザからFacebookにレスポンスがリダイレクトされる。ブラウザはFacebookにリクエストを再送信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://boxil.jp/mag/a3207/">https://boxil.jp/mag/a3207/</a></li>
 <li><a href="https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844">https://qiita.com/TakahikoKawasaki/items/8567c80528da43c7e844</a></li>
@@ -8429,7 +8429,7 @@
 <p>OAuth認証では、認証スキーマとしてBearer認証が選択されることが多く、AWSやGitHubは、独自の認証スキームを使用している。なお、認可サーバーによって発行されたBearerトークンは、<code>Authorization</code>ヘッダー、リクエストボディ、クエリパラメータのいずれかに割り当てて送信できる。</p>
 <h4 id="_11">▼ 付与タイプ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>認可サーバーによるOAuth認証のトークンの付与方法には種類がある。</p>
-<p>参考：<a href="https://oauth.net/2/grant-types/">https://oauth.net/2/grant-types/</a></p>
+<p>ℹ️ 参考：<a href="https://oauth.net/2/grant-types/">https://oauth.net/2/grant-types/</a></p>
 <table>
 <thead>
 <tr>
@@ -8441,28 +8441,28 @@
 <tbody>
 <tr>
 <td>Authorization Code Grant</td>
-<td>アプリケーションが他のAPIにアクセスする場合に使用する。推奨されている。<br>参考：<a href="https://oauth.net/2/grant-types/authorization-code/">https://oauth.net/2/grant-types/authorization-code/</a></td>
+<td>アプリケーションが他のAPIにアクセスする場合に使用する。推奨されている。<br>ℹ️ 参考：<a href="https://oauth.net/2/grant-types/authorization-code/">https://oauth.net/2/grant-types/authorization-code/</a></td>
 <td>他のSNSアプリとのアカウント連携</td>
 </tr>
 <tr>
 <td>Client Credentials Grant</td>
-<td>推奨されている。<br>参考：<a href="https://oauth.net/2/grant-types/client-credentials/">https://oauth.net/2/grant-types/client-credentials/</a></td>
+<td>推奨されている。<br>ℹ️ 参考：<a href="https://oauth.net/2/grant-types/client-credentials/">https://oauth.net/2/grant-types/client-credentials/</a></td>
 <td></td>
 </tr>
 <tr>
 <td>Device Code</td>
-<td>推奨されている。<br>参考：<a href="https://oauth.net/2/grant-types/device-code/">https://oauth.net/2/grant-types/device-code/</a></td>
+<td>推奨されている。<br>ℹ️ 参考：<a href="https://oauth.net/2/grant-types/device-code/">https://oauth.net/2/grant-types/device-code/</a></td>
 <td></td>
 </tr>
 <tr>
 <td>Implicit Grant</td>
-<td>非推奨されている。<br>参考：<a href="https://oauth.net/2/grant-types/implicit/">https://oauth.net/2/grant-types/implicit/</a></td>
+<td>非推奨されている。<br>ℹ️ 参考：<a href="https://oauth.net/2/grant-types/implicit/">https://oauth.net/2/grant-types/implicit/</a></td>
 <td></td>
 </tr>
 <tr>
 <td>Password Grant</td>
-<td>ユーザー名とパスワードを照合し、トークンを付与する。非推奨されている。<br>参考：<br>・<a href="https://oauth.net/2/grant-types/password/">https://oauth.net/2/grant-types/password/</a><br>・<a href="https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant#the-oauth-20-password-grant">https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant#the-oauth-20-password-grant</a></td>
-<td>LaravelのPassword Grant Token機能は、Password Grantタイプを使用している。<br>参考：<a href="https://readouble.com/laravel/8.x/ja/passport.html#password-grant-tokens">https://readouble.com/laravel/8.x/ja/passport.html#password-grant-tokens</a></td>
+<td>ユーザー名とパスワードを照合し、トークンを付与する。非推奨されている。<br>ℹ️ 参考：<br>・<a href="https://oauth.net/2/grant-types/password/">https://oauth.net/2/grant-types/password/</a><br>・<a href="https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant#the-oauth-20-password-grant">https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant#the-oauth-20-password-grant</a></td>
+<td>LaravelのPassword Grant Token機能は、Password Grantタイプを使用している。<br>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/passport.html#password-grant-tokens">https://readouble.com/laravel/8.x/ja/passport.html#password-grant-tokens</a></td>
 </tr>
 </tbody>
 </table>
@@ -8480,7 +8480,7 @@
 <h2 id="03-jwtjson-web-token">03. JWT：JSON Web Token<a class="headerlink" href="#03-jwtjson-web-token" title="Permanent link">&para;</a></h2>
 <h3 id="jwt">JWTとは<a class="headerlink" href="#jwt" title="Permanent link">&para;</a></h3>
 <p>『ヘッダー』『ペイロード』『署名』のそれぞれのJSONデータをbase64方式によってエンコードし、ドットでつないだトークン。Bear認証やOauth認証のトークンとして使用できる。ランダムな文字列をこれら認証のトークンとするより、JWTを使用した方がより安全である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://meetup-jp.toast.com/3511">https://meetup-jp.toast.com/3511</a></li>
 <li><a href="https://dev.classmethod.jp/articles/json-signing-jws-jwt-usecase/">https://dev.classmethod.jp/articles/json-signing-jws-jwt-usecase/</a></li>
@@ -8496,7 +8496,7 @@
 <h3 id="jwt_1">JWTの作成<a class="headerlink" href="#jwt_1" title="Permanent link">&para;</a></h3>
 <h4 id="jwt_2">▼ JWT作成の全体像<a class="headerlink" href="#jwt_2" title="Permanent link">&para;</a></h4>
 <p>JWTは以下のサイトから取得できる。</p>
-<p>参考：<a href="https://jwt.io/">https://jwt.io/</a></p>
+<p>ℹ️ 参考：<a href="https://jwt.io/">https://jwt.io/</a></p>
 <p>JWTの作成時に、例えばJavaScriptであれば、以下のような処理が実行されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8581,7 +8581,7 @@
 <p><br></p>
 <h3 id="jwt_3">JWTのクライアント保持<a class="headerlink" href="#jwt_3" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ 保持方法と安全度の比較<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://qiita.com/Hiro-mi/items/18e00060a0f8654f49d6#%E6%97%A9%E8%A6%8B%E8%A1%A8">https://qiita.com/Hiro-mi/items/18e00060a0f8654f49d6#%E6%97%A9%E8%A6%8B%E8%A1%A8</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/Hiro-mi/items/18e00060a0f8654f49d6#%E6%97%A9%E8%A6%8B%E8%A1%A8">https://qiita.com/Hiro-mi/items/18e00060a0f8654f49d6#%E6%97%A9%E8%A6%8B%E8%A1%A8</a></p>
 <table>
 <thead>
 <tr>
@@ -8625,7 +8625,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

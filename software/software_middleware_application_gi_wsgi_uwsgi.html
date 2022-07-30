@@ -6590,14 +6590,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7132,7 +7132,7 @@
 <h1 id="uwsgi">uWSGI＠ミドルウェア<a class="headerlink" href="#uwsgi" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-uwsgi">01. uWSGIの仕組み<a class="headerlink" href="#01-uwsgi" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7140,7 +7140,7 @@
 <p><br></p>
 <h2 id="01-02">01-02. ユースケース<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="_3">リバースプロキシサーバーのミドルウェアとして<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://stackoverflow.com/questions/36475380/what-are-the-advantages-of-connecting-uwsgi-to-nginx-using-the-uwsgi-protocol">https://stackoverflow.com/questions/36475380/what-are-the-advantages-of-connecting-uwsgi-to-nginx-using-the-uwsgi-protocol</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/36475380/what-are-the-advantages-of-connecting-uwsgi-to-nginx-using-the-uwsgi-protocol">https://stackoverflow.com/questions/36475380/what-are-the-advantages-of-connecting-uwsgi-to-nginx-using-the-uwsgi-protocol</a></p>
 <p><img alt="uwsgi" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/uwsgi.png" /></p>
 <p><br></p>
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
@@ -7153,7 +7153,7 @@
 <h3 id="uwsgiini"><code>uwsgi.ini</code>ファイル<a class="headerlink" href="#uwsgiini" title="Permanent link">&para;</a></h3>
 <h4 id="uwsgiini_1">▼ <code>uwsgi.ini</code>ファイルとは<a class="headerlink" href="#uwsgiini_1" title="Permanent link">&para;</a></h4>
 <p>uWSGIの起動時の値を設定する。JSON形式やXML形式でも問題ない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html</a></li>
 <li><a href="https://qiita.com/11ohina017/items/da2ae5b039257752e558">https://qiita.com/11ohina017/items/da2ae5b039257752e558</a></li>
@@ -7257,7 +7257,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="callable">callable<a class="headerlink" href="#callable" title="Permanent link">&para;</a></h3>
 <p>アプリケーションのインスタンスの変数名を設定する。デフォルト値は、<code>application</code>である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://laplace-daemon.com/nginx-uwsgi-flask/">https://laplace-daemon.com/nginx-uwsgi-flask/</a></li>
 <li><a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#callable">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#callable</a></li>
@@ -7269,7 +7269,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="chdir">chdir<a class="headerlink" href="#chdir" title="Permanent link">&para;</a></h3>
 <p>作業ディレクトリから移動する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chdir">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chdir</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chdir">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chdir</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">chdir</span><span class="o">=</span><span class="s">/var/www/foo</span><span class="w"></span>
@@ -7277,14 +7277,14 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="chmod-socket">chmod-socket<a class="headerlink" href="#chmod-socket" title="Permanent link">&para;</a></h3>
 <p>UNIXドメインソケットファイルの権限を設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chmod-socket">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chmod-socket</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chmod-socket">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#chmod-socket</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">chmod-socket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">666</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="die-on-term">die-on-term<a class="headerlink" href="#die-on-term" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#die-on-term">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#die-on-term</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#die-on-term">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#die-on-term</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">die-on-term</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
@@ -7292,7 +7292,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="http">http<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
 <p>HTTPプロトコルを使用する場合に、受信するインバウンド通信のIPアドレスと、インバウンド通信を待ち受けるポート番号を設定する。Pythonアプリケーションをフレームワークで開発している場合は、フレームワークのデフォルトのポート番号を指定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#http">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#http</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#http">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#http</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0.0.0.0:5000</span><span class="w"></span>
@@ -7300,7 +7300,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="logto">logto<a class="headerlink" href="#logto" title="Permanent link">&para;</a></h3>
 <p>ログの出力先を設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#logto">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#logto</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#logto">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#logto</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">logto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/dev/stdout</span><span class="w"></span>
@@ -7308,7 +7308,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="master">master<a class="headerlink" href="#master" title="Permanent link">&para;</a></h3>
 <p>マスターモードで起動するか否かを設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#master">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#master</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#master">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#master</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">master</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
@@ -7316,21 +7316,21 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="modulewsgi">module、wsgi<a class="headerlink" href="#modulewsgi" title="Permanent link">&para;</a></h3>
 <p>Pythonでアプリケーションファクトリーパターンを採用している場合に、エントリーポイントのディレクトリ名とファクトリーメソッド名を設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#module-wsgi">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#module-wsgi</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#module-wsgi">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#module-wsgi</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">src:create_app()</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="processes">processes<a class="headerlink" href="#processes" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#processes">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#processes</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#processes">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#processes</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">processes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="py-autoreload">py-autoreload<a class="headerlink" href="#py-autoreload" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#py-autoreload">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#py-autoreload</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#py-autoreload">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#py-autoreload</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">py-autoreload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span><span class="w"></span>
@@ -7338,7 +7338,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="python-path">python-path<a class="headerlink" href="#python-path" title="Permanent link">&para;</a></h3>
 <p>アプリケーションのあるディレクトリを設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#python-path">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#python-path</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#python-path">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#python-path</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">python-path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/www/foo</span><span class="w"></span>
@@ -7346,7 +7346,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="socket">socket<a class="headerlink" href="#socket" title="Permanent link">&para;</a></h3>
 <p>UNIXドメインソケットを使用する場合に、ソケットファイルの作成場所と、インバウンド通信を待ち受けるポート番号を設定する。Pythonアプリケーションをフレームワークで開発している場合は、フレームワークのデフォルトのポート番号を指定する。</p>
-<p>参考： </p>
+<p>ℹ️ 参考： </p>
 <ul>
 <li><a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#socket">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#socket</a></li>
 <li><a href="https://qiita.com/koyoru1214/items/57461b920dfc11f67683">https://qiita.com/koyoru1214/items/57461b920dfc11f67683</a></li>
@@ -7358,7 +7358,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="vacuum">vacuum<a class="headerlink" href="#vacuum" title="Permanent link">&para;</a></h3>
 <p>uwsgiプロセス終了時にソケットファイルを削除するか否かを設定する。</p>
-<p>参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#vacuum">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#vacuum</a></p>
+<p>ℹ️ 参考：<a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#vacuum">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#vacuum</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">[uwsgi]</span><span class="w"></span>
 <span class="na">vacuum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">true</span><span class="w"></span>
@@ -7366,7 +7366,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
 <p><br></p>
 <h3 id="wsgi-file">wsgi-file<a class="headerlink" href="#wsgi-file" title="Permanent link">&para;</a></h3>
 <p>エントリーポイントとするファイルを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#wsgi-file">https://uwsgijapanese.readthedocs.io/ja/latest/Options.html#wsgi-file</a></li>
 <li><a href="https://django.kurodigi.com/uwsgi-basic/">https://django.kurodigi.com/uwsgi-basic/</a></li>
@@ -7381,7 +7381,7 @@ spawned uWSGI http <span class="m">1</span> <span class="o">(</span>pid: <span c
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

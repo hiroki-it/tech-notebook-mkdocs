@@ -6662,14 +6662,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7276,11 +7276,11 @@
 <h1 id="_1">ドメイン駆動設計＠アーキテクチャ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ドメイン駆動設計とは<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>オブジェクト指向分析設計から派生した分析設計の手法の一種。オブジェクト指向分析設計をより強化するために考案され、特にバックエンドに有効である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html</a></li>
 <li><a href="https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88">https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E9%A7%86%E5%8B%95%E8%A8%AD%E8%A8%88</a></li>
@@ -7290,7 +7290,7 @@
 <h3 id="_3">戦略的設計の手順例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p><img alt="ddd_strategic_design_flow" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ddd_strategic_design_flow.png" /></p>
 <p>戦略的設計では、ドメイン全体から境界付けられたコンテキストを明確にする。</p>
-<p>参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
 <ol>
 <li>ドメインエキスパートと話し合い、ドメイン全体の中からコアドメインとサブドメインを切り分ける。</li>
 <li>ドメインエキスパートの部署や業務フローの立ち位置によっては、同じ『単語』や『動詞』であっても、意味合い/定義づけが異なる場合がある。この時、それぞれを別々の名前からなるユビキタス言語として定義づける。</li>
@@ -7308,21 +7308,21 @@
 <li>アーキテクチャ（レイヤード型、ヘキサゴナル型、オニオン型、クリーンアーキテクチャ）を決め、クラス図を元にドメイン層を実装する。</li>
 <li>運用後に問題が発生した場合、特にオブジェクト図とドメインモデル図を修正する。場合によっては、デザインパターンに切り分ける。</li>
 </ol>
-<p>参考：<a href="https://booth.pm/ja/items/3363104">https://booth.pm/ja/items/3363104</a></p>
+<p>ℹ️ 参考：<a href="https://booth.pm/ja/items/3363104">https://booth.pm/ja/items/3363104</a></p>
 <p><br></p>
 <h2 id="03">03. 戦略的設計<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_5">ドメイン<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ ドメインとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>ビジネスモデル全体で見た時に、ソフトウェア化の対象となる業務領域のこと。業務領域の細分化は小さいほど良い。業務領域を細分化する上で境目を見分ける方法として、会社の組織図から、部署ごとに担当する業務の種類を確認すると良い。また、ビジネスモデルの一連の業務フローの中で、業務の担当者の属性が変化するタイミングに着目すると良い。担当者が変われば、コールセンター部（電話対応業務、顧客管理業務）、法人営業部（受注業務）、マーケティング部（ユーザー集客業務、広告運用業務）、管理部（会計業務、財務業務、採用業務）、というように業務をより小さな単位で抽出できるはずである。この時の注意点として、業務領域は、ToBやToCに関わらないことにより、ある。例えば、ToCなドメインとしては、マーケーティング部による業務（ユーザー集客業務、広告運用業務）がある。</p>
-<p>参考：<a href="https://github.com/little-hands/ddd-q-and-a/issues/191">https://github.com/little-hands/ddd-q-and-a/issues/191</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/little-hands/ddd-q-and-a/issues/191">https://github.com/little-hands/ddd-q-and-a/issues/191</a></p>
 <p><strong>＊例＊</strong></p>
 <p>インターネット広告代理店の例。ビジネスモデルに基づく複数のドメインを以下に示す。業務フローの担当者の変化として、まず問い合わせで注文を受けて広告アカウントを作成する『営業担当者』、制作した広告をアカウントに入稿する『制作担当者』、入稿された広告を運用して広告効果を高める『マーケティング担当者』、最後に広告の依頼者に料金を請求する『経理担当者』が挙げられる。これにより、インターネット広告代理店のビジネスモデルは、各担当者に対応するドメインに分割できる。</p>
-<p>参考：<a href="https://labs.septeni.co.jp/entry/2021/04/15/130000">https://labs.septeni.co.jp/entry/2021/04/15/130000</a></p>
+<p>ℹ️ 参考：<a href="https://labs.septeni.co.jp/entry/2021/04/15/130000">https://labs.septeni.co.jp/entry/2021/04/15/130000</a></p>
 <p><img alt="internet_advertising_agency_domain" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/internet_advertising_agency_domain.png" /></p>
 <p><strong>＊例＊</strong></p>
 <p><img alt="hacogym_business_model" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/hacogym_business_model.png" /></p>
 <p>完全個室ジムを運営するハコジムの例。ビジネスモデルに基づく複数のドメインを以下に示す。業務フローの担当者の変化として、まず個室ジムに適する物件を探す『物件担当者』、ジムのトレーナーを採用して会員に紹介する『採用担当者』、個室ジムの利用会員を獲得する『営業担当者』が挙げられる。これにより、ハコジムのビジネスモデルは、各担当者に対応するドメインに分割できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hacogym.jp/">https://hacogym.jp/</a></li>
 <li><a href="https://zenn.dev/hsshss/articles/e11efefc7011ab">https://zenn.dev/hsshss/articles/e11efefc7011ab</a></li>
@@ -7332,7 +7332,7 @@
 <h3 id="_7">コアドメイン、サブドメイン、ドメインエキスパート<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ コアドメイン、サブドメイン、ドメインエキスパートとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>各ドメインのドメインエキスパートと、エンジニアが話し合いながら、ドメイン内の主要業務をコアドメイン、補助的な業務をサブドメインに分類する。コアドメインやサブドメインに相当する業務に詳しい人（アプリケーションの利用者本人、利用者の関心に詳しい人）がドメインエキスパートになることが多い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></li>
 <li><a href="https://labs.septeni.co.jp/entry/2021/04/15/130000">https://labs.septeni.co.jp/entry/2021/04/15/130000</a></li>
@@ -7341,7 +7341,7 @@
 <h4 id="_9">▼ 記法<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>完全個室ジムを運営するハコジムの例。ドメインのうちで、個室ジムドメインに基づくコアドメインとサブドメインを以下に示す。コアドメインは予約ドメイン、それ以外はサブドメインとしている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hacogym.jp/">https://hacogym.jp/</a></li>
 <li><a href="https://zenn.dev/hsshss/articles/e11efefc7011ab">https://zenn.dev/hsshss/articles/e11efefc7011ab</a></li>
@@ -7349,12 +7349,12 @@
 <p><img alt="hacogym_subdomain" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/hacogym_subdomain.png" /></p>
 <p><strong>＊例＊</strong></p>
 <p>ECサイトを運営するアスクルの例。ドメインのうちで、個人向け販売ドメイン（サイト名はLOHACO）に基づくサブドメインを以下に示す。配送/注文/商品/ユーザ管理/在庫/受注をそれぞれサブドメインとしている（コアドメインは明言されていない）。</p>
-<p>参考：<a href="https://speakerdeck.com/askul/ddd-and-clean-architecture-at-lohaco?slide=28">https://speakerdeck.com/askul/ddd-and-clean-architecture-at-lohaco?slide=28</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/askul/ddd-and-clean-architecture-at-lohaco?slide=28">https://speakerdeck.com/askul/ddd-and-clean-architecture-at-lohaco?slide=28</a></p>
 <p><br></p>
 <h3 id="_10">ユビキタス言語<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">▼ ユビキタス言語とは<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>ドメインエキスパート間で、特定の『単語』や『動詞』の意味合い/定義づけが異なる場合、これを別々の名前からなるユビキタス言語として定義づける。</p>
-<p>参考：<a href="https://qiita.com/kmdsbng/items/bf415afbeec239a7fd63">https://qiita.com/kmdsbng/items/bf415afbeec239a7fd63</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/kmdsbng/items/bf415afbeec239a7fd63">https://qiita.com/kmdsbng/items/bf415afbeec239a7fd63</a></p>
 <p><img alt="domain-model" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/domain-model.png" /></p>
 <p><br></p>
 <h3 id="_12">境界付けられたコンテキスト<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -7363,11 +7363,11 @@
 <h4 id="_14">▼ 記法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>本を販売するECサイトの例。コアドメインとサブドメインに基づいたユビキタス言語と境界付けられたコンテキストを以下に示す。バイヤー（仕入れ）部、マーケティング部、在庫管理部のドメインエキスパートは、『本（商品）』という単語に対する意味合い/定義づけが異なる。そのため、それぞれを『本』『クーポン』『在庫』というユビキタス言語として定義でき、モデル名/データ名はそれぞれのユビキタス言語に合わせた名前になる。例えば、マーケの境界付けられたコンテキストでは、モデル名はCouponとなり、割引期間データを保持する必要があるが、仕入部や在庫部ではこのデータは不要である。一方、ISBNは全ての境界付けられたコンテキストのモデルに必要なデータである。境界付けられたコンテキストを定義しない場合、1つの商品モデルが全てのデータを保持することとなり、それぞれのドメインエキスパートが関心を持たないデータも保持することになってしまう。</p>
-<p>参考：<a href="https://kenta-kosugi.medium.com/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E4%B8%8A%E6%89%8B%E3%81%AA%E5%88%86%E5%89%B2-ff5bb01d1062">https://kenta-kosugi.medium.com/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E4%B8%8A%E6%89%8B%E3%81%AA%E5%88%86%E5%89%B2-ff5bb01d1062</a></p>
+<p>ℹ️ 参考：<a href="https://kenta-kosugi.medium.com/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E4%B8%8A%E6%89%8B%E3%81%AA%E5%88%86%E5%89%B2-ff5bb01d1062">https://kenta-kosugi.medium.com/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E4%B8%8A%E6%89%8B%E3%81%AA%E5%88%86%E5%89%B2-ff5bb01d1062</a></p>
 <p><img alt="book_ec_ubiquitous_language" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/book_ec_ubiquitous_language.png" /></p>
 <p><strong>＊例＊</strong></p>
 <p>完全個室ジムを運営するハコジムの例。個室ジムドメインのコアドメインとサブドメインに基づく境界付けられたコンテキスト。認証コンテキスト、予約コンテキスト、顧客管理コンテキスト、銀行支払いコンテキスト、クレジットカード支払いコンテキストがある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hacogym.jp/">https://hacogym.jp/</a></li>
 <li><a href="https://zenn.dev/hsshss/articles/e11efefc7011ab">https://zenn.dev/hsshss/articles/e11efefc7011ab</a></li>
@@ -7375,7 +7375,7 @@
 <p><img alt="hacogym_bounded-context" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/hacogym_bounded-context.png" /></p>
 <p><strong>＊例＊</strong></p>
 <p>契約請求管理アプリケーションを提供するアルプの例。コアドメインとサブドメインに基づいたユビキタス言語と境界付けられたコンテキストを以下に示す。契約管理コンテキスト、商品管理コンテキスト、請求管理コンテキスト、がある。取り組みとして、週次でユビキタス言語の更新を行っている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://note.com/alpinc/n/nab47ab9273c6">https://note.com/alpinc/n/nab47ab9273c6</a></li>
 <li><a href="https://thealp.co.jp/">https://thealp.co.jp/</a></li>
@@ -7385,7 +7385,7 @@
 <h3 id="_15">コンテキストマップ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ コンテキストマップとは<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>広義のドメイン全体の俯瞰する図のこと。コアドメイン、サブドメイン、境界付けられたコンテキストを定義した後、これらの関係性を視覚化する。異なるサブドメインの間で異なるユビキタス言語を使用する場合、境界付けられたコンテキストはサブドメインをまたがない。一方で、同じユビキタス言語を使用する場合、境界付けられたコンテキストは複数のサブドメインにまたがる。できる限り、各境界付けられたコンテキストでは異なるユビキタス言語を使用して、境界付けられたコンテキストが複数のサブドメインにまたがないようにした方が良い（これ重要）。コアドメインのソフトウェアは内製である必要があるが、サブドメインのソフトウェアは外製/内製のいずれでも問題ない。必要であれば、他の業務系SaaS（例：マネーフォワード、サイボウズ、など）にドメインロジックを委譲し、これのAPIをコールしてデータを取得するような設計でもよい。</p>
-<p>参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
 <p><img alt="context-map" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/context-map.png" /></p>
 <h4 id="_17">▼ 記法<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
@@ -7404,14 +7404,14 @@
 <h3 id="ddd">DDDアーキテクチャ<a class="headerlink" href="#ddd" title="Permanent link">&para;</a></h3>
 <h4 id="_18">▼ レイヤードアーキテクチャ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>最初に考案された実現方法。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/4798121967">https://www.amazon.co.jp/dp/4798121967</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/4798121967">https://www.amazon.co.jp/dp/4798121967</a></p>
 <p><img alt="layered-architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/layered-architecture.png" /></p>
 <h4 id="_19">▼ ヘキサゴナルアーキテクチャ<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>別名『ポートアンドアダプターアーキテクチャ』という。レイヤードアーキテクチャのインフラストラクチャ層に対して、依存性逆転を組み込んだもの。ドメイン層のオブジェクトは、ドメイン層の他のオブジェクトに依存する以外、何のオブジェクトにも外部パッケージにも依存しない。逆に考えれば、これらに依存するものはドメイン層に配置するべきではないと判断できる。本質的には、他の『オニオンアーキテクチャ』『クリーンアーキテクチャ』に同じである。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/B00UX9VJGW/ref=cm_sw_r_tw_dp_S20HJ24MHWTSED7T0ZCP">https://www.amazon.co.jp/dp/B00UX9VJGW/ref=cm_sw_r_tw_dp_S20HJ24MHWTSED7T0ZCP</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/B00UX9VJGW/ref=cm_sw_r_tw_dp_S20HJ24MHWTSED7T0ZCP">https://www.amazon.co.jp/dp/B00UX9VJGW/ref=cm_sw_r_tw_dp_S20HJ24MHWTSED7T0ZCP</a></p>
 <h4 id="_20">▼ オニオンアーキテクチャ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>レイヤードアーキテクチャのインフラストラクチャ層に対して、依存性逆転を組み込んだもの。ドメイン層のオブジェクトは、ドメイン層の他のオブジェクトに依存する以外、何のオブジェクトにも外部パッケージにも依存しない。逆に考えれば、これらに依存するものはドメイン層に配置するべきではないと判断できる。本質的には、他の『ヘキサゴナルアーキテクチャ』『クリーンアーキテクチャ』に同じである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/">https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/</a></li>
 <li><a href="https://little-hands.hatenablog.com/entry/2017/10/11/075634">https://little-hands.hatenablog.com/entry/2017/10/11/075634</a></li>
@@ -7419,28 +7419,28 @@
 <p><img alt="onion-architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/onion-architecture.png" /></p>
 <h4 id="_21">▼ クリーンアーキテクチャ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>レイヤードアーキテクチャのインフラストラクチャ層に対して、依存性逆転を組み込んだもの。ドメイン層のオブジェクトは、ドメイン層の他のオブジェクトに依存する以外、何のオブジェクトにも外部パッケージにも依存しない。逆に考えれば、これらに依存するものはドメイン層に配置するべきではないと判断できる。本質的には、他の『ヘキサゴナルアーキテクチャ』『オニオンアーキテクチャ』に同じである。</p>
-<p>参考：<a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html</a></p>
+<p>ℹ️ 参考：<a href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html</a></p>
 <p><img alt="clean-architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/clean-architecture.jpeg" /></p>
 <p><br></p>
 <h3 id="ddd_1">DDDデザインパターン<a class="headerlink" href="#ddd_1" title="Permanent link">&para;</a></h3>
 <h4 id="ddd_2">▼ DDDデザインパターン集<a class="headerlink" href="#ddd_2" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/DDDEssence/chap1.html</a></p>
 <p><br></p>
 <h3 id="_22">ドメインモデル図<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <h4 id="_23">▼ ドメインモデル図とは<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>基本的にオブジェクト指向分析設計では、分析のためにユースケース図やオブジェクト図を作成し、その後に設計のためにクラス図やシーケンス図を作成する。一方でドメイン駆動設計の分析では、オブジェクトの具体化のためにユースケース図やオブジェクト図でオブジェクトを作成し、抽象化のためにドメインモデル図も作成する。この『具体例から抽象を導く』という作業により、オブジェクト思考分析よりも現実に沿ったモデリングが可能になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://booth.pm/ja/items/3363104">https://booth.pm/ja/items/3363104</a></li>
 <li><a href="https://qiita.com/little_hand_s/items/dfa4b156f533ba1a1491">https://qiita.com/little_hand_s/items/dfa4b156f533ba1a1491</a></li>
 </ul>
 <h4 id="_24">▼ コアドメイン/サブドメインのモデリング<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>ドメインモデル図を基に、コアドメイン/サブドメインのモデリングを行う。</p>
-<p>参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4">https://qiita.com/crossroad0201/items/875c5f76ed3794ed56c4</a></p>
 <p><img alt="core-domain_sub-domain_bounded-context_modeling" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/core-domain_sub-domain_bounded-context_modeling.png" /></p>
 <h4 id="_25">▼ 記法<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>クラス図と同様にして、オブジェクト図のインスタンス間の関係性を参考にして、ドメインモデル間の関係性を設定する。オブジェクト間がIDのみを使用する関係であれば『点線矢印』とし、またオブジェクト全体を使用する関係であれば『白塗りの菱形』とする（記号の表記方法は個人差がある）。この時、点線矢印の関係性であれば異なる集約に属し、また白塗りの菱形であれば同じ集約に属しているため、これらから集約の境界を設定する。インスタンス間のリンク記号数を参考にして、多重度を付記する。ビジネスルール/制約を吹き出しに書き込むことにより、ソフトウェアの構造だけでなくビジネスルール/制約も表現する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://booth.pm/ja/items/3363104">https://booth.pm/ja/items/3363104</a></li>
 <li><a href="https://www.eureka-moments-blog.com/entry/2018/12/29/145802">https://www.eureka-moments-blog.com/entry/2018/12/29/145802</a></li>
@@ -7448,7 +7448,7 @@
 </ul>
 <p><strong>＊例＊</strong></p>
 <p>とある映画チケット料金を題材に、ハッシュタグチケット料金モデリングとして、色々な方がユースケース図とドメインモデル図を作成されている。いずれの方も非常に参考になる（モデリングは難しい）。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://cinemacity.co.jp/ticket/">https://cinemacity.co.jp/ticket/</a></li>
 <li><a href="https://twitter.com/little_hand_s/status/1150763962062913536?lang=ar">https://twitter.com/little_hand_s/status/1150763962062913536?lang=ar</a></li>
@@ -7619,7 +7619,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

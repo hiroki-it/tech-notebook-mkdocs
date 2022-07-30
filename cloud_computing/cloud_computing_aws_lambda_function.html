@@ -6661,14 +6661,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7276,17 +7276,17 @@
 <h1 id="lambdaaws">Lambda関数の実装＠AWS<a class="headerlink" href="#lambdaaws" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ハンドラ関数<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">ハンドラ関数とは<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>自身から起動することはなく、外部から要求されて実行される関数のこと。</p>
-<p>参考：<a href="https://garop.com/36/">https://garop.com/36/</a></p>
+<p>ℹ️ 参考：<a href="https://garop.com/36/">https://garop.com/36/</a></p>
 <p><br></p>
 <h3 id="lambda">Lambdaハンドラ関数<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
 <h4 id="async-handlers">▼ 非同期ハンドラ関数（Async handlers）<a class="headerlink" href="#async-handlers" title="Permanent link">&para;</a></h4>
 <p>Lambdaはハンドラ関数を非同期関数としてコールし、引数のオブジェクト（event）に値をわたす。ハンドラ関数の初期名は<code>handler</code>メソッドであるが別名でも良い。<code>return</code>または<code>throw</code>を使用して、Lambdaのコール元にレスポンスを送信する。レスポンスとして、Promiseオブジェクトを送信もできる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-async">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-async</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-async">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-async</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>Node.jsの場合を示す。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7347,7 +7347,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="non-async-handlers">▼ 同期ハンドラ関数（Non-async handlers）<a class="headerlink" href="#non-async-handlers" title="Permanent link">&para;</a></h4>
 <p>Lambdaはハンドラ関数を同期関数としてコールし、引数（eventオブジェクト、contextオブジェクト、callback関数）に値をわたす。このオブジェクトにはメソッドとプロパティを持つ。ハンドラ関数の初期名は<code>handler</code>であるが別名でも良い。<code>callback</code>メソッドを使用して、Lambdaのコール元にPromiseオブジェクトのレスポンスを送信する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-sync">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-sync</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-sync">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html#nodejs-handler-sync</a></p>
 <p>（※『Non』が翻訳をおかしくしているため、英語版を推奨）</p>
 <p><strong>＊実装例＊</strong></p>
 <p>Node.jsの場合を示す。レスポンスを返信するには、<code>done</code>メソッド、<code>succeed</code>メソッド、<code>callback</code>メソッドが必要である。また、処理を終える場合は<code>return</code>で返却する必要がある。</p>
@@ -7424,24 +7424,24 @@
 <tr>
 <td>eventオブジェクト</td>
 <td>HTTPリクエストに関するデータが代入されている。</td>
-<td>Lambdaにリクエストを送信するAWSリソースごとに、オブジェクトの構造が異なる。構造は以下の通り。<br>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html</a></td>
+<td>Lambdaにリクエストを送信するAWSリソースごとに、オブジェクトの構造が異なる。構造は以下の通り。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html">https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html</a></td>
 </tr>
 <tr>
 <td>contextオブジェクト</td>
 <td>Lambdaに関するデータ（名前、バージョンなど）を取得できるメソッドとプロパティが代入されている。</td>
-<td>オブジェクトの構造は以下の通り<br>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html</a></td>
+<td>オブジェクトの構造は以下の通り<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html</a></td>
 </tr>
 <tr>
 <td>callback関数</td>
 <td>代入されている関数の実体は不明である。全ての処理が終わるまで実行が待機され、Lambdaのコール元にレスポンスを送信する。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html">https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="_4">▼ テストとデバッグ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Lambdaで関数を作成すると、CloudWatchログのロググループに、『<code>/aws/lambda/&lt;関数名&gt;</code>』というグループが自動的に作成される。Lambdaの関数内で発生したエラーや<code>console.log</code>メソッドのログはここに出力されるため、都度確認すること。</p>
 <h4 id="_5">▼ ベストプラクティス<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-code">https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-code</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-code">https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-code</a></p>
 <p><br></p>
 <h2 id="02-go">02. Goによる実装<a class="headerlink" href="#02-go" title="Permanent link">&para;</a></h2>
 <h3 id="aws-lambda-go">aws-lambda-go<a class="headerlink" href="#aws-lambda-go" title="Permanent link">&para;</a></h3>
@@ -7449,7 +7449,7 @@
 <p>Goを使用して、Lambda-APIに対してリクエストを送信し、AWSリソースを操作できる。</p>
 <h4 id="start">▼ <code>Start</code>関数<a class="headerlink" href="#start" title="Permanent link">&para;</a></h4>
 <p>Lamda関数を実行するための関数。<code>Start</code>関数に渡すパラメーターには、必ず1つでもerrorインターフェースの実装が含まれている必要がある。もし含まれていない場合は、Lambdaで内部エラーが起こる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7494,11 +7494,11 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_6">▼ パラメータ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>contextオブジェクトとeventオブジェクトをパラメーターとして使用できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-context.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-context.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-context.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-context.html</a></p>
 <p><br></p>
 <h3 id="event">eventオブジェクトの種類<a class="headerlink" href="#event" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 全種類<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://github.com/aws/aws-lambda-go/tree/master/events#overview">https://github.com/aws/aws-lambda-go/tree/master/events#overview</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/aws-lambda-go/tree/master/events#overview">https://github.com/aws/aws-lambda-go/tree/master/events#overview</a></p>
 <h4 id="sns">▼ SNSイベントの場合<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7626,14 +7626,14 @@
 <h3 id="_8">レスポンス<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ 正常系<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>正常系レスポンスの構成要素については以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_ResponseElements">https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_ResponseElements</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_ResponseElements">https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_ResponseElements</a></p>
 <p>文字列を返却すると、Lambdaはその文字列をそのまま返信する。また、JSONをレスポンスもできる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-structs">https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-structs</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-structs">https://docs.aws.amazon.com/lambda/latest/dg/golang-handler.html#golang-handler-structs</a></p>
 <h4 id="_10">▼ 異常系<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>Lambdaのエラーレスポンスのステータスコードについては以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_Errors">https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_Errors</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_Errors">https://docs.aws.amazon.com/lambda/latest/dg/API_Invoke.html#API_Invoke_Errors</a></p>
 <p>エラーレスポンスのメッセージボディには以下のJSONが割り当てられる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-exceptions.html#go-exceptions-createfunction">https://docs.aws.amazon.com/lambda/latest/dg/golang-exceptions.html#go-exceptions-createfunction</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-exceptions.html#go-exceptions-createfunction">https://docs.aws.amazon.com/lambda/latest/dg/golang-exceptions.html#go-exceptions-createfunction</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7720,11 +7720,11 @@
 </table>
 <h4 id="_13">▼ ログの出力方法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>標準パッケージの<code>fmt</code>、または任意のロギングパッケージを使用して、標準出力/標準エラー出力に出力する。CloudWatchログにてこれを確認する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-logging.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-logging.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/golang-logging.html">https://docs.aws.amazon.com/lambda/latest/dg/golang-logging.html</a></p>
 <p><br></p>
 <h2 id="02-02">02-02. 関数例<a class="headerlink" href="#02-02" title="Permanent link">&para;</a></h2>
 <h3 id="amplify-eventbridge-lambda-slack-api">Amplify -&gt; EventBridge -&gt; Lambda -&gt;Slack-API<a class="headerlink" href="#amplify-eventbridge-lambda-slack-api" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://github.com/hiroki-it/notify-slack-of-amplify-events">https://github.com/hiroki-it/notify-slack-of-amplify-events</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/hiroki-it/notify-slack-of-amplify-events">https://github.com/hiroki-it/notify-slack-of-amplify-events</a></p>
 <p><br></p>
 <h2 id="03-nodejs">03. Node.jsによる実装<a class="headerlink" href="#03-nodejs" title="Permanent link">&para;</a></h2>
 <h3 id="_14">デフォルトで使用できるパッケージ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -7741,12 +7741,12 @@
 <tr>
 <td>Node.jsの標準パッケージ</td>
 <td>Node.jsにデフォルトで組み込まれている関数を使用できる</td>
-<td>参考：<a href="https://nodejs.org/api/index.html">https://nodejs.org/api/index.html</a></td>
+<td>ℹ️ 参考：<a href="https://nodejs.org/api/index.html">https://nodejs.org/api/index.html</a></td>
 </tr>
 <tr>
 <td>aws-sdk.js</td>
 <td>JavaScriptを使用して、AWS-APIに対してリクエストを送信し、AWSリソースを操作できる。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html">https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html">https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -7755,7 +7755,7 @@
 <h4 id="nodejs">▼ Node.jsの標準パッケージの場合<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h4>
 <h4 id="aws-sdkjs">▼ aws-sdk.jsの場合<a class="headerlink" href="#aws-sdkjs" title="Permanent link">&para;</a></h4>
 <p>各AWSオブジェクトのメソッドの後に、<code>promise</code>メソッドをチェーンできる。これにより、各メソッドの非同期処理の状態をPromiseオブジェクトで管理できるようになる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-promises.html">https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-promises.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-promises.html">https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-promises.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7809,7 +7809,7 @@
 <h3 id="amplify-eventbridge-lambda-slack-api_1">Amplify -&gt; EventBridge -&gt; Lambda -&gt;  Slack-API<a class="headerlink" href="#amplify-eventbridge-lambda-slack-api_1" title="Permanent link">&para;</a></h3>
 <p><strong>＊実装例＊</strong></p>
 <p>AmplifyのイベントをEventBridgeでキャッチし、これをLambdaに転送する。Lambdaでは、メッセージを構成し、Slack-APIに送信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/38533580/nodejs-how-to-promisify-http-request-reject-got-called-two-times">https://stackoverflow.com/questions/38533580/nodejs-how-to-promisify-http-request-reject-got-called-two-times</a></li>
 <li><a href="https://gist.github.com/ktheory/df3440b01d4b9d3197180d5254d7fb65#file-httppromise-js">https://gist.github.com/ktheory/df3440b01d4b9d3197180d5254d7fb65#file-httppromise-js</a></li>
@@ -8321,7 +8321,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-18</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

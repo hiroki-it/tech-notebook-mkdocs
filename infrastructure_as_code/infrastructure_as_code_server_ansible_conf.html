@@ -6823,14 +6823,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7598,17 +7598,17 @@
 <h1 id="ansible">設定ファイル＠Ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-ansible">01. Ansibleの仕組み<a class="headerlink" href="#01-ansible" title="Permanent link">&para;</a></h2>
 <p>コントロールノードと管理対象ノードから構成される。コントロールノードに相当するデプロイサーバーにはAnsibleがインストールされている。もし、ローカルマシンでansibleコマンドを実行する場合は、ローカルマシンがコントロールノードに相当する。また、管理対象ノードとしてサーバーには実際のアプリケーションもデプロイされる。デプロイサーバー上のAnsibleは、管理対象ノードのサーバーにSSH接続を実行し、設定ファイルに基づいたプロビジョニングを実行する。設定ファイルの実装の変更によって、プロセスの再起動を伴うプロビジョニングが実行される場合、ダウンタイムを考慮する必要がある。</p>
-<p>参考：<a href="https://www.softek.co.jp/SID/support/ansible/guide/install-ansible-control-node.html">https://www.softek.co.jp/SID/support/ansible/guide/install-ansible-control-node.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.softek.co.jp/SID/support/ansible/guide/install-ansible-control-node.html">https://www.softek.co.jp/SID/support/ansible/guide/install-ansible-control-node.html</a></p>
 <p><img alt="ansible" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ansible.png" /></p>
 <p><br></p>
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_2">インストール<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="apt">▼ aptリポジトリから<a class="headerlink" href="#apt" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter4#ansible-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter4#ansible-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter4#ansible-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter4#ansible-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ sudo apt -y install sshpass
@@ -7618,7 +7618,7 @@ $ pip3 install ansible
 <p><br></p>
 <h2 id="04">04. 設計ポリシー<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_3">ディレクトリ構成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html">https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html</a></li>
 <li><a href="https://qiita.com/makaaso-tech/items/0375081c1600b312e8b0">https://qiita.com/makaaso-tech/items/0375081c1600b312e8b0</a></li>
@@ -7688,13 +7688,13 @@ $ pip3 install ansible
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_4">命名規則<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="http://tdoc.info/blog/2014/10/09/ansible_coding.html">http://tdoc.info/blog/2014/10/09/ansible_coding.html</a></p>
+<p>ℹ️ 参考：<a href="http://tdoc.info/blog/2014/10/09/ansible_coding.html">http://tdoc.info/blog/2014/10/09/ansible_coding.html</a></p>
 <p><br></p>
 <h2 id="05">05. 設定ファイルの種類<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="playbook">playbookファイル<a class="headerlink" href="#playbook" title="Permanent link">&para;</a></h3>
 <h4 id="playbook_1">▼ playbookファイルとは<a class="headerlink" href="#playbook_1" title="Permanent link">&para;</a></h4>
 <p>サーバーのセットアップ処理を設定する。実装の種類別に、<code>roles</code>ディレクトリに切り分けても良い。</p>
-<p>参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#%E3%83%97%E3%83%AC%E3%82%A4%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E3%81%AF">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#%E3%83%97%E3%83%AC%E3%82%A4%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E3%81%AF</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#%E3%83%97%E3%83%AC%E3%82%A4%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E3%81%AF">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#%E3%83%97%E3%83%AC%E3%82%A4%E3%83%96%E3%83%83%E3%82%AF%E3%81%A8%E3%81%AF</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>appサーバー、dbサーバー、webサーバーをセットアップする。各コンポーネントは<code>roles</code>ディレクトリに切り分けている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7749,7 +7749,7 @@ $ pip3 install ansible
 <h3 id="roles">rolesディレクトリ<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h3>
 <h4 id="roles_1">▼ rolesディレクトリとは<a class="headerlink" href="#roles_1" title="Permanent link">&para;</a></h4>
 <p>特定の機能に関するタスクが設定されたファイルを配置する。<code>playbook.yml</code>ファイルを切り分けるために使用する。</p>
-<p>参考：<a href="https://ansible-workbook.readthedocs.io/ja/latest/role/role.html">https://ansible-workbook.readthedocs.io/ja/latest/role/role.html</a></p>
+<p>ℹ️ 参考：<a href="https://ansible-workbook.readthedocs.io/ja/latest/role/role.html">https://ansible-workbook.readthedocs.io/ja/latest/role/role.html</a></p>
 <h4 id="task">▼ taskディレクトリ<a class="headerlink" href="#task" title="Permanent link">&para;</a></h4>
 <p>playbookファイルから切り分けたセットアップ処理が設定されたtaskファイルを配置する。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -7874,7 +7874,7 @@ $ pip3 install ansible
 <h3 id="group_vars">group_varsディレクトリ<a class="headerlink" href="#group_vars" title="Permanent link">&para;</a></h3>
 <h4 id="group_vars_1">▼ group_varsディレクトリとは<a class="headerlink" href="#group_vars_1" title="Permanent link">&para;</a></h4>
 <p>複数の管理対象ノードで使用する変数に関するファイルやディレクトリを配置する。<code>inventories</code>ディレクトリと同じ階層に配置し、また<code>inventory</code>ファイルで設定したグループ名やホスト名と同じ名前にする必要がある。自動的に読み込まれ、<code>playbook</code>ファイルや<code>inventory</code>ファイルで出力できる。</p>
-<p>参考：<a href="https://qiita.com/WisteriaWave/items/0e5dda7ddc13b22188c7#215-%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%A4%89%E6%95%B0%E3%83%9B%E3%82%B9%E3%83%88%E5%A4%89%E6%95%B0%E3%81%AE%E5%A4%96%E5%87%BA%E3%81%97">https://qiita.com/WisteriaWave/items/0e5dda7ddc13b22188c7#215-%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%A4%89%E6%95%B0%E3%83%9B%E3%82%B9%E3%83%88%E5%A4%89%E6%95%B0%E3%81%AE%E5%A4%96%E5%87%BA%E3%81%97</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/WisteriaWave/items/0e5dda7ddc13b22188c7#215-%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%A4%89%E6%95%B0%E3%83%9B%E3%82%B9%E3%83%88%E5%A4%89%E6%95%B0%E3%81%AE%E5%A4%96%E5%87%BA%E3%81%97">https://qiita.com/WisteriaWave/items/0e5dda7ddc13b22188c7#215-%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97%E5%A4%89%E6%95%B0%E3%83%9B%E3%82%B9%E3%83%88%E5%A4%89%E6%95%B0%E3%81%AE%E5%A4%96%E5%87%BA%E3%81%97</a></p>
 <h4 id="group_var">▼ group_varファイル<a class="headerlink" href="#group_var" title="Permanent link">&para;</a></h4>
 <p>複数の管理対象ノードで使用する変数を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7900,7 +7900,7 @@ $ pip3 install ansible
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443/tcp</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ポート番号のリストを<code>playbook</code>ファイルで出力する</p>
-<p>参考：<a href="https://bftnagoya.hateblo.jp/entry/2021/03/12/101207">https://bftnagoya.hateblo.jp/entry/2021/03/12/101207</a></p>
+<p>ℹ️ 参考：<a href="https://bftnagoya.hateblo.jp/entry/2021/03/12/101207">https://bftnagoya.hateblo.jp/entry/2021/03/12/101207</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7945,12 +7945,12 @@ $ pip3 install ansible
 <h3 id="inventories">inventoriesディレクトリ<a class="headerlink" href="#inventories" title="Permanent link">&para;</a></h3>
 <h4 id="inventories_1">▼ inventoriesディレクトリとは<a class="headerlink" href="#inventories_1" title="Permanent link">&para;</a></h4>
 <p>管理対象ノードが設定された<code>inventory</code>ファイルを配置する。Ansibleの実行時に、<code>-i</code>オプションでディレクトリを指定する。</p>
-<p>参考：<a href="https://tekunabe.hatenablog.jp/entry/2019/02/23/ansible_inventory_merge">https://tekunabe.hatenablog.jp/entry/2019/02/23/ansible_inventory_merge</a></p>
+<p>ℹ️ 参考：<a href="https://tekunabe.hatenablog.jp/entry/2019/02/23/ansible_inventory_merge">https://tekunabe.hatenablog.jp/entry/2019/02/23/ansible_inventory_merge</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ ansible-playbook &lt;playbookファイル&gt; -i &lt;inventoriesディレクトリ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="inventory">▼ inventoryファイル<a class="headerlink" href="#inventory" title="Permanent link">&para;</a></h4>
 <p>管理対象ノードを設定する。<code>ini</code>形式または<code>yml</code>形式で定義する。実行環境（本番/ステージング）別にファイルを切り分けると良い。また、サーバーを冗長化している場合は、これも別々に定義しておく。プロビジョニングの実行対象はロードバランサーから一時的に切り離すようにすることにより、プロビジョニングに伴ってインシデントが起こっても、ユーザーへの影響を防げる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.ansible.com/ansible/2.9/user_guide/intro_inventory.html#inventoryformat">https://docs.ansible.com/ansible/2.9/user_guide/intro_inventory.html#inventoryformat</a></li>
 <li><a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter5">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter5</a></li>
@@ -8071,7 +8071,7 @@ $ pip3 install ansible
 <h2 id="05-02-targets">05-02. targetsセクション<a class="headerlink" href="#05-02-targets" title="Permanent link">&para;</a></h2>
 <h3 id="targets">targetsセクションとは<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h3>
 <p>プレイの実行先のノードを設定する。必須である。</p>
-<p>参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#targets-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#targets-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#targets-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#targets-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
 <p><br></p>
 <h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
 <h4 id="name_1">▼ nameとは<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h4>
@@ -8100,7 +8100,7 @@ $ pip3 install ansible
 <h2 id="05-03-tasks">05-03. tasksセクション<a class="headerlink" href="#05-03-tasks" title="Permanent link">&para;</a></h2>
 <h3 id="tasks">tasksセクションとは<a class="headerlink" href="#tasks" title="Permanent link">&para;</a></h3>
 <p>管理対象ノード上で実行するセットアップ処理を手続き的に設定する。必須である。</p>
-<p>参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#tasks-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#tasks-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#tasks-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">https://zenn.dev/y_mrok/books/ansible-no-tsukaikata/viewer/chapter8#tasks-%E3%82%BB%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3</a></p>
 <p><br></p>
 <h3 id="ansiblebuiltinaptansiblebuiltinyum">ansible.builtin.apt、ansible.builtin.yum<a class="headerlink" href="#ansiblebuiltinaptansiblebuiltinyum" title="Permanent link">&para;</a></h3>
 <p>管理対象ノード上にパッケージをインストールする。</p>
@@ -8117,7 +8117,7 @@ $ pip3 install ansible
 <p><br></p>
 <h3 id="ansiblebuiltinservice">ansible.builtin.service<a class="headerlink" href="#ansiblebuiltinservice" title="Permanent link">&para;</a></h3>
 <p>管理対象ノード上で<code>service</code>コマンドの実行を設定する。</p>
-<p>参考：<a href="https://docs.ansible.com/ansible/2.9/modules/service_module.html">https://docs.ansible.com/ansible/2.9/modules/service_module.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.ansible.com/ansible/2.9/modules/service_module.html">https://docs.ansible.com/ansible/2.9/modules/service_module.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8133,7 +8133,7 @@ $ pip3 install ansible
 <p><br></p>
 <h3 id="ansiblebuiltinshell">ansible.builtin.shell<a class="headerlink" href="#ansiblebuiltinshell" title="Permanent link">&para;</a></h3>
 <p>管理対象ノードでシェルを実行する。複数行に渡る場合は、『<code>|</code>』を使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html">https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html</a></li>
 <li><a href="https://blog.ruanbekker.com/blog/2020/01/24/environment-variables-with-ansible/">https://blog.ruanbekker.com/blog/2020/01/24/environment-variables-with-ansible/</a></li>
@@ -8149,7 +8149,7 @@ $ pip3 install ansible
 <p><br></p>
 <h3 id="ansiblebuiltinsystemd">ansible.builtin.systemd<a class="headerlink" href="#ansiblebuiltinsystemd" title="Permanent link">&para;</a></h3>
 <p>管理対象ノード上で<code>systemctl</code>コマンドの実行を設定する。</p>
-<p>参考：<a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html">https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html">https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8182,7 +8182,7 @@ $ pip3 install ansible
 <p><br></p>
 <h3 id="ansible_env">ansible_env<a class="headerlink" href="#ansible_env" title="Permanent link">&para;</a></h3>
 <p>管理対象ノードに設定された環境変数を出力する。<code>gather_facts</code>オプションを有効化する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.ansible.com/ansible/2.9/reference_appendices/faq.html#shell">https://docs.ansible.com/ansible/2.9/reference_appendices/faq.html#shell</a></li>
 <li><a href="https://tekunabe.hatenablog.jp/entry/2019/03/09/ansible_env">https://tekunabe.hatenablog.jp/entry/2019/03/09/ansible_env</a></li>
@@ -8208,7 +8208,7 @@ $ pip3 install ansible
 <p><br></p>
 <h3 id="environment">environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
 <p>task内で出力できる環境変数を設定する。</p>
-<p>参考：<a href="https://docs.ansible.com/ansible/2.9/user_guide/playbooks_environment.html">https://docs.ansible.com/ansible/2.9/user_guide/playbooks_environment.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.ansible.com/ansible/2.9/user_guide/playbooks_environment.html">https://docs.ansible.com/ansible/2.9/user_guide/playbooks_environment.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8227,7 +8227,7 @@ $ pip3 install ansible
 <h2 id="05-04-vars">05-04. varsセクション<a class="headerlink" href="#05-04-vars" title="Permanent link">&para;</a></h2>
 <h3 id="vars">varsセクションとは<a class="headerlink" href="#vars" title="Permanent link">&para;</a></h3>
 <p>プレイで使用する設定値を変数として設定する。設定した変数は、<code>ansible.builtin.template</code>オプションを使用して<code>j2</code>ファイルに出力できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.katsubemakito.net/ansible/ansible-1st-4">https://blog.katsubemakito.net/ansible/ansible-1st-4</a></li>
 <li><a href="https://ksaito11.hatenablog.com/entry/2018/10/24/232929">https://ksaito11.hatenablog.com/entry/2018/10/24/232929</a></li>
@@ -8258,7 +8258,7 @@ $ pip3 install ansible
 <h3 id="lookup">lookup<a class="headerlink" href="#lookup" title="Permanent link">&para;</a></h3>
 <h4 id="env">▼ env<a class="headerlink" href="#env" title="Permanent link">&para;</a></h4>
 <p>コントロールノードに設定された環境変数を出力する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.ansible.com/ansible/2.9/reference_appendices/faq.html#shell">https://docs.ansible.com/ansible/2.9/reference_appendices/faq.html#shell</a></li>
 <li><a href="https://tekunabe.hatenablog.jp/entry/2019/03/09/ansible_env">https://tekunabe.hatenablog.jp/entry/2019/03/09/ansible_env</a></li>
@@ -8286,7 +8286,7 @@ $ pip3 install ansible
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

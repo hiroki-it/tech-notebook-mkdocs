@@ -6793,14 +6793,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7542,12 +7542,12 @@
 <h1 id="prometheus">Prometheus＠テレメトリー収集ツール<a class="headerlink" href="#prometheus" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-prometheus">01. Prometheusの仕組み<a class="headerlink" href="#01-prometheus" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Prometheusは、Retrieval、ローカルの時系列ストレージ、HTTPサーバー、から構成されている。Kubernetesリソースのメトリクスのデータポイントを収集し、分析する。また設定された条件下でアラートを作成し、Alertmanagerに送信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://danielfm.me/prometheus-for-developers/">https://danielfm.me/prometheus-for-developers/</a></li>
 <li><a href="https://prometheus.io/docs/introduction/overview/">https://prometheus.io/docs/introduction/overview/</a></li>
@@ -7558,7 +7558,7 @@
 <h2 id="01-02-prometheus-server">01-02. Prometheus server<a class="headerlink" href="#01-02-prometheus-server" title="Permanent link">&para;</a></h2>
 <h3 id="prometheus-server">Prometheus serverとは<a class="headerlink" href="#prometheus-server" title="Permanent link">&para;</a></h3>
 <p>メトリクスのデータポイントを収集し、管理する。またPromQLに基づいて、データポイントからメトリクスを分析できるようにする。<code>9090</code>番ポートで、メトリクスのデータポイントをプルし、またGrafanaのPromQLによるアクセスを待ち受ける。例えば、prometheus-operatorを使用した場合は、各コンポーネントのデフォルト値は、<code>/etc/prometheus/prometheus.yml</code>ファイルで定義する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://knowledge.sakura.ad.jp/27501/#Prometheus_Server">https://knowledge.sakura.ad.jp/27501/#Prometheus_Server</a></li>
 <li><a href="https://www.techscore.com/blog/2017/12/07/prometheus-monitoring-setting/">https://www.techscore.com/blog/2017/12/07/prometheus-monitoring-setting/</a></li>
@@ -7615,7 +7615,7 @@
 <p>定義されたPromQLのルールに基づいて、監視対象のデータポイントを定期的に収集する。</p>
 <h4 id="retrieval_2">▼ Retrievalのルール<a class="headerlink" href="#retrieval_2" title="Permanent link">&para;</a></h4>
 <p>ルールの種類によって、収集後の処理が異なる。</p>
-<p>参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/">https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/">https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/</a></p>
 <table>
 <thead>
 <tr>
@@ -7636,7 +7636,7 @@
 </table>
 <h4 id="_3">▼ 設定ファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>設定ファイルは<code>.yaml</code>ファイルで定義する。セットアップ方法によって設定ファイルが配置されるディレクトリは異なる。例えば、prometheus-operatorを使用した場合は、prometheusコンテナの<code>/etc/prometheus/rules</code>ディレクトリ配下に配置される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/">https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/</a></li>
 <li><a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/">https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/</a></li>
@@ -7689,7 +7689,7 @@ prometheus-prometheus-kube-prometheus-prometheus.yaml
 <h3 id="_4">ローカルストレージ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ ローカルストレージ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>Prometheusは、ローカルの時系列データベースに、収集した全てのメトリクスを保管する。また、収集したメトリクスをデフォルトで<code>2</code>時間ごとにブロック化し、<code>data</code>ディレクトリ配下に配置する。現在処理中のブロックはメモリ上に保持されており、同時にストレージの<code>/data/wal</code>ディレクトリにもバックアップとして保存される（ちなみにRDBMSでは、これをジャーナルファイルという）。これにより、Prometheusで障害が発生し、メモリ上のブロックが削除されてしまっても、ストレージからブロックを復元できる。</p>
-<p>参考：<a href="https://prometheus.io/docs/prometheus/latest/storage/#local-storage">https://prometheus.io/docs/prometheus/latest/storage/#local-storage</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/prometheus/latest/storage/#local-storage">https://prometheus.io/docs/prometheus/latest/storage/#local-storage</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7723,7 +7723,7 @@ prometheus-prometheus-kube-prometheus-prometheus.yaml
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">└── 00000000</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>また、時系列データベースはワーカーNodeにマウントされるため、ワーカーNodeのストレージサイズに注意する必要がある。収集されるデータポイントの合計サイズを小さくする方法として、収集間隔を長くする、不要なデータポイントの収集をやめる、といった方法がある。</p>
-<p>参考：<a href="https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/">https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/</a></p>
+<p>ℹ️ 参考：<a href="https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/">https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7753,7 +7753,7 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 <h4 id="_7">▼ リモートストレージとは<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p><img alt="prometheus_remote-storage" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/prometheus_remote-storage.png" /></p>
 <p>Prometheusは、ローカルストレージにメトリクスを保管する代わりに、時系列データベースとして機能するリモートストレージ（AWS Timestream、Google Bigquery、VictoriaMetrics、...）に保管できる。remote-write-receiverを有効化すると、リモートストレージの種類によらず、エンドポイントが『<code>https://&lt;IPアドレス&gt;/api/v1/write</code>』になる（ポート番号はリモートストレージごとに異なる）。Prometheusと外部の時系列データベースの両方を冗長化する場合、冗長化されたPrometheusでは、片方のデータベースのみに送信しないと、メトリクスが重複してしまうGrafanaのようにリアルタイムにデータを取得し続けることはできない。リモート読み出しを使用する場合、Prometheusのダッシュボード上でPromQLを使うことなく、Grafanaのようにリアルタイムにデータを取得できるようになる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://prometheus.io/docs/prometheus/latest/storage/#remote-storage-integrations">https://prometheus.io/docs/prometheus/latest/storage/#remote-storage-integrations</a></li>
 <li><a href="https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage">https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage</a></li>
@@ -7761,13 +7761,13 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 </ul>
 <h4 id="_8">▼ ダイナミックキュー<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>リモートストレージにメトリクスを送信する場合に、送信されたメトリクスをキューイングする。ダイナミックキューは、メトリクスのスループットの高さに応じて、キューイングの実行単位であるシャードを増減させる。</p>
-<p>参考：<a href="https://speakerdeck.com/inletorder/monitoring-platform-with-victoria-metrics?slide=52">https://speakerdeck.com/inletorder/monitoring-platform-with-victoria-metrics?slide=52</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/inletorder/monitoring-platform-with-victoria-metrics?slide=52">https://speakerdeck.com/inletorder/monitoring-platform-with-victoria-metrics?slide=52</a></p>
 <p><img alt="prometheus_dynamic-queues_shard" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/prometheus_dynamic-queues_shard.png" /></p>
 <p><br></p>
 <h2 id="01-03-alertmanager">01-03. Alertmanager<a class="headerlink" href="#01-03-alertmanager" title="Permanent link">&para;</a></h2>
 <h3 id="alertmanager">Alertmanagerとは<a class="headerlink" href="#alertmanager" title="Permanent link">&para;</a></h3>
 <p>Prometheusのアラートを受信し、特定の条件下でルーティングする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://prometheus.io/docs/alerting/latest/alertmanager/">https://prometheus.io/docs/alerting/latest/alertmanager/</a></li>
 <li><a href="https://www.designet.co.jp/ossinfo/alertmanager/">https://www.designet.co.jp/ossinfo/alertmanager/</a></li>
@@ -7778,7 +7778,7 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 <h2 id="01-04-exporter">01-04. Exporter<a class="headerlink" href="#01-04-exporter" title="Permanent link">&para;</a></h2>
 <h3 id="exporter">Exporterとは<a class="headerlink" href="#exporter" title="Permanent link">&para;</a></h3>
 <p>PrometheusがPull型通信でメトリクスのデータポイントを収集するためのエンドポイントとして機能する。Pull型通信により、アプリケーションはPrometheusの存在を知る必要がなく、関心を分離できる。収集したいメトリクスに合わせて、ExporterをKubernetesのNodeに導入する必要がある。また、各Exporterは待ち受けているエンドポイントやポート番号が異なっており、Prometheusが各Exporterにリクエストを送信できるように、各ワーカーNodeでエンドポイントやポート番号へのインバウンド通信を許可する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://openstandia.jp/oss_info/prometheus">https://openstandia.jp/oss_info/prometheus</a></li>
 <li><a href="https://danielfm.me/prometheus-for-developers/">https://danielfm.me/prometheus-for-developers/</a></li>
@@ -7810,7 +7810,7 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 </table>
 <h4 id="exporter_3">▼ Exporterの具体例<a class="headerlink" href="#exporter_3" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2205/31/news011.html#072">https://atmarkit.itmedia.co.jp/ait/articles/2205/31/news011.html#072</a></li>
 <li><a href="https://prometheus.io/docs/instrumenting/exporters/">https://prometheus.io/docs/instrumenting/exporters/</a></li>
@@ -7838,7 +7838,7 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 <td>Deplyoment型</td>
 <td><code>8080</code></td>
 <td>同上</td>
-<td>Kubernetesのリソース単位でメトリクスのデータポイントを収集する。<br>参考：<a href="https://tech-blog.abeja.asia/entry/2016/12/20/202631">https://tech-blog.abeja.asia/entry/2016/12/20/202631</a></td>
+<td>Kubernetesのリソース単位でメトリクスのデータポイントを収集する。<br>ℹ️ 参考：<a href="https://tech-blog.abeja.asia/entry/2016/12/20/202631">https://tech-blog.abeja.asia/entry/2016/12/20/202631</a></td>
 </tr>
 <tr>
 <td align="left"><a href="https://github.com/hnlq715/nginx-vts-exporter">nginx-vts-exporter</a></td>
@@ -7900,7 +7900,7 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 </table>
 <h4 id="pushgateway">▼ PushGateway<a class="headerlink" href="#pushgateway" title="Permanent link">&para;</a></h4>
 <p>PrometheusがPush型メトリクスを対象から収集するためのエンドポイントとして機能する。</p>
-<p>参考：<a href="https://prometheus.io/docs/practices/pushing/">https://prometheus.io/docs/practices/pushing/</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/practices/pushing/">https://prometheus.io/docs/practices/pushing/</a></p>
 <p><br></p>
 <h2 id="02-promql">02. PromQL<a class="headerlink" href="#02-promql" title="Permanent link">&para;</a></h2>
 <h3 id="promql">PromQLとは<a class="headerlink" href="#promql" title="Permanent link">&para;</a></h3>
@@ -7909,24 +7909,24 @@ drwxrwsr-x  <span class="m">2</span> ec2-user <span class="m">2000</span>      <
 <h3 id="_9">データ型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="instant-vector">▼ Instant vector<a class="headerlink" href="#instant-vector" title="Permanent link">&para;</a></h4>
 <p>特定の時点の時系列データのこと。</p>
-<p>参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
+<p>ℹ️ 参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
 <h4 id="range-vector">▼ Range vector<a class="headerlink" href="#range-vector" title="Permanent link">&para;</a></h4>
 <p>特定の期間の時系列データのこと。</p>
-<p>参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
+<p>ℹ️ 参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
 <h4 id="scalar">▼ Scalar<a class="headerlink" href="#scalar" title="Permanent link">&para;</a></h4>
 <p>浮動小数点の数値型データのこと。</p>
-<p>参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
+<p>ℹ️ 参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
 <h4 id="string">▼ String<a class="headerlink" href="#string" title="Permanent link">&para;</a></h4>
 <p>文字列型データのこと。</p>
-<p>参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
+<p>ℹ️ 参考：<a href="https://it-engineer.hateblo.jp/entry/2019/01/19/150849">https://it-engineer.hateblo.jp/entry/2019/01/19/150849</a></p>
 <p><br></p>
 <h3 id="_10">関数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="count">▼ count<a class="headerlink" href="#count" title="Permanent link">&para;</a></h4>
 <p>期間内の合計数を算出する。</p>
-<p>参考：<a href="https://www.opsramp.com/prometheus-monitoring/promql/">https://www.opsramp.com/prometheus-monitoring/promql/</a></p>
+<p>ℹ️ 参考：<a href="https://www.opsramp.com/prometheus-monitoring/promql/">https://www.opsramp.com/prometheus-monitoring/promql/</a></p>
 <h4 id="increase">▼ increase<a class="headerlink" href="#increase" title="Permanent link">&para;</a></h4>
 <p>rate関数のラッパーであり、rate関数の結果（1秒当たりの平均増加率）に、期間を自動的に掛けた数値（期間あたりの増加数）を算出する。</p>
-<p>参考：<a href="https://promlabs.com/blog/2021/01/29/how-exactly-does-promql-calculate-rates">https://promlabs.com/blog/2021/01/29/how-exactly-does-promql-calculate-rates</a></p>
+<p>ℹ️ 参考：<a href="https://promlabs.com/blog/2021/01/29/how-exactly-does-promql-calculate-rates">https://promlabs.com/blog/2021/01/29/how-exactly-does-promql-calculate-rates</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># rate関数に期間（今回は5m）を自動的に掛けた数値を算出する。</span>
@@ -7935,27 +7935,27 @@ increase<span class="o">(</span>foo_metrics<span class="o">[</span>5m<span class
 </code></pre></div></td></tr></table></div>
 <h4 id="rate">▼ rate<a class="headerlink" href="#rate" title="Permanent link">&para;</a></h4>
 <p>平均増加率（%/秒）を算出する。常に同じ割合で増加していく場合、横一直線のグラフになる。</p>
-<p>参考：<a href="https://www.opsramp.com/prometheus-monitoring/promql/">https://www.opsramp.com/prometheus-monitoring/promql/</a></p>
+<p>ℹ️ 参考：<a href="https://www.opsramp.com/prometheus-monitoring/promql/">https://www.opsramp.com/prometheus-monitoring/promql/</a></p>
 <p><br></p>
 <h2 id="02-02">02-02. メトリクス<a class="headerlink" href="#02-02" title="Permanent link">&para;</a></h2>
 <h3 id="prometheus_tsdb_"><code>prometheus_tsdb_*</code><a class="headerlink" href="#prometheus_tsdb_" title="Permanent link">&para;</a></h3>
 <h4 id="prometheus_tsdb_head_samples_appended_total">▼ prometheus_tsdb_head_samples_appended_total<a class="headerlink" href="#prometheus_tsdb_head_samples_appended_total" title="Permanent link">&para;</a></h4>
 <p>Prometheusが収集したデータポイントの合計数を表す。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48">https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48</a></li>
 <li><a href="https://christina04.hatenablog.com/entry/prometheus-node-exporter">https://christina04.hatenablog.com/entry/prometheus-node-exporter</a></li>
 </ul>
 <h4 id="prometheus_tsdb_compaction_chunk_size_bytes_sum">▼ prometheus_tsdb_compaction_chunk_size_bytes_sum<a class="headerlink" href="#prometheus_tsdb_compaction_chunk_size_bytes_sum" title="Permanent link">&para;</a></h4>
 <p>Prometheusが作成したチャンクの合計サイズ（KB）を表す。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48">https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48</a></li>
 <li><a href="https://christina04.hatenablog.com/entry/prometheus-node-exporter">https://christina04.hatenablog.com/entry/prometheus-node-exporter</a></li>
 </ul>
 <h4 id="prometheus_tsdb_compaction_chunk_samples_sum">▼ prometheus_tsdb_compaction_chunk_samples_sum<a class="headerlink" href="#prometheus_tsdb_compaction_chunk_samples_sum" title="Permanent link">&para;</a></h4>
 <p>Prometheusが作成したチャンクの合計数を表す。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48">https://valyala.medium.com/prometheus-storage-technical-terms-for-humans-4ab4de6c3d48</a></li>
 <li><a href="https://christina04.hatenablog.com/entry/prometheus-node-exporter">https://christina04.hatenablog.com/entry/prometheus-node-exporter</a></li>
@@ -7975,7 +7975,7 @@ rate<span class="o">(</span>prometheus_tsdb_compaction_chunk_samples_sum<span cl
 </code></pre></div></td></tr></table></div>
 <h4 id="kb_1">▼ データポイントの合計サイズ（KB/秒）の増加率<a class="headerlink" href="#kb_1" title="Permanent link">&para;</a></h4>
 <p>Prometheusで収集されたデータポイントの合計サイズ（KB/秒）の増加率を分析する。計算式からもわかるように、データポイントの収集の間隔を長くすることにより、データポイント数が減るため、合計のサイズを小さくできる。</p>
-<p>参考：<a href="https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/">https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/</a></p>
+<p>ℹ️ 参考：<a href="https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/">https://engineering.linecorp.com/en/blog/prometheus-container-kubernetes-cluster/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>rate<span class="o">(</span>prometheus_tsdb_compaction_chunk_size_bytes_sum<span class="o">[</span>1h<span class="o">])</span> /
@@ -8006,7 +8006,7 @@ rate<span class="o">(</span>prometheus_tsdb_head_samples_appended_total<span cla
 <span class="m">60</span> * <span class="m">60</span> * <span class="m">24</span> *
 <span class="m">1</span>.2
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.robustperception.io/how-much-disk-space-do-prometheus-blocks-use/">https://www.robustperception.io/how-much-disk-space-do-prometheus-blocks-use/</a></li>
 <li><a href="https://www.robustperception.io/how-much-space-does-the-wal-take-up/">https://www.robustperception.io/how-much-space-does-the-wal-take-up/</a></li>
@@ -8025,7 +8025,7 @@ rate<span class="o">(</span>prometheus_tsdb_head_samples_appended_total<span cla
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

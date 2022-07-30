@@ -6492,14 +6492,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6938,7 +6938,7 @@
 <h1 id="datadog">インテグレーション＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. メトリクスインテグレーション<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">メトリクスインテグレーションとは<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -6950,7 +6950,7 @@
 <p><br></p>
 <h3 id="_4">インテグレーションパイプラインパッケージ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>ログの作成元に合わせて、プロセッサーのセットが組み込まれたパイプラインを提供してくれる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#integration-pipelines">https://docs.datadoghq.com/logs/log_configuration/pipelines/?tab=source#integration-pipelines</a></li>
 <li><a href="https://docs.datadoghq.com/integrations/#cat-log-collection">https://docs.datadoghq.com/integrations/#cat-log-collection</a></li>
@@ -6959,43 +6959,43 @@
 <h2 id="03">03. 分散トレースインテグレーション<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_5">分散トレースインテグレーションとは<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>言語/フレームワーク/ツール、などに関して、専用の分散トレースを収集できるようになる。アプリケーションとして使用される言語/フレームワークの場合、トレースエージェントがインテグレーション処理を持つため、仮想環境へのインストールは不要である。については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations">https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations">https://github.com/DataDog/dd-trace-php/tree/master/src/Integrations/Integrations</a></p>
 <p><br></p>
 <h2 id="04-aws">04. AWSインテグレーション<a class="headerlink" href="#04-aws" title="Permanent link">&para;</a></h2>
 <h3 id="_6">セットアップ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 共通の手順<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>AWSリソースで作成されたメトリクス/ログ/分散トレースをDatadogに転送できるようにする。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#setup">https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#setup</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#setup">https://docs.datadoghq.com/integrations/amazon_web_services/?tab=roledelegation#setup</a></p>
 <p>（１）DatadogのAWSアカウントの登録画面で、CloudFormationによる自動セットアップを選択する。これにより、AWSコンソール画面に自動的に遷移する。CloudFormationのテンプレートを使用して、スタックを作成できる。ほとんどのパラメーターはデフォルト値が設定されており、空欄部分（APIキーなど）に値を入力する。</p>
-<p>参考：<a href="https://app.datadoghq.com/account/settings#integrations/amazon-web-services">https://app.datadoghq.com/account/settings#integrations/amazon-web-services</a></p>
+<p>ℹ️ 参考：<a href="https://app.datadoghq.com/account/settings#integrations/amazon-web-services">https://app.datadoghq.com/account/settings#integrations/amazon-web-services</a></p>
 <p>（２）CloudFormationを実行し、メトリクス/ログ/分散トレースを転送するLambdaやIAMロールを作成する。このIAMロール（<code>DatadogIntegrationRole</code>）には、DatadogのIAMユーザー（<code>464622532012</code>）に委譲できるように、AWS STSの設定がなされている。Datadogの設定画面にアカウントIDとロール名を入力することにより、設定画完了する。</p>
-<p>参考：<a href="https://app.datadoghq.com/account/settings#integrations/amazon-web-services">https://app.datadoghq.com/account/settings#integrations/amazon-web-services</a></p>
+<p>ℹ️ 参考：<a href="https://app.datadoghq.com/account/settings#integrations/amazon-web-services">https://app.datadoghq.com/account/settings#integrations/amazon-web-services</a></p>
 <p>この時点で、ログと分散トレースは収集できており、可視化の手順のみが必要である。一方で、ログは可視化が不要であるが、収集の手順が必要である。</p>
 <h4 id="_8">▼ メトリクス、分散トレースの可視化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>（３）収集したメトリクスを可視化できるように、各AWSリソースのインテグレーションをインストールする。インストール後、しばらく待つと、AWSインフラのメトリクスや分散トレースが収集されていることを確認できる。</p>
 <h4 id="_9">▼ ログの収集<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>（３）ログを収集できるように、LambdaのトリガーとしてCloudWatchログやS3を設定する。トリガーとして設定せずに、自動でも収集できるが、自動認識されるログの種類が少ないので、手動で設定した方が良い。</p>
-<p>参考：<a href="https://docs.datadoghq.com/logs/guide/send-aws-services-logs-with-the-datadog-lambda-function/?tab=awsconsole#automatically-set-up-triggers">https://docs.datadoghq.com/logs/guide/send-aws-services-logs-with-the-datadog-lambda-function/?tab=awsconsole#automatically-set-up-triggers</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/logs/guide/send-aws-services-logs-with-the-datadog-lambda-function/?tab=awsconsole#automatically-set-up-triggers">https://docs.datadoghq.com/logs/guide/send-aws-services-logs-with-the-datadog-lambda-function/?tab=awsconsole#automatically-set-up-triggers</a></p>
 <p>（４）トリガーとするAWSリソースの命名によって、ログの<code>service</code>属性の値が変わる。例えば、CloudWatchログのロググループ名が『<code>api-gateway-*****</code>』から始まる場合、<code>service</code>属性の値は<code>apigateway</code>になる。</p>
 <p><br></p>
 <h3 id="_10">料金<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>EC2、ECS、Lambdaで料金が発生し、それ以外のAWSリソースは無料である。</p>
-<p>参考：<a href="https://docs.datadoghq.com/account_management/billing/aws/">https://docs.datadoghq.com/account_management/billing/aws/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/account_management/billing/aws/">https://docs.datadoghq.com/account_management/billing/aws/</a></p>
 <p><br></p>
 <h2 id="05-php-fpm">05. PHP-FPMインテグレーション<a class="headerlink" href="#05-php-fpm" title="Permanent link">&para;</a></h2>
 <p>PHP-FPMインテグレーションをインストールした場合、収集したメトリクスを可視化できるようになる。ログには対応していない。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/php_fpm/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/integrations/php_fpm/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/php_fpm/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/integrations/php_fpm/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9</a></p>
 <p><br></p>
 <h2 id="06-nginx">06. Nginxインテグレーション<a class="headerlink" href="#06-nginx" title="Permanent link">&para;</a></h2>
 <p>Nginxインテグレーションをインストールした場合、収集したログとメトリクスを可視化できるようになる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/nginx/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/integrations/nginx/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/nginx/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9">https://docs.datadoghq.com/integrations/nginx/?tab=host#%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -7136,14 +7136,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8222,7 +8222,7 @@
 <h1 id="awsterraform">AWSプロバイダー＠Terraform<a class="headerlink" href="#awsterraform" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-acm">01. ACM<a class="headerlink" href="#01-acm" title="Permanent link">&para;</a></h2>
 <h3 id="_2">証明書のリクエスト<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -8337,7 +8337,7 @@
 <p>SSL証明書のEメール検証時に、ドメインの所有者にメールが送信されないことがある。送信されなかった場合は、メールの再送を実行する。</p>
 <h4 id="ssl">（＊）SSL証明書の検証方法を変更する<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h4>
 <p>もしコンソール画面からSSL証明書の検証方法を変更する場合、検証方法の異なるSSL証明書を作成してこれに切り替えたうえで、古いSSL証明書を削除する必要がある。これに合わせて、Terraformでもリリースを二回に分ける。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/</a></p>
 <p><br></p>
 <h2 id="02-ami">02. AMI<a class="headerlink" href="#02-ami" title="Permanent link">&para;</a></h2>
 <h3 id="_4">まとめ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -8497,7 +8497,7 @@
 <p><br></p>
 <h3 id="_6">（＊）ステージ名を取得する方法はない<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>API Gatewayのステージ名を参照するためには、resourceを使用する必要があり、dataではこれを取得できない。もしステージをコンソール画面上から作成している場合、ステージのARNを参照できないため、ARNを自力で作る必要がある。API Gatewayの各ARNについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/arn-format-reference.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/arn-format-reference.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/arn-format-reference.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/arn-format-reference.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>WAFにAPI Gatewayを紐付けるために、ステージのARNが必要である。これは自力で作る。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8957,11 +8957,11 @@
 <p><br></p>
 <h3 id="2_1">（２）実インフラのリビジョン番号の追跡<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
 <p>アプリケーションのデプロイによって、実インフラのECSタスク定義のリビジョン番号が増加するため、これを追跡できるようにする。</p>
-<p>参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition</a></p>
+<p>ℹ️ 参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ecs_task_definition</a></p>
 <p><br></p>
 <h3 id="3albnlb">（３）ALB/NLBリスナーの作成を待機<a class="headerlink" href="#3albnlb" title="Permanent link">&para;</a></h3>
 <p>Terraformは、特に依存関係を実装しない場合、『ターゲットグループ → ALB/NLB → リスナー』の順で<code>resource</code>ブロックを作成する。問題として、ALB/NLBやリスナーの作成が終わる前に、ECSサービスの作成が始まってしまう。ALB/NLBの作成（※リスナーも含む可能性）が完全に完了しない状態では、ターゲットグループはECSサービスに紐付けらず、これが完了する前にECSサービスがターゲットグループを参照しようとするため、エラーになる。リスナーの後にECSサービスを作成するようにし、『ターゲットグループ → ALB/NLB → リスナー → ECSサービス』の順で<code>resource</code>ブロックを作成できるようにする。</p>
-<p>参考：<a href="https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022">https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022">https://github.com/hashicorp/terraform/issues/12634#issuecomment-313215022</a></p>
 <p><br></p>
 <h3 id="4autoscalingecs">（４）AutoScalingによるECSタスク数の増減を無視<a class="headerlink" href="#4autoscalingecs" title="Permanent link">&para;</a></h3>
 <p>AutoScalingによって、ECSタスク数が増減するため、これを無視する。</p>
@@ -9030,7 +9030,7 @@
 <p><br></p>
 <h3 id="2internet-gateway">（２）Internet Gatewayの後に作成<a class="headerlink" href="#2internet-gateway" title="Permanent link">&para;</a></h3>
 <p>Internet Gatewayの後にEC2を作成できるようにする。</p>
-<p>参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway#argument-reference">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway#argument-reference</a></p>
+<p>ℹ️ 参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway#argument-reference">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway#argument-reference</a></p>
 <p><br></p>
 <h2 id="08-iam">08. IAMユーザー<a class="headerlink" href="#08-iam" title="Permanent link">&para;</a></h2>
 <h3 id="_14">カスタマー管理ポリシーを持つロール<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -9529,11 +9529,11 @@
 <p><br></p>
 <h3 id="2nlb">（２）NLBヘルスチェックには設定できる項目が少ない<a class="headerlink" href="#2nlb" title="Permanent link">&para;</a></h3>
 <p>ターゲットグループの転送プロトコルがTCPの場合は、設定できないヘルスチェックオプションがいくつかある。ヘルスチェックプロトコルがHTTPまたはHTTPSの時のみ、パスを設定できる。</p>
-<p>参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#health_check">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#health_check</a></p>
+<p>ℹ️ 参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#health_check">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#health_check</a></p>
 <p><br></p>
 <h3 id="3nlb">（３）NLBスティッキーネスは明示的に無効化<a class="headerlink" href="#3nlb" title="Permanent link">&para;</a></h3>
 <p>スティッキネス機能を無効化する場合、AWSプロバイダーのアップグレード時に問題が起こらないように、このブロックを実装しないようにする。リンクのNOTE文を参考にせよ。</p>
-<p>参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/3.16.0/docs/resources/lb_target_group#stickiness">https://registry.terraform.io/providers/hashicorp/aws/3.16.0/docs/resources/lb_target_group#stickiness</a></p>
+<p>ℹ️ 参考：<a href="https://registry.terraform.io/providers/hashicorp/aws/3.16.0/docs/resources/lb_target_group#stickiness">https://registry.terraform.io/providers/hashicorp/aws/3.16.0/docs/resources/lb_target_group#stickiness</a></p>
 <p><br></p>
 <h3 id="_20">（＊）ターゲットグループの削除時にリスナーを先に削除できない。<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <p>リスナーがターゲットグループに依存しているが、Terraformがターゲットグループの削除時にリスナーを先に削除しようとしないため、以下のようなエラーが発生する。</p>
@@ -9542,7 +9542,7 @@
 status code: <span class="m">400</span>, request id: *****
 </code></pre></div></td></tr></table></div>
 <p>このエラーが発生した場合、コンソール画面上でリスナーを削除したうえで、もう一度<code>terraform apply</code>コマンドを実行する。</p>
-<p>参考：<a href="https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529">https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529">https://github.com/hashicorp/terraform-provider-aws/issues/1315#issuecomment-415423529</a></p>
 <p><br></p>
 <h2 id="11-rdsaurora-mysql">11. RDS（Aurora MySQLの場合）<a class="headerlink" href="#11-rdsaurora-mysql" title="Permanent link">&para;</a></h2>
 <h3 id="_21">まとめ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
@@ -9766,7 +9766,7 @@ status code: <span class="m">400</span>, request id: *****
 <p><br></p>
 <h3 id="3dbaz3">（３）DBクラスターにはAZが3つ必要<a class="headerlink" href="#3dbaz3" title="Permanent link">&para;</a></h3>
 <p>DBクラスターでは、レプリケーションのために、<code>3</code>個のAZが必要である。そのため、指定したAZが2つであっても、コンソール画面上で<code>3</code>個のAZが自動的に設定される。Terraformがこれを認識しないように、<code>ignore_changes</code>オプションでAZを指定しておく必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster#availability_zones">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster#availability_zones</a></li>
 <li><a href="https://github.com/hashicorp/terraform-provider-aws/issues/7307#issuecomment-457441633">https://github.com/hashicorp/terraform-provider-aws/issues/7307#issuecomment-457441633</a></li>
@@ -9781,7 +9781,7 @@ status code: <span class="m">400</span>, request id: *****
 <p><br></p>
 <h3 id="6for_each">（６）<code>for_each</code>関数を使用して<a class="headerlink" href="#6for_each" title="Permanent link">&para;</a></h3>
 <p>Auroraでは、クラスターにインスタンスを1つだけ紐づけると、プライマリーインスタンスとして作成される。また以降インスタンスを紐づけると、リードレプリカとして自動的に作成されていく。AZのマップデータに対して<code>for_each</code>関数を使用することにより、各AZに最低1つのインスタンスを配置するように設定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster_instance">https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster_instance</a></li>
 <li><a href="https://github.com/hashicorp/terraform/issues/5333">https://github.com/hashicorp/terraform/issues/5333</a></li>
@@ -9798,7 +9798,7 @@ status code: <span class="m">400</span>, request id: *****
 <p><br></p>
 <h3 id="10az">（１０）マルチAZを有効化する<a class="headerlink" href="#10az" title="Permanent link">&para;</a></h3>
 <p>Auroraでは、紐付けられたサブネットグループが複数のAZのサブネットで構成されている場合に、各インスタンスを自動的にAZに配置するようになっている。そのため、サブネットグループに複数のサブネットを紐づけるようにする。</p>
-<p>参考：<a href="https://github.com/hashicorp/terraform/issues/5333">https://github.com/hashicorp/terraform/issues/5333</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/hashicorp/terraform/issues/5333">https://github.com/hashicorp/terraform/issues/5333</a></p>
 <p><br></p>
 <h2 id="12-route53">12. Route53<a class="headerlink" href="#12-route53" title="Permanent link">&para;</a></h2>
 <h3 id="_22">まとめ<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
@@ -9876,7 +9876,7 @@ status code: <span class="m">400</span>, request id: *****
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ALBのアクセスログを送信するバケット内には、自動的に『/AWSLogs/&lt;アカウントID&gt;』の名前でディレクトリが作成される。そのため、『<code>arn:aws:s3:::&lt;バケット名&gt;/*</code>』の部分を最小権限として、『<code>arn:aws:s3:::&lt;バケット名&gt;/AWSLogs/&lt;アカウントID&gt;/;*</code>』にしても良い。東京リージョンのELBサービスアカウントIDは、『582318560864』である。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-access-logs.html#access-logging-bucket-permissions</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11044,7 +11044,7 @@ status code: <span class="m">400</span>, request id: *****
 <tr>
 <td></td>
 <td>サービスリンクロール</td>
-<td>サービスリンクロールは自動的に作成されるが、これが行われる前に事前にTerraformで作成でき、以下のリンクにて各AWSリソースにサービスリンクロールが存在しているのか否かを確認できる。しかし、数が多く、また初回作成時のみしかエラーは起こらないため、サービスリンクロールはTerraformで作成しないようにする。<br>参考：<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</a></td>
+<td>サービスリンクロールは自動的に作成されるが、これが行われる前に事前にTerraformで作成でき、以下のリンクにて各AWSリソースにサービスリンクロールが存在しているのか否かを確認できる。しかし、数が多く、また初回作成時のみしかエラーは起こらないため、サービスリンクロールはTerraformで作成しないようにする。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</a></td>
 </tr>
 <tr>
 <td>IAMポリシー</td>
@@ -11143,7 +11143,7 @@ status code: <span class="m">400</span>, request id: *****
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

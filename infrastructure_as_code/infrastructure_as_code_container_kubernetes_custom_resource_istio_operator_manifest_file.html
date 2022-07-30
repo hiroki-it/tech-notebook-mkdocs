@@ -6640,14 +6640,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7228,11 +7228,11 @@
 <h1 id="istiooperatoristio">IstioOperator＠Istio<a class="headerlink" href="#istiooperatoristio" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>（１）<code>istioctl</code>コマンドでIstioOperatorを指定する。IstioOperatorは、デフォルトで<code>istio-system</code>にIstioリソースをapplyするようになっている。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/install/operator/">https://istio.io/latest/docs/setup/install/operator/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/install/operator/">https://istio.io/latest/docs/setup/install/operator/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7246,7 +7246,7 @@ Operator controller will watch namespaces: istio-system
 ✔ Installation <span class="nb">complete</span>
 </code></pre></div></td></tr></table></div>
 <p>（２）IstioOperatorが定義されたマニフェストファイルを、<code>istioctl</code>コマンドまたは<code>kubectl</code>コマンドを使用して、Istioリソースをapplyする。代わりにここで、IstioOperatorにHelmを使用させてIstioリソースをapplyすることもできる。<code>kubectl</code>コマンドでもapplyできるが、applyの成否の実行ログがわかりにくいことに注意する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile">https://istio.io/latest/docs/setup/install/istioctl/#install-istio-using-the-default-profile</a></li>
 <li><a href="https://istio.io/latest/docs/setup/install/operator/#install-istio-with-the-operator">https://istio.io/latest/docs/setup/install/operator/#install-istio-with-the-operator</a></li>
@@ -7294,7 +7294,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="speccomponent">spec.component<a class="headerlink" href="#speccomponent" title="Permanent link">&para;</a></h3>
 <h4 id="component">▼ componentとは<a class="headerlink" href="#component" title="Permanent link">&para;</a></h4>
 <p>IstioOperator経由でIstioリソースをapplyする。</p>
-<p>参考：<a href="https://cloud.ibm.com/docs/containers?topic=containers-istio-custom-gateway&amp;locale=en">https://cloud.ibm.com/docs/containers?topic=containers-istio-custom-gateway&amp;locale=en</a></p>
+<p>ℹ️ 参考：<a href="https://cloud.ibm.com/docs/containers?topic=containers-istio-custom-gateway&amp;locale=en">https://cloud.ibm.com/docs/containers?topic=containers-istio-custom-gateway&amp;locale=en</a></p>
 <h4 id="egressgateways">▼ egressGateways<a class="headerlink" href="#egressgateways" title="Permanent link">&para;</a></h4>
 <p>IstioOperator経由でapplyされるEgressGatewayのオプションを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7319,7 +7319,7 @@ istiooperator.install.istio.io/istio-operator created
 </code></pre></div></td></tr></table></div>
 <h4 id="ingressgateways">▼ ingressGateways<a class="headerlink" href="#ingressgateways" title="Permanent link">&para;</a></h4>
 <p>執筆時点（2022/06/04）では、IstioOperatorの<code>spec.components.ingressGateways.k8s</code>キー以下でIngressGatewayを設定することは非推奨であり、Gatewayを使用するようにする。一応このオプションの説明は残しておく。IngressGatewayのオプションを設定する。IngressGatewayの設定値を変更する場合は、<code>runAsRoot</code>キーでルート権限を有効化する必要がある。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2111/05/news005.html#022">https://atmarkit.itmedia.co.jp/ait/articles/2111/05/news005.html#022</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2111/05/news005.html#022">https://atmarkit.itmedia.co.jp/ait/articles/2111/05/news005.html#022</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7363,7 +7363,7 @@ istiooperator.install.istio.io/istio-operator created
 <span class="w">        </span><span class="nt">runAsRoot</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、以下の方法で独自のIngressGatewayを作成できる（かなり大変）。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://faun.pub/setup-multiple-ingress-gateways-in-istio-52ad0dc7f99d">https://faun.pub/setup-multiple-ingress-gateways-in-istio-52ad0dc7f99d</a></li>
 <li><a href="https://github.com/istio/istio/issues/23303">https://github.com/istio/istio/issues/23303</a></li>
@@ -7507,7 +7507,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="specmeshconfig">spec.meshConfig<a class="headerlink" href="#specmeshconfig" title="Permanent link">&para;</a></h3>
 <h4 id="meshconfig">▼ meshConfigとは<a class="headerlink" href="#meshconfig" title="Permanent link">&para;</a></h4>
 <p>全てのistio-proxyコンテナに共通する値を設定する。ここではEnvoyを使用した場合を説明する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig">https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#MeshConfig</a></p>
 <h4 id="accesslogfile">▼ accessLogFile<a class="headerlink" href="#accesslogfile" title="Permanent link">&para;</a></h4>
 <p>全てのistio-proxyコンテナに関して、アクセスログの出力先を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7640,7 +7640,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="specnamespace">spec.namespace<a class="headerlink" href="#specnamespace" title="Permanent link">&para;</a></h3>
 <h4 id="namespace">▼ namespaceとは<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h4>
 <p>IstioOperator経由でapplyされるIstioリソースのNamespaceを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7659,7 +7659,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="specprofile">spec.profile<a class="headerlink" href="#specprofile" title="Permanent link">&para;</a></h3>
 <h4 id="profile">▼ profileとは<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h4>
 <p>applyに使用するプロファイルを設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7678,7 +7678,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="specrevision">spec.revision<a class="headerlink" href="#specrevision" title="Permanent link">&para;</a></h3>
 <h4 id="revision">▼ revisionとは<a class="headerlink" href="#revision" title="Permanent link">&para;</a></h4>
 <p>コントロールプレーン（Istiod）をカナリアリリースを使用してアップグレードする場合に、新しくapplyするバージョンを設定する。バージョンの表記方法がハイフン繋ぎであることに注意する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/#IstioOperatorSpec</a></li>
 <li><a href="https://istio.io/latest/docs/setup/upgrade/canary/">https://istio.io/latest/docs/setup/upgrade/canary/</a></li>
@@ -7701,7 +7701,7 @@ istiooperator.install.istio.io/istio-operator created
 <h3 id="spectag">spec.tag<a class="headerlink" href="#spectag" title="Permanent link">&para;</a></h3>
 <h4 id="tag">▼ tagとは<a class="headerlink" href="#tag" title="Permanent link">&para;</a></h4>
 <p>Istioリソースを構成するコンテナのベースイメージのバージョンを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hub.docker.com/r/istio/proxyv2/tags">https://hub.docker.com/r/istio/proxyv2/tags</a></li>
 <li><a href="https://github.com/istio/istio/blob/master/pilot/docker/Dockerfile.proxyv2">https://github.com/istio/istio/blob/master/pilot/docker/Dockerfile.proxyv2</a></li>
@@ -7748,7 +7748,7 @@ istiooperator.install.istio.io/istio-operator created
 </code></pre></div></td></tr></table></div>
 <h4 id="sidecarinjectorwebhook">▼ sidecarInjectorWebhook<a class="headerlink" href="#sidecarinjectorwebhook" title="Permanent link">&para;</a></h4>
 <p>istio-proxyコンテナごとのオプション値を設定する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental">https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/#custom-templates-experimental</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7784,7 +7784,7 @@ istiooperator.install.istio.io/istio-operator created
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-28</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

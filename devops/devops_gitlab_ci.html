@@ -6475,14 +6475,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6908,13 +6908,13 @@
 <h1 id="gitlab-cidevops">GitLab CI＠DevOps<a class="headerlink" href="#gitlab-cidevops" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-gitlab-ci">01. GitLab CIの仕組み<a class="headerlink" href="#01-gitlab-ci" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="gitlab-ci_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/gitlab-ci_architecture.png" /></p>
 <p>GitLab Runnerを処理の実行環境として、GitLabリポジトリの<code>gitlab-ci.yml</code>ファイルで定義されたパイプラインを実行する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://subscription.packtpub.com/book/cloud-&amp;-networking/9781789531282/19/ch19lvl1sec32/the-runner-client-architecture">https://subscription.packtpub.com/book/cloud-&amp;-networking/9781789531282/19/ch19lvl1sec32/the-runner-client-architecture</a></li>
 <li><a href="https://www.insight-tec.com/tech-blog/ci-cd/20201222_gitlab_runner/">https://www.insight-tec.com/tech-blog/ci-cd/20201222_gitlab_runner/</a></li>
@@ -6935,7 +6935,7 @@
 <h2 id="03-global">03. Global<a class="headerlink" href="#03-global" title="Permanent link">&para;</a></h2>
 <h3 id="include">include<a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
 <p>参照する別リポジトリと設定ファイルを設定する。GitLab CIのJobの設定ファイルを、特定のリポジトリで一括管理しておき、これを他のリポジトリで参照できるようになる。ポリリポジトリ構成と相性がよい。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#image">https://docs.gitlab.com/ee/ci/yaml/index.html#image</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#image">https://docs.gitlab.com/ee/ci/yaml/index.html#image</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6954,7 +6954,7 @@
 <h2 id="04-job">04. Job<a class="headerlink" href="#04-job" title="Permanent link">&para;</a></h2>
 <h3 id="cache">cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h3>
 <p>指定したディレクトリのキャッシュを作成する。これにより、他のパイプラインでこのディレクトリを再利用し、CIの時間を短縮できる。</p>
-<p>参考：<a href="https://www.serversus.work/topics/927zjvmew2491o2n1oob/">https://www.serversus.work/topics/927zjvmew2491o2n1oob/</a></p>
+<p>ℹ️ 参考：<a href="https://www.serversus.work/topics/927zjvmew2491o2n1oob/">https://www.serversus.work/topics/927zjvmew2491o2n1oob/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6966,7 +6966,7 @@
 <p><br></p>
 <h3 id="dependencies">dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
 <p>先に実行するJobを設定する。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#dependencies">https://docs.gitlab.com/ee/ci/yaml/index.html#dependencies</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#dependencies">https://docs.gitlab.com/ee/ci/yaml/index.html#dependencies</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">bar_job</span><span class="p">:</span><span class="w"></span>
@@ -6976,7 +6976,7 @@
 <p><br></p>
 <h3 id="image">image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h3>
 <p>Jobの実行環境を設定する。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#image">https://docs.gitlab.com/ee/ci/yaml/index.html#image</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#image">https://docs.gitlab.com/ee/ci/yaml/index.html#image</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6988,7 +6988,7 @@
 <p><br></p>
 <h3 id="stage">stage<a class="headerlink" href="#stage" title="Permanent link">&para;</a></h3>
 <p>Jobが属するステージを設定する。同じステージに属するJobは、並行的に実行される。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#stage">https://docs.gitlab.com/ee/ci/yaml/index.html#stage</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#stage">https://docs.gitlab.com/ee/ci/yaml/index.html#stage</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">foo_job</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo_stage</span><span class="w"></span>
@@ -6996,7 +6996,7 @@
 <p><br></p>
 <h3 id="script">script<a class="headerlink" href="#script" title="Permanent link">&para;</a></h3>
 <p>Jobで実行する処理を設定する。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#script">https://docs.gitlab.com/ee/ci/yaml/index.html#script</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#script">https://docs.gitlab.com/ee/ci/yaml/index.html#script</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">foo_job</span><span class="p">:</span><span class="w"></span>
@@ -7006,7 +7006,7 @@
 <p><br></p>
 <h3 id="variables">variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h3>
 <p>Job内で使用する変数を設定する。</p>
-<p>参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#variables">https://docs.gitlab.com/ee/ci/yaml/index.html#variables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.gitlab.com/ee/ci/yaml/index.html#variables">https://docs.gitlab.com/ee/ci/yaml/index.html#variables</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7024,7 +7024,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

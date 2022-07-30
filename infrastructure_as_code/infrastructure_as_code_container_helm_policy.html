@@ -6534,14 +6534,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7020,7 +7020,7 @@
 <h1 id="helm">設計ポリシー＠Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. リポジトリ構成<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">リポジトリ分割のメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7095,7 +7095,7 @@
 <h3 id="chart">chartディレクトリ<a class="headerlink" href="#chart" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 必須の要素<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>ルートディレクトリに<code>Chart.yaml</code>ファイルと<code>template</code>ディレクトリを置く必要がある。また、チャートのコントリビュート要件も参考にすること。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/helm/charts/blob/master/CONTRIBUTING.md#technical-requirements">https://github.com/helm/charts/blob/master/CONTRIBUTING.md#technical-requirements</a></li>
 <li><a href="https://helm.sh/docs/topics/charts/#the-chart-file-structure">https://helm.sh/docs/topics/charts/#the-chart-file-structure</a></li>
@@ -7133,7 +7133,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_8">▼ 実行環境別<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>実行環境別に<code>values</code>ファイルと<code>.tpl</code>ファイルを作成する。<code>.tpl</code>ファイルは<code>templates</code>ディレクトリ内に置く必要がある。テンプレートからマニフェストファイルを作成する時に、各環境の<code>values.yaml</code>を参照する。</p>
-<p>参考：<a href="https://github.com/codefresh-contrib/helm-promotion-sample-app">https://github.com/codefresh-contrib/helm-promotion-sample-app</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/codefresh-contrib/helm-promotion-sample-app">https://github.com/codefresh-contrib/helm-promotion-sample-app</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7236,10 +7236,10 @@
 <h3 id="template">templateディレクトリ<a class="headerlink" href="#template" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ 命名規則<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>ファイル名はスネークケースとし、Kubernetesリソースを識別できる名前とする。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_best_practices/templates/">https://helm.sh/docs/chart_best_practices/templates/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_best_practices/templates/">https://helm.sh/docs/chart_best_practices/templates/</a></p>
 <h4 id="_11">▼ 拡張子<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>拡張子は<code>.yaml</code>とする。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_best_practices/templates/">https://helm.sh/docs/chart_best_practices/templates/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_best_practices/templates/">https://helm.sh/docs/chart_best_practices/templates/</a></p>
 <p><br></p>
 <h2 id="04">04. リリースのアップグレード<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_12">リリースのアップグレードとは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -7247,7 +7247,7 @@
 <p><br></p>
 <h3 id="_13">非カスタムリソースのみからなるチャート場合<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>非カスタムリソースのみからなるリリースのアップグレードは以下の手順で行う。アップグレードが正常に完了したことがわかるように、<code>--wait</code>オプションを有効化すると良い。</p>
-<p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback">https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback">https://helm.sh/docs/intro/using_helm/#helpful-options-for-installupgraderollback</a></p>
 <p>（１）<code>helm upgrade</code>コマンドを実行し、既存のリリースをアップグレードする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm upgrade -f &lt;valuesファイルへのパス&gt; &lt;リリース名&gt; &lt;チャートへのパス&gt; --version &lt;バージョンタグ&gt; --wait
 </code></pre></div></td></tr></table></div>
@@ -7257,7 +7257,7 @@
 <p><br></p>
 <h3 id="_14">カスタムリソースを含むチャートの場合<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>Helmは、カスタムリソースを含むチャートのインストールはサポートしているが、アップグレードとアンインストールをサポートしていない。そのため、アップグレードとアンインストールは<code>kubectl</code>コマンドで実行する必要がある。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you">https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you">https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#method-1-let-helm-do-it-for-you</a></p>
 <p>（１）<code>kubectl apply</code>コマンドを実行し、新しいバージョンのカスタムリソースをapplyする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl apply -f &lt;新しいバージョンのカスタムリソースのマニフェストファイルのURL&gt;
 </code></pre></div></td></tr></table></div>
@@ -7271,7 +7271,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

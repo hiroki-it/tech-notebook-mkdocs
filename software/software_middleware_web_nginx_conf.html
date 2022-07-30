@@ -7003,14 +7003,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7958,13 +7958,13 @@
 <h1 id="nginxconfnginx">nginx.conf＠Nginx<a class="headerlink" href="#nginxconfnginx" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-nginx">01. Nginxの仕組み<a class="headerlink" href="#01-nginx" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="nginx_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/nginx_architecture.png" /></p>
 <p>Nginxは、マスタープロセス、ワーカープロセス、プロキシキャッシュストレージ、キャッシュローダー、キャッシュマネージャー、から構成される。Nginxの起動時に最初にマスタープロセスが実行され、Nginxに設定を適用する。また、マスタープロセスは子プロセスとしてのワーカープロセスを実行し、各ワーカープロセスがリクエストを並列的に処理する。ワーカープロセスは、キャッシュローダーを使用して、静的ファイルのキャッシュをメモリ上のプロキシキャッシュストレージに保存し、また一方で保存されたキャッシュを取得する。キャッシュマネージャは、保存されたキャッシュの有効期限を管理する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.codetd.com/en/article/12312272">https://www.codetd.com/en/article/12312272</a></li>
 <li><a href="https://rainbow-engine.com/nginx-apache-difference/">https://rainbow-engine.com/nginx-apache-difference/</a></li>
@@ -8101,7 +8101,7 @@ $ php-fpm -t
 <h3 id="-">ロードバランサ－のミドルウェアとして<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
 <h4 id="httphttps_1">▼ HTTP/HTTPSプロトコルでルーティング<a class="headerlink" href="#httphttps_1" title="Permanent link">&para;</a></h4>
 <p>Nginxは、インバウンド通信を複数のWebサーバーに負荷分散的に振り分ける。受信したインバウンド通信がHTTPプロトコルであった場合、HTTPSプロトコルにリダイレクトすると良い。また、HTTPSプロトコルであれば、HTTPに変換してルーティングすると良い。ただし、HTTPSプロトコルのインバウンド通信を受信するために、NginxにSSL証明書を設定する必要がある。</p>
-<p>参考：<a href="http://nginx.org/en/docs/http/load_balancing.html">http://nginx.org/en/docs/http/load_balancing.html</a></p>
+<p>ℹ️ 参考：<a href="http://nginx.org/en/docs/http/load_balancing.html">http://nginx.org/en/docs/http/load_balancing.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8190,7 +8190,7 @@ $ php-fpm -t
 <h3 id="_4">インストール<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="apt">▼ aptリポジトリから<a class="headerlink" href="#apt" title="Permanent link">&para;</a></h4>
 <p>nginxを<code>apt-get</code>コマンドでインストールすると、旧バージョンが指定されるため、<code>apt</code>コマンドを使用する。</p>
-<p>参考：<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a></p>
+<p>ℹ️ 参考：<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/">https://www.nginx.com/resources/wiki/start/topics/tutorials/install/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ apt install nginx
 </code></pre></div></td></tr></table></div>
 <h4 id="yum">▼ yumリポジトリから<a class="headerlink" href="#yum" title="Permanent link">&para;</a></h4>
@@ -8224,7 +8224,7 @@ $ php-fpm -t
 <p>FastCGIプロトコルでルーティングする場合に使用する。アプリケーションで使用できる変数を定義する。<code>nginx.conf</code>ファイルによって読み込まれる。OSやそのバージョンによっては、変数のデフォルト値が異なることがある。実際にインバウンド通信のルーティング先に接続し、上書き設定が必要なものと不要なものを判断する必要がある。</p>
 <h4 id="debian">▼ Debian系の場合<a class="headerlink" href="#debian" title="Permanent link">&para;</a></h4>
 <p>Debian10の設定ファイルを以下に示す。</p>
-<p>参考：<a href="https://mogile.web.fc2.com/nginx_wiki/start/topics/examples/phpfcgi/">https://mogile.web.fc2.com/nginx_wiki/start/topics/examples/phpfcgi/</a></p>
+<p>ℹ️ 参考：<a href="https://mogile.web.fc2.com/nginx_wiki/start/topics/examples/phpfcgi/">https://mogile.web.fc2.com/nginx_wiki/start/topics/examples/phpfcgi/</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8284,7 +8284,7 @@ $ php-fpm -t
 <h2 id="04-core">04. Core機能<a class="headerlink" href="#04-core" title="Permanent link">&para;</a></h2>
 <h3 id="_5">ブロック<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="events">▼ events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://nginx.org/en/docs/ngx_core_module.html#events">https://nginx.org/en/docs/ngx_core_module.html#events</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/ngx_core_module.html#events">https://nginx.org/en/docs/ngx_core_module.html#events</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8310,7 +8310,7 @@ $ php-fpm -t
 </code></pre></div></td></tr></table></div>
 <h4 id="worker_connections">▼ worker_connections<a class="headerlink" href="#worker_connections" title="Permanent link">&para;</a></h4>
 <p>workerプロセスが同時に処理できるコネクションの最大数を設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/ngx_core_module.html#worker_connections">https://nginx.org/en/docs/ngx_core_module.html#worker_connections</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/ngx_core_module.html#worker_connections">https://nginx.org/en/docs/ngx_core_module.html#worker_connections</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">worker_connections</span><span class="w">  </span><span class="mi">1024</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="worker_processes">▼ worker_processes<a class="headerlink" href="#worker_processes" title="Permanent link">&para;</a></h4>
@@ -8324,7 +8324,7 @@ $ php-fpm -t
 <h3 id="_7">ブロック<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="http">▼ http<a class="headerlink" href="#http" title="Permanent link">&para;</a></h4>
 <p>全てのインバウンド通信に共通する処理を設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#http">https://nginx.org/en/docs/http/ngx_http_core_module.html#http</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#http">https://nginx.org/en/docs/http/ngx_http_core_module.html#http</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8475,7 +8475,7 @@ $ php-fpm -t
 </table>
 <h4 id="server">▼ server<a class="headerlink" href="#server" title="Permanent link">&para;</a></h4>
 <p>特定のルーティング先に関する処理を設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#server">https://nginx.org/en/docs/http/ngx_http_core_module.html#server</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#server">https://nginx.org/en/docs/http/ngx_http_core_module.html#server</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8515,19 +8515,19 @@ $ php-fpm -t
 </code></pre></div></td></tr></table></div>
 <h4 id="_8">▼ リダイレクトとリライトの違い<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <p><br></p>
 <h3 id="_9">ディレクティブ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="default_type">▼ default_type<a class="headerlink" href="#default_type" title="Permanent link">&para;</a></h4>
 <p><code>Content-Type</code>ヘッダーの値が<code>mime.types</code>ファイルにないMIME typeであった場合に適用するMIME typeを設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#default_type">https://nginx.org/en/docs/http/ngx_http_core_module.html#default_type</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#default_type">https://nginx.org/en/docs/http/ngx_http_core_module.html#default_type</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>任意のMIME type（指定なし）のインバウンド通信を処理する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">default_type</span><span class="w"> </span><span class="s">application/octet-stream</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="listen">▼ listen<a class="headerlink" href="#listen" title="Permanent link">&para;</a></h4>
 <p>インバウンド通信を待ち受けるポート番号を設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#listen">https://nginx.org/en/docs/http/ngx_http_core_module.html#listen</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#listen">https://nginx.org/en/docs/http/ngx_http_core_module.html#listen</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>インバウンド通信を<code>80</code>番ポートで受信する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span><span class="w"></span>
@@ -8537,13 +8537,13 @@ $ php-fpm -t
 </code></pre></div></td></tr></table></div>
 <h4 id="sendfile">▼ sendfile<a class="headerlink" href="#sendfile" title="Permanent link">&para;</a></h4>
 <p>クライアントへのレスポンス時に、ファイル送信のためにLinuxのsendfileシステムコールを使用するか否かを設定する。ファイル返信処理をOS内で行うため、処理が速くなる。使用しない場合、Nginxがレスポンス時に自身でファイル返信処理を行う。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile">https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile">https://nginx.org/en/docs/http/ngx_http_core_module.html#sendfile</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">sendfile</span><span class="w"> </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="server_name">▼ server_name<a class="headerlink" href="#server_name" title="Permanent link">&para;</a></h4>
 <p>受信するインバウンド通信の<code>Host</code>ヘッダーの値を設定する。ちなみに<code>Host</code>ヘッダーには、インバウンド通信のルーティング先のドメイン名が割り当てられている。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name">https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name">https://nginx.org/en/docs/http/ngx_http_core_module.html#server_name</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">server_name</span><span class="w"> </span><span class="s">example.com</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>パブリックIPアドレスを直接的に記述しても良い。</p>
@@ -8554,7 +8554,7 @@ $ php-fpm -t
 </code></pre></div></td></tr></table></div>
 <h4 id="ssl">▼ ssl<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h4>
 <p>HTTPSプロトコルを受信する場合に、SSL/TLSプロトコルを有効にする必要がある。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#ssl">https://nginx.org/en/docs/http/ngx_http_core_module.html#ssl</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#ssl">https://nginx.org/en/docs/http/ngx_http_core_module.html#ssl</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">ssl</span><span class="w"> </span><span class="no">on</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -8575,7 +8575,7 @@ $ php-fpm -t
 </code></pre></div></td></tr></table></div>
 <h4 id="try_files">▼ try_files<a class="headerlink" href="#try_files" title="Permanent link">&para;</a></h4>
 <p>指定されたパスのファイルを順に探してアクセスする。また、最後のパラメーターで内部リダイレクトする。最後のパラメーターでは、異なるパスまたはステータスコードを指定できる。もし、nginxとアプリケーションを別々の仮想環境で稼働させている場合、<code>try_files</code>ディレクティブがファイル探索の対象とする場所は、あくまでnginxの稼働する仮想環境内になることに注意する。内部リダイレクトによって、nginx内でリクエストが再処理される。異なるパスに内部リダイレクトしていた場合は、パスに合ったlocationブロックで改めて処理される。内部リダイレクトは、URLを書き換えてリダイレクトせずに処理を続行する『リライト』とは異なることに注意する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files">https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files">https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -8676,7 +8676,7 @@ $ php-fpm -t
 <h3 id="_12">ディレクティブ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="index">▼ index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h4>
 <p>リクエストのURLがトレイリングスラッシュで終わる全ての場合、指定されたファイルをURLの末尾に追加する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_index_module.html">https://nginx.org/en/docs/http/ngx_http_index_module.html</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_index_module.html">https://nginx.org/en/docs/http/ngx_http_index_module.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">index</span><span class="w"> </span><span class="s">index.php</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -8685,7 +8685,7 @@ $ php-fpm -t
 <h3 id="_13">ディレクティブ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="add_header">▼ add_header<a class="headerlink" href="#add_header" title="Permanent link">&para;</a></h4>
 <p>レスポンス時に付与するレスポンスヘッダーを設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header">https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header">https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Referrer-Policyヘッダーに値を設定する</span>
@@ -8696,7 +8696,7 @@ $ php-fpm -t
 <h3 id="_14">ブロック<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <h4 id="upstream">▼ upstream<a class="headerlink" href="#upstream" title="Permanent link">&para;</a></h4>
 <p>インバウンド通信のルーティング先をグループ化する。デフォルトでは、加重ラウンドロビン方式を基に通信をルーティングする。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream">https://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream">https://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8711,13 +8711,13 @@ $ php-fpm -t
 <h3 id="_15">ディレクティブ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="fastcgi_params_1">▼ fastcgi_params<a class="headerlink" href="#fastcgi_params_1" title="Permanent link">&para;</a></h4>
 <p>FastCGIプロトコルでインバウンド通信をルーティングする場合、ルーティング先で使用する変数とその値を設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param">https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param">https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">fastcgi_param</span><span class="w"> </span><span class="s">SCRIPT_FILENAME</span><span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="fastcgi_pass">▼ fastcgi_pass<a class="headerlink" href="#fastcgi_pass" title="Permanent link">&para;</a></h4>
 <p>FastCGIプロトコルでインバウンド通信をルーティングする場合、ルーティング先のアドレスとポートを設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_pass">https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_pass</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_pass">https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_pass</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">fastcgi_pass</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">9000</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -8726,7 +8726,7 @@ $ php-fpm -t
 <h3 id="_16">ディレクティブ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="proxy_pass">▼ proxy_pass<a class="headerlink" href="#proxy_pass" title="Permanent link">&para;</a></h4>
 <p>HTTPプロトコルでインバウンド通信をルーティングする場合、ルーティング先のアドレスとポートを設定する。</p>
-<p>参考：<a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass">https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass</a></p>
+<p>ℹ️ 参考：<a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass">https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">proxy_pass</span><span class="w"> </span><span class="s">http://localhost:80</span><span class="p">;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
@@ -8737,7 +8737,7 @@ $ php-fpm -t
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

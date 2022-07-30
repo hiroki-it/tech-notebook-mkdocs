@@ -7106,14 +7106,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8166,28 +8166,28 @@
 <h1 id="fluentbit">FluentBit＠テレメトリー収集ツール<a class="headerlink" href="#fluentbit" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-fluentbit">01. FluentBitの仕組み<a class="headerlink" href="#01-fluentbit" title="Permanent link">&para;</a></h2>
 <h3 id="_2">ログパイプラインの構造<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_architecture.png" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_architecture.png" /></p>
 <p>Fluentdから概念図を拝借した。プッシュ型で収集されたログはまずインプットされる。メモリ/ファイルがバッファーとして使用され、ログはチャンクとしてステージに蓄えられる。ステージに一定サイズのチャンクが蓄えられるか、または一定時間が経過すると、チャンクはキューに格納される。キューは、指定された宛先にログを順番にルーティングする。プロセスが再起動されると、メモリ/ファイルに蓄えられたログは破棄されてしまう。ちなみに、AWS Kinesis Data Firehoseも似たようなバッファリングとルーティングの仕組みを持っている。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1402/06/news007.html">https://atmarkit.itmedia.co.jp/ait/articles/1402/06/news007.html</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/1402/06/news007.html">https://atmarkit.itmedia.co.jp/ait/articles/1402/06/news007.html</a></p>
 <p><br></p>
 <h3 id="_3">バッファーの構造<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>バッファーは、ステージとキューから構成される。ログは、『<code>*-*.*.flb</code>』という名前のチャンクとして扱われている。</p>
-<p>参考：<a href="https://www.alpha.co.jp/blog/202103_01">https://www.alpha.co.jp/blog/202103_01</a></p>
+<p>ℹ️ 参考：<a href="https://www.alpha.co.jp/blog/202103_01">https://www.alpha.co.jp/blog/202103_01</a></p>
 <p><img alt="fluent-bit_architecture_buffer" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_architecture_buffer.png" /></p>
 <p><br></p>
 <h3 id="_4">複数のログパイプラインの集約<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>複数のFluentBitを稼働させる場合、アウトプット先がそれぞれのログパイプラインを受信してもよいが、前段にメッセージキューを配置しても良い。メッセージキューを配置することにより、ログパイプラインが乱雑せずに集約できるようになる。</p>
-<p>参考：<a href="https://www.forcia.com/blog/001316.html">https://www.forcia.com/blog/001316.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.forcia.com/blog/001316.html">https://www.forcia.com/blog/001316.html</a></p>
 <p><img alt="fluent-bit_message-queue" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_message-queue.png" /></p>
 <p><br></p>
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="conf">confファイル<a class="headerlink" href="#conf" title="Permanent link">&para;</a></h3>
 <p>セクションを設定できる。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/configuration-file">https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/configuration-file</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/configuration-file">https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/configuration-file</a></p>
 <p><br></p>
 <h3 id="_5">コマンド<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ 一覧<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -8248,7 +8248,7 @@ Available Options
 </code></pre></div></td></tr></table></div>
 <h4 id="-c">▼ -c<a class="headerlink" href="#-c" title="Permanent link">&para;</a></h4>
 <p>設定ファイルのバリデーションは、開発環境にて、以下サイトや再起動を伴う<code>--config</code>オプションから行う。これら以外に再起動を伴わない<code>--dry-run</code>オプションがあるが、このオプションは経験則で精度が低いため、参考程度にする。</p>
-<p>参考：<a href="https://cloud.calyptia.com/visualizer">https://cloud.calyptia.com/visualizer</a></p>
+<p>ℹ️ 参考：<a href="https://cloud.calyptia.com/visualizer">https://cloud.calyptia.com/visualizer</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ /fluent-bit/bin/fluent-bit --config<span class="o">=</span>/fluent-bit/etc/fluent-bit_custom.conf
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8257,7 +8257,7 @@ Available Options
 <p>パイプライン全体の設定やファイルの読み出しを設定する。各設定の頭文字は大文字とする。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>フラッシュについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/47735850/what-exactly-is-flushing">https://stackoverflow.com/questions/47735850/what-exactly-is-flushing</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/47735850/what-exactly-is-flushing">https://stackoverflow.com/questions/47735850/what-exactly-is-flushing</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8355,9 +8355,9 @@ Available Options
 <h3 id="input">INPUTとは<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_input" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_input.png" /></p>
 <p>ログのパイプラインへのインプット方法を設定する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/input">https://docs.fluentbit.io/manual/concepts/data-pipeline/input</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/input">https://docs.fluentbit.io/manual/concepts/data-pipeline/input</a></p>
 <p>プラグインを使用して、ログのインプット方法を設定する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs">https://docs.fluentbit.io/manual/pipeline/inputs</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs">https://docs.fluentbit.io/manual/pipeline/inputs</a></p>
 <p>コマンドの<code>-i</code>オプションでINPUT名を指定し、実行もできる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8419,7 +8419,7 @@ Available Options
 <h3 id="dummy">dummyプラグイン<a class="headerlink" href="#dummy" title="Permanent link">&para;</a></h3>
 <h4 id="dummy_1">▼ dummyプラグインとは<a class="headerlink" href="#dummy_1" title="Permanent link">&para;</a></h4>
 <p>ダミーの構造化ログをパイプラインにインプットする。非構造化ログはインプットデータとして使用できない。開発環境でパイプラインの動作を確認するために役立つ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/pipeline/inputs/dummy">https://docs.fluentbit.io/manual/pipeline/inputs/dummy</a></li>
 <li><a href="https://docs.fluentbit.io/manual/local-testing/logging-pipeline">https://docs.fluentbit.io/manual/local-testing/logging-pipeline</a></li>
@@ -8449,7 +8449,7 @@ Available Options
 <h4 id="forward_1">▼ forwardプラグインとは<a class="headerlink" href="#forward_1" title="Permanent link">&para;</a></h4>
 <p>受信したログを指定されたポートで受信し、パイプラインにインプットする。</p>
 <h4 id="_10">▼ セットアップ<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/forward">https://docs.fluentbit.io/manual/pipeline/inputs/forward</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/forward">https://docs.fluentbit.io/manual/pipeline/inputs/forward</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8501,7 +8501,7 @@ Available Options
 <h4 id="tail_1">▼ tailプラグインとは<a class="headerlink" href="#tail_1" title="Permanent link">&para;</a></h4>
 <p>指定したパスに継続的にアウトプットされるログファイルを順次結合し、パイプラインにインプットする。あらかじめ、FluentBitコンテナ内にログファイルを配置する必要があり、<code>Path</code>でこれを指定する。<code>v1.8</code>を境にオプションが変わっていることに注意する。</p>
 <h4 id="_12">▼ セットアップ<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/tail">https://docs.fluentbit.io/manual/pipeline/inputs/tail</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/tail">https://docs.fluentbit.io/manual/pipeline/inputs/tail</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8535,7 +8535,7 @@ Available Options
 </code></pre></div></td></tr></table></div>
 <h4 id="_13">▼ コマンド<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/tail#command-line">https://docs.fluentbit.io/manual/pipeline/inputs/tail#command-line</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/inputs/tail#command-line">https://docs.fluentbit.io/manual/pipeline/inputs/tail#command-line</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8580,13 +8580,13 @@ Available Options
 <h3 id="parser">PARSERとは<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_parser" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_parser.png" /></p>
 <p>非構造化ログを構造化ログに変換する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/parser">https://docs.fluentbit.io/manual/concepts/data-pipeline/parser</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/parser">https://docs.fluentbit.io/manual/concepts/data-pipeline/parser</a></p>
 <p><br></p>
 <h2 id="03-04-filter">03-04. FILTER<a class="headerlink" href="#03-04-filter" title="Permanent link">&para;</a></h2>
 <h3 id="filter">FILTERとは<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_filter" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_filter.png" /></p>
 <p>ログのキーや値を加工する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/filter">https://docs.fluentbit.io/manual/concepts/data-pipeline/filter</a></li>
 <li><a href="https://docs.fluentbit.io/manual/concepts/key-concepts#filtering">https://docs.fluentbit.io/manual/concepts/key-concepts#filtering</a></li>
@@ -8595,7 +8595,7 @@ Available Options
 <h3 id="grep">grepプラグイン<a class="headerlink" href="#grep" title="Permanent link">&para;</a></h3>
 <h4 id="grep_1">▼ grepプラグインとは<a class="headerlink" href="#grep_1" title="Permanent link">&para;</a></h4>
 <p>ログが構造化ログの場合に、マッチしたキーにマッチするログ以外を破棄する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/grep">https://docs.fluentbit.io/manual/pipeline/filters/grep</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/grep">https://docs.fluentbit.io/manual/pipeline/filters/grep</a></p>
 <h4 id="_14">▼ セットアップ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8610,7 +8610,7 @@ Available Options
 <h4 id="modify_1">▼ modifyプラグインとは<a class="headerlink" href="#modify_1" title="Permanent link">&para;</a></h4>
 <p>ログが構造化ログの場合に、キーや値の追加/コピー/変更/削除を実行する。</p>
 <h4 id="_15">▼ セットアップ<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/pipeline/filters/modify">https://docs.fluentbit.io/manual/pipeline/filters/modify</a></li>
 <li><a href="https://kazuhira-r.hatenablog.com/entry/2020/08/16/225251">https://kazuhira-r.hatenablog.com/entry/2020/08/16/225251</a></li>
@@ -8647,9 +8647,9 @@ Available Options
 <h3 id="multiline">multilineプラグイン<a class="headerlink" href="#multiline" title="Permanent link">&para;</a></h3>
 <h4 id="multiline_1">▼ multilineプラグインとは<a class="headerlink" href="#multiline_1" title="Permanent link">&para;</a></h4>
 <p>マッチした複数行のログを結合する。結合ルールは、MULTILINE_PARSERの設定ファイルに定義し、これをSERVICEで読み込む必要がある。ただし、本番環境ではログが複数行にならないようにアプリケーション側で実装を行い、ログを収集して可視化する段階でフィルタリングできれば問題ない、という考え方もある。</p>
-<p>参考：<a href="https://qiita.com/roundrop@github/items/8989b7f29d70f618e503">https://qiita.com/roundrop@github/items/8989b7f29d70f618e503</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/roundrop@github/items/8989b7f29d70f618e503">https://qiita.com/roundrop@github/items/8989b7f29d70f618e503</a></p>
 <h4 id="_16">▼ セットアップ<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/multiline-stacktrace">https://docs.fluentbit.io/manual/pipeline/filters/multiline-stacktrace</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/multiline-stacktrace">https://docs.fluentbit.io/manual/pipeline/filters/multiline-stacktrace</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8711,7 +8711,7 @@ Available Options
 </code></pre></div></td></tr></table></div>
 <h4 id="multiline_parser">▼ MULTILINE_PARSER<a class="headerlink" href="#multiline_parser" title="Permanent link">&para;</a></h4>
 <p>複数行のログを結合するためのルールを設定する。ここで定義したパーサー名を、multilineプラグインで指定する必要がある。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing">https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing">https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/multiline-parsing</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>Laravelのスタックトレースを結合する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8756,25 +8756,25 @@ Available Options
 <h3 id="parser_1">parserプラグイン<a class="headerlink" href="#parser_1" title="Permanent link">&para;</a></h3>
 <h4 id="parser_2">▼ parserプラグインとは<a class="headerlink" href="#parser_2" title="Permanent link">&para;</a></h4>
 <p>マッチしたログを解析し、正規表現の名前付きキャプチャ機能（<code>?&lt;foo&gt;</code>）を使用して新しいキーに文字列を抽出する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/pipeline/filters/parser">https://docs.fluentbit.io/manual/pipeline/filters/parser</a></li>
 <li><a href="https://docs.fluentbit.io/manual/v/1.0/parser/regular_expression">https://docs.fluentbit.io/manual/v/1.0/parser/regular_expression</a></li>
 </ul>
 <p>FluentBitでの名前付きキャプチャについては、Fluentdのドキュメントを参考にせよ。</p>
-<p>参考：<a href="https://docs.fluentd.org/parser/regexp">https://docs.fluentd.org/parser/regexp</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentd.org/parser/regexp">https://docs.fluentd.org/parser/regexp</a></p>
 <h4 id="_17">▼ バリデーション<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>FluentBitは、内部的にはruby製関数を使用して正規表現を検証している。そのため、これを確認できるバリデーションツールを使用する。</p>
-<p>参考：<a href="http://rubular.com/">http://rubular.com/</a></p>
+<p>ℹ️ 参考：<a href="http://rubular.com/">http://rubular.com/</a></p>
 <p>代わりに、Fluentdの正規表現チェッカーでも良い。</p>
-<p>参考：<a href="http://fluentular.herokuapp.com/">http://fluentular.herokuapp.com/</a></p>
+<p>ℹ️ 参考：<a href="http://fluentular.herokuapp.com/">http://fluentular.herokuapp.com/</a></p>
 <h4 id="_18">▼ セットアップ<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/parser">https://docs.fluentbit.io/manual/pipeline/filters/parser</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/parser">https://docs.fluentbit.io/manual/pipeline/filters/parser</a></p>
 <p><br></p>
 <h3 id="stdout">stdoutプラグイン<a class="headerlink" href="#stdout" title="Permanent link">&para;</a></h3>
 <h4 id="stdout_1">▼ stdoutプラグインとは<a class="headerlink" href="#stdout_1" title="Permanent link">&para;</a></h4>
 <p>マッチしたログを、OUTPUTを経ずにそのまま標準出力に出力する。FILTERまでのパイプラインが正しく機能しているかのデバッグとして役立つ。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/standard-output">https://docs.fluentbit.io/manual/pipeline/filters/standard-output</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/filters/standard-output">https://docs.fluentbit.io/manual/pipeline/filters/standard-output</a></p>
 <h4 id="_19">▼ セットアップ<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8832,7 +8832,7 @@ Available Options
 <h3 id="stream_task">STREAM_TASKとは<a class="headerlink" href="#stream_task" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_stream-task" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_stream-task.png" /></p>
 <p>現在のデータストリームからログを抽出し、新しいストリームを作成する。このストリームは、パイプラインのINPUTに再び取り込まれ、処理し直される。同時に、SERVICEでSTREAM_TASKの設定ファイルを読み込む必要がある。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/stream-processing/overview#stream-processor">https://docs.fluentbit.io/manual/stream-processing/overview#stream-processor</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/stream-processing/overview#stream-processor">https://docs.fluentbit.io/manual/stream-processing/overview#stream-processor</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">[</span>SERVICE<span class="o">]</span>
     Streams_File stream_processor.conf
@@ -8841,10 +8841,10 @@ Available Options
 <h3 id="sql">SQLステートメント<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
 <h4 id="sql_1">▼ SQLステートメントとは<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h4>
 <p>STREAM_TASKセッションは、独自のSQLステートメントで定義される。</p>
-<p>参考：<a href="https://github.com/fluent/fluent-bit/tree/master/src/stream_processor">https://github.com/fluent/fluent-bit/tree/master/src/stream_processor</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/fluent/fluent-bit/tree/master/src/stream_processor">https://github.com/fluent/fluent-bit/tree/master/src/stream_processor</a></p>
 <h4 id="create-stream">▼ CREATE STREAM<a class="headerlink" href="#create-stream" title="Permanent link">&para;</a></h4>
 <p>SELECTステートメントの結果を使用して、データストリームを作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#create-stream-statement">https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#create-stream-statement</a></li>
 <li><a href="https://docs.fluentbit.io/manual/v/1.3/configuration/stream_processor#configuration-example">https://docs.fluentbit.io/manual/v/1.3/configuration/stream_processor#configuration-example</a></li>
@@ -8870,7 +8870,7 @@ Available Options
 </code></pre></div></td></tr></table></div>
 <h4 id="select">▼ SELECT<a class="headerlink" href="#select" title="Permanent link">&para;</a></h4>
 <p>マッチしたログから、指定したキーを抽出する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#select-statement">https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#select-statement</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#select-statement">https://docs.fluentbit.io/manual/stream-processing/getting-started/fluent-bit-sql#select-statement</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>タグが<code>*-bar-*</code>（ワイルドカード指定）であるログのうち、<code>container_name</code>キー値が<code>qux</code>であるものだけをフィルタリングし、これの<code>log</code>キーを抽出する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>SELECT log FROM TAG:<span class="s1">&#39;*-foo-*&#39;</span> WHERE <span class="nv">container_name</span> <span class="o">=</span> <span class="s1">&#39;qux&#39;</span><span class="p">;</span>
@@ -8896,7 +8896,7 @@ Available Options
 <h3 id="buffer">BUFFERとは<a class="headerlink" href="#buffer" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_buffer" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_buffer.png" /></p>
 <p>ログを蓄え、またこれを順番にROUTINGに渡す。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/buffer">https://docs.fluentbit.io/manual/concepts/data-pipeline/buffer</a></li>
 <li><a href="https://docs.fluentbit.io/manual/administration/buffering-and-storage">https://docs.fluentbit.io/manual/administration/buffering-and-storage</a></li>
@@ -8909,7 +8909,7 @@ Available Options
 <p>バッファーとして使用する媒体を設定する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>メモリ上でバッファリングを実行する。デフォルト値である。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration">https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration">https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8928,7 +8928,7 @@ Available Options
 </code></pre></div></td></tr></table></div>
 <p><strong>＊実装例＊</strong></p>
 <p>ファイル上でバッファリングを実行する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration">https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration">https://docs.fluentbit.io/manual/administration/buffering-and-storage#input-section-configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8963,7 +8963,7 @@ Available Options
 <h3 id="routingoutput">ROUTING、OUTPUTとは<a class="headerlink" href="#routingoutput" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_output" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_output.png" /></p>
 <p>ログのアウトプット先を設定する。設定できるアウトプット先の種類については、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/output">https://docs.fluentbit.io/manual/concepts/data-pipeline/output</a></li>
 <li><a href="https://docs.fluentbit.io/manual/concepts/data-pipeline/router">https://docs.fluentbit.io/manual/concepts/data-pipeline/router</a></li>
@@ -9047,16 +9047,16 @@ Available Options
 <p>全てのAWS系プラグインを含んでいる</p>
 <h4 id="_21">▼ セットアップ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>AWSから提供される他の全てのFluentBitイメージを束ねたベースイメージを使用する。</p>
-<p>参考：<a href="https://github.com/aws/aws-for-fluent-bit">https://github.com/aws/aws-for-fluent-bit</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/aws-for-fluent-bit">https://github.com/aws/aws-for-fluent-bit</a></p>
 <p><br></p>
 <h3 id="cloudwatch_log">cloudwatch_logプラグイン<a class="headerlink" href="#cloudwatch_log" title="Permanent link">&para;</a></h3>
 <h4 id="cloudwatch_log_1">▼ cloudwatch_logプラグインとは<a class="headerlink" href="#cloudwatch_log_1" title="Permanent link">&para;</a></h4>
 <p>ログをCloudWatchログにルーティングする。</p>
 <h4 id="_22">▼ セットアップ<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>cloudwatch_logsプラグインがプリインストールされているベースイメージを使用する。</p>
-<p>参考：<a href="https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit">https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit">https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit</a></p>
 <p>設定ファイルに予約されたAWS変数については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit#templating-log-group-and-stream-names">https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit#templating-log-group-and-stream-names</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit#templating-log-group-and-stream-names">https://github.com/aws/amazon-cloudwatch-logs-for-fluent-bit#templating-log-group-and-stream-names</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9104,7 +9104,7 @@ Available Options
     log_stream_name   container/nginx/<span class="k">$(</span>ecs_task_id<span class="k">)</span>
 </code></pre></div></td></tr></table></div>
 <p>CloudWatchログに送信されるデータはJSON型である。<code>log</code>キーにログが割り当てられている。特定のキーの値のみをCloudWatchログに送信する場合、log_keyオプションでキー名を設定する。例えば、<code>log</code>キーのみを送信する場合、『<code>log</code>』と設定する。</p>
-<p>参考：<a href="https://blog.msysh.me/posts/2020/07/split_logs_into_multiple_target_with_firelens_and_rewrite_tag.html">https://blog.msysh.me/posts/2020/07/split_logs_into_multiple_target_with_firelens_and_rewrite_tag.html</a></p>
+<p>ℹ️ 参考：<a href="https://blog.msysh.me/posts/2020/07/split_logs_into_multiple_target_with_firelens_and_rewrite_tag.html">https://blog.msysh.me/posts/2020/07/split_logs_into_multiple_target_with_firelens_and_rewrite_tag.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9131,7 +9131,7 @@ Available Options
 <p>ログをdatadogプラグインにルーティングする。</p>
 <h4 id="_23">▼ セットアップ<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>全てのベースイメージにdatadogプラグインがプリインストールされているため、datadogプラグインのインストールは不要である。</p>
-<p>参考：<a href="https://github.com/DataDog/fluent-plugin-datadog">https://github.com/DataDog/fluent-plugin-datadog</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/DataDog/fluent-plugin-datadog">https://github.com/DataDog/fluent-plugin-datadog</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9202,19 +9202,19 @@ Available Options
 <h3 id="kinesis_firehose">kinesis_firehoseプラグイン<a class="headerlink" href="#kinesis_firehose" title="Permanent link">&para;</a></h3>
 <h4 id="kinesis_firehose_1">▼ kinesis_firehoseプラグインとは<a class="headerlink" href="#kinesis_firehose_1" title="Permanent link">&para;</a></h4>
 <p>ログをKinesisFirehoseにルーティングする。kinesis_firehoseプラグインがプリインストールされているベースイメージを使用する。</p>
-<p>参考：<a href="https://github.com/aws/amazon-kinesis-firehose-for-fluent-bit">https://github.com/aws/amazon-kinesis-firehose-for-fluent-bit</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/amazon-kinesis-firehose-for-fluent-bit">https://github.com/aws/amazon-kinesis-firehose-for-fluent-bit</a></p>
 <p><br></p>
 <h3 id="kinesis_streams">kinesis_streamsプラグイン<a class="headerlink" href="#kinesis_streams" title="Permanent link">&para;</a></h3>
 <h4 id="kinesis_streams_1">▼ kinesis_streamsプラグインとは<a class="headerlink" href="#kinesis_streams_1" title="Permanent link">&para;</a></h4>
 <p>ログをKinesisStreamsにルーティングする。kinesis_streamsプラグインがプリインストールされているベースイメージを使用する。</p>
-<p>参考：<a href="https://github.com/aws/amazon-kinesis-streams-for-fluent-bit">https://github.com/aws/amazon-kinesis-streams-for-fluent-bit</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/amazon-kinesis-streams-for-fluent-bit">https://github.com/aws/amazon-kinesis-streams-for-fluent-bit</a></p>
 <p><br></p>
 <h3 id="newrelic">newRelicプラグイン<a class="headerlink" href="#newrelic" title="Permanent link">&para;</a></h3>
 <h4 id="newrelic_1">▼ newRelicプラグインとは<a class="headerlink" href="#newrelic_1" title="Permanent link">&para;</a></h4>
 <p>ログをNewRelicにルーティングする。</p>
 <h4 id="_24">▼ セットアップ<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>newRelicプラグインがプリインストールされているベースイメージを使用する。</p>
-<p>参考：<a href="https://github.com/newrelic/newrelic-fluent-bit-output">https://github.com/newrelic/newrelic-fluent-bit-output</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/newrelic/newrelic-fluent-bit-output">https://github.com/newrelic/newrelic-fluent-bit-output</a></p>
 <p><br></p>
 <h3 id="stdout_2">stdoutプラグイン<a class="headerlink" href="#stdout_2" title="Permanent link">&para;</a></h3>
 <h4 id="stdout_3">▼ stdoutプラグインとは<a class="headerlink" href="#stdout_3" title="Permanent link">&para;</a></h4>
@@ -9229,7 +9229,7 @@ Available Options
 <h3 id="null">nullプラグイン<a class="headerlink" href="#null" title="Permanent link">&para;</a></h3>
 <h4 id="null_1">▼ nullプラグインとは<a class="headerlink" href="#null_1" title="Permanent link">&para;</a></h4>
 <p>アウトプットを破棄する。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/outputs/null">https://docs.fluentbit.io/manual/pipeline/outputs/null</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/outputs/null">https://docs.fluentbit.io/manual/pipeline/outputs/null</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9255,7 +9255,7 @@ Available Options
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6666,14 +6666,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7280,7 +7280,7 @@
 <h1 id="prometheus">マニフェストファイル＠Prometheus<a class="headerlink" href="#prometheus" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-alertmanager">01. Alertmanager<a class="headerlink" href="#01-alertmanager" title="Permanent link">&para;</a></h2>
 <h3 id="alertmanager">Alertmanagerとは<a class="headerlink" href="#alertmanager" title="Permanent link">&para;</a></h3>
@@ -7305,12 +7305,12 @@
 <h2 id="06-prometheusrule">06. PrometheusRule<a class="headerlink" href="#06-prometheusrule" title="Permanent link">&para;</a></h2>
 <h3 id="prometheusrule">PrometheusRuleとは<a class="headerlink" href="#prometheusrule" title="Permanent link">&para;</a></h3>
 <p>アラートルールとレコーディングルールを決定する。PrometheusRuleの定義に応じて、prometheusコンテナの<code>/etc/prometheus/rules</code>ディレクトリ配下にルールの設定ファイルが配置される。</p>
-<p>参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/">https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/">https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/</a></p>
 <p><br></p>
 <h3 id="specgroups">spec.groups<a class="headerlink" href="#specgroups" title="Permanent link">&para;</a></h3>
 <h4 id="groups">▼ groupsとは<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h4>
 <p>アラートグループを設定できる。アラートが多すぎる場合に、アラートをグループ化し、通知頻度を調節すると良い。</p>
-<p>参考：<a href="https://prometheus.io/docs/alerting/latest/alertmanager/#grouping">https://prometheus.io/docs/alerting/latest/alertmanager/#grouping</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/alerting/latest/alertmanager/#grouping">https://prometheus.io/docs/alerting/latest/alertmanager/#grouping</a></p>
 <h4 id="name">▼ name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h4>
 <p>グループ名を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7341,7 +7341,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="rules">▼ rules<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h4>
 <p>アラートのルールを設定する。</p>
-<p>参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/">https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/</a></p>
+<p>ℹ️ 参考：<a href="https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/">https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/</a></p>
 <table>
 <thead>
 <tr>
@@ -7412,7 +7412,7 @@
 <h2 id="07-servicemonitor">07. ServiceMonitor<a class="headerlink" href="#07-servicemonitor" title="Permanent link">&para;</a></h2>
 <h3 id="servicemonitor">ServiceMonitorとは<a class="headerlink" href="#servicemonitor" title="Permanent link">&para;</a></h3>
 <p>Serviceに対してPull型通信を送信し、これに紐づくリソースのメトリクスのデータポイントを収集する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://prometheus-operator.dev/docs/operator/design/#servicemonitor">https://prometheus-operator.dev/docs/operator/design/#servicemonitor</a></li>
 <li><a href="https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part5.html">https://www.ogis-ri.co.jp/otc/hiroba/technical/kubernetes_use/part5.html</a></li>
@@ -7442,7 +7442,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="path">▼ path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h4>
 <p>Serviceの待ち受けるパスを設定する。</p>
-<p>参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
+<p>ℹ️ 参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7461,7 +7461,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="port">▼ port<a class="headerlink" href="#port" title="Permanent link">&para;</a></h4>
 <p>Serviceの待ち受けるポート名を設定する。</p>
-<p>参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
+<p>ℹ️ 参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7538,7 +7538,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="matchnames">▼ matchNames<a class="headerlink" href="#matchnames" title="Permanent link">&para;</a></h4>
 <p>特定のNamespaceを収集対象として設定する。</p>
-<p>参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
+<p>ℹ️ 参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7573,7 +7573,7 @@
 <h3 id="specselector">spec.selector<a class="headerlink" href="#specselector" title="Permanent link">&para;</a></h3>
 <h4 id="matchlabels">▼ matchLabels<a class="headerlink" href="#matchlabels" title="Permanent link">&para;</a></h4>
 <p>収集の対象とするServiceに付与された<code>metadata.labels</code>キーを設定する。</p>
-<p>参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
+<p>ℹ️ 参考：<a href="https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/">https://mizunashi-mana.github.io/blog/posts/2020/07/prometheus-operator/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7620,7 +7620,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

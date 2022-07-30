@@ -6911,14 +6911,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7770,11 +7770,11 @@
 <h1 id="eloquent-ormlaravel">Eloquent ORM＠Laravel<a class="headerlink" href="#eloquent-ormlaravel" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-eloquent-orm">01. Eloquent ORMとは<a class="headerlink" href="#01-eloquent-orm" title="Permanent link">&para;</a></h2>
 <p>Laravelに組み込まれているORM。Active Recordパターンで実装されている。内部にはPDOが使用されており、Laravelクエリビルダよりも隠蔽度が高い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/eloquent.html">https://readouble.com/laravel/8.x/ja/eloquent.html</a></li>
 <li><a href="https://codezine.jp/article/detail/12805">https://codezine.jp/article/detail/12805</a></li>
@@ -7783,7 +7783,7 @@
 <h2 id="01-02-active-record">01-02. Active Recordパターン<a class="headerlink" href="#01-02-active-record" title="Permanent link">&para;</a></h2>
 <h3 id="active-record">Active Recordパターンとは<a class="headerlink" href="#active-record" title="Permanent link">&para;</a></h3>
 <p>テーブルとモデルが一対一の関係になるデザインパターンのこと。さらに、テーブル間のリレーションシップがそのままモデル間の依存関係にも反映される。ビジネスロジックが複雑でないアプリケーションの開発に適している。オブジェクト間の依存関係については、以下のリンクを参考せよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_class_based.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_class_based.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_class_based.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_class_based.html</a></p>
 <p><img alt="ActiveRecord" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ActiveRecord.png" /></p>
 <p><br></p>
 <h3 id="_2">メリット/デメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7870,14 +7870,14 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_4">▼ テーブル間リレーションシップの定義<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>ER図における各テーブルのリレーションシップを元に、モデル間の関連性を定義する。<code>hasOne</code>メソッド、<code>hasMany</code>メソッド、<code>belongsTo</code>メソッドを使用して表現する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-one">https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-one</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-many">https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-many</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-many-inverse">https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#one-to-many-inverse</a></li>
 </ul>
 <p>ER図については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_analysis_and_design.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_analysis_and_design.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_analysis_and_design.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_analysis_and_design.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>Departmentモデルで、<code>hasMany</code>メソッドを使用して、Departmentモデル（親）とEmployeesモデル（子）のテーブル関係を定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8466,7 +8466,7 @@
 <h3 id="crud">CRUDメソッドの返却値型と返却値<a class="headerlink" href="#crud" title="Permanent link">&para;</a></h3>
 <h4 id="crud_1">▼ CRUDメソッドを持つクラス<a class="headerlink" href="#crud_1" title="Permanent link">&para;</a></h4>
 <p>Eloquentモデルを継承すると、以下のクラスからメソッドをコールできるようになる。Eloquentモデルにはより上位のメソッドが定義されていないことがあり、もし定義されていないものがコールされた場合、<code>__callStatic</code>メソッド（静的コールによる）や<code>__call</code>メソッド（非静的コールによる）が代わりにコールされ、より上位クラスのメソッドをコールできる。どちらの方法でコールしても同じである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.php.net/manual/ja/language.oop5.overloading.php#object.call">https://www.php.net/manual/ja/language.oop5.overloading.php#object.call</a></li>
 <li><a href="https://qiita.com/mpyw/items/7c7e8dc665584122a275">https://qiita.com/mpyw/items/7c7e8dc665584122a275</a></li>
@@ -8504,7 +8504,7 @@
 </table>
 <h4 id="eloquent_2">▼ Eloquentビルダー<a class="headerlink" href="#eloquent_2" title="Permanent link">&para;</a></h4>
 <p>Eloquentビルダーが持つcrudを実行するメソッドの返却値型と返却値は以下の通りである。その他のメソッドについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Builder.html">https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Builder.html</a></p>
+<p>ℹ️ 参考：<a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Builder.html">https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Builder.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8543,7 +8543,7 @@
 </table>
 <h4 id="eloquent_3">▼ Eloquentモデル<a class="headerlink" href="#eloquent_3" title="Permanent link">&para;</a></h4>
 <p>Eloquentモデルが持つcrudを実行するメソッドの返却値型と返却値は以下の通りである。その他のメソッドについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Model.html">https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Model.html</a></p>
+<p>ℹ️ 参考：<a href="https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Model.html">https://laravel.com/api/8.x/Illuminate/Database/Eloquent/Model.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8578,7 +8578,7 @@
 <h3 id="create">CREATE<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
 <h4 id="create_1">▼ <code>create</code>メソッド<a class="headerlink" href="#create_1" title="Permanent link">&para;</a></h4>
 <p>INSERT文を実行する。Eloquentモデルには<code>create</code>メソッドがないため、代わりにEloquentビルダーが持つ<code>create</code>メソッドがコールされる。<code>create</code>メソッドに挿入先のカラムと値を渡し、これを実行する。別の方法として、Eloquentビルダーの<code>fill</code>メソッドで挿入先のカラムと値を設定し、<code>save</code>メソッドを実行しても良い。<code>save</code>メソッドはUPDATE処理も実行できるが、<code>fill</code>メソッドでID値を割り当てない場合は、CREATE処理が実行される。<code>create</code>メソッドまたは<code>save</code>メソッドによるCREATE処理では、レコードの挿入後に、<code>lastInsertId</code>メソッドに相当する処理が実行される。これにより、挿入されたレコードのプライマリーキーが取得され、EloquentモデルのID値のプロパティに保持される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://codelikes.com/laravel-eloquent-basic/#toc9">https://codelikes.com/laravel-eloquent-basic/#toc9</a></li>
 <li><a href="https://qiita.com/henriquebremenkanp/items/cd13944b0281297217a9">https://qiita.com/henriquebremenkanp/items/cd13944b0281297217a9</a></li>
@@ -8675,7 +8675,7 @@
 <h3 id="read">READ<a class="headerlink" href="#read" title="Permanent link">&para;</a></h3>
 <h4 id="all">▼ <code>all</code>メソッド<a class="headerlink" href="#all" title="Permanent link">&para;</a></h4>
 <p>レコードを全て取得するSELECT句を発行する。MySQLを含むDBエンジンでは、取得結果に標準の並び順が存在しないため、プライマリーキーの昇順で取得したい場合は、<code>orderBy</code>メソッドを使用して、明示的に並び替えるようにする。Eloquentモデルには<code>all</code>メソッドがないため、代わりにEloquentビルダーが持つ<code>all</code>メソッドがコールされる。全てのプライマリーキーのCollection型を配列型として返却する。<code>toArray</code>メソッドで配列型に再帰的に変換できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li>
 <p><a href="https://stackoverflow.com/questions/54526479/what-is-the-dafault-ordering-in-laravel-eloquent-modelall-function">https://stackoverflow.com/questions/54526479/what-is-the-dafault-ordering-in-laravel-eloquent-modelall-function</a></p>
@@ -8730,7 +8730,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="find">▼ <code>find</code>メソッド<a class="headerlink" href="#find" title="Permanent link">&para;</a></h4>
 <p>レコードを1つ取得するSELECT句を発行する。Eloquentモデルには<code>find</code>メソッドがないため、代わりにEloquentビルダーが持つ<code>find</code>メソッドがコールされる。引数としてプライマリーキーを渡した場合、指定したプライマリーキーを持つEloquentモデルを返却する。<code>toArray</code>メソッドで配列型に変換できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://laravel.com/api/8.x/Illuminate/Database/Query/Builder.html#method_find">https://laravel.com/api/8.x/Illuminate/Database/Query/Builder.html#method_find</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/eloquent.html#retrieving-single-models">https://readouble.com/laravel/8.x/ja/eloquent.html#retrieving-single-models</a></li>
@@ -8825,7 +8825,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="limitoffset">▼ <code>limit</code>メソッド、<code>offset</code>メソッド<a class="headerlink" href="#limitoffset" title="Permanent link">&para;</a></h4>
 <p>開始地点から指定した件数のレコードを全て取得するSELECT句を発行する。これにより、ページネーションで、1ページ当たりのレコード数（<code>limit</code>）と、次のページの開始レコード（<code>offset</code>）を定義できる。これらのパラメーターはクエリパラメーターとして渡すと良い。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset">https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset">https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8877,7 +8877,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="orderby">▼ <code>orderBy</code>メソッド<a class="headerlink" href="#orderby" title="Permanent link">&para;</a></h4>
 <p>指定したカラムの昇順/降順でレコードを並び替えるSELECT句を発行する。並び替えた結果を取得するためには、<code>get</code>メソッドを使用する。プライマリーキーの昇順で取得する場合、<code>all</code>メソッドではなく、<code>orderBy</code>メソッドを使用して、プライマリーキーの昇順を明示的に設定する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset">https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset">https://readouble.com/laravel/8.x/ja/queries.html#ordering-grouping-limit-and-offset</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8945,7 +8945,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="sortby">▼ <code>sortBy</code>メソッド<a class="headerlink" href="#sortby" title="Permanent link">&para;</a></h4>
 <p>指定したカラムの昇順でレコードを並び替えるSELECT句を発行する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/collections.html#method-sortby">https://readouble.com/laravel/8.x/ja/collections.html#method-sortby</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/collections.html#method-sortby">https://readouble.com/laravel/8.x/ja/collections.html#method-sortby</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8989,7 +8989,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="sortbydesc">▼ <code>sortByDesc</code>メソッド<a class="headerlink" href="#sortbydesc" title="Permanent link">&para;</a></h4>
 <p>指定したカラムの降順でレコードを並び替えるSELECT句を発行する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/collections.html#method-sortbydesc">https://readouble.com/laravel/8.x/ja/collections.html#method-sortbydesc</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/collections.html#method-sortbydesc">https://readouble.com/laravel/8.x/ja/collections.html#method-sortbydesc</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9032,9 +9032,9 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="with">▼ <code>with</code>メソッド<a class="headerlink" href="#with" title="Permanent link">&para;</a></h4>
 <p>親テーブルにアクセスして全てのデータを取得し、親テーブルのEloquentモデルのプロパティに子テーブルのレコードを保持する。この仕組みをEagerロードという。Eloquentモデルには<code>with</code>メソッドがないため、代わりにEloquentビルダーが持つ<code>with</code>メソッドがコールされる。テーブル間に一対多（親子）のリレーションシップがある場合に使用する。N+1問題を防げる。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#eager-loading">https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#eager-loading</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#eager-loading">https://readouble.com/laravel/8.x/ja/eloquent-relationships.html#eager-loading</a></p>
 <p>ただし、<code>with</code>メソッドに他のメソッドをチェーンしてしまうと、Eagerロードの後にSQLを発行されてしまうため、Eagerロードの恩恵を得られなくなることに注意する。</p>
-<p>参考：<a href="https://qiita.com/shosho/items/abf6423283f761703d01#%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%82%BD%E3%83%89%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%A8-eager-loading-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%A6%E3%82%82%E6%84%8F%E5%91%B3%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B3%A8%E6%84%8F">https://qiita.com/shosho/items/abf6423283f761703d01#%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%82%BD%E3%83%89%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%A8-eager-loading-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%A6%E3%82%82%E6%84%8F%E5%91%B3%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B3%A8%E6%84%8F</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/shosho/items/abf6423283f761703d01#%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%82%BD%E3%83%89%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%A8-eager-loading-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%A6%E3%82%82%E6%84%8F%E5%91%B3%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B3%A8%E6%84%8F">https://qiita.com/shosho/items/abf6423283f761703d01#%E3%83%AA%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%82%BD%E3%83%89%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%A8-eager-loading-%E3%81%AB%E3%81%97%E3%81%A6%E3%81%A6%E3%82%82%E6%84%8F%E5%91%B3%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%E3%81%A7%E6%B3%A8%E6%84%8F</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>コントローラーにて、Department（親）と、これに紐付くEmployee（子）を読み出す。これらのモデルの間では、<code>hasMany</code>メソッドと<code>belongsTo</code>メソッドを使用して、テーブルにおける一対多のリレーションを定義しておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9201,7 +9201,7 @@
 <h3 id="update">UPDATE<a class="headerlink" href="#update" title="Permanent link">&para;</a></h3>
 <h4 id="save">▼ <code>save</code>メソッド<a class="headerlink" href="#save" title="Permanent link">&para;</a></h4>
 <p>UPDATE文を実行する。Eloquentビルダーの<code>fill</code>メソッドで挿入先のカラムと値を設定し、<code>save</code>メソッドを実行する。<code>save</code>メソッドはCREATE処理も実行できるが、<code>fill</code>メソッドでID値を割り当てた場合は、UPDATE処理が実行される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://codelikes.com/laravel-eloquent-basic/#toc9">https://codelikes.com/laravel-eloquent-basic/#toc9</a></li>
 <li><a href="https://qiita.com/henriquebremenkanp/items/cd13944b0281297217a9">https://qiita.com/henriquebremenkanp/items/cd13944b0281297217a9</a></li>
@@ -9473,7 +9473,7 @@
 <h2 id="04-laravel">04. Laravelへのリポジトリパターン導入<a class="headerlink" href="#04-laravel" title="Permanent link">&para;</a></h2>
 <h3 id="_17">背景<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>LaravelはActive Recordパターンを採用しており、これはビジネスロジックが複雑でないアプリケーションに適している。ただし、ビジネスロジックが複雑なアプリケーションに対しても、Laravelを使用したい場面がある。その場合、Laravelにリポジトリパターンを導入することが選択肢の1つになる。リポジトリパターンについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html</a></p>
 <p><br></p>
 <h3 id="_18">工夫<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <h4 id="dto">▼ DTOクラスの導入<a class="headerlink" href="#dto" title="Permanent link">&para;</a></h4>
@@ -10120,7 +10120,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

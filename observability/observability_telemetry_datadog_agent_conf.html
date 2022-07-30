@@ -6714,14 +6714,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7382,20 +7382,20 @@
 <h1 id="datadog">datadogエージェントの設定＠テレメトリー収集ツール<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-datadog">01. datadogエージェント<a class="headerlink" href="#01-datadog" title="Permanent link">&para;</a></h2>
 <h3 id="datadog_1">datadogエージェントとは<a class="headerlink" href="#datadog_1" title="Permanent link">&para;</a></h3>
 <p>Datadogにデータを送信するためには、アプリケーションにdatadogエージェントをインストールする必要がある。使用しているOSやIaCツールごとに、インストール方法が異なる。</p>
 <p><br></p>
 <h3 id="_2">メトリクス収集について<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_metrics.html</a></p>
 <p><br></p>
 <h3 id="_3">ログ収集について<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_log.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_log.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_log.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_log.html</a></p>
 <p><br></p>
 <h3 id="_4">分散トレース収集について<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html">https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_telemetry_datadog_distributed_trace.html</a></p>
 <p><br></p>
 <h2 id="02">02. サーバーの場合<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_5">セットアップ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -7415,7 +7415,7 @@ $ <span class="nb">export</span> <span class="nv">DD_SITE</span><span class="o">
 $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh<span class="k">)</span><span class="s2">&quot;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="ansible">▼ インストール（Ansibleの場合）<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://app.datadoghq.com/account/settings#agent/ubuntu">https://app.datadoghq.com/account/settings#agent/ubuntu</a></p>
+<p>ℹ️ 参考：<a href="https://app.datadoghq.com/account/settings#agent/ubuntu">https://app.datadoghq.com/account/settings#agent/ubuntu</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7436,7 +7436,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <h2 id="02-02-etcdatadog-agentdatadogyaml">02-02. <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#02-02-etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h2>
 <h3 id="datadogyaml"><code>datadog.yaml</code>ファイルとは<a class="headerlink" href="#datadogyaml" title="Permanent link">&para;</a></h3>
 <p>datadogエージェントを設定する。 <code>/etc/datadog-agent</code>ディレクトリに配置される。datadogエージェントをインストールすると、<code>datadog.yaml.example</code>ファイルが作成されるため、これをコピーして作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://app.datadoghq.com/account/settings#agent">https://app.datadoghq.com/account/settings#agent</a></li>
 <li><a href="https://docs.datadoghq.com/getting_started/agent/#configuration">https://docs.datadoghq.com/getting_started/agent/#configuration</a></li>
@@ -7512,7 +7512,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <p>datadogコンテナのベースイメージとなるdatadogイメージがDatadog公式から提供されている。ECRパブリックギャラリーからプルしたコンテナイメージをそのまま使用する場合と、プライベートECRリポジトリで再管理してから使用する場合がある。</p>
 <h4 id="dockerhub">▼ DockerHubを使用する場合<a class="headerlink" href="#dockerhub" title="Permanent link">&para;</a></h4>
 <p>ECSタスクのコンテナ定義にて、DockerHubのURLを直接的に指定する。datadogエージェントにデフォルトで内蔵されている設定をそのまま使用する場合は、こちらを採用する。</p>
-<p>参考：<a href="https://hub.docker.com/r/datadog/agent">https://hub.docker.com/r/datadog/agent</a></p>
+<p>ℹ️ 参考：<a href="https://hub.docker.com/r/datadog/agent">https://hub.docker.com/r/datadog/agent</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7539,14 +7539,14 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <span class="w">  </span><span class="p p-Indicator">}</span><span class="w"></span>
 <span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://gallery.ecr.aws/datadog/agent">https://gallery.ecr.aws/datadog/agent</a></li>
 <li><a href="https://github.com/DataDog/datadog-agent">https://github.com/DataDog/datadog-agent</a></li>
 </ul>
 <h4 id="ecr_1">▼ プライベートECRリポジトリを使用する場合<a class="headerlink" href="#ecr_1" title="Permanent link">&para;</a></h4>
 <p>あらかじめ、DockerHubからdatadogイメージをプルするためのDockerfileを作成し、プライベートECRリポジトリにコンテナイメージをプッシュしておく。ECSタスクのコンテナ定義にて、プライベートECRリポジトリのURLを指定し、ECRイメージのプルする。datadogエージェントにデフォルトで内蔵されている設定を上書きしたい場合は、こちらを採用する。</p>
-<p>参考：<a href="https://hub.docker.com/r/datadog/agent">https://hub.docker.com/r/datadog/agent</a></p>
+<p>ℹ️ 参考：<a href="https://hub.docker.com/r/datadog/agent">https://hub.docker.com/r/datadog/agent</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">data/agent:latest</span>
@@ -7569,7 +7569,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <h3 id="aws-ecs">AWS ECSへの導入<a class="headerlink" href="#aws-ecs" title="Permanent link">&para;</a></h3>
 <h4 id="datadog_3">▼ datadogコンテナ<a class="headerlink" href="#datadog_3" title="Permanent link">&para;</a></h4>
 <p>Datadogが提供するdatadogイメージによって作成されるコンテナであり、コンテナのサイドカーコンテナとして配置される。コンテナ内で稼働するDatadog dockerエージェントが、コンテナからメトリクスのデータポイントを収集し、Datadogにこれを転送する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=logdriver#create-an-ecs-fargate-task">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=logdriver#create-an-ecs-fargate-task</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=logdriver#create-an-ecs-fargate-task">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=logdriver#create-an-ecs-fargate-task</a></p>
 <h4 id="_12">▼ コンテナ定義<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7709,7 +7709,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 </code></pre></div></td></tr></table></div>
 <h4 id="ecsiam">▼ ECSのIAMロール<a class="headerlink" href="#ecsiam" title="Permanent link">&para;</a></h4>
 <p>datadogコンテナがコンテナからメトリクスのデータポイントを収集できるように、ECSタスク実行ロールにポリシーを追加する必要がある。</p>
-<p>参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#create-or-modify-your-iam-policy">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#create-or-modify-your-iam-policy</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#create-or-modify-your-iam-policy">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#create-or-modify-your-iam-policy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7742,12 +7742,12 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <h2 id="03-02-etcdatadog-agentdatadogyaml">03-02. <code>/etc/datadog-agent/datadog.yaml</code>ファイル<a class="headerlink" href="#03-02-etcdatadog-agentdatadogyaml" title="Permanent link">&para;</a></h2>
 <h3 id="datadogyaml_1"><code>datadog.yaml</code>ファイルとは<a class="headerlink" href="#datadogyaml_1" title="Permanent link">&para;</a></h3>
 <p>コンテナもサーバーと同様にして<code>datadog.yaml</code>ファイルが必要である。ただサーバーの場合とは異なり、環境変数から値を設定できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/getting_started/agent/#configuration">https://docs.datadoghq.com/getting_started/agent/#configuration</a> </p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/getting_started/agent/#configuration">https://docs.datadoghq.com/getting_started/agent/#configuration</a> </p>
 <p><br></p>
 <h3 id="_13">グローバル変数<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ グローバル変数とは<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>全てのテレメトリーに関する環境変数として使用できる。datadogコンテナの環境変数として設定する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#global-options">https://docs.datadoghq.com/agent/docker/?tab=standard#global-options</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#global-options">https://docs.datadoghq.com/agent/docker/?tab=standard#global-options</a></p>
 <table>
 <thead>
 <tr>
@@ -7773,7 +7773,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tr>
 <td><code>DD_HOSTNAME</code></td>
 <td>コンテナのホスト名を設定する。</td>
-<td>AWS ECS Fargateの場合は、これを使用しないようにする。<br>参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#other-environment-variables">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#other-environment-variables</a></td>
+<td>AWS ECS Fargateの場合は、これを使用しないようにする。<br>ℹ️ 参考：<a href="https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#other-environment-variables">https://docs.datadoghq.com/integrations/ecs_fargate/?tab=fluentbitandfirelens#other-environment-variables</a></td>
 <td><a href="https://app.datadoghq.com/infrastructure/map">https://app.datadoghq.com/infrastructure/map</a></td>
 </tr>
 <tr>
@@ -7788,7 +7788,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <h3 id="_15">メトリクス変数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ 通常メトリクス<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>通常メトリクスに関する環境変数として使用できる。一部のメトリクスは、デフォルトでは収集しないようになっており、収集するためにエージェントを有効化する必要がある。</p>
-<p>参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents">https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents">https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents</a></p>
 <table>
 <thead>
 <tr>
@@ -7802,12 +7802,12 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tr>
 <td><code>DD_APM_ENABLED</code></td>
 <td>APMエージェントを有効化するか否かを設定する。</td>
-<td>AWS ECS Fargateを使用している場合、APMエージェントを有効化するだけでなく、分散トレースを送信できるように、マイクロサービスにパッケージのインストールが必要である。<br>参考：<a href="https://docs.datadoghq.com/tracing/#send-traces-to-datadog">https://docs.datadoghq.com/tracing/#send-traces-to-datadog</a></td>
+<td>AWS ECS Fargateを使用している場合、APMエージェントを有効化するだけでなく、分散トレースを送信できるように、マイクロサービスにパッケージのインストールが必要である。<br>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/#send-traces-to-datadog">https://docs.datadoghq.com/tracing/#send-traces-to-datadog</a></td>
 <td><a href="https://app.datadoghq.com/apm/home">https://app.datadoghq.com/apm/home</a></td>
 </tr>
 <tr>
 <td><code>DD_PROCESS_AGENT_ENABLED</code></td>
-<td>ライブプロセスを有効化し、実行中のプロセスを収集する。<br>参考：<a href="https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows">https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows</a></td>
+<td>ライブプロセスを有効化し、実行中のプロセスを収集する。<br>ℹ️ 参考：<a href="https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows">https://docs.datadoghq.com/infrastructure/process/?tab=linuxwindows</a></td>
 <td></td>
 <td><a href="https://app.datadoghq.com/containers">https://app.datadoghq.com/containers</a></td>
 </tr>
@@ -7815,7 +7815,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 </table>
 <h4 id="_17">▼ カスタムメトリクス<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>カスタムメトリクスに関する環境変数として使用できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#dogstatsd-custom-metrics">https://docs.datadoghq.com/agent/docker/?tab=standard#dogstatsd-custom-metrics</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#dogstatsd-custom-metrics">https://docs.datadoghq.com/agent/docker/?tab=standard#dogstatsd-custom-metrics</a></p>
 <table>
 <thead>
 <tr>
@@ -7846,12 +7846,12 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <tr>
 <td><code>DD_LOGS_ENABLED</code></td>
 <td>ログの収集を有効化するか否かを設定する。</td>
-<td>参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents">https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents">https://docs.datadoghq.com/agent/docker/?tab=standard#optional-collection-agents</a></td>
 </tr>
 <tr>
 <td><code>DD_LOG_LEVEL</code></td>
 <td>APMに送信するログレベルを設定する。</td>
-<td>参考：<a href="https://docs.datadoghq.com/agent/docker/apm/?tab=linux#docker-apm-agent-environment-variables">https://docs.datadoghq.com/agent/docker/apm/?tab=linux#docker-apm-agent-environment-variables</a></td>
+<td>ℹ️ 参考：<a href="https://docs.datadoghq.com/agent/docker/apm/?tab=linux#docker-apm-agent-environment-variables">https://docs.datadoghq.com/agent/docker/apm/?tab=linux#docker-apm-agent-environment-variables</a></td>
 </tr>
 </tbody>
 </table>
@@ -7860,7 +7860,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
 <h4 id="_21">▼ 分散トレース変数とは<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>分散トレースに関する環境変数として使用できる。分散トレースのタグ名に反映される。</p>
 <h4 id="php">▼ PHPトレーサーの場合<a class="headerlink" href="#php" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers#environment-variable-configuration">https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers#environment-variable-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers#environment-variable-configuration">https://docs.datadoghq.com/tracing/setup_overview/setup/php/?tab=containers#environment-variable-configuration</a></p>
 <table>
 <thead>
 <tr>
@@ -7899,7 +7899,7 @@ $ bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -L https:/
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

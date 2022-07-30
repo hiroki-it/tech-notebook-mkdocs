@@ -6974,14 +6974,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7909,12 +7909,12 @@
 <h2 id="01-vpcvirtual-private-cloud">01. VPC：Virtual Private Cloud<a class="headerlink" href="#01-vpcvirtual-private-cloud" title="Permanent link">&para;</a></h2>
 <h3 id="vpc">VPCとは<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h3>
 <p>クラウドプライベートネットワークとして働く。プライベートIPアドレスが割り当てられた、VPCと呼ばれるプライベートネットワークを仮想的に作成できる。異なるAZに渡ってEC2を立ち上げることによって、クラウドサーバーをデュアル化できる。VPCのパケット通信の仕組みについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://pages.awscloud.com/rs/112-TZM-766/images/AWS-08_AWS_Summit_Online_2020_NET01.pdf">https://pages.awscloud.com/rs/112-TZM-766/images/AWS-08_AWS_Summit_Online_2020_NET01.pdf</a></p>
+<p>ℹ️ 参考：<a href="https://pages.awscloud.com/rs/112-TZM-766/images/AWS-08_AWS_Summit_Online_2020_NET01.pdf">https://pages.awscloud.com/rs/112-TZM-766/images/AWS-08_AWS_Summit_Online_2020_NET01.pdf</a></p>
 <p><img alt="VPCが提供できるネットワークの範囲" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/VPCが提供できるネットワークの範囲.png" /></p>
 <p><br></p>
 <h3 id="vpcip">VPC内のIPアドレス<a class="headerlink" href="#vpcip" title="Permanent link">&para;</a></h3>
 <h4 id="ip">▼ IPアドレスの種類<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://awsjp.com/AWS/hikaku/Elastic-IP_Public-IP-hikaku.html">https://awsjp.com/AWS/hikaku/Elastic-IP_Public-IP-hikaku.html</a></li>
 <li><a href="https://qiita.com/masato930/items/ba242f0171a76ce0994f">https://qiita.com/masato930/items/ba242f0171a76ce0994f</a></li>
@@ -7955,7 +7955,7 @@
 </table>
 <h4 id="dns">▼ DNS名の割り当て<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h4>
 <p>VPC内で作成されたインスタンスにはパブリックIPアドレスが自動的に割り当てられるが、IPアドレスにマッピングされたDNS名を持たない。<code>enableDnsHostnames</code>オプションと<code>enableDnsSupport</code>オプションと有効化すると、インスタンスにDNS名が割り当てられるようになる。
-参考：</p>
+ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support</a></li>
 <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-updating</a></li>
@@ -7971,11 +7971,11 @@
 <tbody>
 <tr>
 <td>EC2との紐付け</td>
-<td>非推奨の方法である。<br>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview</a></td>
+<td>非推奨の方法である。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview</a></td>
 </tr>
 <tr>
 <td>ENIとの紐付け</td>
-<td>推奨される方法である。<br>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview</a></td>
+<td>推奨される方法である。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview</a></td>
 </tr>
 </tbody>
 </table>
@@ -7983,7 +7983,7 @@
 <h2 id="01-02-enielastic-network-interface">01-02. ENI：Elastic Network Interface<a class="headerlink" href="#01-02-enielastic-network-interface" title="Permanent link">&para;</a></h2>
 <h3 id="eni">ENIとは<a class="headerlink" href="#eni" title="Permanent link">&para;</a></h3>
 <p>クラウドネットワークインターフェースとして働く。物理ネットワークにおけるNICについては以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
 <p><br></p>
 <h3 id="_3">紐付けられるリソース<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
@@ -8003,17 +8003,17 @@
 <tr>
 <td>EC2</td>
 <td>ENIに紐付けられたパブリックIPアドレスがEC2に割り当てられる。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#eni-basics">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#eni-basics</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#eni-basics">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#eni-basics</a></td>
 </tr>
 <tr>
 <td>Fargate環境のEC2</td>
 <td>明言されていないため推測ではあるが、ENIに紐付けられたlocalインターフェースが、FargateとしてのEC2インスタンスに紐付けられる。</td>
-<td>Fargate環境のホストがEC2とは明言されていない。<br>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/">https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/</a></td>
+<td>Fargate環境のホストがEC2とは明言されていない。<br>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/">https://aws.amazon.com/jp/blogs/news/under-the-hood-fargate-data-plane/</a></td>
 </tr>
 <tr>
 <td>Elastic IP</td>
 <td>ENIにElastic IPアドレスが紐付けられる。このENIを他のAWSリソースに紐付けることにより、ENIを介して、Elastic IPを紐付けられる。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#managing-network-interface-ip-addresses">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#managing-network-interface-ip-addresses</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#managing-network-interface-ip-addresses">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#managing-network-interface-ip-addresses</a></td>
 </tr>
 <tr>
 <td>GlobalAccelerator</td>
@@ -8095,7 +8095,7 @@
 <h2 id="01-05">01-05. ルートテーブル<a class="headerlink" href="#01-05" title="Permanent link">&para;</a></h2>
 <h3 id="_7">ルートテーブルとは<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>クラウドルーターのマッピングテーブルとして働く。サブネットに紐付けることにより、サブネット内からサブネット外に出るアウトバウンド通信のルーティングを制御する。注意点として、Network ACLよりも後に評価される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTables">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTables</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTables">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTables</a></p>
 <table>
 <thead>
 <tr>
@@ -8130,7 +8130,7 @@
 <h3 id="_11">エンドポイントタイプ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <h4 id="interface">▼ Interface型<a class="headerlink" href="#interface" title="Permanent link">&para;</a></h4>
 <p>プライベートリンクともいう。プライベートIPアドレスを持つENIとして機能し、AWSリソースからアウトバウンド通信を受信する。もし、このプライベートIPアドレスにプライベートDNSを紐づける場合は、VPCの<code>enableDnsHostnames</code>オプションと<code>enableDnsSupport</code>オプションを有効化する必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support</a></p>
 <p><strong>＊リソース例＊</strong></p>
 <p>S3、DynamoDB以外の全てのリソース</p>
 <h4 id="gateway">▼ Gateway型<a class="headerlink" href="#gateway" title="Permanent link">&para;</a></h4>
@@ -8142,25 +8142,25 @@
 <h3 id="internet-gateway">Internet Gateway<a class="headerlink" href="#internet-gateway" title="Permanent link">&para;</a></h3>
 <h4 id="internet-gateway_1">▼ Internet Gatewayとは<a class="headerlink" href="#internet-gateway_1" title="Permanent link">&para;</a></h4>
 <p>DNATの機能を持ち、グローバルIPアドレス（VPC外のIPアドレス）をプライベートIPアドレス（VPC内のIPアドレス）に変換する。<code>1</code>個のパブリックIPに対して、<code>1</code>個のプライベートIPを紐付けられる。つまり、VPC内の複数のインスタンスからのアウトバウンド通信を、複数のパブリックIPアドレスで送信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html</a></li>
 <li><a href="https://milestone-of-se.nesuke.com/sv-advanced/aws/internet-nat-gateway/">https://milestone-of-se.nesuke.com/sv-advanced/aws/internet-nat-gateway/</a></li>
 </ul>
 <p>DNATについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
 <p><img alt="InternetGatewayとNATGateway" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/InternetGatewayとNATGateway.png" /></p>
 <p><br></p>
 <h3 id="nat-gateway">NAT Gateway<a class="headerlink" href="#nat-gateway" title="Permanent link">&para;</a></h3>
 <h4 id="nat-gateway_1">▼ NAT Gatewayとは<a class="headerlink" href="#nat-gateway_1" title="Permanent link">&para;</a></h4>
 <p>SNATの機能を持ち、プライベートIPアドレス（VPC内のIPアドレス）をグローバルIPアドレス（VPC外のIPアドレス）に変換する。<code>1</code>個のパブリックIPに対して、複数のプライベートIPを紐付けられる。つまり、VPC内の複数のインスタンスからのアウトバウンド通信を、<code>1</code>個のパブリックIPアドレスで送信する。この時のパブリックIPとして、Elastic IPをNAT Gatewayに割り当てる必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-basics">https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-basics</a></li>
 <li><a href="https://milestone-of-se.nesuke.com/sv-advanced/aws/internet-nat-gateway/">https://milestone-of-se.nesuke.com/sv-advanced/aws/internet-nat-gateway/</a></li>
 </ul>
 <p>SNATについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network_model_tcp.html</a></p>
 <p><img alt="InternetGatewayとNATGateway" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/InternetGatewayとNATGateway.png" /></p>
 <p><br></p>
 <h2 id="01-08-vpcvpc-">01-08. VPC間、VPC-オンプレ間の通信<a class="headerlink" href="#01-08-vpcvpc-" title="Permanent link">&para;</a></h2>
@@ -8273,7 +8273,7 @@
 <h2 id="02-wafweb-application-firewall">02. WAF：Web Application Firewall<a class="headerlink" href="#02-wafweb-application-firewall" title="Permanent link">&para;</a></h2>
 <h3 id="_13">セットアップ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>定義できるルール数や文字数に制限がある。以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">https://docs.aws.amazon.com/waf/latest/developerguide/limits.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">https://docs.aws.amazon.com/waf/latest/developerguide/limits.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8415,7 +8415,7 @@
 <tr>
 <td>Rules</td>
 <td>順番にルールを判定し、一致するルールがあればアクションを実行する。この時、一致するルールの後にあるルールは。判定されない。</td>
-<td>AWSマネージドルールについては、以下のリンクを参考にせよ。<br>参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html">https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html</a></td>
+<td>AWSマネージドルールについては、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html">https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html</a></td>
 </tr>
 <tr>
 <td>Associated AWS resources</td>
@@ -8466,7 +8466,7 @@
 <p><br></p>
 <h3 id="_15">ルール<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ ルールの種類<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-web-acl-rules-creating.html">https://docs.aws.amazon.com/waf/latest/developerguide/classic-web-acl-rules-creating.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/classic-web-acl-rules-creating.html">https://docs.aws.amazon.com/waf/latest/developerguide/classic-web-acl-rules-creating.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8489,10 +8489,10 @@
 <p>わかりやすさの観点から、できる限り設定するステートメントを少なくし、<code>1</code>個のルールに<code>1</code>個の意味合いだけを持たせるように命名する。</p>
 <h4 id="count">▼ Count（検知）モード<a class="headerlink" href="#count" title="Permanent link">&para;</a></h4>
 <p>ルールに該当するリクエスト数を数え、許可/拒否せずに次のルールを検証する。計測結果に応じて、Countモードを無効化し、拒否できるようにする。</p>
-<p>参考：<a href="https://oji-cloud.net/2020/09/18/post-5501/">https://oji-cloud.net/2020/09/18/post-5501/</a></p>
+<p>ℹ️ 参考：<a href="https://oji-cloud.net/2020/09/18/post-5501/">https://oji-cloud.net/2020/09/18/post-5501/</a></p>
 <h4 id="_18">▼ ルールグループアクションの上書き<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>ルールのCountモードが有効になっている場合、Countアクションに続けて、そのルールの元のアクションを実行する。そのため、Countアクションしつつ、Blockアクションを実行できる（仕様がややこしすぎるので、なんとかしてほしい）。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-rule-group-override-options.html">https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-rule-group-override-options.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-rule-group-override-options.html">https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-rule-group-override-options.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8531,7 +8531,7 @@
 </table>
 <h4 id="_19">▼ セキュリティグループとの関係<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>WAFを紐付けられるリソースにセキュリティグループも紐づけている場合、セキュリティグループのルールが先に検証される。例えば、WAFをALBに紐づけ、かつALBのセキュリティグループにHTTPSプロトコルのルールを設定した場合、後者が先に検証される。両方にルールが定義されてると混乱を生むため、HTTPプロトコルやHTTPSプロトコルに関するルールはWAFに定義し、それ以外のプロトコルに関するルールはセキュリティグループで定義するようにしておく。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/waf-alb_evaluation-sequence/">https://dev.classmethod.jp/articles/waf-alb_evaluation-sequence/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/waf-alb_evaluation-sequence/">https://dev.classmethod.jp/articles/waf-alb_evaluation-sequence/</a></p>
 <p><br></p>
 <h3 id="_20">ログ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
 <h4 id="_21">▼ マネージドルールのログ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
@@ -8651,7 +8651,7 @@
 <h3 id="distributed-load-testing">Distributed Load Testing（分散ロードテスト）<a class="headerlink" href="#distributed-load-testing" title="Permanent link">&para;</a></h3>
 <h4 id="_23">▼ 分散ロードテストとは<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>ロードテストを実施できる。CloudFormationで作成でき、ECS Fargateを使用して、ユーザーからのリクエストを擬似的に再現できる。</p>
-<p>参考：<a href="https://d1.awsstatic.com/Solutions/ja_JP/distributed-load-testing-on-aws.pdf">https://d1.awsstatic.com/Solutions/ja_JP/distributed-load-testing-on-aws.pdf</a></p>
+<p>ℹ️ 参考：<a href="https://d1.awsstatic.com/Solutions/ja_JP/distributed-load-testing-on-aws.pdf">https://d1.awsstatic.com/Solutions/ja_JP/distributed-load-testing-on-aws.pdf</a></p>
 <h4 id="_24">▼ インフラ構成<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p><img alt="distributed_load_testing" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/distributed_load_testing.png" /></p>
 <p><br></p>
@@ -8708,7 +8708,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

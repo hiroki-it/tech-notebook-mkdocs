@@ -6637,14 +6637,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7252,14 +7252,14 @@
 <h3 id="01-03">01-03. 例外の定義<a class="headerlink" href="#01-03" title="Permanent link">&para;</a></h3>
 <h3 id="_6">標準例外クラス<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>いずれもThrowableインターフェースを実装している。以下リンクを参考にせよ。</p>
-<p>参考：<a href="https://www.php.net/manual/ja/reserved.exceptions.php">https://www.php.net/manual/ja/reserved.exceptions.php</a></p>
+<p>ℹ️ 参考：<a href="https://www.php.net/manual/ja/reserved.exceptions.php">https://www.php.net/manual/ja/reserved.exceptions.php</a></p>
 <p><br></p>
 <h3 id="_7">独自例外クラス<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ 定義<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>エラーの種類に合わせて、<code>Exception</code>クラスを継承した独自例外クラスを実装し、使い分けると良い。<code>__construct</code>メソッドに、メッセージやエラーコード（例外コード）などを渡せる。エラーコードのデフォルト値はゼロである。</p>
-<p>参考：<a href="https://www.php.net/manual/ja/exception.construct.php">https://www.php.net/manual/ja/exception.construct.php</a></p>
+<p>ℹ️ 参考：<a href="https://www.php.net/manual/ja/exception.construct.php">https://www.php.net/manual/ja/exception.construct.php</a></p>
 <p>エラーコードはステータスコードと異なり、例外を識別するためのものである。異常系レスポンスのエラーコードデータとして使用される。混乱を避けるため、例外クラスのエラーコード値にステータスコードを割り当てないようにする。ステータスコードはコントローラーにおけるレスポンス処理で割り当てる。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>『Foo変数が見つからない』というエラーに対応する例外クラスを定義する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7307,7 +7307,7 @@
 <h4 id="_9">▼ 命名規則<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>何のエラーが発生したかを判断できるように、名前は『<code>&lt;エラー名&gt;Exception</code>』とする。また、開発者にとって詳しく理解できるように、コンストラクタの引数にメッセージを渡す。</p>
 <p>（例）InvalidArgumentException、</p>
-<p>参考：<a href="https://bartlomiej-kielbasa.medium.com/how-to-name-exceptions-its-not-so-obvious-df104014166a">https://bartlomiej-kielbasa.medium.com/how-to-name-exceptions-its-not-so-obvious-df104014166a</a></p>
+<p>ℹ️ 参考：<a href="https://bartlomiej-kielbasa.medium.com/how-to-name-exceptions-its-not-so-obvious-df104014166a">https://bartlomiej-kielbasa.medium.com/how-to-name-exceptions-its-not-so-obvious-df104014166a</a></p>
 <p><br></p>
 <h2 id="02">02. エラー検出と例外スロー<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_10">エラー検出と例外スローの種類<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
@@ -7370,7 +7370,7 @@
 <p><br></p>
 <h3 id="_13">アーキテクチャにおける層別の例外スロー<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>層別の例外については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design.html</a></p>
 <p><br></p>
 <h2 id="03">03. 例外キャッチ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_14">例外キャッチの方法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -7568,7 +7568,7 @@
 <p><br></p>
 <h3 id="_15">新たな例外のスローし直し<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>例外をtry-catch文でキャッチした後、別の新しい例外をスローしても良い。その場合は、例外のコンストラクタの第三引数（<code>previous</code>）を使用して、キャッチされていた元の例外も検知できるようにする。ちなみに、この例外をロギングする場合、スタックトレースログとして出力される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="http://blog.tojiru.net/article/455279557.html">http://blog.tojiru.net/article/455279557.html</a></li>
 <li><a href="https://www.php.net/manual/ja/exception.construct.php">https://www.php.net/manual/ja/exception.construct.php</a></li>
@@ -7577,19 +7577,19 @@
 <h3 id="_16">例外キャッチのレイヤー<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ コントローラー/ミドルウェア派<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>想定外のエラーも含めて、全てのエラーを検出できるように、コントローラーまたはミドルウェアにtry-catch文を実装する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/">https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/</a></li>
 <li><a href="https://softwareengineering.stackexchange.com/questions/393307/where-would-you-handle-exceptions-controller-service-repository">https://softwareengineering.stackexchange.com/questions/393307/where-would-you-handle-exceptions-controller-service-repository</a></li>
 </ul>
 <h4 id="_18">▼ ユースケース派<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>コントローラーの実装をより単純にするべく、より下位のユースケースにtry-catch文を実装する。</p>
-<p>参考：<a href="https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/">https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/</a></p>
+<p>ℹ️ 参考：<a href="https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/">https://www.reddit.com/r/dotnet/comments/kyoe83/web_api_trycatch_in_controller_or_not/</a></p>
 <p><br></p>
 <h2 id="04">04. ロギング<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_19">ロギング関数<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <h4 id="error_log">▼ <code>error_log</code>関数<a class="headerlink" href="#error_log" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.php.net/manual/ja/function.error-log.php">https://www.php.net/manual/ja/function.error-log.php</a></p>
+<p>ℹ️ 参考：<a href="https://www.php.net/manual/ja/function.error-log.php">https://www.php.net/manual/ja/function.error-log.php</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7652,7 +7652,7 @@
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>他に、Loggerインターフェースを使用することも多い。</p>
-<p>参考：<a href="https://github.com/php-fig/log">https://github.com/php-fig/log</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/php-fig/log">https://github.com/php-fig/log</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7839,7 +7839,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

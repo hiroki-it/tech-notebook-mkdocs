@@ -7033,14 +7033,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8018,13 +8018,13 @@
 <h1 id="helm">チャート＠Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-helm">01. Helmの仕組み<a class="headerlink" href="#01-helm" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="helm_architecture" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/helm_architecture.png" /></p>
 <p>Helmは、パッケージマネージャーとしてのHelmクライアント、パッケージとしてのチャートアーカイブ（<code>.tgz</code>形式）、チャートアーカイブの元になるチャート、チャートアーカイブのレジストリとしてのチャートレジストリ、チャートレジストリ内にある複数のチャートリポジトリ、から構成される。Helmクライアントは、リポジトリからインストールしたチャートアーカイブに基づいて、現在のコンテキストで指定されているClusterのkube-apiserverをコールする。これにより、Kubernetes上にKubernetesリソースがapplyされる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://cloudacademy.com/course/introduction-to-helm-1034/helm-architecture/">https://cloudacademy.com/course/introduction-to-helm-1034/helm-architecture/</a></li>
 <li><a href="https://helm.sh/ja/docs/glossary/">https://helm.sh/ja/docs/glossary/</a></li>
@@ -8034,7 +8034,7 @@
 <h3 id="_3">チャートリポジトリ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ 構成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>ルートディレクトリ配下に、<code>index.yaml</code>ファイル、チャートアーカイブ、を配置する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://helm.sh/docs/topics/chart_repository/#the-chart-repository-structure">https://helm.sh/docs/topics/chart_repository/#the-chart-repository-structure</a></li>
 <li><a href="https://zenn.dev/mikutas/articles/2ab146fa1ea35b">https://zenn.dev/mikutas/articles/2ab146fa1ea35b</a></li>
@@ -8061,11 +8061,11 @@
 <tbody>
 <tr>
 <td>ArtifactHub（Helm公式）</td>
-<td>参考：<a href="https://helm.sh/docs/topics/chart_repository/">https://helm.sh/docs/topics/chart_repository/</a></td>
+<td>ℹ️ 参考：<a href="https://helm.sh/docs/topics/chart_repository/">https://helm.sh/docs/topics/chart_repository/</a></td>
 </tr>
 <tr>
 <td>GitHub、GitHub Pages</td>
-<td>参考：<a href="https://zenn.dev/mikutas/articles/2ab146fa1ea35b">https://zenn.dev/mikutas/articles/2ab146fa1ea35b</a></td>
+<td>ℹ️ 参考：<a href="https://zenn.dev/mikutas/articles/2ab146fa1ea35b">https://zenn.dev/mikutas/articles/2ab146fa1ea35b</a></td>
 </tr>
 <tr>
 <td>AWSリソース（ECR、S3）</td>
@@ -8106,7 +8106,7 @@
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_6">インストール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="apt">▼ aptリポジトリから<a class="headerlink" href="#apt" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://helm.sh/docs/intro/install/#from-apt-debianubuntu">https://helm.sh/docs/intro/install/#from-apt-debianubuntu</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/install/#from-apt-debianubuntu">https://helm.sh/docs/intro/install/#from-apt-debianubuntu</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8122,7 +8122,7 @@ $ sudo apt-get install helm
 <h3 id="apiversion">apiVersion<a class="headerlink" href="#apiversion" title="Permanent link">&para;</a></h3>
 <h4 id="apiversion_1">▼ apiVersionとは<a class="headerlink" href="#apiversion_1" title="Permanent link">&para;</a></h4>
 <p>Helm-APIのバージョンを設定する。<code>apiVersion</code>キーの<code>v1</code>はHelmの<code>v2</code>に対応しており、<code>v2</code>は<code>v3</code>に対応している。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://helm.sh/docs/topics/charts/#the-apiversion-field">https://helm.sh/docs/topics/charts/#the-apiversion-field</a></li>
 <li><a href="https://helm.sh/docs/topics/v2_v3_migration/">https://helm.sh/docs/topics/v2_v3_migration/</a></li>
@@ -8133,7 +8133,7 @@ $ sudo apt-get install helm
 <h3 id="appversion">appVersion<a class="headerlink" href="#appversion" title="Permanent link">&para;</a></h3>
 <h4 id="appversion_1">▼ appVersionとは<a class="headerlink" href="#appversion_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetes上で稼働するアプリケーションのリリースバージョンを設定する。リリースバージョンは、GitHubのリリースタグで管理した方がよく、<code>appVersion</code>キーの値は特に変更しなくても良い。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/charts/#the-appversion-field">https://helm.sh/docs/topics/charts/#the-appversion-field</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/charts/#the-appversion-field">https://helm.sh/docs/topics/charts/#the-appversion-field</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">appVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8146,7 +8146,7 @@ $ sudo apt-get install helm
 <h3 id="dependencies">dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
 <h4 id="dependencies_1">▼ dependenciesとは<a class="headerlink" href="#dependencies_1" title="Permanent link">&para;</a></h4>
 <p>依存対象のチャートを設定する。設定されたチャートは、<code>charts</code>ディレクトリにダウンロードされる。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/charts/#chart-dependencies">https://helm.sh/docs/topics/charts/#chart-dependencies</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/charts/#chart-dependencies">https://helm.sh/docs/topics/charts/#chart-dependencies</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8177,36 +8177,36 @@ $ sudo apt-get install helm
 <h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">&para;</a></h3>
 <h4 id="name_1">▼ nameとは<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h4>
 <p>Helmで作成されるKubernetesリソースの接頭辞を設定する。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/charts/#the-chartyaml-file">https://helm.sh/docs/topics/charts/#the-chartyaml-file</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/charts/#the-chartyaml-file">https://helm.sh/docs/topics/charts/#the-chartyaml-file</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
 <h4 id="type_1">▼ typeとは<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
 <p>チャートのタイプを設定する。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/charts/#chart-types">https://helm.sh/docs/topics/charts/#chart-types</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/charts/#chart-types">https://helm.sh/docs/topics/charts/#chart-types</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="version">version<a class="headerlink" href="#version" title="Permanent link">&para;</a></h3>
 <h4 id="version_1">▼ versionとは<a class="headerlink" href="#version_1" title="Permanent link">&para;</a></h4>
 <p>チャートアーカイブのリリースバージョンを設定する。<code>template</code>ディレクトリ配下のファイルを変更した場合に更新する。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/charts/#charts-and-versioning">https://helm.sh/docs/topics/charts/#charts-and-versioning</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/charts/#charts-and-versioning">https://helm.sh/docs/topics/charts/#charts-and-versioning</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;バージョンタグ&gt;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="04-indexyaml">04. index.yamlファイル<a class="headerlink" href="#04-indexyaml" title="Permanent link">&para;</a></h2>
 <h3 id="indexyaml">index.yamlファイルとは<a class="headerlink" href="#indexyaml" title="Permanent link">&para;</a></h3>
 <p>チャートのメタデータを設定する。<code>helm repo index</code>コマンドによって、<code>Chart.yaml</code>ファイルに基づいて自動作成されるため、ユーザーが設定する項目は少ない。</p>
-<p>参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
 <p><br></p>
 <h3 id="apiversion_2">apiVersion<a class="headerlink" href="#apiversion_2" title="Permanent link">&para;</a></h3>
 <h4 id="apiversion_3">▼ apiVersionとは<a class="headerlink" href="#apiversion_3" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
 <p><br></p>
 <h3 id="entries">entries<a class="headerlink" href="#entries" title="Permanent link">&para;</a></h3>
 <h4 id="entries_1">▼ entriesとは<a class="headerlink" href="#entries_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/topics/chart_repository/#the-index-file">https://helm.sh/docs/topics/chart_repository/#the-index-file</a></p>
 <p><br></p>
 <h3 id="generated">generated<a class="headerlink" href="#generated" title="Permanent link">&para;</a></h3>
 <h4 id="generated_1">▼ generatedとは<a class="headerlink" href="#generated_1" title="Permanent link">&para;</a></h4>
@@ -8218,7 +8218,7 @@ $ sudo apt-get install helm
 <h3 id="_7">共通オプション<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ 共通オプションとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>多くの外部チャートで共通して用意されている<code>values</code>ファイルのデフォルトオプションである。共通オプションは、外部チャート内の<code>_help.tpl</code>ファイルに出力される。</p>
-<p>参考：<a href="https://knowledge.sakura.ad.jp/23603/">https://knowledge.sakura.ad.jp/23603/</a></p>
+<p>ℹ️ 参考：<a href="https://knowledge.sakura.ad.jp/23603/">https://knowledge.sakura.ad.jp/23603/</a></p>
 <h4 id="affinity">▼ affinity<a class="headerlink" href="#affinity" title="Permanent link">&para;</a></h4>
 <p>チャート内のDeploymentの<code>spec.template.spec.affinity</code>オプションに値を設定する。</p>
 <h4 id="fullnameoverride">▼ fullnameOverride<a class="headerlink" href="#fullnameoverride" title="Permanent link">&para;</a></h4>
@@ -8265,12 +8265,12 @@ $ sudo apt-get install helm
 <h2 id="06">06. アクション<a class="headerlink" href="#06" title="Permanent link">&para;</a></h2>
 <h3 id="_9">アクションとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>テンプレートからマニフェストファイルを作成するために必要な機能を提供する。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
 <p><br></p>
 <h3 id="include">include<a class="headerlink" href="#include" title="Permanent link">&para;</a></h3>
 <h4 id="include_1">▼ includeとは<a class="headerlink" href="#include_1" title="Permanent link">&para;</a></h4>
 <p>define関数で定義した文字列を加工して出力する。加工内容はパラメータで設定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function">https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function</a></li>
 <li><a href="https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-include-function">https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-include-function</a></li>
@@ -8279,7 +8279,7 @@ $ sudo apt-get install helm
 <h3 id="range">range<a class="headerlink" href="#range" title="Permanent link">&para;</a></h3>
 <h4 id="range_1">▼ rangeとは<a class="headerlink" href="#range_1" title="Permanent link">&para;</a></h4>
 <p>同じ階層にある他の<code>.yaml</code>ファイルのキーとその値を格納し、foreachのように出力する。ただし、<code>values</code>ファイルからキーと値の両方を出力する場合は、<code>range</code>関数を使用するとロジックが増えて可読性が低くなるため、使用しない方が良い。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8313,7 +8313,7 @@ $ sudo apt-get install helm
 <span class="p p-Indicator">{{</span><span class="nv">- end</span><span class="w"> </span><span class="p p-Indicator">}}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>一方で、値のみを出力する場合は、可読性が高くなる。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_template_guide/control_structures/">https://helm.sh/docs/chart_template_guide/control_structures/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8344,16 +8344,16 @@ $ sudo apt-get install helm
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="required">required<a class="headerlink" href="#required" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-required-function">https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-required-function</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-required-function">https://helm.sh/docs/howto/charts_tips_and_tricks/#using-the-required-function</a></p>
 <p><br></p>
 <h3 id="template">template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h3>
 <p>define関数で定義した文字列をそのまま出力する。template関数よりもinclude関数が推奨されている。</p>
-<p>参考：<a href="https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function">https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function">https://helm.sh/docs/chart_template_guide/named_templates/#the-include-function</a></p>
 <p><br></p>
 <h3 id="values">Values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h3>
 <h4 id="values_1">▼ Valuesとは<a class="headerlink" href="#values_1" title="Permanent link">&para;</a></h4>
 <p>チャートのルートパスにある<code>values.yaml</code>ファイル、またはhelmコマンドで指定した任意の<code>values</code>ファイルの値を出力する。特定の条件下で、<code>values</code>ファイルを２階層以上に設定できなくなる現象の理由がわかっていない...。</p>
-<p>参考：<a href="https://github.com/helm/helm/issues/8026">https://github.com/helm/helm/issues/8026</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helm/helm/issues/8026">https://github.com/helm/helm/issues/8026</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8376,7 +8376,7 @@ $ sudo apt-get install helm
 </code></pre></div></td></tr></table></div>
 <h4 id="metadata">▼ metadataキーで使用する場合の注意点<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h4>
 <p>マニフェストファイルの<code>metadata</code>キーの値には文字列しか設定できない。<code>values</code>ファイルから出力した値が数字の場合、Helmは勝手にint型に変換しようとする。そのため、metadataキーの値にint型を出力しようとしてエラーになる。int型にならないように、<code>values</code>ファイルの出力先をダブルクオーテーションで囲うとよい。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields">https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields">https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#required-fields</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8455,7 +8455,7 @@ $ sudo apt-get install helm
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

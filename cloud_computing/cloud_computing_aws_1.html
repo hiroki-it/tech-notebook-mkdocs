@@ -8006,14 +8006,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -9973,7 +9973,7 @@
 <h2 id="01-awsaz">01. AWSアカウント、リージョン、AZ<a class="headerlink" href="#01-awsaz" title="Permanent link">&para;</a></h2>
 <h3 id="aws">AWSアカウント<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h3>
 <p>AWSリソースの操作単位である。Webサイトのクラウドインフラの実行環境ごとに作成したほうが良い。アカウントIDは機密情報ではないため、仮にバージョン管理してしまうようなことがあっても問題ない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/accounts/latest/reference/accounts-welcome.html">https://docs.aws.amazon.com/accounts/latest/reference/accounts-welcome.html</a></li>
 <li><a href="https://www.lastweekinaws.com/blog/are-aws-account-ids-sensitive-information/">https://www.lastweekinaws.com/blog/are-aws-account-ids-sensitive-information/</a></li>
@@ -9993,7 +9993,7 @@
 <h2 id="02-amplify">02. Amplify<a class="headerlink" href="#02-amplify" title="Permanent link">&para;</a></h2>
 <h3 id="amplify">Amplifyとは<a class="headerlink" href="#amplify" title="Permanent link">&para;</a></h3>
 <p>サーバーレスアプリケーションを作成するためのクラウドインフラストラクチャのフレームワーク。</p>
-<p>参考：<a href="https://d1.awsstatic.com/webinars/jp/pdf/services/20200520_AWSBlackBelt_Amplify_A.pdf">https://d1.awsstatic.com/webinars/jp/pdf/services/20200520_AWSBlackBelt_Amplify_A.pdf</a></p>
+<p>ℹ️ 参考：<a href="https://d1.awsstatic.com/webinars/jp/pdf/services/20200520_AWSBlackBelt_Amplify_A.pdf">https://d1.awsstatic.com/webinars/jp/pdf/services/20200520_AWSBlackBelt_Amplify_A.pdf</a></p>
 <p><br></p>
 <h3 id="_5">アーキテクチャ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ フロントエンド<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -10142,7 +10142,7 @@ $ amplify publish
 <p><br></p>
 <h3 id="_13">自動ビルド&amp;デプロイ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <h4 id="_14">▼ 連携できるバージョン管理システム<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/amplify/latest/userguide/getting-started.html#step-1-connect-repository">https://docs.aws.amazon.com/amplify/latest/userguide/getting-started.html#step-1-connect-repository</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/amplify/latest/userguide/getting-started.html#step-1-connect-repository">https://docs.aws.amazon.com/amplify/latest/userguide/getting-started.html#step-1-connect-repository</a></p>
 <h4 id="_15">▼ 対応するバージョン管理リポジトリ構造<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -10164,7 +10164,7 @@ $ amplify publish
 </table>
 <h4 id="amplifyyml">▼ <code>amplify.yml</code>ファイル<a class="headerlink" href="#amplifyyml" title="Permanent link">&para;</a></h4>
 <p>バージョン管理リポジトリのルートに<code>amplify.yml</code>ファイルを配置する。Next.jsではSSG/SSRの両モードでビルド＆デプロイできる。<code>package.json</code>ファイルで使用される<code>next</code>コマンドに応じて、SSGまたはSSRのいずれかのインフラが作成され、デプロイされる。SSGの場合、裏側ではS3、CloudFront、Route53などが作成され、静的ホスティングが実行される。SSRの場合、フロントエンドだけでなくバックエンドの実行環境が必要になるため、LambdaやCogniteが作成される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html">https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html</a></li>
 <li><a href="https://docs.aws.amazon.com/amplify/latest/userguide/server-side-rendering-amplify.html#deploy-nextjs-app">https://docs.aws.amazon.com/amplify/latest/userguide/server-side-rendering-amplify.html#deploy-nextjs-app</a></li>
@@ -10357,7 +10357,7 @@ $ amplify publish
 <tr>
 <td>モデル</td>
 <td>リクエスト/レスポンスのスキーマを設定する。これらのバリデーションのために使用できる。</td>
-<td>OpenAPI仕様におけるスキーマについては、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></td>
+<td>OpenAPI仕様におけるスキーマについては、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></td>
 </tr>
 <tr>
 <td>リソースポリシー</td>
@@ -10387,7 +10387,7 @@ $ amplify publish
 <tr>
 <td>APIキー</td>
 <td>APIキー認証を設定する。</td>
-<td>・その他のアクセス制御の方法として、以下がある。<br>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html</a><br>・APIキー認証については、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>・その他のアクセス制御の方法として、以下がある。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html</a><br>・APIキー認証については、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 <tr>
 <td>クライアント証明書</td>
@@ -10463,7 +10463,7 @@ $ amplify publish
 <tr>
 <td>APIキーの必要性</td>
 <td>リクエストヘッダーにおけるAPIキーのバリデーションを行う。リクエストのヘッダーに『<code>x-api-key</code>』を含み、これにAPIキーが割り当てられていることを強制する。</td>
-<td>ヘッダー名は大文字でも小文字でも問題ないが、小文字が推奨。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></td>
+<td>ヘッダー名は大文字でも小文字でも問題ないが、小文字が推奨。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_collaboration_api_restful.html</a></td>
 </tr>
 <tr>
 <td>URLクエリ文字列パラメーター</td>
@@ -10553,15 +10553,15 @@ $ amplify publish
 </table>
 <h4 id="openapi">▼ OpenAPI仕様のインポート<a class="headerlink" href="#openapi" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html</a></p>
 <h4 id="cors">▼ CORSの有効化<a class="headerlink" href="#cors" title="Permanent link">&para;</a></h4>
 <p>CORSを有効化し、異なるオリジンによって表示されたページからのリクエストを許可する。以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html</a></p>
 <p><br></p>
 <h3 id="_22">プライベート統合<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <h4 id="_23">▼ プライベート統合とは<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>API GatewayとVPCリンクの間で、リクエスト/レスポンスのJSONデータを自動的にマッピングする機能のこと。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-private-integration.html</a></p>
 <p>また、VPCリンクの設定によって、VPCエンドポイントサービスが作成される。</p>
 <table>
 <thead>
@@ -10602,7 +10602,7 @@ $ amplify publish
 <h3 id="lambda">Lambdaプロキシ統合<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
 <h4 id="lambda_1">▼ Lambdaプロキシ統合とは<a class="headerlink" href="#lambda_1" title="Permanent link">&para;</a></h4>
 <p>API GatewayとLambdaの間で、リクエスト/レスポンスのJSONデータを自動的にマッピングする機能のこと。プロキシ統合を使用すると、Lambdaに送信されたリクエストはハンドラ関数のeventオブジェクトに代入される。プロキシ統合を使用しない場合、LambdaとAPI Gatewayの間のマッピングを手動で行う必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-integrations.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-integrations.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-integrations.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-integrations.html</a></p>
 <table>
 <thead>
 <tr>
@@ -10803,15 +10803,15 @@ $ amplify publish
 <tbody>
 <tr>
 <td>キャッシュ設定</td>
-<td>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html</a></td>
 </tr>
 <tr>
 <td>デフォルトのメソッドスロットリング</td>
-<td>リクエスト数（個/秒）制限を設定する。<br>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html</a></td>
+<td>リクエスト数（個/秒）制限を設定する。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html</a></td>
 </tr>
 <tr>
 <td>WAF</td>
-<td>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-aws-waf.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-aws-waf.html</a></td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-aws-waf.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-aws-waf.html</a></td>
 </tr>
 <tr>
 <td>クライアント証明書</td>
@@ -10821,16 +10821,16 @@ $ amplify publish
 </table>
 <h4 id="_29">▼ ステージ変数<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>デプロイされるステージ固有の環境変数を設定できる。Lambda関数名、エンドポイントURL、パラメーターマッピング、マッピングテンプレートで値を出力できる。以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/aws-api-gateway-stage-variables-reference.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/aws-api-gateway-stage-variables-reference.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/aws-api-gateway-stage-variables-reference.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/aws-api-gateway-stage-variables-reference.html</a></p>
 <h4 id="sdk">▼ SDKの作成<a class="headerlink" href="#sdk" title="Permanent link">&para;</a></h4>
 <p><br></p>
 <h3 id="_30">デプロイメント<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
 <h4 id="_31">▼ 通常のデプロイメント<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
 <p>API Gatewayの通常のデプロイメントの仕組みあ隠蔽されている。ダウンタイム無しで、新しいステージをデプロイできる。</p>
-<p>参考：<a href="https://forums.aws.amazon.com/thread.jspa?threadID=238876">https://forums.aws.amazon.com/thread.jspa?threadID=238876</a></p>
+<p>ℹ️ 参考：<a href="https://forums.aws.amazon.com/thread.jspa?threadID=238876">https://forums.aws.amazon.com/thread.jspa?threadID=238876</a></p>
 <h4 id="_32">▼ カナリアリリース<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
 <p>カナリアリリースを使用して、新しいステージをデプロイする。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html</a></p>
 <table>
 <thead>
 <tr>
@@ -10861,18 +10861,18 @@ $ amplify publish
 <h3 id="_33">ログの種類<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
 <h4 id="_34">▼ 実行ログ<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p>CloudWatchログにAPI Gatewayの実行ログを送信するか否かを設定できる。リクエスト/レスポンスの構造もログに出力するようにした方が良い。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html</a></p>
 <h4 id="_35">▼ カスタムアクセスログ<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p>CloudWatchログにAPI Gatewayのアクセスログを送信するか否かを設定できる。アクセスログを構造化ログとして出力できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html</a></p>
 <p><br></p>
 <h3 id="_36">分散トレースの収集<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
 <p>X-Rayを使用して、API Gatewayを開始点とした分散トレースを収集する。まず、API GatewayでトレースIDが作成される。その後、各AWSリソースでスパンを取得し、スパンを紐付けることより、分散トレースを表現できる。なおX-Rayでは、親スパンをセグメント、子スパンをサブセグメントと呼ぶ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-traces">https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-traces</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-traces">https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-traces</a></p>
 <p><br></p>
 <h3 id="api">APIの設定<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
 <h4 id="_37">▼ エンドポイントタイプ<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html</a></p>
 <table>
 <thead>
 <tr>
@@ -10922,7 +10922,7 @@ $ amplify publish
 <li><code>90</code>%の時にEC2インスタンスを3つスケールアウト</li>
 </ul>
 <h4 id="ecs">▼ ECSの場合<a class="headerlink" href="#ecs" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/service-autoscaling-stepscaling.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/service-autoscaling-stepscaling.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/service-autoscaling-stepscaling.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/service-autoscaling-stepscaling.html</a></p>
 <p><br></p>
 <h3 id="_45">ターゲット追跡スケーリング<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
 <h4 id="_46">▼ ターゲット追跡スケーリングとは<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
@@ -10943,7 +10943,7 @@ $ amplify publish
 <li>リクエスト数が減少し、CPU使用率が20%に低下する。</li>
 <li>ECSタスク数が2つにスケールインし、CPU使用率40%に維持される。</li>
 </ol>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-autoscaling-targettracking.html</a></p>
 <table>
 <thead>
 <tr>
@@ -10989,7 +10989,7 @@ $ amplify publish
 <h2 id="05-backup">05. Backup<a class="headerlink" href="#05-backup" title="Permanent link">&para;</a></h2>
 <p><img alt="backup_multi-region" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/backup_multi-region.png" /></p>
 <p>メインリージョンの何らかのAWSリソースで障害が発生し、データが失われる可能性がある。そこで、主要なリージョンとは別に、障害用リージョンを用意しておく。主要リージョンにバックアップを作成し、障害用リージョンにそのコピーを作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/shinon_uk/items/5ee4dcf360b8d5c88779">https://qiita.com/shinon_uk/items/5ee4dcf360b8d5c88779</a></li>
 <li><a href="https://techblog.finatext.com/aws-cross-region-cross-account-backup-5952a990c1c1">https://techblog.finatext.com/aws-cross-region-cross-account-backup-5952a990c1c1</a></li>
@@ -11036,24 +11036,24 @@ $ amplify publish
 <h3 id="ssl">SSL証明書の検証方法<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h3>
 <h4 id="_49">▼ ドメイン検証<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
 <p>ドメインのSSL証明書を発行するためには、そのドメインの所有者であることを証明する必要がある。AWSだけでなく、GMOなどのドメインを購入できる各サービスに検証方法が用意されている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/acm/latest/userguide/domain-ownership-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/domain-ownership-validation.html</a></li>
 <li><a href="https://jp.globalsign.com/support/proceeding/147.html">https://jp.globalsign.com/support/proceeding/147.html</a></li>
 </ul>
 <h4 id="dns">▼ DNS検証<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h4>
 <p>CMによってRoute53に自動作成されるCNAMEレコード値を使用して、ドメインの所有者であることを証明する。証明書が失効しそうになった時に、CNAMEレコード値が照合され、CMが証明書を再発行してくれる。なお、ドメインをAWS以外（例：お名前ドットコム）で購入している場合は、NSレコード値を購入先のサービスのドメインレジストラに手作業で登録する必要があることに注意する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html</a></li>
 <li><a href="https://dev.classmethod.jp/articles/route53-domain-onamae/">https://dev.classmethod.jp/articles/route53-domain-onamae/</a></li>
 </ul>
 <h4 id="e">▼ Eメール検証<a class="headerlink" href="#e" title="Permanent link">&para;</a></h4>
 <p>ドメインの所有者にメールを送信し、これを承認することにより所有者であることを証明する。ドメインをAWS以外（例：お名前ドットコム）で購入している場合は、そちらで設定したメールアドレス宛に確認メールが送信される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html">https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html</a></p>
 <h4 id="_50">▼ 検証方法の変更<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
 <p>既存の証明書の検証方法は変更できない。そのため、検証方法を変更した証明書を新しく発行し、これを紐づける必要がある。古い証明書は削除しておく。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/switch-acm-certificate/</a></p>
 <p><br></p>
 <h3 id="ssl_1">SSL証明書<a class="headerlink" href="#ssl_1" title="Permanent link">&para;</a></h3>
 <h4 id="_51">▼ セキュリティポリシー<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
@@ -11166,7 +11166,7 @@ $ amplify publish
 <p><img alt="ssl_certificate_chrome" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ssl_certificate_chrome.png" /></p>
 <h4 id="_52">▼ ダウンタイム<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h4>
 <p>ALBではSSL証明書の変更でダウンタイムは発生しない。既存のセッションを維持しつつ、新しいSSL証明書が適用される。CloudFrontは謎...</p>
-<p>参考：<a href="https://aws.typepad.com/sajp/2014/04/elb-ssl.html">https://aws.typepad.com/sajp/2014/04/elb-ssl.html</a></p>
+<p>ℹ️ 参考：<a href="https://aws.typepad.com/sajp/2014/04/elb-ssl.html">https://aws.typepad.com/sajp/2014/04/elb-ssl.html</a></p>
 <p><br></p>
 <h2 id="07-chatbot">07. Chatbot<a class="headerlink" href="#07-chatbot" title="Permanent link">&para;</a></h2>
 <h3 id="chatbot">Chatbotとは<a class="headerlink" href="#chatbot" title="Permanent link">&para;</a></h3>
@@ -11200,7 +11200,7 @@ $ amplify publish
 </table>
 <h4 id="_54">▼ サポート対象のイベント<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
 <p>AWSリソースのイベントを、EventBridge（CloudWatchイベント）を使用して、Chatbotに転送できるが、全てのAWSリソースをサポートしているわけではない。サポート対象のAWSリソースは以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/chatbot/latest/adminguide/related-services.html#cloudwatchevents">https://docs.aws.amazon.com/chatbot/latest/adminguide/related-services.html#cloudwatchevents</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/chatbot/latest/adminguide/related-services.html#cloudwatchevents">https://docs.aws.amazon.com/chatbot/latest/adminguide/related-services.html#cloudwatchevents</a></p>
 <h4 id="_55">▼ インシデント<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
 <p>４大シグナルを含む、システム的に良くない事象のこと。</p>
 <h4 id="_56">▼ オンコール<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
@@ -11232,7 +11232,7 @@ $ amplify publish
 <p><br></p>
 <h3 id="distributions">Distributions<a class="headerlink" href="#distributions" title="Permanent link">&para;</a></h3>
 <h4 id="distributions_1">▼ Distributions<a class="headerlink" href="#distributions_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.geekfeed.co.jp/geekblog/wordpress%E3%81%A7%E6%A7%8B%E7%AF%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%ABcloudfront%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E9%AB%98/">https://www.geekfeed.co.jp/geekblog/wordpress%E3%81%A7%E6%A7%8B%E7%AF%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%ABcloudfront%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E9%AB%98/</a></p>
+<p>ℹ️ 参考：<a href="https://www.geekfeed.co.jp/geekblog/wordpress%E3%81%A7%E6%A7%8B%E7%AF%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%ABcloudfront%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E9%AB%98/">https://www.geekfeed.co.jp/geekblog/wordpress%E3%81%A7%E6%A7%8B%E7%AF%89%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%ABcloudfront%E3%82%92%E7%AB%8B%E3%81%A6%E3%81%A6%E9%AB%98/</a></p>
 <table>
 <thead>
 <tr>
@@ -11307,7 +11307,7 @@ $ amplify publish
 <tr>
 <td>Security Policy</td>
 <td>リクエストの送信者が使用するSSL/TLSプロトコルや暗号化方式のバージョンに合わせて、CloudFrontが受信できるこれらのバージョンを設定する。</td>
-<td>・リクエストの送信者には、ブラウザ、APIにリクエストを送信する外部サービス、ルーティング元のAWSリソース、などを含む。<br>・参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html</a></td>
+<td>・リクエストの送信者には、ブラウザ、APIにリクエストを送信する外部サービス、ルーティング元のAWSリソース、などを含む。<br>・ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html</a></td>
 </tr>
 <tr>
 <td>Default Root Object</td>
@@ -11411,7 +11411,7 @@ $ amplify publish
 <tr>
 <td>Whitelist Header</td>
 <td>Headers を参考にせよ。</td>
-<td>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#ExpirationDownloadDist">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#ExpirationDownloadDist</a>・<code>Accept-*****</code>：アプリケーションにレスポンスして欲しいデータの種類（データ型など）を指定。<br>・ <code>CloudFront-Is-*****-Viewer</code>：デバイスタイプのboolean値が格納されている。</td>
+<td>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#ExpirationDownloadDist">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#ExpirationDownloadDist</a>・<code>Accept-*****</code>：アプリケーションにレスポンスして欲しいデータの種類（データ型など）を指定。<br>・ <code>CloudFront-Is-*****-Viewer</code>：デバイスタイプのboolean値が格納されている。</td>
 </tr>
 <tr>
 <td>Restrict Viewer Access</td>
@@ -11501,14 +11501,14 @@ $ amplify publish
 <h3 id="_59">オリジンリクエストの可否、キャッシュ作成の有無<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h3>
 <h4 id="_60">▼ オリジンリクエストの可否、キャッシュ作成の有無、の決まり方<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
 <p>オリジンにルーティングするべきリクエストを、各種パラメーターのAll（全許可）/一部許可/None（全拒否）で設定できる。また、キャッシュ作成の有無にも関係している。CloudFrontではリクエストがJSONとして扱われており、JSONの値が過去のリクエストに合致した時のみ、そのリクエストと過去のものが同一であると見なす仕組みになっている。キャッシュ判定時のパターンを減らし、ヒット率を向上させるために、全ての項目で『None（全拒否）』を選択した方が良い。最終的に、対象のファイルがCloudFrontのキャッシュ作成の対象となっているかは、レスポンスのヘッダーに含まれる『<code>X-Cache:</code>』が『<code>Hit from cloudfront</code>』または『<code>Miss from cloudfront</code>』のどちらで判断できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html</a></li>
 </ul>
 <h4 id="_61">▼ ヘッダー値に基づくキャッシュ作成<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
 <p>リクエストヘッダーのうち、オリジンへのルーティングを許可し、またキャッシュキーと見なすパラメーターを設定する。Cookieとクエリストリングと比べて、同じ設定でもキャッシュ作成の有無が異なることに注意する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html#header-caching-web</a></p>
 <table>
 <thead>
 <tr>
@@ -11537,7 +11537,7 @@ $ amplify publish
 </table>
 <h4 id="cookie">▼ Cookieに基づくキャッシュ作成<a class="headerlink" href="#cookie" title="Permanent link">&para;</a></h4>
 <p>Cookie情報のキー名のうち、オリジンへのルーティングを許可し、またキャッシュキーと見なすパラメーターを設定する。リクエストのヘッダーに含まれるCookie情報（キー名/値）が変動していると、CloudFrontに保存されたキャッシュがヒットしない。CloudFrontはキー名/値を保持するため、変化しやすいキー名/値は、オリジンにルーティングしないように設定する。例えば、GoogleAnalyticsのキー名（<code>_ga</code>）の値は、ブラウザによって異なるため、1ユーザーがブラウザを変えるたびに、異なるキャッシュが作成されることになる。そのため、ユーザーを一意に判定することが難しくなってしまう。GoogleAnalyticsのキーはブラウザからAjaxでGoogleに送信されるもので、オリジンにとっても基本的に不要である。セッションIDは<code>Cookie</code>ヘッダーに設定されているため、フォーム送信に関わるパスパターンでは、セッションIDのキー名を許可する必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html</a></p>
 <table>
 <thead>
 <tr>
@@ -11566,7 +11566,7 @@ $ amplify publish
 </table>
 <h4 id="_62">▼ クエリストリングに基づくキャッシュ作成<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h4>
 <p>クエリストリングのうち、オリジンへのルーティングを許可し、またキャッシュキーと見なすパラメーターを設定する。異なるクエリパラメーターのキャッシュを別々に作成するか否かを設定できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html</a></p>
 <table>
 <thead>
 <tr>
@@ -11598,16 +11598,16 @@ $ amplify publish
 <p><br></p>
 <h3 id="_63">ヘッダーキャッシュのヒット率向上<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h3>
 <h4 id="_64">▼ ヒット率の向上について<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html</a></p>
 <p><br></p>
 <h3 id="cookie_2">Cookieキャッシュのヒット率向上<a class="headerlink" href="#cookie_2" title="Permanent link">&para;</a></h3>
 <h4 id="_65">▼ ヒット率の向上について<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html</a></p>
 <p><br></p>
 <h3 id="_66">クエリストリングキャッシュのヒット率向上<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h3>
 <h4 id="_67">▼ ヒット率の向上について<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h4>
 <p>CloudFrontは、クエリストリングによってオリジンからレスポンスされるファイルのキャッシュを作成し、次回、同じクエリストリングであった場合、キャッシュをレスポンスとして返信する。キャッシュ作成のルールを理解すれば、キャッシュのヒット率を向上させられる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cache-hit-ratio.html#cache-hit-ratio-query-string-parameters">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cache-hit-ratio.html#cache-hit-ratio-query-string-parameters</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html#query-string-parameters-optimizing-caching">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/QueryStringParameters.html#query-string-parameters-optimizing-caching</a></li>
@@ -11633,7 +11633,7 @@ $ amplify publish
 <h3 id="_70">エッジロケーションとエッジサーバー<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
 <h4 id="point-of-presence">▼ Point Of Presence<a class="headerlink" href="#point-of-presence" title="Permanent link">&para;</a></h4>
 <p>CloudFrontは世界中に設置される『Point Of Presence（エッジロケーション＋中間層キャッシュ）』にデプロイされる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc">https://aws.amazon.com/jp/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc">https://aws.amazon.com/jp/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc</a></p>
 <h4 id="ip">▼ エッジロケーションにおける全エッジサーバーのIPアドレス<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
 <p>CloudFrontには、エッジロケーションの数だけエッジサーバーがあり、各サーバーにIPアドレスが割り当てられている。以下のコマンドで、全てのエッジサーバーのIPアドレスを確認できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -11641,7 +11641,7 @@ $ amplify publish
   <span class="p">|</span> jq  <span class="s2">&quot;.prefixes[]| select(.service==&quot;</span>CLOUDFRONT<span class="s2">&quot;) | .ip_prefix&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p>もしくは、以下のリンクを直接的に参考し、『<code>"service": "CLOUDFRONT"</code>』となっている部分を探す。</p>
-<p>参考：<a href="https://ip-ranges.amazonaws.com/ip-ranges.json">https://ip-ranges.amazonaws.com/ip-ranges.json</a></p>
+<p>ℹ️ 参考：<a href="https://ip-ranges.amazonaws.com/ip-ranges.json">https://ip-ranges.amazonaws.com/ip-ranges.json</a></p>
 <h4 id="ip_1">▼ エッジロケーションの使用中サーバーのIPアドレス<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h4>
 <p>CloudFrontには、エッジロケーションがあり、各ロケーションにサーバーがある。以下のコマンドで、エッジロケーションにある使用中サーバーのIPアドレスを確認できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ nslookup &lt;割り当てられた文字列&gt;.cloudfront.net
@@ -11666,7 +11666,7 @@ $ amplify publish
 </code></pre></div></td></tr></table></div>
 <h4 id="_73">▼ 設定方法<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
 <p>オリジンからカスタムエラーページをレスポンスするパスパターンを定義する。Lamnda@Edgeを使用したCloudFrontの場合は、Lambda@Edgeを経由して、カスタムエラーページをレスポンスする必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html</a></p>
 <p><br></p>
 <h2 id="9-cloudtrail">9. CloudTrail<a class="headerlink" href="#9-cloudtrail" title="Permanent link">&para;</a></h2>
 <h3 id="cloudtrail">CloudTrailとは<a class="headerlink" href="#cloudtrail" title="Permanent link">&para;</a></h3>
@@ -11753,7 +11753,7 @@ $ amplify publish
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_74">▼ ログ送信権限<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AWS-logs-and-resource-policy.html</a></p>
 <h4 id="_75">▼ 操作コマンド<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h4>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -11828,7 +11828,7 @@ $ systemctl list-unit-files --type<span class="o">=</span>service
 </tbody>
 </table>
 <h4 id="_78">▼ 概念図<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html</a></li>
 <li><a href="https://www.slideshare.net/AmazonWebServicesJapan/20190326-aws-black-belt-online-seminar-amazon-cloudwatch">https://www.slideshare.net/AmazonWebServicesJapan/20190326-aws-black-belt-online-seminar-amazon-cloudwatch</a></li>
@@ -11842,7 +11842,7 @@ $ systemctl list-unit-files --type<span class="o">=</span>service
 <p>複数のCloudWatchメトリクスの結果を集計し、パフォーマンスに関するデータを収集する。</p>
 <h4 id="_81">▼ パフォーマンスインサイト<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h4>
 <p>RDS（Aurora、非Aurora）のパフォーマンスに関するメトリクスのデータポイントを収集する。SQLレベルで監視できるようになる。パラメーターグループの<code>performance_schema</code>を有効化する必要がある。対応するエンジンバージョンとインスタンスタイプについては、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.Enabling.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.Enabling.html</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.Overview.Engines.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.Overview.Engines.html</a></li>
@@ -11887,7 +11887,7 @@ $ systemctl list-unit-files --type<span class="o">=</span>service
 <h3 id="_83">フィルターパターン<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h3>
 <h4 id="_84">▼ フィルターパターンとは<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h4>
 <p>ログ内で検知する文字列を設定する。大文字と小文字を区別するため、網羅的に設定する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html</a></li>
 <li><a href="https://qiita.com/shimajiri/items/81a4ed0fe39fe337fedb">https://qiita.com/shimajiri/items/81a4ed0fe39fe337fedb</a></li>
@@ -11904,7 +11904,7 @@ $ systemctl list-unit-files --type<span class="o">=</span>service
 <h4 id="_85">▼ 除外条件<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>『<code>ERROR:</code>』が含まれ、かつ『<code>MethodNotAllowedHttpException</code>』が含まれないログを検知する。OR条件と除外条件を組み合わせようとすると、OR条件が認識されずに除外条件だけが適用されてしまう。そのため、ここではOR条件を使用していない。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/cloudwatch-metricsfilter-filterpattern/">https://dev.classmethod.jp/articles/cloudwatch-metricsfilter-filterpattern/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/cloudwatch-metricsfilter-filterpattern/">https://dev.classmethod.jp/articles/cloudwatch-metricsfilter-filterpattern/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="s2">&quot;ERROR:&quot;</span> -MethodNotAllowedHttpException
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -11913,7 +11913,7 @@ $ systemctl list-unit-files --type<span class="o">=</span>service
 <p>インスタンス内で稼働する常駐システムのこと。インスタンス内のデータを収集し、CloudWatchログに対して送信する。執筆時点（2020/10/05）では非推奨で、CloudWatchエージェントへの設定の移行が推奨されている。</p>
 <h4 id="varawslogsetcawslogsconf">▼ <code>/var/awslogs/etc/awslogs.conf</code>ファイル<a class="headerlink" href="#varawslogsetcawslogsconf" title="Permanent link">&para;</a></h4>
 <p>CloudWatchログエージェントを設定する。OS、ミドルウェア、アプリケーションに分類して設定すると良い。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html#agent-configuration-file">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html#agent-configuration-file</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html#agent-configuration-file">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html#agent-configuration-file</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12038,7 +12038,7 @@ $ service awslogs start
 <p>クエリを使用してログを抽出する。</p>
 <h4 id="_87">▼ クエリ例<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h4>
 <p>汎用的なクエリを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html</a></p>
 <p><strong>＊例＊</strong></p>
 <p>小文字と大文字を区別せずに、Errorを含むログを検索する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -12113,7 +12113,7 @@ $ service awslogs start
 <tr>
 <td>欠落データの処理</td>
 <td>データポイントが発生しないことをどう判定するかを設定する。</td>
-<td>データポイントが発生しないことを正常と見なす場合は『<code>notBreaching</code>』とし、発生しないことを異常とする場合は、『<code>breaching</code>』とする。<br>参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data</a></td>
+<td>データポイントが発生しないことを正常と見なす場合は『<code>notBreaching</code>』とし、発生しないことを異常とする場合は、『<code>breaching</code>』とする。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data</a></td>
 </tr>
 </tbody>
 </table>
@@ -12138,7 +12138,7 @@ $ service awslogs start
 <h3 id="_92">設定ファイル<a class="headerlink" href="#_92" title="Permanent link">&para;</a></h3>
 <h4 id="buildspecyml">▼ <code>buildspec.yml</code>ファイル<a class="headerlink" href="#buildspecyml" title="Permanent link">&para;</a></h4>
 <p>CodeBuildの設定を行う。ルートディレクトリの直下に配置しておく。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html">https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html">https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>コンテナをビルドする場合を示す。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12202,18 +12202,18 @@ $ service awslogs start
 <h3 id="_93">利用できるデプロイメント手法<a class="headerlink" href="#_93" title="Permanent link">&para;</a></h3>
 <h4 id="ecs_2">▼ ECSの場合<a class="headerlink" href="#ecs_2" title="Permanent link">&para;</a></h4>
 <p>ローリングアップデート、ブルー/グリーンデプロイメント、を利用できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
 <h4 id="ec2">▼ EC2の場合<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h4>
 <p>インプレースデプロイ、ブルー/グリーンデプロイメント、を利用できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
 <h4 id="lambda_3">▼ Lambdaの場合<a class="headerlink" href="#lambda_3" title="Permanent link">&para;</a></h4>
 <p>ブルー/グリーンデプロイメント、を利用できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments.html</a></p>
 <p><br></p>
 <h3 id="ecs_3">ECSタスクのローリングアップデート<a class="headerlink" href="#ecs_3" title="Permanent link">&para;</a></h3>
 <h4 id="imagedefinitionsjson">▼ <code>imagedefinitions.json</code>ファイル<a class="headerlink" href="#imagedefinitionsjson" title="Permanent link">&para;</a></h4>
 <p>新しいリビジョン番号のECSタスク定義を作成するために、新しいコンテナ名とイメージリポジトリURLを定義する。リポジトリに事前に配置するのではなく、CI/CDの中で動的に作成するようにした方が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/file-reference.html#pipelines-create-image-definitions">https://docs.aws.amazon.com/codepipeline/latest/userguide/file-reference.html#pipelines-create-image-definitions</a></li>
 <li><a href="https://ngyuki.hatenablog.com/entry/2021/04/07/043415">https://ngyuki.hatenablog.com/entry/2021/04/07/043415</a></li>
@@ -12247,7 +12247,7 @@ $ service awslogs start
 </ol>
 <h4 id="appspecyml">▼ <code>appspec.yml</code>ファイル<a class="headerlink" href="#appspecyml" title="Permanent link">&para;</a></h4>
 <p>ルートディレクトリの直下に配置しておく。仕様として、複数のコンテナをデプロイできない。ECSタスク定義名を<code>&lt;TASK_DEFINITION&gt;</code>とすると、<code>taskdef.json</code>ファイルの値を元にして、新しいECSタスク定義が自動的に代入される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-resources.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-resources.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-resources.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-resources.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12278,14 +12278,14 @@ $ service awslogs start
 </code></pre></div></td></tr></table></div>
 <h4 id="imagedetailjson">▼ <code>imageDetail.json</code>ファイル<a class="headerlink" href="#imagedetailjson" title="Permanent link">&para;</a></h4>
 <p>新しいバージョンタグを含むイメージリポジトリURLを、<code>taskdef.json</code>ファイルの <code>&lt;IMAGE1_NAME&gt;</code>に代入するために必要である。これはリポジトリに事前に配置するのではなく、CI/CDの中で動的に作成するようにした方が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/file-reference.html#file-reference-ecs-bluegreen">https://docs.aws.amazon.com/codepipeline/latest/userguide/file-reference.html#file-reference-ecs-bluegreen</a></li>
 <li><a href="https://ngyuki.hatenablog.com/entry/2021/04/07/043415">https://ngyuki.hatenablog.com/entry/2021/04/07/043415</a></li>
 </ul>
 <h4 id="taskdefjson">▼ <code>taskdef.json</code>ファイル<a class="headerlink" href="#taskdefjson" title="Permanent link">&para;</a></h4>
 <p>デプロイされるECSタスク定義を実装し、ルートディレクトリの直下に配置する。CodeDeployは、CodeBuildから渡された<code>imageDetail.json</code>ファイルを検知し、ECRからコンテナイメージを取得する。この時、<code>taskdef.json</code>ファイルのコンテナイメージ名を<code>&lt;IMAGE1_NAME&gt;</code>としておくと、<code>imageDetail.json</code>ファイルの値を元にして、新しいバージョンタグを含むイメージリポジトリURLが自動的に代入される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://ngyuki.hatenablog.com/entry/2021/04/07/043415">https://ngyuki.hatenablog.com/entry/2021/04/07/043415</a></li>
 <li><a href="https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-ecs-ecr-codedeploy.html#tutorials-ecs-ecr-codedeploy-taskdefinition">https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-ecs-ecr-codedeploy.html#tutorials-ecs-ecr-codedeploy-taskdefinition</a></li>
@@ -12422,18 +12422,18 @@ $ service awslogs start
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="ec2_1">EC2インスタンスのインプレースデプロイメント<a class="headerlink" href="#ec2_1" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-in-place">https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-in-place</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-in-place">https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-in-place</a></p>
 <p><br></p>
 <h3 id="ec2_2">EC2インスタンスのブルー/グリーンデプロイメント<a class="headerlink" href="#ec2_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-groups-create-blue-green.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-groups-create-blue-green.html">https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></p>
 <p><br></p>
 <h2 id="12-direct-connect">12. Direct Connect<a class="headerlink" href="#12-direct-connect" title="Permanent link">&para;</a></h2>
 <h3 id="direct-connect">Direct Connectとは<a class="headerlink" href="#direct-connect" title="Permanent link">&para;</a></h3>
 <p><img alt="direct-connect" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/direct-connect.png" /></p>
 <p>専用線方式のWANとして機能し、AWS側のプライベートネットワーク（VPC）と、ユーザー側のプライベートネットワークの間を接続する。なお、DirectConnectは、それ専用の中継VPC内に作成する。</p>
-<p>参考：<a href="https://prtimes.jp/main/html/rd/p/000000050.000009999.html">https://prtimes.jp/main/html/rd/p/000000050.000009999.html</a></p>
+<p>ℹ️ 参考：<a href="https://prtimes.jp/main/html/rd/p/000000050.000009999.html">https://prtimes.jp/main/html/rd/p/000000050.000009999.html</a></p>
 <p>WANの種類については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/network/network.html">https://hiroki-it.github.io/tech-notebook-mkdocs/network/network.html</a></p>
 <p><br></p>
 
   <hr>
@@ -12441,7 +12441,7 @@ $ service awslogs start
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

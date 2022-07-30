@@ -6628,14 +6628,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7204,12 +7204,12 @@
 <h1 id="laravel">コマンド＠Laravel<a class="headerlink" href="#laravel" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-artisan">01. artisanコマンド<a class="headerlink" href="#01-artisan" title="Permanent link">&para;</a></h2>
 <h3 id="artisan">artisanコマンドとは<a class="headerlink" href="#artisan" title="Permanent link">&para;</a></h3>
 <p>アプリケーションの開発に役立つコマンドを提供する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/artisan.html">https://readouble.com/laravel/8.x/ja/artisan.html</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/artisan.html">https://readouble.com/laravel/8.x/ja/artisan.html</a></p>
 <p><br></p>
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
 <h4 id="_2">▼ キャッシュの削除<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
@@ -7270,7 +7270,7 @@ $ php artisan make:controller &lt;Controller名&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="rollback">▼ rollback<a class="headerlink" href="#rollback" title="Permanent link">&para;</a></h4>
 <p>指定した履歴数だけ、ロールバックを行う。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations">https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations">https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan migrate:rollback --step<span class="o">=</span>&lt;ロールバック数&gt;
 </code></pre></div></td></tr></table></div>
 <p>実際の使用場面として、マイグレーションに失敗した場合、1つ前の状態にロールバックしてマイグレーションファイルを修正した後、再びマイグレーションを行う。</p>
@@ -7286,17 +7286,17 @@ $ php artisan migrate
 </code></pre></div></td></tr></table></div>
 <h4 id="reset">▼ reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h4>
 <p>初期の状態まで、全てのロールバックを実行する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations">https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations">https://readouble.com/laravel/8.x/ja/migrations.html#rolling-back-migrations</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan migrate:reset
 </code></pre></div></td></tr></table></div>
 <h4 id="refresh">▼ refresh<a class="headerlink" href="#refresh" title="Permanent link">&para;</a></h4>
 <p>全てのロールバック（<code>migrate:reset</code>）を実行し、次いで<code>migrate</code>を実行する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#roll-back-migrate-using-a-single-command">https://readouble.com/laravel/8.x/ja/migrations.html#roll-back-migrate-using-a-single-command</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#roll-back-migrate-using-a-single-command">https://readouble.com/laravel/8.x/ja/migrations.html#roll-back-migrate-using-a-single-command</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan migrate:refresh
 </code></pre></div></td></tr></table></div>
 <h4 id="fresh">▼ fresh<a class="headerlink" href="#fresh" title="Permanent link">&para;</a></h4>
 <p>全てのテーブルを削除と<code>migrate</code>を実行する。マイグレーションファイルの構文チェックを行わずに、強制的に実行される。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#drop-all-tables-migrate">https://readouble.com/laravel/8.x/ja/migrations.html#drop-all-tables-migrate</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#drop-all-tables-migrate">https://readouble.com/laravel/8.x/ja/migrations.html#drop-all-tables-migrate</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan migrate:fresh
 </code></pre></div></td></tr></table></div>
 <p>マイグレーション時、テーブルがすでに存在するエラーが起こることがある。この場合、テーブルがマイグレーションされる前までロールバックし、マイグレーションを再実行することが最適である。しかしそれが難しければ、このコマンドを実行する必要がある。</p>
@@ -7304,7 +7304,7 @@ $ php artisan migrate
 </code></pre></div></td></tr></table></div>
 <h4 id="-force">▼ --force<a class="headerlink" href="#-force" title="Permanent link">&para;</a></h4>
 <p>マイグレーション時、本当に実行して良いか確認画面（Yes/No）が表示される。CI/CD時に、この確認画面でYes/Noを入力できないため、確認画面をスキップできるようにする必要がある。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#forcing-migrations-to-run-in-production">https://readouble.com/laravel/8.x/ja/migrations.html#forcing-migrations-to-run-in-production</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/migrations.html#forcing-migrations-to-run-in-production">https://readouble.com/laravel/8.x/ja/migrations.html#forcing-migrations-to-run-in-production</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ php artisan migrate --force
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7370,7 +7370,7 @@ $ php artisan optimize:clear
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

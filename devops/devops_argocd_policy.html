@@ -6524,14 +6524,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7004,7 +7004,7 @@
 <h1 id="argocd">設計ポリシー＠ArgoCD<a class="headerlink" href="#argocd" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. リポジトリ構成<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">リポジトリ分割のメリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7016,7 +7016,7 @@
 <h3 id="_3">モノリポジトリ構成（推奨）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="kubernetes">▼ Kubernetesリソースのマニフェストファイルを監視する場合<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h4>
 <p>監視対象リポジトリごとにApplicationを作成し、これらを同じリポジトリで管理する。この時、監視対象リポジトリにはKubernetesリソースのマニフェストファイルやhelmチャートが管理されている。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04">https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04">https://atmarkit.itmedia.co.jp/ait/articles/2107/30/news018.html#04</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7049,7 +7049,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="application">▼ Applicationのマニフェストファイルを監視する場合<a class="headerlink" href="#application" title="Permanent link">&para;</a></h4>
 <p>監視対象リポジトリごとにApplicationを作成し、これらを同じリポジトリで管理する。この時、監視対象リポジトリにはApplicationが管理されている。これにより、親Applicationで子Applicationをグループ化したように構成できる。また、親Applicationを使用して、ArgoCDが自身をアップグレードできるようになる。ここでは、子Applicationが監視するKubernetesリソースやhelmチャートのリポジトリは『ポリリポジトリ』としているが、『モノリポジトリ』でも良い。注意点として、同期時の操作手順として、親Applicationの画面で子Applicationの同期を実行し、その後子Applicationの画面で同期を実行することになる。</p>
-<p>参考：<a href="https://www.arthurkoziel.com/setting-up-argocd-with-helm/">https://www.arthurkoziel.com/setting-up-argocd-with-helm/</a></p>
+<p>ℹ️ 参考：<a href="https://www.arthurkoziel.com/setting-up-argocd-with-helm/">https://www.arthurkoziel.com/setting-up-argocd-with-helm/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7188,7 +7188,7 @@
 <p><br></p>
 <h3 id="_7">機密な環境変数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Applicationで使用する機密な環境変数は、Secretで管理する。このSecretをどの場所に保存するかについて議論がなされている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/secret-management/">https://argo-cd.readthedocs.io/en/stable/operator-manual/secret-management/</a></li>
 <li><a href="https://blog.mmmcorp.co.jp/blog/2022/02/24/yassan-argocd-with-aws-secrets-manager/">https://blog.mmmcorp.co.jp/blog/2022/02/24/yassan-argocd-with-aws-secrets-manager/</a></li>
@@ -7198,10 +7198,10 @@
 <h3 id="_8">削除できない系<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="application_1">▼ Applicationを削除できない<a class="headerlink" href="#application_1" title="Permanent link">&para;</a></h4>
 <p>PruneによるKubernetesリソースの削除を有効化し、フォアグラウンドで削除した場合、Applicationが配下にリソースを持たないことにより、Applicationを削除できないことがある。これらの場合には、以下の手順でApplicationを削除する。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted">https://stackoverflow.com/questions/67597403/argocd-stuck-at-deleting-but-resources-are-already-deleted</a></p>
 <p>（１）Applicationの<code>spec.syncPolicy.allowEmpty</code>キーを有効化する。</p>
 <p>（２）フォアグラウンドで削除すると、Applicationの<code>metadata.finalizers</code>キーの値に削除中のリソースが設定される。この配列を空配列に変更する。ArgoCDのUIからは変更できず、<code>kubectl patch</code>コマンドを使用する必要がある。</p>
-<p>参考：<a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></p>
+<p>ℹ️ 参考：<a href="https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/">https://hyoublog.com/2020/06/09/kubernetes-%E3%82%AB%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%89%E5%89%8A%E9%99%A4%E9%80%A3%E9%8E%96%E5%89%8A%E9%99%A4/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl patch crd applications.argoproj.io <span class="se">\</span>
@@ -7225,11 +7225,11 @@
 </ul>
 <p><br></p>
 <h3 id="_9">ヘルスチェックが終わらない<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
+<p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-stuck-in-progressing-state</a></p>
 <p><br></p>
 <h3 id="out-of-sync">同期してもOut of syncが解消されない<a class="headerlink" href="#out-of-sync" title="Permanent link">&para;</a></h3>
 <p>同期後にKubernetesリソースの状態が変更されるような場合、同期してもOut of syncになってしまう。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/">https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/</a></li>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync">https://argo-cd.readthedocs.io/en/stable/faq/#why-is-my-application-still-outofsync-immediately-after-a-successful-sync</a></li>

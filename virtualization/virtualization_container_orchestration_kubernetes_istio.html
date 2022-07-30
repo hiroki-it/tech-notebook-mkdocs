@@ -6907,14 +6907,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7768,12 +7768,12 @@
 <h1 id="istio">Istio＠仮想化<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-istio">01. Istioの仕組み<a class="headerlink" href="#01-istio" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>データプレーンとコントロールプレーンによって、サービスメッシュを実現する。マイクロサービス間の通信を透過的にする（通信の存在を感じさせない）ことを思想としている。ただ必ずしも、Istioリソースを使用する必要はなく、KubernetesやOpenShiftに内蔵されたIstioに相当する機能を使用しても良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/ops/deployment/architecture/">https://istio.io/latest/docs/ops/deployment/architecture/</a></li>
 <li><a href="https://techblog.zozo.com/entry/zozotown-istio-production-ready">https://techblog.zozo.com/entry/zozotown-istio-production-ready</a></li>
@@ -7783,7 +7783,7 @@
 <h3 id="_3">データプレーン<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ データプレーンとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>インバウンド通信をマイクロサービスにルーティングする機能を持つ。Istioは、プロキシ機能を持つistio-proxyコンテナを自動的に作成し、これがマイクロサービスに通信をルーティングする。</p>
-<p>参考：<a href="https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/">https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/</a></p>
+<p>ℹ️ 参考：<a href="https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/">https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/</a></p>
 <h4 id="proxy">▼ Proxy<a class="headerlink" href="#proxy" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -7795,7 +7795,7 @@
 <tbody>
 <tr>
 <td><code>istio-proxy</code></td>
-<td>Envoyが稼働しており、VirtualServiceとDestinationRuleの設定値はenvoyの構成情報としてコンテナに適用される。<br>参考：<a href="https://sreake.com/blog/istio/">https://sreake.com/blog/istio/</a></td>
+<td>Envoyが稼働しており、VirtualServiceとDestinationRuleの設定値はenvoyの構成情報としてコンテナに適用される。<br>ℹ️ 参考：<a href="https://sreake.com/blog/istio/">https://sreake.com/blog/istio/</a></td>
 </tr>
 <tr>
 <td><code>istio-init</code></td>
@@ -7805,13 +7805,13 @@
 </table>
 <h4 id="istio-proxy">▼ <code>istio-proxy</code>コンテナが作成される仕組み<a class="headerlink" href="#istio-proxy" title="Permanent link">&para;</a></h4>
 <p>サイドカーコンテナのistio-proxyコンテナをPod内に自動的に作成する処理は、admission-controllersのmutating-admission-webhookを使用した機能である。istio-injectionが有効になっている場合、Podの作成処理時に、KubernetesからIstioにWebhookが送信される。具体的には、Pod、Deployment、StatefulSet、DaemonSet、によるPodの作成処理でkube-apiserverにコールすると、mutating-admission時に、WebhookがIstio内のsidecar-injector-webhookサーバーの<code>/inject</code>エンドポイントに送信される。これを受信したsidecar-injector-webhookサーバーは、istio-proxyコンテナを作成する処理を返信する。Kubernetesはこれを受信し、Podにistio-proxyコンテナを作成する。</p>
-<p>参考：<a href="https://www.sobyte.net/post/2022-07/istio-sidecar-injection/">https://www.sobyte.net/post/2022-07/istio-sidecar-injection/</a></p>
+<p>ℹ️ 参考：<a href="https://www.sobyte.net/post/2022-07/istio-sidecar-injection/">https://www.sobyte.net/post/2022-07/istio-sidecar-injection/</a></p>
 <p><img alt="kubernetes_admission-controllers_istio-injection.ong" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_admission-controllers_istio-injection.ong.png" /></p>
 <p><br></p>
 <h3 id="_5">コントロールプレーン<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ コントロールプレーンとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>データプレーンを包括的に管理する機能を持つ。Istioは、istio-proxyコンテナの管理機能を持つistidというPodを作成する。このPod内には、Pilot、Citadel、Galley、に相当するコンテナが稼働している。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://project.nikkeibp.co.jp/idg/atcl/idg/17/020100207/020100001/?ST=idg-cm-network&amp;P=2">https://project.nikkeibp.co.jp/idg/atcl/idg/17/020100207/020100001/?ST=idg-cm-network&amp;P=2</a></li>
 <li><a href="https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/">https://www.tigera.io/blog/running-istio-on-kubernetes-in-production-part-i/</a></li>
@@ -7822,7 +7822,7 @@
 <p>コンテナオーケストレーションツール（Kubernetes、OpenShift、など）の種類を認識し、ツールに合ったIstiodコンポーネントを作成する。</p>
 <h4 id="pilot">▼ Pilot<a class="headerlink" href="#pilot" title="Permanent link">&para;</a></h4>
 <p>コンテナオーケストレーションツール（Kubernetes、OpenShift、など）の種類を認識し、ツールに合ったプロキシコンテナを作成する。他に、Istioの設定を、Istioによって注入されるEnvoyの設定に変換する。</p>
-<p>参考：<a href="https://blog.devgenius.io/implementing-service-discovery-for-microservices-df737e012bc2">https://blog.devgenius.io/implementing-service-discovery-for-microservices-df737e012bc2</a></p>
+<p>ℹ️ 参考：<a href="https://blog.devgenius.io/implementing-service-discovery-for-microservices-df737e012bc2">https://blog.devgenius.io/implementing-service-discovery-for-microservices-df737e012bc2</a></p>
 <table>
 <thead>
 <tr>
@@ -7843,11 +7843,11 @@
 </table>
 <h4 id="mixer">▼ Mixer<a class="headerlink" href="#mixer" title="Permanent link">&para;</a></h4>
 <p>v1.5からデータプレーン側に統合された。</p>
-<p>参考：<a href="https://www.elastic.co/jp/blog/istio-monitoring-with-elastic-observability">https://www.elastic.co/jp/blog/istio-monitoring-with-elastic-observability</a></p>
+<p>ℹ️ 参考：<a href="https://www.elastic.co/jp/blog/istio-monitoring-with-elastic-observability">https://www.elastic.co/jp/blog/istio-monitoring-with-elastic-observability</a></p>
 <p><br></p>
 <h3 id="istioenvoyistiokubernetes">Istio、Envoy（Istio無し）、Kubernetesの対応関係<a class="headerlink" href="#istioenvoyistiokubernetes" title="Permanent link">&para;</a></h3>
 <p>Kubernetes、Envoy、Kubernetesの比較は以下の通り</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://thenewstack.io/why-do-you-need-istio-when-you-already-have-kubernetes/">https://thenewstack.io/why-do-you-need-istio-when-you-already-have-kubernetes/</a></li>
 <li><a href="https://www.mirantis.com/blog/your-app-deserves-more-than-kubernetes-ingress-kubernetes-ingress-vs-istio-gateway-webinar/">https://www.mirantis.com/blog/your-app-deserves-more-than-kubernetes-ingress-kubernetes-ingress-vs-istio-gateway-webinar/</a></li>
@@ -7898,12 +7898,12 @@
 <p><br></p>
 <h3 id="iac">IaC<a class="headerlink" href="#iac" title="Permanent link">&para;</a></h3>
 <p>IstioのIaCについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
 <p><br></p>
 <h2 id="02">02. リソースとオブジェクト<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="istio_1">Istioリソース<a class="headerlink" href="#istio_1" title="Permanent link">&para;</a></h3>
 <p>Istioの各コンポーネントのことにより、Kubernetesのカスタムリソースとして定義されている。Istioリソースは、IaCによってマニフェストファイルで定義される。Istioのマニフェストファイルについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
 <p><br></p>
 <h3 id="istio_2">Istioオブジェクト<a class="headerlink" href="#istio_2" title="Permanent link">&para;</a></h3>
 <p>マニフェストファイルによって量産されたIstioリソースのインスタンスのこと。</p>
@@ -7913,7 +7913,7 @@
 <h4 id="ingressgateway_1">▼ IngressGatewayとは<a class="headerlink" href="#ingressgateway_1" title="Permanent link">&para;</a></h4>
 <p><img alt="istio_ingress-gateway" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/istio_ingress-gateway.png" /></p>
 <p>Gateway、VirtualService、DestinationRuleの設定を基に、Clusterネットワーク外からインバウンド通信を受信し、Podにルーティングする。<code>istio-ingressgateway</code>というLoadBalancer Serviceと、<code>istio-ingressgateway-*****</code>というPodから構成される</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/">https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/</a></li>
 <li><a href="https://qiita.com/kenyashiro/items/b94197890de434ed9ceb">https://qiita.com/kenyashiro/items/b94197890de434ed9ceb</a></li>
@@ -7924,26 +7924,26 @@
 <h3 id="gateway">Gateway<a class="headerlink" href="#gateway" title="Permanent link">&para;</a></h3>
 <h4 id="gateway_1">▼ Gatewayとは<a class="headerlink" href="#gateway_1" title="Permanent link">&para;</a></h4>
 <p>IngressGatewayの機能のうち、Clusterネットワーク外から受信したインバウンド通信をフィルタリングする機能を担う。</p>
-<p>参考：<a href="https://istio.io/latest/blog/2018/v1alpha3-routing/">https://istio.io/latest/blog/2018/v1alpha3-routing/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/blog/2018/v1alpha3-routing/">https://istio.io/latest/blog/2018/v1alpha3-routing/</a></p>
 <p><br></p>
 <h3 id="virtualservice">VirtualService<a class="headerlink" href="#virtualservice" title="Permanent link">&para;</a></h3>
 <h4 id="virtualservice_1">▼ VirtualServiceとは<a class="headerlink" href="#virtualservice_1" title="Permanent link">&para;</a></h4>
 <p>IngressGatewayの機能のうち、IngressGatewayで受信したインバウンド通信をいずれのServiceにルーティングするか、を決定する機能を担う。Service自体の設定は、IstioではなくKubernetesで行うことに注意する。ルーティング先のServiceが見つからないと、<code>404</code>ステータスを返信する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://tech.uzabase.com/entry/2018/11/26/110407">https://tech.uzabase.com/entry/2018/11/26/110407</a></li>
 <li><a href="https://knowledge.sakura.ad.jp/20489/">https://knowledge.sakura.ad.jp/20489/</a></li>
 </ul>
 <h4 id="envoy">▼ Envoyの設定値として<a class="headerlink" href="#envoy" title="Permanent link">&para;</a></h4>
 <p>VirtualServiceの設定値は、Envoyのフロントプロキシの設定値としてIstioリソースに適用される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/concepts/traffic-management/">https://istio.io/latest/docs/concepts/traffic-management/</a></li>
 <li><a href="http://blog.fujimisakari.com/service_mesh_and_routing_and_lb/">http://blog.fujimisakari.com/service_mesh_and_routing_and_lb/</a></li>
 <li><a href="https://sreake.com/blog/istio/">https://sreake.com/blog/istio/</a></li>
 </ul>
 <h4 id="virtualservice_2">▼ VirtualService数<a class="headerlink" href="#virtualservice_2" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/">https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/</a> </p>
+<p>ℹ️ 参考：<a href="https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/">https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/</a> </p>
 <table>
 <thead>
 <tr>
@@ -7967,13 +7967,13 @@
 <h3 id="egressgateway">EgressGateway<a class="headerlink" href="#egressgateway" title="Permanent link">&para;</a></h3>
 <h4 id="egressgateway_1">▼ EgressGatewayとは<a class="headerlink" href="#egressgateway_1" title="Permanent link">&para;</a></h4>
 <p>Clusterネットワーク内からアウトバウンド通信を受信し、フィルタリングした後、パブリックネットワークにルーティングする。</p>
-<p>参考：<a href="https://knowledge.sakura.ad.jp/20489/">https://knowledge.sakura.ad.jp/20489/</a></p>
+<p>ℹ️ 参考：<a href="https://knowledge.sakura.ad.jp/20489/">https://knowledge.sakura.ad.jp/20489/</a></p>
 <p><img alt="istio_gateway" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/istio_gateway.png" /></p>
 <p><br></p>
 <h3 id="serviceentry">ServiceEntry<a class="headerlink" href="#serviceentry" title="Permanent link">&para;</a></h3>
 <h4 id="serviceentry_1">▼ ServiceEntryとは<a class="headerlink" href="#serviceentry_1" title="Permanent link">&para;</a></h4>
 <p>アウトバウンド通信のうち、送信できるもののみを指定したドメインやEgressGatewayにルーティングする。ServiceEntryを使用しない場合は、全てのアウトバウンド通信がルーティングされる。</p>
-<p>参考：<a href="https://tech.uzabase.com/entry/2018/11/26/110407">https://tech.uzabase.com/entry/2018/11/26/110407</a></p>
+<p>ℹ️ 参考：<a href="https://tech.uzabase.com/entry/2018/11/26/110407">https://tech.uzabase.com/entry/2018/11/26/110407</a></p>
 <p><img alt="istio_service-entry" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/istio_service-entry.png" /></p>
 <p><br></p>
 <h2 id="02-04">02-04. 両方向通信に関するリソース<a class="headerlink" href="#02-04" title="Permanent link">&para;</a></h2>
@@ -7996,13 +7996,13 @@
 <tr>
 <td>アウトバウンド</td>
 <td>istio-proxyコンテナの送信するアウトバウンド通信をTLSで暗号化するか否か、を決定する機能を担う。</td>
-<td>参考：<a href="https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars">https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars</a></td>
+<td>ℹ️ 参考：<a href="https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars">https://istio.io/latest/docs/ops/configuration/traffic-management/tls-configuration/#sidecars</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="envoy_1">▼ Envoyの設定値として<a class="headerlink" href="#envoy_1" title="Permanent link">&para;</a></h4>
 <p>DestinationRuleの設定値は、Envoyのリバースプロキシコンテナの設定値としてistio-proxyコンテナに適用される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/concepts/traffic-management/">https://istio.io/latest/docs/concepts/traffic-management/</a></li>
 <li><a href="http://blog.fujimisakari.com/service_mesh_and_routing_and_lb/">http://blog.fujimisakari.com/service_mesh_and_routing_and_lb/</a></li>
@@ -8012,7 +8012,7 @@
 <h2 id="03-istiod">03. Istiod<a class="headerlink" href="#03-istiod" title="Permanent link">&para;</a></h2>
 <h3 id="istiod">Istiodとは<a class="headerlink" href="#istiod" title="Permanent link">&para;</a></h3>
 <p>istio-proxyコンテナを統括的に管理する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/ops/deployment/architecture/">https://istio.io/latest/docs/ops/deployment/architecture/</a></li>
 <li><a href="https://speakerdeck.com/kurochan/ru-men-envoy?slide=34">https://speakerdeck.com/kurochan/ru-men-envoy?slide=34</a></li>
@@ -8021,7 +8021,7 @@
 <h3 id="citadal">Citadal<a class="headerlink" href="#citadal" title="Permanent link">&para;</a></h3>
 <h4 id="citadal_1">▼ Citadalとは<a class="headerlink" href="#citadal_1" title="Permanent link">&para;</a></h4>
 <p>暗号鍵やSSL証明書を管理する。</p>
-<p>参考：<a href="https://knowledge.sakura.ad.jp/20489/">https://knowledge.sakura.ad.jp/20489/</a></p>
+<p>ℹ️ 参考：<a href="https://knowledge.sakura.ad.jp/20489/">https://knowledge.sakura.ad.jp/20489/</a></p>
 <p><br></p>
 <h3 id="galley_1">Galley<a class="headerlink" href="#galley_1" title="Permanent link">&para;</a></h3>
 <h4 id="galley_2">▼ Galleyとは<a class="headerlink" href="#galley_2" title="Permanent link">&para;</a></h4>
@@ -8041,7 +8041,7 @@
 <h2 id="04-istiooperator">04. IstioOperator<a class="headerlink" href="#04-istiooperator" title="Permanent link">&para;</a></h2>
 <h3 id="istiooperator">IstioOperatorとは<a class="headerlink" href="#istiooperator" title="Permanent link">&para;</a></h3>
 <p>Istioのインストールや、Istioリソースの操作ができるリソースのこと。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/">https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/</a></li>
 <li><a href="https://istio.io/latest/docs/setup/install/operator/#update">https://istio.io/latest/docs/setup/install/operator/#update</a></li>
@@ -8051,7 +8051,7 @@
 <h3 id="fault">Faultインジェクション<a class="headerlink" href="#fault" title="Permanent link">&para;</a></h3>
 <h4 id="fault_1">▼ Faultインジェクションとは<a class="headerlink" href="#fault_1" title="Permanent link">&para;</a></h4>
 <p>障害を意図的に注入し、サービスメッシュの動作を検証する。</p>
-<p>参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/</a></p>
 <h4 id="_7">▼ テストの種類<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -8063,11 +8063,11 @@
 <tbody>
 <tr>
 <td>Deplayインジェクション</td>
-<td>マイクロサービスに対するインバウンド通信にて、意図的に通信の遅延を引き起こす。<br>参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-delay-fault">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-delay-fault</a></td>
+<td>マイクロサービスに対するインバウンド通信にて、意図的に通信の遅延を引き起こす。<br>ℹ️ 参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-delay-fault">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-delay-fault</a></td>
 </tr>
 <tr>
 <td>Abortインジェクション</td>
-<td>マイクロサービスに対するインバウンド通信にて、意図的に通信の中止を引き起こす。<br>参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-abort-fault">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-abort-fault</a></td>
+<td>マイクロサービスに対するインバウンド通信にて、意図的に通信の中止を引き起こす。<br>ℹ️ 参考：<a href="https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-abort-fault">https://istio.io/latest/docs/tasks/traffic-management/fault-injection/#injecting-an-http-abort-fault</a></td>
 </tr>
 </tbody>
 </table>
@@ -8076,26 +8076,26 @@
 <h3 id="_8">サーキットブレイカー<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ サーキットブレイカーとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス間に設置され、他のマイクロサービスに連鎖的に起こる障害（カスケード障害）を吸収する仕組みのこと。下流マイクロサービスに障害が発生した時に、上流マイクロサービスにエラーを返してしまわないよう、一旦マイクロサービスへのルーティングを停止し、直近の成功時の処理結果を返信する。</p>
-<p>参考：<a href="https://digitalvarys.com/what-is-circuit-breaker-design-pattern/">https://digitalvarys.com/what-is-circuit-breaker-design-pattern/</a></p>
+<p>ℹ️ 参考：<a href="https://digitalvarys.com/what-is-circuit-breaker-design-pattern/">https://digitalvarys.com/what-is-circuit-breaker-design-pattern/</a></p>
 <p><img alt="circuit-breaker" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/circuit-breaker.png" /></p>
 <p><br></p>
 <h2 id="07">07. 認証<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
 <p>マイクロサービスアーキテクチャにおける認証にはいくつか種類がある。そのうち、Istioは『分散型』と『ゲートウェイ分散型』の認証を実現することを助ける。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://istio.io/latest/docs/concepts/security/#authentication-architecture">https://istio.io/latest/docs/concepts/security/#authentication-architecture</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_microservices.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_microservices.html</a></li>
 </ul>
 <p><br></p>
 <h2 id="07-02">07-02. 認可<a class="headerlink" href="#07-02" title="Permanent link">&para;</a></h2>
-<p>参考：<a href="https://istio.io/latest/docs/concepts/security/#authorization">https://istio.io/latest/docs/concepts/security/#authorization</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/concepts/security/#authorization">https://istio.io/latest/docs/concepts/security/#authorization</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

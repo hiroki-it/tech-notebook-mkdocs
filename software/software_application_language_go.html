@@ -6651,14 +6651,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7254,7 +7254,7 @@
 <h1 id="go">Go<a class="headerlink" href="#go" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 導入<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">特長<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7296,7 +7296,7 @@
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_3">インストール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="yum">▼ yumリポジトリから<a class="headerlink" href="#yum" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.cyberithub.com/install-go-on-centos/">https://www.cyberithub.com/install-go-on-centos/</a></p>
+<p>ℹ️ 参考：<a href="https://www.cyberithub.com/install-go-on-centos/">https://www.cyberithub.com/install-go-on-centos/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>$ yum install -y epel-release
 $ yum install -y golang
@@ -7407,7 +7407,7 @@ $ yum install -y golang
 <h3 id="_4">ディレクトリ構成<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="gopath">▼ <code>$GOPATH</code><a class="headerlink" href="#gopath" title="Permanent link">&para;</a></h4>
 <p>パスは好みであるが、<code>$HOME/go</code>とすることが多い。ディレクトリ構成のベストプラクティスは以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://github.com/golang-standards/project-layout">https://github.com/golang-standards/project-layout</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang-standards/project-layout">https://github.com/golang-standards/project-layout</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7508,24 +7508,24 @@ $ yum install -y golang
 <h3 id="_7">命名規則<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="githubwiki">▼ GitHubWikiによる規則<a class="headerlink" href="#githubwiki" title="Permanent link">&para;</a></h4>
 <p>Goの命名規則は、GitHubのWikiに記載されている。</p>
-<p>参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments">https://github.com/golang/go/wiki/CodeReviewComments</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments">https://github.com/golang/go/wiki/CodeReviewComments</a></p>
 <h4 id="_8">▼ ディレクトリ名<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>小文字一単語またはケバブケースで命名する。ビルド時にシンタックスエラーとなる可能性があるため、できる限りハイフンを使用しない方が良い。</p>
 <h4 id="_9">▼ パッケージ名<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>小文字一単語で命名する。ディレクトリ名に小文字一単語が使用されている場合は、これと同じにするとなお良い。また、処理中の変数名と被るとパッケージのインポートに失敗するため、変数名と被らないように、できるだけ省略しない名前の方が良い。ただし、テストファイルに関しては、パッケージ名を『<code>foo_test</code>』として良い。</p>
-<p>参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">https://github.com/golang/go/wiki/CodeReviewComments#package-names</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#package-names">https://github.com/golang/go/wiki/CodeReviewComments#package-names</a></p>
 <h4 id="_10">▼ ファイル名<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>小文字一単語またはスネークケースで命名する。ファイル名とパッケージ名は合わせる必要はないが、独自ルールを設けても良い。例えばドメイン駆動設計の場合、ルートエンティティのファイル名とパッケージ名を合わせるように工夫できる。</p>
-<p>参考：<a href="https://ja.stackoverflow.com/q/41599">https://ja.stackoverflow.com/q/41599</a></p>
-<p>参考：</p>
+<p>ℹ️ 参考：<a href="https://ja.stackoverflow.com/q/41599">https://ja.stackoverflow.com/q/41599</a></p>
+<p>ℹ️ 参考：</p>
 <h4 id="type">▼ 関数、type、構造体<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
 <p>アッパーキャメルケースまたはローワーキャメルケースで命名する。</p>
 <h4 id="_11">▼ インターフェース名<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>末尾に『<code>er</code>』をつける。</p>
-<p>参考：<a href="https://golang.org/doc/effective_go#interface-names">https://golang.org/doc/effective_go#interface-names</a></p>
+<p>ℹ️ 参考：<a href="https://golang.org/doc/effective_go#interface-names">https://golang.org/doc/effective_go#interface-names</a></p>
 <h4 id="_12">▼ レシーバ名<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>構造体名の頭一文字または頭二文字を取って命名する。アプリケーション内で構造体名の頭文字が重複すると、同じレシーバ名の構造体が乱立してしまうため、これを防ぐために二文字を取ると良い。また、修飾語と組み合わせて構成される構造体名の場合、被修飾語の頭二文字を取る。オブジェクト指向で使われる『<code>this</code>』『<code>self</code>』</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/golang/go/wiki/CodeReviewComments#receiver-names">https://github.com/golang/go/wiki/CodeReviewComments#receiver-names</a></li>
 <li><a href="https://yyh-gl.github.io/tech-blog/blog/go-ddd-entity-vo/">https://yyh-gl.github.io/tech-blog/blog/go-ddd-entity-vo/</a></li>
@@ -7534,9 +7534,9 @@ $ yum install -y golang
 <p>httpClientであれば、修飾語は『<code>http</code>』被修飾語『<code>client</code>』である。そのため、レシーバ名または引数名では『<code>cl</code>』とする。`</p>
 <h4 id="_13">▼ 一時的な変数名<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>英単語の頭一文字、頭二文字、略語、で命名する。これは、実際の処理を強調し、変数を目立たなくするためである。ただし、スコープの大きな変数に省略した名前をつけると、重複する可能性があるため、省略せずにローワーキャメルケースで命名しても良い。</p>
-<p>参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#variable-names">https://github.com/golang/go/wiki/CodeReviewComments#variable-names</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#variable-names">https://github.com/golang/go/wiki/CodeReviewComments#variable-names</a></p>
 <p>省略名については、略語検索サイトで探す。代わりに、Goリファレンスからその単語がどう省略されているかを探しても良い。</p>
-<p>参考：<a href="https://www.allacronyms.com/">https://www.allacronyms.com/</a></p>
+<p>ℹ️ 参考：<a href="https://www.allacronyms.com/">https://www.allacronyms.com/</a></p>
 <h4 id="_14">▼ モックの変数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>モック構造体を代入するための変数は、『<code>m</code>』とする。</p>
 <h4 id="error">▼ error構造体の変数<a class="headerlink" href="#error" title="Permanent link">&para;</a></h4>
@@ -7589,13 +7589,13 @@ $ yum install -y golang
 <p><br></p>
 <h3 id="_16">その他のお作法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ コメントの書式<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences">https://github.com/golang/go/wiki/CodeReviewComments#comment-sentences</a></p>
 <h4 id="uber">▼ Uber風のお作法<a class="headerlink" href="#uber" title="Permanent link">&para;</a></h4>
 <p>Uber社が採用しているお作法。</p>
-<p>参考：<a href="https://github.com/uber-go/guide/blob/master/style.md">https://github.com/uber-go/guide/blob/master/style.md</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/uber-go/guide/blob/master/style.md">https://github.com/uber-go/guide/blob/master/style.md</a></p>
 <h4 id="_18">▼ イミュータブルにできない<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>Goには、標準でイミュータブルの機能がなく、これを無理に実現しようとすると逆に保守性が低くなることがある。そのため、イミュータブルにするか否かは慎重に判断する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/nobonobo/articles/9a9f12b27bfde9#go%E3%81%AF%E3%81%AA%E3%81%9C%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E4%BF%AE%E9%A3%BE%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%EF%BC%9F">https://zenn.dev/nobonobo/articles/9a9f12b27bfde9#go%E3%81%AF%E3%81%AA%E3%81%9C%E3%82%A4%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E4%BF%AE%E9%A3%BE%E3%81%8C%E3%81%AA%E3%81%84%E3%81%AE%EF%BC%9F</a></li>
 <li><a href="https://future-architect.github.io/articles/20190713/#Q-immutable%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%8C%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B%EF%BC%9F">https://future-architect.github.io/articles/20190713/#Q-immutable%E3%81%AA%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%8C%E3%81%97%E3%81%9F%E3%81%84%E3%81%AE%E3%81%A7%E3%81%99%E3%81%8C%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%A7%E3%81%97%E3%82%87%E3%81%86%E3%81%8B%EF%BC%9F</a></li>
@@ -7607,7 +7607,7 @@ $ yum install -y golang
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

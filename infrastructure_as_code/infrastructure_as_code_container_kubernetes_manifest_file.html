@@ -8410,14 +8410,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -10772,11 +10772,11 @@
 <h1 id="kubernetes">マニフェストファイル＠Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-kubernetes">01. マニフェストファイル＠Kubernetesとは<a class="headerlink" href="#01-kubernetes" title="Permanent link">&para;</a></h2>
 <p>Kubernetesを宣言的に定義し、コンテナのプロビジョニングを行う。プロビジョニングされるコンテナについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration_kubernetes.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration_kubernetes.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration_kubernetes.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_orchestration_kubernetes.html</a></p>
 <p><br></p>
 <h2 id="02-apiversion">02. apiVersion<a class="headerlink" href="#02-apiversion" title="Permanent link">&para;</a></h2>
 <p>Kubernetes-APIのバージョンを設定する。</p>
@@ -10790,34 +10790,34 @@
 <h3 id="annotation">annotation<a class="headerlink" href="#annotation" title="Permanent link">&para;</a></h3>
 <h4 id="annotation_1">▼ annotationとは<a class="headerlink" href="#annotation_1" title="Permanent link">&para;</a></h4>
 <p>任意のキーと値を設定する。<code>metadata.labels</code>キーとは異なり、設定できる情報に制約がない。</p>
-<p>参考：<a href="https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d">https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d</a></p>
+<p>ℹ️ 参考：<a href="https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d">https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d</a></p>
 <h4 id="kubernetesioingressclass">▼ kubernetes.io/ingress.class<a class="headerlink" href="#kubernetesioingressclass" title="Permanent link">&para;</a></h4>
 <p>現在、非推奨である。代わりに、<code>spec.ingressClassname</code>キーを指定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation">https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation">https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation</a></p>
 <h4 id="ingressclasskubernetesiois-default-class">▼ ingressclass.kubernetes.io/is-default-class<a class="headerlink" href="#ingressclasskubernetesiois-default-class" title="Permanent link">&para;</a></h4>
 <p>IngressがClusterネットワーク内に1つしか存在しない場合に、IngressClassに設定することにより、デフォルトとする。Ingressが新しくapplyされた場合に、このIngressClassの設定値が使用されるようになる。複数のIngressClassをデフォルトに設定しないようにする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#default-ingress-class">https://kubernetes.io/docs/concepts/services-networking/ingress/#default-ingress-class</a></li>
 <li><a href="https://kubernetes.github.io/ingress-nginx/#i-have-only-one-ingress-controller-in-my-cluster-what-should-i-do">https://kubernetes.github.io/ingress-nginx/#i-have-only-one-ingress-controller-in-my-cluster-what-should-i-do</a></li>
 </ul>
 <h4 id="istio">▼ istio固有のキー<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_istio_manifest_file.html</a></p>
 <p><br></p>
 <h3 id="labels">labels<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="labels_1">▼ labelsとは<a class="headerlink" href="#labels_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesが、Kubernetesリソースの一意に識別するための情報を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</a></li>
 <li><a href="https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d">https://blog.getambassador.io/kubernetes-labels-vs-annotations-95fc47196b6d</a></li>
 </ul>
 <h4 id="label">▼ 予約Label<a class="headerlink" href="#label" title="Permanent link">&para;</a></h4>
 <p>キー名のプレフィクスとして、<code>kubernetes.io/</code>と<code>k8s.io/</code>は予約されている。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/labels-annotations-taints/">https://kubernetes.io/docs/reference/labels-annotations-taints/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/labels-annotations-taints/">https://kubernetes.io/docs/reference/labels-annotations-taints/</a></p>
 <h4 id="_2">▼ データ型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>string型である必要がある。int型を割り当てようとするとエラーになり、これはHelmの<code>values</code>ファイル経由で『数字』を出力しようとする場合に起こる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_helm_chart.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_helm_chart.html</a></li>
@@ -10830,7 +10830,7 @@
 <h3 id="clusters">clusters<a class="headerlink" href="#clusters" title="Permanent link">&para;</a></h3>
 <h4 id="clusters_1">▼ clustersとは<a class="headerlink" href="#clusters_1" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドの向き先となるClusterを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_1">▼ name<a class="headerlink" href="#name_1" title="Permanent link">&para;</a></h4>
 <p>Cluster名を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -10923,7 +10923,7 @@
 <h3 id="contexts">contexts<a class="headerlink" href="#contexts" title="Permanent link">&para;</a></h3>
 <h4 id="contexts_1">▼ contextsとは<a class="headerlink" href="#contexts_1" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドの向き先の候補を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_2">▼ name<a class="headerlink" href="#name_2" title="Permanent link">&para;</a></h4>
 <p>向き先の名前を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -11014,7 +11014,7 @@
 <h3 id="current-context">current-context<a class="headerlink" href="#current-context" title="Permanent link">&para;</a></h3>
 <h4 id="current-context_1">▼ current-contextとは<a class="headerlink" href="#current-context_1" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドの現在の向き先の名前を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
@@ -11024,7 +11024,7 @@
 <p><br></p>
 <h3 id="preferences">preferences<a class="headerlink" href="#preferences" title="Permanent link">&para;</a></h3>
 <h4 id="preferences_1">▼ preferencesとは<a class="headerlink" href="#preferences_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
@@ -11035,7 +11035,7 @@
 <h3 id="users">users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>
 <h4 id="users_1">▼ usersとは<a class="headerlink" href="#users_1" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドのクライアントの認証情報を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts">https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#define-clusters-users-and-contexts</a></p>
 <h4 id="name_3">▼ name<a class="headerlink" href="#name_3" title="Permanent link">&para;</a></h4>
 <p>ユーザー名を設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -11140,7 +11140,7 @@
 <span class="w">  </span><span class="nt">bar</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BAR</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <p>string型しか設定できないため、デコード後にinteger型やboolean型になってしまう値は、ダブルクオーテーションで囲う必要がある。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11286,7 +11286,7 @@
 <h3 id="specreplicas">spec.replicas<a class="headerlink" href="#specreplicas" title="Permanent link">&para;</a></h3>
 <h4 id="replicas">▼ replicasとは<a class="headerlink" href="#replicas" title="Permanent link">&para;</a></h4>
 <p>Cluster内で維持するPodのレプリカ数を設定する。Cluster内に複数のNodeが存在していて、いずれかのNodeが停止した場合、稼働中のNode内でレプリカ数を維持するようにPod数が増加する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps">https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps</a></li>
 <li><a href="https://dr-asa.hatenablog.com/entry/2018/04/02/174006">https://dr-asa.hatenablog.com/entry/2018/04/02/174006</a></li>
@@ -11325,7 +11325,7 @@
 <h3 id="specrevisionhistorylimit">spec.revisionHistoryLimit<a class="headerlink" href="#specrevisionhistorylimit" title="Permanent link">&para;</a></h3>
 <h4 id="revisionhistorylimit">▼ revisionHistoryLimitとは<a class="headerlink" href="#revisionhistorylimit" title="Permanent link">&para;</a></h4>
 <p>保存されるリビジョン番号の履歴数を設定する。もし依存のリビジョン番号にロールバックする場合があるのであれば、必要数を設定しておく。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps">https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps">https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#deployment-v1-apps</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11362,7 +11362,7 @@
 <p>Deploymentで管理するPodを明示的に設定する。</p>
 <h4 id="matchlabels">▼ matchLabels<a class="headerlink" href="#matchlabels" title="Permanent link">&para;</a></h4>
 <p>Podの<code>metadata.labels</code>キーを指定する。Podに複数の<code>metadata.labels</code>キーが付与されている時は、これらを全て指定する必要がある。</p>
-<p>参考：<a href="https://cstoku.dev/posts/2018/k8sdojo-08/#label-selector">https://cstoku.dev/posts/2018/k8sdojo-08/#label-selector</a></p>
+<p>ℹ️ 参考：<a href="https://cstoku.dev/posts/2018/k8sdojo-08/#label-selector">https://cstoku.dev/posts/2018/k8sdojo-08/#label-selector</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11397,7 +11397,7 @@
 <p>デプロイメントの方法を設定する。</p>
 <h4 id="rollingupdate">▼ RollingUpdate<a class="headerlink" href="#rollingupdate" title="Permanent link">&para;</a></h4>
 <p>ローリングアップデートを使用して、新しいPodをapplyする。</p>
-<p>参考：<a href="https://kakakakakku.hatenablog.com/entry/2021/09/06/173014">https://kakakakakku.hatenablog.com/entry/2021/09/06/173014</a></p>
+<p>ℹ️ 参考：<a href="https://kakakakakku.hatenablog.com/entry/2021/09/06/173014">https://kakakakakku.hatenablog.com/entry/2021/09/06/173014</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11484,7 +11484,7 @@
 <h2 id="07-horizontalpodautoscaler">07. HorizontalPodAutoscaler<a class="headerlink" href="#07-horizontalpodautoscaler" title="Permanent link">&para;</a></h2>
 <h3 id="specscaletargetref">spec.scaleTargetRef<a class="headerlink" href="#specscaletargetref" title="Permanent link">&para;</a></h3>
 <p>水平スケーリングを紐づけるKubernetesリソースを設定する。</p>
-<p>参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11506,7 +11506,7 @@
 <p><br></p>
 <h3 id="specmaxreplicas">spec.maxReplicas<a class="headerlink" href="#specmaxreplicas" title="Permanent link">&para;</a></h3>
 <p>水平スケーリングのスケールアウト時の最大Pod数を設定する。</p>
-<p>参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11522,7 +11522,7 @@
 <p><br></p>
 <h3 id="specminreplicas">spec.minReplicas<a class="headerlink" href="#specminreplicas" title="Permanent link">&para;</a></h3>
 <p>水平スケーリングのスケールイン時の最小Pod数を設定する。</p>
-<p>参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11572,7 +11572,7 @@
 </tbody>
 </table>
 <p>メトリクスの種類を設定する。以下のタイプを設定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/lapi/articles/e7ae967aa5161b#hpa%E3%81%AE%E8%A8%AD%E5%AE%9A">https://zenn.dev/lapi/articles/e7ae967aa5161b#hpa%E3%81%AE%E8%A8%AD%E5%AE%9A</a></li>
 <li><a href="https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80">https://qiita.com/sheepland/items/37ea0b77df9a4b4c9d80</a></li>
@@ -11603,12 +11603,12 @@
 <h4 id="annotations_1">▼ annotationsとは<a class="headerlink" href="#annotations_1" title="Permanent link">&para;</a></h4>
 <p>外部Ingressを使用する場合に、オプションを設定する。</p>
 <h4 id="aws">▼ AWS固有のキー<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_1.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_1.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_1.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_1.html</a></p>
 <p><br></p>
 <h3 id="specingressclassname">spec.ingressClassName<a class="headerlink" href="#specingressclassname" title="Permanent link">&para;</a></h3>
 <h4 id="ingressclassname">▼ ingressClassNameとは<a class="headerlink" href="#ingressclassname" title="Permanent link">&para;</a></h4>
 <p>標準のIngressの代わりに外部Ingressを使用する場合に、IngressClassの<code>metadata.name</code>キー値を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource">https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation">https://kubernetes.io/docs/concepts/services-networking/ingress/#deprecated-annotation</a></li>
@@ -11629,7 +11629,7 @@
 <h3 id="specrules">spec.rules<a class="headerlink" href="#specrules" title="Permanent link">&para;</a></h3>
 <h4 id="rules">▼ rulesとは<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h4>
 <p>Serviceへのルーティングルールを設定する。複数のServiceにインバウンド通信を振り分けられる。Ingressを使用する場合、ルーティング対象のServiceは、ClusterIP Serviceとする。</p>
-<p>参考：<a href="https://chidakiyo.hatenablog.com/entry/2018/09/10/Kubernetes_NodePort_vs_LoadBalancer_vs_Ingress%3F_When_should_I_use_what%3F_%28Kubernetes_NodePort_%E3%81%A8_LoadBalancer_%E3%81%A8_Ingress_%E3%81%AE%E3%81%A9%E3%82%8C%E3%82%92%E4%BD%BF%E3%81%86">https://chidakiyo.hatenablog.com/entry/2018/09/10/Kubernetes_NodePort_vs_LoadBalancer_vs_Ingress%3F_When_should_I_use_what%3F_%28Kubernetes_NodePort_%E3%81%A8_LoadBalancer_%E3%81%A8_Ingress_%E3%81%AE%E3%81%A9%E3%82%8C%E3%82%92%E4%BD%BF%E3%81%86</a></p>
+<p>ℹ️ 参考：<a href="https://chidakiyo.hatenablog.com/entry/2018/09/10/Kubernetes_NodePort_vs_LoadBalancer_vs_Ingress%3F_When_should_I_use_what%3F_%28Kubernetes_NodePort_%E3%81%A8_LoadBalancer_%E3%81%A8_Ingress_%E3%81%AE%E3%81%A9%E3%82%8C%E3%82%92%E4%BD%BF%E3%81%86">https://chidakiyo.hatenablog.com/entry/2018/09/10/Kubernetes_NodePort_vs_LoadBalancer_vs_Ingress%3F_When_should_I_use_what%3F_%28Kubernetes_NodePort_%E3%81%A8_LoadBalancer_%E3%81%A8_Ingress_%E3%81%AE%E3%81%A9%E3%82%8C%E3%82%92%E4%BD%BF%E3%81%86</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -11683,7 +11683,7 @@
 <h3 id="speccontroller">spec.controller<a class="headerlink" href="#speccontroller" title="Permanent link">&para;</a></h3>
 <h4 id="controller">▼ controllerとは<a class="headerlink" href="#controller" title="Permanent link">&para;</a></h4>
 <p>標準のIngressの代わりに、外部Ingressを使用する場合に、そのIngressのマニフェストのAPIを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#deprecated-kubernetesioingressclass-annotation">https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#deprecated-kubernetesioingressclass-annotation</a></li>
 <li><a href="https://kubernetes.github.io/ingress-nginx/#i-have-only-one-ingress-controller-in-my-cluster-what-should-i-do">https://kubernetes.github.io/ingress-nginx/#i-have-only-one-ingress-controller-in-my-cluster-what-should-i-do</a></li>
@@ -11710,7 +11710,7 @@
 <h3 id="specparameters">spec.parameters<a class="headerlink" href="#specparameters" title="Permanent link">&para;</a></h3>
 <h4 id="parameters">▼ parametersとは<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
 <p>外部Ingressに応じたパラメーターを設定する。代わりに、IngressClassParamsを使用しても良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#ingressclass">https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#ingressclass</a></li>
 <li><a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#ingressclassparams">https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.2/guide/ingress/ingress_class/#ingressclassparams</a></li>
@@ -11740,7 +11740,7 @@
 <h3 id="specactivedeadlineseconds">spec.activeDeadlineSeconds<a class="headerlink" href="#specactivedeadlineseconds" title="Permanent link">&para;</a></h3>
 <h4 id="activedeadlineseconds">▼ activeDeadlineSecondsとは<a class="headerlink" href="#activedeadlineseconds" title="Permanent link">&para;</a></h4>
 <p>Jobの試行の上限実行時間を設定する。設定された時間を超過すると、エラーが返却される。<code>spec.backoffLimit</code>キーよりも優先される。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-termination-and-cleanup">https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-termination-and-cleanup</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-termination-and-cleanup">https://kubernetes.io/docs/concepts/workloads/controllers/job/#job-termination-and-cleanup</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -11827,7 +11827,7 @@
 <h3 id="specaccessmodes">spec.accessModes<a class="headerlink" href="#specaccessmodes" title="Permanent link">&para;</a></h3>
 <h4 id="accessmodes">▼ accessModesとは<a class="headerlink" href="#accessmodes" title="Permanent link">&para;</a></h4>
 <p>ボリュームへのアクセス権限を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes</a></p>
 <h4 id="readwritemany">▼ ReadWriteMany<a class="headerlink" href="#readwritemany" title="Permanent link">&para;</a></h4>
 <p>ボリュームに対して、複数Nodeから読み出し/書き込みできるようにする。Node間でDBを共有したい場合に使用する。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -11883,7 +11883,7 @@
 <h3 id="speccapacity">spec.capacity<a class="headerlink" href="#speccapacity" title="Permanent link">&para;</a></h3>
 <h4 id="capacity">▼ capacityとは<a class="headerlink" href="#capacity" title="Permanent link">&para;</a></h4>
 <p>ストレージの最大サイズを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#capacity</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -11903,7 +11903,7 @@
 <h3 id="spechostpath">spec.hostPath<a class="headerlink" href="#spechostpath" title="Permanent link">&para;</a></h3>
 <h4 id="hostpath">▼ hostPathとは<a class="headerlink" href="#hostpath" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeの一種であるHostPathボリュームを作成する。Volumeの一種であるHostPathボリュームとは区別すること。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></p>
 <h4 id="path">▼ path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h4>
 <p>Node側のマウント元のディレクトリを設定する。Podのマウントポイントは、Podの<code>spec.containers.volumeMount</code>オプションで設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -11942,7 +11942,7 @@
 <h3 id="speclocal">spec.local<a class="headerlink" href="#speclocal" title="Permanent link">&para;</a></h3>
 <h4 id="local">▼ localとは<a class="headerlink" href="#local" title="Permanent link">&para;</a></h4>
 <p>Node上にストレージ領域を新しく作成し、これをボリュームとする。<code>spec.nodeAffinity</code>キーの設定が必須であり、Nodeを明示的に指定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity</a></li>
@@ -11980,7 +11980,7 @@
 <p><br></p>
 <h3 id="specmountoptions">spec.mountOptions<a class="headerlink" href="#specmountoptions" title="Permanent link">&para;</a></h3>
 <h4 id="mountoptions">▼ mountOptionsとは<a class="headerlink" href="#mountoptions" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12000,7 +12000,7 @@
 <h3 id="specnfs">spec.nfs<a class="headerlink" href="#specnfs" title="Permanent link">&para;</a></h3>
 <h4 id="nfs">▼ nfsとは<a class="headerlink" href="#nfs" title="Permanent link">&para;</a></h4>
 <p>ホスト上であらかじめNFSサーバーを起動しておく。NFSサーバーにストレージ領域を作成し、これをボリュームとする。ワーカーNode内のPodを、ホスト上のNFSサーバーにマウントする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#mount-options</a></li>
 <li><a href="https://ytsuboi.jp/archives/505">https://ytsuboi.jp/archives/505</a></li>
@@ -12027,10 +12027,10 @@
 <h3 id="specnodeaffinity">spec.nodeAffinity<a class="headerlink" href="#specnodeaffinity" title="Permanent link">&para;</a></h3>
 <h4 id="nodeaffinity">▼ nodeAffinityとは<a class="headerlink" href="#nodeaffinity" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeの作成先とするワーカーNodeを設定する。</p>
-<p>参考：<a href="https://qiita.com/ysakashita/items/67a452e76260b1211920">https://qiita.com/ysakashita/items/67a452e76260b1211920</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/ysakashita/items/67a452e76260b1211920">https://qiita.com/ysakashita/items/67a452e76260b1211920</a></p>
 <h4 id="requirednodeselectortermsmatchexpressions">▼ required.nodeSelectorTerms.matchExpressions<a class="headerlink" href="#requirednodeselectortermsmatchexpressions" title="Permanent link">&para;</a></h4>
 <p>作成先のワーカーNodeの<code>metadata.labels</code>キーを指定するための条件（<code>In</code>、<code>NotIn</code>、<code>Exists</code>）を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12070,10 +12070,10 @@
 <h3 id="specpersistentvolumereclaimpolicy">spec.persistentVolumeReclaimPolicy<a class="headerlink" href="#specpersistentvolumereclaimpolicy" title="Permanent link">&para;</a></h3>
 <h4 id="persistentvolumereclaimpolicy">▼ persistentVolumeReclaimPolicyとは<a class="headerlink" href="#persistentvolumereclaimpolicy" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeのライフサイクルを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaim-policy</a></p>
 <h4 id="delete">▼ Delete<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeを指定するPersistentVolumeClaimが削除された場合に、PersistentVolumeも自動的に削除する。クラウドプロバイダーのPersistentVolumeの動的プロビジョニングのために使用することが多い。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12089,7 +12089,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="recycle">▼ Recycle（非推奨）<a class="headerlink" href="#recycle" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeを指定するPersistentVolumeClaimが削除された場合に、PersistentVolume内のデータのみを削除し、PersistentVolume自体は削除しない。将来的に廃止予定のため、非推奨。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12105,7 +12105,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="retain">▼ Retain<a class="headerlink" href="#retain" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeを指定するPersistentVolumeClaimが削除されたとしても、PersistentVolumeは削除しない。割り当てから解除されたPersistentVolumeはReleasedステータスになる。一度、Releasedステータスになると、他のPerisistentVolumeClaimからは指定できなくなる。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/B07HFS7TDT">https://www.amazon.co.jp/dp/B07HFS7TDT</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12123,7 +12123,7 @@
 <h3 id="specstorageclassname">spec.storageClassName<a class="headerlink" href="#specstorageclassname" title="Permanent link">&para;</a></h3>
 <h4 id="storageclassname">▼ storageClassNameとは<a class="headerlink" href="#storageclassname" title="Permanent link">&para;</a></h4>
 <p>ストレージクラス名を設定する。これは、PersistentVolumeClaimが特定のPersistentVolumeを要求する時に必要になる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12155,12 +12155,12 @@
 <tr>
 <td>fast</td>
 <td>SSDをPersistentVolumeとして使用する。</td>
-<td>参考：<a href="https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B</a></td>
+<td>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B</a></td>
 </tr>
 <tr>
 <td>slow</td>
 <td>HDをPersistentVolumeとして使用する。</td>
-<td>参考：<a href="https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B</a></td>
+<td>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">https://kubernetes.io/docs/concepts/storage/_print/#%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%83%93%E3%82%B8%E3%83%A7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B</a></td>
 </tr>
 </tbody>
 </table>
@@ -12211,7 +12211,7 @@
 <h3 id="specstorageclassname_1">spec.storageClassName<a class="headerlink" href="#specstorageclassname_1" title="Permanent link">&para;</a></h3>
 <h4 id="storageclassname_1">▼ storageClassNameとは<a class="headerlink" href="#storageclassname_1" title="Permanent link">&para;</a></h4>
 <p>要求対象のPersistentVolumeのストレージクラス名を設定する。これを設定しない場合は、ストレージクラス名が<code>standard</code>のPerisitentVolumeを要求する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class">https://kubernetes.io/docs/concepts/storage/persistent-volumes/#class</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12230,14 +12230,14 @@
 <h3 id="specaffinity">spec.affinity<a class="headerlink" href="#specaffinity" title="Permanent link">&para;</a></h3>
 <h4 id="affinity">▼ affinityとは<a class="headerlink" href="#affinity" title="Permanent link">&para;</a></h4>
 <p>kube-schedulerがPodを作成するNodeを設定する。<code>spec.nodeSelector</code>キーと比較して、より複雑に条件を設定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity">https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity</a></li>
 <li><a href="https://stackoverflow.com/questions/57494369/kubectl-apply-deployment-to-specified-node-group-aws-eks">https://stackoverflow.com/questions/57494369/kubectl-apply-deployment-to-specified-node-group-aws-eks</a></li>
 </ul>
 <h4 id="nodeaffinity_1">▼ nodeAffinity<a class="headerlink" href="#nodeaffinity_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNodeの<code>metadata.labels</code>キーを指定することにより、そのワーカーNode内にPodを作成する。特定のNodeにPodを作成するだけでなく、複数のNodeに同じ<code>metadata.labels</code>キーを付与しておき、このNode群をNodeグループと定義すれば、特定のNodeグループにPodを作成できる。</p>
-<p>参考：<a href="https://zenn.dev/geek/articles/c74d204b00ba1a">https://zenn.dev/geek/articles/c74d204b00ba1a</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/geek/articles/c74d204b00ba1a">https://zenn.dev/geek/articles/c74d204b00ba1a</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12276,7 +12276,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="podaffinity">▼ podAffinity<a class="headerlink" href="#podaffinity" title="Permanent link">&para;</a></h4>
 <p>Podの<code>metadata.labels</code>キーを指定することにより、そのPodと同じワーカーNode内にPodを作成する。</p>
-<p>参考：<a href="https://zenn.dev/geek/articles/c74d204b00ba1a">https://zenn.dev/geek/articles/c74d204b00ba1a</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/geek/articles/c74d204b00ba1a">https://zenn.dev/geek/articles/c74d204b00ba1a</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12317,7 +12317,7 @@
 <h3 id="speccontainers">spec.containers<a class="headerlink" href="#speccontainers" title="Permanent link">&para;</a></h3>
 <h4 id="containers">▼ containersとは<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h4>
 <p>Pod内で起動するコンテナを設定する。PodをDeploymentやReplicaSetに紐づけずに使用することは非推奨である。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/overview/#naked-pods-vs-replicasets-deployments-and-jobs">https://kubernetes.io/docs/concepts/configuration/overview/#naked-pods-vs-replicasets-deployments-and-jobs</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/overview/#naked-pods-vs-replicasets-deployments-and-jobs">https://kubernetes.io/docs/concepts/configuration/overview/#naked-pods-vs-replicasets-deployments-and-jobs</a></p>
 <h4 id="nameimageport">▼ name、image、port<a class="headerlink" href="#nameimageport" title="Permanent link">&para;</a></h4>
 <p>Podを構成するコンテナの名前、ベースイメージ、受信ポートを設定する。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -12343,7 +12343,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="imagepullpolicy">▼ imagePullPolicy<a class="headerlink" href="#imagepullpolicy" title="Permanent link">&para;</a></h4>
 <p>イメージのプルのルールを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy">https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy">https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy</a></p>
 <table>
 <thead>
 <tr>
@@ -12391,7 +12391,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="resources_1">▼ resources<a class="headerlink" href="#resources_1" title="Permanent link">&para;</a></h4>
 <p>Node全体のハードウェアリソースを分母として、Pod内のコンテナが要求するリソースの下限/上限必要サイズを設定する。各Podは、Node内のハードウェアリソースを奪い合っており、Nodeが複数ある場合、kube-schedulerはリソースの空いているNodeのPodをスケーリングする。この時kube-schedulerは、コンテナの<code>resource</code>キーの値に基づいて、どのNodeにPodを作成するかを決めている。同じPod内に<code>resources</code>キーが設定されたコンテナが複数ある場合、下限/上限必要サイズを満たしているか否かの判定は、同じPod内のコンテナの要求サイズの合計値に基づくことになる。</p>
-<p>参考：<a href="https://newrelic.com/jp/blog/best-practices/set-requests-and-limits-for-your-clustercapacity-management">https://newrelic.com/jp/blog/best-practices/set-requests-and-limits-for-your-clustercapacity-management</a></p>
+<p>ℹ️ 参考：<a href="https://newrelic.com/jp/blog/best-practices/set-requests-and-limits-for-your-clustercapacity-management">https://newrelic.com/jp/blog/best-practices/set-requests-and-limits-for-your-clustercapacity-management</a></p>
 <table>
 <thead>
 <tr>
@@ -12404,17 +12404,17 @@
 <tr>
 <td><code>requests</code></td>
 <td>ハードウェアリソースの下限必要サイズを設定する。</td>
-<td>・高くしすぎると、他のPodがスケーリングしにくくなる。<br>・もし、設定値がNodeのハードウェアリソース以上の場合、コンテナは永遠に起動しない。<br>参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの下限がなくなる。そのため、Kubernetesが重要なPodにリソースを必要最低限しか割かず、パフォーマンスが低くなる可能性がある。</td>
+<td>・高くしすぎると、他のPodがスケーリングしにくくなる。<br>・もし、設定値がNodeのハードウェアリソース以上の場合、コンテナは永遠に起動しない。<br>ℹ️ 参考：<a href="https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu">https://qiita.com/jackchuka/items/b82c545a674975e62c04#cpu</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの下限がなくなる。そのため、Kubernetesが重要なPodにリソースを必要最低限しか割かず、パフォーマンスが低くなる可能性がある。</td>
 </tr>
 <tr>
 <td><code>limits</code></td>
 <td>ハードウェアリソースの上限必要サイズを設定する。</td>
-<td>・低くしすぎると、コンテナのパフォーマンスが常時悪くなる。<br>・もし、コンテナが上限値以上のリソースを要求すると、CPUの場合はPodは削除されずに、コンテナのスロットリング（起動と停止を繰り返す）が起こる。一方でメモリの場合は、OOMキラーによってPodのプロセスが削除され、Podは再作成される。<br>参考：<a href="https://blog.mosuke.tech/entry/2020/03/31/kubernetes-resource/">https://blog.mosuke.tech/entry/2020/03/31/kubernetes-resource/</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの上限がなくなる。そのため、Kubernetesが重要でないPodにリソースを割いてしまう可能性がある。<br>参考： <br>・<a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#if-you-do-not-specify-a-cpu-limit">https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#if-you-do-not-specify-a-cpu-limit</a><br>・<a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#if-you-do-not-specify-a-memory-limit">https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#if-you-do-not-specify-a-memory-limit</a></td>
+<td>・低くしすぎると、コンテナのパフォーマンスが常時悪くなる。<br>・もし、コンテナが上限値以上のリソースを要求すると、CPUの場合はPodは削除されずに、コンテナのスロットリング（起動と停止を繰り返す）が起こる。一方でメモリの場合は、OOMキラーによってPodのプロセスが削除され、Podは再作成される。<br>ℹ️ 参考：<a href="https://blog.mosuke.tech/entry/2020/03/31/kubernetes-resource/">https://blog.mosuke.tech/entry/2020/03/31/kubernetes-resource/</a><br>・もし、これを設定しない場合は、コンテナが使用できるハードウェアリソースの上限がなくなる。そのため、Kubernetesが重要でないPodにリソースを割いてしまう可能性がある。<br>ℹ️ 参考： <br>・<a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#if-you-do-not-specify-a-cpu-limit">https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#if-you-do-not-specify-a-cpu-limit</a><br>・<a href="https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#if-you-do-not-specify-a-memory-limit">https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#if-you-do-not-specify-a-memory-limit</a></td>
 </tr>
 </tbody>
 </table>
 <p>ちなみに、Node全体のハードウェアリソースは、<code>kubectl describe</code>コマンドから確認できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/architecture/nodes/#capacity">https://kubernetes.io/docs/concepts/architecture/nodes/#capacity</a></li>
 <li><a href="https://smallit.co.jp/blog/667/">https://smallit.co.jp/blog/667/</a></li>
@@ -12518,7 +12518,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="volumemount">▼ volumeMount<a class="headerlink" href="#volumemount" title="Permanent link">&para;</a></h4>
 <p>Pod内コンテナのマウントポイントを設定する。<code>spec.volumes</code>オプションで設定されたボリュームのうちから、コンテナにマウントするボリュームを設定する。Node側のマウント元のディレクトリは、PersistentVolumeの<code>spec.hostPath</code>オプションで設定する。volumeMountという名前であるが、『ボリュームマウント』を実行するわけではなく、VolumeやPerisitentVolumeで設定された任意のマウントを実行できることに注意する。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume">https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume">https://stackoverflow.com/questions/62312227/docker-volume-and-kubernetes-volume</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -12582,7 +12582,7 @@ Allocatable:
 <h3 id="spechostname">spec.hostname<a class="headerlink" href="#spechostname" title="Permanent link">&para;</a></h3>
 <h4 id="hostname">▼ hostnameとは<a class="headerlink" href="#hostname" title="Permanent link">&para;</a></h4>
 <p>Podのホスト名を設定する。また、<code>spec.hostname</code>オプションが設定されていない時は、<code>metadata.name</code>がホスト名として使用される。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod%E3%81%AEhostname%E3%81%A8subdomain%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89">https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod%E3%81%AEhostname%E3%81%A8subdomain%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod%E3%81%AEhostname%E3%81%A8subdomain%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89">https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod%E3%81%AEhostname%E3%81%A8subdomain%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -12606,7 +12606,7 @@ Allocatable:
 <h3 id="specimagepullsecrets">spec.imagePullSecrets<a class="headerlink" href="#specimagepullsecrets" title="Permanent link">&para;</a></h3>
 <h4 id="imagepullsecrets">▼ imagePullSecretsとは<a class="headerlink" href="#imagepullsecrets" title="Permanent link">&para;</a></h4>
 <p>Podに適用するSecretを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod">https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod</a></li>
 <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret">https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret</a></li>
@@ -12636,7 +12636,7 @@ Allocatable:
 <h3 id="speclivenessprobe">spec.livenessProbe<a class="headerlink" href="#speclivenessprobe" title="Permanent link">&para;</a></h3>
 <h4 id="livenessprobe">▼ livenessProbeとは<a class="headerlink" href="#livenessprobe" title="Permanent link">&para;</a></h4>
 <p>コンテナが起動しているか否かのヘルスチェックを設定する。</p>
-<p>参考：<a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></p>
+<p>ℹ️ 参考：<a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></p>
 <h4 id="httpget">▼ httpGet<a class="headerlink" href="#httpget" title="Permanent link">&para;</a></h4>
 <p>ヘルスチェックのエンドポイントを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12710,7 +12710,7 @@ Allocatable:
 <p><br></p>
 <h3 id="specnodeselector">spec.nodeSelector<a class="headerlink" href="#specnodeselector" title="Permanent link">&para;</a></h3>
 <p>kube-schedulerがPodを作成するNodeを設定する。<code>spec.affinity</code>キーと比較して、より単純に条件を設定できる。特定のNodeにPodを作成するだけでなく、複数のNodeに同じ<code>metadata.labels</code>キーを付与しておき、このNode群をNodeグループと定義すれば、特定のNodeグループにPodを作成できる。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -12735,7 +12735,7 @@ Allocatable:
 <h3 id="specreadinessprobe">spec.readinessProbe<a class="headerlink" href="#specreadinessprobe" title="Permanent link">&para;</a></h3>
 <h4 id="readinessprobe">▼ readinessProbeとは<a class="headerlink" href="#readinessprobe" title="Permanent link">&para;</a></h4>
 <p>すで起動中のコンテナが仕様上正しく稼働しているか否かの準備済みチェックを設定する。</p>
-<p>参考：<a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></p>
+<p>ℹ️ 参考：<a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></p>
 <h4 id="httpget_1">▼ httpGet<a class="headerlink" href="#httpget_1" title="Permanent link">&para;</a></h4>
 <p>準備済みチェックのエンドポイントを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12898,7 +12898,7 @@ Allocatable:
 <h4 id="terminationgraceperiodseconds">▼ terminationGracePeriodSecondsとは<a class="headerlink" href="#terminationgraceperiodseconds" title="Permanent link">&para;</a></h4>
 <p>Podが終了する時の待機時間を設定する。</p>
 <p><img alt="pod_lifecycle" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pod_lifecycle.png" /></p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/superbrothers/items/3ac78daba3560ea406b2">https://qiita.com/superbrothers/items/3ac78daba3560ea406b2</a></li>
 <li><a href="https://speakerdeck.com/masayaaoyama/jkd1812-prd-manifests?slide=16">https://speakerdeck.com/masayaaoyama/jkd1812-prd-manifests?slide=16</a></li>
@@ -12994,7 +12994,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="emptydir">▼ emptyDir<a class="headerlink" href="#emptydir" title="Permanent link">&para;</a></h4>
 <p>Volumeの一種であるEmptyDirボリュームを作成する。EmptyDirボリュームのため、『Pod』が削除されるとこのボリュームも同時に削除される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/volumes/#emptydir">https://kubernetes.io/docs/concepts/storage/volumes/#emptydir</a></li>
 <li><a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></li>
@@ -13030,7 +13030,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="hostpath_1">▼ hostPath<a class="headerlink" href="#hostpath_1" title="Permanent link">&para;</a></h4>
 <p>Volumeの一種であるHostPathボリュームを作成する。PersistentVolumeの一種であるHostPathボリュームとは区別すること。HostPathボリュームのため、『Node』が削除されるとこのボリュームも同時に削除される。HostPathボリューム自体は本番環境で非推奨である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/storage/volumes/#hostpath">https://kubernetes.io/docs/concepts/storage/volumes/#hostpath</a></li>
 <li><a href="https://qiita.com/umkyungil/items/218be95f7a1f8d881415">https://qiita.com/umkyungil/items/218be95f7a1f8d881415</a></li>
@@ -13096,7 +13096,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="persistentvolumeclaim">▼ persistentVolumeClaim<a class="headerlink" href="#persistentvolumeclaim" title="Permanent link">&para;</a></h4>
 <p>PersistentVolumeを使用する場合に、PersistentVolumeClaimを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -13180,13 +13180,13 @@ Allocatable:
 <p><br></p>
 <h2 id="15-replicacontroller">15. ReplicaController<a class="headerlink" href="#15-replicacontroller" title="Permanent link">&para;</a></h2>
 <p>旧Deployment。非推奨である。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/37423117/replication-controller-vs-deployment-in-kubernetes">https://stackoverflow.com/questions/37423117/replication-controller-vs-deployment-in-kubernetes</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/37423117/replication-controller-vs-deployment-in-kubernetes">https://stackoverflow.com/questions/37423117/replication-controller-vs-deployment-in-kubernetes</a></p>
 <p><br></p>
 <h2 id="16-roleclusterrole">16. Role、ClusterRole<a class="headerlink" href="#16-roleclusterrole" title="Permanent link">&para;</a></h2>
 <h3 id="rulesapigroups">rules.apiGroups<a class="headerlink" href="#rulesapigroups" title="Permanent link">&para;</a></h3>
 <h4 id="apigroups">▼ apiGroupsとは<a class="headerlink" href="#apigroups" title="Permanent link">&para;</a></h4>
 <p>resourceキーで指定するKubernetesリソースのKubernetes-APIグループ名を設定する。空文字はコアグループを表す。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/using-api/#api-groups">https://kubernetes.io/docs/reference/using-api/#api-groups</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/using-api/#api-groups">https://kubernetes.io/docs/reference/using-api/#api-groups</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13242,7 +13242,7 @@ Allocatable:
 <h3 id="rolerefname">roleRef.name<a class="headerlink" href="#rolerefname" title="Permanent link">&para;</a></h3>
 <h4 id="rolerefname_1">▼ roleRef.nameとは<a class="headerlink" href="#rolerefname_1" title="Permanent link">&para;</a></h4>
 <p>RoleBindingを使用して紐づけるRoleの名前を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13279,7 +13279,7 @@ Allocatable:
 <h3 id="subjectsname">subjects.name<a class="headerlink" href="#subjectsname" title="Permanent link">&para;</a></h3>
 <h4 id="subjectsname_1">▼ subjects.nameとは<a class="headerlink" href="#subjectsname_1" title="Permanent link">&para;</a></h4>
 <p>Roleの紐付け先のAccountの名前を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding">https://kubernetes.io/docs/reference/access-authn-authz/rbac/#rolebinding-and-clusterrolebinding</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13319,7 +13319,7 @@ Allocatable:
 <p>Kubernetesリソースに渡す機密データを設定する。</p>
 <h4 id="string_1">▼ string型データ<a class="headerlink" href="#string_1" title="Permanent link">&para;</a></h4>
 <p>Secretで保持するstring型データを設定する。使用前にbase64方式で自動的にデコードされるため、あらかじめエンコード値を設定しておく必要がある。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data">https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data">https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13335,7 +13335,7 @@ Allocatable:
 <span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="err">*****</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>string型しか設定できないため、デコード後にinteger型やboolean型になってしまう値は、ダブルクオーテーションで囲う必要がある。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13356,7 +13356,7 @@ Allocatable:
 <p>Kubernetesリソースに渡す機密データを設定する。</p>
 <h4 id="string_2">▼ string型データ<a class="headerlink" href="#string_2" title="Permanent link">&para;</a></h4>
 <p>Secretで保持するstring型データを設定する。平文で設定しておく必要がある。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data">https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data">https://kubernetes.io/docs/concepts/configuration/secret/#restriction-names-data</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13372,7 +13372,7 @@ Allocatable:
 <span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">baz</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>string型しか設定できないため、そのままだとinteger型やboolean型になってしまう値は、ダブルクオーテーションで囲う必要がある。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap">https://stackoverflow.com/questions/63905890/kubernetes-how-to-set-boolean-type-variable-in-configmap</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13391,10 +13391,10 @@ Allocatable:
 <h3 id="type_2">type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h3>
 <h4 id="type_3">▼ typeとは<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
 <p>Secretの種類を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#secret-types">https://kubernetes.io/docs/concepts/configuration/secret/#secret-types</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#secret-types">https://kubernetes.io/docs/concepts/configuration/secret/#secret-types</a></p>
 <h4 id="kubernetesiobasic-auth">▼ kubernetes.io/basic-auth<a class="headerlink" href="#kubernetesiobasic-auth" title="Permanent link">&para;</a></h4>
 <p>Basic認証のためのデータを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret">https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret">https://kubernetes.io/docs/concepts/configuration/secret/#basic-authentication-secret</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13413,7 +13413,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="kubernetesiodockerconfigjson">▼ kubernetes.io/dockerconfigjson<a class="headerlink" href="#kubernetesiodockerconfigjson" title="Permanent link">&para;</a></h4>
 <p>イメージレジストリの認証情報を設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#docker-config-secrets</a></li>
 <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/">https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</a></li>
@@ -13437,7 +13437,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="kubernetesioservice-account-token">▼ kubernetes.io/service-account-token<a class="headerlink" href="#kubernetesioservice-account-token" title="Permanent link">&para;</a></h4>
 <p>ServiceAccountのためのデータを設定する。ただし、自動的に作成されるため、ユーザーが設定する必要はない。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13458,7 +13458,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="kubernetesiotls">▼ kubernetes.io/tls<a class="headerlink" href="#kubernetesiotls" title="Permanent link">&para;</a></h4>
 <p>SSL/TLSを使用するためのデータを設定する。SSL証明書と秘密鍵の文字列が必要である。ユースケースとしては、データをIngressに割り当て、IngressとServiceの間をHTTPSで通信する例がある。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -13485,7 +13485,7 @@ Allocatable:
 </code></pre></div></td></tr></table></div>
 <h4 id="opaque">▼ Opaque<a class="headerlink" href="#opaque" title="Permanent link">&para;</a></h4>
 <p>任意のデータを設定する。ほとんどのユースケースに適する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#opaque-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#opaque-secrets</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/configuration/secret/#opaque-secrets">https://kubernetes.io/docs/concepts/configuration/secret/#opaque-secrets</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13542,7 +13542,7 @@ Allocatable:
 <span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9000</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>もしIstio VirtualServiceからインバウンド通信を受信する場合に、<code>spec.ports.appProtocol</code>キーが使用しなければ、<code>spec.ports.name</code>キーを『<code>&lt;プロトコル名&gt;-&lt;任意の文字列&gt;</code>』で命名しなければならない。</p>
-<p>参考：<a href="https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/">https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/</a></p>
+<p>ℹ️ 参考：<a href="https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/">https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13665,7 +13665,7 @@ Allocatable:
 <span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、FastCGIプロトコルには変換できず、別にNginxを使用してプロトコルを変換する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/search?q=php-fpm+kubernetes">https://github.com/search?q=php-fpm+kubernetes</a></li>
 <li><a href="https://kubernetes.github.io/ingress-nginx/user-guide/fcgi-services/">https://kubernetes.github.io/ingress-nginx/user-guide/fcgi-services/</a></li>
@@ -13739,7 +13739,7 @@ Allocatable:
 <p><br></p>
 <h3 id="specselector_1">spec.selector<a class="headerlink" href="#specselector_1" title="Permanent link">&para;</a></h3>
 <p>インバウンド通信の転送先とするPodの<code>metadata.labels</code>キー名と値を設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -13758,7 +13758,7 @@ Allocatable:
 <p><br></p>
 <h3 id="spectype">spec.type<a class="headerlink" href="#spectype" title="Permanent link">&para;</a></h3>
 <p>Serviceのタイプを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/smiyoshi/articles/c86fc3532b4f8a">https://zenn.dev/smiyoshi/articles/c86fc3532b4f8a</a></li>
 <li><a href="https://www.netone.co.jp/knowledge-center/netone-blog/20210715-01/">https://www.netone.co.jp/knowledge-center/netone-blog/20210715-01/</a></li>
@@ -13790,7 +13790,7 @@ Allocatable:
 <h3 id="automountserviceaccounttoken">automountServiceAccountToken<a class="headerlink" href="#automountserviceaccounttoken" title="Permanent link">&para;</a></h3>
 <h4 id="automountserviceaccounttoken_1">▼ automountServiceAccountTokenとは<a class="headerlink" href="#automountserviceaccounttoken_1" title="Permanent link">&para;</a></h4>
 <p>ServiceAccountのPodへの自動紐付けの有効化する。デフォルトで有効化されている。</p>
-<p>参考：<a href="https://kakakakakku.hatenablog.com/entry/2021/07/12/095208">https://kakakakakku.hatenablog.com/entry/2021/07/12/095208</a></p>
+<p>ℹ️ 参考：<a href="https://kakakakakku.hatenablog.com/entry/2021/07/12/095208">https://kakakakakku.hatenablog.com/entry/2021/07/12/095208</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -13805,7 +13805,7 @@ Allocatable:
 <h3 id="imagepullsecrets_1">imagePullSecrets<a class="headerlink" href="#imagepullsecrets_1" title="Permanent link">&para;</a></h3>
 <h4 id="imagepullsecrets_2">▼ imagePullSecretsとは<a class="headerlink" href="#imagepullsecrets_2" title="Permanent link">&para;</a></h4>
 <p>新しく作成されたPod内コンテナに自動挿入する<code>imagePullSecrets</code>キーを設定する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-image-pull-secret-to-service-account">https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-image-pull-secret-to-service-account</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-image-pull-secret-to-service-account">https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-image-pull-secret-to-service-account</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -14137,7 +14137,7 @@ Allocatable:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

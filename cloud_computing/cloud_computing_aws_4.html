@@ -7501,14 +7501,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8963,7 +8963,7 @@
 <h2 id="01-lambda">01. Lambda<a class="headerlink" href="#01-lambda" title="Permanent link">&para;</a></h2>
 <h3 id="lambda">Lambdaとは<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h3>
 <p>他のAWSリソースのイベントによって駆動する関数を管理できる。ユースケースについては、以下のリンクを参考にせよ。</p>
-<p>参考：参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/applications-usecases.html">https://docs.aws.amazon.com/lambda/latest/dg/applications-usecases.html</a></p>
+<p>ℹ️ 参考：ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/applications-usecases.html">https://docs.aws.amazon.com/lambda/latest/dg/applications-usecases.html</a></p>
 <p><img alt="サーバーレスアーキテクチャとは" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/サーバーレスアーキテクチャとは.png" /></p>
 <p><br></p>
 <h3 id="_2">セットアップ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -8994,7 +8994,7 @@
 <tr>
 <td>メモリ</td>
 <td>Lambdaに割り当てるメモリサイズを設定する。</td>
-<td>最大10240MBまで増設でき、増設するほどパフォーマンスが上がる。<br>参考：<a href="https://www.business-on-it.com/2003-aws-lambda-performance-check/">https://www.business-on-it.com/2003-aws-lambda-performance-check/</a></td>
+<td>最大10240MBまで増設でき、増設するほどパフォーマンスが上がる。<br>ℹ️ 参考：<a href="https://www.business-on-it.com/2003-aws-lambda-performance-check/">https://www.business-on-it.com/2003-aws-lambda-performance-check/</a></td>
 </tr>
 <tr>
 <td>タイムアウト</td>
@@ -9049,7 +9049,7 @@
 </tbody>
 </table>
 <h3 id="_3">設定のベストプラクティス<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration">https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration">https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html#function-configuration</a></p>
 <p><br></p>
 <h3 id="lambda_1">Lambdaと関数の関係性<a class="headerlink" href="#lambda_1" title="Permanent link">&para;</a></h3>
 <p><img alt="lambda-execution-environment-api-flow" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/lambda-execution-environment-api-flow.png" /></p>
@@ -9057,9 +9057,9 @@
 <p>コンソール画面のLambdaに相当する。</p>
 <h4 id="_4">▼ 関数の実行環境<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Lambdaは、API（ランタイムAPI、ログAPI、拡張API）と実行環境から構成されている。関数は実行環境に存在し、ランタイムAPIを介して、Lambdaによって実行される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html#runtimes-extensions-api-lifecycle">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html#runtimes-extensions-api-lifecycle</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html#runtimes-extensions-api-lifecycle">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-extensions-api.html#runtimes-extensions-api-lifecycle</a></p>
 <p>実行環境には、<code>3</code>個のフェーズがある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html#runtimes-lifecycle">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html#runtimes-lifecycle</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html#runtimes-lifecycle">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html#runtimes-lifecycle</a></p>
 <p><img alt="lambda-execution-environment-life-cycle" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/lambda-execution-environment-lifecycle.png" /></p>
 <h4 id="init">▼ Initフェーズ<a class="headerlink" href="#init" title="Permanent link">&para;</a></h4>
 <p>Lambdaが発火する。実行環境が作成され、関数を実行するための準備が行われる。</p>
@@ -9070,15 +9070,15 @@
 <p><br></p>
 <h3 id="lambda-on-docker">Lambda関数 on Docker<a class="headerlink" href="#lambda-on-docker" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ ベースイメージの準備<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-images-lp">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-images-lp</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-images-lp">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-images-lp</a></p>
 <h4 id="ricruntime-interface-clients">▼ RIC：Runtime Interface Clients<a class="headerlink" href="#ricruntime-interface-clients" title="Permanent link">&para;</a></h4>
 <p>通常のランタイムはコンテナ内関数と通信できないため、ランタイムの代わりにRICを使用してコンテナ内関数と通信を行う。言語別にRICパッケージが用意されている。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client">https://docs.aws.amazon.com/lambda/latest/dg/runtimes-images.html#runtimes-api-client</a></p>
 <h4 id="rieruntime-interface-emulator">▼ RIE：Runtime Interface Emulator<a class="headerlink" href="#rieruntime-interface-emulator" title="Permanent link">&para;</a></h4>
 <p>開発環境のコンテナで、擬似的にLambda関数を再現する。全ての言語で共通のRIEパッケージが用意されている。</p>
-<p>参考：<a href="https://github.com/aws/aws-lambda-runtime-interface-emulator">https://github.com/aws/aws-lambda-runtime-interface-emulator</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/aws-lambda-runtime-interface-emulator">https://github.com/aws/aws-lambda-runtime-interface-emulator</a></p>
 <p>RIEであっても、稼働させるためにAWSのクレデンシャル情報（アクセスキーID、シークレットアクセスキー、リージョン）が必要なため、環境変数や<code>credentials</code>ファイルを使用して、Lambdaにこれらの値を出力する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/images-test.html#images-test-env">https://docs.aws.amazon.com/lambda/latest/dg/images-test.html#images-test-env</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/images-test.html#images-test-env">https://docs.aws.amazon.com/lambda/latest/dg/images-test.html#images-test-env</a></p>
 <p><strong>＊参考＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9153,14 +9153,14 @@ $ curl <span class="se">\</span>
 <h3 id="lambda_3">Lambda関数<a class="headerlink" href="#lambda_3" title="Permanent link">&para;</a></h3>
 <h4 id="go">▼ Goの使用例<a class="headerlink" href="#go" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-golang.html">https://docs.aws.amazon.com/lambda/latest/dg/lambda-golang.html</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html</a></li>
 </ul>
 <h4 id="nodejs">▼ Node.jsの使用例<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h4>
 <p>以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html">https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_lambda_function.html</a></li>
@@ -9169,7 +9169,7 @@ $ curl <span class="se">\</span>
 <h3 id="_6">同時実行<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 同時実行の予約<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>Lambdaは、関数の実行中に再びリクエストが送信されると、関数のインスタンスを新しく作成する。そして、各関数インスタンスを使用して、同時並行的にリクエストに応じる。デフォルトでは、関数の種類がいくつあっても、AWSアカウント当たり、合計で<code>1000</code>個までしかスケーリングして同時実行できない。関数ごとに同時実行数の使用枠を割り当てるためには、同時実行の予約を設定する必要がある。同時実行の予約数を<code>0</code>個とした場合、Lambdaがスケーリングしなくなる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html#configuration-concurrency-reserved">https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html#configuration-concurrency-reserved</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html#configuration-concurrency-reserved">https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html#configuration-concurrency-reserved</a></p>
 <p><img alt="lambda_concurrency-model" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/lambda_concurrency-model.png" /></p>
 <p><br></p>
 <h3 id="vpcvpc">VPC外/VPC内<a class="headerlink" href="#vpcvpc" title="Permanent link">&para;</a></h3>
@@ -9207,10 +9207,10 @@ $ curl <span class="se">\</span>
 <p>デプロイを行わずに、関数のコードを直接的に修正し、『Deploy』ボタンでデプロイする。</p>
 <h4 id="s3zip">▼ S3における<code>.zip</code>ファイル<a class="headerlink" href="#s3zip" title="Permanent link">&para;</a></h4>
 <p>ビルド後のコードを<code>.zip</code>ファイルにしてアップロードする。ローカルマシンまたはS3からアップロードできる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip">https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip">https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip</a></p>
 <h4 id="ecr">▼ ECRにおけるイメージ<a class="headerlink" href="#ecr" title="Permanent link">&para;</a></h4>
 <p>コンテナイメージの関数でのみ有効である。ビルド後のコードをコンテナイメージしてアップロードする。ECRからアップロードできる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-images">https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-images</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-images">https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-images</a></p>
 <p><br></p>
 <h2 id="01-02-lambdaedge">01-02. Lambda@Edge<a class="headerlink" href="#01-02-lambdaedge" title="Permanent link">&para;</a></h2>
 <h3 id="lambdaedge">Lambda@Edgeとは<a class="headerlink" href="#lambdaedge" title="Permanent link">&para;</a></h3>
@@ -9248,7 +9248,7 @@ $ curl <span class="se">\</span>
 </table>
 <h4 id="event">▼ 各トリガーのeventオブジェクトへのマッピング<a class="headerlink" href="#event" title="Permanent link">&para;</a></h4>
 <p>各トリガーのeventオブジェクトへのマッピングは、リンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html">https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html</a></p>
 <p><br></p>
 <h3 id="_14">ポリシー<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <h4 id="_15">▼ 実行のための最低限のポリシー<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
@@ -9573,7 +9573,7 @@ $ curl <span class="se">\</span>
 <h2 id="02-02-albapplication-load-balancing">02-02. ALB：Application Load Balancing<a class="headerlink" href="#02-02-albapplication-load-balancing" title="Permanent link">&para;</a></h2>
 <h3 id="alb">ALBとは<a class="headerlink" href="#alb" title="Permanent link">&para;</a></h3>
 <p>クラウドリバースプロキシサーバー、かつクラウドロードバランサーとして働く。リクエストを代理で受信し、EC2インスタンスへのアクセスをバランスよく分配することによって、サーバーへの負荷を緩和する。</p>
-<p>参考：<a href="https://www.slideshare.net/AmazonWebServicesJapan/application-load-balancer">https://www.slideshare.net/AmazonWebServicesJapan/application-load-balancer</a></p>
+<p>ℹ️ 参考：<a href="https://www.slideshare.net/AmazonWebServicesJapan/application-load-balancer">https://www.slideshare.net/AmazonWebServicesJapan/application-load-balancer</a></p>
 <p><img alt="ALBの機能" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ALBの機能.png" /></p>
 <p><br></p>
 <h3 id="_17">セットアップ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
@@ -9600,7 +9600,7 @@ $ curl <span class="se">\</span>
 <tr>
 <td>セキュリティポリシー</td>
 <td>リクエストの送信者が使用するSSL/TLSプロトコルや暗号化方式のバージョンに合わせて、ALBが受信できるこれらのバージョンを設定する。</td>
-<td>・リクエストの送信者には、ブラウザ、APIにリクエストを送信する外部サービス、転送元のAWSリソース（CloudFrontなど）、などを含む。<br>・参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies</a></td>
+<td>・リクエストの送信者には、ブラウザ、APIにリクエストを送信する外部サービス、転送元のAWSリソース（CloudFrontなど）、などを含む。<br>・ℹ️ 参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies</a></td>
 </tr>
 <tr>
 <td>ルール</td>
@@ -9672,31 +9672,31 @@ $ curl <span class="se">\</span>
 <h3 id="alb_1">ALBインスタンス<a class="headerlink" href="#alb_1" title="Permanent link">&para;</a></h3>
 <h4 id="alb_2">▼ ALBインスタンスとは<a class="headerlink" href="#alb_2" title="Permanent link">&para;</a></h4>
 <p>ALBの実体で、各ALBインスタンスが異なるグローバルIPアドレスを持つ。複数のAZにルーティングするようにALBを設定した場合、各AZにALBインスタンスが1つずつ配置される。</p>
-<p>参考：<a href="https://blog.takuros.net/entry/2019/08/27/075726">https://blog.takuros.net/entry/2019/08/27/075726</a></p>
+<p>ℹ️ 参考：<a href="https://blog.takuros.net/entry/2019/08/27/075726">https://blog.takuros.net/entry/2019/08/27/075726</a></p>
 <p><img alt="alb-instance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/alb-instance.png" /></p>
 <h4 id="ip">▼ 割り当てられるIPアドレス<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
 <p>ALBに割り当てられるIPアドレスには、VPCのものが適用される。そのため、EC2インスタンスのセキュリティグループでは、VPCのCIDRブロックを許可するように設定する必要がある。</p>
 <h4 id="_21">▼ 自動スケーリング<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>単一障害点にならないように、負荷が高まるとALBインスタンスが増えるように自動スケールアウトする仕組みを持つ。</p>
 <h4 id="500">▼ <code>500</code>系ステータスコードの原因<a class="headerlink" href="#500" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/troubleshoot-http-5xx/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/troubleshoot-http-5xx/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/premiumsupport/knowledge-center/troubleshoot-http-5xx/">https://aws.amazon.com/jp/premiumsupport/knowledge-center/troubleshoot-http-5xx/</a></p>
 <h4 id="alb_3">▼ ALBのセキュリティグループ<a class="headerlink" href="#alb_3" title="Permanent link">&para;</a></h4>
 <p>Route53からルーティングされるパブリックIPアドレスを受信できるようにしておく必要がある。パブリックネットワークに公開するサイトであれば、IPアドレスは全ての範囲（<code>0.0.0.0/0</code>と<code>::/0</code>）にする。社内向けのサイトであれば、社内のプライベートIPアドレスのみ（<code>*.*.*.*/32</code>）を許可する。</p>
 <p><br></p>
 <h3 id="ssl">アプリケーションが常時SSLの場合<a class="headerlink" href="#ssl" title="Permanent link">&para;</a></h3>
 <h4 id="_22">▼ 問題<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>アプリケーションが常時SSLになっているアプリケーション（例：WordPress）の場合、ALBからアプリケーションにHTTPプロトコルでルーティングすると、HTTPSプロトコルへのリダイレクトループが発生してしまう。常時SSLがデフォルトになっていないアプリケーションであれば、これは起こらない。</p>
-<p>参考：<a href="https://cloudpack.media/525">https://cloudpack.media/525</a></p>
+<p>ℹ️ 参考：<a href="https://cloudpack.media/525">https://cloudpack.media/525</a></p>
 <h4 id="web">▼ Webサーバーにおける対処方法<a class="headerlink" href="#web" title="Permanent link">&para;</a></h4>
 <p>ALBを経由したリクエストには、リクエストヘッダーに<code>X-Forwarded-Proto</code>ヘッダーが付与される。これには、ALBに対するリクエストのプロトコルの種類が文字列で代入されている。これが『HTTPS』だった場合、WebサーバーへのリクエストをHTTPSであるとみなすように対処する。これにより、アプリケーションへのリクエストのプロトコルがHTTPSとなる（こちらを行った場合は、アプリケーション側の対応不要）。</p>
-<p>参考：<a href="https://www.d-wood.com/blog/2017/11/29_9354.html">https://www.d-wood.com/blog/2017/11/29_9354.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.d-wood.com/blog/2017/11/29_9354.html">https://www.d-wood.com/blog/2017/11/29_9354.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">SetEnvIf</span><span class="w"> </span>X-Forwarded-Proto<span class="w"> </span>https<span class="w"> </span>HTTPS=on<span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_23">▼ アプリケーションにおける対処方法<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p><img alt="ALBからEC2へのリクエストのプロトコルをHTTPSと見なす" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ALBからEC2へのリクエストのプロトコルをHTTPSと見なす.png" /></p>
 <p>ALBを経由したリクエストには、リクエストヘッダーに<code>HTTP_X_FORWARDED_PROTO</code>ヘッダーが付与される。これには、ALBに対するリクエストのプロトコルの種類が文字列で代入されている。そのため、もしALBに対するリクエストがHTTPSプロトコルだった場合は、ALBからアプリケーションへのリクエストもHTTPSであるとみなすように、<code>index.php</code>に追加実装を行う（こちらを行った場合は、Webサーバー側の対応不要）。</p>
-<p>参考：<a href="https://www.d-wood.com/blog/2017/11/29_9354.html">https://www.d-wood.com/blog/2017/11/29_9354.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.d-wood.com/blog/2017/11/29_9354.html">https://www.d-wood.com/blog/2017/11/29_9354.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -9716,12 +9716,12 @@ $ curl <span class="se">\</span>
 <h3 id="_24">ロードバランシングアルゴリズム<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="_25">▼ ロードバランシングアルゴリズムとは<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>ターゲットへのリクエスト転送時の加重ルールを設定する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html#application-load-balancer-overview">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html#application-load-balancer-overview</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html#application-load-balancer-overview">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html#application-load-balancer-overview</a></p>
 <h4 id="_26">▼ ラウンドロビン<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p>受信したリクエストを、ターゲットに均等にルーティングする。</p>
 <h4 id="_27">▼ 最小未処理リクエスト（ファステスト）<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
 <p>受信したリクエストを、未処理のリクエスト数が最も少ないターゲットにルーティングする。</p>
-<p>参考：<a href="https://www.infraexpert.com/study/loadbalancer4.html">https://www.infraexpert.com/study/loadbalancer4.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.infraexpert.com/study/loadbalancer4.html">https://www.infraexpert.com/study/loadbalancer4.html</a></p>
 <p><br></p>
 <h2 id="02-03-nlbnetwork-load-balancer">02-03. NLB：Network Load Balancer<a class="headerlink" href="#02-03-nlbnetwork-load-balancer" title="Permanent link">&para;</a></h2>
 <p><br></p>
@@ -9790,12 +9790,12 @@ $ curl <span class="se">\</span>
 </table>
 <h4 id="_29">▼ 機能の違い<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>RDBがAuroraか非Auroraかで機能に差があり、Auroraの方が耐障害性や可用性が高い。ただし、その分費用が高いことに注意する。</p>
-<p>参考：<a href="https://www.ragate.co.jp/blog/articles/10234">https://www.ragate.co.jp/blog/articles/10234</a></p>
+<p>ℹ️ 参考：<a href="https://www.ragate.co.jp/blog/articles/10234">https://www.ragate.co.jp/blog/articles/10234</a></p>
 <p><br></p>
 <h3 id="os">OSの隠蔽<a class="headerlink" href="#os" title="Permanent link">&para;</a></h3>
 <h4 id="os_1">▼ OSの隠蔽とは<a class="headerlink" href="#os_1" title="Permanent link">&para;</a></h4>
 <p>RDSは、EC2内にDBMSが稼働したものであるが、このほとんどが隠蔽されている。そのためDBサーバーのようには操作できず、OSのバージョン確認やSSH接続を行えない。</p>
-<p>参考：<a href="https://xtech.nikkei.com/it/article/COLUMN/20131108/516863/">https://xtech.nikkei.com/it/article/COLUMN/20131108/516863/</a></p>
+<p>ℹ️ 参考：<a href="https://xtech.nikkei.com/it/article/COLUMN/20131108/516863/">https://xtech.nikkei.com/it/article/COLUMN/20131108/516863/</a></p>
 <h4 id="_30">▼ 確認方法<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
 <p>Linux x86_64が使用されているところまでは確認できるが、Linuxのバージョンは隠蔽されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9864,15 +9864,15 @@ $ curl <span class="se">\</span>
 <h3 id="_31">メンテナンスウインドウ<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
 <h4 id="_32">▼ メンテナンスウインドウ<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
 <p>DBクラスター/DBインスタンスの設定の変更をスケジューリングする。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/amazon-rds-maintenance-questions/">https://dev.classmethod.jp/articles/amazon-rds-maintenance-questions/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/amazon-rds-maintenance-questions/">https://dev.classmethod.jp/articles/amazon-rds-maintenance-questions/</a></p>
 <h4 id="_33">▼ メンテナンスの適切な曜日/時間帯<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
 <p>CloudWatchメトリクスの<code>DatabaseConnections</code>メトリクスから、DBの接続数が低くなる時間帯を調査し、その時間帯にメンテナンスウィンドウを設定する。また、メンテナンスウィンドウの実施曜日が週末であると、サイトが停止したまま休日を迎える可能性があるため、週末以外になるように設定する（メンテナンスウィンドウがUTCであることに注意）。</p>
 <h4 id="_34">▼ 『保留中の変更』『保留中のメンテナンス』<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <p><img alt="rds_pending-maintenance" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/rds_pending-maintenance.png" /></p>
 <p>ユーザーが予定した設定変更は『保留中の変更』として表示される一方で、AWSによって定期的に行われるハードウェア/OS/DBエンジンのバージョンを強制アップグレードは『保留中のメンテナンス』として表示される。『次のメンテナンスウィンドウ』を選択すれば実行タイミングをメンテナンスウィンドウの間設定できるが、これを行わない場合は『日付の適用』に表示された時間帯に強制実行される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html</a></p>
 <p>ちなみに保留中のメンテナンスは、アクションの『今すぐアップグレード』と『次のウィンドウでアップグレード』からも操作できる。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/rds-pending-maintenance-actions/">https://dev.classmethod.jp/articles/rds-pending-maintenance-actions/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/rds-pending-maintenance-actions/">https://dev.classmethod.jp/articles/rds-pending-maintenance-actions/</a></p>
 <p><img alt="rds_pending-maintenance_action" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/rds_pending-maintenance_action.png" /></p>
 <h4 id="_35">▼ 保留中のメンテナンスの状態<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <table>
@@ -9903,7 +9903,7 @@ $ curl <span class="se">\</span>
 </table>
 <h4 id="_36">▼ 『次のウィンドウ』状態の取り消し<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
 <p>設定の変更が『次のウィンドウ』状態にある場合、画面上からは『必須』や『利用可能』といった実行タイミングが未定の状態に戻せない。しかし、CLIを使用すると戻せる。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/mean-of-next-window-in-pending-maintenance-and-set-maintenance-schedule/">https://dev.classmethod.jp/articles/mean-of-next-window-in-pending-maintenance-and-set-maintenance-schedule/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/mean-of-next-window-in-pending-maintenance-and-set-maintenance-schedule/">https://dev.classmethod.jp/articles/mean-of-next-window-in-pending-maintenance-and-set-maintenance-schedule/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9972,7 +9972,7 @@ $ curl <span class="se">\</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_37">▼ 『保留中の変更』の取り消し<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
 <p>保留中の変更を画面上からは取り消せない。しかし、CLIを使用すると戻せる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.ApplyImmediately">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.ApplyImmediately</a></li>
 <li><a href="https://qiita.com/tinoji/items/e150ffdc2045e8b85a56">https://qiita.com/tinoji/items/e150ffdc2045e8b85a56</a></li>
@@ -9987,9 +9987,9 @@ $ curl <span class="se">\</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_38">▼ ミドルウェアのアップグレードの調査書<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
 <p>以下のような報告書のもと、調査と対応を行う。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html</a></p>
 <p>またマージされる内容の調査のため、リリースノートの確認が必要になる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.11Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.11Updates.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.11Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.11Updates.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -10041,7 +10041,7 @@ $ curl <span class="se">\</span>
 <h3 id="_39">セットアップ<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
 <h4 id="db_1">▼ DBクラスター<a class="headerlink" href="#db_1" title="Permanent link">&para;</a></h4>
 <p>ベストプラクティスについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/">https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/</a></p>
+<p>ℹ️ 参考：<a href="https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/">https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/</a></p>
 <table>
 <thead>
 <tr>
@@ -10054,7 +10054,7 @@ $ curl <span class="se">\</span>
 <tr>
 <td>レプリケーション</td>
 <td>単一のプライマリーインスタンス（シングルマスター）または複数のプライマリーインスタンス（マルチマスター）とするかを設定する。</td>
-<td>フェイルオーバーを利用したダウンタイムの最小化時に、マルチマスターであれば変更の順番を気にしなくてよくなる。ただし、DBクラスターをクローンできないなどのデメリットもある。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-terms">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-terms</a></td>
+<td>フェイルオーバーを利用したダウンタイムの最小化時に、マルチマスターであれば変更の順番を気にしなくてよくなる。ただし、DBクラスターをクローンできないなどのデメリットもある。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-terms">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-terms</a></td>
 </tr>
 <tr>
 <td>DBクラスター識別子</td>
@@ -10104,13 +10104,13 @@ $ curl <span class="se">\</span>
 <tr>
 <td>削除保護</td>
 <td>DBクラスターの削除を防ぐ。</td>
-<td>DBクラスターを削除するとクラスターボリュームも削除されるため、これを防ぐ。ちなみに、DBクラスターの削除保護になっていてもDBインスタンスは削除できる。DBインスタンスを削除しても、再作成すればクラスターボリュームに接続されて元のデータにアクセスできる。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeletionProtection">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeletionProtection</a></td>
+<td>DBクラスターを削除するとクラスターボリュームも削除されるため、これを防ぐ。ちなみに、DBクラスターの削除保護になっていてもDBインスタンスは削除できる。DBインスタンスを削除しても、再作成すればクラスターボリュームに接続されて元のデータにアクセスできる。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeletionProtection">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeletionProtection</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="db_2">▼ DBインスタンス<a class="headerlink" href="#db_2" title="Permanent link">&para;</a></h4>
 <p>ベストプラクティスについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/">https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/</a></p>
+<p>ℹ️ 参考：<a href="https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/">https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/RDS/</a></p>
 <table>
 <thead>
 <tr>
@@ -10156,11 +10156,11 @@ $ curl <span class="se">\</span>
 <h3 id="db_3">DBクラスター<a class="headerlink" href="#db_3" title="Permanent link">&para;</a></h3>
 <h4 id="db_4">▼ DBクラスターとは<a class="headerlink" href="#db_4" title="Permanent link">&para;</a></h4>
 <p>DBエンジンにAuroraを選択した場合にのみ使用できる。DBインスタンスとクラスターボリュームから構成されている。コンピューティングとして機能するDBインスタンスと、ストレージとして機能するクラスターボリュームが分離されているため、DBインスタンスが誤って全て削除されてしまったとしても、データを守れる。また、両者が分離されていないエンジンタイプと比較して、再起動が早いため、再起動に伴うダウンタイムが短い。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html</a></p>
 <p><img alt="aurora-db-cluster" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/aurora-db-cluster.png" /></p>
 <h4 id="db_5">▼ 空のDBクラスター<a class="headerlink" href="#db_5" title="Permanent link">&para;</a></h4>
 <p>コンソール画面にて、DBクラスター内の全てのDBインスタンスを削除すると、DBクラスターも自動で削除される。一方で、AWS-APIをコールして全てのDBインスタンスを削除する場合、DBクラスターは自動で削除されずに、空の状態になる。例えば、Terraformを使用してDBクラスターを作成する時に、インスタンスの作成に失敗するとDBクラスターが空になる、これは、TerraformがAWS-APIをコールした作成を行っているためである。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeleteCluster.DeleteCluster">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeleteCluster.DeleteCluster</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeleteCluster.DeleteCluster">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_DeleteCluster.html#USER_DeleteCluster.DeleteCluster</a></p>
 <p><br></p>
 <h3 id="db_6">DBインスタンス<a class="headerlink" href="#db_6" title="Permanent link">&para;</a></h3>
 <h4 id="db_7">▼ DBインスタンスとは<a class="headerlink" href="#db_7" title="Permanent link">&para;</a></h4>
@@ -10202,7 +10202,7 @@ $ curl <span class="se">\</span>
 <p>Auroraをエンジンバージョンに選択した場合に使用できる。特定の条件下でのみ、アプリケーションとプライマリーインスタンスの接続を維持したまま、プライマリーインスタンスのパッチバージョンをアップグレードできる。ゼロダウンタイムパッチ適用が発動した場合、RDSのイベントが記録される。ただし、この機能に頼り切らない方が良い。ゼロダウンタイムパッチ適用の発動はAWSから事前にお知らせされるわけでもなく、ユーザーが条件を見て発動の有無を判断しなければならない。また、実際に発動していても、ダウンタイムが発生した事例が報告されている。ゼロダウンタイムパッチ適用時、以下の手順でエンジンバージョンがアップグレードされる。</p>
 <p>（１）プライマリーインスタンスのエンジンがアップグレードされ、この時にダウンタイムが発生しない代わりに、<code>5</code>秒ほどプライマリーインスタンスのパフォーマンスが低下する。</p>
 <p>（２）リードレプリカが再起動され、この時に<code>20</code>～<code>30</code>秒ほどダウンタイムが発生する。これらの仕組みのため、アプリケーションでは読み出しエンドポイントを接続先として使用しないようにする必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/tonishy/items/542f7dd10cc43fd299ab">https://qiita.com/tonishy/items/542f7dd10cc43fd299ab</a></li>
 <li><a href="https://qiita.com/tmiki/items/7ade95c33b8e43c7cb5f">https://qiita.com/tmiki/items/7ade95c33b8e43c7cb5f</a></li>
@@ -10226,13 +10226,13 @@ $ curl <span class="se">\</span>
 <td>クラスターエンドポイント</td>
 <td>書き込み/読み出し</td>
 <td><code>&lt;DBクラスター名&gt;.cluster-&lt;id&gt;.ap-northeast-1.rds.amazonaws.com:&lt;ポート番号&gt;</code></td>
-<td>プライマリーインスタンスに接続できる。プライマリーインスタンスがダウンし、フェイルオーバーによってプライマリーインスタンスとリードレプリカが入れ替わった場合、エンドポイントの転送先は新しいプライマリーインスタンスに変更される。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster</a></td>
+<td>プライマリーインスタンスに接続できる。プライマリーインスタンスがダウンし、フェイルオーバーによってプライマリーインスタンスとリードレプリカが入れ替わった場合、エンドポイントの転送先は新しいプライマリーインスタンスに変更される。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster</a></td>
 </tr>
 <tr>
 <td>リーダーエンドポイント</td>
 <td>読み出し</td>
 <td><code>&lt;DBクラスター名&gt;.cluster-ro-&lt;id&gt;.ap-northeast-1.rds.amazonaws.com:&lt;ポート番号&gt;</code></td>
-<td>リードレプリカに接続できる。DBインスタンスが複数ある場合、クエリが自動的に割り振られる。フェイルオーバーによってプライマリーインスタンスとリードレプリカが入れ替わった場合、エンドポイントの転送先は新しいプライマリーインスタンスに変更される。もしリードレプリカが全てダウンし、プライマリーインスタンスしか稼働していない状況の場合、プライマリーインスタンスに転送するようになる。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Reader">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Reader</a></td>
+<td>リードレプリカに接続できる。DBインスタンスが複数ある場合、クエリが自動的に割り振られる。フェイルオーバーによってプライマリーインスタンスとリードレプリカが入れ替わった場合、エンドポイントの転送先は新しいプライマリーインスタンスに変更される。もしリードレプリカが全てダウンし、プライマリーインスタンスしか稼働していない状況の場合、プライマリーインスタンスに転送するようになる。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Reader">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Reader</a></td>
 </tr>
 <tr>
 <td>インスタンスエンドポイント</td>
@@ -10248,7 +10248,7 @@ $ curl <span class="se">\</span>
 <p>Auroraでは、OS、エンジンバージョン、MySQLなどのアップグレード時に、DBインスタンスの再起動が必要である。再起動に伴ってダウンタイムが発生し、アプリケーションからDBに接続できなくなる。この間、アプリケーションの利用者に与える影響を小さくできるように、計画的にダウンタイムを発生させる必要がある。</p>
 <h4 id="_43">▼ ダウンタイムの発生条件<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
 <p>非Auroraに記載された情報のため、厳密にはAuroraのダウンタイムではない。ただし、経験上同じ項目でダウンタイムが発生しているため、参考にする。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
 <h4 id="_44">▼ エンジンタイプによるダウンタイムの最小化<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
 <p>コンピューティングとストレージが分離しているAuroraはエンジンタイプの中でもダウンタイムが短い。</p>
 <h4 id="_45">▼ ダウンタイムの計測例<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
@@ -10408,10 +10408,10 @@ NOW()
 <h3 id="_46">フェイルオーバー<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
 <h4 id="aurora">▼ Auroraのフェイルオーバーとは<a class="headerlink" href="#aurora" title="Permanent link">&para;</a></h4>
 <p>異なるAZにあるDBインスタンス間で、ロール（プライマリーインスタンス/リードレプリカ）の割り当てを入れ替える仕組み。DBクラスター内の全てのDBインスタンスが同じAZに配置されている場合、あらかじめ異なるAZにリードレプリカを新しく作成する必要がある。また、フェイルオーバー時に、もしDBクラスター内にリードレプリカが存在していない場合、異なるAZに昇格後のプライマリーインスタンスが自動的に作成される。リードレプリカが存在している場合、これがプライマリーインスタンスに昇格する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html#Aurora.Managing.FaultTolerance">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html#Aurora.Managing.FaultTolerance</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html#Aurora.Managing.FaultTolerance">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html#Aurora.Managing.FaultTolerance</a></p>
 <h4 id="_47">▼ フェイルオーバーによるダウンタイムの最小化<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
 <p>DBインスタンスがマルチAZ構成の場合、以下の手順を使用してダウンタイムを最小化できる。</p>
-<p>参考：<a href="https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/">https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</a></p>
+<p>ℹ️ 参考：<a href="https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/">https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</a></p>
 <p>（１）アプリケーションの接続先をプライマリーインスタンスにする。</p>
 <p>（２）リードレプリカにダウンタイムの発生する変更を適用する。Auroraではフェールオーバーが自動で実行される。</p>
 <p>（３）フェイルオーバー時に約<code>1</code>～<code>2</code>分のダウンタイムが発生する。フェイルオーバーを使用しない場合、DBインスタンスの再起動でダウンタイムが発生するが、これよりは時間が短いため、相対的にダウンタイムを短縮できる。</p>
@@ -10422,7 +10422,7 @@ NOW()
 <li>インスタンスクラスの大きさ</li>
 <li>同じサブネット</li>
 </ol>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.AuroraHighAvailability.html</a></p>
 <h4 id="_48">▼ ダウンタイムを最小化できない場合<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
 <p>エンジンバージョンのアップグレードは両方のDBインスタンスで同時に実行する必要があるため、フェイルオーバーを使用できず、ダウンタイムを最小化できない。</p>
 <p><br></p>
@@ -10433,7 +10433,7 @@ NOW()
 </code></pre></div></td></tr></table></div>
 <h4 id="_51">▼ リードレプリカの手動追加、オートスケーリング<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
 <p>リードレプリカの手動追加もしくはオートスケーリングによって、Auroraに関するメトリクス（平均CPU使用率、平均DB接続数）がターゲット値を維持できるように、リードレプリカの水平スケーリング（リードレプリカ数の増減）を実行する。注意点として、RDS（非Aurora）スケーリングは、ストレージサイズを増加させる垂直スケーリングであり、Auroraのスケーリングとは仕様が異なっている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html</a></li>
 <li><a href="https://engineers.weddingpark.co.jp/aws-aurora-autoscaling/">https://engineers.weddingpark.co.jp/aws-aurora-autoscaling/</a></li>
@@ -10443,7 +10443,7 @@ NOW()
 <p>MySQLやRedisのクエリキャッシュ機能を利用する。ただし、MySQLのクエリキャッシュ機能は、バージョン<code>8</code>で廃止されることになっている。</p>
 <h4 id="_53">▼ ユニークキーまたはインデックスの利用<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
 <p>スロークエリを検出し、そのSQLで対象としているカラムにユニークキーやインデックスを設定する。スロークエリを検出する方法として、RDSの<code>long_query_time</code>パラメーターに基づいた検出や、<code>EXPLAIN</code>句による予想実行時間の比較などがある。ユニークキー、インデックス、<code>EXPLAIN</code>句、については以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms_mysql_query.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms_mysql_query.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms_mysql_query.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms_mysql_query.html</a></p>
 <h4 id="_54">▼ テーブルを正規化し過ぎない<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
 <p>テーブルを正規化すると保守性が高まるが、アプリケーションのSQLで<code>JOIN</code>句が必要になる。しかし、<code>JOIN</code>句を含むSQLは、含まないSQLと比較して、実行速度が遅くなる。そこで、戦略的に正規化し過ぎないようにする。</p>
 <h4 id="_55">▼ インスタンスタイプのスケールアップ<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
@@ -10467,12 +10467,12 @@ NOW()
 <p><br></p>
 <h3 id="_56">イベント<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
 <p>コンソール画面ではイベントが英語で表示されているため、リファレンスも英語でイベントを探した方が良い。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html</a></p>
 <p><br></p>
 <h2 id="03-03-rdsaurora">03-03. RDS（非Aurora）<a class="headerlink" href="#03-03-rdsaurora" title="Permanent link">&para;</a></h2>
 <h3 id="_57">ダウンタイム<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h3>
 <h4 id="_58">▼ ダウンタイムの発生条件<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html#USER_ModifyInstance.Settings</a></p>
 <table>
 <thead>
 <tr>
@@ -10495,7 +10495,7 @@ NOW()
 <tr>
 <td>エンジンバージョン</td>
 <td>あり</td>
-<td><code>20</code>～<code>30</code>秒のダウンタイムが発生する。この時間は、ワークロード、クラスターサイズ、バイナリログデータの量、ゼロダウンタイムパッチ適用の発動可否、によって変動する。<br>参考：<br>・<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html</a><br>・<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.Patching.html#AuroraMySQL.Updates.AMVU">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.Patching.html#AuroraMySQL.Updates.AMVU</a><br>また、メジャーバージョンのアップグレードには<code>10</code>分のダウンタイムが発生する。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.Major.Overview">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.Major.Overview</a></td>
+<td><code>20</code>～<code>30</code>秒のダウンタイムが発生する。この時間は、ワークロード、クラスターサイズ、バイナリログデータの量、ゼロダウンタイムパッチ適用の発動可否、によって変動する。<br>ℹ️ 参考：<br>・<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html</a><br>・<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.Patching.html#AuroraMySQL.Updates.AMVU">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.Patching.html#AuroraMySQL.Updates.AMVU</a><br>また、メジャーバージョンのアップグレードには<code>10</code>分のダウンタイムが発生する。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.Major.Overview">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.Major.Overview</a></td>
 </tr>
 <tr>
 <td>メンテナンスウィンドウ</td>
@@ -10515,7 +10515,7 @@ NOW()
 <tr>
 <td>パラメーターグループ</td>
 <td>なし</td>
-<td>パラメーターグループ自体の変更ではダウンタイムは発生しない。また、静的パラメーターはパラメーターグループの変更に合わせて適用される。ただし、動的パラメーターを変更した場合は、これをDBインスタンスに反映させるために再起動が必要であり、ここでダウンタイムが発生する。<br>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html</a></td>
+<td>パラメーターグループ自体の変更ではダウンタイムは発生しない。また、静的パラメーターはパラメーターグループの変更に合わせて適用される。ただし、動的パラメーターを変更した場合は、これをDBインスタンスに反映させるために再起動が必要であり、ここでダウンタイムが発生する。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html</a></td>
 </tr>
 <tr>
 <td>セキュリティグループ</td>
@@ -10538,20 +10538,20 @@ NOW()
 <h3 id="_59">フェイルオーバー<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h3>
 <h4 id="rds">▼ RDSのフェイルオーバーとは<a class="headerlink" href="#rds" title="Permanent link">&para;</a></h4>
 <p>スタンバイレプリカがプライマリーインスタンスに昇格する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html</a></p>
 <h4 id="_60">▼ フェイルオーバーによるダウンタイムの最小化<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
 <p>DBインスタンスがマルチAZ構成の場合、以下の手順を使用してダウンタイムを最小化できる。</p>
-<p>参考：<a href="https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/">https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</a></p>
+<p>ℹ️ 参考：<a href="https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/">https://lab.taf-jp.com/rds%E3%81%AE%E3%83%95%E3%82%A7%E3%82%A4%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E6%99%82%E3%81%AE%E6%8C%99%E5%8B%95%E3%82%92%E7%90%86%E8%A7%A3%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</a></p>
 <p>（１）アプリケーションの接続先をプライマリーインスタンスにする。</p>
 <p>（２）特定の条件下でのみ、フェイルオーバーが自動的に実行される。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html#Concepts.MultiAZ.Failover">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html#Concepts.MultiAZ.Failover</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html#Concepts.MultiAZ.Failover">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.MultiAZ.html#Concepts.MultiAZ.Failover</a></p>
 <p>（3）非AuroraのRDSでは条件に当てはまらない場合、リードレプリカを手動でフェイルオーバーさせる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.ReducedDowntime">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.ReducedDowntime</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.ReducedDowntime">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.MySQL.html#USER_UpgradeDBInstance.MySQL.ReducedDowntime</a></p>
 <p>（4）フェイルオーバー時に約<code>1</code>～<code>2</code>分のダウンタイムが発生する。フェイルオーバーを使用しない場合、DBインスタンスの再起動でダウンタイムが発生するが、これよりは時間が短いため、相対的にダウンタイムを短縮できる。</p>
 <p><br></p>
 <h3 id="_61">イベント<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h3>
 <p>コンソール画面ではイベントが英語で表示されているため、リファレンスも英語でイベントを探した方が良い。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html</a></p>
 <p><br></p>
 <h2 id="04-redshit">04. Redshit<a class="headerlink" href="#04-redshit" title="Permanent link">&para;</a></h2>
 <h3 id="redshit">Redshitとは<a class="headerlink" href="#redshit" title="Permanent link">&para;</a></h3>
@@ -10560,7 +10560,7 @@ NOW()
 <h2 id="05-route53">05. Route53<a class="headerlink" href="#05-route53" title="Permanent link">&para;</a></h2>
 <h3 id="route53">Route53とは<a class="headerlink" href="#route53" title="Permanent link">&para;</a></h3>
 <p>クラウドDNSサーバーとして働く。リクエストされたドメイン名とEC2のグローバルIPアドレスをマッピングしている。名前の由来は、名前解決時に<code>53</code>番ポートを使用するためである。</p>
-<p>参考：<a href="https://go-journey.club/archives/2665">https://go-journey.club/archives/2665</a></p>
+<p>ℹ️ 参考：<a href="https://go-journey.club/archives/2665">https://go-journey.club/archives/2665</a></p>
 <p><br></p>
 <h3 id="_62">セットアップ<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h3>
 <table>
@@ -10585,7 +10585,7 @@ NOW()
 <h3 id="_63">レコード<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h3>
 <h4 id="_64">▼ レコードとは<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
 <p>各ホストゾーンにドメインの名前解決方法を定義したレコードを設定する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html#welcome-dns-service-how-to-configure">https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html#welcome-dns-service-how-to-configure</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html#welcome-dns-service-how-to-configure">https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html#welcome-dns-service-how-to-configure</a></p>
 <h4 id="_65">▼ レコードタイプの種類<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -10690,7 +10690,7 @@ NOW()
 <h3 id="_68">ルーティングポリシー<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
 <h4 id="_69">▼ ルーティングポリシーとは<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
 <p>ドメイン名の名前解決ルールを設定する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html">https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html</a></li>
 <li><a href="https://zenn.dev/seyama/articles/02118b0914183e">https://zenn.dev/seyama/articles/02118b0914183e</a></li>
@@ -10733,7 +10733,7 @@ NOW()
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

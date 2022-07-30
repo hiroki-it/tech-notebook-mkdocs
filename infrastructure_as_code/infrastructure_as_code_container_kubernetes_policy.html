@@ -6728,14 +6728,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7408,11 +7408,11 @@
 <h1 id="kubernetes">設計ポリシー＠Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 実行環境<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">開発環境<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://codefresh.io/kubernetes-tutorial/local-kubernetes-mac-minikube-vs-docker-desktop/">https://codefresh.io/kubernetes-tutorial/local-kubernetes-mac-minikube-vs-docker-desktop/</a></li>
 <li><a href="https://blog.cybozu.io/entry/2019/07/03/170000">https://blog.cybozu.io/entry/2019/07/03/170000</a></li>
@@ -7461,7 +7461,7 @@
 </table>
 <p><br></p>
 <h3 id="_3">本番環境<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://techstep.hatenablog.com/entry/2019/12/23/000715">https://techstep.hatenablog.com/entry/2019/12/23/000715</a></p>
+<p>ℹ️ 参考：<a href="https://techstep.hatenablog.com/entry/2019/12/23/000715">https://techstep.hatenablog.com/entry/2019/12/23/000715</a></p>
 <table>
 <thead>
 <tr>
@@ -7549,7 +7549,7 @@
 <h3 id="_9">ディレクトリ/ファイルの構成<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <h4 id="_10">▼ マイクロサービス別<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>マイクロサービス別にディレクトリを作成し、Kubernetesリソースごとに別々のマニフェストファイルを作成する。マニフェストの<code>apply</code>の順番を制御しにくいデメリットがある。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/B08FZX8PYW">https://www.amazon.co.jp/dp/B08FZX8PYW</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/B08FZX8PYW">https://www.amazon.co.jp/dp/B08FZX8PYW</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7626,7 +7626,7 @@
 <h3 id="labels">labelsキー<a class="headerlink" href="#labels" title="Permanent link">&para;</a></h3>
 <h4 id="appkubernetesio">▼ app.kubernetes.io<a class="headerlink" href="#appkubernetesio" title="Permanent link">&para;</a></h4>
 <p>Kubernetesに関する<code>metadata.labels</code>キーを以下に示す。</p>
-<p>参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/">https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/</a></p>
 <table>
 <thead>
 <tr>
@@ -7741,12 +7741,12 @@
 <h3 id="kube-apiserver">kube-apiserver<a class="headerlink" href="#kube-apiserver" title="Permanent link">&para;</a></h3>
 <h4 id="kube-apiserver_1">▼ kube-apiserverが冗長化されている場合<a class="headerlink" href="#kube-apiserver_1" title="Permanent link">&para;</a></h4>
 <p>冗長化されたkube-apiserverのバージョン差は、前方の<code>1</code>個のマイナーバージョン以内に収める必要がある。</p>
-<p>参考：<a href="https://kubernetes.io/releases/version-skew-policy/#kube-apiserver">https://kubernetes.io/releases/version-skew-policy/#kube-apiserver</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/releases/version-skew-policy/#kube-apiserver">https://kubernetes.io/releases/version-skew-policy/#kube-apiserver</a></p>
 <p><br></p>
 <h3 id="kubectl">kubectl<a class="headerlink" href="#kubectl" title="Permanent link">&para;</a></h3>
 <h4 id="kube-apiserver_2">▼ kube-apiserverの場合<a class="headerlink" href="#kube-apiserver_2" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンドとkube-apiserverのバージョン差は、前方/後方の<code>1</code>個のマイナーバージョン以内に収める必要がある。</p>
-<p>参考：<a href="https://kubernetes.io/releases/version-skew-policy/#kubectl">https://kubernetes.io/releases/version-skew-policy/#kubectl</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/releases/version-skew-policy/#kubectl">https://kubernetes.io/releases/version-skew-policy/#kubectl</a></p>
 <p><br></p>
 <h2 id="05">05. アップグレード<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="_16">アップグレード要件<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
@@ -7761,7 +7761,7 @@
 <h4 id="_17">▼ ライブアップグレード<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_live-upgrade" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_live-upgrade.png" /></p>
 <p>既存のClusterのバージョンをそのままアップグレードする方法。Cluster内で旧ワーカーNodeと旧マスターNodeを残したまま、新マスターNodeとワーカーNodeをapplyする。新Nodeが正常に稼働したことが確認できたら、ここで<code>kubectl drain --ignore-daemonsets</code>コマンドを実行すると、Drain処理が始まる。コマンドで<code>--ignore-daemonsets</code>オプションを有効化しないと、DaemonSetのPodを退避させられない。Drain処理では、旧NodeからPodが退避し、現在稼働中の新しいNodeでPodが再作成される。Drain処理が完了すれば、旧Nodeは停止してもよい。一度に作業するNode数（Surge数）を増やすことにより、アップグレードの速さを制御できる。デメリットとして、新しいバージョンを1つずつしかアップグレードできない。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://logmi.jp/tech/articles/323032">https://logmi.jp/tech/articles/323032</a></li>
 <li><a href="https://logmi.jp/tech/articles/323033">https://logmi.jp/tech/articles/323033</a></li>
@@ -7770,7 +7770,7 @@
 <h4 id="cluster_1">▼ Clusterマイグレーション<a class="headerlink" href="#cluster_1" title="Permanent link">&para;</a></h4>
 <p><img alt="kubernetes_cluster-migration" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/kubernetes_cluster-migration.png" /></p>
 <p>新しいバージョンのClusterを作成する方法。旧Cluster（Prodブルー）を残したまま、新マスターNodeとワーカーNodeを含むCluster（Testグリーン）をapplyする。特定のポート番号からのみ新Clusterにアクセスできるようにし、新Clusterの動作を開発者の目で確認する。新Clusterの動作に問題がなければ、社外を含む全てのアクセスのルーティング先を、新Clusterに手動で切り替える。新Clusterへの切り替えが完全に完了した後、新ClusterからCluster環境にロールバックを行う場合に備えて、旧Clusterは削除せずに残しておく。何を基点にしてルーティング先を切り替えるかによって、具体的な方法が大きく異なり、ロードバランサーを基点とする場合が多い。メリットとして、バージョンを1つずつだけでなく飛び越えてアップグレードできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://logmi.jp/tech/articles/323033">https://logmi.jp/tech/articles/323033</a></li>
 <li><a href="https://zenn.dev/nameless_gyoza/articles/how-to-update-eks-cluster-safely">https://zenn.dev/nameless_gyoza/articles/how-to-update-eks-cluster-safely</a></li>
@@ -7779,7 +7779,7 @@
 <h2 id="06-cidr">06. CIDRブロックの設計<a class="headerlink" href="#06-cidr" title="Permanent link">&para;</a></h2>
 <h3 id="node">ワーカーNodeの場合<a class="headerlink" href="#node" title="Permanent link">&para;</a></h3>
 <p>Kubernetesでは、稼働する可能性のあるPod数から、NodeのCIDRブロックを算出すると良い。アプリケーションのPodがスケーリングすることや、Istioなどのリソースを導入することも考慮して、尤もらしいIPアドレス数を算出できる。削除されるPodと作成されるPodが別のIPアドレスになるようにするために（IPアドレスの再利用を防ぐために）、Podの最大数の2倍のIPアドレスを持つCIDRブロックを設定すると良い。</p>
-<p>参考：<a href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr</a></p>
+<p>ℹ️ 参考：<a href="https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr">https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr</a></p>
 <table>
 <thead>
 <tr>
@@ -7827,7 +7827,7 @@
 <p><br></p>
 <h2 id="07">07. 監視の設計<a class="headerlink" href="#07" title="Permanent link">&para;</a></h2>
 <h3 id="cluster_2">Cluster<a class="headerlink" href="#cluster_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<p>ℹ️ 参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
 <table>
 <thead>
 <tr>
@@ -7867,7 +7867,7 @@
 <p><br></p>
 <h3 id="pod">Pod<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h3>
 <h4 id="pod_1">▼ Pod全体<a class="headerlink" href="#pod_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<p>ℹ️ 参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
 <table>
 <thead>
 <tr>
@@ -7899,7 +7899,7 @@
 </tbody>
 </table>
 <h4 id="_19">▼ コンテナ<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
+<p>ℹ️ 参考：<a href="https://www.tigera.io/learn/guides/kubernetes-monitoring/">https://www.tigera.io/learn/guides/kubernetes-monitoring/</a></p>
 <table>
 <thead>
 <tr>
@@ -7941,7 +7941,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

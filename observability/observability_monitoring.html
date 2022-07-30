@@ -6578,14 +6578,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7112,12 +7112,12 @@
 <h1 id="_1">監視<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 監視の要素<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">監視とは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>既知のメトリクスとログを基に、システムにおける想定内の不具合の発生を未然に防ぐこと。想定内という点で、可観測性と区別できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Website_monitoring">https://en.wikipedia.org/wiki/Website_monitoring</a></li>
 <li><a href="https://blog.thundra.io/observability-driven-development-for-serverless">https://blog.thundra.io/observability-driven-development-for-serverless</a></li>
@@ -7125,7 +7125,7 @@
 <p><br></p>
 <h3 id="_4">監視を構成するアクション<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>監視は、以下の要素からなる。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/4873118646">https://www.amazon.co.jp/dp/4873118646</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/4873118646">https://www.amazon.co.jp/dp/4873118646</a></p>
 <table>
 <thead>
 <tr>
@@ -7136,7 +7136,7 @@
 <tbody>
 <tr>
 <td>データの収集</td>
-<td>監視対象からデータを収集する。データとしては、メトリクスのデータポイント、アプリケーションログ、ブラウザログ、ユーザートラフィック、ユーザーエンゲージメント、検索クローラーのサイト評価などがある。プル型またはプッシュ型の収集方法があり、ログは全てプッシュ型になる。<br>参考：<a href="https://www.alibabacloud.com/blog/pull-or-push-how-to-select-monitoring-systems_599007">https://www.alibabacloud.com/blog/pull-or-push-how-to-select-monitoring-systems_599007</a><br><img alt="monitoring_collecting_pull_push" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/monitoring_collecting_pull_push.png" /></td>
+<td>監視対象からデータを収集する。データとしては、メトリクスのデータポイント、アプリケーションログ、ブラウザログ、ユーザートラフィック、ユーザーエンゲージメント、検索クローラーのサイト評価などがある。プル型またはプッシュ型の収集方法があり、ログは全てプッシュ型になる。<br>ℹ️ 参考：<a href="https://www.alibabacloud.com/blog/pull-or-push-how-to-select-monitoring-systems_599007">https://www.alibabacloud.com/blog/pull-or-push-how-to-select-monitoring-systems_599007</a><br><img alt="monitoring_collecting_pull_push" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/monitoring_collecting_pull_push.png" /></td>
 </tr>
 <tr>
 <td>↓</td>
@@ -7144,7 +7144,7 @@
 </tr>
 <tr>
 <td>データの保管</td>
-<td>収集したデータをストレージに保管する。データサイズを抑える方法として、データポイント数の抑制や、ダウンサンプリングがある。ダウンサンプリングでは、古いデータポイントを時間単位で集約することにより、ストレージの空きサイズが増え、長期間のデータポイントを保管できるようになる。<br>参考：<a href="https://www.timescale.com/blog/a-different-and-often-better-way-to-downsample-your-prometheus-metrics/">https://www.timescale.com/blog/a-different-and-often-better-way-to-downsample-your-prometheus-metrics/</a></td>
+<td>収集したデータをストレージに保管する。データサイズを抑える方法として、データポイント数の抑制や、ダウンサンプリングがある。ダウンサンプリングでは、古いデータポイントを時間単位で集約することにより、ストレージの空きサイズが増え、長期間のデータポイントを保管できるようになる。<br>ℹ️ 参考：<a href="https://www.timescale.com/blog/a-different-and-often-better-way-to-downsample-your-prometheus-metrics/">https://www.timescale.com/blog/a-different-and-often-better-way-to-downsample-your-prometheus-metrics/</a></td>
 </tr>
 <tr>
 <td>データの分析</td>
@@ -7187,8 +7187,8 @@
 <td>一次オンコール担当は、エラーを解決するためのタスクを作成し、完了させる。エラーがインシデントの場合、担当者はこれを迅速に解決する必要がある。また、二次担当者にアラートの通知をエスカレーションさせる。</td>
 </tr>
 <tr>
-<td>SLAとの照合</td>
-<td>インシデントによって、サービス利用者に提供できたサービスのレベルがSLAに満たなかった場合、サービス利用者に利用料を返金する。</td>
+<td>サービスレベルとの照合</td>
+<td>インシデントによって、サービス利用者に提供できたサービスがサービスレベルに満たなかった場合、サービス利用者に利用料を返金する。</td>
 </tr>
 </tbody>
 </table>
@@ -7199,12 +7199,12 @@
 <p>ブラウザに関するトラフィックを監視する。</p>
 <h4 id="rum">▼ リアルユーザー監視（RUM）<a class="headerlink" href="#rum" title="Permanent link">&para;</a></h4>
 <p>Webページのローディング時に、Navigation-timing-APIに対してリクエストを送信すると、Webページパフォーマンスに関するメトリクスのデータポイントを収集できる。JavaScriptにNavigation-timing-APIにリクエストを送信する処理を組み込み、ページパフォーマンスに関するメトリクスのデータポイントを収集した後、これを監視する。</p>
-<p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Navigation_timing_API">https://developer.mozilla.org/ja/docs/Web/API/Navigation_timing_API</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Navigation_timing_API">https://developer.mozilla.org/ja/docs/Web/API/Navigation_timing_API</a></p>
 <p>ページローディング時間は特に重要である。Amazonの自社調査では、ローディング時間が100ms短くなるごとに、売り上げが<code>1</code>%増加することが明らかになった。<code>4</code>秒以下を目指すと良い。</p>
-<p>参考：<a href="https://bit.ly/2y494hq">https://bit.ly/2y494hq</a></p>
+<p>ℹ️ 参考：<a href="https://bit.ly/2y494hq">https://bit.ly/2y494hq</a></p>
 <h4 id="google">▼ Googleアナリティクスによる監視<a class="headerlink" href="#google" title="Permanent link">&para;</a></h4>
 <p>サイト訪問後のユーザーエンゲージメントをデータとして監視する。リアルユーザー監視の一種ともみなせるが、パフォーマンスの監視が主目的ではなく、リアルユーザー監視と補完し合う監視方法である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://blog.uptrends.com/web-performance/rum-and-google-analytics-understanding-the-difference/">https://blog.uptrends.com/web-performance/rum-and-google-analytics-understanding-the-difference/</a></li>
 <li><a href="https://developer.akamai.com/blog/2017/03/29/RUM-data-google-analytics">https://developer.akamai.com/blog/2017/03/29/RUM-data-google-analytics</a></li>
@@ -7212,14 +7212,14 @@
 </ul>
 <h4 id="google_1">▼ Googleサーチコンソールによる監視<a class="headerlink" href="#google_1" title="Permanent link">&para;</a></h4>
 <p>検索エンジン上（サイト訪問前）のユーザーエンゲージメントをデータとして監視する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://support.google.com/webmasters/answer/9128668?hl=en">https://support.google.com/webmasters/answer/9128668?hl=en</a></li>
 <li><a href="https://semlabo.com/seo/blog/difference-between-ga-and-gsc/">https://semlabo.com/seo/blog/difference-between-ga-and-gsc/</a></li>
 </ul>
 <h4 id="_8">▼ 合成監視（外部監視、外形監視）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>『外部監視、外形監視』ともいう。実際のユーザーの一連の操作を模したリクエストをアプリケーションに送信し、レスポンスに関するメトリクスのデータポイントを収集した後、これを監視する。ユーザーを模したリクエストを作成するという意味合いで、『合成』という。ユーザー視点で監視できる。特に、クリティカルユーザージャーニーの一連の操作を監視すると良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://takehora.hatenadiary.jp/entry/2019/07/05/012036">https://takehora.hatenadiary.jp/entry/2019/07/05/012036</a></li>
 <li><a href="https://www.manageengine.jp/products/Applications_Manager/solution_synthetic-monitoring.html">https://www.manageengine.jp/products/Applications_Manager/solution_synthetic-monitoring.html</a></li>
@@ -7238,9 +7238,9 @@
 </ul>
 <h4 id="statsd">▼ StatsDを使用したメトリクスの作成<a class="headerlink" href="#statsd" title="Permanent link">&para;</a></h4>
 <p>サーバー内にStatsDを常駐させ、アプリケーションでStatsDパッケージを使用すると、メトリクスのデータポイントを収集できる。</p>
-<p>参考：<a href="https://github.com/statsd/statsd/wiki">https://github.com/statsd/statsd/wiki</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/statsd/statsd/wiki">https://github.com/statsd/statsd/wiki</a></p>
 <p>CloudWatchでは、StatsDからのメトリクスの送信をサポートしている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-custom-metrics-statsd.html">https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-custom-metrics-statsd.html</a></li>
 <li><a href="https://qiita.com/murata-tomohide/items/9bd1320865b2eba47538">https://qiita.com/murata-tomohide/items/9bd1320865b2eba47538</a></li>
@@ -7266,7 +7266,7 @@
 <h3 id="_15">ヘルスチェック<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ アクティブ型<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>ロードバランサーからターゲットに専用のリクエストを送信し、ターゲットが正しく動作しているかを確認する。OSI参照モデルのいずれのレイヤーまでの動作を確認するかによって、ヘルスチェックに種類がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.f5.com/ja_jp/services/resources/glossary/health-check">https://www.f5.com/ja_jp/services/resources/glossary/health-check</a></li>
 <li><a href="https://a-film-production-technique-seminar.com/fppat/materials/fpts_frp_sugeno_intro_lb01/index.html">https://a-film-production-technique-seminar.com/fppat/materials/fpts_frp_sugeno_intro_lb01/index.html</a></li>
@@ -7284,7 +7284,7 @@
 <tr>
 <td>L3チェック</td>
 <td>ネットワーク層まで</td>
-<td>サーバー/コンテナのIPアドレスにPINGリクエスト（ICMP echo）を送信し、レスポンスを検証する。正しいPINGレスポンスが返信されれば、サーバー/コンテナまでのネットワークが正しく動作していると判断できる。<br>参考：<a href="https://milestone-of-se.nesuke.com/nw-basic/ip/icmp/">https://milestone-of-se.nesuke.com/nw-basic/ip/icmp/</a></td>
+<td>サーバー/コンテナのIPアドレスにPINGリクエスト（ICMP echo）を送信し、レスポンスを検証する。正しいPINGレスポンスが返信されれば、サーバー/コンテナまでのネットワークが正しく動作していると判断できる。<br>ℹ️ 参考：<a href="https://milestone-of-se.nesuke.com/nw-basic/ip/icmp/">https://milestone-of-se.nesuke.com/nw-basic/ip/icmp/</a></td>
 </tr>
 <tr>
 <td>L4チェック</td>
@@ -7300,14 +7300,14 @@
 </table>
 <h4 id="_17">▼ パッシブ型<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>実際のユーザーのリクエストを借りて、ターゲットが正しく動作しているかを確認する。アクティブ型とは異なり、ユーザーを犠牲することになるため、Webサイトの信頼性が低下する可能性がある。</p>
-<p>参考：<a href="https://neinvalli.hatenablog.com/entry/2017/10/31/002839">https://neinvalli.hatenablog.com/entry/2017/10/31/002839</a></p>
+<p>ℹ️ 参考：<a href="https://neinvalli.hatenablog.com/entry/2017/10/31/002839">https://neinvalli.hatenablog.com/entry/2017/10/31/002839</a></p>
 <p><br></p>
 <h3 id="_18">ジョブ監視<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <h4 id="_19">▼ ジョブ監視<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>ジョブ（定期的に実行するように設定されたバッチ処理）の正常実行を監視する。ジョブの実装方法としては、例えばUNIXのCronがある。</p>
 <h4 id="_20">▼ リクエスト型<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>ジョブの最後にリクエストを実行する。ジョブの開始から最後のリクエストまでが、一定の時間内に完了するか否かを確認する。</p>
-<p>参考：<a href="https://healthchecks.io/docs/monitoring_cron_jobs/">https://healthchecks.io/docs/monitoring_cron_jobs/</a></p>
+<p>ℹ️ 参考：<a href="https://healthchecks.io/docs/monitoring_cron_jobs/">https://healthchecks.io/docs/monitoring_cron_jobs/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ジョブをCronを使用して実装する場合</span>

@@ -6633,14 +6633,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7220,14 +7220,14 @@
 <h1 id="firelens">FireLensコンテナ＠テレメトリー収集ツール<a class="headerlink" href="#firelens" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-firelens">01. FireLensコンテナの仕組み<a class="headerlink" href="#01-firelens" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><img alt="fluent-bit_aws-firelens" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/fluent-bit_aws-firelens.png" /></p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></p>
 <p>（１）awsfirelensドライバーはFluentdログドライバーをラッピングしたものであり、ログをFireLensコンテナに送信する。Fluentdログドライバーについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.docker.com/config/containers/logging/fluentd/">https://docs.docker.com/config/containers/logging/fluentd/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/fluentd/">https://docs.docker.com/config/containers/logging/fluentd/</a></p>
 <p>（２）FireLensコンテナは、これを受信する。</p>
 <p>（３）コンテナ内で稼働するFluentBitのログパイプラインのINPUTに渡され、FluentBitはログを処理する。FireLensコンテナのパイプラインでは、ログは『<code>&lt;コンテナ名&gt;-firelens-&lt;ECSタスクID&gt;</code>』というタグ名で処理されている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7255,7 +7255,7 @@
 <p>（４） OUTPUTに渡され、FluentBitは指定した外部にログをルーティングする。</p>
 <h3 id="firelens_1">FireLensコンテナ<a class="headerlink" href="#firelens_1" title="Permanent link">&para;</a></h3>
 <p>AWSが提供するFluentBitイメージによって作成されるコンテナである。FireLensコンテナでは、FluentBitがログルーティングプロセスとして稼働する。FireLensコンテナを使用せずに、独自のコンテナを作成して稼働できるが、FireLensコンテナを使用すれば、主要なセットアップがされているため、より簡単な設定でFluentBitを使用できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></li>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_firelens.html">https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_firelens.html</a></li>
@@ -7264,25 +7264,25 @@
 <h3 id="_3">ログルーティング<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ サイドカーコンテナとして<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>AWS ECS Fargateのサイドカーコンテナとして配置する必要がある。Fargateからログが送信されると、コンテナ内で稼働するFluentBitがこれを収集し、これを外部にルーティングする。作成のための実装例については、以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/aws-samples/amazon-ecs-firelens-examples">https://github.com/aws-samples/amazon-ecs-firelens-examples</a></li>
 <li><a href="https://aws.amazon.com/jp/blogs/news/announcing-firelens-a-new-way-to-manage-container-logs/">https://aws.amazon.com/jp/blogs/news/announcing-firelens-a-new-way-to-manage-container-logs/</a></li>
 </ul>
 <h4 id="_5">▼ ログのルーティング先<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>FluentBitが対応する宛先にログをルーティングできる。</p>
-<p>参考：<a href="https://docs.fluentbit.io/manual/pipeline/outputs">https://docs.fluentbit.io/manual/pipeline/outputs</a></p>
+<p>ℹ️ 参考：<a href="https://docs.fluentbit.io/manual/pipeline/outputs">https://docs.fluentbit.io/manual/pipeline/outputs</a></p>
 <p><br></p>
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="dockerfile">Dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">&para;</a></h3>
 <h4 id="ecr">▼ ECRパブリックギャラリーを使用する場合<a class="headerlink" href="#ecr" title="Permanent link">&para;</a></h4>
 <p>ECSタスクのコンテナ定義にて、ECRパブリックギャラリーのURLを指定し、ECRイメージのプルする。デフォルトで内蔵されているconfファイルの設定をそのまま使用する場合は、こちらを採用する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html#firelens-image-ecr">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html#firelens-image-ecr</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html#firelens-image-ecr">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html#firelens-image-ecr</a></p>
 <h4 id="ecr_1">▼ プライベートECRリポジトリを使用する場合<a class="headerlink" href="#ecr_1" title="Permanent link">&para;</a></h4>
 <p>あらかじめ、DockerHubからFluentBitイメージをプルするためのDockerfileを作成し、プライベートECRリポジトリにコンテナイメージをプッシュしておく。ECSタスクのコンテナ定義にて、プライベートECRリポジトリのURLを指定し、ECRイメージのプルする。デフォルトで内蔵されているconfファイルの設定を上書きしたい場合は、こちらを採用する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">amazon/aws-for-fluent-bit:latest</span>
 </code></pre></div></td></tr></table></div>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hub.docker.com/r/amazon/aws-for-fluent-bit">https://hub.docker.com/r/amazon/aws-for-fluent-bit</a></li>
 <li><a href="https://github.com/aws/aws-for-fluent-bit">https://github.com/aws/aws-for-fluent-bit</a></li>
@@ -7411,7 +7411,7 @@
 <span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <h4 id="logconfiguration">▼ <code>logConfiguration</code>キーの詳細<a class="headerlink" href="#logconfiguration" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/firelens-example-taskdefs.html#firelens-example-forward">https://docs.aws.amazon.com/AmazonECS/latest/userguide/firelens-example-taskdefs.html#firelens-example-forward</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/firelens-example-taskdefs.html#firelens-example-forward">https://docs.aws.amazon.com/AmazonECS/latest/userguide/firelens-example-taskdefs.html#firelens-example-forward</a></p>
 <table>
 <thead>
 <tr>
@@ -7434,7 +7434,7 @@
 </tr>
 <tr>
 <td><code>enable-ecs-log-metadata</code>（デフォルトで有効化）</td>
-<td>有効にした場合、Datadogのログコンソールで、例えば以下のようなタグが付けられる。<br><img alt="ecs-meta-data_true" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs-meta-data_true.png" /><br>反対に無効にした場合、以下のようなタグが付けられる。<br><img alt="ecs-meta-data_false" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs-meta-data_false.png" /><br>参考：<a href="https://tech.spacely.co.jp/entry/2020/11/28/173356">https://tech.spacely.co.jp/entry/2020/11/28/173356</a></td>
+<td>有効にした場合、Datadogのログコンソールで、例えば以下のようなタグが付けられる。<br><img alt="ecs-meta-data_true" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs-meta-data_true.png" /><br>反対に無効にした場合、以下のようなタグが付けられる。<br><img alt="ecs-meta-data_false" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ecs-meta-data_false.png" /><br>ℹ️ 参考：<a href="https://tech.spacely.co.jp/entry/2020/11/28/173356">https://tech.spacely.co.jp/entry/2020/11/28/173356</a></td>
 </tr>
 <tr>
 <td><code>environment</code>、<code>secrets</code></td>
@@ -7480,7 +7480,7 @@
 <h3 id="fluent-bitetcfluent-bitconf"><code>/fluent-bit/etc/fluent-bit.conf</code><a class="headerlink" href="#fluent-bitetcfluent-bitconf" title="Permanent link">&para;</a></h3>
 <h4 id="fluent-bitconf">▼ <code>fluent-bit.conf</code>とは<a class="headerlink" href="#fluent-bitconf" title="Permanent link">&para;</a></h4>
 <p>FireLensコンテナのデフォルトの設定ファイル。ローカルマシンでFluentBitコンテナを起動した場合と異なる構成になっていることに注意する。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/check-fluent-bit-conf/">https://dev.classmethod.jp/articles/check-fluent-bit-conf/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/check-fluent-bit-conf/">https://dev.classmethod.jp/articles/check-fluent-bit-conf/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7535,7 +7535,7 @@
 <h3 id="fluent-bitetcfluent-bit_customconf"><code>/fluent-bit/etc/fluent-bit_custom.conf</code>ファイル<a class="headerlink" href="#fluent-bitetcfluent-bit_customconf" title="Permanent link">&para;</a></h3>
 <h4 id="fluent-bit_customconf">▼ <code>fluent-bit_custom.conf</code>ファイルとは<a class="headerlink" href="#fluent-bit_customconf" title="Permanent link">&para;</a></h4>
 <p>FireLensコンテナにカスタム値を設定する。コンテナ定義の<code>config-file-value</code>キーで指定し、追加設定を実行する。これにより、FireLensコンテナの<code>fluent-bit.conf</code>ファイルに、カスタムファイルを読み込むためのINCLUDE文が挿入される。</p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/check-fluent-bit-conf/">https://dev.classmethod.jp/articles/check-fluent-bit-conf/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/check-fluent-bit-conf/">https://dev.classmethod.jp/articles/check-fluent-bit-conf/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7602,7 +7602,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="input">▼ INPUTセクション<a class="headerlink" href="#input" title="Permanent link">&para;</a></h4>
 <p>標準出力/標準エラー出力に出力されたログをそのままインプットするために、FireLensコンテナではforwardプラグインを設定する必要がある。ただし、デフォルトの設定ファイルには、INPUTがすでに定義されているため、<code>fluent-bit_custom.conf</code>ファイルではINPUTを定義しなくても問題ない。</p>
-<p>参考：<a href="https://github.com/aws/aws-for-fluent-bit/blob/mainline/fluent-bit.conf">https://github.com/aws/aws-for-fluent-bit/blob/mainline/fluent-bit.conf</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws/aws-for-fluent-bit/blob/mainline/fluent-bit.conf">https://github.com/aws/aws-for-fluent-bit/blob/mainline/fluent-bit.conf</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7663,7 +7663,7 @@
 <span class="o">}</span>,
 </code></pre></div></td></tr></table></div>
 <p>AWSから提供されているベースイメージには、AWSリソースにログをルーティングするためのOUTPUTプラグインがすでに含まれている。なお、DatadogプラグインはFluentBit自体にインストール済みである。ECRパブリックギャラリーからプルしたコンテナイメージをそのまま使用する場合と、プライベートECRリポジトリで再管理してから使用する場合がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/firelens-using-fluentbit.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7682,7 +7682,7 @@
 <p>FireLensコンテナで処理中のログのキー値を修正したい場合、<code>parser.conf</code>ファイルでPARSERセクションを設定する必要がある。</p>
 <h4 id="parser">▼ PARSERセクション<a class="headerlink" href="#parser" title="Permanent link">&para;</a></h4>
 <p>例えば、ECSのプラットフォームバージョンが<code>v1.3.0</code>の時、メタデータのDockerNameは『<code>/ecs-&lt;ECSタスク定義名&gt;-&lt;リビジョン番号&gt;-&lt;コンテナ名&gt;-&lt;通し番号&gt;</code>』になる（例：<code>/ecs-foo-task-definition-1-bar-123456789</code>）。これを<code>v1.4.0</code>にアップグレードすればコンテナ名になるが、すぐにアップグレードに対応できないこともある。その場合はPARSERセクションにて、正規表現の名前付きキャプチャを使用してコンテナ名を抽出すると、以降のセクションで処理しやすくなる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint-v3.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint-v3.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint-v3.html">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-metadata-endpoint-v3.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7734,7 +7734,7 @@
 <h3 id="fluent-bitetcparsers_multilineconf"><code>/fluent-bit/etc/parsers_multiline.conf</code>ファイル<a class="headerlink" href="#fluent-bitetcparsers_multilineconf" title="Permanent link">&para;</a></h3>
 <h4 id="parsers_multilineconf">▼ <code>parsers_multiline.conf</code>ファイル<a class="headerlink" href="#parsers_multilineconf" title="Permanent link">&para;</a></h4>
 <p>FireLensコンテナで複数行のログを処理したい場合、<code>parsers_multiline.conf</code>ファイルでMULTILINE_PARSERを設定する必要がある。。</p>
-<p>参考：<a href="https://github.com/aws-samples/amazon-ecs-firelens-examples/blob/mainline/examples/fluent-bit/filter-multiline/README.md">https://github.com/aws-samples/amazon-ecs-firelens-examples/blob/mainline/examples/fluent-bit/filter-multiline/README.md</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/aws-samples/amazon-ecs-firelens-examples/blob/mainline/examples/fluent-bit/filter-multiline/README.md">https://github.com/aws-samples/amazon-ecs-firelens-examples/blob/mainline/examples/fluent-bit/filter-multiline/README.md</a></p>
 <h4 id="multiline_parser">▼ MULTILINE_PARSERセクション<a class="headerlink" href="#multiline_parser" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -7774,7 +7774,7 @@
 <p>ログの作成元のコンテナごとに異なる処理を設定したい場合、<code>stream_processor.conf</code>ファイルでSTREAM_TASKセクションを定義する必要がある。</p>
 <h4 id="stream_task">▼ STREAM_TASKセクション<a class="headerlink" href="#stream_task" title="Permanent link">&para;</a></h4>
 <p>FireLensコンテナで処理中のログのタグ名は『<code>&lt;コンテナ名&gt;-firelens-&lt;ECSタスクID&gt;</code>』になっている。そのため、Stream Processorでログを抽出するためには、クエリで『<code>FROM TAG:'*-firelens-*'</code>』を指定する必要がある。ちなみに、STREAM_TASKでタグ付けされたログは、INPUTから再び処理し直される。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/">https://aws.amazon.com/jp/blogs/news/under-the-hood-firelens-for-amazon-ecs-tasks/</a></p>
 <p>＊実装例＊</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7816,7 +7816,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

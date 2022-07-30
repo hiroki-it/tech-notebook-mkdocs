@@ -6484,14 +6484,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6924,7 +6924,7 @@
 <h1 id="go">Go＠ホワイトボックステスト<a class="headerlink" href="#go" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ホワイトボックステストのツール<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">整形<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -6942,7 +6942,7 @@
 <p><br></p>
 <h3 id="_6">網羅率<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>網羅率はパッケージを単位として解析される。網羅については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html">https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html">https://hiroki-it.github.io/tech-notebook-mkdocs/testing/testing_whitebox_php.html</a></p>
 <p><br></p>
 <h2 id="03">03. 設計ポリシー<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="_7">パッケージ名<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
@@ -6950,13 +6950,13 @@
 <p>テストファイルのパッケージ名が、同じディレクトリ配下にある実際の処理ファイルのパッケージ名と同じ場合、それはホワイトボックステストになる。</p>
 <h4 id="_9">▼ ブラックボックス風のホワイトテスト<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>テストファイルのパッケージ名が、同じディレクトリ配下にある実際の処理ファイルに『<code>_test</code>』を加えたパッケージ名の場合、それはブラックボックステスト風のホワイトテストになる。ちなみに、Goでは1つのディレクトリ内に1つのパッケージ名しか宣言できないが、ブラックボックステストのために『<code>_test</code>』を加えることは許されている。</p>
-<p>参考：<a href="https://medium.com/tech-at-wildlife-studios/testing-golang-code-our-approach-at-wildlife-6f41e489ff36">https://medium.com/tech-at-wildlife-studios/testing-golang-code-our-approach-at-wildlife-6f41e489ff36</a></p>
+<p>ℹ️ 参考：<a href="https://medium.com/tech-at-wildlife-studios/testing-golang-code-our-approach-at-wildlife-6f41e489ff36">https://medium.com/tech-at-wildlife-studios/testing-golang-code-our-approach-at-wildlife-6f41e489ff36</a></p>
 <p><br></p>
 <h3 id="_10">インターフェースの導入<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>テストできない構造体はモックに差し替えられることなる。この時、あらかじめ実際の構造体をインターフェースの実装にしておく。テスト時に、モックもインターフェイスの実装とすれば、モックが実際の構造体と同じデータ型として認識されるようになる。これにより、モックに差し替えられるようになる。</p>
 <p><br></p>
 <h3 id="_11">テーブル駆動テスト<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://github.com/golang/go/wiki/TableDrivenTests">https://github.com/golang/go/wiki/TableDrivenTests</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/golang/go/wiki/TableDrivenTests">https://github.com/golang/go/wiki/TableDrivenTests</a></p>
 <p><br></p>
 <h3 id="_12">回帰テスト<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>回帰テストを実現するため、過去のテスト結果をテストデータを保存しておき、今回のテスト結果が過去のものと一致するかを確認する。Goでは、このテストデータをファイルを『Golden File』という。Golden（金）は化学的に安定した物質であることに由来しており、『安定したプロダクト』とかけている。回帰テストについては、以下のリンクを参考にせよ。</p>
@@ -7001,7 +7001,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

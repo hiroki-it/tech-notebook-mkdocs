@@ -6533,14 +6533,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7020,21 +7020,21 @@
 <h1 id="api-gatewayymlaws">API Gatewayへのymlインポート＠AWS<a class="headerlink" href="#api-gatewayymlaws" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-api-gateway">01. API Gateway拡張機能<a class="headerlink" href="#01-api-gateway" title="Permanent link">&para;</a></h2>
 <h4 id="_2">▼ 必要なキー<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>API Gatewayのインポートに当たり、OpenAPIの<code>.yaml</code>ファイルにキーを新たに実装する必要がある。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions.html</a></p>
 <p><br></p>
 <h3 id="x-amazon-apigateway-integration"><code>x-amazon-apigateway-integration</code>キー<a class="headerlink" href="#x-amazon-apigateway-integration" title="Permanent link">&para;</a></h3>
 <h4 id="x-amazon-apigateway-integration_1">▼ <code>x-amazon-apigateway-integration</code>キーとは<a class="headerlink" href="#x-amazon-apigateway-integration_1" title="Permanent link">&para;</a></h4>
 <p>該当するHTTPメソッドで統合リクエストや統合レスポンスを定義するために <code>x-amazon-apigateway-integration</code>キー が必要である。各項目の説明は以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html</a></p>
 <p>各種パラメーターもマッピングできる。メソッドリクエストから統合リクエストへのマッピングについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-requestParameters.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-requestParameters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-requestParameters.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-requestParameters.html</a></p>
 <p>統合レスポンスからメソッドレスポンスへのマッピングについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-responseParameters.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-responseParameters.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-responseParameters.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration-responseParameters.html</a></p>
 <h4 id="vpc">▼ セットアップ（VPCリンク&amp;プロキシ統合）<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7261,7 +7261,7 @@
 <h3 id="_6">サンプルについて<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ 注意点<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>インポートにあたり、以下に注意する。Swagger EditorでAPIの仕様書の<code>.html</code>ファイルを確認できる。</p>
-<p>参考：<a href="https://editor.swagger.io/">https://editor.swagger.io/</a></p>
+<p>ℹ️ 参考：<a href="https://editor.swagger.io/">https://editor.swagger.io/</a></p>
 <ul>
 <li>OpenAPI仕様のバージョン2.0と3.0に対応している。</li>
 <li><code>x-amazon-apigateway-integration</code>キーを各HTTPメソッドに定義する。</li>
@@ -7275,7 +7275,7 @@
 </ul>
 <h4 id="_8">▼ その他非対応な記法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>その他の非対応の記述については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-rest-apis">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-rest-apis</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-rest-apis">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-known-issues.html#api-gateway-known-issues-rest-apis</a></p>
 <p><br></p>
 <h3 id="vpc_2">VPCリンク＆プロキシ統合<a class="headerlink" href="#vpc_2" title="Permanent link">&para;</a></h3>
 <p><strong>実装例</strong></p>
@@ -9784,7 +9784,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

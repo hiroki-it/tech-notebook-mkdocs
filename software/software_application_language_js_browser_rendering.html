@@ -7085,14 +7085,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8120,7 +8120,7 @@
 <h1 id="_1">ブラウザレンダリング<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ブラウザレンダリングの仕組み<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">構成する処理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -8440,7 +8440,7 @@
 <p>リソースの文字列からHTMLタグが認識され、トークンに変換される。各トークンは、<code>1</code>個のオブジェクトに変換される。</p>
 <p><img alt="DOMツリーが作成されるまで" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DOMツリーが作成されるまで.png" /></p>
 <p>HTMLパーサーは、オブジェクトをノードとして、DOMツリーを作成する。DOMツリーを作成する途中でscriptタグに到達すると、一旦、JSファイルを読み込んでScripting処理を終えてから、DOMツリーの作成を再開する。DOMのインターフェースについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model">https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model">https://developer.mozilla.org/ja/docs/Web/API/Document_Object_Model</a></p>
 <p><img alt="DOMツリー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/DOMツリー.png" /></p>
 <p>同時に、CSSパーサーは、headタグにあるlinkタグを基にサーバーにリクエストを行う。レスポンスされた<code>.css</code>ファイルに対してDownloading処理を行った後、オブジェクトをノードとして、CSSOMツリーを作成する。</p>
 <p><img alt="CSSOMツリー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/CSSOMツリー.png" /></p>
@@ -8450,7 +8450,7 @@
 <p>レンダリングエンジンは、最初に出現するルート要素を根（ルート）、またすべての要素や属性を、そこから延びる枝葉として意味づけ、レンダリングツリーを作成する。</p>
 <p><strong>＊例＊</strong></p>
 <p><img alt="DOMによるツリー構造化" src="https://user-images.githubusercontent.com/42175286/59778015-a59f5600-92f0-11e9-9158-36cc937876fb.png" /></p>
-<p>参考：<a href="https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB">https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB</a></p>
+<p>ℹ️ 参考：<a href="https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB">https://www.researchgate.net/publication/228930844_Real-time_Generalization_of_Geodata_in_the_WEB</a></p>
 <p><br></p>
 <h2 id="03-scripting">03. Scripting処理<a class="headerlink" href="#03-scripting" title="Permanent link">&para;</a></h2>
 <h3 id="scripting">Scripting処理とは<a class="headerlink" href="#scripting" title="Permanent link">&para;</a></h3>
@@ -8462,12 +8462,12 @@
 <p><img alt="JavascriptEngine" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/JavascriptEngine.png" /></p>
 <h4 id="_13">▼ 機械語翻訳<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p>JavaScriptエンジンは、コードを、字句解析、構造解析、意味解釈、命令の実行、をコード一行ずつに対し、繰り返し行う。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_language_processor.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_language_processor.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_language_processor.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_basic_language_processor.html</a></p>
 <h2 id="03-02">03-02. イベント<a class="headerlink" href="#03-02" title="Permanent link">&para;</a></h2>
 <h3 id="_14">イベント<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <h4 id="_15">▼ イベントとは<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>ブラウザの各操作はイベントとして<code>.js</code>ファイルまたは<code>.html</code>ファイルに紐付けられている。</p>
-<p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/Events">https://developer.mozilla.org/ja/docs/Web/Events</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mozilla.org/ja/docs/Web/Events">https://developer.mozilla.org/ja/docs/Web/Events</a></p>
 <h4 id="_16">▼ イベントハンドラ関数とは<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>イベントの発火に伴ってコールされる関数のこと。イベントハンドラ関数が実行されるたびにScripting処理が繰り返される。</p>
 <p><br></p>
@@ -8580,13 +8580,13 @@
 <h3 id="_18">キャッシュの保存場所の種類<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <h4 id="_19">▼ ブラウザにおけるキャッシュ<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>クライアントのブラウザで、レスポンスされた静的コンテンツのキャッシュが作成される。Chromeの場合は、CacheStorageに保持される。確認方法については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://developer.chrome.com/docs/devtools/storage/cache/">https://developer.chrome.com/docs/devtools/storage/cache/</a></p>
+<p>ℹ️ 参考：<a href="https://developer.chrome.com/docs/devtools/storage/cache/">https://developer.chrome.com/docs/devtools/storage/cache/</a></p>
 <p><img alt="ブラウザのキャッシュ" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ブラウザのキャッシュ.png" /></p>
 <h4 id="_20">▼ リバースプロキシサーバーにおけるキャッシュ<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>リバースプロキシサーバーで、レスポンスされた静的コンテンツのキャッシュが作成される。AWSでは、CloudFrontにおけるキャッシュがこれに相当する。</p>
 <h4 id="_21">▼ アプリケーションにおけるキャッシュ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
 <p>オブジェクトのプロパティで、メソッド処理結果のキャッシュが作成される。必要な場合、これを取り出して再利用する。Laravelのキャッシュ機能については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/cache.html">https://readouble.com/laravel/8.x/ja/cache.html</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/cache.html">https://readouble.com/laravel/8.x/ja/cache.html</a></p>
 <p><br></p>
 <h3 id="_22">サーバー側でキャッシュすべきでないデータ<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <p>リバースプロキシサーバー/アプリケーションで、キャッシュすべきでないデータを持つWebページがある。</p>
@@ -8697,7 +8697,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

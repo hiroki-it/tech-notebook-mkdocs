@@ -6668,14 +6668,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7288,11 +7288,11 @@
 <h1 id="dockerfiledocker">Dockerfile＠Docker<a class="headerlink" href="#dockerfiledocker" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-dockerfiledocker">01. Dockerfile＠Dockerとは<a class="headerlink" href="#01-dockerfiledocker" title="Permanent link">&para;</a></h2>
 <p>Dockerを宣言的に定義し、コンテナのプロビジョニングを行う。プロビジョニングされるコンテナについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html">https://hiroki-it.github.io/tech-notebook-mkdocs/virtualization/virtualization_container_docker.html</a></p>
 <p><br></p>
 <h3 id="_2">メリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Dockerfileを使用することにより、コンテナイメージの作成からコンテナの作成までを自動化できる。Dockerfileを使用しない場合、各イメージレイヤーのインストールを手動で行わなければならない。</p>
@@ -7310,10 +7310,10 @@
 <h3 id="add">ADD<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
 <h4 id="add_1">▼ ADDとは<a class="headerlink" href="#add_1" title="Permanent link">&para;</a></h4>
 <p>ホスト側のファイルを、コンテナの指定ディレクトリ配下にコピーし、このファイルが<code>tar</code>ファイルの場合は解凍する。また、URLを直接的に指定して、ダウンロードから解凍までを実行もできる。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#add">https://docs.docker.com/engine/reference/builder/#add</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#add">https://docs.docker.com/engine/reference/builder/#add</a></p>
 <h4 id="copy">▼ COPYとの違い<a class="headerlink" href="#copy" title="Permanent link">&para;</a></h4>
 <p>似た命令として<code>COPY</code>がある。<code>ADD</code>は<code>COPY</code>とは異なり、インターネットからファイルをダウンロードし、解凍も行う。イメージのビルド時にコピーされるだけで、ビルド後のコードの変更は反映されない。解凍によって意図しないファイルがDockerfileに組み込まれる可能性があるため、<code>COPY</code>が推奨である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/zembutsu/items/a96b68277d699f79418d">https://qiita.com/zembutsu/items/a96b68277d699f79418d</a></li>
 <li><a href="https://www.slideshare.net/zembutsu/explaining-best-practices-for-writing-dockerfiles">https://www.slideshare.net/zembutsu/explaining-best-practices-for-writing-dockerfiles</a></li>
@@ -7407,7 +7407,7 @@
 <h3 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">&para;</a></h3>
 <h4 id="cmd_1">▼ CMDとは<a class="headerlink" href="#cmd_1" title="Permanent link">&para;</a></h4>
 <p>イメージのプロセスの起動コマンドを実行する。パラメータの記述形式には、文字列形式、JSON形式がある。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#cmd">https://docs.docker.com/engine/reference/builder/#cmd</a></p>
 <h4 id="_4">▼ 注意点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Dockerfileで<code>CMD</code>を指定しない場合、コンテナイメージのデフォルトのバイナリファイルが割り当てられる。一旦、デフォルトのバイナリファイルを確認した後に、これをDockerfileに明示的に実装する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7423,12 +7423,12 @@ ERROR: <span class="k">for</span> xxx-container  Cannot start service go: OCI ru
 <h3 id="copy_1">COPY<a class="headerlink" href="#copy_1" title="Permanent link">&para;</a></h3>
 <h4 id="copy_2">▼ COPYとは<a class="headerlink" href="#copy_2" title="Permanent link">&para;</a></h4>
 <p>ホスト側（第一引数）のディレクトリ/ファイルをコンテナ側（第二引数）にコピーする。コンテナ側のパスは、<code>WORKDIR</code>をルートとした相対パスで定義できるが、絶対パスで指定した方がわかりやすい。ディレクトリ内の複数ファイルを丸ごとコンテナ内にコピーする場合は、『<code>/</code>』で終える必要がある。イメージのビルド時にコピーされるだけで、ビルド後のコードの変更は反映されない。<code>nginx.conf</code>ファイル、<code>php.ini</code>ファイル、などの設定ファイルをホストからコンテナにコピーしたい時によく使用する。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#copy">https://docs.docker.com/engine/reference/builder/#copy</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#copy">https://docs.docker.com/engine/reference/builder/#copy</a></p>
 <p><br></p>
 <h3 id="entrypoint">ENTRYPOINT<a class="headerlink" href="#entrypoint" title="Permanent link">&para;</a></h3>
 <h4 id="entrypoint_1">▼ ENTRYPOINTとは<a class="headerlink" href="#entrypoint_1" title="Permanent link">&para;</a></h4>
 <p>イメージのプロセスの起動コマンドを実行する。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#entrypoint">https://docs.docker.com/engine/reference/builder/#entrypoint</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#entrypoint">https://docs.docker.com/engine/reference/builder/#entrypoint</a></p>
 <h4 id="cmd_2">▼ CMDとの違い<a class="headerlink" href="#cmd_2" title="Permanent link">&para;</a></h4>
 <p>似た命令として<code>CMD</code>がある。<code>CMD</code>とは異なり、後から上書き実行できない。使用者に、コンテナの起動方法を強制させたい場合に適する。イメージのプロセスの起動コマンドを後から上書きできなくなるため、<code>docker run</code>コマンドの引数として新しいコマンドを渡せずに、デバッグできないことがある。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7439,12 +7439,12 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
 <h3 id="env_1">ENV<a class="headerlink" href="#env_1" title="Permanent link">&para;</a></h3>
 <h4 id="env_2">▼ ENVとは<a class="headerlink" href="#env_2" title="Permanent link">&para;</a></h4>
 <p>OS上のコマンド処理で展開できる変数を定義できる。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#env">https://docs.docker.com/engine/reference/builder/#env</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#env">https://docs.docker.com/engine/reference/builder/#env</a></p>
 <p><br></p>
 <h3 id="expose">EXPOSE<a class="headerlink" href="#expose" title="Permanent link">&para;</a></h3>
 <h4 id="expose_1">▼ EXPOSEとは<a class="headerlink" href="#expose_1" title="Permanent link">&para;</a></h4>
 <p>他のコンテナに対してコンテナポートを開放する。また、コンテナイメージの利用者にとってのドキュメンテーション機能もあり、ポートマッピングを実行する時に使用できるコンテナポートとして保証する機能もある。ホスト側からはアクセスできないことに注意する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li>
 <p><a href="https://docs.docker.com/engine/reference/builder/#expose">https://docs.docker.com/engine/reference/builder/#expose</a></p>
@@ -7459,7 +7459,7 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
 <h3 id="from">FROM<a class="headerlink" href="#from" title="Permanent link">&para;</a></h3>
 <h4 id="from_1">▼ FROMとは<a class="headerlink" href="#from_1" title="Permanent link">&para;</a></h4>
 <p>ベースのコンテナイメージを、コンテナにインストールする。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#from">https://docs.docker.com/engine/reference/builder/#from</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#from">https://docs.docker.com/engine/reference/builder/#from</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:latest-slim</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_6">▼ イメージレジストリの指定<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -7492,19 +7492,19 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
 </table>
 <h4 id="cpu">▼ CPUアーキテクチャの指定<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h4>
 <p>イメージの対応するCPUアーキテクチャを設定する。ただし、DockerがマシンのOSを認識して、自動的に選んでくれるため、ユーザーが設定する必要はない。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/60251383/dockerfile-from-platform-option">https://stackoverflow.com/questions/60251383/dockerfile-from-platform-option</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/60251383/dockerfile-from-platform-option">https://stackoverflow.com/questions/60251383/dockerfile-from-platform-option</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">--platform=linux/amd64</span><span class="w"> </span>python:latest-slim
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="run">RUN<a class="headerlink" href="#run" title="Permanent link">&para;</a></h3>
 <h4 id="run_1">▼ RUNとは<a class="headerlink" href="#run_1" title="Permanent link">&para;</a></h4>
 <p>ベースイメージ上に、ソフトウェアをインストールする。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#run">https://docs.docker.com/engine/reference/builder/#run</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#run">https://docs.docker.com/engine/reference/builder/#run</a></p>
 <p><br></p>
 <h3 id="volume">VOLUME<a class="headerlink" href="#volume" title="Permanent link">&para;</a></h3>
 <h4 id="volume_1">▼ VOLUMEとは<a class="headerlink" href="#volume_1" title="Permanent link">&para;</a></h4>
 <p>ボリュームマウントを行う。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.docker.com/engine/reference/builder/#volume">https://docs.docker.com/engine/reference/builder/#volume</a></li>
 <li><a href="https://qiita.com/namutaka/items/f6a574f75f0997a1bb1d">https://qiita.com/namutaka/items/f6a574f75f0997a1bb1d</a></li>
@@ -7513,7 +7513,7 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
 <h3 id="workdir">WORKDIR<a class="headerlink" href="#workdir" title="Permanent link">&para;</a></h3>
 <h4 id="workdir_1">▼ WORKDIRとは<a class="headerlink" href="#workdir_1" title="Permanent link">&para;</a></h4>
 <p>ビルド中の各命令の作業ディレクトリを絶対パスで指定する。また、コンテナ接続時の最初のディレクトリも定義できる。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/builder/#workdir">https://docs.docker.com/engine/reference/builder/#workdir</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/builder/#workdir">https://docs.docker.com/engine/reference/builder/#workdir</a></p>
 <p><br></p>
 
   <hr>
@@ -7521,7 +7521,7 @@ $ docker run --rm -it &lt;コンテナイメージ名&gt; /bin/bash
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

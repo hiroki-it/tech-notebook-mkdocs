@@ -7060,14 +7060,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8078,25 +8078,25 @@
 <h1 id="_1">サイバー攻撃＠セキュリティ<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. サイバー攻撃の防御方法<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_3">ファイアウォール<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ ファイアウォールとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p>データリンク層からトランスポート層までに対するサイバー攻撃（そもそものネットワークへの侵入、ポートスキャン、など）を遮断する。</p>
-<p>参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
+<p>ℹ️ 参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
 <h4 id="_5">▼ パケットフィルタリング型ファイアウォール<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="パケットフィルタリング" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/パケットフィルタリング.gif" /></p>
 <p>パケットのヘッダ情報の送信元IPアドレスやポート番号などに基づいて、パケットを許可するべきか否かを決定する。パケットのデータは検査しない。速度を重視する場合はこちら。ファイアウォールとWebサーバーの間には、NATルーターやNAPTルーターが設置されている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></li>
 <li><a href="https://www.fenet.jp/infla/column/network/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E3%81%AE%E7%A8%AE%E9%A1%9E5%E3%81%A4%EF%BD%9C%E6%B3%A8%E6%84%8F%E7%82%B9%E3%82%84%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88%E3%81%AB/">https://www.fenet.jp/infla/column/network/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%82%A6%E3%82%A9%E3%83%BC%E3%83%AB%E3%81%AE%E7%A8%AE%E9%A1%9E5%E3%81%A4%EF%BD%9C%E6%B3%A8%E6%84%8F%E7%82%B9%E3%82%84%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88%E3%81%AB/</a></li>
 </ul>
 <p><strong>＊例＊</strong></p>
 <p>Ubuntuにおけるiptables。<code>/etc/sysconfig/iptables</code>ファイルにルールを設定する。<code>iptables-save</code>コマンドでこのファイルを作成できる。</p>
-<p>参考：<a href="https://linuc.org/study/knowledge/540/">https://linuc.org/study/knowledge/540/</a></p>
+<p>ℹ️ 参考：<a href="https://linuc.org/study/knowledge/540/">https://linuc.org/study/knowledge/540/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8119,7 +8119,7 @@ COMMIT
 </code></pre></div></td></tr></table></div>
 <p><strong>＊例＊</strong></p>
 <p>Centosにおけるfirewalld。デフォルトでは、全てのインバウンド通信が拒否、全てのアウトバウンド通信が許可、となっている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://tooljp.com/linux/Redhat7/faqRedhat7/html/firewalld-wiki.html">https://tooljp.com/linux/Redhat7/faqRedhat7/html/firewalld-wiki.html</a></li>
 <li><a href="https://knowledge.sakura.ad.jp/22269/">https://knowledge.sakura.ad.jp/22269/</a></li>
@@ -8156,7 +8156,7 @@ public <span class="o">(</span>active<span class="o">)</span>
   rich rules:
 </code></pre></div></td></tr></table></div>
 <p>アクセスが許可されている送信元IPアドレスを確認する。</p>
-<p>参考：<a href="https://kaede.jp/2018/02/11022556/">https://kaede.jp/2018/02/11022556/</a></p>
+<p>ℹ️ 参考：<a href="https://kaede.jp/2018/02/11022556/">https://kaede.jp/2018/02/11022556/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8171,32 +8171,32 @@ public
 </code></pre></div></td></tr></table></div>
 <p><strong>＊例＊</strong></p>
 <p>Win10におけるファイアウォール。</p>
-<p>参考：<a href="https://pc-karuma.net/windows-10-firewall-open-port/">https://pc-karuma.net/windows-10-firewall-open-port/</a></p>
+<p>ℹ️ 参考：<a href="https://pc-karuma.net/windows-10-firewall-open-port/">https://pc-karuma.net/windows-10-firewall-open-port/</a></p>
 <p><img alt="パケットフィルタリングの設定" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/パケットフィルタリングの設定.gif" /></p>
 <h4 id="_6">▼ ゲートウェイ型ファイアウォール（プロキシサーバー型）<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p>パケットのデータに基づいて、パケットを許可するべきか否かを決定する。</p>
-<p>参考：<a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></p>
+<p>ℹ️ 参考：<a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></p>
 <h4 id="_7">▼ サーキットレベル型ファイアウォール<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>トランスポート層の段階でサイバー攻撃を遮断するファイアウォールのこと。</p>
-<p>参考：<a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></p>
+<p>ℹ️ 参考：<a href="https://www.rworks.jp/system/system-column/sys-entry/21277/">https://www.rworks.jp/system/system-column/sys-entry/21277/</a></p>
 <p><br></p>
 <h3 id="ipsintrusion-prevention-system">IPS：Intrusion Prevention Systemとは<a class="headerlink" href="#ipsintrusion-prevention-system" title="Permanent link">&para;</a></h3>
 <h4 id="ips">▼ IPSとは<a class="headerlink" href="#ips" title="Permanent link">&para;</a></h4>
 <p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p>ネットワーク層からプレゼンテーション層までに対するサイバー攻撃（Dos攻撃、Synフラッド攻撃、パケットフラグメンテーション攻撃、など）を遮断するセキュリティシステムのこと。</p>
-<p>参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
+<p>ℹ️ 参考：<a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></p>
 <p><br></p>
 <h3 id="wafweb-application-firewall">WAF：Web Application Firewall<a class="headerlink" href="#wafweb-application-firewall" title="Permanent link">&para;</a></h3>
 <h4 id="waf">▼ WAFとは<a class="headerlink" href="#waf" title="Permanent link">&para;</a></h4>
 <p><img alt="security_protection-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/security_protection-type.png" /></p>
 <p>アプリケーション層に対するサイバー攻撃（SQLインジェクション、XSS、OSコマンドインジェクション、など）を遮断するセキュリティシステムのこと。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://digital-jyoshisu.com/archives/468">https://digital-jyoshisu.com/archives/468</a></li>
 <li><a href="https://www.geeksforgeeks.org/difference-between-waf-and-firewall/">https://www.geeksforgeeks.org/difference-between-waf-and-firewall/</a></li>
 </ul>
 <h4 id="waf_1">▼ WAFの種類<a class="headerlink" href="#waf_1" title="Permanent link">&para;</a></h4>
-<p>参考：hhttps://liskul.com/waf-15products-35757</p>
+<p>ℹ️ 参考：hhttps://liskul.com/waf-15products-35757</p>
 <table>
 <thead>
 <tr>
@@ -8274,17 +8274,17 @@ public
 <h3 id="man-in-the-middle">Man In The Middle攻撃（中間者攻撃）<a class="headerlink" href="#man-in-the-middle" title="Permanent link">&para;</a></h3>
 <h4 id="_12">▼ 中間者攻撃とは<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
 <p>二者間の通信に割り込み、盗聴/改竄/成りすましによって通信を攻撃する。</p>
-<p>参考：<a href="https://www.rapid7.com/ja/fundamentals/man-in-the-middle-mitm-attacks/">https://www.rapid7.com/ja/fundamentals/man-in-the-middle-mitm-attacks/</a></p>
+<p>ℹ️ 参考：<a href="https://www.rapid7.com/ja/fundamentals/man-in-the-middle-mitm-attacks/">https://www.rapid7.com/ja/fundamentals/man-in-the-middle-mitm-attacks/</a></p>
 <h4 id="_13">▼ 【対策】通信の暗号化<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_encryption_technology.html</a></p>
 <h4 id="_14">▼ 【対策】チェックサム<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p>sha256によって作成された文字列をファイル情報として添付し、これを送受信の両側で照合することにより、通知途中でファイルが改竄されていないことを保証する。</p>
-<p>参考：<a href="https://academy.gmocloud.com/know/20200116/8627">https://academy.gmocloud.com/know/20200116/8627</a></p>
+<p>ℹ️ 参考：<a href="https://academy.gmocloud.com/know/20200116/8627">https://academy.gmocloud.com/know/20200116/8627</a></p>
 <p><br></p>
 <h3 id="csrfcross-site-request-forgeries">CSRF：Cross-Site Request Forgeries<a class="headerlink" href="#csrfcross-site-request-forgeries" title="Permanent link">&para;</a></h3>
 <h4 id="csrf">▼ CSRFとは<a class="headerlink" href="#csrf" title="Permanent link">&para;</a></h4>
 <p>ユーザーがとあるフォームからログイン後、セッションIDを保持したまま悪意のあるサイトにアクセスしたとする。悪意のあるサイトのサーバーは、ユーザーのセッションIDを使用して、ログインしていた元のサイトのサーバーを攻撃する。サーバーは、正しいフォームからのリクエストと誤認してしまい、攻撃を許容してしまう。</p>
-<p>参考：<a href="https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_6.html">https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_6.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_6.html">https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_6.html</a></p>
 <p><img alt="csrf" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/csrf.png" /></p>
 <h4 id="_15">▼ 【対策】ワンタイムトークン<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p><img alt="csrf-token" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/csrf-token.png" /></p>
@@ -8332,7 +8332,7 @@ public
 <span class="err">}</span>
 </code></pre></div></td></tr></table></div>
 <p>サーバー側では、POSTリクエストによって送信されたトークンとワンタイムトークンを比較し、認証を実行する。以降、POSTリクエストの場合はそのワンタイムトークンを使い回し、GETリクエストの場合は使用しない。トークンが変更されていれば、誤った入力フォームからのリクエストとして判定し、<code>401</code>ステータスを返却する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://terasolunaorg.github.io/guideline/5.2.0.RELEASE/ja/Security/CSRF.html#spring-securitycsrf">https://terasolunaorg.github.io/guideline/5.2.0.RELEASE/ja/Security/CSRF.html#spring-securitycsrf</a></li>
 <li><a href="https://qiita.com/Nsystem/questions/1bd6d30748957e1b6700">https://qiita.com/Nsystem/questions/1bd6d30748957e1b6700</a></li>
@@ -8343,7 +8343,7 @@ public
 <p><br></p>
 <h3 id="id">セッションID固定化<a class="headerlink" href="#id" title="Permanent link">&para;</a></h3>
 <h4 id="id_1">▼ セッションID固定化とは<a class="headerlink" href="#id_1" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_4.html">https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_4.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_4.html">https://www.ipa.go.jp/security/vuln/websecurity-HTML-1_4.html</a></p>
 <p><img alt="session-fixation" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/session-fixation.png" /></p>
 <p><br></p>
 <h3 id="directory-traversal">Directory traversal<a class="headerlink" href="#directory-traversal" title="Permanent link">&para;</a></h3>
@@ -8361,7 +8361,7 @@ public
 </code></pre></div></td></tr></table></div>
 <h4 id="_16">▼ 【対策】同一送信元のリクエスト制限<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>同じ送信元からの一分間あたりのリクエスト数を制限する。例えば、WAF、API Gatewayの機能を使用する。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws.html</a></p>
 <p><br></p>
 <h3 id="sql">SQLインジェクション<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h3>
 <h4 id="sql_1">▼ SQLインジェクションとは<a class="headerlink" href="#sql_1" title="Permanent link">&para;</a></h4>
@@ -8369,10 +8369,10 @@ public
 <p><img alt="SQLインジェクション" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/SQLインジェクション.jpg" /></p>
 <h4 id="_17">▼ 【対策】特殊な文字列の無効化<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>DBのSQLクエリのパラメーターとなる入力では、『シングルクオーテーション』や『バックスラッシュ』などはSQLで特別な意味を持つ。そのため、これらのパラメーターが割り当てられているリクエストメッセージを拒否する。例えば、WAFの機能を使用する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html">https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html">https://docs.aws.amazon.com/waf/latest/developerguide/aws-managed-rule-groups-list.html</a></p>
 <h4 id="_18">▼ 【対策】プレースホルダー<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>プリペアードステートメントのSQL中にパラメーターを設定し、値をパラメーターに渡した上で、SQLとして発行する方法。処理速度が速い。また、パラメーターに誤ってSQLが渡されても、型をチェックすることにより、実行できなくなるようにできるため、SQLインジェクションの対策になる。プレースホルダーについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_package_sql.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_package_sql.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_package_sql.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_language_php_package_sql.html</a></p>
 <p><br></p>
 <h3 id="xsscross-site-scripting">XSS：Cross Site Scripting<a class="headerlink" href="#xsscross-site-scripting" title="Permanent link">&para;</a></h3>
 <h4 id="xss">▼ XSSとは<a class="headerlink" href="#xss" title="Permanent link">&para;</a></h4>
@@ -8381,10 +8381,10 @@ public
 <h4 id="corscross-origin-resource-sharing">▼ 【対策】CORS：Cross-Origin Resource Sharing（オリジン間リソース共有）<a class="headerlink" href="#corscross-origin-resource-sharing" title="Permanent link">&para;</a></h4>
 <p><img alt="cors" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/cors.png" /></p>
 <p>異なるドメインで表示されるページからのリクエストを許可する仕組みのこと。デフォルトでは、異なるドメインで表示されるページからのリクエストは拒否されるようになっている。異なるドメインで表示されるページからのリクエストを許可したい場合は、ページからのリクエストメッセージとサーバーからのレスポンスメッセージの両方で対応が必要である。</p>
-<p>参考：<a href="https://developer.mozilla.org/ja/docs/Glossary/Origin">https://developer.mozilla.org/ja/docs/Glossary/Origin</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mozilla.org/ja/docs/Glossary/Origin">https://developer.mozilla.org/ja/docs/Glossary/Origin</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>まず、リクエストメッセージの<code>Origin</code>ヘッダーに送信元オリジンを設定する。加えて、<code>Cookie</code>ヘッダーを持つリクエストメッセージを送信したい場合は、JavaScriptの実装で<code>withCredentials</code>オプションに<code>true</code>を割り当てる。JavaScriptのパッケージによってオプション名が異なるため注意する。</p>
-<p>参考：<a href="https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34#%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%92%E8%A8%B1%E5%8F%AF%E3%81%97%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88">https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34#%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%92%E8%A8%B1%E5%8F%AF%E3%81%97%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34#%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%92%E8%A8%B1%E5%8F%AF%E3%81%97%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88">https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34#%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AB%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF%E3%82%92%E8%A8%B1%E5%8F%AF%E3%81%97%E3%81%9F%E3%81%84%E5%A0%B4%E5%90%88</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">GET https://foo.com/bar</span>
@@ -8424,7 +8424,7 @@ public
 <span class="p">})</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>次に、レスポンスメッセージの<code>Access-Control-Allow-Origin</code>ヘッダーに、許可された送信元オリジンを割り当てて返信する。<code>Cookie</code>ヘッダーを持つリクエストメッセージを許可する場合、同じくレスポンスメッセージの<code>Access-Control-Allow-Credentials</code>ヘッダーに<code>true</code>を割り当てる。その他、許可するHTTPメソッドやHTTPヘッダーを定義できる。例えば、許可されていないHTTPメソッドを使用して、異なるオリジンにリクエストを送信すると、<code>405</code>ステータスでエラーレスポンスが返信される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials">https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials</a></li>
 <li><a href="https://stackoverflow.com/questions/24687313/what-exactly-does-the-access-control-allow-credentials-header-do">https://stackoverflow.com/questions/24687313/what-exactly-does-the-access-control-allow-credentials-header-do</a></li>
@@ -8458,7 +8458,7 @@ public
 </code></pre></div></td></tr></table></div>
 <h4 id="set-cookiedomain">▼ 【対策】<code>Set-Cookie</code>ヘッダーのDomain属性<a class="headerlink" href="#set-cookiedomain" title="Permanent link">&para;</a></h4>
 <p>リクエストメッセージが<code>Cookie</code>ヘッダーを持つことを許可した場合、サブドメインのオリジンにも<code>Cookie</code>ヘッダーの送信を許可するか否かを制御できる。サブドメインレスポンスメッセージの<code>Set-Cookie</code>ヘッダーにて、Domain属性にドメインが割り当てなかった場合は、ページを表示するサーバーのドメインにのみ<code>Cookie</code>ヘッダーを持つリクエストを許可でき、サブドメインへの送信を拒否できる。一方で、ドメインが割り当てた場合は、そのページからサブドメインに対しても、<code>Cookie</code>ヘッダーを持つリクエストを許可できる。ドメインではなく、オリジンであることに注意する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://zenn.dev/agektmr/articles/f8dcd345a88c97">https://zenn.dev/agektmr/articles/f8dcd345a88c97</a></li>
 <li><a href="https://azisava.sakura.ne.jp/programming/0017.html#sec4-1">https://azisava.sakura.ne.jp/programming/0017.html#sec4-1</a></li>
@@ -8507,7 +8507,7 @@ public
 </tbody>
 </table>
 <p>異なるドメインからのリクエストが<code>Cookie</code>ヘッダーを持つことを許可/拒否する。ここでリクエストを制御しているのは、オリジンではなく、ドメインであることに注意する。</p>
-<p>参考：<a href="https://zenn.dev/agektmr/articles/f8dcd345a88c97">https://zenn.dev/agektmr/articles/f8dcd345a88c97</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/agektmr/articles/f8dcd345a88c97">https://zenn.dev/agektmr/articles/f8dcd345a88c97</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="err">200 OK</span>
 <span class="err">Set-Cookie: SameSite=None</span>
@@ -8537,7 +8537,7 @@ public
 <p><img alt="レインボー攻撃" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/Rainbow攻撃.png" /></p>
 <h4 id="bcrypt">▼ 【対策】BCryptによるハッシュ化<a class="headerlink" href="#bcrypt" title="Permanent link">&para;</a></h4>
 <p>BCryptを使用して、Blowfish方式に基づく暗号化を実行する。Blowfish方式では、同じパスワードの文字列であっても異なるハッシュ値が作成されるため、レインボー攻撃を防げる。Blowfish方式で作成されたハッシュ値は、異なるルールで作成された複数のハッシュ値の組み合わせである。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://medium-company.com/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0/">https://medium-company.com/%E3%82%B9%E3%83%88%E3%83%AC%E3%83%83%E3%83%81%E3%83%B3%E3%82%B0/</a></li>
 <li><a href="https://medium-company.com/bcrypt/">https://medium-company.com/bcrypt/</a></li>
@@ -8604,7 +8604,7 @@ $2y$10$1QVmWNzk.TsaZQLQ/zeI9OAZL02AWP.VdFPPyAc9hSc2Cp4yOXKtG
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

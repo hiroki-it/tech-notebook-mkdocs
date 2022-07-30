@@ -6683,14 +6683,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7318,20 +7318,20 @@
 <h1 id="vagrantfilevagrant">Vagrantfile＠Vagrant<a class="headerlink" href="#vagrantfilevagrant" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-vagrant">01. Vagrantの仕組み<a class="headerlink" href="#01-vagrant" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://delftswa.github.io/chapters/vagrant/">https://delftswa.github.io/chapters/vagrant/</a></p>
+<p>ℹ️ 参考：<a href="https://delftswa.github.io/chapters/vagrant/">https://delftswa.github.io/chapters/vagrant/</a></p>
 <h3 id="_3">ユースケース<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>Vagrantfileを使用して、プロバイダーとプロビジョナーを操作し、仮想環境を作成する。Vagrantfile自体をプロビジョナーとして使用もできる。仮想環境として仮想サーバーとコンテナを選択できるが、Vagrantは仮想サーバーの作成のために使用することが多い。</p>
-<p>参考：<a href="https://computationalmodelling.bitbucket.io/tools/vagrant.html">https://computationalmodelling.bitbucket.io/tools/vagrant.html</a></p>
+<p>ℹ️ 参考：<a href="https://computationalmodelling.bitbucket.io/tools/vagrant.html">https://computationalmodelling.bitbucket.io/tools/vagrant.html</a></p>
 <p><img alt="vagrant_provider_provisioner" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/vagrant_provider_provisioner.png" /></p>
 <p><br></p>
 <h3 id="_4">プロバイダー<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ プロバイダーとは<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>仮想サーバー/コンテナを提供する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/providers">https://www.vagrantup.com/docs/providers</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers">https://www.vagrantup.com/docs/providers</a></p>
 <h4 id="_6">▼ プロバイダーの種類<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -7343,19 +7343,19 @@
 <tbody>
 <tr>
 <td>VirtualBox</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/providers/virtualbox">https://www.vagrantup.com/docs/providers/virtualbox</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/virtualbox">https://www.vagrantup.com/docs/providers/virtualbox</a></td>
 </tr>
 <tr>
 <td>VMWare</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/providers/vmware">https://www.vagrantup.com/docs/providers/vmware</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/vmware">https://www.vagrantup.com/docs/providers/vmware</a></td>
 </tr>
 <tr>
 <td>Docker</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/providers/docker">https://www.vagrantup.com/docs/providers/docker</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/docker">https://www.vagrantup.com/docs/providers/docker</a></td>
 </tr>
 <tr>
 <td>Hyper-V</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/providers/hyperv">https://www.vagrantup.com/docs/providers/hyperv</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/hyperv">https://www.vagrantup.com/docs/providers/hyperv</a></td>
 </tr>
 </tbody>
 </table>
@@ -7363,7 +7363,7 @@
 <h3 id="_7">プロビジョナー<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ プロビジョナーとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>プロバイダーによって作成された仮想環境に、ソフトウェアをインストールできる（構成管理できる）。具体的には、プログラミング言語やファイアウォールをインストールする。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/provisioning">https://www.vagrantup.com/docs/provisioning</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning">https://www.vagrantup.com/docs/provisioning</a></p>
 <h4 id="_9">▼ プロビジョナーの種類<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -7377,32 +7377,32 @@
 <tr>
 <td>シェル</td>
 <td>Vagrantfile自体をプロビジョニングツールとして使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/shell">https://www.vagrantup.com/docs/provisioning/shell</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/shell">https://www.vagrantup.com/docs/provisioning/shell</a></td>
 </tr>
 <tr>
 <td>Ansible</td>
 <td>Vagrantfileでプロビジョニングを実行する代わりに、Ansibleを使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/ansible">https://www.vagrantup.com/docs/provisioning/ansible</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/ansible">https://www.vagrantup.com/docs/provisioning/ansible</a></td>
 </tr>
 <tr>
 <td>CFEngine</td>
 <td>Vagrantfileでプロビジョニングを実行する代わりに、CFEngineを使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/cfengine">https://www.vagrantup.com/docs/provisioning/cfengine</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/cfengine">https://www.vagrantup.com/docs/provisioning/cfengine</a></td>
 </tr>
 <tr>
 <td>Chef</td>
 <td>Vagrantfileでプロビジョニングを実行する代わりに、Chefを使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/chef_common">https://www.vagrantup.com/docs/provisioning/chef_common</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/chef_common">https://www.vagrantup.com/docs/provisioning/chef_common</a></td>
 </tr>
 <tr>
 <td>Docker</td>
 <td>Vagrantfileでプロビジョニングを実行する代わりに、Dockerfile（に似た記述）を使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/docker">https://www.vagrantup.com/docs/provisioning/docker</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/docker">https://www.vagrantup.com/docs/provisioning/docker</a></td>
 </tr>
 <tr>
 <td>Puppet</td>
 <td>Vagrantfileでプロビジョニングを実行する代わりに、Puppetを使用する。</td>
-<td>参考：<a href="https://www.vagrantup.com/docs/provisioning/puppet_apply">https://www.vagrantup.com/docs/provisioning/puppet_apply</a></td>
+<td>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/puppet_apply">https://www.vagrantup.com/docs/provisioning/puppet_apply</a></td>
 </tr>
 </tbody>
 </table>
@@ -7413,7 +7413,7 @@
 <h2 id="02-vagrantconfigure">02. Vagrant.configure<a class="headerlink" href="#02-vagrantconfigure" title="Permanent link">&para;</a></h2>
 <h3 id="vagrantconfigure">Vagrant.configureとは<a class="headerlink" href="#vagrantconfigure" title="Permanent link">&para;</a></h3>
 <p>Vagrantfileのバージョンを設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/version">https://www.vagrantup.com/docs/vagrantfile/version</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/vagrantfile/version">https://www.vagrantup.com/docs/vagrantfile/version</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7432,7 +7432,7 @@
 <h3 id="configvmbox">config.vm.box<a class="headerlink" href="#configvmbox" title="Permanent link">&para;</a></h3>
 <h4 id="box">▼ boxとは<a class="headerlink" href="#box" title="Permanent link">&para;</a></h4>
 <p>仮想環境のベースとするボックス名を設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-box">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-box</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-box">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-box</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7475,10 +7475,10 @@
 <h3 id="configvmnetwork">config.vm.network<a class="headerlink" href="#configvmnetwork" title="Permanent link">&para;</a></h3>
 <h4 id="network">▼ networkとは<a class="headerlink" href="#network" title="Permanent link">&para;</a></h4>
 <p>仮想環境のネットワークを設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-network">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-network</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-network">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-network</a></p>
 <h4 id="forwarded_port">▼ forwarded_port<a class="headerlink" href="#forwarded_port" title="Permanent link">&para;</a></h4>
 <p>ホストから仮想環境へポートフォワーディングを設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/networking/forwarded_ports">https://www.vagrantup.com/docs/networking/forwarded_ports</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/networking/forwarded_ports">https://www.vagrantup.com/docs/networking/forwarded_ports</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7491,7 +7491,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="private_network">▼ private_network<a class="headerlink" href="#private_network" title="Permanent link">&para;</a></h4>
 <p>仮想環境にプライベートIPアドレスを設定する。同じプライベートネットワーク内の他の仮想環境とのみ、通信できるようになる。他の仮想環境とIPアドレスが重複しないようにする必要がある。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/networking/private_network">https://www.vagrantup.com/docs/networking/private_network</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/networking/private_network">https://www.vagrantup.com/docs/networking/private_network</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7506,9 +7506,9 @@
 <h3 id="configvmprovider">config.vm.provider<a class="headerlink" href="#configvmprovider" title="Permanent link">&para;</a></h3>
 <h4 id="provider">▼ providerとは<a class="headerlink" href="#provider" title="Permanent link">&para;</a></h4>
 <p>プロバイダー固有のオプションを設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provider">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provider</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provider">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provider</a></p>
 <h4 id="virtualbox">▼ virtualbox<a class="headerlink" href="#virtualbox" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.vagrantup.com/docs/providers/virtualbox/configuration">https://www.vagrantup.com/docs/providers/virtualbox/configuration</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/virtualbox/configuration">https://www.vagrantup.com/docs/providers/virtualbox/configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7528,7 +7528,7 @@
 <span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="docker">▼ docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.vagrantup.com/docs/providers/docker/configuration">https://www.vagrantup.com/docs/providers/docker/configuration</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/providers/docker/configuration">https://www.vagrantup.com/docs/providers/docker/configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7549,10 +7549,10 @@
 <h3 id="configvmprovision">config.vm.provision<a class="headerlink" href="#configvmprovision" title="Permanent link">&para;</a></h3>
 <h4 id="provision">▼ provisionとは<a class="headerlink" href="#provision" title="Permanent link">&para;</a></h4>
 <p>仮想環境のプロビジョニングを設定する。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provision">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provision</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provision">https://www.vagrantup.com/docs/vagrantfile/machine_settings#config-vm-provision</a></p>
 <h4 id="shell">▼ shell<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h4>
 <p>shellを使用して、仮想環境のプロビジョニングを実行する。もしVagrantがサポートしていないプロビジョニングツールを使用する場合は、これ自体をインストールしておく必要がある。シェルが複数行に渡る場合は、Rubyのヒアドキュメント形式（<code>&lt;&lt;-</code>）を使用すると良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/docs/provisioning/shell">https://www.vagrantup.com/docs/provisioning/shell</a></li>
 <li><a href="https://monologu.com/vagrant-shell-provisioning/">https://monologu.com/vagrant-shell-provisioning/</a></li>
@@ -7577,7 +7577,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="ansible">▼ ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h4>
 <p>ホスト側にAnsibleをインストールし、また仮想環境のプロビジョニングを実行する。開発環境ではこのオプションを使用することは非推奨で、<code>ansible_local</code>オプションを使用することが推奨されている。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/provisioning/ansible">https://www.vagrantup.com/docs/provisioning/ansible</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/provisioning/ansible">https://www.vagrantup.com/docs/provisioning/ansible</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7596,7 +7596,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="ansible_local">▼ ansible_local<a class="headerlink" href="#ansible_local" title="Permanent link">&para;</a></h4>
 <p>仮想環境側にAnsibleをインストールし、また仮想環境のプロビジョニングを実行する。注意点としては、開発環境ではコントロールノードと管理対象ノードが同じサーバー（仮想環境）になるため、コントロールノードは自分自身を指定してプロビジョニングを実行することになる。開発環境ではこのオプションを使用することが推奨されており、<code>ansible</code>オプションを使用することが非推奨とされている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.vagrantup.com/docs/provisioning/ansible_local">https://www.vagrantup.com/docs/provisioning/ansible_local</a></li>
 <li><a href="https://blog.shin1x1.com/entry/ansible_local-provisioner-in-vagrant">https://blog.shin1x1.com/entry/ansible_local-provisioner-in-vagrant</a></li>
@@ -7644,7 +7644,7 @@
 <h3 id="configvmsynced_folder">config.vm.synced_folder<a class="headerlink" href="#configvmsynced_folder" title="Permanent link">&para;</a></h3>
 <h4 id="synced_folder">▼ synced_folderとは<a class="headerlink" href="#synced_folder" title="Permanent link">&para;</a></h4>
 <p>ホスト上のディレクトリを仮想環境にマウントする。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/synced-folders/basic_usage">https://www.vagrantup.com/docs/synced-folders/basic_usage</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/synced-folders/basic_usage">https://www.vagrantup.com/docs/synced-folders/basic_usage</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7657,7 +7657,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="type">▼ type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
 <p>マウント方法を設定する。デフォルト値は、VirtualBox共有ディレクトリである。その他、NFS、RSync、SMBを設定できる。</p>
-<p>参考：<a href="https://www.vagrantup.com/docs/synced-folders/basic_usage#type">https://www.vagrantup.com/docs/synced-folders/basic_usage#type</a></p>
+<p>ℹ️ 参考：<a href="https://www.vagrantup.com/docs/synced-folders/basic_usage#type">https://www.vagrantup.com/docs/synced-folders/basic_usage#type</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7669,9 +7669,9 @@
 <span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 <p>ホストと仮想環境間のファイルの入出力の速度差によって、仮想環境のパフォーマンスに差がある。以下のリンクで、ロードテストを行ったところ、『<code>RSync &gt; SMB &gt; VirtualBox共有ディレクトリ</code>』の順でパフォーマンスが良かった。</p>
-<p>参考：<a href="http://tech.respect-pal.jp/vagrant-synced_folder-type/">http://tech.respect-pal.jp/vagrant-synced_folder-type/</a></p>
+<p>ℹ️ 参考：<a href="http://tech.respect-pal.jp/vagrant-synced_folder-type/">http://tech.respect-pal.jp/vagrant-synced_folder-type/</a></p>
 <p>また、『<code>RSync &gt; NFS</code>』『<code>NFS &gt; SMB</code>』である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://serverfault.com/questions/268369/why-rsync-is-faster-than-nfs">https://serverfault.com/questions/268369/why-rsync-is-faster-than-nfs</a></li>
 <li><a href="https://milestone-of-se.nesuke.com/sv-advanced/file-server/nfs-cifs-smb-summary/">https://milestone-of-se.nesuke.com/sv-advanced/file-server/nfs-cifs-smb-summary/</a></li>
@@ -7683,7 +7683,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

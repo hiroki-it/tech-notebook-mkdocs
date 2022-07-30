@@ -7293,14 +7293,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -8536,7 +8536,7 @@
 <h1 id="mysql">クエリロジック@MySQL<a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. テーブル<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="create-table"><code>CREATE TABLE</code>句<a class="headerlink" href="#create-table" title="Permanent link">&para;</a></h3>
@@ -8612,7 +8612,7 @@
 <tbody>
 <tr>
 <td>MySQLのAuto Increment機能によって増加する番号カラム</td>
-<td>プライマリーキー制約を課したカラムのAuto Increment機能を有効化しておく。CREATE処理でドメインモデルを作成する時に、『<code>0</code>』または『<code>null</code>』をモデルのID値として割り当てる。これにより、処理によって新しいレコードが追加される時に、現在の最新番号に＋１した番号が割り当てられるようになる。これはプライマリーキー制約を満たす。<br>参考：<a href="https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html">https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html</a></td>
+<td>プライマリーキー制約を課したカラムのAuto Increment機能を有効化しておく。CREATE処理でドメインモデルを作成する時に、『<code>0</code>』または『<code>null</code>』をモデルのID値として割り当てる。これにより、処理によって新しいレコードが追加される時に、現在の最新番号に＋１した番号が割り当てられるようになる。これはプライマリーキー制約を満たす。<br>ℹ️ 参考：<a href="https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html">https://dev.mysql.com/doc/refman/8.0/en/example-auto-increment.html</a></td>
 <td>・ドメインモデルとDBがより密結合になり、Active Recordパターンと相性が良い。<br>MySQLの環境変数として『<code>NO_AUTO_VALUE_ON_ZERO</code>』を設定すると、『<code>0</code>』の割り当てによる自動連番が拒否されるようになる。</td>
 </tr>
 <tr>
@@ -8658,7 +8658,7 @@
 </table>
 <h4 id="_8">▼ 採番テーブル<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>各テーブルのプライマリーキーを統合的に管理するテーブルを採番テーブルという。各テーブルのプライマリーキーは採番テーブルを元に割り当てられるため、連番ではなく飛び飛びになる。</p>
-<p>参考：<a href="http://blog.livedoor.jp/sasata299/archives/51280681.html">http://blog.livedoor.jp/sasata299/archives/51280681.html</a></p>
+<p>ℹ️ 参考：<a href="http://blog.livedoor.jp/sasata299/archives/51280681.html">http://blog.livedoor.jp/sasata299/archives/51280681.html</a></p>
 <p>あらかじめ、最初のレコードのみ手動で挿入しておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8702,7 +8702,7 @@
 <h3 id="stored-procedure">stored procedure<a class="headerlink" href="#stored-procedure" title="Permanent link">&para;</a></h3>
 <h4 id="stored-procedure_1">▼ stored procedureとは<a class="headerlink" href="#stored-procedure_1" title="Permanent link">&para;</a></h4>
 <p>あらかじめ一連のSQL文をDBに格納しておき、Call文で呼び出す方式。</p>
-<p>参考：<a href="https://www.amazon.co.jp/dp/4297124513">https://www.amazon.co.jp/dp/4297124513</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/dp/4297124513">https://www.amazon.co.jp/dp/4297124513</a></p>
 <p><img alt="p325" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/p325.gif" /></p>
 <h4 id="_13">▼ 使い方<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p><strong>＊実装例＊</strong></p>
@@ -8791,7 +8791,7 @@
 <h3 id="collation">Collation（照合順序）<a class="headerlink" href="#collation" title="Permanent link">&para;</a></h3>
 <h4 id="string_1">▼ string型の照合順序とは<a class="headerlink" href="#string_1" title="Permanent link">&para;</a></h4>
 <p>string型のカラムに関して、WHERE句の比較における値の特定、ORDER BY句における並び替えの昇順降順、JOIN句における結合、GROUP BYにおけるグループ化のルールを定義する。カラム/テーブル/DB単位で設定でき、比較するカラム同士では同じ照合順序が設定されている必要がある。</p>
-<p>参考：<a href="https://johobase.com/sqlserver-where-collate/">https://johobase.com/sqlserver-where-collate/</a></p>
+<p>ℹ️ 参考：<a href="https://johobase.com/sqlserver-where-collate/">https://johobase.com/sqlserver-where-collate/</a></p>
 <h4 id="_18">▼ 照合順序の種類<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>寿司とビールの絵文字が区別されないことを『寿司ビール問題』という。大文字Aと小文字aを区別しないことは、CI：Case Insensitiveと表現され、照合順序名にも特徴としてCIの文字が含まれている。</p>
 <table>
@@ -8989,7 +8989,7 @@
 <h3 id="select"><code>SELECT</code>句<a class="headerlink" href="#select" title="Permanent link">&para;</a></h3>
 <h4 id="_33">▼ なし<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
 <p>指定したカラムを取得する。MySQLでは、取得結果の並び順が毎回異なるため、プライマリーキーの昇順で取得したい場合は、<code>ORDER BY</code>句を使用して、明示的に並び替えるようにする。</p>
-<p>参考：<a href="https://www.quora.com/What-is-the-default-order-of-records-for-a-SELECT-statement-in-MySQL">https://www.quora.com/What-is-the-default-order-of-records-for-a-SELECT-statement-in-MySQL</a></p>
+<p>ℹ️ 参考：<a href="https://www.quora.com/What-is-the-default-order-of-records-for-a-SELECT-statement-in-MySQL">https://www.quora.com/What-is-the-default-order-of-records-for-a-SELECT-statement-in-MySQL</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9507,7 +9507,7 @@
 <h3 id="_42">インデックス<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
 <h4 id="_43">▼ インデックスとは<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
 <p>テーブルから特定のカラムだけを抜き出し、検索しやすいように並び替え、名前を付けて保存しておいたもの。インデックスとして保存されたカラムから特定のレコードを直接的に取得できるため、SQLの実行時間がカラム数に依存しなくなる。インデックスを使用しない場合、SQLの実行時に全てカラムを取得するため、実行時間がテーブルのカラム数に依存してしまう。</p>
-<p>参考：<a href="https://qiita.com/towtow/items/4089dad004b7c25985e3">https://qiita.com/towtow/items/4089dad004b7c25985e3</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/towtow/items/4089dad004b7c25985e3">https://qiita.com/towtow/items/4089dad004b7c25985e3</a></p>
 <h4 id="_44">▼ クラスタインデックス<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
 <p>プライマリーキーあるいはユニークキーのカラムを基準にして、テーブルのカラムを並び替えたインデックスのこと。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -9522,7 +9522,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_46">▼ 複合インデックス<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
 <p>複数のカラムを基準にして、テーブルを並び替えたインデックスのこと。対象としたカラムごとに異なる値のレコード数が計測され、この数が少ない（一意の値の多い）カラムが検出される。そして、カラムのレコードの昇順で並び替えられ、インデックスとして保存される。</p>
-<p>参考：<a href="https://qiita.com/towtow/items/4089dad004b7c25985e3">https://qiita.com/towtow/items/4089dad004b7c25985e3</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/towtow/items/4089dad004b7c25985e3">https://qiita.com/towtow/items/4089dad004b7c25985e3</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">foo_index</span><span class="w"></span>
 <span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">foo_table</span><span class="w"> </span><span class="p">(</span><span class="n">foo_column</span><span class="p">,</span><span class="w"> </span><span class="n">bar_column</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="w"></span>
@@ -9622,7 +9622,7 @@
 <h3 id="explain"><code>EXPLAIN</code>句<a class="headerlink" href="#explain" title="Permanent link">&para;</a></h3>
 <h4 id="_47">▼ 使い方<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
 <p>設定した<code>SELECT</code>句が仮に実行された場合、いずれのテーブルのいずれのカラムを取得することになるか（実行計画）を取得する。また、想定実行時間も検出できるため、スロークエリの検出に役立つ。</p>
-<p>参考：<a href="https://dev.mysql.com/doc/refman/5.7/en/explain-output.html">https://dev.mysql.com/doc/refman/5.7/en/explain-output.html</a></p>
+<p>ℹ️ 参考：<a href="https://dev.mysql.com/doc/refman/5.7/en/explain-output.html">https://dev.mysql.com/doc/refman/5.7/en/explain-output.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9814,7 +9814,7 @@ possible_keys: index_t2_on_c3
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

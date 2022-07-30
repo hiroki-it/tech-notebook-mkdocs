@@ -6594,14 +6594,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7142,11 +7142,11 @@
 <h1 id="datadog">テレメトリー間の紐付け＠Datadog<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. タグ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">タグの種類<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.datadoghq.com/getting_started/tagging/">https://docs.datadoghq.com/getting_started/tagging/</a></li>
 <li><a href="https://www.datadoghq.com/ja/blog/tagging-best-practices/">https://www.datadoghq.com/ja/blog/tagging-best-practices/</a></li>
@@ -7188,10 +7188,10 @@
 <p><br></p>
 <h3 id="_3">統合タグ付け<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>統合タグ（<code>service</code>、<code>env</code>、<code>version</code>）に同じ値を割り当てると、テレメトリー間を紐付けられる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes">https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes">https://docs.datadoghq.com/getting_started/tagging/unified_service_tagging/?tab=kubernetes</a></p>
 <p><br></p>
 <h3 id="_4">各コンソール画面での使い方<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://docs.datadoghq.com/getting_started/tagging/using_tags/">https://docs.datadoghq.com/getting_started/tagging/using_tags/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/getting_started/tagging/using_tags/">https://docs.datadoghq.com/getting_started/tagging/using_tags/</a></p>
 <p><br></p>
 <h2 id="01-02">01-02. 命名規則例<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="_5">分散トレースのタグ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -7267,7 +7267,7 @@
 <p>〇：laravel -&gt; order、order-service
 ✕：laravel -&gt; order-laravel、order-service-laravel</p>
 <p>フレームワーク以外のパッケージなどの分散トレースに関しては、紐づけられないことを許容している。APMのservice名とECSタスク/ログのserviceタグは、名前の付け方が異なることに注意する。service名はインテグレーション名が自動で割り当てられるが、トレーサーに環境変数を渡して変更もできる。フレームワークのインテグレーション名は <code>DD_SERVICE_NAME</code> から設定する一方で、それ以外のタグ名は <code>DD_SERVICE_MAPPING</code> から設定する。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D">https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D">https://docs.datadoghq.com/tracing/setup/php/#%E3%82%A4%E3%83%B3%E3%83%86%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%90%8D</a></p>
 <h4 id="env">▼ env<a class="headerlink" href="#env" title="Permanent link">&para;</a></h4>
 <p>分散トレースの作成元の環境名を表す。envタグは、datadogコンテナの環境変数を使用してタグ付けする。</p>
 <table>
@@ -7412,11 +7412,11 @@
 <h2 id="02">02. 構造化ログと他テレメトリー間の紐付け<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_11">分散トレース全体との紐付け<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>スパンと構造化ログの統合タグ（<code>service</code>、<code>env</code>、<code>version</code>）に同じ値を割り当てると、分散トレース全体と構造化ログ間を紐付けられる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/">https://docs.datadoghq.com/tracing/connect_logs_and_traces/</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/connect_logs_and_traces/">https://docs.datadoghq.com/tracing/connect_logs_and_traces/</a></p>
 <p><br></p>
 <h3 id="_12">スパンとの紐付け<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>スパンと構造化ログに、同じトレースIDとスパンIDを割り当てると、スパンと構造化ログ間を紐付けられる。これにより、その構造化ログが、いずれのマイクロサービスで、またどのタイミングで発生したものかを確認できる。</p>
-<p>参考：<a href="https://docs.datadoghq.com/tracing/visualization/trace/?tab=logs">https://docs.datadoghq.com/tracing/visualization/trace/?tab=logs</a></p>
+<p>ℹ️ 参考：<a href="https://docs.datadoghq.com/tracing/visualization/trace/?tab=logs">https://docs.datadoghq.com/tracing/visualization/trace/?tab=logs</a></p>
 <p><img alt="datadog_trace-viewer" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/datadog_trace-viewer.png" /></p>
 <p><br></p>
 <h2 id="03">03. メトリクスと他テレメトリー間の紐付け<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
@@ -7428,7 +7428,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

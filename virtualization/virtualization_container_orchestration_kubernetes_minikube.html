@@ -6943,14 +6943,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7840,13 +7840,13 @@
 <h1 id="minikube">Minikube＠仮想化<a class="headerlink" href="#minikube" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-minikube">01. Minikubeの仕組み<a class="headerlink" href="#01-minikube" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ 仮想サーバー系のドライバーの場合<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>ホストマシン上に仮想サーバーを作成する。この仮想サーバー内に単一のワーカーNodeを持つClusterを作成する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://minikube.sigs.k8s.io/docs/commands/">https://minikube.sigs.k8s.io/docs/commands/</a></li>
 <li><a href="https://richardroseblog.wordpress.com/2017/11/01/minikube-creating-a-cluster/">https://richardroseblog.wordpress.com/2017/11/01/minikube-creating-a-cluster/</a></li>
@@ -7854,15 +7854,15 @@
 <p><img alt="minikube_architecture_virtual_machine_driver" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/minikube_architecture_virtual_machine_driver.png" /></p>
 <h4 id="docker">▼ Dockerドライバーの場合<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
 <p>ホストマシン上にコンテナを作成する。このコンテナ内に仮想サーバーを作成し、単一のワーカーNodeを持つClusterを作成する。</p>
-<p>参考：<a href="https://zenn.dev/castaneai/articles/local-kubernetes-networking">https://zenn.dev/castaneai/articles/local-kubernetes-networking</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/castaneai/articles/local-kubernetes-networking">https://zenn.dev/castaneai/articles/local-kubernetes-networking</a></p>
 <p><img alt="minikube_architecture_docker_driver" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/minikube_architecture_docker_driver.png" /></p>
 <p><br></p>
 <h3 id="_4">ドライバー<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="_5">▼ ドライバーとは<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>ゲスト（ワーカーNode）側のOSを設定する。ホスト側のOS（Linux、MacOS、Windows）や、これらOSのバージョンによって、使用できるドライバーが異なる。</p>
-<p>参考：<a href="https://ytooyama.hatenadiary.jp/entry/2021/06/04/154320">https://ytooyama.hatenadiary.jp/entry/2021/06/04/154320</a></p>
+<p>ℹ️ 参考：<a href="https://ytooyama.hatenadiary.jp/entry/2021/06/04/154320">https://ytooyama.hatenadiary.jp/entry/2021/06/04/154320</a></p>
 <h4 id="_6">▼ ドライバーの種類<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/drivers/">https://minikube.sigs.k8s.io/docs/drivers/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/drivers/">https://minikube.sigs.k8s.io/docs/drivers/</a></p>
 <table>
 <thead>
 <tr>
@@ -7889,17 +7889,17 @@
 <h3 id="pod">Podへの接続<a class="headerlink" href="#pod" title="Permanent link">&para;</a></h3>
 <h4 id="nodeport-service">▼ NodePort Service経由<a class="headerlink" href="#nodeport-service" title="Permanent link">&para;</a></h4>
 <p>NodePort Serviceを作成しておく。<code>minikube ip</code>コマンドを実行することにより、NodeのIPアドレスが返却される。このIPアドレスからPodにアクセスできる。</p>
-<p>参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
+<p>ℹ️ 参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube ip
 </code></pre></div></td></tr></table></div>
 <h4 id="loadbalancer-service">▼ LoadBalancer Service経由<a class="headerlink" href="#loadbalancer-service" title="Permanent link">&para;</a></h4>
 <p>LoadBalancer Serviceを作成しておく。<code>minikube tunnel</code>コマンドを実行することにより、LoadBalancer Serviceに<code>EXTERNAL-IP</code>が割り当てられる。このIPアドレスからPodにアクセスできる。</p>
-<p>参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
+<p>ℹ️ 参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube tunnel
 </code></pre></div></td></tr></table></div>
 <h4 id="ingress">▼ Ingress経由<a class="headerlink" href="#ingress" title="Permanent link">&para;</a></h4>
 <p>ClusterIP ServiceとIngress（Minikubeアドオン製）を作成しておく。<code>kubectl get ingress</code>コマンドを実行することにより、Ingressに割り当てられたIPアドレスを取得できる。<code>minikube ssh</code>コマンドで仮想環境内に接続した後、このIPアドレスからPodにアクセスできる。</p>
-<p>参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
+<p>ℹ️ 参考：<a href="https://future-architect.github.io/articles/20220112a/">https://future-architect.github.io/articles/20220112a/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7915,7 +7915,7 @@ docker@minikube:~$ curl -X GET http://&lt;IPアドレス&gt;
 <h3 id="node">ホストとワーカーNode間マウント<a class="headerlink" href="#node" title="Permanent link">&para;</a></h3>
 <h4 id="node_1">▼ 標準のホストとワーカーNode間マウント<a class="headerlink" href="#node_1" title="Permanent link">&para;</a></h4>
 <p>ホスト側の<code>$MINIKUBE_HOME/files</code>ディレクトリ配下に保存されたファイルは、ゲスト仮想環境内のワーカーNodeのルート直下にマウントされる。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/filesync/">https://minikube.sigs.k8s.io/docs/handbook/filesync/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/filesync/">https://minikube.sigs.k8s.io/docs/handbook/filesync/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7930,7 +7930,7 @@ $ minikube start
 </code></pre></div></td></tr></table></div>
 <h4 id="node_2">▼ 各ドライバーのホストとワーカーNode間マウント<a class="headerlink" href="#node_2" title="Permanent link">&para;</a></h4>
 <p>ホスト以下のディレクトリ配下に保存されたファイルは、ゲスト仮想環境内のワーカーNodeの決められたディレクトリにマウントされる。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/mount/#driver-mounts">https://minikube.sigs.k8s.io/docs/handbook/mount/#driver-mounts</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/mount/#driver-mounts">https://minikube.sigs.k8s.io/docs/handbook/mount/#driver-mounts</a></p>
 <table>
 <thead>
 <tr>
@@ -7983,7 +7983,7 @@ $ minikube start
 <h3 id="node_3">ワーカーNodeとコンテナ間マウント<a class="headerlink" href="#node_3" title="Permanent link">&para;</a></h3>
 <h4 id="node_4">▼ 標準のワーカーNodeとコンテナ間マウント<a class="headerlink" href="#node_4" title="Permanent link">&para;</a></h4>
 <p>ゲスト仮想環境内のワーカーNodeでは、以下のディレクトリからPersistentVolumeが自動的に作成される。そのため、Podでは作成されたPersistentVolumeをPersistentVolumeClaimで指定しさえすればよく、わざわざワーカーNodeのPersistentVolumeを作成する必要がない。ただし、DockerドライバーとPodmanドライバーを使用する場合は、この機能がないことに注意する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/">https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/">https://minikube.sigs.k8s.io/docs/handbook/persistent_volumes/</a></p>
 <ul>
 <li><code>/data</code></li>
 <li><code>/var/lib/minikube</code></li>
@@ -7998,7 +7998,7 @@ $ minikube start
 <h3 id="-node">ホスト-ワーカーNodeとコンテナ間<a class="headerlink" href="#-node" title="Permanent link">&para;</a></h3>
 <h4 id="_7">▼ ホストをコンテナにマウントする方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>Minikubeでは、<code>mount</code>コマンド、ホスト側の<code>$MINIKUBE_HOME/files</code>ディレクトリ、ドライバーごとのを使用して、ホスト側のディレクトリをゲスト仮想環境内のワーカーNodeのディレクトリにマウントできる。またワーカーNodeでは、決められたディレクトリからPersistentVolumeを自動的に作成する。ここで作成されたPersistentVolumeを、PodのPersistentVolumeClaimで指定する。このように、ホストからワーカーNode、ワーカーNodeからPodへマウントを実行することにより、ホスト側のディレクトリをPod内コンテナに間接的にマウントできる。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/48534980/mount-local-directory-into-pod-in-minikube">https://stackoverflow.com/questions/48534980/mount-local-directory-into-pod-in-minikube</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/48534980/mount-local-directory-into-pod-in-minikube">https://stackoverflow.com/questions/48534980/mount-local-directory-into-pod-in-minikube</a></p>
 <h4 id="hyperkit">▼ HyperKitドライバーを使用する場合<a class="headerlink" href="#hyperkit" title="Permanent link">&para;</a></h4>
 <p><strong>＊例＊</strong></p>
 <p>（１）HyperKitドライバーを使用する場合、ホストとワーカーNode間のマウント機能がない。そこで<code>mount</code>コマンドを使用して、ホスト側のディレクトリをワーカーNodeのボリュームにマウントする。</p>
@@ -8066,7 +8066,7 @@ $ minikube start
 <h3 id="kubernetescidr">KubernetesリソースのCIDRブロック<a class="headerlink" href="#kubernetescidr" title="Permanent link">&para;</a></h3>
 <h4 id="node_5">▼ ワーカーNode<a class="headerlink" href="#node_5" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode内で<code>ip addr</code>コマンドを実行すると、ワーカーNodeに割り当てられたCIDRブロックを確認できる。</p>
-<p>参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
+<p>ℹ️ 参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
 <p><strong>＊例＊</strong></p>
 <p>CNIとしてBridgeアドオンを使用している。CIDRブロックは、<code>192.168.49.2/24</code>である。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8085,7 +8085,7 @@ docker@minikube:~$ ip addr <span class="p">|</span> grep eth0
 </code></pre></div></td></tr></table></div>
 <h4 id="pod_1">▼ Pod<a class="headerlink" href="#pod_1" title="Permanent link">&para;</a></h4>
 <p>ワーカーNode内で<code>/etc/cni/net.d</code>ディレクトリ配下にあるファイルを確認すると、Podに割り当てられたCIDRブロックを確認できる。</p>
-<p>参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
+<p>ℹ️ 参考：<a href="https://nishipy.com/archives/1467">https://nishipy.com/archives/1467</a></p>
 <p><strong>＊例＊</strong></p>
 <p>CNIとしてBridgeアドオンを使用している。CIDRブロックは、<code>10.85.0.0/16</code>である。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8153,10 +8153,10 @@ docker@minikube:~$ cat /etc/cni/net.d/100-crio-bridge.conf
 <p>Minikubeのアドオンを操作する。</p>
 <h4 id="enable">▼ enable<a class="headerlink" href="#enable" title="Permanent link">&para;</a></h4>
 <p>アドオンを有効化するか否かを設定する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/addons/">https://minikube.sigs.k8s.io/docs/commands/addons/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/addons/">https://minikube.sigs.k8s.io/docs/commands/addons/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>開発環境専用のIngressコントローラーとして、Nginx Ingressコントローラーを有効化するか否かを設定する。本番環境では、同じくNginxIngressコントローラーや、クラウドプロバイダーのロードバランサーなどを使用する。</p>
-<p>参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/">https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/</a></p>
+<p>ℹ️ 参考：<a href="https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/">https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8244,7 +8244,7 @@ foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span
 <p><br></p>
 <h3 id="cni">cni<a class="headerlink" href="#cni" title="Permanent link">&para;</a></h3>
 <p>使用するcniアドオンを設定する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/start/">https://minikube.sigs.k8s.io/docs/commands/start/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/start/">https://minikube.sigs.k8s.io/docs/commands/start/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube start --cni<span class="o">=</span>bridge
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8253,7 +8253,7 @@ foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span
 <p>minikubeコマンドに関するパラメーターを操作する。</p>
 <h4 id="set">▼ set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h4>
 <p><code>kubectl</code>コマンド実行時のデフォルト値を設定する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/config/">https://minikube.sigs.k8s.io/docs/commands/config/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/config/">https://minikube.sigs.k8s.io/docs/commands/config/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>デフォルトのドライバーを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube config <span class="nb">set</span> driver virtualbox
@@ -8265,7 +8265,7 @@ foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>minikube config <span class="nb">set</span> memory <span class="m">16384</span>
 </code></pre></div></td></tr></table></div>
 <p>Kubernetesのバージョンのデフォルト値を設定する。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/45181585/how-to-use-new-release-of-kubernetes-as-default-in-minikube">https://stackoverflow.com/questions/45181585/how-to-use-new-release-of-kubernetes-as-default-in-minikube</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/45181585/how-to-use-new-release-of-kubernetes-as-default-in-minikube">https://stackoverflow.com/questions/45181585/how-to-use-new-release-of-kubernetes-as-default-in-minikube</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube config <span class="nb">set</span> kubernetes-version<span class="o">=</span>v1.23.0
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8289,7 +8289,7 @@ foo-ingress   nginx   *       &lt;IPアドレス&gt;    <span class="m">80</span
 <h3 id="docker-env">docker-env<a class="headerlink" href="#docker-env" title="Permanent link">&para;</a></h3>
 <h4 id="docker-env_1">▼ docker-envとは<a class="headerlink" href="#docker-env_1" title="Permanent link">&para;</a></h4>
 <p>ホストでdockerコマンドを実行した時に、ホスト側のdockerデーモンでなく、ゲスト仮想環境内のワーカーNodeのdockerデーモンをコールできるように環境変数を設定する。バージョンタグが<code>latest</code>であると、仮想環境外に対してイメージをプルしてしまうことに注意する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/docker-env/">https://minikube.sigs.k8s.io/docs/commands/docker-env/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/docker-env/">https://minikube.sigs.k8s.io/docs/commands/docker-env/</a></p>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8349,7 +8349,7 @@ $ <span class="nb">eval</span> <span class="k">$(</span>minikube -p minikube doc
 <h3 id="kubectl">kubectl<a class="headerlink" href="#kubectl" title="Permanent link">&para;</a></h3>
 <h4 id="kubectl_1">▼ kubectlとは<a class="headerlink" href="#kubectl_1" title="Permanent link">&para;</a></h4>
 <p>Minikubeのkube-apiserverをコンテキストとする<code>kubectl</code>コマンドを実行する。ローカルマシンに<code>kubectl</code>コマンドがインストールされていなくとも、Minikubeに対してこれを実行できる。ClientとServerのバージョンが自動的に揃えられる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://minikube.sigs.k8s.io/docs/handbook/kubectl/">https://minikube.sigs.k8s.io/docs/handbook/kubectl/</a></li>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_command.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_command.html</a></li>
@@ -8412,7 +8412,7 @@ Server Version: version.Info<span class="o">{</span>
 <h3 id="mount">mount<a class="headerlink" href="#mount" title="Permanent link">&para;</a></h3>
 <h4 id="mount_1">▼ mountとは<a class="headerlink" href="#mount_1" title="Permanent link">&para;</a></h4>
 <p>ホスト側のファイルまたはディレクトリを、ゲスト仮想環境の指定したディレクトリにマウントする。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/mount/">https://minikube.sigs.k8s.io/docs/handbook/mount/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/mount/">https://minikube.sigs.k8s.io/docs/handbook/mount/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8446,7 +8446,7 @@ Server Version: version.Info<span class="o">{</span>
 <p><br></p>
 <h3 id="update-context">update-context<a class="headerlink" href="#update-context" title="Permanent link">&para;</a></h3>
 <p>Minikubeのコンテキスト情報が誤っている場合に、正しく修正する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/update-context/">https://minikube.sigs.k8s.io/docs/commands/update-context/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/update-context/">https://minikube.sigs.k8s.io/docs/commands/update-context/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8459,7 +8459,7 @@ Server Version: version.Info<span class="o">{</span>
 <h3 id="service">service<a class="headerlink" href="#service" title="Permanent link">&para;</a></h3>
 <h4 id="service_1">▼ serviceとは<a class="headerlink" href="#service_1" title="Permanent link">&para;</a></h4>
 <p>NodePort ServiceやLoadBalancer Serviceを指定し、ホストからServiceにポートフォワーディングを実行する。また、ServiceのIPアドレスを返却する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/service/">https://minikube.sigs.k8s.io/docs/commands/service/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/service/">https://minikube.sigs.k8s.io/docs/commands/service/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8481,7 +8481,7 @@ Server Version: version.Info<span class="o">{</span>
 Opening service &lt;Service名&gt; <span class="k">in</span> default browser...
 </code></pre></div></td></tr></table></div>
 <p>ただし、ポートフォワーディングのポート番号がランダムなため、もしポート番号を固定したい場合は、Serviceを経由せずに直接的にPodに接続できる<code>kubectl port-forward</code>コマンドを使用すると良い。</p>
-<p>参考：<a href="https://mome-n.com/posts/minikube-service-fixed-port/">https://mome-n.com/posts/minikube-service-fixed-port/</a></p>
+<p>ℹ️ 参考：<a href="https://mome-n.com/posts/minikube-service-fixed-port/">https://mome-n.com/posts/minikube-service-fixed-port/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl port-forward &lt;Service名&gt; <span class="m">8080</span>:80
 </code></pre></div></td></tr></table></div>
 <p>ServiceのIPアドレスがワーカーNodeのIPアドレスすることは、<code>minikube ip</code>コマンドから確認できる。</p>
@@ -8492,7 +8492,7 @@ Opening service &lt;Service名&gt; <span class="k">in</span> default browser...
 *.*.*.*
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、<code>minikube service</code>コマンドを使用せずに、<code>ssh</code>コマンドで仮想環境に接続しても、同様にServiceにリクエストを送信できる。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/50564446/minikube-how-to-access-pod-via-pod-ip-using-curl">https://stackoverflow.com/questions/50564446/minikube-how-to-access-pod-via-pod-ip-using-curl</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/50564446/minikube-how-to-access-pod-via-pod-ip-using-curl">https://stackoverflow.com/questions/50564446/minikube-how-to-access-pod-via-pod-ip-using-curl</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8539,7 +8539,7 @@ http://*.*.*.*:57761
 <h3 id="ssh">ssh<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
 <h4 id="ssh_1">▼ sshとは<a class="headerlink" href="#ssh_1" title="Permanent link">&para;</a></h4>
 <p>仮想環境にSSH接続を行う。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://minikube.sigs.k8s.io/docs/commands/ssh/">https://minikube.sigs.k8s.io/docs/commands/ssh/</a></li>
 <li><a href="https://garafu.blogspot.com/2019/10/ssh-minikube-k8s-vm.html">https://garafu.blogspot.com/2019/10/ssh-minikube-k8s-vm.html</a></li>
@@ -8676,7 +8676,7 @@ drwx------ <span class="m">2</span> docker docker  <span class="m">80</span> Jan
 <h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">&para;</a></h3>
 <h4 id="start_1">▼ startとは<a class="headerlink" href="#start_1" title="Permanent link">&para;</a></h4>
 <p>ゲスト仮想環境を作成し、仮想環境内にワーカーNodeを作成する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/commands/start/">https://minikube.sigs.k8s.io/docs/commands/start/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/commands/start/">https://minikube.sigs.k8s.io/docs/commands/start/</a></p>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8795,7 +8795,7 @@ Swap:          <span class="m">1023</span>           <span class="m">0</span>   
 </code></pre></div></td></tr></table></div>
 <h4 id="-driver">▼ --driver<a class="headerlink" href="#-driver" title="Permanent link">&para;</a></h4>
 <p>ゲスト仮想環境のドライバーを指定し、<code>start</code>コマンドを実行する。ホストごとに標準の仮想環境が異なり、MacOSはDockerドライバーがデフォルトである。ドライバーの使用前に、これをインストールしておく必要があることに注意する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/drivers/">https://minikube.sigs.k8s.io/docs/drivers/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/drivers/">https://minikube.sigs.k8s.io/docs/drivers/</a></p>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 事前にVirtualBoxのダウンロードが必要。</span>
@@ -8803,7 +8803,7 @@ $ minikube start --driver<span class="o">=</span>virtualbox
 </code></pre></div></td></tr></table></div>
 <h4 id="-kubernetes-vsersion">▼ --kubernetes-vsersion<a class="headerlink" href="#-kubernetes-vsersion" title="Permanent link">&para;</a></h4>
 <p>Minikubeで稼働させるKubernetesのバージョンを指定しつつ、<code>start</code>コマンドを実行する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/config/#kubernetes-configuration">https://minikube.sigs.k8s.io/docs/handbook/config/#kubernetes-configuration</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/config/#kubernetes-configuration">https://minikube.sigs.k8s.io/docs/handbook/config/#kubernetes-configuration</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube start --kubernetes-version<span class="o">=</span>v1.23.0
 </code></pre></div></td></tr></table></div>
 <h4 id="-mount-mount-string">▼ --mount、--mount--string<a class="headerlink" href="#-mount-mount-string" title="Permanent link">&para;</a></h4>
@@ -8832,7 +8832,7 @@ minikube-m03   Ready    &lt;none&gt;                 19s   v1.20.2
 <h3 id="tunnel">tunnel<a class="headerlink" href="#tunnel" title="Permanent link">&para;</a></h3>
 <h4 id="tunnel_1">▼ tunnelとは<a class="headerlink" href="#tunnel_1" title="Permanent link">&para;</a></h4>
 <p>LoadBalancerを一時的に作成し、LoadBalancer Serviceに自動的に紐づける。紐付けられたLoadBalancer Serviceには『External Endpoints（<code>http://127.0.0.1:80</code>）』が割り当てられ、ここからLoadBalancer Serviceにアクセスできるようになる。Clusterネットワーク外からPodに接続できるようになる。<code>minikube ssh</code>コマンドでワーカーNodeに接続しつつ、公開されたServiceにリクエストを送信できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://minikube.sigs.k8s.io/docs/commands/tunnel/">https://minikube.sigs.k8s.io/docs/commands/tunnel/</a></li>
 <li><a href="https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel">https://minikube.sigs.k8s.io/docs/handbook/accessing/#using-minikube-tunnel</a></li>
@@ -8860,7 +8860,7 @@ minikube-m03   Ready    &lt;none&gt;                 19s   v1.20.2
 <h2 id="03">03. デバッグ<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
 <h3 id="-alsologtostderr">--alsologtostderr<a class="headerlink" href="#-alsologtostderr" title="Permanent link">&para;</a></h3>
 <p>コマンドの詳細な実行ログを標準エラー出力に出力する。</p>
-<p>参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/troubleshooting/">https://minikube.sigs.k8s.io/docs/handbook/troubleshooting/</a></p>
+<p>ℹ️ 参考：<a href="https://minikube.sigs.k8s.io/docs/handbook/troubleshooting/">https://minikube.sigs.k8s.io/docs/handbook/troubleshooting/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ minikube start --alsologtostderr
 </code></pre></div></td></tr></table></div>
 
@@ -8869,7 +8869,7 @@ minikube-m03   Ready    &lt;none&gt;                 19s   v1.20.2
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

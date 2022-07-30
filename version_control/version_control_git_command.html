@@ -6310,14 +6310,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7836,7 +7836,7 @@
 <h1 id="git">コマンド@Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ系コマンド<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
@@ -7886,7 +7886,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git config --local --list
 </code></pre></div></td></tr></table></div>
 <p>Macでは、1つのマシンで<code>2</code>個のGutHubアカウントを使用する場合、キーチェーンという機能で設定が必要になる。</p>
-<p>参考：<a href="https://sy-base.com/myrobotics/others/git-push_403error/">https://sy-base.com/myrobotics/others/git-push_403error/</a></p>
+<p>ℹ️ 参考：<a href="https://sy-base.com/myrobotics/others/git-push_403error/">https://sy-base.com/myrobotics/others/git-push_403error/</a></p>
 <h4 id="-username">▼ --&lt;影響範囲&gt; user.name<a class="headerlink" href="#-username" title="Permanent link">&para;</a></h4>
 <p>AuthorとCommitterの名前を設定する。<code>local</code>が一番最後に上書きされ、適用される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git config --local user.name <span class="s2">&quot;hiroki.hasegawa&quot;</span>
@@ -7953,7 +7953,7 @@ Date:   Sat Sep <span class="m">12</span> <span class="m">00</span>:00:00 <span 
 <h3 id="ignore">ignore<a class="headerlink" href="#ignore" title="Permanent link">&para;</a></h3>
 <h4 id="global-ignore">▼ global ignore<a class="headerlink" href="#global-ignore" title="Permanent link">&para;</a></h4>
 <p><code>~/.config/git/ignore</code>ファイルに設定されたファイルは、グローバルに無視される。</p>
-<p>参考：<a href="https://zenn.dev/phi/articles/gitignore-global-ds-store">https://zenn.dev/phi/articles/gitignore-global-ds-store</a></p>
+<p>ℹ️ 参考：<a href="https://zenn.dev/phi/articles/gitignore-global-ds-store">https://zenn.dev/phi/articles/gitignore-global-ds-store</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>.DS_Store
 .idea/
@@ -8028,7 +8028,7 @@ and the repository exists.
 <p><br></p>
 <h3 id="github">GitHubへの公開鍵の登録方法<a class="headerlink" href="#github" title="Permanent link">&para;</a></h3>
 <p>GitHubとSSH接続を行うために、秘密鍵と公開鍵は次の方法で作成し、GitHubアカウント設定画面のSSHの項目に登録する。</p>
-<p>参考：<a href="https://gist.github.com/g-empr/fc793caf3a0a18c31d8c708787bdf5f0">https://gist.github.com/g-empr/fc793caf3a0a18c31d8c708787bdf5f0</a></p>
+<p>ℹ️ 参考：<a href="https://gist.github.com/g-empr/fc793caf3a0a18c31d8c708787bdf5f0">https://gist.github.com/g-empr/fc793caf3a0a18c31d8c708787bdf5f0</a></p>
 <p>（１）<code>ssh-keygen</code>コマンドで、秘密鍵と効果鍵のセットを作成する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8305,7 +8305,7 @@ Dropped refs/stash@<span class="o">{</span><span class="m">0</span><span class="
 <p><br></p>
 <h4 id="-porcelain">▼ --porcelain<a class="headerlink" href="#-porcelain" title="Permanent link">&para;</a></h4>
 <p>コマンドに入力できる形式で出力する。CIの自動化で使うことが多い。</p>
-<p>参考：<a href="https://www.stefanjudis.com/today-i-learned/the-short-version-of-git-status-and-the-close-but-different-porcelain-mode/">https://www.stefanjudis.com/today-i-learned/the-short-version-of-git-status-and-the-close-but-different-porcelain-mode/</a></p>
+<p>ℹ️ 参考：<a href="https://www.stefanjudis.com/today-i-learned/the-short-version-of-git-status-and-the-close-but-different-porcelain-mode/">https://www.stefanjudis.com/today-i-learned/the-short-version-of-git-status-and-the-close-but-different-porcelain-mode/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>

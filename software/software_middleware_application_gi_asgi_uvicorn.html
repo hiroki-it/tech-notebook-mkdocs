@@ -6499,14 +6499,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6950,7 +6950,7 @@
 <h1 id="uvicorn">Uvicorn＠ミドルウェア<a class="headerlink" href="#uvicorn" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-uvicorn">01. Uvicornの仕組み<a class="headerlink" href="#01-uvicorn" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -6960,7 +6960,7 @@
 <h3 id="uvicorn_1">開発環境でのUvicornの実行方法<a class="headerlink" href="#uvicorn_1" title="Permanent link">&para;</a></h3>
 <h4 id="uvicorn_2">▼ uvicornコマンドを使用する場合<a class="headerlink" href="#uvicorn_2" title="Permanent link">&para;</a></h4>
 <p>アプリケーションのエントリーポイントを<code>uvicorn</code>コマンドで指定する。開発のしやすさから、開発環境ではUvicornを直接的に実行し、その時に<code>reload</code>オプションを使用した方が良い。</p>
-<p>参考：<a href="https://www.uvicorn.org/deployment/#running-from-the-command-line">https://www.uvicorn.org/deployment/#running-from-the-command-line</a></p>
+<p>ℹ️ 参考：<a href="https://www.uvicorn.org/deployment/#running-from-the-command-line">https://www.uvicorn.org/deployment/#running-from-the-command-line</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -6973,7 +6973,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="uvicornrun">▼ uvicornパッケージの<code>run</code>関数を使用する場合<a class="headerlink" href="#uvicornrun" title="Permanent link">&para;</a></h4>
 <p>アプリケーションのエントリーポイントを<code>python</code>コマンドで直接的に指定する場合、Uvicornを実行できるように、uvicornパッケージの<code>run</code>関数をエントリーポイントで実行する。ただし、他の<code>.py</code>ファイルからエントリーポイントを読み込んだ場合（<code>from main import app</code>）に、Uvicornを再実行する必要はないため、『<code>__name__ == "__main__"</code>』内にこれを実行する。</p>
-<p>参考：<a href="https://www.uvicorn.org/deployment/#running-programmatically">https://www.uvicorn.org/deployment/#running-programmatically</a></p>
+<p>ℹ️ 参考：<a href="https://www.uvicorn.org/deployment/#running-programmatically">https://www.uvicorn.org/deployment/#running-programmatically</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ python main.py
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -7001,7 +7001,7 @@
 <h4 id="gunicorn">▼ Gunicornを使用する場合<a class="headerlink" href="#gunicorn" title="Permanent link">&para;</a></h4>
 <p><img alt="uvicorn_with-gunicorn" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/uvicorn_with-gunicorn.png" /></p>
 <p>パフォーマンス上の理由で、本番環境ではGunicornを使用してUvicornのプロセスを管理し、プロセスを間接的に実行した方が良い。<code>w</code>オプションを使用して、プロセスの並列数を設定できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.uvicorn.org/#running-with-gunicorn">https://www.uvicorn.org/#running-with-gunicorn</a></li>
 <li><a href="https://www.uvicorn.org/deployment/#gunicorn">https://www.uvicorn.org/deployment/#gunicorn</a></li>
@@ -7018,7 +7018,7 @@
 <span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;gunicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-w&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-k&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;uvicorn.workers.UvicornWorker&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--bind&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0:8000&quot;</span><span class="w"> </span><span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <p>なお、Gunicornを使用する場合には、standardタイプのUvicornをインストールする必要がある。</p>
-<p>参考：<a href="https://www.uvicorn.org/#quickstart">https://www.uvicorn.org/#quickstart</a></p>
+<p>ℹ️ 参考：<a href="https://www.uvicorn.org/#quickstart">https://www.uvicorn.org/#quickstart</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ pip3 install uvicorn<span class="o">[</span>standard<span class="o">]</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7049,7 +7049,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

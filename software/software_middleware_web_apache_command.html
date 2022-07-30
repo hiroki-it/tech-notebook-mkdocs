@@ -6461,14 +6461,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6874,62 +6874,62 @@
 <h1 id="apache">コマンド＠Apache<a class="headerlink" href="#apache" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-apachectl">01. apachectlコマンド<a class="headerlink" href="#01-apachectl" title="Permanent link">&para;</a></h2>
 <h3 id="configtest">configtest<a class="headerlink" href="#configtest" title="Permanent link">&para;</a></h3>
 <p>設定ファイルのバリデーションを実行する。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ apachectl configtest
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="graceful">graceful<a class="headerlink" href="#graceful" title="Permanent link">&para;</a></h3>
 <p>Apacheを段階的に再起動する。安全に再起動できる。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ apachectl graceful
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="-t">-t<a class="headerlink" href="#-t" title="Permanent link">&para;</a></h3>
 <p>設定ファイルのバリデーションを実行する。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html">https://httpd.apache.org/docs/trunk/ja/programs/apachectl.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ apachectl -t
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="02-httpd">02. httpdコマンド<a class="headerlink" href="#02-httpd" title="Permanent link">&para;</a></h2>
 <h3 id="-d">-D<a class="headerlink" href="#-d" title="Permanent link">&para;</a></h3>
 <p>読み込まれた<code>conf</code>ファイルの一覧を取得する。この結果から、使われていない<code>conf</code>ファイルもを検出できる。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ httpd -t -D DUMP_CONFIG <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep <span class="s2">&quot;# In&quot;</span> <span class="p">|</span> awk <span class="s2">&quot;{print </span><span class="nv">$4</span><span class="s2">}&quot;</span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="-l">-l<a class="headerlink" href="#-l" title="Permanent link">&para;</a></h3>
 <p>コンパイル済みのモジュールの一覧を取得する。表示されているからといって、読み込まれているとは限らない。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ httpd -l
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="-l_1">-L<a class="headerlink" href="#-l_1" title="Permanent link">&para;</a></h3>
 <p>特定のディレクティブを実装するべき設定ファイルの一覧を取得する。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ httpd -L
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="-m">-M<a class="headerlink" href="#-m" title="Permanent link">&para;</a></h3>
 <p>コンパイル済みのモジュールのうちで、実際に読み込まれているモジュールを取得する。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ httpd -M
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="-s">-S<a class="headerlink" href="#-s" title="Permanent link">&para;</a></h3>
 <p>実際に読み込まれたVirtualHostの設定を取得する。</p>
-<p>参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
+<p>ℹ️ 参考：<a href="https://httpd.apache.org/docs/2.4/programs/httpd.html">https://httpd.apache.org/docs/2.4/programs/httpd.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ httpd -S
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h2 id="03-service">03. serviceコマンドによる操作<a class="headerlink" href="#03-service" title="Permanent link">&para;</a></h2>
 <h3 id="httpd-configtest">httpd configtest<a class="headerlink" href="#httpd-configtest" title="Permanent link">&para;</a></h3>
 <p>Apacheの設定ファイルのバリデーションを実行する。</p>
-<p>参考：<a href="http://www.rickynews.com/blog/2014/09/24/quick-apache-nginx-restart/">http://www.rickynews.com/blog/2014/09/24/quick-apache-nginx-restart/</a></p>
+<p>ℹ️ 参考：<a href="http://www.rickynews.com/blog/2014/09/24/quick-apache-nginx-restart/">http://www.rickynews.com/blog/2014/09/24/quick-apache-nginx-restart/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ service httpd configtest
 </code></pre></div></td></tr></table></div>
 
@@ -6938,7 +6938,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

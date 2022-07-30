@@ -6662,14 +6662,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7276,7 +7276,7 @@
 <h1 id="helmfilehelm">Helmfile＠Helm<a class="headerlink" href="#helmfilehelm" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-helmfile">01. Helmfileの仕組み<a class="headerlink" href="#01-helmfile" title="Permanent link">&para;</a></h2>
 <p>helmコマンドを宣言的に実行できる。ただし、ArgoCDでも同様のことを設定できるため、もしhelmコマンドの実行を自動化したい場合は、ArgoCDを使用すると良い。</p>
@@ -7285,7 +7285,7 @@
 <h3 id="_2">ディレクトリ構成<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ マイクロサービス別<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>マイクロサービスをapplyの単位とみなし、マイクロサービスごとに別にディレクトリを作成する。各マイクロサービスのディレクトリには、<code>helmfile.d</code>ディレクトリを置き、ここにリリース単位の<code>helmfile.yaml</code>ファイルを置く。</p>
-<p>参考：<a href="https://speakerdeck.com/j5ik2o/helmfilenituite">https://speakerdeck.com/j5ik2o/helmfilenituite</a></p>
+<p>ℹ️ 参考：<a href="https://speakerdeck.com/j5ik2o/helmfilenituite">https://speakerdeck.com/j5ik2o/helmfilenituite</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7381,7 +7381,7 @@
 <h2 id="03-helmfileyaml">03. helmfile.yaml<a class="headerlink" href="#03-helmfileyaml" title="Permanent link">&para;</a></h2>
 <h3 id="environments">environments<a class="headerlink" href="#environments" title="Permanent link">&para;</a></h3>
 <p>環境名のリストとして機能し、<code>helmfile</code>コマンド時に<code>helmfile.yaml</code>ファイル内に環境名を渡せる。</p>
-<p>参考：<a href="https://helmfile.readthedocs.io/en/latest/#environment-values">https://helmfile.readthedocs.io/en/latest/#environment-values</a></p>
+<p>ℹ️ 参考：<a href="https://helmfile.readthedocs.io/en/latest/#environment-values">https://helmfile.readthedocs.io/en/latest/#environment-values</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7448,7 +7448,7 @@ $ helmfile -e dev apply
 </code></pre></div></td></tr></table></div>
 <h4 id="secrets">▼ secrets<a class="headerlink" href="#secrets" title="Permanent link">&para;</a></h4>
 <p>Helmの実行時に複合化するSecretのファイルを設定する。</p>
-<p>参考：<a href="https://helmfile.readthedocs.io/en/latest/#secrets">https://helmfile.readthedocs.io/en/latest/#secrets</a></p>
+<p>ℹ️ 参考：<a href="https://helmfile.readthedocs.io/en/latest/#secrets">https://helmfile.readthedocs.io/en/latest/#secrets</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">secrets</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./foo-secrets.yaml</span><span class="w"></span>
@@ -7472,26 +7472,26 @@ $ helmfile -e dev apply
 <h3 id="global">globalオプション<a class="headerlink" href="#global" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ オプション無し<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>使用する<code>helmfile.d</code>ディレクトリ下にある<code>helm.yaml</code>ファイルを再帰的に使用する。</p>
-<p>参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># helmfile.dディレクトリ配下を再帰的に読み込む。</span>
 $ helmfile &lt;サブコマンド&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-e">▼ -e<a class="headerlink" href="#-e" title="Permanent link">&para;</a></h4>
 <p>リリース対象の実行環境名を設定する。</p>
-<p>参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helmfile -e prd &lt;コマンド&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="-f">▼ -f<a class="headerlink" href="#-f" title="Permanent link">&para;</a></h4>
 <p>使用する<code>helmfile.yaml</code>ファイルを指定する。</p>
-<p>参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#cli-reference">https://github.com/helmfile/helmfile#cli-reference</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helmfile -f ./helmfile.yaml &lt;コマンド&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
 <h4 id="apply_1">▼ apply<a class="headerlink" href="#apply_1" title="Permanent link">&para;</a></h4>
 <p>まず<code>helmfile diff</code>コマンドを実行し、この時に差分があれば、<code>helmfile apply</code>コマンドを実行する。</p>
-<p>参考：<a href="https://github.com/helmfile/helmfile#apply">https://github.com/helmfile/helmfile#apply</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#apply">https://github.com/helmfile/helmfile#apply</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7530,14 +7530,14 @@ foo-release         ./charts/foo         <span class="m">0</span>.0.1
 <h3 id="destroy">destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
 <h4 id="destroy_1">▼ destroyとは<a class="headerlink" href="#destroy_1" title="Permanent link">&para;</a></h4>
 <p>全てのリリースをアンインストールする。</p>
-<p>参考：<a href="https://github.com/helmfile/helmfile#destroy">https://github.com/helmfile/helmfile#destroy</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#destroy">https://github.com/helmfile/helmfile#destroy</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helmfile destroy
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="diff">diff<a class="headerlink" href="#diff" title="Permanent link">&para;</a></h3>
 <h4 id="diff_1">▼ diffとは<a class="headerlink" href="#diff_1" title="Permanent link">&para;</a></h4>
 <p>全てのリリースに対して、helm-diffプラグインを実行する。helm-diffプラグインでは、リリース済みの最新バージョンと、<code>helm upgrade --debug --dry-run</code>コマンドの差分を取得する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/helmfile/helmfile#diff">https://github.com/helmfile/helmfile#diff</a></li>
 <li><a href="https://github.com/databus23/helm-diff#helm-diff-plugin">https://github.com/databus23/helm-diff#helm-diff-plugin</a></li>
@@ -7574,7 +7574,7 @@ Source: project/manifests/persistent-volume.yaml
 <h3 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h3>
 <h4 id="sync_1">▼ syncとは<a class="headerlink" href="#sync_1" title="Permanent link">&para;</a></h4>
 <p>全てのリリースに関して、<code>helm upgrade --install</code>コマンドを実行する。</p>
-<p>参考：helmfile/helmfile#sync</p>
+<p>ℹ️ 参考：helmfile/helmfile#sync</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helmfile sync
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -7590,7 +7590,7 @@ Source: project/manifests/persistent-volume.yaml
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

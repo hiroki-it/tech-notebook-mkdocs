@@ -6888,14 +6888,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7724,13 +7724,13 @@
 <h1 id="laravel">認証/認可系パッケージ＠Laravel<a class="headerlink" href="#laravel" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 認証<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">ガード<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ ガードとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>ドライバーとプロバイダーを定義する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#introduction">https://readouble.com/laravel/8.x/ja/authentication.html#introduction</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#introduction">https://readouble.com/laravel/8.x/ja/authentication.html#introduction</a></p>
 <table>
 <thead>
 <tr>
@@ -7745,15 +7745,15 @@
 </tr>
 <tr>
 <td>APIガード</td>
-<td>Bearer認証、APIキー認証、OAuth認証、などのために使用する。それぞれの認証方法に違いについては、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>Bearer認証、APIキー認証、OAuth認証、などのために使用する。それぞれの認証方法に違いについては、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="_4">▼ カスタムガード<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Laravelがデフォルトで持たないドライバーとプロバイダーを持つガードを定義する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#adding-custom-guards">https://readouble.com/laravel/8.x/ja/authentication.html#adding-custom-guards</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#adding-custom-guards">https://readouble.com/laravel/8.x/ja/authentication.html#adding-custom-guards</a></p>
 <p>APIガードの認証で使用するトークンをJWTに変更したい時には、以下のパッケージがおすすめ。</p>
-<p>参考：<a href="https://github.com/tymondesigns/jwt-auth">https://github.com/tymondesigns/jwt-auth</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/tymondesigns/jwt-auth">https://github.com/tymondesigns/jwt-auth</a></p>
 <p><br></p>
 <h3 id="_5">ドライバー<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">▼ ドライバーとは<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -7782,7 +7782,7 @@
 </tbody>
 </table>
 <p>ドライバーの種類に応じて、AuthManagerクラスがGuardインターフェースの実装クラスを返却する。<code>auth.php</code>ファイルにて、例えばtokenドライバーを選択した場合は、TokenGuardクラスが返却される。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://teratail.com/questions/171582">https://teratail.com/questions/171582</a></li>
 <li><a href="https://laravel.com/api/8.x/Illuminate/Auth/AuthManager.html">https://laravel.com/api/8.x/Illuminate/Auth/AuthManager.html</a></li>
@@ -7831,19 +7831,19 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_7">▼ ルーティングの保護<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>BeforeMiddlwareで認証済みのユーザーか否かを検証し、もし未認証の場合は、ログインページにリダイレクトさせる。これにより、未認証のユーザーがコントローラーを実行することを防ぐ。</p>
-<p>参考：<a href="https://qiita.com/yamotuki/items/b96978f8e379e285ecb6">https://qiita.com/yamotuki/items/b96978f8e379e285ecb6</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/yamotuki/items/b96978f8e379e285ecb6">https://qiita.com/yamotuki/items/b96978f8e379e285ecb6</a></p>
 <p><br></p>
 <h3 id="_8">プロバイダ<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <h4 id="_9">▼ プロバイダとは<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <p>認証データをDBから取得するオブジェクトを定義する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#introduction">https://readouble.com/laravel/8.x/ja/authentication.html#introduction</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#introduction">https://readouble.com/laravel/8.x/ja/authentication.html#introduction</a></p>
 <p><br></p>
 <h3 id="idform">セッションIDを使用したForm認証<a class="headerlink" href="#idform" title="Permanent link">&para;</a></h3>
 <h4 id="session">▼ sessionドライバー<a class="headerlink" href="#session" title="Permanent link">&para;</a></h4>
 <p>sessionドライバーを選択する。</p>
 <h4 id="_10">▼ 全てのユーザーが同一権限を持つ場合<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>SessionGuardクラスの<code>attempt</code>メソッドをコールしてパスワードをハッシュ化し、DBのハッシュ値と照合する。認証が成功すると、認証セッションを開始する。<code>redirect</code>メソッドで、認証後の初期ページにリダイレクトする。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#authenticating-users">https://readouble.com/laravel/8.x/ja/authentication.html#authenticating-users</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/authentication.html#authenticating-users">https://readouble.com/laravel/8.x/ja/authentication.html#authenticating-users</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7929,7 +7929,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_11">▼ 一部のユーザーが異なる権限を持つ場合<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>ユーザーごとに認証方法を区別しつつ、同じ認証後のWebページにリダイレクトさせられる。</p>
-<p>参考：<a href="https://blog.capilano-fw.com/?p=8159">https://blog.capilano-fw.com/?p=8159</a></p>
+<p>ℹ️ 参考：<a href="https://blog.capilano-fw.com/?p=8159">https://blog.capilano-fw.com/?p=8159</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>権限の異なるユーザーに応じたガード、またガードに紐付けるEloquentモデルをプロバイダを定義しておく。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -8170,7 +8170,7 @@
 <h3 id="_15">ポリシー<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <h4 id="_16">▼ ポリシーとは<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>DBレコードレベルの認可スコープを定義する。Eloquentモデルに紐付く特定のレコードにアクセスできなくなる。Policyクラスのメソッドによって、リクエスト中の認証済みユーザーが自動的にインジェクションされる。EloquentモデルとPolicyクラスの紐付けはAuthServiceProviderクラスで定義する</p>
-<p>参考：<a href="https://qiita.com/mpyw/items/8c5413b99b8e299f7002#%E7%AC%AC1%E5%BC%95%E6%95%B0%E3%81%AF%E5%BF%85%E3%81%9A-authenticatable-%E3%81%AB%E3%81%AA%E3%82%8B%E4%BD%86%E3%81%97">https://qiita.com/mpyw/items/8c5413b99b8e299f7002#%E7%AC%AC1%E5%BC%95%E6%95%B0%E3%81%AF%E5%BF%85%E3%81%9A-authenticatable-%E3%81%AB%E3%81%AA%E3%82%8B%E4%BD%86%E3%81%97</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/mpyw/items/8c5413b99b8e299f7002#%E7%AC%AC1%E5%BC%95%E6%95%B0%E3%81%AF%E5%BF%85%E3%81%9A-authenticatable-%E3%81%AB%E3%81%AA%E3%82%8B%E4%BD%86%E3%81%97">https://qiita.com/mpyw/items/8c5413b99b8e299f7002#%E7%AC%AC1%E5%BC%95%E6%95%B0%E3%81%AF%E5%BF%85%E3%81%9A-authenticatable-%E3%81%AB%E3%81%AA%E3%82%8B%E4%BD%86%E3%81%97</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -8335,7 +8335,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="authorizemiddleware">▼ AuthorizeMiddlewareによる認可<a class="headerlink" href="#authorizemiddleware" title="Permanent link">&para;</a></h4>
 <p>ルーティング時にDBレコードレベルの認可スコープを定義する。AuthorizeMiddlewareのエイリアス名はデフォルトで<code>can</code>であり、Kernelクラスに定義されている。第一引数にPolicyクラスのメソッド名、第二引数に関連するEloquentモデルのクラスの名前空間またはそのインスタンスを渡す。名前空間を渡す場合は、これをハードコーディングせず、関数で名前空間を取得して文字列と結合する。インスタンスを渡す場合は、暗黙のモデル結合を使用する必要がある。認可に失敗した場合、<code>403</code>ステータスのレスポンスを返信する。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-middleware">https://readouble.com/laravel/8.x/ja/authorization.html#via-middleware</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-middleware">https://readouble.com/laravel/8.x/ja/authorization.html#via-middleware</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -8371,7 +8371,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="authorization">▼ <code>authorization</code>メソッドによる認可<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h4>
 <p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。基底コントローラーを継承したコントローラーでは<code>authorization</code>メソッドをコールでき、現在認証されているユーザーのDBアクセスが認可スコープの範囲内か否かを検証する。第二引数に、ポリシーに紐付くクラス名前空間あるいはそのインスタンスを渡す。認可に失敗した場合にAuthorizationExceptionを投げるため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-controller-helpers">https://readouble.com/laravel/8.x/ja/authorization.html#via-controller-helpers</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context">https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context</a></li>
@@ -8454,7 +8454,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="can">▼ <code>can</code>メソッドによる認可<a class="headerlink" href="#can" title="Permanent link">&para;</a></h4>
 <p>コントローラー実行時にDBレコードレベルの認可スコープを定義する。現在認証されているユーザーのインスタンスから<code>can</code>メソッドをコールできる。第二引数として、ポリシーに紐付くクラス名前空間またはそのクラスのインスタンスを渡す。DBアクセスが、そのユーザーの認可スコープの範囲内か否かを検証する。認可に失敗した場合に<code>false</code>を返却するため、その後は自前で<code>403</code>ステータスのレスポンスする。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#via-the-user-model">https://readouble.com/laravel/8.x/ja/authorization.html#via-the-user-model</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context">https://readouble.com/laravel/8.x/ja/authorization.html#supplying-additional-context</a></li>
@@ -8529,12 +8529,12 @@
 <h2 id="03-passport">03. Passportパッケージ<a class="headerlink" href="#03-passport" title="Permanent link">&para;</a></h2>
 <h3 id="passport">Passportパッケージとは<a class="headerlink" href="#passport" title="Permanent link">&para;</a></h3>
 <p>Ouath認証を実装できる。OAuth認証については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></p>
 <p><br></p>
 <h3 id="_17">セットアップ<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <h4 id="_18">▼ インストール<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>Composerでインストールする必要がある。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/passport.html">https://readouble.com/laravel/8.x/ja/passport.html</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/passport.html">https://readouble.com/laravel/8.x/ja/passport.html</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ composer require laravel/passport
 </code></pre></div></td></tr></table></div>
 <h4 id="oauth">▼ OAuth認証のトークン管理テーブルを作成<a class="headerlink" href="#oauth" title="Permanent link">&para;</a></h4>
@@ -8598,7 +8598,7 @@ Migrated:  2016_06_01_000005_create_oauth_personal_access_clients_table
 </tr>
 <tr>
 <td>oauth_refresh_tokens</td>
-<td>リフレッシュトークンを管理する。アクセストークンの有効期限が切れた時に、再作成をリクエストするために使用する。<br>参考：<a href="https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/">https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/</a></td>
+<td>リフレッシュトークンを管理する。アクセストークンの有効期限が切れた時に、再作成をリクエストするために使用する。<br>ℹ️ 参考：<a href="https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/">https://auth0.com/blog/jp-refresh-tokens-what-are-they-and-when-to-use-them/</a></td>
 </tr>
 </tbody>
 </table>
@@ -8679,19 +8679,19 @@ $ php artisan passport:client --password
 <tbody>
 <tr>
 <td>Authorization Code Grant</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 <tr>
 <td>Client Credentials Grant</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 <tr>
 <td>Implicit Grant</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 <tr>
 <td>Password Grant</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -8706,7 +8706,7 @@ $ php artisan passport:client --password
 <tbody>
 <tr>
 <td>Personal Access Token</td>
-<td>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 </tbody>
 </table>
@@ -9111,9 +9111,9 @@ $ php artisan passport:client --personal
 <h2 id="03-02-sanctum">03-02. Sanctumパッケージ<a class="headerlink" href="#03-02-sanctum" title="Permanent link">&para;</a></h2>
 <h3 id="sanctum">Sanctumパッケージとは<a class="headerlink" href="#sanctum" title="Permanent link">&para;</a></h3>
 <p>APIキー認証とセッションIDを使用したForm認証機能の認証処理のみを提供する。ルーティングとDBアクセスに関する処理は提供しない。</p>
-<p>参考：<a href="https://readouble.com/laravel/8.x/ja/sanctum.html">https://readouble.com/laravel/8.x/ja/sanctum.html</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/sanctum.html">https://readouble.com/laravel/8.x/ja/sanctum.html</a></p>
 <p>APIキー認証とセッションIDを使用したForm認証については、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></p>
 <p><br></p>
 <h3 id="_24">セットアップ<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="_25">▼ インストール<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
@@ -9122,7 +9122,7 @@ $ php artisan passport:client --personal
 <p><br></p>
 <h3 id="api_1">APIトークン認証<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h3>
 <p>フロントエンド（外部のアプリケーションを含む）は任意とし、APIのみを実装する場合、使用が適している。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/sanctum.html#api-token-authentication">https://readouble.com/laravel/8.x/ja/sanctum.html#api-token-authentication</a></li>
 <li><a href="https://stackoverflow.com/questions/65550823/laravel-sanctum-api-token-security">https://stackoverflow.com/questions/65550823/laravel-sanctum-api-token-security</a></li>
@@ -9131,7 +9131,7 @@ $ php artisan passport:client --personal
 <p><br></p>
 <h3 id="spa">SPA認証<a class="headerlink" href="#spa" title="Permanent link">&para;</a></h3>
 <p>フロントエンドにファーストパーティのSPA（自社のSPA）を使用して、バックエンドのAPIを実装する場合、使用が適している。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/sanctum.html#spa-authentication">https://readouble.com/laravel/8.x/ja/sanctum.html#spa-authentication</a></li>
 <li><a href="https://stackoverflow.com/questions/65550823/laravel-sanctum-api-token-security">https://stackoverflow.com/questions/65550823/laravel-sanctum-api-token-security</a></li>
@@ -9141,7 +9141,7 @@ $ php artisan passport:client --personal
 <h2 id="03-03-fortify">03-03. Fortifyパッケージ<a class="headerlink" href="#03-03-fortify" title="Permanent link">&para;</a></h2>
 <h3 id="fortify">Fortifyパッケージとは<a class="headerlink" href="#fortify" title="Permanent link">&para;</a></h3>
 <p>Laravelが持つ全ての認証機能のバックエンド処理を提供する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/fortify.html">https://readouble.com/laravel/8.x/ja/fortify.html</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/fortify.html#laravel-fortify-and-laravel-sanctum">https://readouble.com/laravel/8.x/ja/fortify.html#laravel-fortify-and-laravel-sanctum</a></li>
@@ -9150,14 +9150,14 @@ $ php artisan passport:client --personal
 <h2 id="03-04-breeze">03-04. Breezeパッケージ<a class="headerlink" href="#03-04-breeze" title="Permanent link">&para;</a></h2>
 <h3 id="breeze">Breezeパッケージとは<a class="headerlink" href="#breeze" title="Permanent link">&para;</a></h3>
 <p>Laravelが持つ全ての認証機能のバックエンド（認証＋ルーティング＋DBアクセス）処理と、これに対応するフロントエンド処理を提供する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/8.x/ja/starter-kits.html#laravel-breeze">https://readouble.com/laravel/8.x/ja/starter-kits.html#laravel-breeze</a></li>
 <li><a href="https://readouble.com/laravel/8.x/ja/fortify.html#laravel-fortify-and-laravel-sanctum">https://readouble.com/laravel/8.x/ja/fortify.html#laravel-fortify-and-laravel-sanctum</a></li>
 </ul>
 <p><br></p>
 <h3 id="_26">セットアップ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
-<p>参考：<a href="https://github.com/laravel/breeze">https://github.com/laravel/breeze</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/laravel/breeze">https://github.com/laravel/breeze</a></p>
 <h4 id="_27">▼ インストール<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
 <p>パッケージをインストールする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ composer require laravel/breeze:^1.0 --dev
@@ -9170,7 +9170,7 @@ $ php artisan passport:client --personal
 <h2 id="03-05-uilaravel-7">03-05. UIパッケージ（Laravel 7系以前）<a class="headerlink" href="#03-05-uilaravel-7" title="Permanent link">&para;</a></h2>
 <h3 id="ui">UIパッケージとは<a class="headerlink" href="#ui" title="Permanent link">&para;</a></h3>
 <p>Laravelが持つ全ての認証機能のバックエンド（認証＋ルーティング＋DBアクセス）処理と、これに対応するフロントエンド処理を提供する。</p>
-<p>参考：<a href="https://readouble.com/laravel/7.x/ja/authentication.html">https://readouble.com/laravel/7.x/ja/authentication.html</a></p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/7.x/ja/authentication.html">https://readouble.com/laravel/7.x/ja/authentication.html</a></p>
 <p><br></p>
 <h3 id="_29">セットアップ<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
 <h4 id="_30">▼ インストール<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
@@ -9201,7 +9201,7 @@ $ php artisan ui bootstrap --auth
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

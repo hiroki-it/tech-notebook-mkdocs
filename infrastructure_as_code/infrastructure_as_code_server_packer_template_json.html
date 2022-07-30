@@ -6635,14 +6635,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7222,7 +7222,7 @@
 <h1 id="templatejsonpacker">template.json＠Packer<a class="headerlink" href="#templatejsonpacker" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-packer">01. Packerの仕組み<a class="headerlink" href="#01-packer" title="Permanent link">&para;</a></h2>
 <h3 id="_2">アーキテクチャ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -7231,13 +7231,13 @@
 <h3 id="_3">ユースケース<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="aws">▼ AWSの場合<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h4>
 <p>プロビジョナーを使用してEC2インスタンスをプロビジョニングし、そのEC2インスタンスからAMIを作成する。AMIの作成後、EC2を削除する。例えば、AnsibleでAMIの作成まで行い、TerraformでAMIからEC2インスタンスを作成するように区別する。これにより、クラウドインフラのプロビジョニングでAnsibleとTerraformが共存できるようになる。</p>
-<p>参考：<a href="https://aws.amazon.com/jp/blogs/mt/migrating-from-hashicorp-packer-to-ec2-image-builder/">https://aws.amazon.com/jp/blogs/mt/migrating-from-hashicorp-packer-to-ec2-image-builder/</a></p>
+<p>ℹ️ 参考：<a href="https://aws.amazon.com/jp/blogs/mt/migrating-from-hashicorp-packer-to-ec2-image-builder/">https://aws.amazon.com/jp/blogs/mt/migrating-from-hashicorp-packer-to-ec2-image-builder/</a></p>
 <p><img alt="packer_aws" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/packer_aws.png" /></p>
 <p><br></p>
 <h2 id="02">02. セットアップ<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="_4">インストール<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <h4 id="apt">▼ aptリポジトリから<a class="headerlink" href="#apt" title="Permanent link">&para;</a></h4>
-<p>参考：<a href="https://www.packer.io/downloads">https://www.packer.io/downloads</a></p>
+<p>ℹ️ 参考：<a href="https://www.packer.io/downloads">https://www.packer.io/downloads</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ curl -fsSL https://apt.releases.hashicorp.com/gpg <span class="p">|</span> sudo apt-key add -
@@ -7534,7 +7534,7 @@ $ sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install pac
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

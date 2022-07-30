@@ -6554,14 +6554,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7062,12 +7062,12 @@
 <h1 id="aws">信頼性＠AWS<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ネットワーク設計<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="cidr">推奨されるCIDRブロック<a class="headerlink" href="#cidr" title="Permanent link">&para;</a></h3>
 <p><code>1</code>個のVPC内には複数のサブネットが入る。そのため、サブネットのCIDRブロックは、サブネットの個数だけ含めなければならない。また、VPCが持つCIDRブロックから、VPC内の各AWSリソースにIPアドレスを割り当てていかなければならず、VPC内でIPアドレスが枯渇しないようにする。RFC1918では、以下のCIDRブロックが推奨されている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://note.com/takashi_sakurada/n/n502fb0299938">https://note.com/takashi_sakurada/n/n502fb0299938</a></li>
 <li><a href="https://atmarkit.itmedia.co.jp/aig/06network/privateip.html">https://atmarkit.itmedia.co.jp/aig/06network/privateip.html</a></li>
@@ -7102,12 +7102,12 @@
 <h3 id="vpc">VPCの設計<a class="headerlink" href="#vpc" title="Permanent link">&para;</a></h3>
 <h4 id="vpccidr">▼ VPC全体のCIDRブロック<a class="headerlink" href="#vpccidr" title="Permanent link">&para;</a></h4>
 <p>あらかじめ、会社内の全てのアプリケーションのCIDRブロックをスプレッドシートなどで一括で管理しておく。この時、CIDRブロックと、これの開始IPアドレスと終了IPアドレスをメモしておくと良い。各アプリケーション間でTransit Gatewayやピアリング接続を実行する可能性がある場合は。拡張性を考慮して、アプリケーション間のCIDRブロックは重ならないようにしておく必要がある。例えば、以前に開発したアプリケーションが<code>10.200.47.0</code>までを使用していた場合、<code>10.200.48.0</code>から使用を始める。また、VPCで許可されるIPアドレスの個数は最多<code>65536</code>個（<code>/16</code>）で最少16個（<code>/28</code>）であり、実際は<code>512</code>個（<code>/23</code>）ほどあれば問題ないため、<code>10.200.48.0/23</code>を設定する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#SubnetRouting">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#SubnetRouting</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#SubnetRouting">https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#SubnetRouting</a></p>
 <p><br></p>
 <h3 id="_2">サブネットの設計<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="cidr_1">▼ 各サブネットのCIDRブロック<a class="headerlink" href="#cidr_1" title="Permanent link">&para;</a></h4>
 <p>VPCのIPアドレスの最初から、パブリックサブネットとプライベートサブネットを割り当てる。この時、VPC内の各AWSリソースの特徴に合わせて、CIDRブロックを割り当てる。例えば、VPCの最初のIPアドレスを<code>10.0.0.0</code>とした場合は、1つ目のパブリックサブネットのサブネットマスクは、<code>10.0.0.0</code>から始める。パブリックサブネットとプライベートサブネットを冗長化する場合は、VPCのIPアドレス数をサブネット数で割って各サブネットのIPアドレス数を算出し、CIDRブロックを設定する。例えば、VPCのサブネットマスクを<code>/16</code> としている場合は、各サブネットのサブネットマスクは<code>/24</code>とする。一方で、VPCを<code>/23</code>としている場合は、各サブネットは<code>/27</code>とする。また、各サブネットのCIDRブロックを同じにする必要はなく、アプリケーションが稼働するサブネットにIPアドレス数がやや多くなるようにし、その代わりに、DBの稼働するサブネットのIPアドレスを少なくするような設計でも良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://d0.awsstatic.com/events/jp/2017/summit/slide/D2T3-5.pdf">https://d0.awsstatic.com/events/jp/2017/summit/slide/D2T3-5.pdf</a></li>
 <li><a href="https://dev.classmethod.jp/articles/amazon-vpc-5-tips/">https://dev.classmethod.jp/articles/amazon-vpc-5-tips/</a></li>
@@ -7145,7 +7145,7 @@
 <h4 id="_3">▼ アクセスタイプ別の命名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p><img alt="subnet_accsess-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/subnet_accsess-type.png" /></p>
 <p>パブリックネットワークとの通信の遮断具合から名前をつける。</p>
-<p>参考：<a href="https://mihono-bourbon.com/aws-network-1/">https://mihono-bourbon.com/aws-network-1/</a></p>
+<p>ℹ️ 参考：<a href="https://mihono-bourbon.com/aws-network-1/">https://mihono-bourbon.com/aws-network-1/</a></p>
 <table>
 <thead>
 <tr>
@@ -7178,7 +7178,7 @@
 </table>
 <h4 id="_4">▼ コンポーネントタイプ別の命名<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p><img alt="subnet_component-type" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/subnet_component-type.png" /></p>
-<p>参考：<a href="https://dev.classmethod.jp/articles/create_nat_gateway/">https://dev.classmethod.jp/articles/create_nat_gateway/</a></p>
+<p>ℹ️ 参考：<a href="https://dev.classmethod.jp/articles/create_nat_gateway/">https://dev.classmethod.jp/articles/create_nat_gateway/</a></p>
 <p>配置するコンポーネントの種類に関する名前をつける。</p>
 <table>
 <thead>
@@ -7251,7 +7251,7 @@
 </table>
 <h4 id="_7">▼ プライベートサブネットのアウトバウンド通信を同一サブネット内に閉じる場合<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>プライベートサブネットでネットワークを完全に閉じる場合、ルートテーブルにサブネットのCIDRブロックを設定する。</p>
-<p>参考：<a href="https://koejima.com/archives/1950/">https://koejima.com/archives/1950/</a></p>
+<p>ℹ️ 参考：<a href="https://koejima.com/archives/1950/">https://koejima.com/archives/1950/</a></p>
 <table>
 <thead>
 <tr>
@@ -7290,7 +7290,7 @@
 </table>
 <h4 id="alb">▼ ALB<a class="headerlink" href="#alb" title="Permanent link">&para;</a></h4>
 <p>ALBでアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7359,7 +7359,7 @@
 </table>
 <h4 id="api-gateway">▼ API Gateway<a class="headerlink" href="#api-gateway" title="Permanent link">&para;</a></h4>
 <p>API Gatewayでアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metrics">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metrics</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metrics">https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-metrics-and-dimensions.html#api-gateway-metrics</a></p>
 <table>
 <thead>
 <tr>
@@ -7398,7 +7398,7 @@
 </table>
 <h4 id="ec2">▼ EC2<a class="headerlink" href="#ec2" title="Permanent link">&para;</a></h4>
 <p>EC2でアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html#ec2-cloudwatch-metrics</a></p>
 <table>
 <thead>
 <tr>
@@ -7424,20 +7424,20 @@
 <tr>
 <td>StatusCheckFailed_Instance</td>
 <td>カウント</td>
-<td>インスタンスのインスタンスステータスの失敗数をデータポイントとする。インスタンスが停止してしまうようなインシデントに適する。反対に、インスタンスが正常に稼働していて、プロセスが停止しているようなインシデントを検出することには不適である。<br>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks</a></td>
+<td>インスタンスのインスタンスステータスの失敗数をデータポイントとする。インスタンスが停止してしまうようなインシデントに適する。反対に、インスタンスが正常に稼働していて、プロセスが停止しているようなインシデントを検出することには不適である。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks</a></td>
 <td></td>
 </tr>
 <tr>
 <td>StatusCheckFailed_System</td>
 <td>カウント</td>
-<td>インスタンスのシステムステータスの失敗数をデータポイントとする。AWSの障害によるインシデントの検出に適する。<br>参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks</a></td>
+<td>インスタンスのシステムステータスの失敗数をデータポイントとする。AWSの障害によるインシデントの検出に適する。<br>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html#types-of-instance-status-checks</a></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h4 id="ecs">▼ ECS<a class="headerlink" href="#ecs" title="Permanent link">&para;</a></h4>
 <p>ECSクラスターまたはサービスでアラートするべきメトリクスを示す。ClusterNameディメンションとServiceNameディメンションを使用して、ECSクラスターとECSサービスのメトリクスを区別できる。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html#available_cloudwatch_metrics">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html#available_cloudwatch_metrics</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html#available_cloudwatch_metrics">https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html#available_cloudwatch_metrics</a></p>
 <table>
 <thead>
 <tr>
@@ -7474,7 +7474,7 @@
 </table>
 <h4 id="elasticache-redis">▼ ElastiCache Redis<a class="headerlink" href="#elasticache-redis" title="Permanent link">&para;</a></h4>
 <p>Redisでアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html">https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheMetrics.WhichShouldIMonitor.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7512,13 +7512,13 @@
 <td>バイト数</td>
 <td>ストレージ上のスワップ領域の使用量をデータポイントとする。</td>
 <td>・統計 : 期間内最大サイズ<br>・期間 : <code>5</code>分<br>・閾値 : <code>&gt;= 50</code>GB</td>
-<td>使用可能な最大メモリを超えると、Redisはストレージ上のスワップ領域を使用する。<br>参考：<a href="https://zenn.dev/dehio3/scraps/710a9714ce9496">https://zenn.dev/dehio3/scraps/710a9714ce9496</a></td>
+<td>使用可能な最大メモリを超えると、Redisはストレージ上のスワップ領域を使用する。<br>ℹ️ 参考：<a href="https://zenn.dev/dehio3/scraps/710a9714ce9496">https://zenn.dev/dehio3/scraps/710a9714ce9496</a></td>
 </tr>
 </tbody>
 </table>
 <h4 id="rdsaurora">▼ RDS（Aurora）<a class="headerlink" href="#rdsaurora" title="Permanent link">&para;</a></h4>
 <p>RDS（Aurora）でアラートするべきメトリクスを示す。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraMySQL.Monitoring.Metrics.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraMySQL.Monitoring.Metrics.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraMySQL.Monitoring.Metrics.html">https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.AuroraMySQL.Monitoring.Metrics.html</a></p>
 <table>
 <thead>
 <tr>
@@ -7590,7 +7590,7 @@
 </table>
 <h4 id="rdsaurora_1">▼ RDS（非Aurora）<a class="headerlink" href="#rdsaurora_1" title="Permanent link">&para;</a></h4>
 <p>RDS（非Aurora）でアラートするべきメトリクスを示す。RDSのコンソール画面にも同じメトリクスが表示されるが、単位がMByteであり、CloudWatchメトリクスと異なることに注意する。</p>
-<p>参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html#rds-metrics">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html#rds-metrics</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html#rds-metrics">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/monitoring-cloudwatch.html#rds-metrics</a></p>
 <table>
 <thead>
 <tr>
@@ -7652,7 +7652,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

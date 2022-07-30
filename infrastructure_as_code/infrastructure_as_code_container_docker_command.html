@@ -6871,14 +6871,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7694,7 +7694,7 @@
 <h1 id="docker">コマンド＠Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. 手順<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <ol>
@@ -7723,7 +7723,7 @@
 <p><br></p>
 <h4 id="-target">▼ --target<a class="headerlink" href="#-target" title="Permanent link">&para;</a></h4>
 <p>ビルドするステージ名を設定する。マルチステージビルドの時に使用する。ステージを指定しない場合、一番最後に定義したステージを使用してビルドが実行される。</p>
-<p>参考：<a href="https://docs.docker.com/engine/reference/commandline/build/#specifying-target-build-stage---target">https://docs.docker.com/engine/reference/commandline/build/#specifying-target-build-stage---target</a></p>
+<p>ℹ️ 参考：<a href="https://docs.docker.com/engine/reference/commandline/build/#specifying-target-build-stage---target">https://docs.docker.com/engine/reference/commandline/build/#specifying-target-build-stage---target</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker build --file Dockerfile --tag &lt;コンテナイメージ名&gt;:&lt;バージョンタグ&gt; --target dev .
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -8017,12 +8017,12 @@ ff02::2 ip6-allrouters
 </code></pre></div></td></tr></table></div>
 <h4 id="-publish">▼ --publish<a class="headerlink" href="#-publish" title="Permanent link">&para;</a></h4>
 <p>指定したホストポートとコンテナポートのマッピングを実行する。<code>--publish-all</code>オプションではホストポートをランダムに選択してポートマッピングを実行する。</p>
-<p>参考：<a href="https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/">https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/</a></p>
+<p>ℹ️ 参考：<a href="https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/">https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker run -d -it --name &lt;コンテナ名&gt; --publish<span class="o">=</span><span class="m">8080</span>:80 &lt;使用するコンテナイメージ名&gt;:&lt;バージョンタグ&gt; /bin/bash
 </code></pre></div></td></tr></table></div>
 <h4 id="-expose">▼ --expose<a class="headerlink" href="#-expose" title="Permanent link">&para;</a></h4>
 <p>他のコンテナに公開するコンテナポートを<code>expose</code>オプションで設定できる。これはDockerfileでEXPOSE命令として設定しても良い。なお、プロセスの受信するポートと合わせる必要がある。</p>
-<p>参考：<a href="https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/">https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/</a></p>
+<p>ℹ️ 参考：<a href="https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/">https://www.whitesourcesoftware.com/free-developer-tools/blog/docker-expose-port/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ docker run -d -it --name &lt;コンテナ名&gt; --expose<span class="o">=</span><span class="m">80</span> &lt;使用するコンテナイメージ名&gt;:&lt;バージョンタグ&gt; /bin/bash
 </code></pre></div></td></tr></table></div>
 <h4 id="-a-d">▼ -a、-d<a class="headerlink" href="#-a-d" title="Permanent link">&para;</a></h4>
@@ -8155,7 +8155,7 @@ $ docker run -d -it --name &lt;コンテナ名&gt; /bin/bash <span class="se">\<
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

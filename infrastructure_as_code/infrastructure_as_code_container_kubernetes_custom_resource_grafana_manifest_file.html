@@ -6468,14 +6468,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6886,25 +6886,25 @@
 <h1 id="grafana">マニフェストファイル＠Grafana<a class="headerlink" href="#grafana" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. セットアップ<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="_2">チャートリポジトリから<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="grafana_1">▼ grafanaチャートリポジトリから<a class="headerlink" href="#grafana_1" title="Permanent link">&para;</a></h4>
 <p>最小構成をapplyする場合、grafanaチャートのみをapplyする。</p>
-<p>参考：<a href="https://github.com/grafana/helm-charts/tree/main/charts/grafana">https://github.com/grafana/helm-charts/tree/main/charts/grafana</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/grafana/helm-charts/tree/main/charts/grafana">https://github.com/grafana/helm-charts/tree/main/charts/grafana</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm install &lt;リリース名&gt; grafana/grafana
 </code></pre></div></td></tr></table></div>
 <h4 id="kube-prometheus-stack">▼ kube-prometheus-stackチャートリポジトリから<a class="headerlink" href="#kube-prometheus-stack" title="Permanent link">&para;</a></h4>
 <p>Prometheusと連携しやすくする場合は、helmチャートのkube-prometheus-stackチャートをインストールする。</p>
-<p>参考：<a href="https://recruit.gmo.jp/engineer/jisedai/blog/kube-prometheus-stack-investigation/">https://recruit.gmo.jp/engineer/jisedai/blog/kube-prometheus-stack-investigation/</a></p>
+<p>ℹ️ 参考：<a href="https://recruit.gmo.jp/engineer/jisedai/blog/kube-prometheus-stack-investigation/">https://recruit.gmo.jp/engineer/jisedai/blog/kube-prometheus-stack-investigation/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm install &lt;リリース名&gt; prometheus-community/kube-prometheus-stack
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="_3">その他<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ ドキュメントから<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>Grafanaのドキュメントから<code>.yaml</code>ファイルをコピーし、<code>grafana.yaml</code>ファイルを作成する。これをapplyする。</p>
-<p>参考：<a href="https://grafana.com/docs/grafana/latest/installation/kubernetes/">https://grafana.com/docs/grafana/latest/installation/kubernetes/</a></p>
+<p>ℹ️ 参考：<a href="https://grafana.com/docs/grafana/latest/installation/kubernetes/">https://grafana.com/docs/grafana/latest/installation/kubernetes/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl apply -f grafana.yaml
 </code></pre></div></td></tr></table></div>
 <p><br></p>
@@ -6915,7 +6915,7 @@
 <h3 id="_5">セットアップ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="grafana_2">▼ grafanaチャートの場合<a class="headerlink" href="#grafana_2" title="Permanent link">&para;</a></h4>
 <p>grafanaチャートでは、<code>values</code>ファイルの<code>label</code>キーや<code>labelValue</code>キーを使用して、ダッシュボードのマニフェストファイル化を制御しており、デフォルト値として<code>label</code>キーに<code>grafana_dashboard</code>が設定されている。これにより、<code>label</code>キーに<code>grafana_dashboard</code>キーを持つConfigMapのみがダッシュボードの設定として読み込まれる。</p>
-<p>参考：<a href="https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml">https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml">https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -6968,7 +6968,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="kube-prometheus-stack_1">▼ kube-prometheus-stackチャートの場合<a class="headerlink" href="#kube-prometheus-stack_1" title="Permanent link">&para;</a></h4>
 <p>kube-prometheus-stackチャートでは、prometheusのチャートの他、grafanaチャートなどに依存している。kube-prometheus-stackチャートの<code>values</code>ファイルでは、<code>labelValue</code>に<code>1</code>が割り当てられている。</p>
-<p>参考：<a href="https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml">https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml">https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7006,7 +7006,7 @@
 <span class="w">      </span><span class="nt">labelValue</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>そのため、kube-prometheus-stackチャートを用いる場合は<code>grafana_dashboard</code>キーの値が<code>1</code>のConfigMapのみがダッシュボードの設定として読み込まれる。マニフェストファイルから作成したダッシュボードは、GUIからは削除できないようになっている。</p>
-<p>参考：<a href="https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/guides/persist-grafana/">https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/guides/persist-grafana/</a></p>
+<p>ℹ️ 参考：<a href="https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/guides/persist-grafana/">https://rancher.com/docs/rancher/v2.6/en/monitoring-alerting/guides/persist-grafana/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7026,7 +7026,7 @@
 <span class="w">    </span><span class="no"># Grafanaのダッシュボードからエクスポートした.jsonファイルを貼り付ける。</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ちなみに、kube-prometheus-stackチャート内にダッシュボードのConfigMapはすでに用意されており、これをインストールすると、いくつかのダッシュボードが作成される。</p>
-<p>参考：<a href="https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/templates/grafana/dashboards-1.14">https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/templates/grafana/dashboards-1.14</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/templates/grafana/dashboards-1.14">https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack/templates/grafana/dashboards-1.14</a></p>
 <p><br></p>
 
   <hr>
@@ -7034,7 +7034,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-09</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6473,14 +6473,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6898,12 +6898,12 @@
 <h1 id="cqrscommand-query-responsibility-segregation">CQRS：Command Query Responsibility Segregation＠アーキテクチャ<a class="headerlink" href="#cqrscommand-query-responsibility-segregation" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-cqrs">01. CQRS<a class="headerlink" href="#01-cqrs" title="Permanent link">&para;</a></h2>
 <h3 id="cqrs">CQRSとは<a class="headerlink" href="#cqrs" title="Permanent link">&para;</a></h3>
 <p>『Command Query Responsibility Segregation（コマンドクエリ責務分離）』の略。リポジトリパターンにおける更新系と参照系の処理を分離する設計のこと。更新系のオブジェクトはそのままリポジトリとしてインフラ層に配置する。一方で参照系のオブジェクトは、参照のユースケースに応じて『QueryServiceオブジェクト』として設計し、ユースケース層に配置する（これ重要）。ソフトウェアに部分的に組み込める。<code>N+1</code>問題にも対処できる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://vaadin.com/learn/tutorials/ddd/tactical_domain_driven_design">https://vaadin.com/learn/tutorials/ddd/tactical_domain_driven_design</a></li>
 <li><a href="https://little-hands.hatenablog.com/entry/2019/12/02/cqrs">https://little-hands.hatenablog.com/entry/2019/12/02/cqrs</a></li>
@@ -6912,13 +6912,13 @@
 <p><br></p>
 <h3 id="_2">メリット<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>一覧画面に表示するデータは複数の集約からなるため、それぞれの集約に対応するリポジトリの参照系処理を順々にコールし、取得したデータを組み合わせる必要がある。そのため、一覧表示の度に複数のリポジトリをコールすることとなり、ソフトウェアのパフォーマンスに悪影響が出る可能性がある。また、異なるリポジトリをまたいでWHERE句を使用できないため、複数の集約に渡る絞り込み検索を実装できない。しかしCQRSを使用すると、更新系のオブジェクトはリポジトリ、一方で参照系のオブジェクトはユースケースに応じたQueryServiceオブジェクトとして設計することになる。そのため、更新系では集約の単位をそのままにして、集約とは無関係な参照系処理を設計できる。</p>
-<p>参考：<a href="https://little-hands.hatenablog.com/entry/2019/12/02/cqrs">https://little-hands.hatenablog.com/entry/2019/12/02/cqrs</a></p>
+<p>ℹ️ 参考：<a href="https://little-hands.hatenablog.com/entry/2019/12/02/cqrs">https://little-hands.hatenablog.com/entry/2019/12/02/cqrs</a></p>
 <p><br></p>
 <h2 id="01-02">01-02. 処理系の種類<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
 <h3 id="command">Command（更新系）<a class="headerlink" href="#command" title="Permanent link">&para;</a></h3>
 <h4 id="command_1">▼ Commandとは<a class="headerlink" href="#command_1" title="Permanent link">&para;</a></h4>
 <p>CREATE、UPDATE、DELETE処理を実行する処理フローのこと。今回、クリーンアーキテクチャを前提としてCQRSを説明する。概念や実装方法は以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html</a></li>
 <li><a href="https://github.com/hiroki-it/ddd-backend-with-laravel">https://github.com/hiroki-it/ddd-backend-with-laravel</a></li>
@@ -6935,7 +6935,7 @@
 <h3 id="query">Query（参照系）<a class="headerlink" href="#query" title="Permanent link">&para;</a></h3>
 <h4 id="query_1">▼ Queryとは<a class="headerlink" href="#query_1" title="Permanent link">&para;</a></h4>
 <p>READ処理を実行するオブジェクトのこと。今回、クリーンアーキテクチャを前提としてCQRSを説明する。Queryでは概念や実装方法は以下のリンクを参考にせよ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_application_architecture_backend_domain_driven_design_clean_architecture.html</a></li>
 <li><a href="https://github.com/hiroki-it/ddd-backend-with-laravel">https://github.com/hiroki-it/ddd-backend-with-laravel</a></li>
@@ -6949,7 +6949,7 @@
 <p>ユースケース層のインターラクターにて、リクエストモデルからデータを取り出し、QueryCriteriaオブジェクト（参照系検索条件）を作成する。ユースケースに応じたQueryServiceオブジェクトでは、QueryCriteriaオブジェクトを使用して、DBからレコードを配列として取得する。この配列からそのユースケースに対応するDTOを作成する。DTOをレスポンスモデルと見なし、そのままインタフェース層のコントローラーに渡す。</p>
 </li>
 </ol>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/19620404/entity-vs-dto-in-cqrs">https://stackoverflow.com/questions/19620404/entity-vs-dto-in-cqrs</a></li>
 <li>
@@ -6963,7 +6963,7 @@
 <h2 id="02-cqrs">02. CQRSに基づくイベント駆動アーキテクチャ<a class="headerlink" href="#02-cqrs" title="Permanent link">&para;</a></h2>
 <h3 id="cqrs_1">CQRSとイベントソーシングの関係<a class="headerlink" href="#cqrs_1" title="Permanent link">&para;</a></h3>
 <p>イベントソーシングの実装方法は様々ある。イベントソーシングではDBアクセスの処理を更新系と参照系に分離することになるため、CQRSの方法論と相性が良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://little-hands.hatenablog.com/entry/2019/12/02/cqrs">https://little-hands.hatenablog.com/entry/2019/12/02/cqrs</a></li>
 <li><a href="https://postd.cc/using-cqrs-with-event-sourcing/">https://postd.cc/using-cqrs-with-event-sourcing/</a></li>
@@ -6974,7 +6974,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

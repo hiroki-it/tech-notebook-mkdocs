@@ -6515,14 +6515,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6982,12 +6982,12 @@
 <h1 id="apirestful-api">API仕様書＠RESTful-API<a class="headerlink" href="#apirestful-api" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-openapi">01. OpenAPI仕様<a class="headerlink" href="#01-openapi" title="Permanent link">&para;</a></h2>
 <h3 id="openapi">OpenAPI仕様とは<a class="headerlink" href="#openapi" title="Permanent link">&para;</a></h3>
 <p>RESTful-APIの仕様を実装により説明するためのフォーマットのこと。JSON型またはYAML型で実装できる。いくつかのフィールドから構成されている。</p>
-<p>参考：<a href="https://spec.openapis.org/oas/v3.1.0#fixed-fields">https://spec.openapis.org/oas/v3.1.0#fixed-fields</a></p>
+<p>ℹ️ 参考：<a href="https://spec.openapis.org/oas/v3.1.0#fixed-fields">https://spec.openapis.org/oas/v3.1.0#fixed-fields</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7026,7 +7026,7 @@
 <h3 id="openapi_1">OpenAPI仕様の視覚化<a class="headerlink" href="#openapi_1" title="Permanent link">&para;</a></h3>
 <h4 id="redoc">▼ ReDocの場合<a class="headerlink" href="#redoc" title="Permanent link">&para;</a></h4>
 <p>ReDocを使用して、OpenAPI仕様から<code>.html</code>ファイルを作成する。</p>
-<p>参考：<a href="https://qiita.com/icck/items/97d00495ec324e1902d6">https://qiita.com/icck/items/97d00495ec324e1902d6</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/icck/items/97d00495ec324e1902d6">https://qiita.com/icck/items/97d00495ec324e1902d6</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ npm install -g redoc-cli
@@ -7037,7 +7037,7 @@ $ redoc-cli bundle openapi.yaml redoc.html
 <h3 id="_2">クラウドプロバイダーとの統合<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="api-gateway">▼ API Gatewayの場合<a class="headerlink" href="#api-gateway" title="Permanent link">&para;</a></h4>
 <p>API GatewayによるOpenAPI仕様のインポートについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html">https://hiroki-it.github.io/tech-notebook-mkdocs/cloud_computing/cloud_computing_aws_api_gateway_import.html</a></p>
 <p><br></p>
 <h2 id="02">02. フィールド<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <h3 id="openapi_2">openapiフィールド（必須）<a class="headerlink" href="#openapi_2" title="Permanent link">&para;</a></h3>
@@ -7722,7 +7722,7 @@ $ redoc-cli bundle openapi.yaml redoc.html
 <p><br></p>
 <h3 id="_4">スキーマによるバリデーション<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>データ型や必須データにより、リクエスト/レスポンスのデータのバリデーションを行う。</p>
-<p>参考：<a href="https://spec.openapis.org/oas/v3.1.0#data-types">https://spec.openapis.org/oas/v3.1.0#data-types</a></p>
+<p>ℹ️ 参考：<a href="https://spec.openapis.org/oas/v3.1.0#data-types">https://spec.openapis.org/oas/v3.1.0#data-types</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>例えば、APIがレスポンス時に以下のようなJSON型データを返信する例を考える。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7801,7 +7801,7 @@ $ redoc-cli bundle openapi.yaml redoc.html
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

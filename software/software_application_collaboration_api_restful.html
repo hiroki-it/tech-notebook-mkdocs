@@ -6990,14 +6990,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7932,7 +7932,7 @@
 <h1 id="restful-api">RESTful-API＠アプリケーション連携<a class="headerlink" href="#restful-api" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-restrestful">01. RESTとRESTfulとは<a class="headerlink" href="#01-restrestful" title="Permanent link">&para;</a></h2>
 <h3 id="rest">REST<a class="headerlink" href="#rest" title="Permanent link">&para;</a></h3>
@@ -7976,7 +7976,7 @@
 <p><br></p>
 <h3 id="http">HTTPメソッド、エンドポイント、ユースケースの関係<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
 <p>RESTfulAPIでは、全てのHTTPメソッドの内、主に以下の4つを使用して、データ処理の方法をリクエストする。それぞれが、APIのユースケースに対応する。ユースケースごとのメソッド名については、Laravelを参考にする。</p>
-<p>参考：<a href="https://noumenon-th.net/programming/2020/01/30/laravel-crud/">https://noumenon-th.net/programming/2020/01/30/laravel-crud/</a></p>
+<p>ℹ️ 参考：<a href="https://noumenon-th.net/programming/2020/01/30/laravel-crud/">https://noumenon-th.net/programming/2020/01/30/laravel-crud/</a></p>
 <table>
 <thead>
 <tr>
@@ -8020,7 +8020,7 @@
 </tbody>
 </table>
 <p>POST送信とPUT送信の重要な違いについてまとめる。データを作成するユースケースの時はPOST送信、または更新する時はPUT送信を使用する。ただしもっと正確には、ユースケースが『作成』or『更新』ではなく、『非冪等』or『冪等』で判断したほうが良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/a/2691891/12771072">https://stackoverflow.com/a/2691891/12771072</a></li>
 <li><a href="https://restfulapi.net/rest-put-vs-post/">https://restfulapi.net/rest-put-vs-post/</a></li>
@@ -8050,13 +8050,13 @@
 <h3 id="_3">エンドポイントの命名<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <h4 id="_4">▼ 動詞を使用しないこと<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>すでにHTTPメソッド自体に動詞の意味合いが含まれるため、エンドポイントに動詞を含めないようにする。この時、アクセスするリソース名がわかりやすいような名詞を使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://cloud.google.com/blog/products/api-management/restful-api-design-nouns-are-good-verbs-are-bad">https://cloud.google.com/blog/products/api-management/restful-api-design-nouns-are-good-verbs-are-bad</a></li>
 <li><a href="https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/#h-use-nouns-instead-of-verbs-in-endpoint-paths">https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/#h-use-nouns-instead-of-verbs-in-endpoint-paths</a></li>
 </ul>
 <p>ただし慣例として、認証のエンドポイントが動詞（<code>login</code>、<code>logout</code>、<code>register</code>）になることは許容されている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/7140074/restfully-design-login-or-register-resources">https://stackoverflow.com/questions/7140074/restfully-design-login-or-register-resources</a></li>
 <li><a href="https://www.developer.com/web-services/best-practices-restful-api">https://www.developer.com/web-services/best-practices-restful-api</a></li>
@@ -8248,7 +8248,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="_15">▼ リクエストヘッダーへの割り当て<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>リクエストヘッダーにパラメーターを割り当てて送信する。送信時のヘッダー名は大文字でも小文字でもいずれでも問題ないが、内部的に小文字に変換されるため、小文字が推奨である。APIキーのヘッダー名の頭文字に『<code>X</code>』を付けるのは、独自ヘッダーの頭文字に『<code>X</code>』を付ける慣習があったためである。ただし、現在は非推奨である。</p>
-<p>参考：<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers">https://developer.mozilla.org/ja/docs/Web/HTTP/Headers</a></p>
+<p>ℹ️ 参考：<a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Headers">https://developer.mozilla.org/ja/docs/Web/HTTP/Headers</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8263,7 +8263,7 @@
 <h3 id="_16">エンドポイントのレスポンス形式<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <h4 id="_17">▼ ステータスコード<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>クライアントに対して、概要がわかるステータスコードをレスポンスとして返信する。<code>200</code>ステータスコード以外に関して、セキュリティ上の理由のため、エラーの具体的な内容はバックエンドのtry-catchやフロントエンドのポップアップで別の言葉に置き換える。</p>
-<p>参考：<a href="https://qiita.com/unsoluble_sugar/items/b080a16701946fcfce70">https://qiita.com/unsoluble_sugar/items/b080a16701946fcfce70</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/unsoluble_sugar/items/b080a16701946fcfce70">https://qiita.com/unsoluble_sugar/items/b080a16701946fcfce70</a></p>
 <table>
 <thead>
 <tr>
@@ -8296,7 +8296,7 @@
 <tr>
 <td><code>404</code></td>
 <td>Webページが見つからない</td>
-<td>誤ったリクエストである。存在しないWebページをリクエストしていることを表す。もし、Webページの存在しないURLにリクエストがあった場合、検索エンジンが<code>404</code>ステータスを自動的に返信してくれるが、独自の<code>404</code>ページを用意した場合は、そのままでは検索エンジンは<code>200</code>ステータスを返信してしまうため、アプリケーション側で明示的に<code>404</code>ステータスを返信する必要がある。アプリケーションは<code>404</code>ステータスの処理を実行しているのにもかかわらず、検索エンジンがこれを<code>200</code>ステータスと扱ってしまう（ブラウザでは<code>200</code>ステータスが返信される）現象を『ソフト<code>404</code>』という。<br>参考：<a href="https://www.sakurasaku-labo.jp/blogs/soft-404-error">https://www.sakurasaku-labo.jp/blogs/soft-404-error</a></td>
+<td>誤ったリクエストである。存在しないWebページをリクエストしていることを表す。もし、Webページの存在しないURLにリクエストがあった場合、検索エンジンが<code>404</code>ステータスを自動的に返信してくれるが、独自の<code>404</code>ページを用意した場合は、そのままでは検索エンジンは<code>200</code>ステータスを返信してしまうため、アプリケーション側で明示的に<code>404</code>ステータスを返信する必要がある。アプリケーションは<code>404</code>ステータスの処理を実行しているのにもかかわらず、検索エンジンがこれを<code>200</code>ステータスと扱ってしまう（ブラウザでは<code>200</code>ステータスが返信される）現象を『ソフト<code>404</code>』という。<br>ℹ️ 参考：<a href="https://www.sakurasaku-labo.jp/blogs/soft-404-error">https://www.sakurasaku-labo.jp/blogs/soft-404-error</a></td>
 </tr>
 <tr>
 <td><code>405</code></td>
@@ -8306,7 +8306,7 @@
 <tr>
 <td><code>409</code></td>
 <td>競合エラー</td>
-<td>誤ったリクエストである。CREATE処理やUPDATE処理によって、新しいデータと現在のDBのデータの間で競合が起こっていることを表す。一意な識別子として使用しているデータの重複や、楽観的ロックによる排他制御が起こる場合に使用する。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms.html</a></td>
+<td>誤ったリクエストである。CREATE処理やUPDATE処理によって、新しいデータと現在のDBのデータの間で競合が起こっていることを表す。一意な識別子として使用しているデータの重複や、楽観的ロックによる排他制御が起こる場合に使用する。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms.html">https://hiroki-it.github.io/tech-notebook-mkdocs/software/software_middleware_database_rdbms.html</a></td>
 </tr>
 <tr>
 <td><code>412</code></td>
@@ -8321,12 +8321,12 @@
 <tr>
 <td><code>499</code></td>
 <td>接続切断エラー</td>
-<td>誤ったリクエストである。Nginxなどのリバースプロキシが持つ非標準のステータスコードであり、接続の途中でクライアントが接続を切断してしまったことを表す。<br>参考：<a href="https://secure.netowl.jp/bbs/detail.cgi?td=4200">https://secure.netowl.jp/bbs/detail.cgi?td=4200</a></td>
+<td>誤ったリクエストである。Nginxなどのリバースプロキシが持つ非標準のステータスコードであり、接続の途中でクライアントが接続を切断してしまったことを表す。<br>ℹ️ 参考：<a href="https://secure.netowl.jp/bbs/detail.cgi?td=4200">https://secure.netowl.jp/bbs/detail.cgi?td=4200</a></td>
 </tr>
 <tr>
 <td><code>500</code></td>
 <td>サーバーエラー</td>
-<td>サーバーの処理でランタイムエラーが起こっていることを表す。エラーの種類については、以下のリンクを参考にせよ。<br>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
+<td>サーバーの処理でランタイムエラーが起こっていることを表す。エラーの種類については、以下のリンクを参考にせよ。<br>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html">https://hiroki-it.github.io/tech-notebook-mkdocs/security/security_authentication_authorization.html</a></td>
 </tr>
 <tr>
 <td><code>503</code></td>
@@ -8337,7 +8337,7 @@
 </table>
 <h4 id="_18">▼ リダイレクトとリライトの違い<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>リダイレクトでは、リクエストされたURLをサーバー側で新しいURLに書き換えてブラウザに返信し、ブラウザがリクエストを再送信する。そのため、クライアント側は新しいURLで改めてリクエストを送信することになる。一方で、リライトでは、リクエストされたURLをサーバー側で異なるURLに書き換え、サーバーがそのままリクエストを送信する。そのため、クライアント側は古いURLのままリクエストを送信することになる。その他の違いについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://blogs.iis.net/owscott/url-rewrite-vs-redirect-what-s-the-difference">https://blogs.iis.net/owscott/url-rewrite-vs-redirect-what-s-the-difference</a></p>
+<p>ℹ️ 参考：<a href="https://blogs.iis.net/owscott/url-rewrite-vs-redirect-what-s-the-difference">https://blogs.iis.net/owscott/url-rewrite-vs-redirect-what-s-the-difference</a></p>
 <h4 id="_19">▼ リライトとフォワードの違い<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>リライトでは異なるサーバーにリクエストを送信できるが、フォワードでは同一サーバー内の異なるファイルにアクセスすることしかできない。</p>
 <p><br></p>
@@ -8350,13 +8350,13 @@
 <p>特定のリクエストメッセージ/レスポンスメッセージに関するあらゆる情報（リクエストパラメーター、セッション、その他フレームワーク固有の情報など）を扱うための仕組みのこと。特にフレームワークやパッケージでよく使われる用語である。</p>
 <h4 id="net-framework">▼ .NET Frameworkの場合<a class="headerlink" href="#net-framework" title="Permanent link">&para;</a></h4>
 <p>.NETのフレームワーク。コンテキストクラスが用意されている。</p>
-<p>参考：<a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.routing.requestcontext?view=netframework-4.8">https://docs.microsoft.com/en-us/dotnet/api/system.web.routing.requestcontext?view=netframework-4.8</a></p>
+<p>ℹ️ 参考：<a href="https://docs.microsoft.com/en-us/dotnet/api/system.web.routing.requestcontext?view=netframework-4.8">https://docs.microsoft.com/en-us/dotnet/api/system.web.routing.requestcontext?view=netframework-4.8</a></p>
 <h4 id="gin">▼ Ginの場合<a class="headerlink" href="#gin" title="Permanent link">&para;</a></h4>
 <p>Goのフレームワーク。コンテキスト構造体が用意されている。</p>
-<p>参考：<a href="https://pkg.go.dev/github.com/gin-gonic/gin#Context">https://pkg.go.dev/github.com/gin-gonic/gin#Context</a></p>
+<p>ℹ️ 参考：<a href="https://pkg.go.dev/github.com/gin-gonic/gin#Context">https://pkg.go.dev/github.com/gin-gonic/gin#Context</a></p>
 <h4 id="nuxtjs">▼ Nuxt.jsの場合<a class="headerlink" href="#nuxtjs" title="Permanent link">&para;</a></h4>
 <p>JavaScriptのフレームワーク。コンテキストオブジェクトが用意されている。</p>
-<p>参考：<a href="https://nuxtjs.org/ja/docs/internals-glossary/context/">https://nuxtjs.org/ja/docs/internals-glossary/context/</a></p>
+<p>ℹ️ 参考：<a href="https://nuxtjs.org/ja/docs/internals-glossary/context/">https://nuxtjs.org/ja/docs/internals-glossary/context/</a></p>
 <h4 id="lambda">▼ Lambdaの場合<a class="headerlink" href="#lambda" title="Permanent link">&para;</a></h4>
 <p>フレームワークでなはいが、Lambdaの場合にパラメーターとしてcontextオブジェクトが用意されている。</p>
 <p><br></p>
@@ -8627,14 +8627,14 @@
 <h3 id="_24">正常系レスポンスの場合<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
 <h4 id="postput">▼ POST/PUTでは処理後データをレスポンス<a class="headerlink" href="#postput" title="Permanent link">&para;</a></h4>
 <p>POST/PUTメソッドでは、処理後のデータを200レスポンスとして返信する。もし処理後のデータを返信しない場合、改めてGETリクエストを送信する必要があり、余分なAPIコールが必要になってしまう。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://developer.ntt.com/ja/blog/741a176b-372f-4666-b649-b677dd23e3f3">https://developer.ntt.com/ja/blog/741a176b-372f-4666-b649-b677dd23e3f3</a></li>
 <li><a href="https://qiita.com/wim/items/dbb6def4e207f6048735">https://qiita.com/wim/items/dbb6def4e207f6048735</a></li>
 </ul>
 <h4 id="delete">▼ DELETEではメッセージのみをレスポンス<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h4>
 <p>DELETEメソッドでは、メッセージのみを200レスポンスとして返信する。空ボディ204レスポンスとして返信しても良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/25970523/restful-what-should-a-delete-response-body-contain/50792918">https://stackoverflow.com/questions/25970523/restful-what-should-a-delete-response-body-contain/50792918</a></li>
 <li><a href="https://qiita.com/fukuma_biz/items/a9e8d18467fe3e04068e#4-delete---%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E5%89%8A%E9%99%A4">https://qiita.com/fukuma_biz/items/a9e8d18467fe3e04068e#4-delete---%E3%83%AA%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%AE%E5%89%8A%E9%99%A4</a></li>
@@ -8667,7 +8667,7 @@
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>そこで、できるだけデータ構造をフラットにする。ただし、見やすさによっては階層構造も許容される。</p>
-<p>参考：<a href="https://www.amazon.co.jp/Web-API-The-Good-Parts/dp/4873116864">https://www.amazon.co.jp/Web-API-The-Good-Parts/dp/4873116864</a></p>
+<p>ℹ️ 参考：<a href="https://www.amazon.co.jp/Web-API-The-Good-Parts/dp/4873116864">https://www.amazon.co.jp/Web-API-The-Good-Parts/dp/4873116864</a></p>
 <p><strong>＊例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8745,7 +8745,7 @@
 <span class="w">  </span><span class="s">&quot;url&quot;</span><span class="nt"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://foo-api-doc.co.jp&quot;</span><span class="w"></span>
 <span class="p p-Indicator">}</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<p>参考：<a href="https://qiita.com/suin/items/f7ac4de914e9f3f35884#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%81%A7%E8%80%83%E6%85%AE%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8">https://qiita.com/suin/items/f7ac4de914e9f3f35884#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%81%A7%E8%80%83%E6%85%AE%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/suin/items/f7ac4de914e9f3f35884#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%81%A7%E8%80%83%E6%85%AE%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8">https://qiita.com/suin/items/f7ac4de914e9f3f35884#%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%81%A7%E8%80%83%E6%85%AE%E3%81%97%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8</a></p>
 <p><br></p>
 <h2 id="04">04. オブジェクトデータ<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
 <h3 id="_29">オブジェクトデータ<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
@@ -8755,7 +8755,7 @@
 <h3 id="mime-typecontent-type">MIME type（Content type）<a class="headerlink" href="#mime-typecontent-type" title="Permanent link">&para;</a></h3>
 <h4 id="mime-type">▼ MIME typeとは<a class="headerlink" href="#mime-type" title="Permanent link">&para;</a></h4>
 <p>POST/PUT送信で、ボディパラメーターのデータ形式を表現する識別子のこと。リクエストヘッダー/レスポンスヘッダーの<code>Content-Type</code>ヘッダーに割り当てると、オブジェクトデータのデータ型を定義できる。GET送信には不要である。</p>
-<p>参考：<a href="https://stackoverflow.com/questions/5661596/do-i-need-a-content-type-header-for-http-get-requests">https://stackoverflow.com/questions/5661596/do-i-need-a-content-type-header-for-http-get-requests</a></p>
+<p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/5661596/do-i-need-a-content-type-header-for-http-get-requests">https://stackoverflow.com/questions/5661596/do-i-need-a-content-type-header-for-http-get-requests</a></p>
 <table>
 <thead>
 <tr>
@@ -8953,7 +8953,7 @@
 <span class="err">Set-Cookie: sessionId=&lt;セッションID&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>セッション数はGoogleコンソールで確認できる。GoogleConsoleにおけるセッションについては、以下のリンクを参考にせよ。</p>
-<p>参考：<a href="https://support.google.com/analytics/answer/6086069?hl=ja">https://support.google.com/analytics/answer/6086069?hl=ja</a></p>
+<p>ℹ️ 参考：<a href="https://support.google.com/analytics/answer/6086069?hl=ja">https://support.google.com/analytics/answer/6086069?hl=ja</a></p>
 <h4 id="id_1">▼ セッションIDの発行、セッションデータの作成<a class="headerlink" href="#id_1" title="Permanent link">&para;</a></h4>
 <p>セッションは、<code>session_start</code>メソッドを使用することにより開始される。また同時に、クライアントにセッションIDを発行する。グローバル変数にセッションIDを代入することによって、セッションIDの記載されたセッションデータを作成する。セッションIDに紐付くその他のデータはこのセッションデータに書き込まれていく。セッションデータの名前は、<code>sess_*****</code>ファイルとなっており、セッションデータ名を元にしてセッションIDに紐付くデータを参照する。もしクライアントに既にセッションIDが発行されている場合、セッションデータを参照するようになる。</p>
 <p><strong>＊実装例＊</strong></p>
@@ -8986,7 +8986,7 @@
 <span class="na">session.save_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/tmp&quot;</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>なお、PHP-FPMを使用している場合は、<code>/etc/php.ini</code>ファイルではなく、<code>/etc/php-fpm.d/www.conf</code>ファイルで保存場所を設定する必要がある。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://github.com/phpredis/phpredis/issues/1097">https://github.com/phpredis/phpredis/issues/1097</a></li>
 <li><a href="https://qiita.com/supertaihei02/items/53e36252afa3ea157d38">https://qiita.com/supertaihei02/items/53e36252afa3ea157d38</a></li>
@@ -9010,7 +9010,7 @@ php_value<span class="o">[</span>session.save_path<span class="o">]</span> <span
 <span class="na">session.gc_maxlifetime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">86400</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p>ただし、有効期限が切れた後にセッションデータを初期化するか否かは確率によって定められている。確率は、 『<code>gc_probability</code>÷<code>gc_divisor</code>』 で計算される。</p>
-<p>参考：<a href="https://www.php.net/manual/ja/session.configuration.php#ini.session.gc-divisor">https://www.php.net/manual/ja/session.configuration.php#ini.session.gc-divisor</a></p>
+<p>ℹ️ 参考：<a href="https://www.php.net/manual/ja/session.configuration.php#ini.session.gc-divisor">https://www.php.net/manual/ja/session.configuration.php#ini.session.gc-divisor</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># 有効期限後に100%初期化されるようにする。</span><span class="w"></span>
@@ -9031,7 +9031,7 @@ php_value<span class="o">[</span>session.save_path<span class="o">]</span> <span
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

@@ -6709,14 +6709,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7376,14 +7376,14 @@
 <h1 id="tcp">TCP階層モデル<a class="headerlink" href="#tcp" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-tcp">01. TCP階層モデルとは<a class="headerlink" href="#01-tcp" title="Permanent link">&para;</a></h2>
 <p>コンピュータのソフトウェアとハードウェアによる通信機能を、5つのレイヤーに分割したもの。TCP/IPモデルで使用されるプロトコルのうち、最も代表的な『TCP』と『IP』から名前をとって『TCP/IP』と名付けられた。</p>
 <p><br></p>
 <h2 id="02">02. 各レイヤーの責務<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
 <p>各レイヤーで異なるプロトコルを扱う。プロトコルとしての暗号化技術である『セキュアプロトコル』は、赤色で示してある。レイヤー名からとって、プロトコルを『アプリケーションプロトコル』『トランスポートプロトコル』『インターネットプロトコル』『ネットワークインターフェースプロトコル』ともいう。</p>
-<p>参考：<a href="https://www.techwalla.com/articles/host-based-networks-vs-client-server-networks">https://www.techwalla.com/articles/host-based-networks-vs-client-server-networks</a></p>
+<p>ℹ️ 参考：<a href="https://www.techwalla.com/articles/host-based-networks-vs-client-server-networks">https://www.techwalla.com/articles/host-based-networks-vs-client-server-networks</a></p>
 <p><img alt="セキュアプロトコル" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/セキュアプロトコル.png" /></p>
 <p><br></p>
 <h2 id="03">03. パケットの通信経路<a class="headerlink" href="#03" title="Permanent link">&para;</a></h2>
@@ -7399,13 +7399,13 @@
 <p><br></p>
 <h3 id="_3">各概念層のヘッダ情報認識<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>送信元で作成されたパケットは、非カプセル化されながら、通信機器に認識される。</p>
-<p>参考：<a href="https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC">https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC</a></p>
+<p>ℹ️ 参考：<a href="https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC">https://ja.wikipedia.org/wiki/%E3%83%AB%E3%83%BC%E3%82%BF%E3%83%BC</a></p>
 <p><img alt="tcp-ip_structure" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/tcp-ip_structure.png" /></p>
 <p><br></p>
 <h2 id="03-tcp">03. TCPアプリケーション層<a class="headerlink" href="#03-tcp" title="Permanent link">&para;</a></h2>
 <h3 id="_4">アプリケーション層とは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>各アプリケーションがプロセスとして稼働しており、それぞれがデータ（メッセージ）を作成する。各プロセスは特定のポート番号を受信する。</p>
-<p>参考：<a href="https://netdekagaku.com/netstat-command/">https://netdekagaku.com/netstat-command/</a></p>
+<p>ℹ️ 参考：<a href="https://netdekagaku.com/netstat-command/">https://netdekagaku.com/netstat-command/</a></p>
 <p><img alt="application_expose-port" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/application_expose-port.png" /></p>
 <p>ちなみに、ポート番号を使用しているプロセスの一覧は、以下のコマンドで表示できる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ sudo lsof -i -P <span class="p">|</span> grep LISTEN
@@ -7419,11 +7419,11 @@
 <li>送信側のメールサーバーは、メールを受信側のメールサーバーに転送する。</li>
 <li>受信側のアプリケーションは、各々が指定したプロトコルに応じて、受信側のメールサーバーからメールデータを取得する。</li>
 </ol>
-<p>参考：<a href="https://xtech.nikkei.com/it/pc/article/basic/20120312/1043605/">https://xtech.nikkei.com/it/pc/article/basic/20120312/1043605/</a></p>
+<p>ℹ️ 参考：<a href="https://xtech.nikkei.com/it/pc/article/basic/20120312/1043605/">https://xtech.nikkei.com/it/pc/article/basic/20120312/1043605/</a></p>
 <p><img alt="smtp_pop3_imap4" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/smtp_pop3_imap4.png" /></p>
 <h4 id="_7">▼ 送信側のメールサーバーのモック<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <p>メールデータの送信機能を開発する時に、送信テストを行う必要があり、この内容は公開したくない。そこで、送信側のメールサーバーのモックを提供するサービスを利用する。この送信側メールサーバーモックは、クライアントから受信したメールのテストデータを受信側のメールサーバーに転送しないため、安全に送信テストを実施できる。Mailtrapがおすすめである。</p>
-<p>参考：<a href="https://mailtrap.io/">https://mailtrap.io/</a></p>
+<p>ℹ️ 参考：<a href="https://mailtrap.io/">https://mailtrap.io/</a></p>
 <p><br></p>
 <h3 id="smtpsimple-mail-transfer-protocol">SMTP：Simple Mail Transfer Protocol<a class="headerlink" href="#smtpsimple-mail-transfer-protocol" title="Permanent link">&para;</a></h3>
 <h4 id="smtp">▼ SMTPとは<a class="headerlink" href="#smtp" title="Permanent link">&para;</a></h4>
@@ -7470,7 +7470,7 @@
 <h3 id="_14">ポート番号の種類<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <h4 id="well-known-0-1023">▼ Well known ポート番号（<code>0</code> ～ <code>1023</code>）<a class="headerlink" href="#well-known-0-1023" title="Permanent link">&para;</a></h4>
 <p>IANA：Internet Assigned Numbers Authority（インターネット割当番号公社）によって管理されているポート番号。主要ポートが使われている場合は、代替ポートを使用することになる。各プロトコルで慣例として使われている代替ポートは、以下の検索サイトを参考にせよ。</p>
-<p>参考：<a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=alt">https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=alt</a></p>
+<p>ℹ️ 参考：<a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=alt">https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=alt</a></p>
 <p><img alt="ポート番号とプロトコルの対応関係" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ポート番号とプロトコルの対応関係.png" /></p>
 <h4 id="1024-49151">▼ 登録済みポート番号（<code>1024</code> ～ <code>49151</code>）<a class="headerlink" href="#1024-49151" title="Permanent link">&para;</a></h4>
 <p>IANAが登録申請を受けて公開しているポート番号。企業が作成した独自のアプリなどに対して割り当てられる。</p>
@@ -7501,7 +7501,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

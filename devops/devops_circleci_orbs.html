@@ -6595,14 +6595,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7146,7 +7146,7 @@
 <h1 id="orbscircleci">Orbs＠CircleCI<a class="headerlink" href="#orbscircleci" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-orbs">01. Orbs<a class="headerlink" href="#01-orbs" title="Permanent link">&para;</a></h2>
 <h3 id="orbs">Orbsとは<a class="headerlink" href="#orbs" title="Permanent link">&para;</a></h3>
@@ -7180,7 +7180,7 @@
 <p>Orbsのパッケージの処理の最小単位は<code>step</code>である。そのため、<code>step</code>よりも小さい<code>run</code>はOrbsに組み込めず、<code>run</code>固有のオプションや<code>run</code>に設定できるlinuxコマンドをOrbsでは使用できないことになる。</p>
 <h4 id="_4">▼ オプションへの引数の渡し方と注意点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>AWS認証情報は、CircleCIのデフォルト名と同じ環境変数名で登録しておけば、オプションで渡さなくとも、自動で入力してくれる。オプションが<code>env_var_name</code>型は、基本的に全てのスコープレベルの環境変数を受け付ける。ただしAlpine Linuxでは、『<code>$BASH_ENV</code>』を使用して、複数の<code>run</code>間で環境変数を共有できず、orbsのステップに環境変数を渡せないため注意する。</p>
-<p>参考：<a href="https://github.com/circleci/circleci-docs/issues/1650">https://github.com/circleci/circleci-docs/issues/1650</a></p>
+<p>ℹ️ 参考：<a href="https://github.com/circleci/circleci-docs/issues/1650">https://github.com/circleci/circleci-docs/issues/1650</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7479,7 +7479,7 @@ aws configure list
 </tbody>
 </table>
 <p>オプションを使用して、<code>max-poll-attempts</code>（ポーリングの最大試行回数）と<code>poll-interval</code>（試行の間隔秒数）で、ポーリングの総実行時間を定義できる。</p>
-<p>参考：<a href="https://circleci.com/docs/ja/2.0/ecs-ecr/#deploy-the-new-docker-image-to-an-existing-aws-ecs-service">https://circleci.com/docs/ja/2.0/ecs-ecr/#deploy-the-new-docker-image-to-an-existing-aws-ecs-service</a></p>
+<p>ℹ️ 参考：<a href="https://circleci.com/docs/ja/2.0/ecs-ecr/#deploy-the-new-docker-image-to-an-existing-aws-ecs-service">https://circleci.com/docs/ja/2.0/ecs-ecr/#deploy-the-new-docker-image-to-an-existing-aws-ecs-service</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7941,7 +7941,7 @@ aws configure list
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

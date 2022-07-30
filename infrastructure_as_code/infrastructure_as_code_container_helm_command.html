@@ -6873,14 +6873,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7698,20 +7698,20 @@
 <h1 id="helm">コマンド＠Helm<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h1>
 <h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01-helm">01. helmコマンド<a class="headerlink" href="#01-helm" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
 <h4 id="create_1">▼ createとは<a class="headerlink" href="#create_1" title="Permanent link">&para;</a></h4>
 <p>指定したパスにチャートのサンプルファイルを作成する。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_create/">https://helm.sh/docs/helm/helm_create/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_create/">https://helm.sh/docs/helm/helm_create/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm create &lt;チャートへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="history">history<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
 <h4 id="history_1">▼ historyとは<a class="headerlink" href="#history_1" title="Permanent link">&para;</a></h4>
 <p>指定したリリースの履歴を取得する。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_history/">https://helm.sh/docs/helm/helm_history/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_history/">https://helm.sh/docs/helm/helm_history/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7728,7 +7728,7 @@ REVISION    UPDATED                   STATUS     CHART      APP VERSION   DESCRI
 <h3 id="install">install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h3>
 <h4 id="install_1">▼ installとは<a class="headerlink" href="#install_1" title="Permanent link">&para;</a></h4>
 <p>チャートなどを指定し、Kubernetesリソースとしてapplyする。チャートへのパスを指定する以外にも、指定方法には種類がある。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_install/">https://helm.sh/docs/helm/helm_install/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_install/">https://helm.sh/docs/helm/helm_install/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm install &lt;リリース名&gt; &lt;チャートへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <table>
@@ -7748,7 +7748,7 @@ REVISION    UPDATED                   STATUS     CHART      APP VERSION   DESCRI
 <tr>
 <td><code>&lt;チャートレジストリ名&gt;/&lt;チャートリポジトリ名&gt;</code></td>
 <td><code>foo-registry/foo-repository</code></td>
-<td>参考：<a href="https://zenn.dev/mikutas/articles/2ab146fa1ea35b">https://zenn.dev/mikutas/articles/2ab146fa1ea35b</a></td>
+<td>ℹ️ 参考：<a href="https://zenn.dev/mikutas/articles/2ab146fa1ea35b">https://zenn.dev/mikutas/articles/2ab146fa1ea35b</a></td>
 </tr>
 <tr>
 <td>チャートリポジトリURL</td>
@@ -7763,7 +7763,7 @@ REVISION    UPDATED                   STATUS     CHART      APP VERSION   DESCRI
 <tr>
 <td>チャートアーカイブへのパス</td>
 <td><code>./foo-chart-&lt;バージョンタグ&gt;.tgz</code></td>
-<td><code>values</code>ファイルを使用する場合、<code>values</code>ファイルはチャートアーカイブの外にある必要がある。<br>参考：<a href="https://helm.sh/docs/helm/helm_install/">https://helm.sh/docs/helm/helm_install/</a></td>
+<td><code>values</code>ファイルを使用する場合、<code>values</code>ファイルはチャートアーカイブの外にある必要がある。<br>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_install/">https://helm.sh/docs/helm/helm_install/</a></td>
 </tr>
 </tbody>
 </table>
@@ -7785,7 +7785,7 @@ kind: Deployment
 </code></pre></div></td></tr></table></div>
 <h4 id="-f">▼ -f<a class="headerlink" href="#-f" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイル使用して、<code>helm install</code>コマンドを実行する。チャートのルートパスに『<code>values.yaml</code>』の名前でファイルが存在している場合、自動的に読み込まれるため、このオプションは不要である。これ以外の名前の場合は、オプションによる<code>values</code>ファイルの指定が必要になる。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_install/#options">https://helm.sh/docs/helm/helm_install/#options</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_install/#options">https://helm.sh/docs/helm/helm_install/#options</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm install -f &lt;valuesファイルへのパス&gt; &lt;リリース名&gt; &lt;チャートへのパス&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="kube-context">▼ kube-context<a class="headerlink" href="#kube-context" title="Permanent link">&para;</a></h4>
@@ -7802,7 +7802,7 @@ $ helm install &lt;リリース名&gt; &lt;チャートリポジトリ名&gt; --
 <h3 id="lint">lint<a class="headerlink" href="#lint" title="Permanent link">&para;</a></h3>
 <h4 id="lint_1">▼ lintとは<a class="headerlink" href="#lint_1" title="Permanent link">&para;</a></h4>
 <p>チャートのバリデーションを実行する。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_lint/">https://helm.sh/docs/helm/helm_lint/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_lint/">https://helm.sh/docs/helm/helm_lint/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7884,7 +7884,7 @@ $ helm install &lt;リリース名&gt; &lt;チャートリポジトリ名&gt; --
 <h3 id="list">list<a class="headerlink" href="#list" title="Permanent link">&para;</a></h3>
 <h4 id="list_1">▼ listとは<a class="headerlink" href="#list_1" title="Permanent link">&para;</a></h4>
 <p>Helmを使用してapplyしたリリースの一覧を取得する。チャートは、バージョンによって中身の<code>.yaml</code>ファイルに差があるため、ここでチャートのバージョンを確認すると良い。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_list/">https://helm.sh/docs/helm/helm_list/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_list/">https://helm.sh/docs/helm/helm_list/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -7897,7 +7897,7 @@ NAME         VERSION   UPDATED                   STATUS    CHART
 <h3 id="package">package<a class="headerlink" href="#package" title="Permanent link">&para;</a></h3>
 <h4 id="package_1">▼ packageとは<a class="headerlink" href="#package_1" title="Permanent link">&para;</a></h4>
 <p>チャートからチャートアーカイブを作成する。または、すでにアーカイブが存在する場合は更新する。アーカイブ名にはバージョンが設定される。複数のチャートを指定できる。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_package/">https://helm.sh/docs/helm/helm_package/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_package/">https://helm.sh/docs/helm/helm_package/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm package &lt;fooチャートへのパス&gt; &lt;barチャートへのパス&gt; &lt;bazチャートへのパス&gt;
@@ -7917,7 +7917,7 @@ Successfully packaged chart and saved it to: /foo-&lt;バージョンタグ&gt;.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm pull &lt;チャートリポジトリURL&gt; -d &lt;プル先のディレクトリ&gt;
 </code></pre></div></td></tr></table></div>
 <p>OCIリポジトリからもプルできる。</p>
-<p>参考：<a href="https://helm.sh/blog/storing-charts-in-oci/">https://helm.sh/blog/storing-charts-in-oci/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/blog/storing-charts-in-oci/">https://helm.sh/blog/storing-charts-in-oci/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># AWSの場合</span>
 $ helm pull oci://&lt;アカウントID&gt;.dkr.ecr.ap-northeast-1.amazonaws.com/&lt;チャート名&gt;
@@ -7966,7 +7966,7 @@ $ aws ecr get-login-password --region ap-northeast-1 <span class="p">|</span> he
 <p>チャートリポジトリを操作する。</p>
 <h4 id="add">▼ add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h4>
 <p>helmコマンドの実行環境にチャートリポジトリを登録する。</p>
-<p>参考：<a href="https://knowledge.sakura.ad.jp/23603/">https://knowledge.sakura.ad.jp/23603/</a></p>
+<p>ℹ️ 参考：<a href="https://knowledge.sakura.ad.jp/23603/">https://knowledge.sakura.ad.jp/23603/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm repo add &lt;チャートリポジトリ名&gt; &lt;チャートリポジトリURL&gt;
@@ -8008,7 +8008,7 @@ $ helm repo remove releases
 </code></pre></div></td></tr></table></div>
 <h4 id="update">▼ update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h4>
 <p>事前に<code>helm repo add</code>コマンドで追加しておいたチャートリポジトリの情報を更新する。チャートを特定のバージョンにアップグレードする前にリポジトリの情報を更新しておく必要がある。</p>
-<p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories">https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories">https://helm.sh/docs/intro/using_helm/#helm-repo-working-with-repositories</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8023,7 +8023,7 @@ Update Complete. ⎈Happy Helming!⎈
 <h3 id="search">search<a class="headerlink" href="#search" title="Permanent link">&para;</a></h3>
 <h4 id="search_1">▼ searchとは<a class="headerlink" href="#search_1" title="Permanent link">&para;</a></h4>
 <p>事前に<code>helm repo add</code>コマンドで追加しておいたチャートリポジトリを検索する。</p>
-<p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-search-finding-charts">https://helm.sh/docs/intro/using_helm/#helm-search-finding-charts</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-search-finding-charts">https://helm.sh/docs/intro/using_helm/#helm-search-finding-charts</a></p>
 <h4 id="hub">▼ hub<a class="headerlink" href="#hub" title="Permanent link">&para;</a></h4>
 <p>チャートリポジトリをキーワードで検索する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8068,7 +8068,7 @@ version: &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="values">▼ values<a class="headerlink" href="#values" title="Permanent link">&para;</a></h4>
 <p>チャートに渡せるパラメーターを<code>values</code>ファイルとして取得する。<code>values</code>ファイル本体は、チャートリポジトリで閲覧できる。</p>
-<p>参考：<a href="https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing">https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing">https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm show values &lt;チャート名&gt;
@@ -8107,14 +8107,14 @@ $ helm template prd releases &gt;<span class="p">|</span> releases.yaml
 <h3 id="uninstall">uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h3>
 <h4 id="uninstall_1">▼ uninstallとは<a class="headerlink" href="#uninstall_1" title="Permanent link">&para;</a></h4>
 <p>指定したリリースによってapplyされたKubernetesリソースを削除する。</p>
-<p>参考：<a href="https://helm.sh/docs/helm/helm_uninstall/">https://helm.sh/docs/helm/helm_uninstall/</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/helm/helm_uninstall/">https://helm.sh/docs/helm/helm_uninstall/</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm uninstall &lt;リリース名&gt;
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="upgrade">upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h3>
 <h4 id="upgrade_1">▼ upgradeとは<a class="headerlink" href="#upgrade_1" title="Permanent link">&para;</a></h4>
 <p>指定したバージョンのチャートを使用して、Helmのリリースをアップグレードする。</p>
-<p>参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-upgrade-and-helm-rollback-upgrading-a-release-and-recovering-on-failure">https://helm.sh/docs/intro/using_helm/#helm-upgrade-and-helm-rollback-upgrading-a-release-and-recovering-on-failure</a></p>
+<p>ℹ️ 参考：<a href="https://helm.sh/docs/intro/using_helm/#helm-upgrade-and-helm-rollback-upgrading-a-release-and-recovering-on-failure">https://helm.sh/docs/intro/using_helm/#helm-upgrade-and-helm-rollback-upgrading-a-release-and-recovering-on-failure</a></p>
 <h4 id="-install">▼ --install<a class="headerlink" href="#-install" title="Permanent link">&para;</a></h4>
 <p>新しいリビジョン番号を作成し、apply済のリリースをアップグレードする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8137,7 +8137,7 @@ TEST SUITE: None
 </code></pre></div></td></tr></table></div>
 <h4 id="-skip-crds">▼ --skip-crds<a class="headerlink" href="#-skip-crds" title="Permanent link">&para;</a></h4>
 <p>Helmは、カスタムリソースを含むチャートのインストールはサポートしているが、アップグレードとアンインストールをサポートしていない。そのため、<code>helm upgrade</code>コマンド時にはカスタムリソースのインストールを実行する仕様になっている。<code>--skip-crds</code>オプションを有効化すると、このインストールをスキップし、非カスタムリソースのみをインストールできる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://helm.sh/docs/helm/helm_upgrade/">https://helm.sh/docs/helm/helm_upgrade/</a></li>
 </ul>
@@ -8148,12 +8148,12 @@ TEST SUITE: None
 <h3 id="helm-secrets">helm-secrets<a class="headerlink" href="#helm-secrets" title="Permanent link">&para;</a></h3>
 <h4 id="helm-secrets_1">▼ helm-secretsとは<a class="headerlink" href="#helm-secrets_1" title="Permanent link">&para;</a></h4>
 <p>Sopsを使用して、<code>values</code>ファイルを暗号化/復号化しつつ、helmコマンドを実行する。元々の平文ファイルの名前は、<code>secrets.yaml</code>または<code>secrets.***.yaml</code>とする必要がある。</p>
-<p>参考：<a href="https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</a></p>
+<p>ℹ️ 参考：<a href="https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">https://scrapbox.io/mikutas/helm-secrets%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm plugin install https://github.com/jkroepke/helm-secrets --version &lt;バージョンタグ&gt;
 </code></pre></div></td></tr></table></div>
 <h4 id="dec">▼ dec<a class="headerlink" href="#dec" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイルを復号化し、<code>.yaml.dec</code>ファイルに出力する。</p>
-<p>参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm secrets dec ./values/secrets.yaml
@@ -8170,7 +8170,7 @@ Decrypting ./values/secrets.yaml
 </code></pre></div></td></tr></table></div>
 <h4 id="enc">▼ enc<a class="headerlink" href="#enc" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイルを暗号化し、元々の平文を上書きする。</p>
-<p>参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helm secrets enc ./values/secrets.yaml
@@ -8193,7 +8193,7 @@ Encrypted ./values/secrets.yaml
 </code></pre></div></td></tr></table></div>
 <h4 id="view">▼ view<a class="headerlink" href="#view" title="Permanent link">&para;</a></h4>
 <p>指定した<code>values</code>ファイルを復号化して取得する。</p>
-<p>参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62">https://qiita.com/knqyf263/items/4bb1c961037d0ea55a62</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -8211,7 +8211,7 @@ db:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>

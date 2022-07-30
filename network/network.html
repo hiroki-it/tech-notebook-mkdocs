@@ -6990,14 +6990,14 @@
       
       
         <label class="md-nav__link" for="__nav_15_3">
-          SREing
+          ■ SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+      <nav class="md-nav" aria-label="■ SREing" data-md-level="2">
         <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          SREing
+          ■ SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7938,7 +7938,7 @@
 <h1 id="_1">ネットワーク<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
-<p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
+<p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
 <h2 id="01">01. ネットワークの全体像<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <p>ネットワークには、『インターネット』『WAN』『LAN』がある。自宅内LAN、学内LAN、企業内LAN、企業WANなど、さまざまなネットワークがあり、インターネットは、それぞれのネットワークを互いに接続しているネットワークである。</p>
@@ -7947,13 +7947,13 @@
 <h2 id="02-lanlocal-area-network">02. LAN：Local Area Network<a class="headerlink" href="#02-lanlocal-area-network" title="Permanent link">&para;</a></h2>
 <h3 id="lan">LANとは<a class="headerlink" href="#lan" title="Permanent link">&para;</a></h3>
 <p>限定された領域だけで接続できるネットワークのこと。LAN内では、各機器はプライベートIPアドレスで識別されている。LAN内に設置されたNATルーターが、WAN内のグローバルIPアドレスとLAN内のプライベートIPアドレスを相互変換する。</p>
-<p>参考：<a href="http://qa.elecom.co.jp/faq_detail.html?id=4159&amp;category=152">http://qa.elecom.co.jp/faq_detail.html?id=4159&amp;category=152</a></p>
+<p>ℹ️ 参考：<a href="http://qa.elecom.co.jp/faq_detail.html?id=4159&amp;category=152">http://qa.elecom.co.jp/faq_detail.html?id=4159&amp;category=152</a></p>
 <p><img alt="network_lan" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/network_lan.jpeg" /></p>
 <p><br></p>
 <h3 id="lan_1">LANの構成<a class="headerlink" href="#lan_1" title="Permanent link">&para;</a></h3>
 <h4 id="_3">▼ サブネット<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>LANは、バリアセグメント、パブリックサブネット（非武装地帯）、プライベートサブネット（内部ネットワーク）、に分割できる。AWSやGCPでも、VPCを同様のサブネットに分割すると良い。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.techtarget.com/searchsecurity/definition/DMZ">https://www.techtarget.com/searchsecurity/definition/DMZ</a></li>
 <li><a href="https://www.ntt.com/business/services/network/internet-connect/ocn-business/bocn/knowledge/archive_09.html">https://www.ntt.com/business/services/network/internet-connect/ocn-business/bocn/knowledge/archive_09.html</a></li>
@@ -7970,14 +7970,14 @@
 <p>異なるネットワーク間（LANとLAN、LANとWAN、など）で通信できるようにし、また同時に複数の送信先に通信をルーティングする。</p>
 <h4 id="_8">▼ 設置場所<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>ルーターは、パブリックネットワーク、各プライベートネットワークの入り口、各プライベートネットワーク間で共有、といった方法で設置する。プライベートネットワークの入り口に設置する場合、例えば、自宅内に設置するルーターがある。インターネットサービスプロバイダーから貸出されるモデムでアナログ信号をデジタル信号に変換した後、これにルーターを接続し、自宅内/外のネットワークを繋ぐ。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/01842/032200010/">https://xtech.nikkei.com/atcl/nxt/column/18/01842/032200010/</a></li>
 <li><a href="https://michisugara.jp/modem_router">https://michisugara.jp/modem_router</a></li>
 </ul>
 <p><img alt="router" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/router.png" /></p>
 <h4 id="_9">▼ ルーターの種類<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00780/052700006/">https://xtech.nikkei.com/atcl/nxt/column/18/00780/052700006/</a></li>
 <li><a href="https://book.mynavi.jp/support/pc/5081/pdf/154.pdf">https://book.mynavi.jp/support/pc/5081/pdf/154.pdf</a></li>
@@ -8015,10 +8015,10 @@
 </table>
 <h4 id="_10">▼ ルーティング<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <p>受信した通信を適切な宛先に転送すること。通信の宛先を制御することを表現する場合、単に『転送する』よりも『ルーティングする』と表現した方が良い。</p>
-<p>参考：<a href="https://www.infraexpert.com/study/routing.html">https://www.infraexpert.com/study/routing.html</a></p>
+<p>ℹ️ 参考：<a href="https://www.infraexpert.com/study/routing.html">https://www.infraexpert.com/study/routing.html</a></p>
 <h4 id="_11">▼ ホップバイホップルーティング<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>ネットワーク内でルーターがルーターに通信をルーティングする時、各ルーターが最適なルーティング先を選択すること。</p>
-<p>参考：<a href="https://ascii.jp/elem/000/000/444/444681/3/">https://ascii.jp/elem/000/000/444/444681/3/</a></p>
+<p>ℹ️ 参考：<a href="https://ascii.jp/elem/000/000/444/444681/3/">https://ascii.jp/elem/000/000/444/444681/3/</a></p>
 <p><img alt="router_hop-by-hop-routing" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/router_hop-by-hop-routing.jpeg" /></p>
 <p><br></p>
 <h3 id="nat">NATルーター<a class="headerlink" href="#nat" title="Permanent link">&para;</a></h3>
@@ -8045,7 +8045,7 @@
 </tbody>
 </table>
 <p>種類の異なるネットワーク間で、IPアドレスを相互変換する。1つのIPアドレスに対して、1つの内部IPアドレスを紐付けられる。図で言う上側のアウトバウンド通信時の送信元IPアドレスの変換を『SNAT』といい、下側のインバウンド通信時の送信先IPアドレスの変換を『SNAT』という。1つの通信で両方が必要である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.vtv.co.jp/intro/mcu/about_mcu9-3.html">https://www.vtv.co.jp/intro/mcu/about_mcu9-3.html</a></li>
 <li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1282815592">https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1282815592</a></li>
@@ -8079,13 +8079,13 @@
 <h4 id="dnatdestination-nat">▼ DNAT：Destination NAT<a class="headerlink" href="#dnatdestination-nat" title="Permanent link">&para;</a></h4>
 <p><img alt="グローバルからプライベートへのnat変換" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/グローバルからプライベートへのnat変換.png" /></p>
 <p>NATルーターの機能のうち、送信先IPアドレスを変換すること（<code>グローバルIPアドレス</code> → <code>プライベートIPアドレス</code>、<code>プライベートIPアドレス</code> → <code>プライベートIPアドレス</code>）。NATルーター自体を複数のプライベートネットワークで共有することがある。</p>
-<p>参考：<a href="https://rainbow-engine.com/dnat-snat-difference/">https://rainbow-engine.com/dnat-snat-difference/</a></p>
+<p>ℹ️ 参考：<a href="https://rainbow-engine.com/dnat-snat-difference/">https://rainbow-engine.com/dnat-snat-difference/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>NATルーターは、プライベートネットワークに入る時に、パケットのヘッダ情報における『宛先』のグローバルIPアドレスをプライベートIPアドレスに変換する。</p>
 <h4 id="snatsource-nat">▼ SNAT：Source NAT<a class="headerlink" href="#snatsource-nat" title="Permanent link">&para;</a></h4>
 <p><img alt="プライベートからグローバルへのnat変換" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/プライベートからグローバルへのnat変換.png" /></p>
 <p>NATルーターの機能のうち送信元IPアドレスを変換すること（<code>プライベートIPアドレス</code> → <code>グローバルIPアドレス</code>、<code>プライベートIPアドレス</code> → <code>プライベートIPアドレス</code>）。NATルーター自体を複数のプライベートネットワークで共有することがある。</p>
-<p>参考：<a href="https://rainbow-engine.com/dnat-snat-difference/">https://rainbow-engine.com/dnat-snat-difference/</a></p>
+<p>ℹ️ 参考：<a href="https://rainbow-engine.com/dnat-snat-difference/">https://rainbow-engine.com/dnat-snat-difference/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>NATルーターは、プライベートネットワークから出る時に、パケットのヘッダ情報における『送信元』のプライベートIPアドレスをグローバルIPアドレスに変換する。例えば、GoogleでWebページを見ながら、Gmailアプリケーションを起動している場合、リクエストにおけるパケット情報として…</p>
 <table>
@@ -8147,7 +8147,7 @@
 </tbody>
 </table>
 <p>『IPマスカレード』ともいう。種類の異なるネットワーク間で、IPアドレスとポート番号を変換すること。1つのIPアドレスに対して、複数の内部IPアドレスを紐付けられる。AWSやGCPなどで使用されているようなNATルーターはこちらであり、IPアドレスとポート番号の両方を指定することにより、VPC内のプライベートIPアドレスに単一のパブリックIPアドレスを割り当てるようになっている。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.vtv.co.jp/intro/mcu/about_mcu9-3.html">https://www.vtv.co.jp/intro/mcu/about_mcu9-3.html</a></li>
 <li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1282815592">https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1282815592</a></li>
@@ -8191,7 +8191,7 @@
 <h3 id="_12">機能<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <h4 id="_13">▼ 代理ルーティング<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <p><img alt="フォワードプロキシサーバーとリバースプロキシサーバー" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/フォワードプロキシサーバーとリバースプロキシサーバー.png" /></p>
-<p>参考：<a href="https://qiita.com/att55/items/162950627dc593c72f23">https://qiita.com/att55/items/162950627dc593c72f23</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/att55/items/162950627dc593c72f23">https://qiita.com/att55/items/162950627dc593c72f23</a></p>
 <table>
 <thead>
 <tr>
@@ -8212,7 +8212,7 @@
 </table>
 <h4 id="_14">▼ キャッシュ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <p><img alt="プロキシサーバーのキャッシュ機能" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/プロキシサーバーのキャッシュ機能.png" /></p>
-<p>参考：<a href="https://software.fujitsu.com/jp/manual/manualfiles/M100003/B1WN9491/07Z201/ihs02/ihs00016.html">https://software.fujitsu.com/jp/manual/manualfiles/M100003/B1WN9491/07Z201/ihs02/ihs00016.html</a></p>
+<p>ℹ️ 参考：<a href="https://software.fujitsu.com/jp/manual/manualfiles/M100003/B1WN9491/07Z201/ihs02/ihs00016.html">https://software.fujitsu.com/jp/manual/manualfiles/M100003/B1WN9491/07Z201/ihs02/ihs00016.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8243,7 +8243,7 @@
 <h3 id="wan">WANとは<a class="headerlink" href="#wan" title="Permanent link">&para;</a></h3>
 <p><img alt="network_wan" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/network_wan.png" /></p>
 <p>異なるLAN間のハブになるネットワークのこと。インターネットサービスプロバイダーがサービスとして提供している。WAN内では、各LANはグローバルIPアドレスで識別されている。各LANがWANに接続するためには、DTE（例：ブロードバンドルーター、Wifiルーター）、DCE（例：モデム）、電柱にあるアクセス回線、が必要になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/hymnofpeace/items/7f09a7a10e843552a8cb">https://qiita.com/hymnofpeace/items/7f09a7a10e843552a8cb</a></li>
 <li><a href="https://xtech.nikkei.com/it/article/COLUMN/20080715/310872/">https://xtech.nikkei.com/it/article/COLUMN/20080715/310872/</a></li>
@@ -8255,10 +8255,10 @@
 <h3 id="wan_2">WANの種類<a class="headerlink" href="#wan_2" title="Permanent link">&para;</a></h3>
 <h4 id="_18">▼ 専用線方式<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <p>データの送信元と送信先が決まっており、特定のユーザーがアクセス回線を専有する。他のLANから閉じられた専用のアクセス回線であり、特定のLAN間でのみデータ通信を行う。</p>
-<p>参考：<a href="http://makiyamashinji.web.fc2.com/emprus/design/wan.html">http://makiyamashinji.web.fc2.com/emprus/design/wan.html</a></p>
+<p>ℹ️ 参考：<a href="http://makiyamashinji.web.fc2.com/emprus/design/wan.html">http://makiyamashinji.web.fc2.com/emprus/design/wan.html</a></p>
 <h4 id="_19">▼ 回線交換方式<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>データの送信元と送信先が決まっておらず、複数のユーザーでWAFを共有する。ただし、特定のユーザーのデータがアクセス回線を通過している間、他のユーザーはアクセス回線を使用できない。少数対少数でデータ通信を行うため、送信時に、送信者と受信者の宛先情報は不要である。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.itpassportsiken.com/kakomon/28_haru/q71.html">https://www.itpassportsiken.com/kakomon/28_haru/q71.html</a></li>
 <li><a href="https://www.infraexpert.com/study/wan3.html">https://www.infraexpert.com/study/wan3.html</a></li>
@@ -8266,7 +8266,7 @@
 <p><img alt="waf_circuit-switching-system" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/waf_circuit-switching-system.png" /></p>
 <h4 id="_20">▼ パケット交換方式<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
 <p>パケット化されたデータの送信元と送信先が決まっておらず、複数のユーザーでWAFを共有する。複数のユーザーでアクセス回線を同時に使用できる。対多数でデータ通信を行うため、送信時に、送信者と受信者の宛先情報が必要になる。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.itpassportsiken.com/kakomon/28_haru/q71.html">https://www.itpassportsiken.com/kakomon/28_haru/q71.html</a></li>
 <li><a href="https://www.infraexpert.com/study/wan3.html">https://www.infraexpert.com/study/wan3.html</a></li>
@@ -8276,7 +8276,7 @@
 <h2 id="04-ip">04. IPアドレス<a class="headerlink" href="#04-ip" title="Permanent link">&para;</a></h2>
 <h3 id="ip">IPアドレスとは<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h3>
 <p>ネットワーク内の機器の位置情報のこと。ネットワーク内のLAN内のルーターを境に、グローバルIPアドレスとプライベートIPアドレスに分けられる。IPアドレスの例示では、<code>x</code>を使用しないようにする。</p>
-<p>参考：<a href="https://qiita.com/Targoyle/items/1c5454a41ea4519b0c5f">https://qiita.com/Targoyle/items/1c5454a41ea4519b0c5f</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/Targoyle/items/1c5454a41ea4519b0c5f">https://qiita.com/Targoyle/items/1c5454a41ea4519b0c5f</a></p>
 <p><img alt="ip-address" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ip-address.png" /></p>
 <p><br></p>
 <h3 id="ip_1">IPアドレスの種類<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h3>
@@ -8284,7 +8284,7 @@
 <p>プロバイダが提供するIPアドレスである。パブリックネットワーク内に同じIPアドレスは存在せず、Network Information Centerへの使用申請が必要。プライベートIPアドレスの番号でなければ、グローバルIPアドレスである。NATはグローバルIPアドレスを持っており、プライベートネットワークとプライベートネットワーク間の双方向への通信時に、プライベートIPアドレスと相互変換する。</p>
 <h4 id="ip_3">▼ プライベートIPアドレス<a class="headerlink" href="#ip_3" title="Permanent link">&para;</a></h4>
 <p>LAN内で使用される。異なるプライベートネットワーク間では、同じIPアドレスが存在する。プライベートIPアドレスは、RFC1918で推奨された範囲を使用することが多い。</p>
-<p>参考：<a href="https://atmarkit.itmedia.co.jp/aig/06network/privateip.html">https://atmarkit.itmedia.co.jp/aig/06network/privateip.html</a></p>
+<p>ℹ️ 参考：<a href="https://atmarkit.itmedia.co.jp/aig/06network/privateip.html">https://atmarkit.itmedia.co.jp/aig/06network/privateip.html</a></p>
 <table>
 <thead>
 <tr>
@@ -8319,7 +8319,7 @@
 <h3 id="_21">ネットワーク部、ホスト部<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <h4 id="_22">▼ ネットワーク部、ホスト部とは<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>IPアドレスのオクテットは、ネットワーク部とホスト部に分類できる。</p>
-<p>参考：<a href="https://qiita.com/mogulla3/items/efb4c9328d82d24d98e6">https://qiita.com/mogulla3/items/efb4c9328d82d24d98e6</a></p>
+<p>ℹ️ 参考：<a href="https://qiita.com/mogulla3/items/efb4c9328d82d24d98e6">https://qiita.com/mogulla3/items/efb4c9328d82d24d98e6</a></p>
 <p><img alt="ip-address_portion" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/ip-address_portion.png" /></p>
 <h4 id="_23">▼ クラスによるホスト部とネットワーク部の定義<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>IPアドレスをクラスとして分類し、各クラスでIPアドレスのネットワーク部とホスト部を定義する方法。設定したIPアドレスの属するクラスによって、使用できるIPアドレスの範囲が決まってしまう。ホスト部とネットワーク部の定義方法が4種類しかないため、IPアドレスのパターン数（最大パソコン数）が多すぎたり、少なすぎたりしてしまう。</p>
@@ -8533,7 +8533,7 @@
 <h2 id="04-02-url">04-02. URL、メールアドレス<a class="headerlink" href="#04-02-url" title="Permanent link">&para;</a></h2>
 <h3 id="url">URL、メールアドレスとは<a class="headerlink" href="#url" title="Permanent link">&para;</a></h3>
 <p>ネットワーク内での位置情報であるIPアドレスに紐づき、ネットワーク上のIPアドレスの場所を人間にわかる識別子にしたもの。</p>
-<p>参考：<a href="https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/">https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/</a></p>
+<p>ℹ️ 参考：<a href="https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/">https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/</a></p>
 <p><br></p>
 <h3 id="_25">構造<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
 <p>URLは『<code>プロトコル + 完全修飾ドメイン名 + パス</code>』から、メールアドレスは『<code>ユーザ名 + 完全修飾ドメイン名</code>』から構成される。</p>
@@ -8542,7 +8542,7 @@
 <h3 id="_26">完全修飾ドメイン名<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
 <h4 id="_27">▼ 完全修飾ドメイン名の構成<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
 <p>完全修飾ドメイン名は、所属ネットワークを指すドメイン名と、そのネットワークにおける具体的なサーバーを指すホスト名からなる。ただし、サーバーのホスト名が『www』である場合、クライアントはURLの指定時にホスト名を省略できる。例えば、『<code>www.example.com</code>』という完全修飾ドメイン名をURLで指定する場合、『<code>example.com</code>』としても良い。</p>
-<p>参考：<a href="https://ascii.jp/elem/000/000/419/419685/2/">https://ascii.jp/elem/000/000/419/419685/2/</a></p>
+<p>ℹ️ 参考：<a href="https://ascii.jp/elem/000/000/419/419685/2/">https://ascii.jp/elem/000/000/419/419685/2/</a></p>
 <p><img alt="domain_namespace" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/domain_namespace.png" /></p>
 <h4 id="_28">▼ サブドメイン<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
 <p>完全修飾ドメイン名は、ドメイン名の子関係にあるサブドメイン名を持てる。ホスト名（以下では省略されている）と、ドメイン名の間につける。</p>
@@ -8552,7 +8552,7 @@
 <h3 id="_29">名前解決、正引き、逆引きとは<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
 <p><img alt="IPアドレスと完全修飾ドメイン名のマッピング1" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/IPアドレスと完全修飾ドメイン名のマッピング4.png" /></p>
 <p>URLやメールアドレスのドメイン名とIPアドレスを相互変換すること。特に、ドメイン名を基にIPアドレスを返却させるような問い合わせを『正引き』、反対にIPアドレスを基にドメイン名を返却させるような問い合わせを『逆引き』という。例えば、外部WebサーバーのグローバルIPアドレスが『203.142.205.139』であると知っている場合、URLのプロトコル部分以下を『<code>203.142.205.139</code>』としてリクエストすれば、外部Webサーバーが提供するサイトにアクセスできる。しかし、グローバルIPアドレスは数字の羅列であるため、人間には覚えにくい。そこで、グローバルIPアドレスの代わりに、完全修飾ドメイン名をURLの一部として使用する。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/">https://xtech.nikkei.com/atcl/nxt/column/18/00780/062000012/</a></li>
 <li><a href="https://www.kagoya.jp/howto/it-glossary/network/nameresolution/">https://www.kagoya.jp/howto/it-glossary/network/nameresolution/</a></li>
@@ -8561,7 +8561,7 @@
 <h3 id="_30">名前解決の要素<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
 <h4 id="etchosts">▼ <code>/etc/hosts</code>ファイル<a class="headerlink" href="#etchosts" title="Permanent link">&para;</a></h4>
 <p>ドメイン名とIPアドレスのマッピングを管理する。名前解決でDNSサーバに問い合わせる前に参照される。もし<code>/etc/hosts</code>ファイルで名前解決が行われた場合は、DNSサーバば使用されない。WebサーバーのIPアドレスがDNSサーバーに登録されていない時、またはDNSサーバーが不具合の時に、DNSサーバーの代わりとして使用する。</p>
-<p>参考：<a href="https://www.looklinux.com/etchosts-vs-etcresolv-conf-in-linux/">https://www.looklinux.com/etchosts-vs-etcresolv-conf-in-linux/</a></p>
+<p>ℹ️ 参考：<a href="https://www.looklinux.com/etchosts-vs-etcresolv-conf-in-linux/">https://www.looklinux.com/etchosts-vs-etcresolv-conf-in-linux/</a></p>
 <p><strong>＊実行例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -8575,7 +8575,7 @@
 </code></pre></div></td></tr></table></div>
 <h4 id="etcresolvconf">▼ <code>/etc/resolv.conf</code>ファイル<a class="headerlink" href="#etcresolvconf" title="Permanent link">&para;</a></h4>
 <p>名前解決に使用するDNSサーバーのIPアドレスや、問い合わせで使用するドメイン名の後に付与する文字列を定義する。名前解決では、まず最初に、<code>/etc/resolv.conf</code>ファイルに定義されたDNSサーバに問い合わせる。</p>
-<p>参考：<a href="https://linuc.org/study/knowledge/507/">https://linuc.org/study/knowledge/507/</a></p>
+<p>ℹ️ 参考：<a href="https://linuc.org/study/knowledge/507/">https://linuc.org/study/knowledge/507/</a></p>
 <p><strong>＊例＊</strong></p>
 <p>もし、<code>example</code>というドメイン名で問い合わせを行った場合、実際には<code>example.foo</code>が使用される。また、この問い合わせに失敗した場合は、<code>search</code>値が左から順に使用される。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -8588,7 +8588,7 @@ search      bar   baz <span class="c1"># domain値で問い合わせに失敗し
 </code></pre></div></td></tr></table></div>
 <h4 id="dnsdns">▼ DNSサーバー（ネームサーバー、権威DNSサーバー）<a class="headerlink" href="#dnsdns" title="Permanent link">&para;</a></h4>
 <p>『ネームサーバー』『権威DNSサーバー』ともいう。ドメイン名とIPアドレスのマッピングを管理する。</p>
-<p>参考：<a href="https://www.quora.com/What-is-the-difference-if-any-between-DNS-server-and-name-server">https://www.quora.com/What-is-the-difference-if-any-between-DNS-server-and-name-server</a></p>
+<p>ℹ️ 参考：<a href="https://www.quora.com/What-is-the-difference-if-any-between-DNS-server-and-name-server">https://www.quora.com/What-is-the-difference-if-any-between-DNS-server-and-name-server</a></p>
 <h4 id="dns">▼ キャッシュDNSサーバー<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h4>
 <p>ルートサーバーは世界に13機しか存在しておらず、現実的には、世界中の名前解決の全てのリクエストを処理できない。そこで、IPアドレスとドメイン名の関係をキャッシュするキャッシュDNSサーバーが使用されている。基本的には、キャッシュDNSサーバーとDNSサーバーは区別される。ただし、Amazon Route53のように、キャッシュDNSサーバーとDNSサーバーの機能を両立しているものもある。</p>
 <p><br></p>
@@ -8621,7 +8621,7 @@ search      bar   baz <span class="c1"># domain値で問い合わせに失敗し
 <h3 id="_32">インバウンド/アウトバウンド<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
 <p><img alt="inbound_outbound" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/inbound_outbound.png" /></p>
 <p>サーバーを中心とした方向で通信を見た時、サーバーに流入する方向をインバウンドという。反対に、サーバーから流出する方向をアウトバウンドという。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.amazon.co.jp/dp/B0043D2EKO/">https://www.amazon.co.jp/dp/B0043D2EKO/</a></li>
 <li><a href="https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch03s01.html">https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch03s01.html</a></li>
@@ -8630,7 +8630,7 @@ search      bar   baz <span class="c1"># domain値で問い合わせに失敗し
 <h3 id="_33">アップストリーム/ダウンストリーム<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
 <p><img alt="upstream_downstream" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/upstream_downstream.png" /></p>
 <p>通信の送受信全体の中の位置で通信を見た時、通信が送信された前半の位置を相対的にアップストリームという。反対に、通信が受信される後半の位置を相対的にダウンストリームという。</p>
-<p>参考：</p>
+<p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://www.amazon.co.jp/dp/B0043D2EKO/">https://www.amazon.co.jp/dp/B0043D2EKO/</a></li>
 <li><a href="https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch03s01.html">https://www.oreilly.com/library/view/http-the-definitive/1565925092/ch03s01.html</a></li>
@@ -8688,10 +8688,10 @@ search      bar   baz <span class="c1"># domain値で問い合わせに失敗し
 </code></pre></div></td></tr></table></div>
 <h4 id="_39">▼ トラフィックとは<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
 <p>とあるネットワーク地点でのスループットのこと。</p>
-<p>参考：<a href="https://xtech.nikkei.com/it/article/Keyword/20070222/262872/">https://xtech.nikkei.com/it/article/Keyword/20070222/262872/</a></p>
+<p>ℹ️ 参考：<a href="https://xtech.nikkei.com/it/article/Keyword/20070222/262872/">https://xtech.nikkei.com/it/article/Keyword/20070222/262872/</a></p>
 <p><img alt="トラフィック" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/トラフィック.png" /></p>
 <p>総務省のデータで、日本のブロードバンド大手5社の総トラフィックを年次でグラフ化したものがある。</p>
-<p>参考：<a href="https://xtech.nikkei.com/atcl/nxt/column/18/00525/112900001/">https://xtech.nikkei.com/atcl/nxt/column/18/00525/112900001/</a></p>
+<p>ℹ️ 参考：<a href="https://xtech.nikkei.com/atcl/nxt/column/18/00525/112900001/">https://xtech.nikkei.com/atcl/nxt/column/18/00525/112900001/</a></p>
 <p><img alt="トラフィックのグラフ" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/トラフィックのグラフ.png" /></p>
 <p><br></p>
 
@@ -8700,7 +8700,7 @@ search      bar   baz <span class="c1"># domain値で問い合わせに失敗し
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>
