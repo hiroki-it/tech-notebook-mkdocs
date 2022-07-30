@@ -6497,15 +6497,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ▼ 
+  <a href="#https" class="md-nav__link">
+    ▼ HTTPS接続
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ▼ 
+  <a href="#ssh" class="md-nav__link">
+    ▼ SSH接続
   </a>
   
 </li>
@@ -6524,7 +6524,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     ▼ 設定の影響範囲の種類
   </a>
   
@@ -6974,7 +6974,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     ▼ コマンド組み合わせ
   </a>
   
@@ -7247,15 +7247,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ▼ 
+  <a href="#https" class="md-nav__link">
+    ▼ HTTPS接続
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ▼ 
+  <a href="#ssh" class="md-nav__link">
+    ▼ SSH接続
   </a>
   
 </li>
@@ -7274,7 +7274,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     ▼ 設定の影響範囲の種類
   </a>
   
@@ -7724,7 +7724,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     ▼ コマンド組み合わせ
   </a>
   
@@ -7840,17 +7840,17 @@
 <p><br></p>
 <h2 id="01">01. セットアップ系コマンド<a class="headerlink" href="#01" title="Permanent link">&para;</a></h2>
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">&para;</a></h3>
-<h4 id="_2">▼ <HTTPS接続><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="https">▼ HTTPS接続<a class="headerlink" href="#https" title="Permanent link">&para;</a></h4>
 <p>Basic認証でGitHubにログインし、クローンする。GitHubのユーザー名とパスワードが必要になる。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git clone https://github.com/&lt;組織名&gt;/&lt;GitHubリポジトリ名&gt;.git
 </code></pre></div></td></tr></table></div>
-<h4 id="_3">▼ <SSH接続><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="ssh">▼ SSH接続<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h4>
 <p>SSH接続でGitHubにログインし、クローンする。GitHubの自身の公開鍵を登録する必要がある。サーバー接続名は、SSH接続の設定ファイル（<code>~/.ssh/config</code>）に記載されている。デフォルトでは、GitHubの接続名は、『<code>github.com</code>』になっている。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git clone git@&lt;ssh-configファイルでのサーバー接続名&gt;:&lt;組織名&gt;/&lt;GitHubリポジトリ名&gt;.git
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h3>
-<h4 id="_4">▼ 設定の影響範囲の種類<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<h4 id="_2">▼ 設定の影響範囲の種類<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -8659,7 +8659,7 @@ $
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="pull">pull<a class="headerlink" href="#pull" title="Permanent link">&para;</a></h3>
-<h4 id="_5">▼ コマンド組み合わせ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<h4 id="_3">▼ コマンド組み合わせ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>全てのリモートブランチをpullする。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
