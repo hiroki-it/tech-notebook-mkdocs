@@ -6,20 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="俺（長谷川広樹）が、業務や学習から得た技術的な知見をドキュメント形式で記録したサイトです。">
+        <meta name="description" content="サービスレベル＠監視の知見を記録しています。">
       
       
         <meta name="author" content="Hiroki Hasegawa">
       
       
-        <link rel="canonical" href="https://hiroki-it.github.io/tech-notebook-mkdocs/software_development_methodology/software_development_methodology_git_github.html">
+        <link rel="canonical" href="https://hiroki-it.github.io/tech-notebook-mkdocs/observability/observability_monitoring_service_level.html">
       
       <link rel="icon" href="../assets/images/logo_v2.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
     
     
       
-        <title>【IT技術の知見】GitHub - 俺の技術ノート</title>
+        <title>【IT技術の知見】サービスレベル＠監視 - 俺の技術ノート</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              【IT技術の知見】GitHub
+              【IT技術の知見】サービスレベル＠監視
             
           </span>
         </div>
@@ -358,7 +358,7 @@
   
     <li class="md-tabs__item">
       <a href="../infrastructure_as_code/infrastructure_as_code.html" class="md-tabs__link">
-        ⚙️ Infrastructure as Code
+        ⚙️ IaC
       </a>
     </li>
   
@@ -383,13 +383,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../observability/observability.html" class="md-tabs__link">
+      <a href="observability.html" class="md-tabs__link md-tabs__link--active">
         🔎 可観測性
       </a>
     </li>
@@ -399,18 +401,39 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="software_development_methodology.html" class="md-tabs__link md-tabs__link--active">
-        👥 ソフトウェア開発手法論/SRE
+      <a href="../software_development_methodology/software_development_methodology.html" class="md-tabs__link">
+        👥 ソフトウェア開発手法論/SREing
       </a>
     </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../version_control/version_control_git_github.html" class="md-tabs__link">
+        🦶 バージョン管理
+      </a>
+    </li>
+  
+
   
 
       
@@ -4306,14 +4329,14 @@
       
       
         <label class="md-nav__link" for="__nav_12">
-          ⚙️ Infrastructure as Code
+          ⚙️ IaC
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="⚙️ Infrastructure as Code" data-md-level="1">
+      <nav class="md-nav" aria-label="⚙️ IaC" data-md-level="1">
         <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
-          ⚙️ Infrastructure as Code
+          ⚙️ IaC
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -4324,7 +4347,7 @@
   
     <li class="md-nav__item">
       <a href="../infrastructure_as_code/infrastructure_as_code.html" class="md-nav__link">
-        Infrastructure as Code
+        IaC
       </a>
     </li>
   
@@ -5757,12 +5780,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" checked>
       
       
       
@@ -5785,7 +5810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability.html" class="md-nav__link">
+      <a href="observability.html" class="md-nav__link">
         可観測性
       </a>
     </li>
@@ -5797,12 +5822,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" checked>
       
       
       
@@ -5825,7 +5852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring.html" class="md-nav__link">
+      <a href="observability_monitoring.html" class="md-nav__link">
         監視
       </a>
     </li>
@@ -5839,9 +5866,259 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_monitoring_oncall_incident_management.html" class="md-nav__link">
+      <a href="observability_monitoring_oncall_incident_management.html" class="md-nav__link">
         オンコールとインシデント管理
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          サービスレベル
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="observability_monitoring_service_level.html" class="md-nav__link md-nav__link--active">
+        サービスレベル
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    はじめに
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01-sliservice-level-indicator" class="md-nav__link">
+    01. SLI：Service Level Indicator（サービスレベル指標）
+  </a>
+  
+    <nav class="md-nav" aria-label="01. SLI：Service Level Indicator（サービスレベル指標）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sli" class="md-nav__link">
+    SLIとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sli_1" class="md-nav__link">
+    SLIの例
+  </a>
+  
+    <nav class="md-nav" aria-label="SLIの例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google" class="md-nav__link">
+    ▼ メトリクスの例（Google）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    ▼ メトリクスの例（Microsoft）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-sloservice-level-objective" class="md-nav__link">
+    02. SLO：Service Level Objective（サービスレベル目標）
+  </a>
+  
+    <nav class="md-nav" aria-label="02. SLO：Service Level Objective（サービスレベル目標）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slo" class="md-nav__link">
+    SLOとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    エラーバジェット
+  </a>
+  
+    <nav class="md-nav" aria-label="エラーバジェット">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ▼ エラーバジェットとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slo_1" class="md-nav__link">
+    SLOの決め方
+  </a>
+  
+    <nav class="md-nav" aria-label="SLOの決め方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datadog" class="md-nav__link">
+    ▼ 目標値の例（Datadog）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google_1" class="md-nav__link">
+    ▼ 目標値の例（Google）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slo_2" class="md-nav__link">
+    SLOの事後評価
+  </a>
+  
+    <nav class="md-nav" aria-label="SLOの事後評価">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circonus" class="md-nav__link">
+    ▼ 評価方法の例（Circonus）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-slaservice-level-agreement" class="md-nav__link">
+    03. SLA：Service Level Agreement（サービスレベル合意）
+  </a>
+  
+    <nav class="md-nav" aria-label="03. SLA：Service Level Agreement（サービスレベル合意）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sla" class="md-nav__link">
+    SLAとは
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sla_1" class="md-nav__link">
+    SLAの決め方
+  </a>
+  
+    <nav class="md-nav" aria-label="SLAの決め方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sla_2" class="md-nav__link">
+    ▼ SLA導入前準備の例（経産省）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    ▼ 返金率の例（AWS）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purecloud" class="md-nav__link">
+    ▼ 対応開始時間の例（PureCloud）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google_2" class="md-nav__link">
+    ▼ 保証期間の例（Google）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5886,7 +6163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry.html" class="md-nav__link">
+      <a href="observability_telemetry.html" class="md-nav__link">
         テレメトリー収集ツール
       </a>
     </li>
@@ -5900,7 +6177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_prometheus.html" class="md-nav__link">
+      <a href="observability_telemetry_prometheus.html" class="md-nav__link">
         Prometheus
       </a>
     </li>
@@ -5914,7 +6191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_victoria_metrics.html" class="md-nav__link">
+      <a href="observability_telemetry_victoria_metrics.html" class="md-nav__link">
         VictoriaMetrics
       </a>
     </li>
@@ -5954,7 +6231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_google_analytics.html" class="md-nav__link">
+      <a href="observability_telemetry_google_analytics.html" class="md-nav__link">
         Googleアナリティクス
       </a>
     </li>
@@ -5968,7 +6245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_google_search_console.html" class="md-nav__link">
+      <a href="observability_telemetry_google_search_console.html" class="md-nav__link">
         Googleサーチコンソール
       </a>
     </li>
@@ -6015,7 +6292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_fluentbit_vs_fluentd.html" class="md-nav__link">
+      <a href="observability_telemetry_fluentbit_vs_fluentd.html" class="md-nav__link">
         FluentBit vs. Fluentd
       </a>
     </li>
@@ -6029,7 +6306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_fluentbit.html" class="md-nav__link">
+      <a href="observability_telemetry_fluentbit.html" class="md-nav__link">
         FluentBit
       </a>
     </li>
@@ -6043,7 +6320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_fluentbit_firelens.html" class="md-nav__link">
+      <a href="observability_telemetry_fluentbit_firelens.html" class="md-nav__link">
         FireLensコンテナ
       </a>
     </li>
@@ -6090,7 +6367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_agent_conf.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_agent_conf.html" class="md-nav__link">
         datadogエージェントの設定
       </a>
     </li>
@@ -6104,7 +6381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_metrics.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_metrics.html" class="md-nav__link">
         メトリクス収集
       </a>
     </li>
@@ -6118,7 +6395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_log.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_log.html" class="md-nav__link">
         ログ収集
       </a>
     </li>
@@ -6132,7 +6409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_distributed_trace.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_distributed_trace.html" class="md-nav__link">
         分散トレース収集
       </a>
     </li>
@@ -6146,7 +6423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_telemetry_association.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_telemetry_association.html" class="md-nav__link">
         テレメトリー間の紐づけ
       </a>
     </li>
@@ -6160,7 +6437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_monitoring.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_monitoring.html" class="md-nav__link">
         監視
       </a>
     </li>
@@ -6174,7 +6451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../observability/observability_telemetry_datadog_integration.html" class="md-nav__link">
+      <a href="observability_telemetry_datadog_integration.html" class="md-nav__link">
         インテグレーション
       </a>
     </li>
@@ -6208,27 +6485,25 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_15">
-          👥 ソフトウェア開発手法論/SRE
+          👥 ソフトウェア開発手法論/SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="👥 ソフトウェア開発手法論/SRE" data-md-level="1">
+      <nav class="md-nav" aria-label="👥 ソフトウェア開発手法論/SREing" data-md-level="1">
         <label class="md-nav__title" for="__nav_15">
           <span class="md-nav__icon md-icon"></span>
-          👥 ソフトウェア開発手法論/SRE
+          👥 ソフトウェア開発手法論/SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6238,7 +6513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software_development_methodology.html" class="md-nav__link">
+      <a href="../software_development_methodology/software_development_methodology.html" class="md-nav__link">
         ソフトウェア開発手法論
       </a>
     </li>
@@ -6252,21 +6527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="software_development_methodology_site_reliability_engineering.html" class="md-nav__link">
-        SRE
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="software_development_methodology_project_management.html" class="md-nav__link">
+      <a href="../software_development_methodology/software_development_methodology_project_management.html" class="md-nav__link">
         プロジェクト管理
       </a>
     </li>
@@ -6278,27 +6539,25 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_4" type="checkbox" id="__nav_15_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_15_3" type="checkbox" id="__nav_15_3" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_15_4">
-          ■ Git
+        <label class="md-nav__link" for="__nav_15_3">
+          SREing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="■ Git" data-md-level="2">
-        <label class="md-nav__title" for="__nav_15_4">
+      <nav class="md-nav" aria-label="SREing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_3">
           <span class="md-nav__icon md-icon"></span>
-          ■ Git
+          SREing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -6306,452 +6565,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          GitHub
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="software_development_methodology_git_github.html" class="md-nav__link md-nav__link--active">
-        GitHub
+    <li class="md-nav__item">
+      <a href="../software_development_methodology/software_development_methodology_site_reliability_engineering.html" class="md-nav__link">
+        SREing
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    はじめに
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#01-issue" class="md-nav__link">
-    01. Issue
-  </a>
-  
-    <nav class="md-nav" aria-label="01. Issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    作業内容
-  </a>
-  
-    <nav class="md-nav" aria-label="作業内容">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ▼ 作成
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ▼ 削除
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    テンプレート
-  </a>
-  
-    <nav class="md-nav" aria-label="テンプレート">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ▼ 配置場所
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ▼ タイトル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ▼ 内容
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#02" class="md-nav__link">
-    02. プルリクエスト
-  </a>
-  
-    <nav class="md-nav" aria-label="02. プルリクエスト">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    作業内容
-  </a>
-  
-    <nav class="md-nav" aria-label="作業内容">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ▼ 呼び名
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    ▼ 作成
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    ▼ 削除
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    テンプレート
-  </a>
-  
-    <nav class="md-nav" aria-label="テンプレート">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    ▼ 配置場所
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    ▼ タイトル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wip" class="md-nav__link">
-    ▼ WIP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    ▼ 内容
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    コミットの粒度
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    レビュー観点
-  </a>
-  
-    <nav class="md-nav" aria-label="レビュー観点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    ▼ ビジネスルールや仕様通りか
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    ▼ バリデーションは適切か
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    ▼ 冗長になっていないか
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#03-git-flow" class="md-nav__link">
-    03. Git-flow
-  </a>
-  
-    <nav class="md-nav" aria-label="03. Git-flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#git-flow" class="md-nav__link">
-    Git-flowとは
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    実行環境とブランチ
-  </a>
-  
-    <nav class="md-nav" aria-label="実行環境とブランチ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    ▼ 対応関係
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mainproduction" class="md-nav__link">
-    ▼ mainブランチ（production）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hotfix" class="md-nav__link">
-    ▼ hotfixブランチ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#release" class="md-nav__link">
-    ▼ releaseブランチ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developstaging" class="md-nav__link">
-    ▼ developブランチ（staging）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature" class="md-nav__link">
-    ▼ featureブランチ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    リリースノート
-  </a>
-  
-    <nav class="md-nav" aria-label="リリースノート">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    ▼ 例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
-    ▼ タグ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
-    ▼ リリース名
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
-    ▼ 本文
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#04" class="md-nav__link">
-    04. コンフリクトの解決
-  </a>
-  
-    <nav class="md-nav" aria-label="04. コンフリクトの解決">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
-    解決方法
-  </a>
-  
-    <nav class="md-nav" aria-label="解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    ▼ Gitを使用して
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_1" class="md-nav__link">
-    ▼ GitHubを使用して
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
-    ▼ エディタを使用して
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
-    ブランチ別の解決方法
-  </a>
-  
-    <nav class="md-nav" aria-label="ブランチ別の解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-vs-develop" class="md-nav__link">
-    ▼ feature vs. develop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#develop-vs-main" class="md-nav__link">
-    ▼ develop vs. main
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
-    基点ブランチからの変更の取り込み
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -6763,8 +6581,22 @@
   
   
     <li class="md-nav__item">
-      <a href="software_development_methodology_git_command.html" class="md-nav__link">
-        コマンド
+      <a href="../software_development_methodology/software_development_methodology_site_reliability_engineering_antipattern.html" class="md-nav__link">
+        アンチパターン
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_development_methodology/software_development_methodology_site_reliability_engineering_documentation.html" class="md-nav__link">
+        ドキュメンテーション
       </a>
     </li>
   
@@ -6801,12 +6633,107 @@
       
       
         <label class="md-nav__link" for="__nav_16">
+          🦶 バージョン管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="🦶 バージョン管理" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          🦶 バージョン管理
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_16_1" type="checkbox" id="__nav_16_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_16_1">
+          ■ Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="■ Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_16_1">
+          <span class="md-nav__icon md-icon"></span>
+          ■ Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version_control/version_control_git_github.html" class="md-nav__link">
+        GitHub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../version_control/version_control_git_command.html" class="md-nav__link">
+        コマンド
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_17">
           📊 統計分析
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="📊 統計分析" data-md-level="1">
-        <label class="md-nav__title" for="__nav_16">
+        <label class="md-nav__title" for="__nav_17">
           <span class="md-nav__icon md-icon"></span>
           📊 統計分析
         </label>
@@ -6843,18 +6770,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_17">
+        <label class="md-nav__link" for="__nav_18">
           📢 過去の技術系プレゼン
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="📢 過去の技術系プレゼン" data-md-level="1">
-        <label class="md-nav__title" for="__nav_17">
+        <label class="md-nav__title" for="__nav_18">
           <span class="md-nav__icon md-icon"></span>
           📢 過去の技術系プレゼン
         </label>
@@ -6907,38 +6834,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     はじめに
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#01-issue" class="md-nav__link">
-    01. Issue
+  <a href="#01-sliservice-level-indicator" class="md-nav__link">
+    01. SLI：Service Level Indicator（サービスレベル指標）
   </a>
   
-    <nav class="md-nav" aria-label="01. Issue">
+    <nav class="md-nav" aria-label="01. SLI：Service Level Indicator（サービスレベル指標）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    作業内容
+  <a href="#sli" class="md-nav__link">
+    SLIとは
   </a>
   
-    <nav class="md-nav" aria-label="作業内容">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sli_1" class="md-nav__link">
+    SLIの例
+  </a>
+  
+    <nav class="md-nav" aria-label="SLIの例">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google" class="md-nav__link">
+    ▼ メトリクスの例（Google）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsoft" class="md-nav__link">
+    ▼ メトリクスの例（Microsoft）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-sloservice-level-objective" class="md-nav__link">
+    02. SLO：Service Level Objective（サービスレベル目標）
+  </a>
+  
+    <nav class="md-nav" aria-label="02. SLO：Service Level Objective（サービスレベル目標）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slo" class="md-nav__link">
+    SLOとは
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ▼ 作成
+    エラーバジェット
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="エラーバジェット">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ▼ 削除
+    ▼ エラーバジェットとは
   </a>
   
 </li>
@@ -6949,30 +6923,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    テンプレート
+  <a href="#slo_1" class="md-nav__link">
+    SLOの決め方
   </a>
   
-    <nav class="md-nav" aria-label="テンプレート">
+    <nav class="md-nav" aria-label="SLOの決め方">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ▼ 配置場所
+  <a href="#datadog" class="md-nav__link">
+    ▼ 目標値の例（Datadog）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ▼ タイトル
+  <a href="#google_1" class="md-nav__link">
+    ▼ 目標値の例（Google）
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ▼ 内容
+  <a href="#slo_2" class="md-nav__link">
+    SLOの事後評価
+  </a>
+  
+    <nav class="md-nav" aria-label="SLOの事後評価">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#circonus" class="md-nav__link">
+    ▼ 評価方法の例（Circonus）
   </a>
   
 </li>
@@ -6988,323 +6975,58 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#02" class="md-nav__link">
-    02. プルリクエスト
+  <a href="#03-slaservice-level-agreement" class="md-nav__link">
+    03. SLA：Service Level Agreement（サービスレベル合意）
   </a>
   
-    <nav class="md-nav" aria-label="02. プルリクエスト">
+    <nav class="md-nav" aria-label="03. SLA：Service Level Agreement（サービスレベル合意）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    作業内容
-  </a>
-  
-    <nav class="md-nav" aria-label="作業内容">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ▼ 呼び名
+  <a href="#sla" class="md-nav__link">
+    SLAとは
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    ▼ 作成
+  <a href="#sla_1" class="md-nav__link">
+    SLAの決め方
+  </a>
+  
+    <nav class="md-nav" aria-label="SLAの決め方">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sla_2" class="md-nav__link">
+    ▼ SLA導入前準備の例（経産省）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    ▼ 削除
+  <a href="#aws" class="md-nav__link">
+    ▼ 返金率の例（AWS）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purecloud" class="md-nav__link">
+    ▼ 対応開始時間の例（PureCloud）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google_2" class="md-nav__link">
+    ▼ 保証期間の例（Google）
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    テンプレート
-  </a>
-  
-    <nav class="md-nav" aria-label="テンプレート">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    ▼ 配置場所
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    ▼ タイトル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wip" class="md-nav__link">
-    ▼ WIP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    ▼ 内容
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    コミットの粒度
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    レビュー観点
-  </a>
-  
-    <nav class="md-nav" aria-label="レビュー観点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    ▼ ビジネスルールや仕様通りか
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    ▼ バリデーションは適切か
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    ▼ 冗長になっていないか
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#03-git-flow" class="md-nav__link">
-    03. Git-flow
-  </a>
-  
-    <nav class="md-nav" aria-label="03. Git-flow">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#git-flow" class="md-nav__link">
-    Git-flowとは
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
-    実行環境とブランチ
-  </a>
-  
-    <nav class="md-nav" aria-label="実行環境とブランチ">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_23" class="md-nav__link">
-    ▼ 対応関係
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mainproduction" class="md-nav__link">
-    ▼ mainブランチ（production）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hotfix" class="md-nav__link">
-    ▼ hotfixブランチ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#release" class="md-nav__link">
-    ▼ releaseブランチ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#developstaging" class="md-nav__link">
-    ▼ developブランチ（staging）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#feature" class="md-nav__link">
-    ▼ featureブランチ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_24" class="md-nav__link">
-    リリースノート
-  </a>
-  
-    <nav class="md-nav" aria-label="リリースノート">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_25" class="md-nav__link">
-    ▼ 例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_26" class="md-nav__link">
-    ▼ タグ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_27" class="md-nav__link">
-    ▼ リリース名
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_28" class="md-nav__link">
-    ▼ 本文
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#04" class="md-nav__link">
-    04. コンフリクトの解決
-  </a>
-  
-    <nav class="md-nav" aria-label="04. コンフリクトの解決">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_29" class="md-nav__link">
-    解決方法
-  </a>
-  
-    <nav class="md-nav" aria-label="解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    ▼ Gitを使用して
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github_1" class="md-nav__link">
-    ▼ GitHubを使用して
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_30" class="md-nav__link">
-    ▼ エディタを使用して
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_31" class="md-nav__link">
-    ブランチ別の解決方法
-  </a>
-  
-    <nav class="md-nav" aria-label="ブランチ別の解決方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#feature-vs-develop" class="md-nav__link">
-    ▼ feature vs. develop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#develop-vs-main" class="md-nav__link">
-    ▼ develop vs. main
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_32" class="md-nav__link">
-    基点ブランチからの変更の取り込み
-  </a>
   
 </li>
         
@@ -7325,296 +7047,177 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/hiroki-it/edit/master/docs/software_development_methodology/software_development_methodology_git_github.md" title="編集" class="md-content__button md-icon">
+  <a href="https://github.com/hiroki-it/edit/master/docs/observability/observability_monitoring_service_level.md" title="編集" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">&para;</a></h1>
-<h2 id="_1">はじめに<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="_1">サービスレベル＠監視<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">はじめに<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>本サイトにつきまして、以下をご認識のほど宜しくお願いいたします。</p>
 <p>参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/about.html">https://hiroki-it.github.io/tech-notebook-mkdocs/about.html</a></p>
 <p><br></p>
-<h2 id="01-issue">01. Issue<a class="headerlink" href="#01-issue" title="Permanent link">&para;</a></h2>
-<h3 id="_2">作業内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<h4 id="_3">▼ 作成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p>テンプレートを元に、Issueを作成する。<code>1</code>個のIssueとブランチにたくさんの実装をコミットすることは望ましくない。そこで、大きな対応を個々の対応に分割する。そして、大きな対応に関する基点Issueと基点ブランチを作成し、個々の対応に関連する子Issueと子ブランチを作成していく。個別の対応が終わったら、親ブランチへマージしていく。</p>
-<h4 id="_4">▼ 削除<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>リポジトリの管理者権限があれば削除できる。</p>
+<h2 id="01-sliservice-level-indicator">01. SLI：Service Level Indicator（サービスレベル指標）<a class="headerlink" href="#01-sliservice-level-indicator" title="Permanent link">&para;</a></h2>
+<h3 id="sli">SLIとは<a class="headerlink" href="#sli" title="Permanent link">&para;</a></h3>
+<p>サービスレベルの指標とするメトリクスのこと。</p>
 <p><br></p>
-<h3 id="_5">テンプレート<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h4 id="_6">▼ 配置場所<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>リポジトリの直下に<code>.github</code>ディレクトリを配置し、<code>ISSUE_TEMPLATE.md</code>や<code>PULL_REQUEST_TEMPLATE.md</code>の名前でファイルを配置する。Issueのテンプレートに関して、代わりに<code>ISSUE_TEMPLATE</code>ディレクトリを配置し、任意の名前のmdファイルを配置すると、複数のテンプレートを作成できる。</p>
-<p>参考：<a href="https://qiita.com/nyamogera/items/3fe6985b45fbd5377184">https://qiita.com/nyamogera/items/3fe6985b45fbd5377184</a></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">└── .github/</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">├── ISSUE_TEMPLATE.md</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">└── PULL_REQUEST_TEMPLATE.md</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">repository/</span><span class="w"></span>
-<span class="l l-Scalar l-Scalar-Plain">└── .github/</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">├── ISSUE_TEMPLATE/</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">│   ├── FIX.md</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">│   └── UPDATE.md</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">│</span><span class="w"></span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">└── PULL_REQUEST_TEMPLATE.md</span><span class="w"></span>
-</code></pre></div></td></tr></table></div>
-<h4 id="_7">▼ タイトル<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>タイトルは『〇〇する。』とする。句読点の有無は好み。</p>
-<h4 id="_8">▼ 内容<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>内容は『背景』と『対応方針』さえ伝われば、文言自体はそのリポジトリのルールに合わせる。</p>
-<p><strong>＊例＊</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># 背景</span>
-&lt;!-- Issue作成の理由になった要望やバグを記載する --&gt;
-&lt;!-- 関連するIssueやプルリクエストがあればリンクを共有する --&gt;
-
-
-<span class="gh"># 対応方針</span>
-&lt;!-- どのような方法で対応する予定なのかを箇条書きで記載する --&gt;
-&lt;!-- 方法に関するドキュメントや技術記事があればリンクを共有する --&gt;
-</code></pre></div></td></tr></table></div>
-<p><br></p>
-<h2 id="02">02. プルリクエスト<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
-<h3 id="_9">作業内容<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<h4 id="_10">▼ 呼び名<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
-<p>GitHubだとプルリクエストであるが、GitLabだとマージリクエストという。</p>
-<h4 id="_11">▼ 作成<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
-<p>テンプレートを元に、プルリクエストを作成する。</p>
-<h4 id="_12">▼ 削除<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
-<p>削除できないため、クローズするしかない。犯した罪は背負って生きていかなければならない。</p>
-<p>参照：<a href="https://stackoverflow.com/questions/18318097/delete-a-closed-pull-request-from-github">https://stackoverflow.com/questions/18318097/delete-a-closed-pull-request-from-github</a></p>
-<p><br></p>
-<h3 id="_13">テンプレート<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<h4 id="_14">▼ 配置場所<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<p>Issueテンプレートと同じ階層に配置する。</p>
-<h4 id="_15">▼ タイトル<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>タイトルは『〇〇した。』とする。句読点の有無は好み。</p>
-<h4 id="wip">▼ WIP<a class="headerlink" href="#wip" title="Permanent link">&para;</a></h4>
-<p>実装途中のプルリクエストであり、実装方法などを質問したい場合、タイトルに『WIP』とつけておく。レビューしてもらいたくなったら、これをはずす。レビュー修正時に、実装に時間がかかりそうであったら、再び付けても良い。</p>
-<h4 id="_16">▼ 内容<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p>内容は『対応内容』と『レビューしてほしいところ』さえ伝われば、文言自体はそのリポジトリのルールに合わせる。もし、レビュー期限や動作確認手順を知らせる必要があれば『レビュー期限』『確認手順』の項目を設ける。</p>
-<p><strong>＊例＊</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># リリース予定日</span>
-&lt;!-- リリース予定日を記載する --&gt;
-
-
-<span class="gh"># 対応内容</span>
-&lt;!-- どのように対応したのか箇条書きで記載する --&gt;
-&lt;!-- 関連するIssueやプルリクエストがあればリンクを共有する --&gt;
-
-
-<span class="gh"># レビューしていただきたいところ</span>
-&lt;!-- 対応内容の中で適切か否かが不安なものを記載する --&gt;
-</code></pre></div></td></tr></table></div>
-<p><br></p>
-<h3 id="_17">コミットの粒度<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
-<p>DBからフロント出力までに至る実装をコミットする場合、以下の3つを意識する。</p>
-<ul>
-<li>DBからコミット</li>
-<li>関連性のある実装をまとめてコミット</li>
-<li>一回のコミットが持つコード量が少なくなるようにコミット</li>
-</ul>
-<p><br></p>
-<h3 id="_18">レビュー観点<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
-<h4 id="_19">▼ ビジネスルールや仕様通りか<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>実装の条件文や、コメントから、ビジネスルールや仕様を理解する。</p>
-<ol>
-<li>条件文で<code>var_dump</code>メソッド を行う。</li>
-<li>どういった入力がされた時に<code>true</code> として判断しているのかを確認。例えば、受注済区分値が設定されている時に、それが失注区分値に変わった場合、値を返却しているならば、そこから、『失注』のビジネスルールが垣間見える。</li>
-<li>定数に添えられたコメントから、仕様を理解。</li>
-</ol>
-<h4 id="_20">▼ バリデーションは適切か<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
-<p>正しく区別して<code>empty</code>メソッド や<code>isset</code>メソッド などを使えているかを確認する</p>
-<h4 id="_21">▼ 冗長になっていないか<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
-<p>重複する処理を<code>foreach</code>メソッドにまとめられないかを確認する。また、変数の格納が重複していないかを確認する。</p>
-<p><br></p>
-<h2 id="03-git-flow">03. Git-flow<a class="headerlink" href="#03-git-flow" title="Permanent link">&para;</a></h2>
-<h3 id="git-flow">Git-flowとは<a class="headerlink" href="#git-flow" title="Permanent link">&para;</a></h3>
-<p>Gitでソフトウェアを開発する場合に、役割を持たせたブランチを作成し、ルールに沿ってコミットする。Git-flowを簡略化したものに、GitHub-flowやGitlab-flowがある。</p>
+<h3 id="sli_1">SLIの例<a class="headerlink" href="#sli_1" title="Permanent link">&para;</a></h3>
+<h4 id="google">▼ メトリクスの例（Google）<a class="headerlink" href="#google" title="Permanent link">&para;</a></h4>
+<p>クリティカルユーザージャーニーの満足度に影響を与えるメトリクス（リクエストとレスポンスの可用性/遅延/品質、データ処理のカバレッジ/正確性/鮮度/スループット、ストレージのスループット/遅延、など）をSLIとするとよい。</p>
 <p>参考：</p>
 <ul>
-<li><a href="https://github.com/Voronenko/gitflow-release">https://github.com/Voronenko/gitflow-release</a></li>
-<li><a href="https://qiita.com/pandama09396862/items/9f013fa7b60f4d12d1d8">https://qiita.com/pandama09396862/items/9f013fa7b60f4d12d1d8</a></li>
+<li><a href="https://dev.classmethod.jp/articles/202105-report-gcd21-d3-infra-01/">https://dev.classmethod.jp/articles/202105-report-gcd21-d3-infra-01/</a></li>
+<li><a href="https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e">https://medium.com/google-cloud-jp/sre-slo-d7c6aee1fb0e</a></li>
 </ul>
-<p><img alt="git-flow" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/git-flow.png" /></p>
+<p><strong>＊例＊</strong></p>
+<p>ECサイトであれば、以下がCUJとなる。</p>
+<ol>
+<li>商品を検索する。</li>
+<li>商品をカートに追加する。</li>
+<li>商品を購入する。</li>
+</ol>
+<p>参考：<a href="https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19">https://speakerdeck.com/arisgi/yoriyi-wei-falsearujian-shi-womu-zhi-site-wai-xing-jian-shi-falseyou-xiao-huo-yong?slide=19</a></p>
+<h4 id="microsoft">▼ メトリクスの例（Microsoft）<a class="headerlink" href="#microsoft" title="Permanent link">&para;</a></h4>
+<p>MTtxメトリクスをSLIとし、そのダッシュボードを作成すると良い。その他、可用性やQoS：Quality of Serviceに関するメトリクスをSLIに選択すると良い。具体的には、可用性は稼働時間を基に定量化できる。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://www.amazon.co.jp/dp/4873119618">https://www.amazon.co.jp/dp/4873119618</a></li>
+<li><a href="https://qiita.com/hz1_d/items/ca24e1d131bf475e23b1">https://qiita.com/hz1_d/items/ca24e1d131bf475e23b1</a></li>
+<li><a href="https://www.linkedin.com/pulse/high-availability-vs-fault-tolerance-jon-bonso">https://www.linkedin.com/pulse/high-availability-vs-fault-tolerance-jon-bonso</a></li>
+</ul>
 <p><br></p>
-<h3 id="_22">実行環境とブランチ<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
-<h4 id="_23">▼ 対応関係<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
-<p>ブランチのデプロイ先となる実行環境は、以下の通りに分類できる。より上位の実行環境ほど、本番環境に近くなる。UAT環境、ステージング環境、サンドボックス環境は、いずれも本番環境の検証場所であり、企業によって意味合いにブレがある。</p>
-<p>参考：<a href="https://www.quora.com/What-is-difference-between-testing-environment-and-staging">https://www.quora.com/What-is-difference-between-testing-environment-and-staging</a></p>
+<h2 id="02-sloservice-level-objective">02. SLO：Service Level Objective（サービスレベル目標）<a class="headerlink" href="#02-sloservice-level-objective" title="Permanent link">&para;</a></h2>
+<h3 id="slo">SLOとは<a class="headerlink" href="#slo" title="Permanent link">&para;</a></h3>
+<p>SLIとして採用した指標の目標値のこと。ユーザーの視点で策定する必要があるが、ブラウザやユーザー起因の問題を加味したメトリクスを使用することは大変なので、基本的には自身のシステムのみを対象としたメトリクスを使用することが多い。SLOは<code>99.9</code>%の成功率を目標とすることが多い。その一方で、SLOだけがユーザーの満足度を決めるわけではなく、SLOを達成するための業務のせいで機能変更ができないような場合、SLOが厳しすぎるので、下方修正しても良い終わってしまう。また、サイトの一部の機能が社内部署向け（例：マーケティング部）の場合は、社内向けのSLOとなる。</p>
+<p><br></p>
+<h3 id="_3">エラーバジェット<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="_4">▼ エラーバジェットとは<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>年月当たりで許容するSLO違反（エラー、ダウンタイム、など）の程度のこと。エラーやダウンタイムの発生によって、システムの信頼性に影響を与える可能性があったとしても、SLOの閾値を超えない限りはこれを許容し、技術を優先する。ビジネスより技術を優先する場合に素早く意思決定できる。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="err">エラーバジェット</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="mi">100</span><span class="err">%</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">SLO</span><span class="p">(</span><span class="err">%</span><span class="p">)</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p><strong>例</strong></p>
+<p>稼働時間をSLIとし、1ヶ月間（<code>720</code>時間）の稼働時間のSLOを<code>99</code>%とした場合、エラーバジェットは<code>1</code>%（<code>7.2</code>時間）になる。</p>
+<p>参考：<a href="https://speakerdeck.com/yukaneko/sre-hefalsedi-bu-pagerduty-x-datadog-woshi-yong-sitapin-zhi-guan-li?slide=6">https://speakerdeck.com/yukaneko/sre-hefalsedi-bu-pagerduty-x-datadog-woshi-yong-sitapin-zhi-guan-li?slide=6</a></p>
+<p><br></p>
+<h3 id="slo_1">SLOの決め方<a class="headerlink" href="#slo_1" title="Permanent link">&para;</a></h3>
+<h4 id="datadog">▼ 目標値の例（Datadog）<a class="headerlink" href="#datadog" title="Permanent link">&para;</a></h4>
+<p>SLOをパーセントで定めることにより、状況によらず、一定の基準を設けることができる。基準値は、予測値を使用すると良い。Datadogでは、通常時のメトリクスのデータから予測値を算出してくれる。</p>
+<p>参考：<a href="https://docs.datadoghq.com/monitors/create/types/forecasts/?tabs=linear">https://docs.datadoghq.com/monitors/create/types/forecasts/?tabs=linear</a></p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>ブランチ</th>
+<th>指標</th>
+<th>目標値の例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>本番環境</td>
-<td>main</td>
+<td>サーバー稼働率</td>
+<td>日当たり<code>0.1</code>%以下のダウンタイム</td>
 </tr>
 <tr>
-<td>UAT環境</td>
-<td>develop（uat）</td>
+<td>DB稼働率</td>
+<td>日当たり<code>0.1</code>%以下のダウンタイム</td>
 </tr>
 <tr>
-<td>ステージング環境</td>
-<td>develop（staging）</td>
+<td>レイテンシー</td>
+<td>日当たり<code>0.1</code>%以下のレイテンシー</td>
 </tr>
 <tr>
-<td>サンドボックス環境</td>
-<td>develop（sandbox）</td>
+<td>レスポンスのステータスコード率</td>
+<td>日当たり<code>99.9</code>%以上の<code>200</code>ステータスコード</td>
 </tr>
 <tr>
-<td>開発環境（ローカルマシン）</td>
-<td>feature</td>
+<td>スループット</td>
+<td>日当たり<code>0.1</code>%以下のスループット低下</td>
 </tr>
 </tbody>
 </table>
-<h4 id="mainproduction">▼ mainブランチ（production）<a class="headerlink" href="#mainproduction" title="Permanent link">&para;</a></h4>
-<p>本番環境に機能をデプロイするためのブランチ。productionブランチとしても良い。CI/CDツールを使用して、バージョンタグの付与によってデプロイが発火する。</p>
-<h4 id="hotfix">▼ hotfixブランチ<a class="headerlink" href="#hotfix" title="Permanent link">&para;</a></h4>
-<p>リリース後に修正点が見つかった場合、修正用ブランチを作成し、これを速やかにリリースする必要がある。</p>
-<p>（１）Issueを作成する。</p>
-<p>（２）mainブランチから、『<code>hotfix/&lt;issue番号&gt;</code>』の名前でブランチを作成する。</p>
-<p>（３）プルリクエストを作成し、マージの向き先を<code>main</code>ブランチとする。</p>
-<p>（４）速攻でapproveをもらい、mainブランチにマージする。この時、hotfixブランチは後でdevelopブランチにマージするため、削除しないようにする。</p>
-<p>（５）パッチ番号を1つ増やしたタグを付与し、再リリースする。</p>
-<p>（６）リリース後、エラーが解決されたら、ローカルマシンでhotfixブランチをdevelopブランチにマージする。</p>
-<h4 id="release">▼ releaseブランチ<a class="headerlink" href="#release" title="Permanent link">&para;</a></h4>
-<p>本番環境にデプロイする機能をまとめるためのブランチ。developブランチとmainブランチのどちらを基点とするかは好みである（個人的にはmainブランチ基点）。releaseブランチの作成自体が任意であるが、もし作成しない場合にはdevelopブランチにマージできないプルリクエストがたくさん溜まることになるため、推奨である。</p>
-<h4 id="developstaging">▼ developブランチ（staging）<a class="headerlink" href="#developstaging" title="Permanent link">&para;</a></h4>
-<p>ステージング環境に機能をデプロイするためのブランチ。stagingブランチとしても良い。CI/CDツールを使用して、コミット（マージコミットを含む）によってデプロイが発火する。</p>
-<h4 id="feature">▼ featureブランチ<a class="headerlink" href="#feature" title="Permanent link">&para;</a></h4>
-<p>機能を作成/更新/削除するリクエストを作成するためのブランチ。</p>
+<h4 id="google_1">▼ 目標値の例（Google）<a class="headerlink" href="#google_1" title="Permanent link">&para;</a></h4>
+<p>参考：<a href="https://cloud.google.com/blog/ja/products/gcp/building-good-slos-cre-life-lessons">https://cloud.google.com/blog/ja/products/gcp/building-good-slos-cre-life-lessons</a></p>
 <p><br></p>
-<h3 id="_24">リリースノート<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
-<h4 id="_25">▼ 例<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
-<p><img alt="github_release-note" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/github_release-note.png" /></p>
-<h4 id="_26">▼ タグ<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
-<p>『<code>release/v&lt;セマンティックバージョニング&gt;</code>』とする。タグの付与先対象とするブランチは、『<code>Taget: main</code>』を選択する。</p>
-<p>参考：<a href="https://semver.org/lang/ja/">https://semver.org/lang/ja/</a></p>
-<h4 id="_27">▼ リリース名<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
-<p>タグのバージョンをリリース名とする。</p>
-<h4 id="_28">▼ 本文<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
-<p>以下の通りの本文とする。『新規追加』『変更』『修正』ごとに、プルリクエスト番号をリスト化する。<code>3</code>個のどれに当てはまるかは、プルリクエストがどういった対応なのかで判断する。最低限リリース内容さえわかればよいので、厳密に分類できなくとも問題ない。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># リリース内容</span>
-
-<span class="gu">## 新規追加</span>
-
-<span class="k">-</span> プルリクエスト番号
-
-<span class="gu">## 変更</span>
-
-<span class="k">-</span> プルリクエスト番号
-<span class="k">-</span> プルリクエスト番号
-
-<span class="gu">## 修正</span>
-
-<span class="k">-</span> プルリクエスト番号
-</code></pre></div></td></tr></table></div>
+<h3 id="slo_2">SLOの事後評価<a class="headerlink" href="#slo_2" title="Permanent link">&para;</a></h3>
+<h4 id="circonus">▼ 評価方法の例（Circonus）<a class="headerlink" href="#circonus" title="Permanent link">&para;</a></h4>
+<p>SLOを達成したか否かを判断する場合に、ヒストグラムが有効である。以下の図では、横軸に各リクエストのレイテンシー（ミリ秒）と縦軸にリクエスト数（個）を表している。また、分位ボックス（<code>q(n)</code>）により全データの何パーセントの集合かを表しており、例えば、<code>q(0.99)</code>は、<code>99%</code>以上が5<code>ms</code>未満であることを示す。LT（ロングテール）の先にある見えない最大値は<code>120</code>msである。単なる最小値/最大値/中央値/平均値であると表面的な結果しか得られない。しかし、このようなヒストグラムを使用すれば、各リクエストがどの程度のレイテンシーに、どのくらい分布しているか、を正確に知られる。例えば、SLOを『<code>5</code>ms未満のレイテンシー』に設定としたとして、ヒストグラムから<code>99.4597</code>%がこれを満たしていると結論付けられる。</p>
+<p><img alt="slo_histogram" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/slo_histogram.png" /></p>
 <p><br></p>
-<h2 id="04">04. コンフリクトの解決<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<h3 id="_29">解決方法<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
-<h4 id="git">▼ Gitを使用して<a class="headerlink" href="#git" title="Permanent link">&para;</a></h4>
-<p>（１）<code>git status</code>を行い、特定のファイルでのコンフリクトが表示される。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Unmerged paths:
-  <span class="o">(</span>use <span class="s2">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage<span class="o">)</span>
-  <span class="o">(</span>use <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> to mark resolution<span class="o">)</span>
-        both modified:   foo/bar.twig
-</code></pre></div></td></tr></table></div>
-<p>（２）コンフリクトしていたコード行を取捨選択する。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?php</span>
-<span class="c1">/// Phpstromにて、コンフリクトしていたコード行を取捨選択する。</span>
-</code></pre></div></td></tr></table></div>
-<p>（３）一度<code>add</code>を行い、コンフリクトの修正をGitに認識させる。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ git add foo/bar.twig
-</code></pre></div></td></tr></table></div>
-<p>（４）<code>git status</code>を行い、以下が表示される。コンフリクトが解決されたが、マージされていないと出力される。差分のファイルがたくさん表示される場合があるが、問題ない。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>All conflicts fixed but you are still merging.
-
-Changes to be committed:
-        modified:   foo.twig
-        modified:   foo.php
-</code></pre></div></td></tr></table></div>
-<p>（５）<code>git commit</code>（<code>-m</code>はつけてはいけない）を行い、vimエディタが表示される。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code> Merge branch <span class="s2">&quot;ブランチ名&quot;</span> into ブランチ名
-</code></pre></div></td></tr></table></div>
-<p>（６）<code>:wq</code>でエディタを終了すれば、コンフリクトを解決したマージコミットが作成される。</p>
-<p>（７）<code>git status</code>を行う。場合によっては、差分のコミット数が表示されるが問題ない。</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Your branch is ahead of <span class="s2">&quot;origin/feature/update_foo&quot;</span> by <span class="m">10</span> commits.
-</code></pre></div></td></tr></table></div>
-<p>（８）プッシュする。この時、マージコミットを作成する時、基点ブランチ以外からマージしていると、差分のコミットが1つにまとまらず、</p>
-<p>参考：<a href="http://www-creators.com/archives/1938">http://www-creators.com/archives/1938</a></p>
-<h4 id="github_1">▼ GitHubを使用して<a class="headerlink" href="#github_1" title="Permanent link">&para;</a></h4>
-<p>プルリクエスト上に『Resolve conflicts』ボタンが出現し、ここからコンフリクトを修正できる。</p>
-<p>参考：</p>
-<ul>
-<li><a href="https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github">https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github</a></li>
-<li><a href="https://qiita.com/Kto_pi/items/4fd6bdec72e852763315">https://qiita.com/Kto_pi/items/4fd6bdec72e852763315</a></li>
-</ul>
-<h4 id="_30">▼ エディタを使用して<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
-<p>エディタの例として、PHPStormを使用する。一番簡単かもしれない。</p>
+<h2 id="03-slaservice-level-agreement">03. SLA：Service Level Agreement（サービスレベル合意）<a class="headerlink" href="#03-slaservice-level-agreement" title="Permanent link">&para;</a></h2>
+<h3 id="sla">SLAとは<a class="headerlink" href="#sla" title="Permanent link">&para;</a></h3>
+<p>サービスレベル合意と訳せる。インターネットサービスに最低限のサービスのレベルを保証し、これを下回った場合には返金できるように合意するもの。SLAとして、例えば以下がある。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>説明</th>
+<th>レベル例</th>
+<th>返金率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>サーバー稼働率</td>
+<td>サーバーの時間当たりの稼働率</td>
+<td><code>99.9</code>%以上</td>
+<td><code>10</code>%</td>
+</tr>
+<tr>
+<td>障害回復時間</td>
+<td>障害が起こってから回復するまでの時間</td>
+<td><code>2</code>時間以内</td>
+<td><code>10</code>%</td>
+</tr>
+<tr>
+<td>障害お問い合わせ</td>
+<td>障害発生時のお問い合わせ可能時間帯</td>
+<td><code>24</code>時間<code>365</code>日</td>
+<td><code>10</code>%</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h3 id="_31">ブランチ別の解決方法<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
-<h4 id="feature-vs-develop">▼ feature vs. develop<a class="headerlink" href="#feature-vs-develop" title="Permanent link">&para;</a></h4>
-<p>featureブランチからdevelopブランチへのマージ時にコンフリクトが起きることがわかった場合、まずdevelopブランチからfeatureブランチにマージを実行し、featureブランチ上のファイルを修正する。修正でコンフリクトが解決されれば、プルリクエスト上にプッシュする。</p>
-<h4 id="develop-vs-main">▼ develop vs. main<a class="headerlink" href="#develop-vs-main" title="Permanent link">&para;</a></h4>
-<p>developブランチからmainブランチへのマージ時にコンフリクトが起きることがわかった場合、まずdevelopブランチからコンフリクト解決用のfeatureブランチを作成する。mainブランチからfeatureブランチにマージを実行し、このfeatureブランチ上のファイルを修正する。この修正を基に、コンフリクトを解決するためのプルリクエストを新たに作成する。featureブランチとdevelopブランチとの差分が最小限になるように、必要であれば、developブランチから必要なファイルをコピーしてくる。</p>
-<p><br></p>
-<h3 id="_32">基点ブランチからの変更の取り込み<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
-<p><code>1</code>個の基点ブランチから数段階の派生ブランチが作成されている場合、基点ブランチから一段目、一段目から二段目、というように順にマージを行わないと、コンフリクトの原因になる。</p>
-<p>（１）基点ブランチから、一段目の派生ブランチにマージし、これをプッシュする。ここでプッシュしないと、2番目のブランチが1つ目のブランチとの差分を検出してしまい、大量の差分コミットをマージすることになってしまう。</p>
-<p>（２）一段目のブランチから二段目のブランチにマージし。これをプッシュする。</p>
+<h3 id="sla_1">SLAの決め方<a class="headerlink" href="#sla_1" title="Permanent link">&para;</a></h3>
+<h4 id="sla_2">▼ SLA導入前準備の例（経産省）<a class="headerlink" href="#sla_2" title="Permanent link">&para;</a></h4>
+<p>経産省がSLAのガイドラインを策定している。</p>
+<p>参考：<a href="https://www.meti.go.jp/policy/netsecurity/secdoc/contents/downloadfils/080121saasgl.pdf">https://www.meti.go.jp/policy/netsecurity/secdoc/contents/downloadfils/080121saasgl.pdf</a></p>
+<h4 id="aws">▼ 返金率の例（AWS）<a class="headerlink" href="#aws" title="Permanent link">&para;</a></h4>
+<p>AWSではサービスレベルの項目として、サーバー稼働率を採用している。これに対して、ほとんどのAWSリソースで、以下のSLAが設定されている。各リソースにSLAが定義されている。</p>
+<p>参考：<a href="https://aws.amazon.com/jp/legal/service-level-agreements/">https://aws.amazon.com/jp/legal/service-level-agreements/</a></p>
+<p><strong>＊例＊</strong></p>
+<p>EC2、EBS、ECS、EKS、の例を示す。</p>
+<table>
+<thead>
+<tr>
+<th>毎月の稼働率</th>
+<th>発生したダウンタイム</th>
+<th>返金率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>99.0</code>％以上、<code>99.99</code>%未満</td>
+<td><code>87.6</code>～<code>0.876</code>時間</td>
+<td><code>10</code>%</td>
+</tr>
+<tr>
+<td><code>95.0</code>％以上、<code>99.0</code>％未満</td>
+<td><code>438</code>～<code>87.6</code>時間</td>
+<td><code>30</code>%</td>
+</tr>
+<tr>
+<td><code>95.0</code>%未満</td>
+<td><code>438</code>時間以上</td>
+<td><code>100</code>%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="purecloud">▼ 対応開始時間の例（PureCloud）<a class="headerlink" href="#purecloud" title="Permanent link">&para;</a></h4>
+<p>参考：<a href="https://jp-help.mypurecloud.com/articles/service-level-agreements/">https://jp-help.mypurecloud.com/articles/service-level-agreements/</a></p>
+<h4 id="google_2">▼ 保証期間の例（Google）<a class="headerlink" href="#google_2" title="Permanent link">&para;</a></h4>
+<p>SLAは、サイト提供会社と利用者の合意で決める目標値である。違反の規約が無ければ、SLAでなくSLOである。SLAの補償期間は一日単位で設定すると良い。SLA違反の場合には、返金を補償とする場合があるが、これ以外の補償方法でも良い。</p>
+<p>参考：<a href="https://www.amazon.co.jp/dp/4873119618">https://www.amazon.co.jp/dp/4873119618</a></p>
 <p><br></p>
 
   <hr>
@@ -7622,7 +7225,7 @@ Changes to be committed:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-24</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
       
     
   </small>
@@ -7647,7 +7250,7 @@ Changes to be committed:
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="software_development_methodology_project_management.html" class="md-footer__link md-footer__link--prev" aria-label="前: プロジェクト管理" rel="prev">
+        <a href="observability_monitoring_oncall_incident_management.html" class="md-footer__link md-footer__link--prev" aria-label="前: オンコールとインシデント管理" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -7656,20 +7259,20 @@ Changes to be committed:
               <span class="md-footer__direction">
                 前
               </span>
-              プロジェクト管理
+              オンコールとインシデント管理
             </div>
           </div>
         </a>
       
       
         
-        <a href="software_development_methodology_git_command.html" class="md-footer__link md-footer__link--next" aria-label="次: コマンド" rel="next">
+        <a href="observability_telemetry.html" class="md-footer__link md-footer__link--next" aria-label="次: テレメトリー収集ツール" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              コマンド
+              テレメトリー収集ツール
             </div>
           </div>
           <div class="md-footer__button md-icon">
