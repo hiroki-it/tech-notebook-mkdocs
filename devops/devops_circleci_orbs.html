@@ -4943,7 +4943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7570,7 +7570,7 @@ aws configure list
 <span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w">               </span>
 </code></pre></div></td></tr></table></div>
 <h4 id="deploy-update-service_1">▼ deploy-update-service（ブルー/グリーンデプロイメント使用時）<a class="headerlink" href="#deploy-update-service_1" title="Permanent link">&para;</a></h4>
-<p>ECSタスク定義を更新する。さらに、ブルー/グリーンデプロイメントがそのECSタスク定義を指定し、ECSサービスを更新する。ローリングアップデートと同様にして、<code>verify-revision-is-deployed</code>オプションを使用できる。</p>
+<p>ECSタスク定義を更新する。加えて、ブルー/グリーンデプロイメントがそのECSタスク定義を指定し、ECSサービスを更新する。ローリングアップデートと同様にして、<code>verify-revision-is-deployed</code>オプションを使用できる。</p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -7665,7 +7665,7 @@ aws configure list
 <span class="w">                </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span><span class="w">       </span>
 </code></pre></div></td></tr></table></div>
 <h4 id="run-task">▼ run-task<a class="headerlink" href="#run-task" title="Permanent link">&para;</a></h4>
-<p>現在起動中のECSタスクとは別に、新しいECSタスクを一時的に起動する。起動時に、<code>overrides</code>オプションを使用して、指定したECSタスク定義のコンテナ設定を上書きできる。正規表現で設定する必要があり、さらにJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。コマンドが実行された後に、ECSタスクは自動的にStopped状態になる。</p>
+<p>現在起動中のECSタスクとは別に、新しいECSタスクを一時的に起動する。起動時に、<code>overrides</code>オプションを使用して、指定したECSタスク定義のコンテナ設定を上書きできる。正規表現で設定する必要があり、加えてJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。コマンドが実行された後に、ECSタスクは自動的にStopped状態になる。</p>
 <p>上書きできるキーの参照リンク：<a href="https://docs.aws.amazon.com/cli/latest/reference/ecs/run-task.html">https://docs.aws.amazon.com/cli/latest/reference/ecs/run-task.html</a></p>
 <p><strong>＊実装例＊</strong></p>
 <p>例えば、DBに対してマイグレーションを実行するためのECSタスクを起動する。<code>overrides</code>オプションでコンテナ定義のコマンドを上書きする。</p>
@@ -7941,7 +7941,7 @@ aws configure list
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

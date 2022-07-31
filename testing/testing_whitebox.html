@@ -3630,22 +3630,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
-    CDCテスト：Consumer Drive Contract
-  </a>
-  
-    <nav class="md-nav" aria-label="CDCテスト：Consumer Drive Contract">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cdc" class="md-nav__link">
-    ▼ CDCテストとは
+  <a href="#component" class="md-nav__link">
+    Componentテスト
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
+    CDCテスト：Consumer Drive Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end" class="md-nav__link">
+    End-to-Endテスト
+  </a>
   
 </li>
         
@@ -5264,7 +5265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7173,22 +7174,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
-    CDCテスト：Consumer Drive Contract
-  </a>
-  
-    <nav class="md-nav" aria-label="CDCテスト：Consumer Drive Contract">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cdc" class="md-nav__link">
-    ▼ CDCテストとは
+  <a href="#component" class="md-nav__link">
+    Componentテスト
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#cdcconsumer-drive-contract" class="md-nav__link">
+    CDCテスト：Consumer Drive Contract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end" class="md-nav__link">
+    End-to-Endテスト
+  </a>
   
 </li>
         
@@ -7462,18 +7464,27 @@
 <p>ℹ️ 参考：<a href="https://eh-career.com/engineerhub/entry/action/2019/10/03/103000/#%E5%A2%83%E7%95%8C%E5%80%A4%E3%83%86%E3%82%B9%E3%83%88">https://eh-career.com/engineerhub/entry/action/2019/10/03/103000/#%E5%A2%83%E7%95%8C%E5%80%A4%E3%83%86%E3%82%B9%E3%83%88</a></p>
 <p><br></p>
 <h2 id="04">04. その他のテスト手法<a class="headerlink" href="#04" title="Permanent link">&para;</a></h2>
-<h3 id="cdcconsumer-drive-contract">CDCテスト：Consumer Drive Contract<a class="headerlink" href="#cdcconsumer-drive-contract" title="Permanent link">&para;</a></h3>
-<h4 id="cdc">▼ CDCテストとは<a class="headerlink" href="#cdc" title="Permanent link">&para;</a></h4>
-<p>マイクロサービスのコントローラーがコールされてから、DBの操作が完了するまでを、テストする。下流マイクロサービスのコールはモック化またはスタブ化する。</p>
-<p>ℹ️ 参考：<a href="https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae">https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae</a></p>
+<h3 id="component">Componentテスト<a class="headerlink" href="#component" title="Permanent link">&para;</a></h3>
+<p>マイクロサービス単体をテストする。</p>
+<p>ℹ️ 参考：<a href="https://www.chalkboard.me/2020/08/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%86%E3%82%B9%E3%83%88%E6%96%B9%E6%B3%95%E3%81%AE%E8%AA%BF%E6%9F%BB/">https://www.chalkboard.me/2020/08/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%86%E3%82%B9%E3%83%88%E6%96%B9%E6%B3%95%E3%81%AE%E8%AA%BF%E6%9F%BB/</a></p>
 <p><br></p>
+<h3 id="cdcconsumer-drive-contract">CDCテスト：Consumer Drive Contract<a class="headerlink" href="#cdcconsumer-drive-contract" title="Permanent link">&para;</a></h3>
+<p>マイクロサービスのコントローラーがコールされてから、DBの操作が完了するまでを、テストする。下流マイクロサービスのコールはモック化またはスタブ化する。</p>
+<p>ℹ️ 参考：</p>
+<ul>
+<li><a href="https://qiita.com/tofu511/items/e6e1f34252ff28c54790">https://qiita.com/tofu511/items/e6e1f34252ff28c54790</a></li>
+<li><a href="https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae">https://qiita.com/AHA_oretama/items/e2c7db87cc5264c701ae</a></li>
+</ul>
+<p><br></p>
+<h3 id="end-to-end">End-to-Endテスト<a class="headerlink" href="#end-to-end" title="Permanent link">&para;</a></h3>
+<p>ℹ️ 参考：<a href="https://www.chalkboard.me/2020/08/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%86%E3%82%B9%E3%83%88%E6%96%B9%E6%B3%95%E3%81%AE%E8%AA%BF%E6%9F%BB/">https://www.chalkboard.me/2020/08/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%86%E3%82%B9%E3%83%88%E6%96%B9%E6%B3%95%E3%81%AE%E8%AA%BF%E6%9F%BB/</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

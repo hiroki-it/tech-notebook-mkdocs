@@ -5242,7 +5242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7213,7 +7213,7 @@ $ docker-compose up -d &lt;サービス名&gt;
 <p><br></p>
 <h3 id="run">run<a class="headerlink" href="#run" title="Permanent link">&para;</a></h3>
 <h4 id="run_1">▼ runとは<a class="headerlink" href="#run_1" title="Permanent link">&para;</a></h4>
-<p>すでに停止中または起動中コンテナが存在していても、これとは別にコンテナを新しく作成し、起動する。さらにそのコンテナ内でコマンドを実行する。起動時に<code>bash</code>プロセスや<code>shell</code>プロセスを実行すると、コンテナに接続できる。何も渡さない場合は、デフォルトのプロセスとして<code>bash</code>プロセスが実行される。<code>docker-compose run</code>コマンドでは、アタッチモードとデタッチモードを選択できる。新しく起動したコンテナを停止後に自動削除する場合は、<code>rm</code>オプションを付けるようにする。<code>service-ports</code>オプションを使用しないと、ホストとコンテナ間のポートフォワーディングを有効化できないため注意する。</p>
+<p>すでに停止中または起動中コンテナが存在していても、これとは別にコンテナを新しく作成し、起動する。加えてそのコンテナ内でコマンドを実行する。起動時に<code>bash</code>プロセスや<code>shell</code>プロセスを実行すると、コンテナに接続できる。何も渡さない場合は、デフォルトのプロセスとして<code>bash</code>プロセスが実行される。<code>docker-compose run</code>コマンドでは、アタッチモードとデタッチモードを選択できる。新しく起動したコンテナを停止後に自動削除する場合は、<code>rm</code>オプションを付けるようにする。<code>service-ports</code>オプションを使用しないと、ホストとコンテナ間のポートフォワーディングを有効化できないため注意する。</p>
 <h4 id="-service-ports">▼ --service-ports<a class="headerlink" href="#-service-ports" title="Permanent link">&para;</a></h4>
 <p>既存コンテナを残して、指定したサービスの新しいコンテナをアタッチモードで起動する。また、ホストとコンテナ間のポートフォワーディングを有効化するか否かを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -7268,7 +7268,7 @@ $ docker-compose run --rm -d --service-ports &lt;サービス名&gt;
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

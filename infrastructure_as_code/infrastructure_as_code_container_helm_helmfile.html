@@ -4949,7 +4949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7490,8 +7490,12 @@ $ helmfile &lt;サブコマンド&gt;
 <p><br></p>
 <h3 id="apply">apply<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h3>
 <h4 id="apply_1">▼ apply<a class="headerlink" href="#apply_1" title="Permanent link">&para;</a></h4>
-<p>まず<code>helmfile diff</code>コマンドを実行し、この時に差分があれば、<code>helmfile apply</code>コマンドを実行する。</p>
-<p>ℹ️ 参考：<a href="https://github.com/helmfile/helmfile#apply">https://github.com/helmfile/helmfile#apply</a></p>
+<p>まず<code>helmfile diff</code>コマンドを実行し、この時に差分があれば、<code>helmfile apply</code>コマンドを実行する。<code>helmfile sync</code>コマンドとは異なり、リリース間に差分がないと、リビジョン番号は更新されない。</p>
+<p>ℹ️ 参考：</p>
+<ul>
+<li><a href="https://github.com/helmfile/helmfile#apply">https://github.com/helmfile/helmfile#apply</a></li>
+<li><a href="https://stackoverflow.com/questions/59703760/helmfile-sync-vs-helmfile-apply">https://stackoverflow.com/questions/59703760/helmfile-sync-vs-helmfile-apply</a></li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -7573,7 +7577,8 @@ Source: project/manifests/persistent-volume.yaml
 <p><br></p>
 <h3 id="sync">sync<a class="headerlink" href="#sync" title="Permanent link">&para;</a></h3>
 <h4 id="sync_1">▼ syncとは<a class="headerlink" href="#sync_1" title="Permanent link">&para;</a></h4>
-<p>全てのリリースに関して、<code>helm upgrade --install</code>コマンドを実行する。</p>
+<p>全てのリリースに関して、<code>helm upgrade --install</code>コマンドを実行する。<code>helmfile apply</code>コマンドとは異なり、リリース間に差分がなくとも、リビジョン番号を更新する。</p>
+<p>参考：<a href="https://stackoverflow.com/questions/59703760/helmfile-sync-vs-helmfile-apply">https://stackoverflow.com/questions/59703760/helmfile-sync-vs-helmfile-apply</a></p>
 <p>ℹ️ 参考：helmfile/helmfile#sync</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ helmfile sync
 </code></pre></div></td></tr></table></div>
@@ -7590,7 +7595,7 @@ Source: project/manifests/persistent-volume.yaml
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

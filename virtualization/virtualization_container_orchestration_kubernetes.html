@@ -4317,15 +4317,15 @@
       
         <li class="md-nav__item">
   <a href="#01-02" class="md-nav__link">
-    01-02. マスターコンポーネント
+    01-02. コントロールプレーンコンポーネント（マスターコンポーネント）
   </a>
   
-    <nav class="md-nav" aria-label="01-02. マスターコンポーネント">
+    <nav class="md-nav" aria-label="01-02. コントロールプレーンコンポーネント（マスターコンポーネント）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    マスターコンポーネントとは
+    コントロールプレーンコンポーネントとは
   </a>
   
 </li>
@@ -6275,7 +6275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7961,15 +7961,15 @@
       
         <li class="md-nav__item">
   <a href="#01-02" class="md-nav__link">
-    01-02. マスターコンポーネント
+    01-02. コントロールプレーンコンポーネント（マスターコンポーネント）
   </a>
   
-    <nav class="md-nav" aria-label="01-02. マスターコンポーネント">
+    <nav class="md-nav" aria-label="01-02. コントロールプレーンコンポーネント（マスターコンポーネント）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    マスターコンポーネントとは
+    コントロールプレーンコンポーネントとは
   </a>
   
 </li>
@@ -9249,10 +9249,12 @@
 <p>KubernetesのIaCについては、以下のリンクを参考にせよ。</p>
 <p>ℹ️ 参考：<a href="https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html">https://hiroki-it.github.io/tech-notebook-mkdocs/infrastructure_as_code/infrastructure_as_code_container_kubernetes_manifest_file.html</a></p>
 <p><br></p>
-<h2 id="01-02">01-02. マスターコンポーネント<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
-<h3 id="_3">マスターコンポーネントとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h2 id="01-02">01-02. コントロールプレーンコンポーネント（マスターコンポーネント）<a class="headerlink" href="#01-02" title="Permanent link">&para;</a></h2>
+<h3 id="_3">コントロールプレーンコンポーネントとは<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>『マスターコンポーネント』ともいう。マスターNode上で稼働するコンポーネントのことで、Cluster内のワーカーNode自体と、ワーカーNode内のPodを管理する。</p>
 <p>ℹ️ 参考：</p>
 <ul>
+<li><a href="https://kubernetes.io/docs/concepts/overview/components/#control-plane-components">https://kubernetes.io/docs/concepts/overview/components/#control-plane-components</a></li>
 <li><a href="https://cstoku.dev/posts/2018/k8sdojo-24/">https://cstoku.dev/posts/2018/k8sdojo-24/</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/overview/components/">https://kubernetes.io/docs/concepts/overview/components/</a></li>
 <li><a href="https://thinkit.co.jp/article/17453">https://thinkit.co.jp/article/17453</a></li>
@@ -9804,7 +9806,7 @@ options ndots:5
 <p><br></p>
 <h3 id="node_4">Node<a class="headerlink" href="#node_4" title="Permanent link">&para;</a></h3>
 <h4 id="nodekubernetes">▼ マスターNode（kubernetesマスター）<a class="headerlink" href="#nodekubernetes" title="Permanent link">&para;</a></h4>
-<p>kubernetesマスターともいう。マスターコンポーネントが稼働する。クライアントが<code>kubectl</code>コマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
+<p>kubernetesマスターともいう。コントロールプレーンコンポーネントが稼働する。クライアントが<code>kubectl</code>コマンドの実行すると、kube-apiserverがコールされ、コマンドに沿ってワーカーNodeが操作される。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC">https://kubernetes.io/docs/concepts/#kubernetes%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC</a></li>
@@ -10351,7 +10353,7 @@ Address:  <span class="m">10</span>.105.157.184
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

@@ -7043,7 +7043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -12734,8 +12734,12 @@ Allocatable:
 <p><br></p>
 <h3 id="specreadinessprobe">spec.readinessProbe<a class="headerlink" href="#specreadinessprobe" title="Permanent link">&para;</a></h3>
 <h4 id="readinessprobe">▼ readinessProbeとは<a class="headerlink" href="#readinessprobe" title="Permanent link">&para;</a></h4>
-<p>すで起動中のコンテナが仕様上正しく稼働しているか否かの準備済みチェックを設定する。</p>
-<p>ℹ️ 参考：<a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></p>
+<p>すで起動中のコンテナが仕様上正しく稼働しているか否かの準備済みチェックを設定する。何らかの仕様でコンテナの起動に時間がかかる場合、などで使用する。</p>
+<p>ℹ️ 参考：</p>
+<ul>
+<li><a href="https://www.ianlewis.org/jp/kubernetes-health-check">https://www.ianlewis.org/jp/kubernetes-health-check</a></li>
+<li><a href="https://amateur-engineer-blog.com/livenessprobe-readinessprobe/#toc4">https://amateur-engineer-blog.com/livenessprobe-readinessprobe/#toc4</a></li>
+</ul>
 <h4 id="httpget_1">▼ httpGet<a class="headerlink" href="#httpget_1" title="Permanent link">&para;</a></h4>
 <p>準備済みチェックのエンドポイントを設定する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12897,7 +12901,7 @@ Allocatable:
 <h3 id="specterminationgraceperiodseconds">spec.terminationGracePeriodSeconds<a class="headerlink" href="#specterminationgraceperiodseconds" title="Permanent link">&para;</a></h3>
 <h4 id="terminationgraceperiodseconds">▼ terminationGracePeriodSecondsとは<a class="headerlink" href="#terminationgraceperiodseconds" title="Permanent link">&para;</a></h4>
 <p>Podが終了する時の待機時間を設定する。</p>
-<p><img alt="pod_lifecycle" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pod_lifecycle.png" /></p>
+<p><img alt="pod_terminating_process" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/pod_terminating_process.png" /></p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://qiita.com/superbrothers/items/3ac78daba3560ea406b2">https://qiita.com/superbrothers/items/3ac78daba3560ea406b2</a></li>
@@ -14137,7 +14141,7 @@ Allocatable:
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

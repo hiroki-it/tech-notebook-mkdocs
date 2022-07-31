@@ -7093,7 +7093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -12462,7 +12462,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <h4 id="db_2">▼ DBファサードとは<a class="headerlink" href="#db_2" title="Permanent link">&para;</a></h4>
 <p>DBの操作処理を提供する。Eloquentの代わりに、DBファサードを使用しても良い。Active Recordのロジックを持たないため、Repositoryパターンのロジックとして使用できる。</p>
 <h4 id="transaction">▼ <code>transaction</code>メソッド<a class="headerlink" href="#transaction" title="Permanent link">&para;</a></h4>
-<p>一連のトランザクション処理を実行する。引数として渡した無名関数が例外を返却した場合、ロールバックを自動的に実行する。例外が発生しなかった場合、無名関数の返却値が、そのまま<code>transaction</code>メソッドの返却値になる。さらに<code>transaction</code>メソッドの返却値を返却するようにすれば、無名関数の返却値をそのまま使用できる。ちなみに、トランザクション処理は必須ではなく、使用するとアプリケーションがDBを操作するために要する時間が増えるため、使用しなくても良い。参考リンクによると、MongoDBに対してトランザクション処理を行う/行わない場合を比較して、処理時間が17%弱長くなったとのこと。</p>
+<p>一連のトランザクション処理を実行する。引数として渡した無名関数が例外を返却した場合、ロールバックを自動的に実行する。例外が発生しなかった場合、無名関数の返却値が、そのまま<code>transaction</code>メソッドの返却値になる。加えて<code>transaction</code>メソッドの返却値を返却するようにすれば、無名関数の返却値をそのまま使用できる。ちなみに、トランザクション処理は必須ではなく、使用するとアプリケーションがDBを操作するために要する時間が増えるため、使用しなくても良い。参考リンクによると、MongoDBに対してトランザクション処理を行う/行わない場合を比較して、処理時間が17%弱長くなったとのこと。</p>
 <p>ℹ️ 参考：<a href="https://rightcode.co.jp/blog/information-technology/node-js-mongodb-transaction-function-use#i-5">https://rightcode.co.jp/blog/information-technology/node-js-mongodb-transaction-function-use#i-5</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -13288,8 +13288,8 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <p>グローバルにコールできるLaravel専用のメソッドのこと。基本的には、ヘルパー関数で実行される処理は、Facadeの内部で実行されるものと同じである。どちらを使用するかは好みである。</p>
 <p>ℹ️ 参考：<a href="https://stackoverflow.com/questions/31324226/laravel-performance-of-facades-vs-helper-methods">https://stackoverflow.com/questions/31324226/laravel-performance-of-facades-vs-helper-methods</a></p>
 <h4 id="_24">▼ 一覧<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
-<p>以下リンクを参照せよ。</p>
-<p><a href="https://readouble.com/laravel/8.x/ja/helpers.html#method-view">https://readouble.com/laravel/8.x/ja/helpers.html#method-view</a></p>
+<p>以下リンクを参考にせよ。</p>
+<p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/helpers.html#method-view">https://readouble.com/laravel/8.x/ja/helpers.html#method-view</a></p>
 <p><br></p>
 <h3 id="auth_2"><code>auth</code>ヘルパー<a class="headerlink" href="#auth_2" title="Permanent link">&para;</a></h3>
 <h4 id="authmanager">▼ AuthManagerインスタンスの返却<a class="headerlink" href="#authmanager" title="Permanent link">&para;</a></h4>
@@ -13800,7 +13800,7 @@ DB_HOST_READ=&lt;リードレプリカのホスト&gt;
 <h2 id="10-02-httpformrequest">10-02. HTTP｜FormRequest<a class="headerlink" href="#10-02-httpformrequest" title="Permanent link">&para;</a></h2>
 <h3 id="_29">クエリパラメーター/メッセージボディのバリデーション<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
 <h4 id="_30">▼ ルール定義 ＆ バリデーション手動実行<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
-<p>同じくFormRequestクラスの<code>validate</code>メソッドを使用して、ルールを定義し、さらにバリデーションを実行する。<code>validated</code>メソッドと間違わないように注意する。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。バリデーションでエラーが発生した場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
+<p>同じくFormRequestクラスの<code>validate</code>メソッドを使用して、ルールを定義し、加えてバリデーションを実行する。<code>validated</code>メソッドと間違わないように注意する。ルールに反すると、1つ目のルール名（例：<code>required</code>）に基づき、<code>validation.php</code>ファイルから対応するエラーメッセージを自動的に選択する。バリデーションでエラーが発生した場合、Handlerクラスの<code>invalid</code>メソッドがコールされ、元のWebページにリダイレクトされる。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://readouble.com/laravel/7.x/ja/validation.html#creating-form-requests">https://readouble.com/laravel/7.x/ja/validation.html#creating-form-requests</a></li>
@@ -16280,7 +16280,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <h4 id="_60">▼ データ型変換の必要性<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
 <p>EloquentモデルをJSONデータとしてレスポンスする時に、一旦、配列データに変換する必要がある。</p>
 <h4 id="eloquent">▼ 単一のEloquentモデルの配列化<a class="headerlink" href="#eloquent" title="Permanent link">&para;</a></h4>
-<p>単一のEloquentモデルを配列に変換する。Resourceクラスの<code>toArray</code>メソッドにて、<code>this</code>変数は自身ではなく、Resourceクラス名につくEloquentモデル名になる。また、<code>this</code>変数からゲッターを経由せずに直接的にプロパティにアクセスできる。Controllerにて、ResouceクラスにEloquentモデルを渡すようにする。LaravelはレスポンスのJSONデータを作成するために、まず<code>toArray</code>メソッドにより配列化し、さらにこれをJSONデータに変換する。</p>
+<p>単一のEloquentモデルを配列に変換する。Resourceクラスの<code>toArray</code>メソッドにて、<code>this</code>変数は自身ではなく、Resourceクラス名につくEloquentモデル名になる。また、<code>this</code>変数からゲッターを経由せずに直接的にプロパティにアクセスできる。Controllerにて、ResouceクラスにEloquentモデルを渡すようにする。LaravelはレスポンスのJSONデータを作成するために、まず<code>toArray</code>メソッドにより配列化し、加えてこれをJSONデータに変換する。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>Fooクラスからデータを取り出し、配列化する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -17744,7 +17744,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="_69">▼ リクエスト数制限<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
-<p>一分間当たりに許容するリクエスト数とその制限名を<code>configureRateLimiting</code>メソッドで定義する。さらに、Throttleミドルウェアに制限名を渡し、指定したルートにリクエスト数制限を適用させる、もし制限を超えた場合、<code>configureRateLimiting</code>メソッドによって、<code>429</code>ステータスでレスポンスが返信される。</p>
+<p>一分間当たりに許容するリクエスト数とその制限名を<code>configureRateLimiting</code>メソッドで定義する。加えて、Throttleミドルウェアに制限名を渡し、指定したルートにリクエスト数制限を適用させる、もし制限を超えた場合、<code>configureRateLimiting</code>メソッドによって、<code>429</code>ステータスでレスポンスが返信される。</p>
 <p>ℹ️ 参考：<a href="https://readouble.com/laravel/8.x/ja/routing.html#rate-limiting">https://readouble.com/laravel/8.x/ja/routing.html#rate-limiting</a></p>
 <p><strong>＊実装例＊</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -17828,7 +17828,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
 <p><br></p>
 <h3 id="eventserviceprovider">EventServiceProvider<a class="headerlink" href="#eventserviceprovider" title="Permanent link">&para;</a></h3>
 <h4 id="eventlistener">▼ EventとListenerの登録<a class="headerlink" href="#eventlistener" title="Permanent link">&para;</a></h4>
-<p>EventとListenerの対応関係を定義する。なお、Eventを発火させてListenerを実行する方法は、Eventコンポーネントを参照せよ。</p>
+<p>EventとListenerの対応関係を定義する。なお、Eventを発火させてListenerを実行する方法は、Eventコンポーネントを参考にせよ。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -18526,7 +18526,7 @@ $ chmod -R <span class="m">777</span> /var/www/foo/storage
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

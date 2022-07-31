@@ -5129,6 +5129,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#drain" class="md-nav__link">
+    drain
+  </a>
+  
+    <nav class="md-nav" aria-label="drain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drain_1" class="md-nav__link">
+    ▼ drainとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#edit" class="md-nav__link">
     edit
   </a>
@@ -5548,7 +5568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -7411,6 +7431,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#drain" class="md-nav__link">
+    drain
+  </a>
+  
+    <nav class="md-nav" aria-label="drain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drain_1" class="md-nav__link">
+    ▼ drainとは
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#edit" class="md-nav__link">
     edit
   </a>
@@ -8082,6 +8122,17 @@ secret/foo-secret created
 $ kubectl describe pod &lt;Pod名&gt; <span class="p">|</span> grep Node:
 </code></pre></div></td></tr></table></div>
 <p><br></p>
+<h3 id="drain">drain<a class="headerlink" href="#drain" title="Permanent link">&para;</a></h3>
+<h4 id="drain_1">▼ drainとは<a class="headerlink" href="#drain_1" title="Permanent link">&para;</a></h4>
+<p>ワーカーNodeへの新しいPodのスケジューリングを無効化（<code>kubectl cordon</code>コマンドを実行）し、加えて既存のPodを退避させる。ワーカーNodeが他に存在すれば、そのNode上でPodが再作成される。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://cstoku.dev/posts/2018/k8sdojo-21/">https://cstoku.dev/posts/2018/k8sdojo-21/</a></li>
+<li><a href="https://medium.com/@yanglyu5201/kubernetes-drain-node-vs-cordon-node-8b979eb7bbbe">https://medium.com/@yanglyu5201/kubernetes-drain-node-vs-cordon-node-8b979eb7bbbe</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$ kubectl drain &lt;ワーカーNode名&gt;
+</code></pre></div></td></tr></table></div>
+<p><br></p>
 <h3 id="edit">edit<a class="headerlink" href="#edit" title="Permanent link">&para;</a></h3>
 <h4 id="edit_1">▼ editとは<a class="headerlink" href="#edit_1" title="Permanent link">&para;</a></h4>
 <p>Kubernetesリソースの設定値をapplyせずに変更する。Podの設定値は直接的に変更できず、代わりにDeploymentやStatefulSet上での設定値を変更する必要がある。</p>
@@ -8468,7 +8519,7 @@ Server Version: version.Info<span class="o">{</span>
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

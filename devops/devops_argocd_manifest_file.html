@@ -4943,7 +4943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -6061,6 +6061,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    ▼ ヘルスステータスの種類
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6487,14 +6494,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     ▼ マニフェストリポジトリの場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     ▼ チャートレジストリの場合
   </a>
   
@@ -7899,6 +7906,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    ▼ ヘルスステータスの種類
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8325,14 +8339,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     ▼ マニフェストリポジトリの場合
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_22" class="md-nav__link">
+  <a href="#_23" class="md-nav__link">
     ▼ チャートレジストリの場合
   </a>
   
@@ -8809,10 +8823,46 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 </tr>
 </tbody>
 </table>
+<h4 id="_21">▼ ヘルスステータスの種類<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<p>参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/health/#way-1-define-a-custom-health-check-in-argocd-cm-configmap">https://argo-cd.readthedocs.io/en/stable/operator-manual/health/#way-1-define-a-custom-health-check-in-argocd-cm-configmap</a></p>
+<table>
+<thead>
+<tr>
+<th>ステータス名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Healthy</td>
+<td>全てのKubernetesリソースは正常に稼働している。</td>
+</tr>
+<tr>
+<td>Progressing</td>
+<td>一部のKubernetesリソースは正常に稼働していないが、リソースの状態が変化中のため、正常になる可能性がある。</td>
+</tr>
+<tr>
+<td>Degraded</td>
+<td>一部のKubernetesリソースは正常に稼働していない。</td>
+</tr>
+<tr>
+<td>Suspended</td>
+<td>一部のKubernetesリソースは、イベント（例：CronJobなど）が実行されることを待機している。</td>
+</tr>
+<tr>
+<td>Missing</td>
+<td>調査中...</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>調査中...</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
 <h3 id="specignoredifferences">spec.ignoreDifferences<a class="headerlink" href="#specignoredifferences" title="Permanent link">&para;</a></h3>
 <h4 id="ignoredifferences">▼ ignoreDifferencesとは<a class="headerlink" href="#ignoredifferences" title="Permanent link">&para;</a></h4>
-<p>特定のKubernetesリソースの特定の設定値の差分を無視する。同期後にKubernetesリソースが変化するような仕様（動的な設定値、Jobによる変更、mutating-admission-webhook機能、マニフェストファイルの自動整形、など）の場合に使用する。</p>
+<p>Syncステータス（Synced、OutOfSync）の判定時に、特定のKubernetesリソースの特定の設定値の差分を無視し、OutOfSyncにならないようする。同期後にKubernetesリソースが変化するような仕様（動的な設定値、Jobによる変更、mutating-admission-webhook機能、マニフェストファイルの自動整形、など）の場合に使用する。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration">https://argo-cd.readthedocs.io/en/stable/user-guide/diffing/#application-level-configuration</a></li>
@@ -8835,7 +8885,10 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span><span class="w"></span>
 <span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span><span class="w"></span>
@@ -8853,6 +8906,41 @@ $ argocd repo add oci://&lt;チャートレジストリ名&gt; <span class="se">
 <span class="w">      </span><span class="nt">jqPathExpressions</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="c1"># .spec.metrics（ターゲット対象のメトリクス）の自動整形を無視する。</span><span class="w"></span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/spec/metrics</span><span class="w"></span>
+<span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">syncOptions</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RespectIgnoreDifferences=true</span><span class="w"></span>
+</code></pre></div></td></tr></table></div>
+<p>注意点として、Syncステータスの判定時に無視されるだけで、内部的に同期は実行されてしまうため、同期のたびに設定値が元に戻ってしまう。そこで別途、<code>RespectIgnoreDifferences</code>オプションも有効にしておくと良い。</p>
+<p>ℹ️ 参考：</p>
+<ul>
+<li><a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#respect-ignore-difference-configs">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#respect-ignore-difference-configs</a></li>
+<li><a href="https://mixi-developers.mixi.co.jp/update-argocd-to-v2-3-0-d609bbf16662">https://mixi-developers.mixi.co.jp/update-argocd-to-v2-3-0-d609bbf16662</a></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argocd</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">foo-application</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ignoreDifferences</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1"># 〜 中略 〜</span><span class="w"></span>
+
+<span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">syncOptions</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RespectIgnoreDifferences=true</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
 <p><br></p>
 <h3 id="specproject">spec.project<a class="headerlink" href="#specproject" title="Permanent link">&para;</a></h3>
@@ -9399,7 +9487,7 @@ ID  DATE                           REVISION
 </tr>
 <tr>
 <td><code>PruneLast</code></td>
-<td>全てのKubernetesが正常になった後で、Pruneを実行する。</td>
+<td>通常のPruneでは、同期しながら旧いリソースを独立的に削除していく。PruneLastでは、一度全てのリソースを同期してしまい、正常に稼働した後に旧いリソースをまとめて削除していく。</td>
 <td>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last">https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#prune-last</a></td>
 </tr>
 </tbody>
@@ -9656,7 +9744,7 @@ ID  DATE                           REVISION
 <h4 id="argocdargoprojiosecret-type">▼ argocd.argoproj.io/secret-typeとは<a class="headerlink" href="#argocdargoprojiosecret-type" title="Permanent link">&para;</a></h4>
 <p>設定値は<code>repository</code>とする。監視対象のマニフェストリポジトリ、チャートレジストリ、OCIレジストリの認証情報を設定する。</p>
 <p>ℹ️ 参考：<a href="https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60">https://github.com/argoproj/argo-cd/blob/bea379b036708bc5035b2a25d70418350bf7dba9/util/db/repository_secrets.go#L60</a></p>
-<h4 id="_21">▼ マニフェストリポジトリの場合<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h4 id="_22">▼ マニフェストリポジトリの場合<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
 <p>マニフェストリポジトリの認証情報を設定する。マニフェストレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
 <p>ℹ️ 参考：<a href="https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials">https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repository-credentials</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -9717,7 +9805,7 @@ ID  DATE                           REVISION
 <span class="w">  </span><span class="nt">sshPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">    </span><span class="no">MIIEpgIBAAKCAQEA7yn3bRHQ5FHMQ ...</span><span class="w"></span>
 </code></pre></div></td></tr></table></div>
-<h4 id="_22">▼ チャートレジストリの場合<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<h4 id="_23">▼ チャートレジストリの場合<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>チャートレジストリの認証情報を設定する。チャートレジストリごとに、別々のSecretで認証情報を設定する必要がある。ただし、1つのチャートレジストリ内のリポジトリしか監視しない場合は、Secretは1つでよい。</p>
 <p>ℹ️ 参考：</p>
 <ul>
@@ -9983,7 +10071,7 @@ ID  DATE                           REVISION
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

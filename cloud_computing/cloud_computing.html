@@ -3810,8 +3810,28 @@
       
         <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02. クラウドコンピューティングの種類
+    02. クラウドコンピューティング
   </a>
+  
+    <nav class="md-nav" aria-label="02. クラウドコンピューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    具体例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    マルチクラウドプロバイダー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5020,7 +5040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -6706,8 +6726,28 @@
       
         <li class="md-nav__item">
   <a href="#02" class="md-nav__link">
-    02. クラウドコンピューティングの種類
+    02. クラウドコンピューティング
   </a>
+  
+    <nav class="md-nav" aria-label="02. クラウドコンピューティング">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    具体例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    マルチクラウドプロバイダー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6743,12 +6783,14 @@
 <p>ℹ️ 参考：<a href="https://blogs.itmedia.co.jp/itsolutionjuku/2019/07/post_725.html">https://blogs.itmedia.co.jp/itsolutionjuku/2019/07/post_725.html</a></p>
 <p><img alt="on-premises_iaas_caas_paas_faas_saas" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/on-premises_iaas_caas_paas_faas_saas.png" /></p>
 <p><br></p>
-<h2 id="02">02. クラウドコンピューティングの種類<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
+<h2 id="02">02. クラウドコンピューティング<a class="headerlink" href="#02" title="Permanent link">&para;</a></h2>
+<h3 id="_5">具体例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://dzone.com/articles/caas-services-through-aws-azure-and-google-cloud">https://dzone.com/articles/caas-services-through-aws-azure-and-google-cloud</a></li>
 <li><a href="https://www.google.com/search?q=gcp+paas&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwj6y9r0-8r3AhXBdN4KHftqAxsQ_AUoAXoECAEQAw&amp;biw=1600&amp;bih=912&amp;dpr=1.8#imgrc=thXAUUoo_mfDCM">https://www.google.com/search?q=gcp+paas&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=2ahUKEwj6y9r0-8r3AhXBdN4KHftqAxsQ_AUoAXoECAEQAw&amp;biw=1600&amp;bih=912&amp;dpr=1.8#imgrc=thXAUUoo_mfDCM</a></li>
 <li><a href="https://licensecounter.jp/azure/blog/series/awsazureiaaspaas.html">https://licensecounter.jp/azure/blog/series/awsazureiaaspaas.html</a></li>
+<li><a href="https://cloud-textbook.com/46/#baremetal">https://cloud-textbook.com/46/#baremetal</a></li>
 </ul>
 <table>
 <thead>
@@ -6769,8 +6811,15 @@
 <td>-</td>
 </tr>
 <tr>
-<td>IaaS</td>
-<td>リクエストリプライ方式のアプリケーション、データ、ランタイム、ミドルウェア、コンテナ、OS</td>
+<td>IaaS（ベアメタル）</td>
+<td>リクエストリプライ方式のアプリケーション、データ、ランタイム、ミドルウェア、コンテナ、OS、仮想マシン<br>仮想マシン込みのIaaSとは異なり、ハードウェア上にユーザーが仮想マシンを作成し、管理する必要がある。</td>
+<td>AWS EC2（ベアメタルインスタンスタイプ）</td>
+<td>Bare Metal Solution</td>
+<td>-</td>
+</tr>
+<tr>
+<td>IaaS（仮想マシン込）</td>
+<td>リクエストリプライ方式のアプリケーション、データ、ランタイム、ミドルウェア、コンテナ、OS<br>ベアメタル型IaaSとは異なり、ハードウェア上にユーザーが仮想マシンを作成する必要がなく、これの管理もしてくれる。</td>
 <td>AWS EC2</td>
 <td>Google Compute Engine</td>
 <td>Azure Virtual Machine</td>
@@ -6806,13 +6855,17 @@
 </tbody>
 </table>
 <p><br></p>
+<h3 id="_6">マルチクラウドプロバイダー<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>複数のクラウドプロバイダーを使用して、システムを開発する。特定のクラウドプロバイダーに依存しないような設計が必要になる。</p>
+<p>参考：<a href="https://blog.scaleway.com/10-best-practices-for-a-successful-multi-cloud-strategy/">https://blog.scaleway.com/10-best-practices-for-a-successful-multi-cloud-strategy/</a></p>
+<p><br></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

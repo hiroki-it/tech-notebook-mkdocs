@@ -6714,7 +6714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -10276,7 +10276,7 @@
 <p><br></p>
 <h3 id="_7">ルートデバイスボリューム<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <h4 id="_8">▼ ルートデバイスボリュームとは<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>EC2インスタンスでは、ブロックデバイスにルートデバイスボリュームが紐づいている。複数のブロックデバイスを用意し、それぞれを異なるルートデバイスボリュームから紐づけることもできる。さらに、このブロックデバイスが、マウントポイントtになるディレクトリ紐づいている。つまりEC2インスタンスが作成されると、ボリューム内に保管されたファイルは、ブロックデバイスを経由して、マウントポイントのディレクトリ内に作成される。また反対に、マウント先ディレクトリ内に保存されたファイルは、ルートデバイスボリューム内に保管される。複数のルートボリュームを紐づける場合は、最大サイズの大きなルートボリュームに紐づくルートデバイスを、サイズが大きくなり得るディレクトリにマウントするようにしておく。</p>
+<p>EC2インスタンスでは、ブロックデバイスにルートデバイスボリュームが紐づいている。複数のブロックデバイスを用意し、それぞれを異なるルートデバイスボリュームから紐づけることもできる。加えて、このブロックデバイスが、マウントポイントtになるディレクトリ紐づいている。つまりEC2インスタンスが作成されると、ボリューム内に保管されたファイルは、ブロックデバイスを経由して、マウントポイントのディレクトリ内に作成される。また反対に、マウント先ディレクトリ内に保存されたファイルは、ルートデバイスボリューム内に保管される。複数のルートボリュームを紐づける場合は、最大サイズの大きなルートボリュームに紐づくルートデバイスを、サイズが大きくなり得るディレクトリにマウントするようにしておく。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.html</a></li>
@@ -11047,7 +11047,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-bridge</a></p>
 <p><img alt="network-mode_host-mode" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/network-mode_host-mode.png" /></p>
 <h4 id="awsvpc">▼ awsvpcモード<a class="headerlink" href="#awsvpc" title="Permanent link">&para;</a></h4>
-<p>FargateとEC2の両方で使用できる。awsの独自ネットワークモード。タスクはElastic Networkインターフェースと紐付けられ、コンテナではなくタスク単位でプライベートIPアドレスが割り当てられる。Fargateの場合、同じタスクに属するコンテナ間は、localhostインターフェイスというENI経由で通信できるようになる（推測ではあるが、FargateとしてのEC2インスタンスにlocalhostインターフェースが紐付けられる）。これにより、コンテナからコンテナに通信するとき（例：NginxコンテナからPHP-FPMコンテナへのルーティング）は、通信元コンテナにて、通信先のアドレスを『localhost（<code>127.0.0.1</code>）』で指定すれば良い。また、awsvpcモードの独自の仕組みとして、同じECSタスク内であれば、互いにコンテナポートを開放せずとも、インバウンド通信を待ち受けるポートを指定するだけで、コンテナ間で通信できる。例えば、NginxコンテナからPHP-FPMコンテナにリクエストをルーティングするためには、PHP-FPMプロセスが<code>9000</code>番ポートでインバウンド通信を受信し、さらにコンテナが<code>9000</code>番ポートを開放する必要がある。しかし、awsvpcモードではコンテナポートを開放する必要はない。</p>
+<p>FargateとEC2の両方で使用できる。awsの独自ネットワークモード。タスクはElastic Networkインターフェースと紐付けられ、コンテナではなくタスク単位でプライベートIPアドレスが割り当てられる。Fargateの場合、同じタスクに属するコンテナ間は、localhostインターフェイスというENI経由で通信できるようになる（推測ではあるが、FargateとしてのEC2インスタンスにlocalhostインターフェースが紐付けられる）。これにより、コンテナからコンテナに通信するとき（例：NginxコンテナからPHP-FPMコンテナへのルーティング）は、通信元コンテナにて、通信先のアドレスを『localhost（<code>127.0.0.1</code>）』で指定すれば良い。また、awsvpcモードの独自の仕組みとして、同じECSタスク内であれば、互いにコンテナポートを開放せずとも、インバウンド通信を待ち受けるポートを指定するだけで、コンテナ間で通信できる。例えば、NginxコンテナからPHP-FPMコンテナにリクエストをルーティングするためには、PHP-FPMプロセスが<code>9000</code>番ポートでインバウンド通信を受信し、加えてコンテナが<code>9000</code>番ポートを開放する必要がある。しかし、awsvpcモードではコンテナポートを開放する必要はない。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-awsvpc">https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/networking-networkmode.html#networking-networkmode-awsvpc</a></li>
@@ -11108,7 +11108,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <tr>
 <td><code>awslogs-datetime-format</code></td>
 <td>日時フォーマットを定義し、またこれをログの区切り単位としてログストリームに出力する。</td>
-<td>正規表現で設定する必要があり、さらにJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。例えば『<code>\\[%Y-%m-%d %H:%M:%S\\]</code>』となる。<br>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format">https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format</a></td>
+<td>正規表現で設定する必要があり、加えてJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。例えば『<code>\\[%Y-%m-%d %H:%M:%S\\]</code>』となる。<br>ℹ️ 参考：<a href="https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format">https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format</a></td>
 </tr>
 <tr>
 <td><code>awslogs-region</code></td>
@@ -11480,7 +11480,7 @@ $ docker push &lt;イメージリポジトリURL&gt;:&lt;バージョンタグ&g
 <p><br></p>
 <h3 id="ecs_13">ECSタスクの一時起動<a class="headerlink" href="#ecs_13" title="Permanent link">&para;</a></h3>
 <h4 id="_44">▼ マイグレーション<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
-<p>現在起動中のECSタスクとは別に、新しいタスクを一時的に起動する。CI/CDツールで実行する以外に、ローカルマシンから手動で実行する場合もある。起動時に、<code>overrides</code>オプションを使用して、指定したECSタスク定義のコンテナ設定を上書きできる。正規表現で設定する必要があり、さらにJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。コマンドが実行された後に、タスクは自動的にStopped状態になる。</p>
+<p>現在起動中のECSタスクとは別に、新しいタスクを一時的に起動する。CI/CDツールで実行する以外に、ローカルマシンから手動で実行する場合もある。起動時に、<code>overrides</code>オプションを使用して、指定したECSタスク定義のコンテナ設定を上書きできる。正規表現で設定する必要があり、加えてJSONでは『<code>\</code>』を『<code>\\</code>』にエスケープしなければならない。コマンドが実行された後に、タスクは自動的にStopped状態になる。</p>
 <p><strong>＊実装例＊</strong></p>
 <p>LaravelのSeederコマンドやロールバックコマンドを、ローカルマシンから実行する。</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -12382,7 +12382,7 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <p>ℹ️ 参考：<a href="https://www.sunnycloud.jp/column/20210315-01/">https://www.sunnycloud.jp/column/20210315-01/</a></p>
 <h4 id="ec2-nodeami">▼ EC2 Nodeの最適化AMI<a class="headerlink" href="#ec2-nodeami" title="Permanent link">&para;</a></h4>
 <p>任意のEC2 Nodeを使用できるが、AWSが用意している最適化AMIを選んだ方が良い。このAMIには、EC2がEKSと連携するために必要なソフトウェアがプリインストールされており、EC2 Nodeをセットアップする手間が省ける。必ずしも、全てのワーカーNodeを同じAMIで構築する必要はない。ワーカーNodeを種類ごとに異なるAMIで作成し、特定のアプリを含むPodは特定のワーカーNode上で稼働させる（例：計算処理系アプリはEKS最適化高速AMIのワーカーNode上で動かす）といった方法でもよい。</p>
-<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/eks-optimized-ami.html</a></p>
+<p>ℹ️ 参考：<a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html">https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html</a></p>
 <table>
 <thead>
 <tr>
@@ -12463,17 +12463,19 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <span class="normal">13</span>
 <span class="normal">14</span>
 <span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">set</span> -o xtrace
 
-<span class="nv">SSM_PARAMETER_STORE</span><span class="o">=</span><span class="k">$(</span>aws ssm get-parameters-by-path --with-decryption --path <span class="s2">&quot;/&quot;</span><span class="k">)</span>
+<span class="nv">PARAMETERS</span><span class="o">=</span><span class="k">$(</span>aws ssm get-parameters-by-path --with-decryption --path <span class="s2">&quot;/eks/foo-eks-cluster&quot;</span><span class="k">)</span>
 
-<span class="k">for</span> PARAMS <span class="k">in</span> <span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">SSM_PARAMETER_STORE</span><span class="si">}</span> <span class="p">|</span> jq -r <span class="s1">&#39;.Parameters[] | .Name + &quot;=&quot; + .Value&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nb">echo</span> <span class="s2">&quot;export </span><span class="si">${</span><span class="nv">PARAMS</span><span class="p">##*/</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">done</span> &gt;&gt; <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SETENV_SHELL</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="c1"># ClusterのSSL証明書、kube-apiserverのエンドポイント、をパラメーターストアから取得する。</span>
+<span class="k">for</span> parameter <span class="k">in</span> <span class="k">$(</span><span class="nb">echo</span> <span class="si">${</span><span class="nv">PARAMETERS</span><span class="si">}</span> <span class="p">|</span> jq -r <span class="s1">&#39;.Parameters[] | .Name + &quot;=&quot; + .Value&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="s2">&quot;export </span><span class="si">${</span><span class="nv">parameter</span><span class="p">##*/</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">done</span> &gt;&gt; <span class="s2">&quot;</span><span class="si">${</span><span class="nv">EXPORT_ENVS</span><span class="si">}</span><span class="s2">&quot;</span>
 
-<span class="nb">source</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">SETENV_SHELL</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">source</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">EXPORT_ENVS</span><span class="si">}</span><span class="s2">&quot;</span>
 
 /etc/eks/bootstrap.sh foo-eks-cluster <span class="se">\</span>
   --b64-cluster-ca <span class="nv">$B64_CLUSTER_CA</span> <span class="se">\</span>
@@ -12486,16 +12488,16 @@ aws-load-balancer-controller   <span class="m">2</span>/2     <span class="m">2<
 <p>Nodeグループ内の各Nodeと、Nodeグループごとのオートスケーリングの設定を、自動的にセットアップする。オートスケーリングは、Nodeが配置される全てのプライベートサブネットに適用される。</p>
 <p>ℹ️ 参考：</p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/managed-node-groups.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/managed-node-groups.html</a></li>
-<li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/create-managed-node-group.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/create-managed-node-group.html</a></li>
+<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html">https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html</a></li>
+<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html">https://docs.aws.amazon.com/eks/latest/userguide/create-managed-node-group.html</a></li>
 <li><a href="https://blog.framinal.life/entry/2020/07/19/044328#%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%89%E5%9E%8B%E3%83%8E%E3%83%BC%E3%83%89%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97">https://blog.framinal.life/entry/2020/07/19/044328#%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%89%E5%9E%8B%E3%83%8E%E3%83%BC%E3%83%89%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97</a></li>
 </ul>
 <h4 id="_59">▼ セルフマネージド<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h4>
 <p>Nodeグループ内の各Nodeと、Nodeグループごとのオートスケーリングの設定を、手動でセットアップする。</p>
 <p>ℹ️ 参考：</p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/worker.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/worker.html</a></li>
-<li><a href="https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/launch-workers.html">https://docs.aws.amazon.com/ja_jp/eks/latest/userguide/launch-workers.html</a></li>
+<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/worker.html">https://docs.aws.amazon.com/eks/latest/userguide/worker.html</a></li>
+<li><a href="https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html">https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html</a></li>
 </ul>
 <p><br></p>
 <h2 id="04-efselastic-file-system">04. EFS：Elastic File System<a class="headerlink" href="#04-efselastic-file-system" title="Permanent link">&para;</a></h2>
@@ -13099,7 +13101,7 @@ redis *****:6379&gt; monitor
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>

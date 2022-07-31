@@ -5852,7 +5852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_service_manifest_file.html" class="md-nav__link">
+      <a href="../infrastructure_as_code/infrastructure_as_code_container_kubernetes_custom_resource_secret_provider_class_manifest_file.html" class="md-nav__link">
         SecretProviderClass
       </a>
     </li>
@@ -8435,7 +8435,10 @@
 </table>
 <h4 id="_5">▼ モジュール/マイクロサービスの粒度の比較<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p><img alt="architecture_deployment_comparison" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/architecture_deployment_comparison.png" /></p>
-<p>ℹ️ 参考：<a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></p>
+<p>ℹ️ 参考：</p>
+<ul>
+<li><a href="https://tech-blog.rakus.co.jp/entry/20201218/architecture">https://tech-blog.rakus.co.jp/entry/20201218/architecture</a></li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -8692,7 +8695,7 @@
 </table>
 <h4 id="_26">▼ サブドメイン、境界付けられたコンテキストを単位とした分割<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p><img alt="service_bounded-context" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/service_bounded-context.png" /></p>
-<p>サブドメインまたは境界付けられたコンテキストをマイクロサービスの粒度とする。解決領域となる境界付けられたコンテキストがサブドメインの中に<code>1</code>個しか含まれていない場合は、境界付けられたコンテキストをマイクロサービスの粒度して考えることになる。図にて、境界付けられたコンテキスト間で、『利用者』という単語に対する定義づけ/意味合いが異なっていることに留意する。ドメイン駆動設計では境界付けられたコンテキストが<code>1</code>個のアプリケーションに相当するため、境界付けられたコンテキストで分割した場合、マイクロサービスアーキテクチャは複数のアプリケーションから構成されるアーキテクチャと捉えられる。さらに小さな粒度に分割する方法として、ルートエンティティを粒度ともできる。</p>
+<p>サブドメインまたは境界付けられたコンテキストをマイクロサービスの粒度とする。解決領域となる境界付けられたコンテキストがサブドメインの中に<code>1</code>個しか含まれていない場合は、境界付けられたコンテキストをマイクロサービスの粒度して考えることになる。図にて、境界付けられたコンテキスト間で、『利用者』という単語に対する定義づけ/意味合いが異なっていることに留意する。ドメイン駆動設計では境界付けられたコンテキストが<code>1</code>個のアプリケーションに相当するため、境界付けられたコンテキストで分割した場合、マイクロサービスアーキテクチャは複数のアプリケーションから構成されるアーキテクチャと捉えられる。加えて小さな粒度に分割する方法として、ルートエンティティを粒度ともできる。</p>
 <p>ℹ️ 参考：</p>
 <ul>
 <li><a href="https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/architect-microservice-container-applications/identify-microservice-domain-model-boundaries">https://docs.microsoft.com/ja-jp/dotnet/architecture/microservices/architect-microservice-container-applications/identify-microservice-domain-model-boundaries</a></li>
@@ -8793,9 +8796,10 @@
 <h2 id="05">05. プレゼンテーションドメイン分離<a class="headerlink" href="#05" title="Permanent link">&para;</a></h2>
 <h3 id="_42">プレゼンテーションドメイン分離とは<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
 <p><img alt="presentation_domain_separation" src="https://raw.githubusercontent.com/hiroki-it/tech-notebook/master/images/presentation_domain_separation.png" /></p>
-<p>モノリシックなアプリケーションがドメイン層だけでなくプレゼンテーション層のロジックも持っている場合、ドメイン層をマイクロサービスに分離する前に、プレゼンテーション層をフロントエンドアプリケーションとして分離しておく必要がある。</p>
+<p>モノリシックなアプリケーションには二つの段階（v1、v2）がある。v2では、アプリケーションがプレゼンテーション層、アプリケーション層、ドメイン層、インフラ層、を持っており、このうちプレゼンテーション層がフロントエンドアプリケーションとして分離されている。続くマイクロサービスアーキテクチャでは、残りのアプリケーション層、ドメイン層、インフラ層、を分離していく。</p>
 <p>ℹ️ 参考：</p>
 <ul>
+<li><a href="https://cloud.google.com/architecture/devops/devops-tech-architecture?hl=ja">https://cloud.google.com/architecture/devops/devops-tech-architecture?hl=ja</a></li>
 <li><a href="https://docs.microsoft.com/ja-jp/azure/architecture/microservices/migrate-monolith">https://docs.microsoft.com/ja-jp/azure/architecture/microservices/migrate-monolith</a></li>
 <li><a href="https://bliki-ja.github.io/PresentationDomainSeparation/">https://bliki-ja.github.io/PresentationDomainSeparation/</a></li>
 <li><a href="https://tech.mti.co.jp/entry/2021/04/12/112833">https://tech.mti.co.jp/entry/2021/04/12/112833</a></li>
@@ -8992,7 +8996,7 @@
   <small>
     
       最終更新日:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-07-31</span>
       
     
   </small>
